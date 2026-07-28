@@ -2,39 +2,24 @@ import Link from "next/link";
 import cn from "classnames";
 import type { CSSProperties, ReactNode } from "react";
 
-/** Accent cycles like StyleKit destination cards (palm / teal / coral). */
+/** Kept for call-site compat; cards now use a single brand teal accent. */
 export type TropicalAccent = "teal" | "palm" | "coral";
-
-const ACCENT_HEX: Record<TropicalAccent, string> = {
-  teal: "#00897b",
-  palm: "#4caf50",
-  coral: "#ff6f61",
-};
 
 type Props = {
   label: string;
   title?: ReactNode;
   children: ReactNode;
-  /** Coral accent on footer left (price / meta) — StyleKit uses #ff6f61 */
+  /** Footer left meta (date / price) — muted, not competing with CTA */
   footerMeta?: ReactNode;
   /** Pill CTA label on footer right */
   footerCta?: string;
   href?: string;
   className?: string;
+  /** @deprecated Ignored — all cards use brand teal for consistency */
   accent?: TropicalAccent;
   /** Use for quote cards without a CTA */
   as?: "article" | "blockquote" | "div";
 };
-
-function CardDots() {
-  return (
-    <span className="surface-card-dots" aria-hidden>
-      <span />
-      <span />
-      <span />
-    </span>
-  );
-}
 
 export function TropicalCard({
   label,
@@ -44,30 +29,25 @@ export function TropicalCard({
   footerCta,
   href,
   className,
-  accent = "teal",
   as = "article",
 }: Props) {
   const Tag = as;
   const showFooter = footerMeta != null || footerCta != null;
-  const accentHex = ACCENT_HEX[accent];
-  const style = { "--card-accent": accentHex } as CSSProperties;
+  const style = { "--card-accent": "var(--brand-cta)" } as CSSProperties;
 
   const inner = (
     <>
       <div className="surface-card-bar" aria-hidden />
-      <div className="mb-5 mt-1 flex items-center gap-1.5">
-        <CardDots />
-        <span className="surface-card-label">{label}</span>
-      </div>
+      <p className="surface-card-label mb-3">{label}</p>
       {title != null ? (
-        <h3 className="mb-3 text-xl font-bold leading-tight tracking-tight text-[var(--brand-cta)] transition-colors duration-300 group-hover:text-[var(--brand-coral)]">
+        <h3 className="mb-2 line-clamp-2 text-lg font-bold leading-snug tracking-tight text-[var(--brand-cta)] md:text-xl">
           {title}
         </h3>
       ) : null}
       <div
         className={cn(
-          "flex-1 text-sm font-normal leading-relaxed text-[var(--brand-ink-muted)]",
-          showFooter && "mb-6",
+          "line-clamp-2 flex-1 text-sm font-normal leading-relaxed text-[var(--brand-ink-muted)]",
+          showFooter && "mb-5",
         )}
       >
         {children}
@@ -75,7 +55,7 @@ export function TropicalCard({
       {showFooter ? (
         <div className="surface-card-footer">
           {footerMeta != null ? (
-            <span className="min-w-0 flex-1 text-sm font-bold leading-snug text-[var(--brand-coral)]">
+            <span className="min-w-0 flex-1 text-sm font-normal leading-snug text-[var(--brand-ink-muted)]">
               {footerMeta}
             </span>
           ) : (
@@ -90,7 +70,7 @@ export function TropicalCard({
   );
 
   const shellClass = cn(
-    "surface-card surface-card-lift group cursor-pointer p-7",
+    "surface-card surface-card-lift group cursor-pointer p-5 md:p-6",
     className,
   );
 
@@ -109,8 +89,7 @@ export function TropicalCard({
   );
 }
 
-/** Cycle accents across a list — matches StyleKit 3-card demo rhythm. */
-export function tropicalAccentAt(index: number): TropicalAccent {
-  const order: TropicalAccent[] = ["palm", "teal", "coral"];
-  return order[index % order.length];
+/** @deprecated Accents no longer cycle — always brand teal. */
+export function tropicalAccentAt(_index: number): TropicalAccent {
+  return "teal";
 }

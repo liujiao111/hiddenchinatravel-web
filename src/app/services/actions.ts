@@ -1,5 +1,7 @@
 "use server";
 
+import { SITE_EMAIL } from "@/lib/constants";
+import { sendFormNotify } from "@/lib/forms/notify";
 import { appendFile, access, mkdir, writeFile } from "fs/promises";
 import path from "path";
 
@@ -64,21 +66,47 @@ export async function submitAddonServiceRequest(
     return { ok: false, message: "Description is too long." };
   }
 
+  const timestamp = new Date().toISOString();
   const row = [
-    new Date().toISOString(),
+    timestamp,
     escapeCsv(service),
     escapeCsv(contact),
     escapeCsv(need),
   ].join(",");
 
+  const requireEmail = Boolean(process.env.RESEND_API_KEY?.trim());
+  const emailed = await sendFormNotify({
+    subject: `[Service request] ${service}`,
+    text: [
+      "New service / add-on request",
+      `Time: ${timestamp}`,
+      `Service: ${service}`,
+      `Contact: ${contact}`,
+      "",
+      need,
+    ].join("\n"),
+  });
+
+  let savedCsv = false;
   try {
     await ensureCsv();
     await appendFile(CSV_PATH, `${row}\n`, "utf8");
+    savedCsv = true;
   } catch {
+    // CSV is best-effort on Vercel (ephemeral FS).
+  }
+
+  if ((requireEmail && !emailed) || (!requireEmail && !savedCsv)) {
+    console.error("[service-addon-submission-failed]", {
+      timestamp,
+      service,
+      contact,
+      emailed,
+      savedCsv,
+    });
     return {
       ok: false,
-      message:
-        "Something went wrong saving your request. Please use the contact page instead.",
+      message: `Something went wrong saving your request. Please email ${SITE_EMAIL} or use the contact page.`,
     };
   }
 

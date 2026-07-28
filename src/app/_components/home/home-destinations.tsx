@@ -1,8 +1,5 @@
 import Container from "@/app/_components/container";
-import {
-  TropicalCard,
-  tropicalAccentAt,
-} from "@/app/_components/tropical-card";
+import { TropicalCard } from "@/app/_components/tropical-card";
 import { destinationCities } from "@/lib/home/content";
 import Link from "next/link";
 
@@ -26,10 +23,10 @@ export function HomeDestinations({ variant = "home" }: Props) {
         {!isHub ? (
           <div className="mb-10 flex flex-col gap-6 md:mb-12 md:flex-row md:items-end md:justify-between">
             <div className="max-w-2xl">
-              <p className="mb-2 text-sm font-bold tracking-tight text-[var(--brand-coral)]">
+              <p className="mb-2 text-xs font-bold uppercase tracking-[0.18em] text-[var(--brand-muted)]">
                 Destinations
               </p>
-              <h2 className="mb-3 text-2xl font-bold tracking-tight text-[var(--brand-ink)] md:text-3xl">
+              <h2 className="mb-3 text-2xl font-bold tracking-tight text-[var(--brand-cta)] md:text-3xl">
                 Where to begin in China
               </h2>
               <p className="text-sm font-normal leading-relaxed text-[var(--brand-ink-muted)] md:text-base">
@@ -46,7 +43,7 @@ export function HomeDestinations({ variant = "home" }: Props) {
           </div>
         ) : null}
         <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 md:gap-6">
-          {destinationCities.map((city, index) => {
+          {destinationCities.map((city) => {
             const href = isHub
               ? `/china-itinerary-planner`
               : `/china-destinations#${city.id}`;
@@ -57,7 +54,6 @@ export function HomeDestinations({ variant = "home" }: Props) {
                 <TropicalCard
                   href={href}
                   className="scroll-mt-28"
-                  accent={tropicalAccentAt(index)}
                   label={city.id.replace(/-/g, " ")}
                   title={city.name}
                   footerMeta={city.guidesHint}

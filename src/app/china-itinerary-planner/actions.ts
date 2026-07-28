@@ -1,6 +1,7 @@
 "use server";
 
-import { SITE_EMAIL, SITE_NAME } from "@/lib/constants";
+import { SITE_EMAIL } from "@/lib/constants";
+import { sendFormNotify } from "@/lib/forms/notify";
 import { appendFile, access, mkdir, writeFile } from "fs/promises";
 import path from "path";
 
@@ -55,46 +56,24 @@ async function persistToCsv(row: string): Promise<boolean> {
   }
 }
 
-/** Optional Resend email — set RESEND_API_KEY (+ optional RESEND_FROM). */
 async function persistViaResend(payload: SubmissionPayload): Promise<boolean> {
-  const apiKey = process.env.RESEND_API_KEY?.trim();
-  if (!apiKey) return false;
-
-  const from =
-    process.env.RESEND_FROM?.trim() ||
-    `${SITE_NAME} <onboarding@resend.dev>`;
-  const to = process.env.ITINERARY_NOTIFY_EMAIL?.trim() || SITE_EMAIL;
-
-  try {
-    const res = await fetch("https://api.resend.com/emails", {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${apiKey}`,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        from,
-        to: [to],
-        subject: `[Itinerary request] ${payload.name} · ${payload.days}d`,
-        text: [
-          `New itinerary request (${payload.source})`,
-          `Time: ${payload.timestamp}`,
-          `Name: ${payload.name}`,
-          `Email: ${payload.email}`,
-          `Passport: ${payload.nationality}`,
-          `Destinations: ${payload.destinations}`,
-          `Days: ${payload.days}`,
-          `Travelers: ${payload.travelers}`,
-          `Styles: ${payload.styles}`,
-          `Budget: ${payload.budget}`,
-          `Notes: ${payload.notes}`,
-        ].join("\n"),
-      }),
-    });
-    return res.ok;
-  } catch {
-    return false;
-  }
+  return sendFormNotify({
+    subject: `[Itinerary request] ${payload.name} · ${payload.days}d`,
+    replyTo: payload.email,
+    text: [
+      `New itinerary request (${payload.source})`,
+      `Time: ${payload.timestamp}`,
+      `Name: ${payload.name}`,
+      `Email: ${payload.email}`,
+      `Passport: ${payload.nationality}`,
+      `Destinations: ${payload.destinations}`,
+      `Days: ${payload.days}`,
+      `Travelers: ${payload.travelers}`,
+      `Styles: ${payload.styles}`,
+      `Budget: ${payload.budget}`,
+      `Notes: ${payload.notes}`,
+    ].join("\n"),
+  });
 }
 
 /** Optional webhook (Zapier / Make / Slack) — set ITINERARY_WEBHOOK_URL. */
@@ -203,12 +182,14 @@ export async function submitItineraryPlan(
     escapeCsv(payload.notes),
   ].join(",");
 
+  // Email first when Resend is configured; CSV / webhook are backups.
+  const requireEmail = Boolean(process.env.RESEND_API_KEY?.trim());
+  const savedEmail = await persistViaResend(payload);
   const savedCsv = await persistToCsv(row);
-  const savedEmail = savedCsv ? false : await persistViaResend(payload);
   const savedWebhook =
-    savedCsv || savedEmail ? false : await persistViaWebhook(payload);
+    savedEmail || savedCsv ? false : await persistViaWebhook(payload);
 
-  if (!savedCsv && !savedEmail && !savedWebhook) {
+  if (requireEmail ? !savedEmail : !savedEmail && !savedCsv && !savedWebhook) {
     console.error("[itinerary-submission-failed]", payload);
     return {
       ok: false,

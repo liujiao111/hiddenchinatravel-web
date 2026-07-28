@@ -4,7 +4,7 @@ export const SITE_TAGLINE =
 export const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL ?? "https://hiddenchinatravel.com";
 
-export const SITE_EMAIL = "hello@hiddenchinatravel.com";
+export const SITE_EMAIL = "joy.liu@hiddenchinatravel.com";
 /** @deprecated use src/lib/whatsapp.ts */
 export const SITE_WHATSAPP = "";
 export const SITE_LOCATION = "Kunming, Yunnan, China";

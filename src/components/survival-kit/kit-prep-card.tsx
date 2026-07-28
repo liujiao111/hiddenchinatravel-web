@@ -1,4 +1,3 @@
-import type { CSSProperties } from "react";
 import { KitIcon } from "./kit-icon";
 import { KitTrackedLink } from "./kit-tracked-link";
 import type { KitPrepCardData } from "@/lib/survival-kit/types";
@@ -9,28 +8,18 @@ type Props = {
 
 export function KitPrepCard({ card }: Props) {
   return (
-    <article
-      className="surface-card p-7"
-      style={{ "--card-accent": "var(--brand-cta)" } as CSSProperties}
-    >
+    <article className="surface-card p-6 md:p-7">
       <div className="surface-card-bar" aria-hidden />
-      <div className="mb-5 mt-1 flex items-center gap-1.5">
-        <span className="surface-card-dots" aria-hidden>
-          <span />
-          <span />
-          <span />
+      <div className="mb-4 flex items-center gap-2.5">
+        <span className="flex h-8 w-8 items-center justify-center rounded-full bg-[var(--brand-soft)] text-[var(--brand-cta)]">
+          <KitIcon name={card.icon} className="h-3.5 w-3.5" />
         </span>
-        <span className="inline-flex items-center gap-2">
-          <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[var(--brand-soft)] text-[var(--brand-cta)]">
-            <KitIcon name={card.icon} className="h-3.5 w-3.5" />
-          </span>
-          <span className="surface-card-label">Prep</span>
-        </span>
+        <span className="surface-card-label">Prep</span>
       </div>
-      <h3 className="mb-3 text-xl font-bold leading-tight tracking-tight text-[var(--brand-cta)]">
+      <h3 className="mb-2 line-clamp-2 text-lg font-bold leading-snug tracking-tight text-[var(--brand-cta)] md:text-xl">
         {card.title}
       </h3>
-      <p className="mb-5 text-sm font-light leading-relaxed text-[var(--brand-ink-muted)]">
+      <p className="mb-5 line-clamp-2 text-sm font-normal leading-relaxed text-[var(--brand-ink-muted)]">
         {card.anxiety}
       </p>
 

@@ -11,8 +11,11 @@ import {
   useState,
 } from "react";
 import cn from "classnames";
+import { homePopularSearches } from "@/lib/home/content";
 import { matchSearchItems, searchTypeLabel } from "@/lib/search/match";
 import type { SearchItem } from "@/lib/search/types";
+
+const HEADER_PLACEHOLDER = `${homePopularSearches.map((item) => item.label).join(", ")}…`;
 
 type Props = {
   items: SearchItem[];
@@ -124,8 +127,9 @@ export function SiteSearch({
       ref={rootRef}
       className={cn(
         "relative",
-        variant === "header" ? "w-full max-w-[16rem] sm:max-w-[18rem]" : "w-full",
-        className,
+        variant === "header"
+          ? "w-[min(100%,15rem)] sm:w-[17rem] lg:w-[18.5rem]"
+          : "w-full",        className,
       )}
     >
       <label htmlFor={`${listId}-input`} className="sr-only">
@@ -136,8 +140,9 @@ export function SiteSearch({
           "flex items-center gap-2 transition-all duration-300",
           variant === "hero" || variant === "page"
             ? "rounded-full border-2 border-[color-mix(in_srgb,var(--brand-cta)_20%,transparent)] bg-white px-5 py-3 focus-within:border-[var(--brand-cta)] focus-within:outline-none focus-within:shadow-[0_0_0_3px_rgba(0,137,123,0.15)]"
-            : "border-b-2 border-[color-mix(in_srgb,var(--brand-cta)_20%,transparent)] bg-transparent focus-within:border-[var(--brand-cta)]",
-          variant === "header" && "px-1 py-1.5",
+            : null,
+          variant === "header" &&
+            "rounded-full border border-[color-mix(in_srgb,var(--brand-cta)_18%,transparent)] bg-white px-3 py-1.5 shadow-[0_1px_0_rgba(0,137,123,0.06)] focus-within:border-[var(--brand-cta)] focus-within:shadow-[0_0_0_3px_rgba(0,137,123,0.12)]",
         )}
       >
         <SearchIcon
@@ -162,9 +167,9 @@ export function SiteSearch({
           autoComplete="off"
           placeholder={
             variant === "header"
-              ? "Search guides…"
+              ? HEADER_PLACEHOLDER
               : variant === "hero"
-                ? "search visas, payments, maps…"
+                ? HEADER_PLACEHOLDER
                 : "Search visas, payments, maps, hotels…"
           }
           value={query}

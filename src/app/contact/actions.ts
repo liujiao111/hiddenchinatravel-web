@@ -1,5 +1,7 @@
 "use server";
 
+import { SITE_EMAIL } from "@/lib/constants";
+import { sendFormNotify } from "@/lib/forms/notify";
 import { appendFile, access, mkdir, writeFile } from "fs/promises";
 import path from "path";
 
@@ -81,23 +83,54 @@ export async function submitContactForm(
     return { ok: false, message: "Message is too long." };
   }
 
+  const timestamp = new Date().toISOString();
+  const subjectLine = subject || "(no subject)";
   const row = [
-    new Date().toISOString(),
+    timestamp,
     escapeCsv(name),
     escapeCsv(email),
-    escapeCsv(subject || "(no subject)"),
+    escapeCsv(subjectLine),
     escapeCsv(serviceType),
     escapeCsv(message),
   ].join(",");
 
+  const requireEmail = Boolean(process.env.RESEND_API_KEY?.trim());
+  const emailed = await sendFormNotify({
+    subject: `[Contact] ${name} · ${serviceType}`,
+    replyTo: email,
+    text: [
+      "New contact form submission",
+      `Time: ${timestamp}`,
+      `Name: ${name}`,
+      `Email: ${email}`,
+      `Type: ${serviceType}`,
+      `Subject: ${subjectLine}`,
+      "",
+      message,
+    ].join("\n"),
+  });
+
+  let savedCsv = false;
   try {
     await ensureCsv();
     await appendFile(CSV_PATH, `${row}\n`, "utf8");
+    savedCsv = true;
   } catch {
+    // CSV is best-effort on Vercel (ephemeral FS).
+  }
+
+  if ((requireEmail && !emailed) || (!requireEmail && !savedCsv)) {
+    console.error("[contact-submission-failed]", {
+      timestamp,
+      name,
+      email,
+      serviceType,
+      emailed,
+      savedCsv,
+    });
     return {
       ok: false,
-      message:
-        "Something went wrong saving your message. Please email us directly instead.",
+      message: `Something went wrong sending your message. Please email ${SITE_EMAIL} directly instead.`,
     };
   }
 

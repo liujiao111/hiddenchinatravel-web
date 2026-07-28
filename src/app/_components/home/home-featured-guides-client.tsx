@@ -1,10 +1,7 @@
 "use client";
 
 import DateFormatter from "@/app/_components/date-formatter";
-import {
-  TropicalCard,
-  tropicalAccentAt,
-} from "@/app/_components/tropical-card";
+import { TropicalCard } from "@/app/_components/tropical-card";
 import type { HomeGuideCard, HomeHubTab } from "@/lib/home/featured-guides";
 import cn from "classnames";
 import Link from "next/link";
@@ -88,11 +85,10 @@ export function HomeFeaturedGuidesClient({ featured, hubs }: Props) {
         </p>
       ) : (
         <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 md:gap-5">
-          {items.map((item, index) => (
+          {items.map((item) => (
             <li key={item.href}>
               <TropicalCard
                 href={item.href}
-                accent={tropicalAccentAt(index)}
                 label="Guide"
                 title={item.title}
                 footerMeta={

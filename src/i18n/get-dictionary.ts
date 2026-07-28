@@ -78,7 +78,7 @@ const en: Dictionary = {
     naturalOrganic: "Natural Organic",
   },
   nav: {
-    guides: "Guides",
+    guides: "Survival Guides",
     tools: "Tools",
     survivalKit: "Survival Kit",
     services: "Services",
@@ -97,7 +97,7 @@ const en: Dictionary = {
     hubEssentials: "Travel Essentials",
     mainAria: "Main",
     toolsMenuAria: "Tools",
-    guidesMenuAria: "Guides",
+    guidesMenuAria: "Survival Guides",
   },
   header: {
     plannerCta: "Plan my China trip",
@@ -146,7 +146,7 @@ const zh: Dictionary = {
     naturalOrganic: "自然有机",
   },
   nav: {
-    guides: "指南",
+    guides: "生存指南",
     tools: "工具",
     survivalKit: "生存套件",
     services: "服务与定价",
@@ -165,7 +165,7 @@ const zh: Dictionary = {
     hubEssentials: "旅行必备",
     mainAria: "主导航",
     toolsMenuAria: "工具",
-    guidesMenuAria: "指南",
+    guidesMenuAria: "生存指南",
   },
   header: {
     plannerCta: "规划行程",

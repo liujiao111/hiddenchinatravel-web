@@ -137,38 +137,17 @@
 
   @media (prefers-reduced-motion: no-preference) {
     .surface-card.surface-card-lift:hover {
-      transform: scale(1.05);
+      transform: translateY(-2px);
     }
   }
 
   .surface-card-bar {
     @apply absolute left-0 right-0 top-0 h-1 rounded-t-2xl;
-    background-color: var(--card-accent, var(--brand-cta));
-  }
-
-  .surface-card-dots {
-    @apply flex items-center gap-1.5;
-  }
-
-  .surface-card-dots > span {
-    @apply h-2.5 w-2.5 shrink-0 rounded-full;
-  }
-
-  .surface-card-dots > span:nth-child(1) {
-    background-color: var(--brand-coral);
-  }
-
-  .surface-card-dots > span:nth-child(2) {
-    background-color: var(--brand-mango);
-  }
-
-  .surface-card-dots > span:nth-child(3) {
-    background-color: var(--brand-olive);
+    background-color: var(--brand-cta);
   }
 
   .surface-card-label {
-    @apply ml-auto max-w-[60%] truncate text-right text-xs font-bold uppercase tracking-wide;
-    color: var(--card-accent, var(--brand-cta));
+    @apply text-xs font-bold uppercase tracking-[0.14em] text-[var(--brand-muted)];
   }
 
   .surface-card-footer {
@@ -177,7 +156,12 @@
 
   .surface-card-cta {
     @apply inline-flex shrink-0 items-center justify-center rounded-full px-4 py-2 text-xs font-bold text-white transition-all duration-300;
-    background-color: var(--card-accent, var(--brand-cta));
+    background-color: var(--brand-cta);
+  }
+
+  .surface-card-cta:is(a):hover,
+  .group:hover .surface-card-cta {
+    background-color: var(--brand-cta-hover);
   }
 
   .blog-cover-frame {

@@ -13,6 +13,7 @@ import {
   SITE_URL,
   socialLinks,
 } from "@/lib/constants";
+import { getSearchIndex } from "@/lib/search/build-index";
 import type { Metadata } from "next";
 import { Outfit } from "next/font/google";
 import cn from "classnames";
@@ -137,7 +138,7 @@ export default function RootLayout({
         />
         <LocaleProvider>
           <ConditionalSiteChrome
-            header={<SiteHeader />}
+            header={<SiteHeader searchItems={getSearchIndex()} />}
             footer={
               <>
                 <Footer />

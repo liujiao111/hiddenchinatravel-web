@@ -13,7 +13,7 @@ import {
 } from "@/lib/constants";
 import {
   getWhatsAppHref,
-  SITE_WHATSAPP_NUMBER,
+  isWhatsAppReady,
 } from "@/lib/whatsapp";
 import Link from "next/link";
 
@@ -70,7 +70,7 @@ function contactJsonLd() {
 }
 
 export default function ContactPage() {
-  const whatsappReady = Boolean(SITE_WHATSAPP_NUMBER.replace(/\D/g, ""));
+  const whatsappReady = isWhatsAppReady();
 
   return (
     <main className="bg-[var(--brand-cream)]">

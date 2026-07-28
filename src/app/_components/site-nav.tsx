@@ -204,7 +204,7 @@ export function SiteNav({ labels, tone = "default" }: Props) {
 
   return (
     <nav
-      className="flex flex-nowrap items-center justify-start gap-x-4 whitespace-nowrap xl:gap-x-5 2xl:gap-x-6"
+      className="flex flex-nowrap items-center justify-end gap-x-4 whitespace-nowrap xl:gap-x-5 2xl:gap-x-6"
       aria-label={labels.mainAria}
     >
       {mainNav.map((item) => {
