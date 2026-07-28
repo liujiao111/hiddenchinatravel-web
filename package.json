@@ -3,16 +3,23 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "import:wp": "python3 scripts/import-wordpress-posts.py --force",
+    "import:wp:dry": "python3 scripts/import-wordpress-posts.py --dry-run --limit 1",
+    "import:hub": "python3 scripts/import-wordpress-hub.py",
+    "images:webp": "node scripts/optimize-images-to-webp.mjs --max-width 2000",
+    "images:webp:dry": "node scripts/optimize-images-to-webp.mjs --max-width 2000 --dry-run",
+    "test:visa": "npx --yes tsx scripts/verify-visa-evaluate.ts"
   },
   "dependencies": {
     "classnames": "^2.5.1",
     "date-fns": "^3.6.0",
     "gray-matter": "^4.0.3",
-    "next": "latest",
+    "next": "16.2.11",
     "react": "^19",
     "react-dom": "^19",
     "remark": "^15.0.1",
+    "remark-gfm": "^4.0.1",
     "remark-html": "^16.0.1"
   },
   "devDependencies": {

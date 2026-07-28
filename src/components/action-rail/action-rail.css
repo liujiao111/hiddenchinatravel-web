@@ -1,0 +1,62 @@
+/* Shared Action Rail tokens + motion (Hidden China Travel) */
+.action-rail {
+  --action-rail-bg: var(--brand-cream);
+  --action-rail-muted: color-mix(in srgb, var(--brand-cream) 70%, #efe8dc);
+  --action-rail-ink: var(--brand-ink);
+  --action-rail-ink-muted: var(--brand-ink-muted);
+  --action-rail-border: color-mix(in srgb, var(--brand-cream-border) 40%, transparent);
+  --action-rail-accent: var(--brand-accent);
+  --action-rail-accent-hover: var(--brand-accent-hover);
+}
+
+.action-rail-tab {
+  writing-mode: vertical-rl;
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.action-rail-motion {
+  transition:
+    transform 200ms ease,
+    opacity 200ms ease;
+}
+
+.action-rail-slide-in {
+  animation: action-rail-slide-in 200ms ease both;
+}
+
+.action-rail-drawer-in {
+  animation: action-rail-drawer-in 200ms ease both;
+}
+
+@keyframes action-rail-slide-in {
+  from {
+    opacity: 0;
+    transform: translate(0.75rem, -50%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0, -50%);
+  }
+}
+
+@keyframes action-rail-drawer-in {
+  from {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .action-rail-motion {
+    transition: none;
+  }
+
+  .action-rail-slide-in,
+  .action-rail-drawer-in {
+    animation: none;
+  }
+}

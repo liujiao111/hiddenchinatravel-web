@@ -12,4 +12,10 @@ export type Post = {
   };
   content: string;
   preview?: boolean;
+  /** ISO datetime from WordPress / frontmatter */
+  dateModified?: string;
+  canonical?: string;
+  keywords?: string[];
+  section?: string;
+  sourceUrl?: string;
 };

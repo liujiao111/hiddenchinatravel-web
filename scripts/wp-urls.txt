@@ -1,0 +1,24 @@
+# One WordPress post URL per line. Lines starting with # are ignored.
+# Run: npm run import:wp
+# Or:  python3 scripts/import-wordpress-posts.py
+
+https://hiddenchinatravel.com/wechat-pay-for-foreigners-china/
+https://hiddenchinatravel.com/alipay-for-foreigners-china/
+https://hiddenchinatravel.com/digital-survival-china-payment-guide/
+https://hiddenchinatravel.com/why-your-payment-fails-in-china/
+https://hiddenchinatravel.com/alipay-wechat-pay-verification-failed/
+https://hiddenchinatravel.com/digital-survival-china-internet-guide/
+https://hiddenchinatravel.com/china-sim-card-for-foreigners/
+https://hiddenchinatravel.com/best-esim-for-china-travel/
+https://hiddenchinatravel.com/do-you-need-vpn-china/
+https://hiddenchinatravel.com/best-vpn-for-china/
+https://hiddenchinatravel.com/google-maps-china-not-working/
+https://hiddenchinatravel.com/digital-survival-china-transport-guide/
+https://hiddenchinatravel.com/order-food-china-without-chinese-number/
+https://hiddenchinatravel.com/how-to-use-meituan/
+https://hiddenchinatravel.com/hotels-in-china-for-foreigners/
+https://hiddenchinatravel.com/china-attraction-ticket-booking-foreigners-2026/
+https://hiddenchinatravel.com/china-real-name-system-foreigners/
+https://hiddenchinatravel.com/independent-travel-china/
+https://hiddenchinatravel.com/do-i-need-a-visa-for-china/
+https://hiddenchinatravel.com/china-visa-free-countries-2026/

@@ -32,6 +32,11 @@ yarn-error.log*
 # local env files
 .env*.local
 
+# contact form submissions (keep header-only seed out of git history of PII)
+/data/contact-submissions.csv
+/data/itinerary-submissions.csv
+/data/service-addon-submissions.csv
+
 # vercel
 .vercel
 

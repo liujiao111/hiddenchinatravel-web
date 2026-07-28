@@ -6,6 +6,7 @@ const config: Config = {
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/lib/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
@@ -20,6 +21,21 @@ const config: Config = {
         "accent-7": "#333",
         success: "#0070f3",
         cyan: "#79FFE1",
+        brand: {
+          DEFAULT: "var(--brand)",
+          hover: "var(--brand-hover)",
+          muted: "var(--brand-muted)",
+          soft: "var(--brand-soft)",
+          on: "var(--brand-on)",
+          ink: "var(--brand-ink)",
+          "ink-muted": "var(--brand-ink-muted)",
+          cta: "var(--brand-cta)",
+          "cta-hover": "var(--brand-cta-hover)",
+          accent: "var(--brand-accent)",
+          "accent-hover": "var(--brand-accent-hover)",
+          cream: "var(--brand-cream)",
+          "cream-border": "var(--brand-cream-border)",
+        },
       },
       spacing: {
         28: "7rem",

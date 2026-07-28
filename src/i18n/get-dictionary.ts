@@ -1,0 +1,208 @@
+import type { Locale } from "./config";
+
+export type Dictionary = {
+  plannerPromo: {
+    text: string;
+    cta: string;
+  };
+  previewBar: {
+    label: string;
+    live: string;
+    scandinavian: string;
+    naturalOrganic: string;
+  };
+  nav: {
+    guides: string;
+    tools: string;
+    survivalKit: string;
+    services: string;
+    contact: string;
+    about: string;
+    planner: string;
+    visaChecker: string;
+    hubVisa: string;
+    hubPayments: string;
+    hubInternet: string;
+    hubNavigation: string;
+    hubTransport: string;
+    hubFood: string;
+    hubHotels: string;
+    hubTickets: string;
+    hubEssentials: string;
+    mainAria: string;
+    toolsMenuAria: string;
+    guidesMenuAria: string;
+  };
+  header: {
+    /** Global itinerary planner button label */
+    plannerCta: string;
+  };
+  whatsapp: {
+    navLabel: string;
+    cardTitle: string;
+  };
+  locale: {
+    switchAria: string;
+    en: string;
+    zh: string;
+  };
+  footer: {
+    explore: string;
+    guides: string;
+    plan: string;
+    company: string;
+    contact: string;
+    destinations: string;
+    disclaimer: string;
+    affiliateDisclosure: string;
+    affiliateLearnMore: string;
+  };
+  home: {
+    eyebrow: string;
+    title: string;
+    subtitle: string;
+    primaryCta: string;
+    secondaryCta: string;
+  };
+};
+
+const en: Dictionary = {
+  plannerPromo: {
+    text: "Sketch cities, days, and routes before you book —",
+    cta: "Plan my China trip",
+  },
+  previewBar: {
+    label: "UI preview",
+    live: "Live home",
+    scandinavian: "Scandinavian minimal",
+    naturalOrganic: "Natural Organic",
+  },
+  nav: {
+    guides: "Guides",
+    tools: "Tools",
+    survivalKit: "Survival Kit",
+    services: "Services",
+    contact: "Contact",
+    about: "About",
+    planner: "China Itinerary Planner",
+    visaChecker: "China Visa Checker",
+    hubVisa: "Visa",
+    hubPayments: "Payments",
+    hubInternet: "Internet",
+    hubNavigation: "Navigation",
+    hubTransport: "Transport",
+    hubFood: "Food",
+    hubHotels: "Hotels",
+    hubTickets: "Tickets",
+    hubEssentials: "Travel Essentials",
+    mainAria: "Main",
+    toolsMenuAria: "Tools",
+    guidesMenuAria: "Guides",
+  },
+  header: {
+    plannerCta: "Plan my China trip",
+  },
+  whatsapp: {
+    navLabel: "Chat us",
+    cardTitle: "Scan to chat with our travel advisor",
+  },
+  locale: {
+    switchAria: "Language",
+    en: "EN",
+    zh: "中文",
+  },
+  footer: {
+    explore: "Explore",
+    guides: "Topic hubs",
+    plan: "Plan & services",
+    company: "Company",
+    contact: "Contact",
+    destinations: "Destinations",
+    disclaimer:
+      "Practical guidance for independent travelers — not official visa, immigration, or government advice. Always verify with official sources before you go.",
+    affiliateDisclosure:
+      "Some links may be affiliate links—at no extra cost to you.",
+    affiliateLearnMore: "Learn more",
+  },
+  home: {
+    eyebrow: "For Independent visitors to China",
+    title: "Your Local Partner for Independent China Travel",
+    subtitle:
+      "Practical help with visas, payments, internet, and a custom itinerary — so your first China trip feels independent, not overwhelming.",
+    primaryCta: "Plan my China trip",
+    secondaryCta: "Get Free Survival Kit",
+  },
+};
+
+const zh: Dictionary = {
+  plannerPromo: {
+    text: "出发前先排好城市与天数 —",
+    cta: "规划行程",
+  },
+  previewBar: {
+    label: "UI 预览",
+    live: "线上首页",
+    scandinavian: "北欧极简",
+    naturalOrganic: "自然有机",
+  },
+  nav: {
+    guides: "指南",
+    tools: "工具",
+    survivalKit: "生存套件",
+    services: "服务与定价",
+    contact: "联系",
+    about: "关于",
+    planner: "中国行程规划器",
+    visaChecker: "中国签证查询",
+    hubVisa: "签证",
+    hubPayments: "支付",
+    hubInternet: "网络",
+    hubNavigation: "导航",
+    hubTransport: "交通",
+    hubFood: "餐饮",
+    hubHotels: "酒店",
+    hubTickets: "门票",
+    hubEssentials: "旅行必备",
+    mainAria: "主导航",
+    toolsMenuAria: "工具",
+    guidesMenuAria: "指南",
+  },
+  header: {
+    plannerCta: "规划行程",
+  },
+  whatsapp: {
+    navLabel: "联系我们",
+    cardTitle: "扫码咨询旅行顾问",
+  },
+  locale: {
+    switchAria: "语言",
+    en: "EN",
+    zh: "中文",
+  },
+  footer: {
+    explore: "探索",
+    guides: "主题 Hub",
+    plan: "规划与服务",
+    company: "关于",
+    contact: "联系",
+    destinations: "目的地",
+    disclaimer:
+      "面向独立旅行者的实用参考，不构成官方签证、移民或政府建议。出行前请核对官方信息来源。",
+    affiliateDisclosure: "部分链接可能为联盟推广链接，对你不额外收费。",
+    affiliateLearnMore: "了解更多",
+  },
+  home: {
+    eyebrow: "写给独立自由行的旅行者",
+    title: "独立中国旅行的本地伙伴",
+    subtitle:
+      "签证、支付、网络与定制行程 — 帮你第一次去中国也能独立出行、少踩坑。",
+    primaryCta: "规划行程",
+    secondaryCta: "免费获取生存套件",
+  },
+};
+
+const dictionaries: Record<Locale, Dictionary> = { en, zh };
+
+export function getDictionary(locale: Locale): Dictionary {
+  return dictionaries[locale] ?? dictionaries.en;
+}

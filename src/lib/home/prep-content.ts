@@ -1,0 +1,214 @@
+/**
+ * Homepage prep module — mirrors Survival Kit six steps in a compact form.
+ * Dual purchase choices use hover/focus buy menus (not stacked lists).
+ */
+
+export type PrepBuyOption = {
+  label: string;
+  href: string;
+  external?: boolean;
+  hint?: string;
+};
+
+export type PrepBuyMenu = {
+  buttonLabel: string;
+  options: PrepBuyOption[];
+  chooseHint: string;
+  guide: { label: string; href: string };
+};
+
+export type HomePrepStep =
+  | {
+      id: "visa";
+      step: 1;
+      title: string;
+      body: string;
+      kind: "visa";
+    }
+  | {
+      id: "network" | "payments" | "booking";
+      step: number;
+      title: string;
+      body: string;
+      kind: "buy-menus";
+      menus: PrepBuyMenu[];
+    }
+  | {
+      id: "maps";
+      step: 4;
+      title: string;
+      body: string;
+      kind: "simple";
+      cta: { label: string; href: string };
+      guide: { label: string; href: string };
+    }
+  | {
+      id: "insurance";
+      step: 6;
+      title: string;
+      body: string;
+      kind: "soon";
+    };
+
+export const homePrepSection = {
+  eyebrow: "First-trip prep",
+  title: "6 steps to prepare your independent China trip",
+  intro:
+    "A calm checklist before you land — visa, network, payments, maps, bookings, and insurance.",
+  kitCta: {
+    label: "View the full Survival Kit for China",
+    href: "/survival-kit",
+  },
+} as const;
+
+export const homePrepSteps: HomePrepStep[] = [
+  {
+    id: "visa",
+    step: 1,
+    kind: "visa",
+    title: "Check your visa path",
+    body: "Select your passport country for a quick visa-free signal — then open the full checker for stay length and transit rules.",
+  },
+  {
+    id: "network",
+    step: 2,
+    kind: "buy-menus",
+    title: "Get online before you land",
+    body: "Data + a VPN backup so maps, messages, and payments still work on day one.",
+    menus: [
+      {
+        buttonLabel: "Get a China eSIM",
+        chooseHint:
+          "Airalo if you only need data; Trip.com eSIM if you already book hotels there.",
+        guide: {
+          label: "eSIM guide",
+          href: "/best-esim-for-china-travel",
+        },
+        options: [
+          {
+            label: "Airalo",
+            href: "/go/airalo",
+            external: true,
+            hint: "Data specialist",
+          },
+          {
+            label: "Trip.com eSIM",
+            href: "/go/trip-esim",
+            external: true,
+            hint: "Same Trip account",
+          },
+        ],
+      },
+      {
+        buttonLabel: "Get a travel VPN",
+        chooseHint:
+          "NordVPN is our usual pick for phones and laptops; ExpressVPN if you prefer that app.",
+        guide: {
+          label: "VPN guide",
+          href: "/best-vpn-for-china",
+        },
+        options: [
+          {
+            label: "NordVPN",
+            href: "/go/nordvpn",
+            external: true,
+            hint: "Usual pick",
+          },
+          {
+            label: "ExpressVPN",
+            href: "/go/expressvpn",
+            external: true,
+            hint: "Strong alternative",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: "payments",
+    step: 3,
+    kind: "buy-menus",
+    title: "Set up payments",
+    body: "Finish wallet setup at home — many shops expect a QR code, not a foreign card alone.",
+    menus: [
+      {
+        buttonLabel: "Set up a wallet",
+        chooseHint:
+          "Start with Alipay for most foreign visitors; add WeChat Pay as a backup.",
+        guide: {
+          label: "Payments guide",
+          href: "/digital-survival-china-payment-guide",
+        },
+        options: [
+          {
+            label: "Alipay setup",
+            href: "/alipay-for-foreigners-china",
+            hint: "Recommended first",
+          },
+          {
+            label: "WeChat Pay setup",
+            href: "/wechat-pay-for-foreigners-china",
+            hint: "Useful backup",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: "maps",
+    step: 4,
+    kind: "simple",
+    title: "Install maps that work",
+    body: "Google Maps is unreliable on the mainland — learn Amap before you need an address in Chinese.",
+    cta: {
+      label: "How to use Amap",
+      href: "/google-maps-china-not-working",
+    },
+    guide: {
+      label: "Maps hub",
+      href: "/maps-navigation-in-china",
+    },
+  },
+  {
+    id: "booking",
+    step: 5,
+    kind: "buy-menus",
+    title: "Book flights, hotels & tickets",
+    body: "Use Trip.com in English with a foreign card for the pieces that hurt when left late.",
+    menus: [
+      {
+        buttonLabel: "Book on Trip.com",
+        chooseHint:
+          "Lock night-one hotels early; reserve popular sights with the passport you will travel on.",
+        guide: {
+          label: "Hotel guide",
+          href: "/hotels-in-china-for-foreigners",
+        },
+        options: [
+          {
+            label: "Flights",
+            href: "/go/trip-flight",
+            external: true,
+          },
+          {
+            label: "Hotels",
+            href: "/go/trip-hotels",
+            external: true,
+          },
+          {
+            label: "Attraction tickets",
+            href: "/go/trip-tickets",
+            external: true,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: "insurance",
+    step: 6,
+    kind: "soon",
+    title: "Cover medical surprises",
+    body: "Partner picks are coming soon. For now, arrange cover with a provider you trust before you fly.",
+  },
+];

@@ -1,0 +1,136 @@
+/** Homepage + destinations hub shared content (intent-layered IA). */
+
+/** Hero search shortcuts — high-intent queries → articles/tools */
+export const homePopularSearches = [
+  { label: "vpn", href: "/do-you-need-vpn-china" },
+  { label: "esim", href: "/best-esim-for-china-travel" },
+  { label: "alipay", href: "/alipay-for-foreigners-china" },
+  { label: "visa", href: "/do-i-need-a-visa-for-china" },
+] as const;
+
+export type DestinationCity = {
+  id: string;
+  name: string;
+  pitch: string;
+  guidesHint: string;
+};
+
+export const destinationCities: DestinationCity[] = [
+  {
+    id: "beijing",
+    name: "Beijing",
+    pitch: "Capital history, hutongs, and a practical first-city base for many arrivals.",
+    guidesHint: "Entry city · culture & logistics",
+  },
+  {
+    id: "shanghai",
+    name: "Shanghai",
+    pitch: "Transit hubs, riverside neighborhoods, and a smoother start for first-timers.",
+    guidesHint: "Gateway · urban & coastal",
+  },
+  {
+    id: "xian",
+    name: "Xi'an",
+    pitch: "Terracotta warriors, city walls, and a strong Silk Road history stop.",
+    guidesHint: "History · multi-city routes",
+  },
+  {
+    id: "chengdu",
+    name: "Chengdu",
+    pitch: "Food, pandas, and a calm pace before heading into Sichuan or Yunnan.",
+    guidesHint: "Food · western China base",
+  },
+  {
+    id: "kunming",
+    name: "Kunming",
+    pitch: "Spring weather and a natural launchpad into Yunnan’s landscapes.",
+    guidesHint: "Yunnan · regional travel",
+  },
+  {
+    id: "guilin",
+    name: "Guilin & Yangshuo",
+    pitch: "Karst rivers, countryside stays, and classic south China scenery.",
+    guidesHint: "Scenery · slower days",
+  },
+];
+
+export const homeTools = [
+  {
+    id: "planner",
+    href: "/china-itinerary-planner",
+    title: "China Itinerary Planner",
+    body: "Sketch cities, days, and routes before you book — the calmest way to turn ideas into a trip.",
+    cta: "Plan my China trip",
+    featured: true,
+  },
+  {
+    id: "visa",
+    href: "/china-visa-checker",
+    title: "China Visa Checker",
+    body: "See visa-free, 240-hour transit, or tourist visa needs by passport and trip length.",
+    cta: "Check visa rules",
+    featured: false,
+  },
+  {
+    id: "kit",
+    href: "/survival-kit",
+    title: "Survival Kit",
+    body: "First-trip essentials for payments, maps, data, and booking — ready before airport pressure.",
+    cta: "Get Free Survival Kit",
+    featured: false,
+  },
+] as const;
+
+/** Curated catalog links when markdown posts are sparse. */
+export const featuredGuideFallbacks = [
+  {
+    title: "China Visa Checker",
+    href: "/china-visa-checker",
+    excerpt: "Check visa-free and transit options before you book flights.",
+  },
+  {
+    title: "Payments in China",
+    href: "/payments-in-china",
+    excerpt: "Alipay, WeChat Pay, and paying calmly with a foreign card.",
+  },
+  {
+    title: "Internet in China",
+    href: "/internet-in-china",
+    excerpt: "eSIM, SIM, and staying connected without the usual stress.",
+  },
+  {
+    title: "Hotels for Foreigners",
+    href: "/hotels-in-china-for-foreigners",
+    excerpt: "Foreign-guest check-in explained without drama.",
+  },
+] as const;
+
+/** Hero-adjacent trust strip — claim + 3 icon points */
+export const homeWhyUs = {
+  claim:
+    "We're not a travel agency or an AI chatbot — we're your local partner for independent China travel.",
+  storyCta: "Learn our story",
+  storyHref: "/about#why-us",
+  points: [
+    {
+      id: "experience",
+      title: "Real Experience, Not AI Guesses",
+      body: "Alipay declined at a night market? We've walked travelers through the fix in about 12 minutes — the kind of moment a chatbot can't sit with you through.",
+      inlineLink: {
+        href: "/services#differentiator",
+        label: "See real on-trip help scenarios",
+      },
+    },
+    {
+      id: "support",
+      title: "Support Before, During & After",
+      body: "We're with you the whole trip — not just a fixed itinerary, but real help when you twist an ankle or lose your visa.",
+    },
+    {
+      id: "commission",
+      title: "Zero Commission, 100% Your Side",
+      body: "We don't take kickbacks from hotels or attractions — only a transparent service fee, with invoices provided.",
+    },
+  ],
+} as const;
+

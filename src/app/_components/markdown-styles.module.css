@@ -1,5 +1,5 @@
 .markdown {
-  @apply text-lg leading-relaxed;
+  @apply text-base font-light leading-relaxed text-[var(--brand-ink-muted)] md:text-lg;
 }
 
 .markdown p,
@@ -10,9 +10,74 @@
 }
 
 .markdown h2 {
-  @apply text-3xl mt-12 mb-4 leading-snug;
+  @apply mb-4 mt-12 text-xl font-light leading-snug tracking-wide text-[var(--brand-ink)] md:text-3xl;
 }
 
 .markdown h3 {
-  @apply text-2xl mt-8 mb-4 leading-snug;
+  @apply mb-4 mt-8 text-lg font-light leading-snug tracking-wide text-[var(--brand-ink)] md:text-xl;
+}
+
+.markdown a {
+  @apply underline underline-offset-4 transition-colors duration-500 hover:text-[var(--brand-cta)];
+}
+
+.markdown strong {
+  @apply font-normal text-[var(--brand-ink)];
+}
+
+.markdown :global(.table-wrap),
+.markdown table {
+  @apply my-6 w-full;
+}
+
+.markdown :global(.table-wrap) {
+  @apply overflow-x-auto rounded-2xl border border-[color-mix(in_srgb,var(--brand-cta)_15%,transparent)];
+}
+
+.markdown table {
+  @apply min-w-[36rem] border-collapse text-left text-sm md:min-w-0 md:text-base;
+}
+
+.markdown thead {
+  @apply bg-[var(--brand-soft)] text-[var(--brand-ink)];
+}
+
+.markdown th,
+.markdown td {
+  @apply border-b border-[color-mix(in_srgb,var(--brand-cta)_12%,transparent)] px-3 py-2.5 align-top;
+}
+
+.markdown th {
+  @apply font-normal tracking-wide;
+}
+
+/* Media frames come from globals (.blog-media-frame / .blog-media-shot /
+   .blog-media-icon) applied in markdownToHtml. */
+.markdown :global(.blog-media-frame),
+.markdown :global(.blog-media-shot),
+.markdown :global(.blog-media-icon) {
+  max-width: 100%;
+}
+
+/* Related-guide lists: icons stay inline with the link text */
+.markdown li :global(.blog-media-icon) {
+  display: inline-flex;
+  vertical-align: middle;
+  margin: 0 0.65rem 0 0;
+  text-align: left;
+}
+
+.markdown li :global(.blog-media-icon) img {
+  width: 2.5rem;
+  height: 2.5rem;
+  max-width: 2.5rem;
+  max-height: 2.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid color-mix(in srgb, var(--brand-cream-border) 55%, transparent);
+  background-color: var(--brand-surface);
+  object-fit: contain;
+}
+
+.markdown li {
+  @apply my-3;
 }

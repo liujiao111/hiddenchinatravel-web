@@ -6,24 +6,37 @@ type Props = {
   title: string;
   src: string;
   slug?: string;
+  /** Prefer priority on article hero (LCP). */
+  priority?: boolean;
 };
 
-const CoverImage = ({ title, src, slug }: Props) => {
+/**
+ * Editorial cover for all posts / listings.
+ * Uses shared `.blog-cover-frame` (1200×630 crop + border).
+ */
+const CoverImage = ({ title, src, slug, priority = false }: Props) => {
   const image = (
-    <Image
-      src={src}
-      alt={`Cover Image for ${title}`}
-      className={cn("shadow-sm w-full", {
-        "hover:shadow-lg transition-shadow duration-200": slug,
-      })}
-      width={1300}
-      height={630}
-    />
+    <div
+      className={cn(
+        "blog-cover-frame",
+        slug && "transition-shadow duration-300 hover:shadow-md",
+      )}
+    >
+      <Image
+        src={src}
+        alt={`Cover Image for ${title}`}
+        fill
+        priority={priority}
+        className="object-cover object-center"
+        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1100px"
+      />
+    </div>
   );
+
   return (
     <div className="sm:mx-0">
       {slug ? (
-        <Link href={`/posts/${slug}`} aria-label={title}>
+        <Link href={`/${slug}`} aria-label={title}>
           {image}
         </Link>
       ) : (

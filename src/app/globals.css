@@ -1,3 +1,292 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/**
+ * Tropical Paradise (热带天堂) — Hidden China Travel
+ * Spec: tropical-paradise.md
+ * Teal #00897b · coral accent · sunny cream · rounded-2xl / pill CTAs
+ * Ignore neo-brutalism templates from stylekit paste.
+ */
+:root {
+  /* StyleKit Tropical Paradise palette — stylekit.top showcase */
+  --brand: #00897b;
+  --brand-hover: #00796b;
+  --brand-olive: #4caf50; /* Palm Green */
+  --brand-olive-hover: #43a047;
+  --brand-coral: #ff6f61; /* Coral Sunset */
+  --brand-coral-hover: #f05545;
+  --brand-mango: #ffc107; /* Mango */
+  --brand-muted: #5a7a76;
+  --brand-soft: #fffde7; /* Sunshine */
+  --brand-on: #ffffff;
+  --brand-ink: #00897b;
+  --brand-ink-muted: #6b7280; /* gray-500 body on showcase */
+  --brand-cta: #00897b;
+  --brand-cta-hover: #00796b;
+  --brand-accent: var(--brand-coral);
+  --brand-accent-hover: var(--brand-coral-hover);
+  --brand-cream: #fffde7;
+  --brand-cream-border: #00897b;
+  --brand-warm: #ffc107;
+  --brand-surface: #ffffff;
+  --brand-ring: rgba(0, 137, 123, 0.15);
+  --brand-shadow: 0 4px 20px rgba(0, 137, 123, 0.1);
+  --brand-shadow-hover: 0 8px 32px rgba(0, 137, 123, 0.22);
+  --brand-btn-shadow: 0 4px 16px rgba(0, 137, 123, 0.3);
+}
+
+@layer components {
+  .btn-brand,
+  .btn-hero {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 font-bold tracking-tight transition-all duration-300;
+    background-color: var(--brand-cta);
+    color: var(--brand-on);
+    border: 1px solid var(--brand-cta);
+    box-shadow: var(--brand-btn-shadow);
+  }
+
+  .btn-brand:hover,
+  .btn-hero:hover {
+    background-color: var(--brand-cta-hover);
+    border-color: var(--brand-cta-hover);
+    color: var(--brand-on);
+    box-shadow: var(--brand-shadow-hover);
+  }
+
+  .btn-brand:focus-visible,
+  .btn-hero:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px var(--brand-ring), var(--brand-btn-shadow);
+  }
+
+  /* Cream pill on teal chrome (header CTA) */
+  .btn-brand-inverse {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 font-bold tracking-tight transition-all duration-300;
+    background-color: var(--brand-cream);
+    color: var(--brand-cta);
+    border: 1px solid var(--brand-cream);
+    box-shadow: 0 4px 16px rgba(0, 137, 123, 0.3);
+  }
+
+  .btn-brand-inverse:hover {
+    background-color: #ffffff;
+    border-color: #ffffff;
+    color: var(--brand-cta-hover);
+    box-shadow: 0 8px 30px rgba(0, 137, 123, 0.15);
+  }
+
+  .btn-brand-inverse:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 250, 240, 0.45), 0 4px 16px rgba(0, 137, 123, 0.3);
+  }
+
+  .btn-brand-outline {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 font-bold tracking-tight transition-all duration-300;
+    color: var(--brand-cta);
+    background: var(--brand-surface);
+    border: 2px solid color-mix(in srgb, var(--brand-cta) 20%, transparent);
+    box-shadow: 0 2px 8px rgba(0, 137, 123, 0.08);
+  }
+
+  .btn-brand-outline:hover {
+    border-color: var(--brand-cta);
+    box-shadow: var(--brand-shadow);
+  }
+
+  .btn-brand-outline:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px var(--brand-ring);
+  }
+
+  .btn-brand-ghost {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 font-bold tracking-tight transition-all duration-300;
+    color: var(--brand-ink);
+    background: color-mix(in srgb, var(--brand-cta) 6%, white);
+    border: 2px solid color-mix(in srgb, var(--brand-cta) 15%, transparent);
+  }
+
+  .btn-brand-ghost:hover {
+    background: color-mix(in srgb, var(--brand-cta) 12%, white);
+  }
+
+  .surface-brand-soft {
+    background-color: var(--brand-soft);
+    border-color: color-mix(in srgb, var(--brand-cta) 20%, transparent);
+  }
+
+  .surface-cream {
+    background-color: var(--brand-cream);
+    border-color: color-mix(in srgb, var(--brand-cta) 20%, transparent);
+  }
+
+  /*
+   * StyleKit card shell:
+   * rounded-2xl + border-[#00897b]/15 + teal shadow + hover:scale-105
+   * Thin accent top bar is added by TropicalCard (absolute h-1)
+   */
+  .surface-card {
+    @apply relative flex h-full flex-col overflow-hidden rounded-2xl bg-white transition-all duration-300;
+    border: 1px solid color-mix(in srgb, var(--brand-cta) 15%, transparent);
+    box-shadow: var(--brand-shadow);
+  }
+
+  .surface-card:hover {
+    box-shadow: var(--brand-shadow-hover);
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .surface-card.surface-card-lift:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  .surface-card-bar {
+    @apply absolute left-0 right-0 top-0 h-1 rounded-t-2xl;
+    background-color: var(--card-accent, var(--brand-cta));
+  }
+
+  .surface-card-dots {
+    @apply flex items-center gap-1.5;
+  }
+
+  .surface-card-dots > span {
+    @apply h-2.5 w-2.5 shrink-0 rounded-full;
+  }
+
+  .surface-card-dots > span:nth-child(1) {
+    background-color: var(--brand-coral);
+  }
+
+  .surface-card-dots > span:nth-child(2) {
+    background-color: var(--brand-mango);
+  }
+
+  .surface-card-dots > span:nth-child(3) {
+    background-color: var(--brand-olive);
+  }
+
+  .surface-card-label {
+    @apply ml-auto max-w-[60%] truncate text-right text-xs font-bold uppercase tracking-wide;
+    color: var(--card-accent, var(--brand-cta));
+  }
+
+  .surface-card-footer {
+    @apply mt-auto flex flex-wrap items-center justify-between gap-3 border-t border-[color-mix(in_srgb,var(--brand-cta)_10%,transparent)] pt-4;
+  }
+
+  .surface-card-cta {
+    @apply inline-flex shrink-0 items-center justify-center rounded-full px-4 py-2 text-xs font-bold text-white transition-all duration-300;
+    background-color: var(--card-accent, var(--brand-cta));
+  }
+
+  .blog-cover-frame {
+    @apply relative w-full overflow-hidden rounded-2xl;
+    aspect-ratio: 1200 / 630;
+    background-color: var(--brand-soft);
+    border: 2px solid color-mix(in srgb, var(--brand-cta) 20%, transparent);
+  }
+
+  /* General article photos / diagrams — natural aspect, centered. */
+  .blog-media-frame {
+    display: block;
+    width: fit-content;
+    max-width: 100%;
+    margin: 2rem auto;
+    overflow: hidden;
+    border-radius: 1rem;
+    background-color: var(--brand-soft);
+    border: 1px solid color-mix(in srgb, var(--brand-cream-border) 50%, transparent);
+    box-shadow:
+      0 10px 28px color-mix(in srgb, var(--brand-ink) 8%, transparent),
+      0 2px 6px color-mix(in srgb, var(--brand-ink) 4%, transparent);
+  }
+
+  .blog-media-frame img {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    object-position: center;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+  }
+
+  /*
+   * Phone / app screenshots — fixed phone canvas:
+   * consistent width + portrait ratio, soft radius + shadow, no stretch.
+   */
+  .blog-media-shot {
+    display: block;
+    width: min(100%, 16.5rem);
+    aspect-ratio: 9 / 16;
+    max-height: 32rem;
+    margin: 2rem auto;
+    overflow: hidden;
+    border-radius: 1.25rem;
+    background-color: #ffffff;
+    border: 0;
+    box-shadow:
+      0 14px 36px color-mix(in srgb, var(--brand-ink) 12%, transparent),
+      0 3px 10px color-mix(in srgb, var(--brand-ink) 6%, transparent);
+  }
+
+  .blog-media-shot img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: top center;
+    border: 0;
+    border-radius: 0;
+    background: #ffffff;
+  }
+
+  @media (min-width: 768px) {
+    .blog-media-shot {
+      width: 18rem;
+    }
+  }
+
+  .blog-media-icon {
+    display: block;
+    margin: 1.5rem auto;
+    text-align: center;
+  }
+
+  .blog-media-icon img {
+    display: inline-block;
+    width: auto;
+    max-width: min(100%, 12rem);
+    height: auto;
+    max-height: 8rem;
+    object-fit: contain;
+    border-radius: 1rem;
+    border: 2px solid color-mix(in srgb, var(--brand-cta) 20%, transparent);
+    background-color: var(--brand-soft);
+  }
+}
+
+@layer base {
+  html {
+    color-scheme: light;
+  }
+
+  body {
+    background-color: var(--brand-cream);
+    color: var(--brand-ink-muted);
+    font-weight: 400;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}

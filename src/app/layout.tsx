@@ -1,21 +1,113 @@
 import Footer from "@/app/_components/footer";
-import { CMS_NAME, HOME_OG_IMAGE_URL } from "@/lib/constants";
+import { DeparturePrepRail } from "@/components/action-rail";
+import { ConditionalSiteChrome } from "@/app/_components/conditional-site-chrome";
+import SiteHeader from "@/app/_components/site-header";
+import { LocaleProvider } from "@/i18n/locale-provider";
+import { defaultLocale } from "@/i18n/config";
+import {
+  HOME_OG_IMAGE_URL,
+  SITE_EMAIL,
+  SITE_LOGO_PATH,
+  SITE_NAME,
+  SITE_TAGLINE,
+  SITE_URL,
+  socialLinks,
+} from "@/lib/constants";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Outfit } from "next/font/google";
 import cn from "classnames";
-import { ThemeSwitcher } from "./_components/theme-switcher";
 
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const outfit = Outfit({
+  subsets: ["latin"],
+  display: "swap",
+  weight: ["300", "400", "500"],
+  variable: "--font-sans",
+});
 
 export const metadata: Metadata = {
-  title: `Next.js Blog Example with ${CMS_NAME}`,
-  description: `A statically generated blog example using Next.js and ${CMS_NAME}.`,
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: SITE_NAME,
+    template: `%s | ${SITE_NAME}`,
+  },
+  description: SITE_TAGLINE,
+  applicationName: SITE_NAME,
+  authors: [{ name: SITE_NAME }],
+  creator: SITE_NAME,
+  publisher: SITE_NAME,
+  alternates: {
+    canonical: "/",
+    types: {
+      "application/rss+xml": "/feed.xml",
+    },
+  },
   openGraph: {
+    type: "website",
+    locale: "en_US",
+    siteName: SITE_NAME,
+    title: SITE_NAME,
+    description: SITE_TAGLINE,
+    url: "/",
+    images: [
+      {
+        url: HOME_OG_IMAGE_URL,
+        alt: SITE_NAME,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: SITE_NAME,
+    description: SITE_TAGLINE,
     images: [HOME_OG_IMAGE_URL],
   },
+  icons: {
+    icon: [{ url: SITE_LOGO_PATH }],
+    apple: [{ url: SITE_LOGO_PATH }],
+  },
 };
+
+function organizationJsonLd() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": `${SITE_URL}/#organization`,
+    name: SITE_NAME,
+    url: SITE_URL,
+    logo: `${SITE_URL}${SITE_LOGO_PATH}`,
+    email: SITE_EMAIL,
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Kunming",
+      addressRegion: "Yunnan",
+      addressCountry: "CN",
+    },
+    description: SITE_TAGLINE,
+    sameAs: socialLinks.map((s) => s.href),
+    contactPoint: {
+      "@type": "ContactPoint",
+      email: SITE_EMAIL,
+      contactType: "customer support",
+      areaServed: "Worldwide",
+      availableLanguage: ["English"],
+    },
+  };
+}
+
+function websiteJsonLd() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": `${SITE_URL}/#website`,
+    name: SITE_NAME,
+    url: SITE_URL,
+    description: SITE_TAGLINE,
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    inLanguage: "en-US",
+  };
+}
 
 export default function RootLayout({
   children,
@@ -23,46 +115,39 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang={defaultLocale} suppressHydrationWarning>
       <head>
-        <link
-          rel="apple-touch-icon"
-          sizes="180x180"
-          href="/favicon/apple-touch-icon.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="32x32"
-          href="/favicon/favicon-32x32.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="16x16"
-          href="/favicon/favicon-16x16.png"
-        />
+        <link rel="icon" href={SITE_LOGO_PATH} type="image/webp" />
+        <link rel="apple-touch-icon" href={SITE_LOGO_PATH} />
         <link rel="manifest" href="/favicon/site.webmanifest" />
-        <link
-          rel="mask-icon"
-          href="/favicon/safari-pinned-tab.svg"
-          color="#000000"
-        />
-        <link rel="shortcut icon" href="/favicon/favicon.ico" />
-        <meta name="msapplication-TileColor" content="#000000" />
-        <meta
-          name="msapplication-config"
-          content="/favicon/browserconfig.xml"
-        />
-        <meta name="theme-color" content="#000" />
-        <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
+        <meta name="theme-color" content="#f5f2ed" />
       </head>
       <body
-        className={cn(inter.className, "dark:bg-slate-900 dark:text-slate-400")}
+        className={cn(
+          outfit.variable,
+          outfit.className,
+          "min-h-screen bg-[var(--brand-cream)] text-[var(--brand-ink)] font-light antialiased",
+        )}
       >
-        <ThemeSwitcher />
-        <div className="min-h-screen">{children}</div>
-        <Footer />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify([organizationJsonLd(), websiteJsonLd()]),
+          }}
+        />
+        <LocaleProvider>
+          <ConditionalSiteChrome
+            header={<SiteHeader />}
+            footer={
+              <>
+                <Footer />
+                <DeparturePrepRail />
+              </>
+            }
+          >
+            <div className="min-h-screen">{children}</div>
+          </ConditionalSiteChrome>
+        </LocaleProvider>
       </body>
     </html>
   );
