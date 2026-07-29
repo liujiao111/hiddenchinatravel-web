@@ -13,7 +13,7 @@ export type PlannerFormValues = {
 export type PlannerFormSource = "home" | "planner";
 
 export const defaultPlannerFormValues = (
-  nationality = "United States",
+  nationality = "",
 ): PlannerFormValues => ({
   destinations: [],
   days: 7,

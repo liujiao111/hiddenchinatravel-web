@@ -1,19 +1,34 @@
 "use client";
 
-import type { PrepBuyMenu } from "@/lib/home/prep-content";
+import type { PrepBuyMenu, PrepBuyOption } from "@/lib/home/prep-content";
 import Link from "next/link";
 import { useEffect, useId, useRef, useState } from "react";
 import cn from "classnames";
 
 type Props = {
   menu: PrepBuyMenu;
+  /** Optional click hook (e.g. Survival Kit analytics). */
+  onOptionClick?: (option: PrepBuyOption) => void;
 };
 
-/** Compact CTA — hover/focus (desktop) or tap (mobile) reveals buy options. */
-export function HomePrepBuyMenu({ menu }: Props) {
+function useCanHover(): boolean {
+  const [canHover, setCanHover] = useState(false);
+  useEffect(() => {
+    const mq = window.matchMedia("(hover: hover) and (pointer: fine)");
+    const sync = () => setCanHover(mq.matches);
+    sync();
+    mq.addEventListener("change", sync);
+    return () => mq.removeEventListener("change", sync);
+  }, []);
+  return canHover;
+}
+
+/** Compact CTA — hover (desktop) or tap (touch) reveals buy options. */
+export function HomePrepBuyMenu({ menu, onOptionClick }: Props) {
   const [open, setOpen] = useState(false);
   const rootRef = useRef<HTMLDivElement>(null);
   const menuId = useId();
+  const canHover = useCanHover();
 
   useEffect(() => {
     if (!open) return;
@@ -38,15 +53,19 @@ export function HomePrepBuyMenu({ menu }: Props) {
       <div
         ref={rootRef}
         className={cn("relative", open && "z-40")}
-        onMouseEnter={() => setOpen(true)}
-        onMouseLeave={() => setOpen(false)}
+        onMouseEnter={canHover ? () => setOpen(true) : undefined}
+        onMouseLeave={canHover ? () => setOpen(false) : undefined}
       >
         <button
           type="button"
           aria-expanded={open}
           aria-haspopup="menu"
           aria-controls={menuId}
-          onClick={() => setOpen((v) => !v)}
+          onClick={() => {
+            // Touch devices: click is the only open/close. Hover devices: click
+            // still toggles for keyboard / intentional close without leaving.
+            setOpen((v) => !v);
+          }}
           className="btn-brand w-full px-4 py-2.5 text-sm"
         >
           {menu.buttonLabel}
@@ -67,25 +86,56 @@ export function HomePrepBuyMenu({ menu }: Props) {
           )}
         >
           <ul className="overflow-hidden rounded-2xl border-2 border-[#00897b]/20 bg-white py-1 shadow-[0_8px_30px_rgba(0,137,123,0.18)]">
-            {menu.options.map((option) => (
-              <li key={option.href} role="none">
-                <Link
-                  role="menuitem"
-                  href={option.href}
-                  target={option.external ? "_blank" : undefined}
-                  rel={option.external ? "noopener noreferrer" : undefined}
-                  onClick={() => setOpen(false)}
-                  className="flex items-center justify-between gap-2 px-4 py-2.5 text-sm font-bold text-[var(--brand-cta)] transition-colors duration-300 hover:bg-[var(--brand-soft)]"
-                >
+            {menu.options.map((option) => {
+              const isAffiliateGo =
+                option.href.startsWith("/go/") || option.href.includes("/go/");
+              const className =
+                "flex items-center justify-between gap-2 px-4 py-2.5 text-sm font-bold text-[var(--brand-cta)] transition-colors duration-300 hover:bg-[var(--brand-soft)]";
+              const body = (
+                <>
                   <span>{option.label}</span>
                   {option.hint ? (
                     <span className="text-xs font-normal text-[var(--brand-ink-muted)]">
                       {option.hint}
                     </span>
                   ) : null}
-                </Link>
-              </li>
-            ))}
+                </>
+              );
+              const handleClick = () => {
+                onOptionClick?.(option);
+                setOpen(false);
+              };
+
+              return (
+                <li key={option.href} role="none">
+                  {option.external || isAffiliateGo ? (
+                    <a
+                      role="menuitem"
+                      href={option.href}
+                      target="_blank"
+                      rel={
+                        isAffiliateGo
+                          ? "sponsored noopener noreferrer"
+                          : "noopener noreferrer"
+                      }
+                      onClick={handleClick}
+                      className={className}
+                    >
+                      {body}
+                    </a>
+                  ) : (
+                    <Link
+                      role="menuitem"
+                      href={option.href}
+                      onClick={handleClick}
+                      className={className}
+                    >
+                      {body}
+                    </Link>
+                  )}
+                </li>
+              );
+            })}
           </ul>
         </div>
       </div>

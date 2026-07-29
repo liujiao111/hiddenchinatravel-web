@@ -21,8 +21,6 @@ sourceUrl: "https://hiddenchinatravel.com/do-you-need-vpn-china/"
 ---
 📅 Updated June 2026 · ⏱️ 8 min read · ✅ Tested by the author
 
-_Disclosure: This guide contains affiliate links (including NordVPN). If you buy through them, I may earn a small commission at no extra cost to you. I recommend NordVPN here because it has been the most consistent mid-range option in my own China trips — not because it is a neutral lab ranking of every VPN._
-
 **Quick answer:** Most short‑term travelers can get by with an **eSIM** for daily apps. You usually only need a VPN when you’re on hotel Wi‑Fi, using public networks, or you must reach Google/WhatsApp/Gmail reliably. The setup that matters most: if you do go with a VPN, use **Obfuscated Servers + OpenVPN (TCP)** — not NordLynx. More on why below.
 
 China’s internet rules feel weird if you’re coming from outside. Great Wall of Fire? Kinda. Apps blocked? Sometimes. But you can still eat, sleep, navigate, and message without panic — as long as you sort your setup before you land.

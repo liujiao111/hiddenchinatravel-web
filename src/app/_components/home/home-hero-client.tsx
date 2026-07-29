@@ -20,13 +20,13 @@ export function HomeHeroClient() {
         className="object-cover object-center scale-[1.02] brightness-[1.05] contrast-[0.95] saturate-[1.05]"
       />
 
-      {/* Light wash — teal-led */}
+      {/* Stronger left wash so title/CTAs stay readable on bright hero photos */}
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0"
         style={{
           background:
-            "linear-gradient(105deg, rgba(255,250,240,0.94) 0%, rgba(255,250,240,0.86) 38%, rgba(255,250,240,0.45) 62%, rgba(255,248,224,0.2) 82%, transparent 100%), radial-gradient(ellipse 70% 60% at 15% 40%, rgba(0,137,123,0.14), transparent 55%)",
+            "linear-gradient(105deg, rgba(255,250,240,0.97) 0%, rgba(255,250,240,0.92) 34%, rgba(255,250,240,0.62) 55%, rgba(255,248,224,0.28) 78%, transparent 100%), radial-gradient(ellipse 70% 60% at 15% 40%, rgba(0,137,123,0.16), transparent 55%)",
         }}
       />
       <div
@@ -46,7 +46,7 @@ export function HomeHeroClient() {
           <h1 className="mb-5 max-w-xl text-3xl font-bold leading-tight tracking-tight text-[var(--brand-cta)] md:mb-6 md:text-5xl">
             {copy.title}
           </h1>
-          <p className="mb-8 max-w-md text-sm font-normal leading-relaxed text-[var(--brand-ink-muted)] md:mb-10 md:text-base">
+          <p className="mb-8 max-w-md text-sm font-normal leading-relaxed text-[var(--brand-ink)] md:mb-10 md:text-base">
             {copy.subtitle}
           </p>
 
@@ -59,7 +59,7 @@ export function HomeHeroClient() {
             </Link>
             <Link
               href="/survival-kit"
-              className="inline-flex min-h-12 w-full items-center justify-center rounded-full border-2 border-[color-mix(in_srgb,var(--brand-cta)_30%,transparent)] bg-transparent px-8 py-3.5 text-sm font-bold text-[var(--brand-cta)] transition-all duration-300 hover:border-[var(--brand-cta)] hover:bg-[color-mix(in_srgb,var(--brand-cta)_8%,transparent)] active:scale-[0.98] sm:w-auto md:px-10"
+              className="inline-flex min-h-12 w-full items-center justify-center rounded-full border-2 border-[var(--brand-cta)] bg-[var(--brand-cream)]/95 px-8 py-3.5 text-sm font-bold text-[var(--brand-cta)] shadow-[0_6px_20px_rgba(0,80,70,0.08)] transition-all duration-300 hover:bg-white hover:shadow-[0_8px_24px_rgba(0,80,70,0.12)] active:scale-[0.98] sm:w-auto md:px-10"
             >
               {copy.secondaryCta}
             </Link>

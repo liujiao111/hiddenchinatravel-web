@@ -47,11 +47,23 @@ function isCoverImageSrc(src: string): boolean {
 function isPhoneScreenshot(src: string, alt: string): boolean {
   if (isCompactIconSrc(src) || isCoverImageSrc(src)) return false;
   const blob = `${src} ${alt}`.toLowerCase();
-  return (
-    /amap|wechat|alipay|meituan|screenshot|screen|qr[-_]?code|wallet|language|offline[-_]?map|metro|navigation|passport|verif|restricted|settings|mini[-_]?program|eleme|taobao|didi|transit|download|add[-_]?card|home[-_]?screen/.test(
+  // Explicit screenshot / UI cues only — do not treat trip photos as phones.
+  if (
+    /screenshot|screen[-_]?shot|phone[-_]?ui|app[-_]?ui|app[-_]?screen|qr[-_]?code/.test(
       blob,
-    ) || /[-_]scaled\.(webp|png|jpe?g)$/i.test(src)
-  );
+    )
+  ) {
+    return true;
+  }
+  const mentionsApp =
+    /\b(amap|gaode|wechat|alipay|meituan|eleme|taobao|didi|mini[-_]?program)\b/.test(
+      blob,
+    );
+  const mentionsUi =
+    /\b(ui|screen|settings|wallet|offline[-_]?map|add[-_]?card|home[-_]?screen|download|verif|language)\b/.test(
+      blob,
+    );
+  return mentionsApp && mentionsUi;
 }
 
 /**

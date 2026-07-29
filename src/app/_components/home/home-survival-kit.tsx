@@ -18,7 +18,7 @@ export function HomeSurvivalKit() {
             airport.
           </p>
           <Link href="/survival-kit" className="btn-brand inline-flex text-sm">
-            Get Free Survival Kit
+            Open Survival Checklist
           </Link>
         </div>
       </Container>

@@ -7,7 +7,7 @@ export const plannerSectionCopy = {
   title: "Ready to go? Let's plan your trip.",
   subtitle: "Tell us where you want to go — we'll handle the how.",
   pricingHint:
-    "Custom planning from $99 — we confirm scope and fee before you pay. This request is free.",
+    "Early-bird planning from $99 by trip length — we confirm scope and fee before you pay. This request is free.",
   trustLine:
     "No spam, no pushy sales calls — just a real itinerary from someone who's been there.",
 } as const;
@@ -111,11 +111,12 @@ export const plannerInfoCards: PlannerInfoCard[] = [
     id: "pricing",
     tone: "pricing",
     title: "Custom planning price",
-    summary: "Early bird from $99 · regular from $129 after early-bird ends.",
+    summary: "Early-bird founding rates · regular after 2027-01-01.",
     items: [
-      "Up to 5 days: $99 · 6–10 days: $129 · 10+: $199",
-      "Paid PDF delivered in 48–72 hours after confirm",
-      "We'll confirm scope & fee before work starts — this request is free",
+      "Up to 5 days: $99 early bird · from $129 regular",
+      "6–10 days: $129 early bird · from $169 regular",
+      "10+ days: $199 early bird · from $219 regular",
+      "Paid PDF in 48–72 hours after confirm — this request is free",
     ],
   },
   {

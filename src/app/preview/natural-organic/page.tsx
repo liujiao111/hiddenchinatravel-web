@@ -66,7 +66,7 @@ const tools = [
   {
     title: "Survival Kit",
     body: "First-trip essentials for payments, maps, and connectivity.",
-    cta: "Get Free Survival Kit",
+    cta: "Open Survival Checklist",
   },
 ] as const;
 
@@ -185,7 +185,7 @@ export default async function NaturalOrganicPreviewPage() {
                   href="#kit"
                   className="inline-flex justify-center px-6 py-3 rounded-full font-medium transition-colors duration-300 active:scale-95 border border-[#faf6f1]/50 bg-[#faf6f1]/10 text-[#faf6f1] hover:bg-[#faf6f1]/20"
                 >
-                  Get Free Survival Kit
+                  Open Survival Checklist
                 </a>
               </div>
             </div>

@@ -341,7 +341,7 @@ export default function AboutUsPage() {
                   href="/survival-kit"
                   className="btn-brand-outline text-sm"
                 >
-                  Get Free Survival Kit
+                  Open Survival Checklist
                 </Link>
               </div>
               <LastUpdated
@@ -395,7 +395,7 @@ export default function AboutUsPage() {
                   Plan my China trip
                 </Link>
                 <Link href="/survival-kit" className="btn-brand-outline text-sm">
-                  Get Free Survival Kit
+                  Open Survival Checklist
                 </Link>
               </div>
               <ul className="space-y-2.5">

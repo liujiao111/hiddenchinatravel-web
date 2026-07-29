@@ -21,7 +21,7 @@ export function HomeBottomCta() {
               Plan my China trip
             </Link>
             <Link href="/survival-kit" className="btn-brand-outline text-sm">
-              Get Free Survival Kit
+              Open Survival Checklist
             </Link>
           </div>
         </div>

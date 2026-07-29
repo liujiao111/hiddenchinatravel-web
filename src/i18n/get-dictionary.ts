@@ -68,8 +68,8 @@ export type Dictionary = {
 
 const en: Dictionary = {
   plannerPromo: {
-    text: "Sketch cities, days, and routes before you book —",
-    cta: "Plan my China trip",
+    text: "Our brand-new website 2.0 is live —",
+    cta: "Explore now",
   },
   previewBar: {
     label: "UI preview",
@@ -130,14 +130,14 @@ const en: Dictionary = {
     subtitle:
       "Practical help with visas, payments, internet, and a custom itinerary — so your first China trip feels independent, not overwhelming.",
     primaryCta: "Plan my China trip",
-    secondaryCta: "Get Free Survival Kit",
+    secondaryCta: "Open Survival Checklist",
   },
 };
 
 const zh: Dictionary = {
   plannerPromo: {
-    text: "出发前先排好城市与天数 —",
-    cta: "规划行程",
+    text: "我们全新的网站 2.0 已上线 —",
+    cta: "立即体验",
   },
   previewBar: {
     label: "UI 预览",
@@ -197,7 +197,7 @@ const zh: Dictionary = {
     subtitle:
       "签证、支付、网络与定制行程 — 帮你第一次去中国也能独立出行、少踩坑。",
     primaryCta: "规划行程",
-    secondaryCta: "免费获取生存套件",
+    secondaryCta: "打开行前清单",
   },
 };
 

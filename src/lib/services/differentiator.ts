@@ -5,7 +5,7 @@ export const differentiatorContent = {
   eyebrow: "On-trip human help",
   title: "The Service AI Can't Replace",
   subtitle:
-    "When maps fail, payments error, or the subway dump you at the wrong exit — a real local walks you through it.",
+    "When maps fail, payments error, or the subway dumps you at the wrong exit — a real local walks you through it.",
   cta: {
     label: "Get On-Trip Help",
     href: "/checkout/on-trip-help",

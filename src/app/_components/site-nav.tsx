@@ -6,6 +6,7 @@ import { useEffect, useId, useRef, useState } from "react";
 import cn from "classnames";
 import type { Dictionary } from "@/i18n/get-dictionary";
 import { guidesNav, mainNav, type NavId, type NavItem } from "@/lib/navigation";
+import { isArticlePath } from "@/lib/routes";
 
 type NavLabels = Dictionary["nav"];
 
@@ -17,32 +18,6 @@ function menuAriaFor(item: NavItem, labels: NavLabels): string {
   if (item.id === "guides") return labels.guidesMenuAria;
   if (item.id === "tools") return labels.toolsMenuAria;
   return labelFor(item.id, labels);
-}
-
-/** Top-level app routes that are not markdown articles. */
-const RESERVED_TOP_SEGMENTS = new Set([
-  "about",
-  "contact",
-  "search",
-  "tools",
-  "survival-guides",
-  "survival-kit",
-  "china-destinations",
-  "privacy-policy",
-  "services",
-  "checkout",
-  "china-itinerary-planner",
-  "china-visa-checker",
-  "preview",
-  "posts",
-  "go",
-  "api",
-  ...guidesNav.map((item) => item.href.replace(/^\//, "")),
-]);
-
-function isArticlePath(pathname: string) {
-  const parts = pathname.split("/").filter(Boolean);
-  return parts.length === 1 && !RESERVED_TOP_SEGMENTS.has(parts[0]);
 }
 
 function isHubPath(pathname: string) {

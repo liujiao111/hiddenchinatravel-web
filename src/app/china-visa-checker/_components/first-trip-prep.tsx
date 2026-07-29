@@ -156,7 +156,7 @@ export function FirstTripPrep() {
       </h2>
       <p className="mb-10 max-w-2xl text-base font-light leading-relaxed text-[var(--brand-ink-muted)] md:text-lg">
         Beyond visas — payments, maps, tickets, and lodging are what trip up
-        most first-time visitors. Guides and deals below (links coming soon).
+        most first-time visitors. Start with the guides below.
       </p>
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8">
         {prepOffers.map((offer) => (

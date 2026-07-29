@@ -8,7 +8,7 @@ export const partnerHero = {
   title: "Your local partner for independent China travel",
   lead: "We help independent travelers plan and move through China with local clarity — not a tour group, not a guidebook alone.",
   primaryCta: "Plan my China trip",
-  secondaryCta: "Get Free Survival Kit",
+  secondaryCta: "Open Survival Checklist",
 } as const;
 
 export const partnerWhoWeAre = {
@@ -57,9 +57,9 @@ export const partnerServices: PartnerService[] = [
   {
     id: "consult-pack",
     phase: "During your trip",
-    label: "In the planner · TBD",
-    title: "On-trip Q&A consult packs",
-    body: "Consult packs will live inside the itinerary planner (details TBD) — not round-the-clock coverage. We help you find the path fast inside China’s information blind spots.",
+    label: "Add-on · from $29.9",
+    title: "On-trip quick help",
+    body: "5 quick-answer credits for those “what do I do now” moments. Message during business hours (9AM–9PM Mon–Fri, China time) and get a real answer within ~30 minutes for typical questions — not round-the-clock coverage.",
     accent: "teal",
   },
   {

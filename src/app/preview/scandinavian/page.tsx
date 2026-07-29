@@ -53,7 +53,7 @@ const tools = [
   {
     title: "Survival Kit",
     body: "First-trip essentials for payments, maps, and data.",
-    cta: "Get Free Survival Kit",
+    cta: "Open Survival Checklist",
   },
 ] as const;
 

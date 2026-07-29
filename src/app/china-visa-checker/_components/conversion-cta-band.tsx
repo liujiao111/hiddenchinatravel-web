@@ -15,8 +15,8 @@ export function ConversionCtaBand() {
             Ready for the rest of your trip?
           </h2>
           <p className="text-base font-light leading-relaxed text-[var(--brand-ink-muted)] md:text-lg">
-            Browse step-by-step survival guides and download checklists for your
-            first days in China.
+            Browse step-by-step survival guides and the trip-prep checklist for
+            your first days in China.
           </p>
         </div>
         <div className="flex shrink-0 flex-col gap-3 sm:flex-row">

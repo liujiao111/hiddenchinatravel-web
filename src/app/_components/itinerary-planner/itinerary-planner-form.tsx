@@ -50,7 +50,7 @@ export function ItineraryPlannerForm({
   const [step, setStep] = useState(0);
   const [showErrors, setShowErrors] = useState(false);
   const [values, setValues] = useState<PlannerFormValues>(() =>
-    defaultPlannerFormValues("United States"),
+    defaultPlannerFormValues(),
   );
   const [state, formAction, pending] = useActionState(
     submitItineraryPlan,

@@ -132,9 +132,9 @@ Getting around can feel overwhelming at first. These apps help you find routes, 
   * [**Google Maps** (works in cities with VPN)](https://www.google.com/maps)
   * [**Baidu Maps** (works offline inside China)](https://maps.baidu.com/)
 
-### 4\. Travel & Booking Apps
+![Amap home screen for navigation in China](/assets/blog/google-maps-china-not-working/amap-home-screen-china-navigation-app.webp)
 
-![Baidu Maps navigation on smartphone in China](https://hiddenchinatravel.com/wp-content/uploads/2026/02/image.png)
+### 4\. Travel & Booking Apps
 
 Booking trains, flights, and hotels is much easier with trusted apps installed ahead of time:
 

@@ -76,7 +76,7 @@ export const homeTools = [
     href: "/survival-kit",
     title: "Survival Kit",
     body: "First-trip essentials for payments, maps, data, and booking — ready before airport pressure.",
-    cta: "Get Free Survival Kit",
+    cta: "Open Survival Checklist",
     featured: false,
   },
 ] as const;

@@ -29,7 +29,7 @@ export const kitHero = {
   eyebrow: "China trip prep checklist",
   title: "One checklist to prepare your China trip",
   subtitle:
-    "Six calm steps — visa, network, payments, maps, bookings, and insurance — so arrival day is ready, not chaotic.",
+    "Seven calm steps — visa, network, payments, maps, bookings, insurance, and practical basics — so arrival day is ready, not chaotic.",
   painPoints: [
     "Google, Instagram & WhatsApp often fail on mainland connections",
     "Most everyday payments expect Alipay or WeChat Pay — not cash",

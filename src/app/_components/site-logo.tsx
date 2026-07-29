@@ -61,10 +61,16 @@ export function SiteLogo({
             "font-bold tracking-wide leading-tight",
             onTeal ? "text-white" : "text-[var(--brand-ink)]",
             s.text,
-            compactOnMobile && "hidden sm:inline",
           )}
         >
-          {SITE_NAME}
+          {compactOnMobile ? (
+            <>
+              <span className="sm:hidden">Hidden China</span>
+              <span className="hidden sm:inline">{SITE_NAME}</span>
+            </>
+          ) : (
+            SITE_NAME
+          )}
         </span>
       ) : null}
     </>

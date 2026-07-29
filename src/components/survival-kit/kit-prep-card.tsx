@@ -1,14 +1,51 @@
+"use client";
+
+import { HomePrepBuyMenu } from "@/app/_components/home/home-prep-buy-menu";
+import type { PrepBuyMenu } from "@/lib/home/prep-content";
+import { trackEvent } from "@/lib/survival-kit/track";
+import type { KitPrepCardData } from "@/lib/survival-kit/types";
 import { KitIcon } from "./kit-icon";
 import { KitTrackedLink } from "./kit-tracked-link";
-import type { KitPrepCardData } from "@/lib/survival-kit/types";
 
 type Props = {
   card: KitPrepCardData;
 };
 
+function buyButtonLabel(title: string): string {
+  if (/esim/i.test(title)) return "Get a China eSIM";
+  if (/vpn/i.test(title)) return "Get a travel VPN";
+  if (/wallet/i.test(title)) return "Set up a wallet";
+  if (/trip\.com/i.test(title)) return "Book on Trip.com";
+  if (/^(get|set|book)\b/i.test(title)) return title;
+  return `Get ${title}`;
+}
+
+function toBuyMenu(card: KitPrepCardData): PrepBuyMenu | null {
+  if (card.options.length < 2) return null;
+
+  const guideCta =
+    card.footerGuide ??
+    card.options.find((o) => o.secondaryCta)?.secondaryCta;
+  if (!guideCta) return null;
+
+  return {
+    buttonLabel: buyButtonLabel(card.title),
+    chooseHint: "Choose the option that fits your trip.",
+    guide: { label: guideCta.label, href: guideCta.href },
+    options: card.options.map((option) => ({
+      label: option.name,
+      href: option.primaryCta.href,
+      external: option.primaryCta.external,
+      hint: option.badge,
+    })),
+  };
+}
+
 export function KitPrepCard({ card }: Props) {
+  const buyMenu = !card.comingSoon ? toBuyMenu(card) : null;
+
   return (
-    <article className="surface-card p-6 md:p-7">
+    <article className="surface-card overflow-visible p-6 md:p-7">
       <div className="surface-card-bar" aria-hidden />
       <div className="mb-4 flex items-center gap-2.5">
         <span className="flex h-8 w-8 items-center justify-center rounded-full bg-[var(--brand-soft)] text-[var(--brand-cta)]">
@@ -34,6 +71,44 @@ export function KitPrepCard({ card }: Props) {
             </p>
           ) : null}
         </div>
+      ) : buyMenu ? (
+        <>
+          <ul className="mb-4 flex flex-1 flex-col divide-y divide-[color-mix(in_srgb,var(--brand-cream-border)_35%,transparent)] border-t border-[color-mix(in_srgb,var(--brand-cream-border)_35%,transparent)]">
+            {card.options.map((option) => (
+              <li key={option.name} className="py-3 first:pt-4 last:pb-0">
+                <div className="mb-1 flex flex-wrap items-center gap-2">
+                  <p className="text-sm font-light tracking-wide text-[var(--brand-ink)]">
+                    {option.name}
+                  </p>
+                  {option.badge ? (
+                    <span className="rounded-sm border border-[color-mix(in_srgb,var(--brand-cream-border)_45%,transparent)] bg-[var(--brand-soft)] px-1.5 py-0.5 text-[10px] font-light uppercase tracking-[0.14em] text-[var(--brand-muted)]">
+                      {option.badge}
+                    </span>
+                  ) : null}
+                </div>
+                <p className="text-xs font-light leading-relaxed text-[var(--brand-muted)] md:text-[13px]">
+                  {option.diff}
+                </p>
+              </li>
+            ))}
+          </ul>
+
+          <div className="mt-auto border-t border-[color-mix(in_srgb,var(--brand-cream-border)_35%,transparent)] pt-4">
+            <HomePrepBuyMenu
+              menu={buyMenu}
+              onOptionClick={(option) => {
+                const matched = card.options.find((o) => o.name === option.label);
+                if (!matched) return;
+                trackEvent("cta_click", {
+                  module: matched.primaryCta.trackingModule,
+                  label: matched.primaryCta.label,
+                  href: matched.primaryCta.href,
+                  external: Boolean(matched.primaryCta.external),
+                });
+              }}
+            />
+          </div>
+        </>
       ) : (
         <>
           <ul className="mb-4 flex flex-1 flex-col divide-y divide-[color-mix(in_srgb,var(--brand-cream-border)_35%,transparent)] border-t border-[color-mix(in_srgb,var(--brand-cream-border)_35%,transparent)]">

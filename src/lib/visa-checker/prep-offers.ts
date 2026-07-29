@@ -16,9 +16,9 @@ export const prepOffers: PrepOffer[] = [
     description:
       "Stay connected without swapping SIM cards. Set up before you land so maps and translation work at the airport.",
     guideLabel: "Read setup guide",
-    guideHref: "",
+    guideHref: "/best-esim-for-china-travel",
     affiliateLabel: "Get eSIM deal",
-    affiliateHref: "",
+    affiliateHref: "/go/airalo",
     icon: "esim",
   },
   {
@@ -27,9 +27,9 @@ export const prepOffers: PrepOffer[] = [
     description:
       "Some apps and sites behave differently in China. Install and test your VPN before departure — not at the gate.",
     guideLabel: "Read VPN guide",
-    guideHref: "",
+    guideHref: "/do-you-need-vpn-china",
     affiliateLabel: "Get VPN",
-    affiliateHref: "",
+    affiliateHref: "/go/nordvpn",
     icon: "vpn",
   },
   {
@@ -38,9 +38,9 @@ export const prepOffers: PrepOffer[] = [
     description:
       "Link a foreign card to Alipay or WeChat Pay before you arrive — many shops and taxis are cashless.",
     guideLabel: "Payment setup guide",
-    guideHref: "",
-    affiliateLabel: "See options",
-    affiliateHref: "",
+    guideHref: "/payments-in-china",
+    affiliateLabel: "Alipay for foreigners",
+    affiliateHref: "/alipay-for-foreigners-china",
     icon: "payments",
   },
   {
@@ -49,7 +49,7 @@ export const prepOffers: PrepOffer[] = [
     description:
       "Google Maps is limited in China. Set up Amap, Apple Maps, or Baidu Maps and save offline pins for your first day.",
     guideLabel: "Navigation guide",
-    guideHref: "",
+    guideHref: "/maps-navigation-in-china",
     icon: "maps",
   },
   {
@@ -58,9 +58,9 @@ export const prepOffers: PrepOffer[] = [
     description:
       "Popular sights often need advance booking. Learn which platforms work for passport holders and how to show tickets at the gate.",
     guideLabel: "How to book attractions",
-    guideHref: "",
+    guideHref: "/attraction-tickets-in-china",
     affiliateLabel: "Browse tickets",
-    affiliateHref: "",
+    affiliateHref: "/go/trip-tickets",
     icon: "tickets",
   },
   {
@@ -68,10 +68,10 @@ export const prepOffers: PrepOffer[] = [
     title: "Book flights",
     description:
       "Compare routes into major hubs and leave buffer time for immigration, transfers, and domestic connections.",
-    guideLabel: "Flight booking tips",
-    guideHref: "",
+    guideLabel: "Transport tips",
+    guideHref: "/transport-in-china",
     affiliateLabel: "Search flights",
-    affiliateHref: "",
+    affiliateHref: "/go/trip-flight",
     icon: "flights",
   },
   {
@@ -80,9 +80,9 @@ export const prepOffers: PrepOffer[] = [
     description:
       "Not every property accepts foreign guests. Confirm passport check-in, location near metro, and cancellation rules.",
     guideLabel: "Hotel booking tips",
-    guideHref: "",
+    guideHref: "/hotels-in-china-for-foreigners",
     affiliateLabel: "Find hotels",
-    affiliateHref: "",
+    affiliateHref: "/go/trip-hotels",
     icon: "hotels",
   },
 ];
