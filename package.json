@@ -12,6 +12,8 @@
     "test:visa": "npx --yes tsx scripts/verify-visa-evaluate.ts"
   },
   "dependencies": {
+    "@next/third-parties": "^16.2.12",
+    "@vercel/analytics": "^2.0.1",
     "classnames": "^2.5.1",
     "date-fns": "^3.6.0",
     "gray-matter": "^4.0.3",

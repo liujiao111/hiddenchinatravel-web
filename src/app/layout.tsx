@@ -2,6 +2,7 @@ import Footer from "@/app/_components/footer";
 import { DeparturePrepRail } from "@/components/action-rail";
 import { ConditionalSiteChrome } from "@/app/_components/conditional-site-chrome";
 import SiteHeader from "@/app/_components/site-header";
+import { SiteAnalytics } from "@/components/analytics/site-analytics";
 import { LocaleProvider } from "@/i18n/locale-provider";
 import { defaultLocale } from "@/i18n/config";
 import {
@@ -149,6 +150,7 @@ export default function RootLayout({
             <div className="min-h-screen">{children}</div>
           </ConditionalSiteChrome>
         </LocaleProvider>
+        <SiteAnalytics />
       </body>
     </html>
   );
