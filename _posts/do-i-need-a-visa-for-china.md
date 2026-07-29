@@ -34,13 +34,13 @@ One of 77 visa-free countries (UK, Australia, France, Japan, etc.)| Nothing — 
 One of 54 transit-eligible countries (US, Canada, Singapore, etc.)| A ticket to a third country| Up to 10 days (240 hours)  
 All other passports (Philippines, India, most of Africa, etc.)| Apply for a visa before you travel| Depends on visa granted  
   
-Use the [visa checker tool](/china-visa-checker/) if you want a quick lookup by nationality.
+Use the [visa checker tool](/china-visa-checker/) if you want a quick lookup by nationality — or open a dedicated country page such as [US citizens](/china-visa-checker/united-states/), [British citizens](/china-visa-checker/united-kingdom/), [Filipino citizens](/china-visa-checker/philippines/), or [Indian citizens](/china-visa-checker/india/).
 
 ## Group 1: No Visa Needed — 30 Days, Just Arrive
 
 If your passport is from one of 77 countries, you walk off the plane and through immigration without any prior paperwork. No appointment, no application form, no visa sticker. Just your passport and a return or onward ticket.
 
-This policy currently covers most of Europe, the UK, Australia, New Zealand, Japan, South Korea, Canada, Brazil, Argentina, and a handful of others. The full list and region-by-region breakdown is here: [China visa-free countries 2026 — complete list](/china-visa-free-countries-2026).
+This policy currently covers most of Europe, the [UK](/china-visa-checker/united-kingdom/), [Australia](/china-visa-checker/australia/), New Zealand, [Japan](/china-visa-checker/japan/), [South Korea](/china-visa-checker/south-korea/), [Canada](/china-visa-checker/canada/), [Brazil](/china-visa-checker/brazil/), Argentina, and a handful of others. The full list and region-by-region breakdown is here: [China visa-free countries 2026 — complete list](/china-visa-free-countries-2026).
 
 **A few things worth knowing before you land:**
 
@@ -127,10 +127,10 @@ This matters more than most people expect. A lot of apps you rely on at home —
 ## FAQ
 
 **Is China visa-free for US citizens?**  
-No, not for the standard 30-day program. US passport holders can use the 240-hour transit visa-free if their trip connects to a third country. For a standalone China trip, you’d need to apply for an L visa in advance.
+No, not for the standard 30-day program. US passport holders can use the 240-hour transit visa-free if their trip connects to a third country. For a standalone China trip, you’d need to apply for an L visa in advance. Full detail: [Do US citizens need a visa for China?](/china-visa-checker/united-states/).
 
 **Is China visa-free for Filipino citizens?**  
-No. Philippine passport holders need to apply for an L visa before travelling to mainland China. Filipinos also don’t qualify for the 240-hour transit program. However, there are limited group tour exemptions for specific regions (Hainan, Xishuangbanna, and Guilin) — see the L visa guide for details.
+No. Philippine passport holders need to apply for an L visa before travelling to mainland China. Filipinos also don’t qualify for the 240-hour transit program. However, there are limited group tour exemptions for specific regions (Hainan, Xishuangbanna, and Guilin) — see the L visa guide for details. Country page: [Do Filipino citizens need a visa for China?](/china-visa-checker/philippines/).
 
 **Can I extend my 30-day visa-free stay?**  
 Rarely. Extensions are only granted in genuine emergencies — medical issues, natural disasters, flight cancellations outside your control. If you need more than 30 days, it’s better to apply for a proper visa from the start.
@@ -149,5 +149,19 @@ Overstaying is treated seriously. Fines start at ¥500 per day, and you may face
 
 **Can I work or study on a tourist visa or visa-free entry?**  
 No. Working on a tourist visa is illegal. You need a Z visa for employment and an X visa for study. Tourist status is for tourism, family visits, and business meetings only.
+
+## Browse by nationality
+
+Popular passport pages (clear yes/no-style answers for 2026):
+
+  * [United States](/china-visa-checker/united-states/)
+  * [United Kingdom](/china-visa-checker/united-kingdom/)
+  * [Australia](/china-visa-checker/australia/)
+  * [Canada](/china-visa-checker/canada/)
+  * [Germany](/china-visa-checker/germany/)
+  * [Japan](/china-visa-checker/japan/)
+  * [India](/china-visa-checker/india/)
+  * [Philippines](/china-visa-checker/philippines/)
+  * [More countries on the visa checker](/china-visa-checker/#browse-nationality-heading)
 
 > _Policies above are accurate as of July 2026. Visa-free entry for most countries is confirmed through December 31, 2026. Check[the visa tool](/china-visa-checker/) or the [China NIA website](https://en.nia.gov.cn)_ _for the latest before you travel._

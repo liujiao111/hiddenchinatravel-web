@@ -201,22 +201,22 @@ For what to actually expect at the immigration counter — the questions, the ar
 ## Frequently Asked Questions
 
 **Is China visa-free for US citizens?**  
-Not for the standard 30-day program. The US is not on China’s unilateral visa-free list as of July 2026. US passport holders can enter via the 240-hour transit program if their itinerary connects onward to a third country, or use the Hainan island visa-free policy through a registered tour. A standalone mainland China trip requires an L visa.
+Not for the standard 30-day program. The US is not on China’s unilateral visa-free list as of July 2026. US passport holders can enter via the 240-hour transit program if their itinerary connects onward to a third country, or use the Hainan island visa-free policy through a registered tour. A standalone mainland China trip requires an L visa. See [Do US citizens need a visa for China?](/china-visa-checker/united-states/).
 
 **Is China visa-free for UK citizens?**  
-Yes — added to the unilateral list on February 17, 2026. UK ordinary passport holders can enter for up to 30 days without any prior application. The emergency 12-page UK passport is excluded — if you’re on one of those, you’ll need to apply for a visa regardless.
+Yes — added to the unilateral list on February 17, 2026. UK ordinary passport holders can enter for up to 30 days without any prior application. The emergency 12-page UK passport is excluded — if you’re on one of those, you’ll need to apply for a visa regardless. Details: [British citizens China visa guide](/china-visa-checker/united-kingdom/).
 
 **Is China visa-free for Australian citizens?**  
-Yes. Australia has been on the unilateral list since 2024. 30 days, ordinary passport, no application needed.
+Yes. Australia has been on the unilateral list since 2024. 30 days, ordinary passport, no application needed. Country page: [Australian citizens](/china-visa-checker/australia/).
 
 **Is China visa-free for Canadian citizens?**  
-Yes — also added February 17, 2026, same batch as the UK. 30 days, ordinary passport.
+Yes — also added February 17, 2026, same batch as the UK. 30 days, ordinary passport. See [Canadian citizens](/china-visa-checker/canada/).
 
 **Is China visa-free for Singaporean citizens?**  
-Yes, under a bilateral mutual agreement effective since February 2024. 30 days per visit. This is a separate program from the unilateral list but the practical result at the border is the same — no visa needed.
+Yes, under a bilateral mutual agreement effective since February 2024. 30 days per visit. This is a separate program from the unilateral list but the practical result at the border is the same — no visa needed. More: [Singaporean citizens](/china-visa-checker/singapore/).
 
 **Is China visa-free for Filipino citizens?**  
-No. Philippine passport holders need to apply for an L visa before traveling to mainland China. The Philippines doesn’t qualify for the unilateral program, the 240-hour transit, or a bilateral agreement with mainland China. There are limited group tour exemptions for Hainan and a couple of other regions, but those are narrow exceptions. [Full L visa guide](/china-l-visa-tourist-guide).
+No. Philippine passport holders need to apply for an L visa before traveling to mainland China. The Philippines doesn’t qualify for the unilateral program, the 240-hour transit, or a bilateral agreement with mainland China. There are limited group tour exemptions for Hainan and a couple of other regions, but those are narrow exceptions. [Full L visa guide](/china-l-visa-tourist-guide) · [Filipino country page](/china-visa-checker/philippines/).
 
 **Can I extend a visa-free stay inside China?**  
 Only in genuine documented emergencies — hospitalization, natural disaster, flight cancellations with paperwork to prove it. The public security bureau has discretion but exercises it narrowly. This is not a realistic plan. If you need more than 30 days, get an L visa before you travel.
@@ -242,7 +242,7 @@ Getting the visa question sorted is step one. Here’s everything else that actu
 
 **Entry paperwork**
 
-  * ✅ Confirm your passport qualifies — [China Visa Checker](/china-visa-checker/)
+  * ✅ Confirm your passport qualifies — [China Visa Checker](/china-visa-checker/) or your [country page](/china-visa-checker/#browse-nationality-heading)
   * ✅ Passport validity — 6 months remaining is the practical standard
   * ✅ Return or onward flight booked and accessible offline on your phone
   * ✅ Hotel confirmation for at least the first night — have the Chinese-character address saved somewhere
@@ -266,6 +266,21 @@ Getting the visa question sorted is step one. Here’s everything else that actu
 For the complete pre-arrival document checklist: _[PLACEHOLDER: /china-entry-requirements-checklist/]_
 
 If you’re still figuring out what to actually do once you’re there — where to go first, how to get between cities, how long you need: _[PLACEHOLDER: /china-itinerary-first-time/]_
+
+## Browse by nationality
+
+Country pages for high-intent passports (visa-free, 240-hour transit, or visa required):
+
+  * [United Kingdom](/china-visa-checker/united-kingdom/)
+  * [Germany](/china-visa-checker/germany/)
+  * [France](/china-visa-checker/france/)
+  * [Australia](/china-visa-checker/australia/)
+  * [Canada](/china-visa-checker/canada/)
+  * [Japan](/china-visa-checker/japan/)
+  * [South Korea](/china-visa-checker/south-korea/)
+  * [Singapore](/china-visa-checker/singapore/)
+  * [United States](/china-visa-checker/united-states/)
+  * [More countries on the visa checker](/china-visa-checker/#browse-nationality-heading)
 
 ## Related Reading
 

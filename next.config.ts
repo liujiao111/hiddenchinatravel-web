@@ -162,6 +162,26 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
+        source: "/china-visa-checker/usa",
+        destination: "/china-visa-checker/united-states",
+        permanent: true,
+      },
+      {
+        source: "/china-visa-checker/us",
+        destination: "/china-visa-checker/united-states",
+        permanent: true,
+      },
+      {
+        source: "/china-visa-checker/uk",
+        destination: "/china-visa-checker/united-kingdom",
+        permanent: true,
+      },
+      {
+        source: "/china-visa-checker/korea",
+        destination: "/china-visa-checker/south-korea",
+        permanent: true,
+      },
+      {
         source: "/destinations",
         destination: "/china-destinations",
         permanent: true,

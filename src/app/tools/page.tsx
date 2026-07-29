@@ -40,7 +40,7 @@ const featuredTools = [
   {
     name: "China Visa Checker",
     description:
-      "Enter your passport, purpose, stay length, and port of entry to see if you may qualify for 30-day visa-free, 240-hour transit, or need a visa.",
+      "Enter your passport, purpose, stay length, and port of entry to see if you may qualify for 30-day visa-free, 240-hour transit, or need a visa. Also browse dedicated pages by nationality.",
     href: "/china-visa-checker",
     badge: "Available now",
     cta: "Open visa checker",

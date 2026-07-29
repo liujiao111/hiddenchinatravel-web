@@ -8,6 +8,7 @@ import {
 import { SITE_LAST_UPDATED, SITE_NAME, SITE_URL } from "@/lib/constants";
 import type { Metadata } from "next";
 import { ConversionCtaBand } from "./_components/conversion-cta-band";
+import { CountryBrowseList } from "./_components/country-browse-list";
 import { FirstTripPrep } from "./_components/first-trip-prep";
 import { OfficialSources } from "./_components/official-sources";
 import { PolicyExplainer } from "./_components/policy-explainer";
@@ -124,6 +125,7 @@ export default function VisaCheckerPage() {
           portOptions={portOptions}
         />
         <VisaDisclaimer />
+        <CountryBrowseList />
         <PolicyExplainer />
         <FirstTripPrep />
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 mb-20 md:mb-28 items-start">

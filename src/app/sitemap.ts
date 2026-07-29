@@ -2,6 +2,10 @@ import type { MetadataRoute } from "next";
 import { getAllPosts } from "@/lib/api";
 import { getAllHubs } from "@/lib/hubs/api";
 import { SITE_URL } from "@/lib/constants";
+import {
+  countryPagePath,
+  getPhase1CountryEditorials,
+} from "@/lib/visa-checker/country-pages";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
@@ -18,6 +22,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: "weekly" as const,
     priority: 0.9,
   }));
+
+  const visaCountryPages: MetadataRoute.Sitemap =
+    getPhase1CountryEditorials().map((country) => ({
+      url: `${SITE_URL}${countryPagePath(country.slug)}`,
+      lastModified: country.lastReviewed
+        ? new Date(country.lastReviewed)
+        : now,
+      changeFrequency: "weekly" as const,
+      priority: 0.8,
+    }));
 
   const staticRoutes: MetadataRoute.Sitemap = [
     { url: SITE_URL, lastModified: now, changeFrequency: "weekly", priority: 1 },
@@ -89,5 +103,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 
-  return [...staticRoutes, ...hubs, ...posts];
+  return [...staticRoutes, ...visaCountryPages, ...hubs, ...posts];
 }

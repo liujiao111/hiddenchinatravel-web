@@ -68,7 +68,7 @@ export const staticSearchCatalog: SearchItem[] = [
     title: "China Visa Checker",
     href: "/china-visa-checker",
     description:
-      "Check visa-free, 240-hour transit, or tourist visa needs by passport.",
+      "Check visa-free, 240-hour transit, or tourist visa needs by passport — or browse country pages for US, UK, India, and more.",
     type: "tool",
     keywords: ["visa", "visa-free", "240", "transit", "entry"],
   },
