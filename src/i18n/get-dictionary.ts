@@ -20,6 +20,7 @@ export type Dictionary = {
     about: string;
     planner: string;
     visaChecker: string;
+    currencyConverter: string;
     hubVisa: string;
     hubPayments: string;
     hubInternet: string;
@@ -86,6 +87,7 @@ const en: Dictionary = {
     about: "About",
     planner: "China Itinerary Planner",
     visaChecker: "China Visa Checker",
+    currencyConverter: "China Currency Converter",
     hubVisa: "Visa",
     hubPayments: "Payments",
     hubInternet: "Internet",
@@ -154,6 +156,7 @@ const zh: Dictionary = {
     about: "关于",
     planner: "中国行程规划器",
     visaChecker: "中国签证查询",
+    currencyConverter: "人民币汇率换算",
     hubVisa: "签证",
     hubPayments: "支付",
     hubInternet: "网络",

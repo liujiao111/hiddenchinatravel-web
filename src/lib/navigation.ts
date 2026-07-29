@@ -7,6 +7,7 @@ export type NavId =
   | "about"
   | "planner"
   | "visaChecker"
+  | "currencyConverter"
   | "hubVisa"
   | "hubPayments"
   | "hubInternet"
@@ -46,6 +47,10 @@ export const toolsNav: NavItem[] = [
   {
     id: "visaChecker",
     href: "/china-visa-checker",
+  },
+  {
+    id: "currencyConverter",
+    href: "/china-currency-converter",
   },
 ];
 

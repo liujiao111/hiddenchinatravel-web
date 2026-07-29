@@ -40,6 +40,7 @@ export const DEPARTURE_PREP_VISIBILITY: ActionRailVisibility = {
     "/checkout",
     "/china-itinerary-planner",
     "/china-visa-checker",
+    "/china-currency-converter",
     "/contact",
   ],
 };

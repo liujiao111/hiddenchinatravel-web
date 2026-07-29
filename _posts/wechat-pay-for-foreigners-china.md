@@ -141,7 +141,7 @@ It sounds like overkill until you’re standing in a small restaurant with a fai
 
 ## A Real Example of Why This Matters
 
-In Chengdu, trying to pay 18 RMB at a small noodle shop, WeChat Pay failed twice. No error message, no explanation — just declined. The owner didn’t react with surprise at all; he just pointed to another QR code on the counter. It was Alipay. Without it set up, that would have been a genuinely awkward situation over less than $3.
+In Chengdu, trying to pay 18 RMB at a small noodle shop, WeChat Pay failed twice. No error message, no explanation — just declined. The owner didn’t react with surprise at all; he just pointed to another QR code on the counter. It was Alipay. Without it set up, that would have been a genuinely awkward situation over less than $3 (check today’s yuan rate on the [China currency converter](/china-currency-converter/) if you want a precise figure).
 
 That’s the thing about mobile payments in China: they work beautifully when they work, and when they don’t, there’s no card terminal to fall back on. The system is so cashless that the backup for digital payments isn’t cash — it’s a different digital payment app.
 

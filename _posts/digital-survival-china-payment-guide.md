@@ -164,6 +164,8 @@ There’s a transaction fee for international cards, but you can avoid it.
   * **Spend under 200 RMB (approximately $28 USD):** Fee is **0%**
   * **Spend over 200 RMB:** Fee is **3%**
 
+Rates move — for a live CNY to USD check while you budget fees, use the [China currency converter](/china-currency-converter/).
+
 **The workaround:** If you’re buying something for 300 RMB, ask the shop owner: _“Can I scan twice? 150 and 150?”_ Most small shop owners are happy to help you avoid the fee.
 
 ### Refunds: Where Did My Money Go?
@@ -213,10 +215,10 @@ Technology fails. Batteries die. Here’s your Plan B.
 
 ### The “200 RMB Cash” Backup
 
-Always keep about **200 RMB in small bills** (10s and 20s) tucked in your phone case.
+Always keep about **200 RMB in small bills** (10s and 20s) tucked in your phone case. Not sure how much that is in your home currency? Check the live [China currency converter (CNY / RMB)](/china-currency-converter/).
 
   * **Why small bills?** If you hand a taxi driver a 100 RMB note for a 12 RMB ride, they likely won’t have change
-  * **Where to get cash:** Look for ATMs from major banks like **ICBC** or **Bank of China**. They all have an “English” button and accept foreign cards
+  * **Where to get cash:** Look for ATMs from major banks like **ICBC** or **Bank of China**. They all have an “English” button and accept foreign cards — and expect a worse rate than the mid-market figure on our [yuan exchange converter](/china-currency-converter/)
 
 ### The Survival Cheat Sheet
 
@@ -232,6 +234,7 @@ If the app fails or you’re unsure what to do, show these phrases to the staff.
 
   * ![Survival Kit](/assets/blog/digital-survival-china-payment-guide/icon_china_survive_kit.webp) [Survival Kit: All-in-One Tools](/survival-kit) — Pre-trip essentials in one place: eSIMs, VPNs, transport tickets, hotel bookings — traveler-tested and ready to save you time and hassle!
   * ![Payments in China](/assets/blog/digital-survival-china-payment-guide/icons_payments_in_china.webp) [Payments in China for Foreigners](/payments-in-china/) — Step-by-step guidance on Alipay, WeChat Pay, and cash alternatives. Avoid payment headaches with insider tips.
+  * ![Survival Kit](/assets/blog/digital-survival-china-payment-guide/icon_china_survive_kit.webp) [China Currency Converter](/china-currency-converter/) — Live mid-market CNY / RMB rates for budgeting cash and card spend before you arrive.
   * ![Alipay](/assets/blog/digital-survival-china-payment-guide/icons8-alipay-100.webp) [Alipay for Foreigners](/alipay-for-foreigners-china) — Learn how to set up, verify, and use Alipay smoothly, even if your bank card is foreign.
   * ![WeChat Pay](/assets/blog/digital-survival-china-payment-guide/icons8-wechat-100.webp) [WeChat Pay for Foreigners](/wechat-pay-for-foreigners-china) — Complete guide on limits, verification, and daily usage tips.
   * ![Internet & VPN](/assets/blog/digital-survival-china-payment-guide/icons8-internet-100.webp) [Internet, VPN & SIM](/internet-in-china/) — Stay connected anywhere: buy SIM/eSIM, set up VPN, and keep Google, WhatsApp, and maps working smoothly.

@@ -124,7 +124,7 @@ I spent 45 minutes fumbling through Alipay’s verification flow before a staff 
 
 **2\. Screenshot your payment QR code and save it offline.** If you’re in a low-signal area (subways, rural spots, underground markets), the QR code can be slow to load. Your saved screenshot still works for payment even without an active connection.
 
-**3\. Keep ¥10–50 in cash as emergency backup.** Alipay is accepted at 95%+ of businesses in major cities, but ultra-local spots — tiny village tea houses, early-morning street carts, temple donation boxes — may still be cash only. Don’t get caught out. For the full transport side of things, our [China transport guide](/digital-survival-china-transport-guide) shows where Alipay does and doesn’t work on trains and buses.
+**3\. Keep ¥10–50 in cash as emergency backup.** Alipay is accepted at 95%+ of businesses in major cities, but ultra-local spots — tiny village tea houses, early-morning street carts, temple donation boxes — may still be cash only. Don’t get caught out. Convert those yuan amounts with our [China currency converter](/china-currency-converter/) if you think in dollars or euros. For the full transport side of things, our [China transport guide](/digital-survival-china-transport-guide) shows where Alipay does and doesn’t work on trains and buses.
 
 ## Alipay for Foreigners vs WeChat Pay: Which Should You Use?
 

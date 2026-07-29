@@ -45,15 +45,17 @@ const featuredTools = [
     badge: "Available now",
     cta: "Open visa checker",
   },
+  {
+    name: "China Currency Converter",
+    description:
+      "Convert USD, EUR, GBP, HKD, and more to Chinese Yuan (RMB). Live mid-market rates plus a quick cheat sheet for trip budgeting.",
+    href: "/china-currency-converter",
+    badge: "Available now",
+    cta: "Open currency converter",
+  },
 ];
 
 const upcomingTools = [
-  {
-    name: "Budget estimator",
-    description:
-      "Rough daily spend by city tier, travel style, and group size.",
-    href: "#",
-  },
   {
     name: "Holiday & closure calendar",
     description:

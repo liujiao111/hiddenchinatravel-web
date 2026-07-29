@@ -14,6 +14,7 @@ export const RESERVED_TOP_SEGMENTS = new Set([
   "checkout",
   "china-itinerary-planner",
   "china-visa-checker",
+  "china-currency-converter",
   "preview",
   "posts",
   "go",

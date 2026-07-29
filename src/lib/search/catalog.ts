@@ -73,6 +73,24 @@ export const staticSearchCatalog: SearchItem[] = [
     keywords: ["visa", "visa-free", "240", "transit", "entry"],
   },
   {
+    id: "tool-currency",
+    title: "China Currency Converter",
+    href: "/china-currency-converter",
+    description:
+      "Convert USD, EUR, GBP, and more to Chinese Yuan (RMB) with live mid-market rates.",
+    type: "tool",
+    keywords: [
+      "currency",
+      "exchange",
+      "CNY",
+      "RMB",
+      "yuan",
+      "USD",
+      "converter",
+      "汇率",
+    ],
+  },
+  {
     id: "tool-planner",
     title: "China Itinerary Planner",
     href: "/china-itinerary-planner",

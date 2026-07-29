@@ -50,14 +50,18 @@ subtopics:
         badge: "Troubleshooting"
         status: published
 toolCTA:
+  - label: "China Currency Converter"
+    href: /china-currency-converter
   - label: "Open the Full Payment Guide"
     href: /digital-survival-china-payment-guide
   - label: "Survival Kit"
     href: /survival-kit
 faqHeading: "Quick answers to common China payment questions"
 toolsHeading: "Want the full payment system before your trip?"
-toolsIntro: "Start with the complete guide, then go deeper into Alipay, WeChat Pay, verification, or troubleshooting based on what you need."
+toolsIntro: "Convert yuan for budgeting, then set up Alipay or WeChat Pay and keep a cash backup ready."
 faqs:
+  - question: "How much is 100 yuan in dollars?"
+    answer: "It changes with the market. Use our free [China currency converter](/china-currency-converter/) for a live mid-market CNY to USD estimate, then expect ATM and airport desks to be a bit worse."
   - question: "Can tourists use Alipay in China with an international card?"
     answer: "Yes, many tourists can use Alipay in China with an eligible international card, as long as the setup and identity verification steps are completed properly. See the [Alipay for Foreigners guide](/alipay-for-foreigners-china) for the step-by-step flow."
   - question: "Can foreigners use WeChat Pay in China without a Chinese bank account?"
