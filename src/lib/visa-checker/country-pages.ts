@@ -157,11 +157,32 @@ function buildFaqs(
     });
   }
 
-  faqs.push({
-    id: "emergency-passport",
-    question: `Can ${demonym} enter visa-free on an emergency passport?`,
-    answer: `Generally no. China’s short-stay visa-free and transit visa-free policies typically require an ordinary passport. If you hold an emergency or limited-validity travel document, plan to apply for a visa.`,
-  });
+  // Country-specific FAQs first (stronger differentiation than shared boilerplate).
+  if (editorial.faqOverrides?.length) {
+    editorial.faqOverrides.forEach((item, i) => {
+      faqs.push({
+        id: `override-${i}`,
+        question: item.question,
+        answer: item.answer,
+      });
+    });
+  }
+
+  // Skip the generic emergency-passport FAQ when a country already covers that topic.
+  const overrideText = (editorial.faqOverrides ?? [])
+    .map((item) => `${item.question} ${item.answer}`.toLowerCase())
+    .join(" ");
+  const hasEmergencyOverride = /emergency|temporary passport|travel document|notpass|laissez-passer|titre de voyage/.test(
+    overrideText,
+  );
+
+  if (!hasEmergencyOverride) {
+    faqs.push({
+      id: "emergency-passport",
+      question: `Can ${demonym} enter visa-free on an emergency passport?`,
+      answer: `Generally no. China’s short-stay visa-free and transit visa-free policies typically require an ordinary passport. If you hold an emergency or limited-validity travel document, plan to apply for a visa.`,
+    });
+  }
 
   faqs.push({
     id: "verify",
@@ -169,12 +190,6 @@ function buildFaqs(
     answer:
       "No. This page summarizes published policy for trip planning only. Rules change — confirm with the National Immigration Administration, your airline, and a Chinese embassy or consulate before you book non-refundable travel.",
   });
-
-  if (editorial.faqOverrides?.length) {
-    editorial.faqOverrides.forEach((item, i) => {
-      faqs.push({ id: `override-${i}`, question: item.question, answer: item.answer });
-    });
-  }
 
   return faqs;
 }
