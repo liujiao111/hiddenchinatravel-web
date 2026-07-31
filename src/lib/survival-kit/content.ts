@@ -369,10 +369,22 @@ export const kitInsuranceSection: KitPrepSectionData = {
       title: "Travel insurance",
       anxiety:
         "Without cover, an emergency can mean large upfront bills and messy claims from abroad.",
-      options: [],
-      comingSoon: true,
-      comingSoonNote:
-        "Partner options and a practical buying guide are on the way. For now, arrange cover with a provider you trust before you fly.",
+      options: [
+        {
+          name: "What to buy before you fly",
+          diff: "Look for inpatient medical cover that includes evacuation. We don't sell policies — use a provider you already trust at home.",
+          primaryCta: {
+            label: "Emergency numbers & tips",
+            href: "/survival-kit#section-practical",
+            trackingModule: "insurance-practical",
+          },
+          secondaryCta: {
+            label: "Why travelers buy cover",
+            href: "/china-visa-free-countries-2026",
+            trackingModule: "insurance-guide",
+          },
+        },
+      ],
     },
   ],
 };
@@ -450,7 +462,7 @@ export const kitChecklistItems: KitChecklistItem[] = [
   { id: "maps", label: "Amap installed and basic search tested" },
   { id: "hotel", label: "Flight + night-one hotel booked" },
   { id: "tickets", label: "Key attraction tickets reserved (if needed)" },
-  { id: "insurance", label: "Travel insurance arranged (when ready)" },
+  { id: "insurance", label: "Travel insurance arranged" },
 ];
 
 export const kitTestimonials: KitTestimonial[] = [

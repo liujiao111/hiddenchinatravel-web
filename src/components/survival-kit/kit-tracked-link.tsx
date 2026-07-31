@@ -25,7 +25,7 @@ export function KitTrackedLink({ cta, variant = "primary", className }: Props) {
       ? "btn-brand justify-center px-6 py-3 text-sm"
       : variant === "outline"
         ? "btn-brand-outline justify-center px-6 py-3 text-sm"
-        : "inline-flex text-sm font-light tracking-wide text-[var(--brand-cta)] transition-colors duration-300 hover:text-[var(--brand-cta-hover)]";
+        : "inline-flex text-sm font-bold tracking-tight text-[var(--brand-cta)] transition-colors duration-300 hover:text-[var(--brand-cta-hover)]";
 
   const isAffiliateGo =
     cta.href.startsWith("/go/") || cta.href.includes("/go/");

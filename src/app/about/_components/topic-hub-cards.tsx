@@ -47,15 +47,15 @@ export function TopicHubCards({ links, className }: Props) {
             >
               <span
                 aria-hidden
-                className="flex h-10 w-10 shrink-0 items-center justify-center rounded-sm bg-[var(--brand-soft)] text-xs font-light tracking-wide text-[var(--brand-ink-muted)] transition-colors duration-500 group-hover:bg-[var(--brand-cta)] group-hover:text-[var(--brand-on)]"
+                className="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-[var(--brand-soft)] text-xs font-bold tracking-tight text-[var(--brand-ink-muted)] transition-colors duration-500 group-hover:bg-[var(--brand-cta)] group-hover:text-[var(--brand-on)]"
               >
                 {meta.short}
               </span>
               <span className="min-w-0 pt-0.5">
-                <span className="block text-sm font-light leading-snug tracking-wide text-[var(--brand-ink)] underline-offset-4 group-hover:underline">
+                <span className="block text-sm font-normal leading-snug tracking-wide text-[var(--brand-ink)] underline-offset-4 group-hover:underline">
                   {link.label}
                 </span>
-                <span className="mt-1 block text-xs font-light leading-relaxed text-[var(--brand-muted)]">
+                <span className="mt-1 block text-xs font-normal leading-relaxed text-[var(--brand-muted)]">
                   {meta.hint}
                 </span>
               </span>

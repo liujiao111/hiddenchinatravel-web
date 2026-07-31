@@ -1,6 +1,7 @@
 import { remark } from "remark";
 import remarkGfm from "remark-gfm";
 import html from "remark-html";
+import { ensureHeadingIds } from "@/lib/article-toc";
 
 /** Add sponsored rel to affiliate short links in rendered HTML. */
 function decorateAffiliateAnchors(markup: string): string {
@@ -180,5 +181,5 @@ export default async function markdownToHtml(markdown: string) {
   const normalized = normalizePipeTables(markdown);
   const result = await remark().use(remarkGfm).use(html).process(normalized);
   const withAffiliates = decorateAffiliateAnchors(result.toString());
-  return wrapTables(wrapBlogImages(withAffiliates));
+  return ensureHeadingIds(wrapTables(wrapBlogImages(withAffiliates)));
 }

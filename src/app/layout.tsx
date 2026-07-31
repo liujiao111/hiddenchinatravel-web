@@ -24,7 +24,7 @@ import "./globals.css";
 const outfit = Outfit({
   subsets: ["latin"],
   display: "swap",
-  weight: ["300", "400", "500"],
+  weight: ["400", "500", "600", "700"],
   variable: "--font-sans",
 });
 
@@ -122,13 +122,13 @@ export default function RootLayout({
         <link rel="icon" href={SITE_LOGO_PATH} type="image/webp" />
         <link rel="apple-touch-icon" href={SITE_LOGO_PATH} />
         <link rel="manifest" href="/favicon/site.webmanifest" />
-        <meta name="theme-color" content="#f5f2ed" />
+        <meta name="theme-color" content="#00897b" />
       </head>
       <body
         className={cn(
           outfit.variable,
           outfit.className,
-          "min-h-screen bg-[var(--brand-cream)] text-[var(--brand-ink)] font-light antialiased",
+          "min-h-screen bg-[var(--brand-cream)] text-[var(--brand-ink)] font-normal antialiased",
         )}
       >
         <script

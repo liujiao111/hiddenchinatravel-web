@@ -93,26 +93,20 @@ export function HomeGettingStarted() {
                     </p>
                   </div>
                 ) : null}
-
-                {step.kind === "soon" ? (
-                  <p className="rounded-2xl border-2 border-dashed border-[color-mix(in_srgb,var(--brand-cta)_25%,transparent)] bg-white/70 px-3 py-2.5 text-xs font-bold uppercase tracking-wide text-[var(--brand-muted)]">
-                    Coming soon
-                  </p>
-                ) : null}
               </PrepCardShell>
             </li>
           ))}
         </ul>
 
-        <div className="mt-10 text-center md:mt-12">
+        <p className="mt-10 text-center text-sm font-normal text-[var(--brand-ink-muted)] md:mt-12">
+          Prefer a full checklist?{" "}
           <Link
             href={homePrepSection.kitCta.href}
-            className="btn-brand inline-flex px-8 py-3.5 text-sm md:text-base"
+            className="font-bold text-[var(--brand-cta)] underline decoration-[color-mix(in_srgb,var(--brand-cta)_35%,transparent)] underline-offset-2"
           >
-            {homePrepSection.kitCta.label}
-            <span aria-hidden>→</span>
+            {homePrepSection.kitCta.label} →
           </Link>
-        </div>
+        </p>
       </Container>
     </section>
   );

@@ -1,16 +1,6 @@
 import type { Locale } from "./config";
 
 export type Dictionary = {
-  plannerPromo: {
-    text: string;
-    cta: string;
-  };
-  previewBar: {
-    label: string;
-    live: string;
-    scandinavian: string;
-    naturalOrganic: string;
-  };
   nav: {
     guides: string;
     tools: string;
@@ -68,16 +58,6 @@ export type Dictionary = {
 };
 
 const en: Dictionary = {
-  plannerPromo: {
-    text: "Our brand-new website 2.0 is live —",
-    cta: "Explore now",
-  },
-  previewBar: {
-    label: "UI preview",
-    live: "Live home",
-    scandinavian: "Scandinavian minimal",
-    naturalOrganic: "Natural Organic",
-  },
   nav: {
     guides: "Survival Guides",
     tools: "Tools",
@@ -137,16 +117,6 @@ const en: Dictionary = {
 };
 
 const zh: Dictionary = {
-  plannerPromo: {
-    text: "我们全新的网站 2.0 已上线 —",
-    cta: "立即体验",
-  },
-  previewBar: {
-    label: "UI 预览",
-    live: "线上首页",
-    scandinavian: "北欧极简",
-    naturalOrganic: "自然有机",
-  },
   nav: {
     guides: "生存指南",
     tools: "工具",

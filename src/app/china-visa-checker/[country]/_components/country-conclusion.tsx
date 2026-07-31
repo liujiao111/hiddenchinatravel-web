@@ -15,19 +15,19 @@ export function CountryConclusion({ page }: { page: CountryPageModel }) {
       className="surface-card mb-10 bg-[var(--brand-surface)] p-6 md:mb-12 md:p-8"
       aria-labelledby="conclusion-heading"
     >
-      <p className="mb-3 text-xs font-light uppercase tracking-[0.16em] text-[var(--brand-muted)]">
+      <p className="mb-3 text-xs font-normal uppercase tracking-[0.16em] text-[var(--brand-muted)]">
         {BUCKET_LABEL[bucket]}
       </p>
       <h2
         id="conclusion-heading"
-        className="mb-3 text-xl font-light tracking-wide text-[var(--brand-ink)] md:text-2xl"
+        className="mb-3 text-xl font-bold tracking-wide text-[var(--brand-ink)] md:text-2xl"
       >
         {page.conclusionHeadline}
       </h2>
-      <p className="mb-5 text-sm font-light leading-relaxed text-[var(--brand-ink-muted)] md:text-base">
+      <p className="mb-5 text-sm font-normal leading-relaxed text-[var(--brand-ink-muted)] md:text-base">
         {page.conclusionSummary}
       </p>
-      <dl className="grid gap-3 text-sm font-light sm:grid-cols-2">
+      <dl className="grid gap-3 text-sm font-normal sm:grid-cols-2">
         <div>
           <dt className="text-[var(--brand-muted)]">Passport</dt>
           <dd className="text-[var(--brand-ink)]">{editorial.displayName}</dd>
@@ -64,7 +64,7 @@ export function CountryConclusion({ page }: { page: CountryPageModel }) {
         </div>
       </dl>
       {primaryResult.checklist?.length ? (
-        <ul className="mt-6 space-y-2 border-t border-[color-mix(in_srgb,var(--brand-cream-border)_40%,transparent)] pt-5 text-sm font-light text-[var(--brand-ink-muted)]">
+        <ul className="mt-6 space-y-2 border-t border-[color-mix(in_srgb,var(--brand-cream-border)_40%,transparent)] pt-5 text-sm font-normal text-[var(--brand-ink-muted)]">
           {primaryResult.checklist.slice(0, 5).map((item) => (
             <li key={item} className="flex gap-2">
               <span className="text-[var(--brand-cta)]" aria-hidden>
@@ -75,7 +75,7 @@ export function CountryConclusion({ page }: { page: CountryPageModel }) {
           ))}
         </ul>
       ) : null}
-      <p className="mt-5 text-sm font-light">
+      <p className="mt-5 text-sm font-normal">
         <Link
           href="/china-visa-checker"
           className="text-[var(--brand-cta)] underline underline-offset-4"

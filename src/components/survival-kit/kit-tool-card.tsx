@@ -22,13 +22,13 @@ export function KitToolCard({ card }: Props) {
         </div>
       ) : null}
       <div className="flex flex-1 flex-col p-4 md:p-5">
-        <div className="mb-2.5 flex h-8 w-8 items-center justify-center rounded-sm border border-[color-mix(in_srgb,var(--brand-cream-border)_40%,transparent)] bg-[var(--brand-soft)] text-[var(--brand-cta)]">
+        <div className="mb-2.5 flex h-8 w-8 items-center justify-center rounded-2xl border border-[color-mix(in_srgb,var(--brand-cream-border)_40%,transparent)] bg-[var(--brand-soft)] text-[var(--brand-cta)]">
           <KitIcon name={card.icon} className="h-4 w-4" />
         </div>
-        <h3 className="mb-1.5 text-base font-light tracking-wide text-[var(--brand-ink)]">
+        <h3 className="mb-1.5 text-base font-bold tracking-tight text-[var(--brand-ink)]">
           {card.title}
         </h3>
-        <p className="mb-4 flex-1 text-sm font-light leading-relaxed text-[var(--brand-ink-muted)]">
+        <p className="mb-4 flex-1 text-sm font-normal leading-relaxed text-[var(--brand-ink-muted)]">
           {card.description}
         </p>
         <div className="flex flex-col gap-2">

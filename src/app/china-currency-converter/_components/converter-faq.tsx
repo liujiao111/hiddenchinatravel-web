@@ -6,7 +6,7 @@ export function ConverterFaq() {
     <section className="mb-12 md:mb-16" aria-labelledby="converter-faq">
       <h2
         id="converter-faq"
-        className="mb-6 text-xl font-light tracking-wide text-[var(--brand-ink)] md:text-2xl"
+        className="mb-6 text-xl font-bold tracking-wide text-[var(--brand-ink)] md:text-2xl"
       >
         Currency & cash FAQ for China travel
       </h2>
@@ -16,7 +16,7 @@ export function ConverterFaq() {
             key={item.id}
             className="surface-card group bg-[var(--brand-surface)] px-5 py-4"
           >
-            <summary className="cursor-pointer list-none text-sm font-light tracking-wide text-[var(--brand-ink)] marker:content-none [&::-webkit-details-marker]:hidden">
+            <summary className="cursor-pointer list-none text-sm font-bold tracking-tight text-[var(--brand-ink)] marker:content-none [&::-webkit-details-marker]:hidden">
               <span className="flex items-start justify-between gap-3">
                 {item.question}
                 <span
@@ -27,13 +27,13 @@ export function ConverterFaq() {
                 </span>
               </span>
             </summary>
-            <p className="mt-3 text-sm font-light leading-relaxed text-[var(--brand-ink-muted)]">
+            <p className="mt-3 text-sm font-normal leading-relaxed text-[var(--brand-ink-muted)]">
               {item.answer}
             </p>
           </details>
         ))}
       </div>
-      <p className="mt-4 text-sm font-light text-[var(--brand-muted)]">
+      <p className="mt-4 text-sm font-normal text-[var(--brand-muted)]">
         Still setting up payments? Start with the{" "}
         <Link
           href="/payments-in-china"

@@ -29,11 +29,11 @@ export function RelatedPaymentGuides() {
     <section className="mb-12 md:mb-16" aria-labelledby="related-payments">
       <h2
         id="related-payments"
-        className="mb-3 text-xl font-light tracking-wide text-[var(--brand-ink)] md:text-2xl"
+        className="mb-3 text-xl font-bold tracking-wide text-[var(--brand-ink)] md:text-2xl"
       >
         Next: get ready to pay in China
       </h2>
-      <p className="mb-6 max-w-2xl text-sm font-light leading-relaxed text-[var(--brand-ink-muted)]">
+      <p className="mb-6 max-w-2xl text-sm font-normal leading-relaxed text-[var(--brand-ink-muted)]">
         Knowing the yuan rate is only half the job. Set up mobile payment and a
         cash backup so everyday purchases feel routine.
       </p>
@@ -44,10 +44,10 @@ export function RelatedPaymentGuides() {
               href={item.href}
               className="surface-card block h-full bg-[var(--brand-surface)] p-5 transition-colors hover:bg-[var(--brand-soft)]"
             >
-              <span className="mb-2 block text-sm font-light tracking-wide text-[var(--brand-cta)]">
+              <span className="mb-2 block text-sm font-bold tracking-tight text-[var(--brand-cta)]">
                 {item.title}
               </span>
-              <span className="text-sm font-light leading-relaxed text-[var(--brand-ink-muted)]">
+              <span className="text-sm font-normal leading-relaxed text-[var(--brand-ink-muted)]">
                 {item.blurb}
               </span>
             </Link>
@@ -56,10 +56,10 @@ export function RelatedPaymentGuides() {
       </ul>
 
       <div className="surface-card mt-6 bg-[var(--brand-soft)] p-5 sm:p-6">
-        <h3 className="mb-2 text-sm font-light tracking-wide text-[var(--brand-ink)]">
+        <h3 className="mb-2 text-sm font-bold tracking-tight text-[var(--brand-ink)]">
           Need a better FX rate before you travel?
         </h3>
-        <p className="mb-3 text-sm font-light leading-relaxed text-[var(--brand-ink-muted)]">
+        <p className="mb-3 text-sm font-normal leading-relaxed text-[var(--brand-ink-muted)]">
           Some travelers move money with{" "}
           <Link
             href={affiliatePath("wise")}
@@ -71,7 +71,7 @@ export function RelatedPaymentGuides() {
           ahead of the trip for clearer mid-market pricing versus airport cash
           desks. Compare fees for your corridor before you commit.
         </p>
-        <p className="text-xs font-light text-[var(--brand-muted)]">
+        <p className="text-xs font-normal text-[var(--brand-muted)]">
           This post contains affiliate links at no extra cost to you.
         </p>
       </div>

@@ -34,7 +34,7 @@ export default function ChinaDestinationsPage() {
       <Container>
         <PageHeading
           title="China destinations for first-time visitors"
-          description="Start with cities that work well as a first base. City deep-dives are expanding — for now, use each card to open the itinerary planner and sketch your route."
+          description="These cities work well as first bases for independent travelers. Use each card to open the itinerary planner and sketch a route — deeper city guides will follow."
           lastUpdated={SITE_LAST_UPDATED}
         />
       </Container>
@@ -43,7 +43,7 @@ export default function ChinaDestinationsPage() {
 
       <Container>
         <div className="flex flex-col items-start justify-between gap-4 border-t border-[color-mix(in_srgb,var(--brand-cream-border)_40%,transparent)] py-16 md:flex-row md:items-center md:py-20">
-          <p className="max-w-md text-sm font-light leading-relaxed text-[var(--brand-ink-muted)]">
+          <p className="max-w-md text-sm font-normal leading-relaxed text-[var(--brand-ink-muted)]">
             Need setup guides before you pick cities? Browse payments, internet,
             maps, and more.
           </p>

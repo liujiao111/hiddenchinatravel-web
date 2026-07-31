@@ -49,7 +49,7 @@ export function VisaResultPanel({ result }: Props) {
       id="visa-result"
       aria-live="polite"
       className={cn(
-        "scroll-mt-32 overflow-hidden rounded-sm border border-[color-mix(in_srgb,var(--brand-cream-border)_40%,transparent)] border-l-4 bg-[var(--brand-surface)] shadow-md md:scroll-mt-36",
+        "scroll-mt-32 overflow-hidden rounded-2xl border border-[color-mix(in_srgb,var(--brand-cream-border)_40%,transparent)] border-l-4 bg-[var(--brand-surface)] shadow-md md:scroll-mt-36",
         accent.border,
       )}
     >
@@ -57,7 +57,7 @@ export function VisaResultPanel({ result }: Props) {
         <div className="flex flex-col gap-5 sm:flex-row sm:items-start">
           <div
             className={cn(
-              "flex h-14 w-14 shrink-0 items-center justify-center rounded-sm text-2xl font-light",
+              "flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl text-2xl font-bold",
               accent.iconBg,
             )}
             aria-hidden
@@ -67,20 +67,20 @@ export function VisaResultPanel({ result }: Props) {
           <div className="min-w-0">
             <span
               className={cn(
-                "mb-3 inline-block rounded-sm px-2.5 py-1 text-xs font-light uppercase tracking-wider",
+                "mb-3 inline-block rounded-2xl px-2.5 py-1 text-xs font-normal uppercase tracking-wider",
                 accent.badge,
               )}
             >
               {result.kicker}
             </span>
-            <h2 className="text-xl font-light leading-snug tracking-wide text-[var(--brand-ink)] sm:text-2xl md:text-3xl">
+            <h2 className="text-xl font-bold leading-snug tracking-wide text-[var(--brand-ink)] sm:text-2xl md:text-3xl">
               {result.headline}
             </h2>
-            <p className="mt-3 max-w-2xl text-base font-light leading-relaxed text-[var(--brand-ink-muted)]">
+            <p className="mt-3 max-w-2xl text-base font-normal leading-relaxed text-[var(--brand-ink-muted)]">
               {result.summary}
             </p>
             {result.note ? (
-              <p className="mt-4 border-t border-[color-mix(in_srgb,var(--brand-cream-border)_40%,transparent)] pt-4 text-sm font-light leading-relaxed text-[var(--brand-muted)]">
+              <p className="mt-4 border-t border-[color-mix(in_srgb,var(--brand-cream-border)_40%,transparent)] pt-4 text-sm font-normal leading-relaxed text-[var(--brand-muted)]">
                 {result.note}
               </p>
             ) : null}
@@ -88,17 +88,17 @@ export function VisaResultPanel({ result }: Props) {
         </div>
 
         {result.missingConditions && result.missingConditions.length > 0 ? (
-          <div className="mt-6 rounded-sm border border-[color-mix(in_srgb,var(--brand-cream-border)_40%,transparent)] bg-[var(--brand-soft)] p-4">
-            <h3 className="mb-2 text-sm font-light uppercase tracking-wider text-[var(--brand-muted)]">
+          <div className="mt-6 rounded-2xl border border-[color-mix(in_srgb,var(--brand-cream-border)_40%,transparent)] bg-[var(--brand-soft)] p-4">
+            <h3 className="mb-2 text-sm font-normal uppercase tracking-wider text-[var(--brand-muted)]">
               Missing conditions
             </h3>
             <ul className="space-y-2">
               {result.missingConditions.map((item) => (
                 <li
                   key={item}
-                  className="flex gap-2 text-sm font-light text-[var(--brand-ink-muted)]"
+                  className="flex gap-2 text-sm font-normal text-[var(--brand-ink-muted)]"
                 >
-                  <span className="font-light text-amber-700" aria-hidden>
+                  <span className="font-normal text-amber-700" aria-hidden>
                     –
                   </span>
                   {item}
@@ -130,19 +130,19 @@ export function VisaResultPanel({ result }: Props) {
       </div>
 
       <div className="border-t border-[color-mix(in_srgb,var(--brand-cream-border)_40%,transparent)] bg-[var(--brand-soft)] px-6 py-6 sm:px-8">
-        <h3 className="mb-4 text-sm font-light uppercase tracking-wider text-[var(--brand-muted)]">
+        <h3 className="mb-4 text-sm font-normal uppercase tracking-wider text-[var(--brand-muted)]">
           What to prepare
         </h3>
         <ul className="grid grid-cols-1 gap-x-8 gap-y-3 md:grid-cols-2">
           {result.checklist.map((item) => (
             <li
               key={item}
-              className="flex gap-3 text-sm font-light leading-relaxed text-[var(--brand-ink-muted)]"
+              className="flex gap-3 text-sm font-normal leading-relaxed text-[var(--brand-ink-muted)]"
             >
               <span
                 aria-hidden
                 className={cn(
-                  "mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-sm text-xs font-light",
+                  "mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-2xl text-xs font-normal",
                   accent.iconBg,
                 )}
               >
@@ -163,13 +163,13 @@ export function VisaResultPanel({ result }: Props) {
         </Link>
         <Link
           href={result.secondaryCta.href}
-          className="inline-flex items-center justify-center px-4 py-3.5 font-light tracking-wide text-[var(--brand-ink-muted)] underline underline-offset-4 transition-colors duration-500 hover:text-[var(--brand-ink)]"
+          className="inline-flex items-center justify-center px-4 py-3.5 font-bold tracking-tight text-[var(--brand-ink-muted)] underline underline-offset-4 transition-colors duration-500 hover:text-[var(--brand-ink)]"
         >
           {result.secondaryCta.label}
         </Link>
       </div>
 
-      <p className="px-6 pb-6 text-xs font-light text-[var(--brand-muted)] sm:px-8">
+      <p className="px-6 pb-6 text-xs font-normal text-[var(--brand-muted)] sm:px-8">
         Final entry is decided by border officials. This result is for planning
         purposes only — not legal or immigration advice.
       </p>
@@ -180,10 +180,10 @@ export function VisaResultPanel({ result }: Props) {
 function MetaItem({ label, value }: { label: string; value: string }) {
   return (
     <div>
-      <strong className="mb-0.5 block text-sm font-light tracking-wide text-[var(--brand-ink)]">
+      <strong className="mb-0.5 block text-sm font-bold tracking-tight text-[var(--brand-ink)]">
         {label}
       </strong>
-      <span className="text-sm font-light leading-snug text-[var(--brand-muted)]">
+      <span className="text-sm font-normal leading-snug text-[var(--brand-muted)]">
         {value}
       </span>
     </div>

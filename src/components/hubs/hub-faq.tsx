@@ -17,12 +17,12 @@ export function HubFaq({ faqs, heading }: Props) {
 
   return (
     <section id="faq" aria-labelledby="hub-faq-heading" className="scroll-mt-28">
-      <p className="mb-3 text-xs font-light uppercase tracking-[0.18em] text-[var(--brand-warm)]">
+      <p className="mb-3 text-xs font-normal uppercase tracking-[0.18em] text-[var(--brand-warm)]">
         FAQ
       </p>
       <h2
         id="hub-faq-heading"
-        className="mb-10 text-xl font-light leading-tight tracking-wide text-[var(--brand-ink)] md:text-3xl"
+        className="mb-10 text-xl font-bold leading-tight tracking-wide text-[var(--brand-ink)] md:text-3xl"
       >
         {heading || "Quick answers to common questions"}
       </h2>
@@ -40,13 +40,13 @@ export function HubFaq({ faqs, heading }: Props) {
                 onClick={() => setOpenId(isOpen ? null : id)}
                 aria-expanded={isOpen}
                 aria-controls={`hub-faq-panel-${id}`}
-                className="flex w-full items-center justify-between gap-4 py-5 text-left text-base font-light tracking-wide text-[var(--brand-ink)] transition-colors duration-500 hover:text-[var(--brand-ink-muted)] md:py-6 md:text-lg"
+                className="flex w-full items-center justify-between gap-4 py-5 text-left text-base font-bold tracking-tight text-[var(--brand-ink)] transition-colors duration-500 hover:text-[var(--brand-ink-muted)] md:py-6 md:text-lg"
               >
                 {item.question}
                 <span
                   aria-hidden
                   className={cn(
-                    "shrink-0 text-2xl font-light leading-none transition-transform duration-300",
+                    "shrink-0 text-2xl font-bold leading-none transition-transform duration-300",
                     isOpen && "rotate-45",
                   )}
                 >

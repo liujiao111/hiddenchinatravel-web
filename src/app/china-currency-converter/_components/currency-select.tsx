@@ -98,7 +98,7 @@ export function CurrencySelect({
         onClick={() => setOpen((o) => !o)}
         onKeyDown={onKeyDown}
         className={cn(
-          "flex h-full min-h-[3.25rem] w-[9.75rem] items-center justify-between gap-2 rounded-sm border bg-white px-3 py-2.5 text-left transition-colors duration-300 sm:w-[11.5rem]",
+          "flex h-full min-h-[3.25rem] w-[9.75rem] items-center justify-between gap-2 rounded-2xl border bg-white px-3 py-2.5 text-left transition-colors duration-300 sm:w-[11.5rem]",
           "focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--brand-ring)] focus-visible:ring-offset-1",
           open
             ? "border-[var(--brand-cta)] shadow-sm"
@@ -109,7 +109,7 @@ export function CurrencySelect({
           <span className="block text-sm font-medium tracking-wide text-[var(--brand-ink)]">
             {selected.code}
           </span>
-          <span className="block truncate text-[11px] font-light leading-tight text-[var(--brand-muted)]">
+          <span className="block truncate text-[11px] font-normal leading-tight text-[var(--brand-muted)]">
             {selected.name.replace(/\s*\(.*\)\s*$/, "")}
           </span>
         </span>
@@ -135,7 +135,7 @@ export function CurrencySelect({
           id={listId}
           role="listbox"
           aria-label={ariaLabel}
-          className="absolute right-0 z-40 mt-2 max-h-72 w-[min(20rem,calc(100vw-2.5rem))] overflow-y-auto rounded-sm border border-[color-mix(in_srgb,var(--brand-cream-border)_45%,transparent)] bg-[var(--brand-surface)] py-1 shadow-lg"
+          className="absolute right-0 z-40 mt-2 max-h-72 w-[min(20rem,calc(100vw-2.5rem))] overflow-y-auto rounded-2xl border border-[color-mix(in_srgb,var(--brand-cream-border)_45%,transparent)] bg-[var(--brand-surface)] py-1 shadow-lg"
         >
           {CURRENCIES.map((opt, index) => {
             const isSelected = opt.code === value;
@@ -165,12 +165,12 @@ export function CurrencySelect({
                     {opt.code}
                   </span>
                   <span className="min-w-0 flex-1">
-                    <span className="block truncate text-sm font-light">
+                    <span className="block truncate text-sm font-normal">
                       {opt.name}
                     </span>
                     <span
                       className={cn(
-                        "block text-[11px] font-light",
+                        "block text-[11px] font-normal",
                         isSelected
                           ? "text-[color-mix(in_srgb,var(--brand-on)_75%,transparent)]"
                           : "text-[var(--brand-muted)]",

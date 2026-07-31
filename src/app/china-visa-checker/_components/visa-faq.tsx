@@ -15,7 +15,7 @@ export function VisaFaq() {
     >
       <h2
         id="faq-heading"
-        className="mb-10 text-xl font-light leading-tight tracking-wide text-[var(--brand-ink)] md:text-3xl"
+        className="mb-10 text-xl font-bold leading-tight tracking-wide text-[var(--brand-ink)] md:text-3xl"
       >
         Frequently asked questions
       </h2>
@@ -33,13 +33,13 @@ export function VisaFaq() {
                 onClick={() => setOpenId(isOpen ? null : item.id)}
                 aria-expanded={isOpen}
                 aria-controls={`faq-panel-${item.id}`}
-                className="flex w-full items-center justify-between gap-4 py-5 text-left text-base font-light tracking-wide text-[var(--brand-ink)] transition-colors duration-500 hover:text-[var(--brand-ink-muted)] md:py-6 md:text-lg"
+                className="flex w-full items-center justify-between gap-4 py-5 text-left text-base font-bold tracking-tight text-[var(--brand-ink)] transition-colors duration-500 hover:text-[var(--brand-ink-muted)] md:py-6 md:text-lg"
               >
                 {item.question}
                 <span
                   aria-hidden
                   className={cn(
-                    "shrink-0 text-2xl font-light leading-none transition-transform duration-300",
+                    "shrink-0 text-2xl font-bold leading-none transition-transform duration-300",
                     isOpen && "rotate-45",
                   )}
                 >
@@ -55,7 +55,7 @@ export function VisaFaq() {
                   isOpen ? "max-h-96 pb-5 md:pb-6" : "max-h-0",
                 )}
               >
-                <p className="pr-8 text-base font-light leading-relaxed text-[var(--brand-ink-muted)]">
+                <p className="pr-8 text-base font-normal leading-relaxed text-[var(--brand-ink-muted)]">
                   {item.answer}
                 </p>
               </div>

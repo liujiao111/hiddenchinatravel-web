@@ -31,13 +31,13 @@ export default async function SearchPage({ searchParams }: Props) {
     <main>
       <Container>
         <header className="mb-10 mt-8 max-w-3xl md:mb-12">
-          <p className="mb-4 text-xs font-light uppercase tracking-[0.16em] text-[var(--brand-muted)]">
+          <p className="mb-4 text-xs font-normal uppercase tracking-[0.16em] text-[var(--brand-muted)]">
             Search
           </p>
-          <h1 className="mb-4 text-2xl font-light tracking-wide text-[var(--brand-ink)] md:text-4xl">
+          <h1 className="mb-4 text-2xl font-bold tracking-wide text-[var(--brand-ink)] md:text-4xl">
             {query ? `Results for “${query}”` : "Search the site"}
           </h1>
-          <p className="mb-6 text-sm font-light leading-relaxed text-[var(--brand-ink-muted)] md:text-base">
+          <p className="mb-6 text-sm font-normal leading-relaxed text-[var(--brand-ink-muted)] md:text-base">
             Find guides, topic hubs, and tools for traveling in China as a
             foreigner.
           </p>
@@ -53,12 +53,12 @@ export default async function SearchPage({ searchParams }: Props) {
 
         {query ? (
           <section className="mb-24">
-            <p className="mb-6 text-sm font-light text-[var(--brand-muted)]">
+            <p className="mb-6 text-sm font-normal text-[var(--brand-muted)]">
               {results.length} result{results.length === 1 ? "" : "s"}
             </p>
             {results.length === 0 ? (
               <div className="surface-card bg-[var(--brand-surface)] p-8">
-                <p className="mb-4 text-base font-light leading-relaxed text-[var(--brand-ink-muted)] md:text-lg">
+                <p className="mb-4 text-base font-normal leading-relaxed text-[var(--brand-ink-muted)] md:text-lg">
                   No matches. Try a broader term, or start from these:
                 </p>
                 <div className="flex flex-wrap gap-3">
@@ -79,19 +79,19 @@ export default async function SearchPage({ searchParams }: Props) {
                   <li key={item.id}>
                     <Link
                       href={item.href}
-                      className="-mx-2 flex flex-col gap-2 rounded-sm px-2 py-5 transition-colors duration-500 hover:bg-[var(--brand-soft)] sm:flex-row sm:items-start sm:gap-4"
+                      className="-mx-2 flex flex-col gap-2 rounded-2xl px-2 py-5 transition-colors duration-500 hover:bg-[var(--brand-soft)] sm:flex-row sm:items-start sm:gap-4"
                     >
-                      <span className="mt-0.5 w-fit shrink-0 rounded-sm bg-[var(--brand-soft)] px-2.5 py-1 text-[11px] font-light uppercase tracking-wider text-[var(--brand-ink-muted)]">
+                      <span className="mt-0.5 w-fit shrink-0 rounded-2xl bg-[var(--brand-soft)] px-2.5 py-1 text-[11px] font-normal uppercase tracking-wider text-[var(--brand-ink-muted)]">
                         {searchTypeLabel[item.type]}
                       </span>
                       <span className="min-w-0">
-                        <span className="block text-lg font-light tracking-wide text-[var(--brand-ink)]">
+                        <span className="block text-lg font-bold tracking-tight text-[var(--brand-ink)]">
                           {item.title}
                         </span>
-                        <span className="mt-1 block font-light leading-relaxed text-[var(--brand-ink-muted)]">
+                        <span className="mt-1 block font-normal leading-relaxed text-[var(--brand-ink-muted)]">
                           {item.description}
                         </span>
-                        <span className="mt-1 block text-sm font-light text-[var(--brand-muted)]">
+                        <span className="mt-1 block text-sm font-normal text-[var(--brand-muted)]">
                           {item.href}
                         </span>
                       </span>
@@ -102,7 +102,7 @@ export default async function SearchPage({ searchParams }: Props) {
             )}
           </section>
         ) : (
-          <p className="mb-24 font-light text-[var(--brand-muted)]">
+          <p className="mb-24 font-normal text-[var(--brand-muted)]">
             Type a query above — for example visa, Alipay, hotels, or eSIM.
           </p>
         )}

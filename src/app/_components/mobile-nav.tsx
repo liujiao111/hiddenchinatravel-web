@@ -5,7 +5,7 @@ import { mainNav, type NavId, type NavItem } from "@/lib/navigation";
 import cn from "classnames";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useId, useState } from "react";
+import { useEffect, useId, useRef, useState } from "react";
 
 type NavLabels = Dictionary["nav"];
 
@@ -19,11 +19,13 @@ type Props = {
   tone?: "default" | "onTeal";
 };
 
-/** Full-screen menu — used below the `xl` breakpoint (matches SiteHeader). */
+/** Full-screen menu — used below the `lg` breakpoint (matches SiteHeader). */
 export function MobileNav({ labels, plannerCta, tone = "onTeal" }: Props) {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
   const panelId = useId();
+  const panelRef = useRef<HTMLDivElement>(null);
+  const previouslyFocused = useRef<HTMLElement | null>(null);
   const onTeal = tone === "onTeal";
 
   useEffect(() => {
@@ -32,20 +34,48 @@ export function MobileNav({ labels, plannerCta, tone = "onTeal" }: Props) {
 
   useEffect(() => {
     if (!open) return;
+
+    previouslyFocused.current = document.activeElement as HTMLElement | null;
     const prev = document.body.style.overflow;
     document.body.style.overflow = "hidden";
+
+    const panel = panelRef.current;
+    const focusable = panel?.querySelectorAll<HTMLElement>(
+      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])',
+    );
+    focusable?.[0]?.focus();
+
     function onKey(e: KeyboardEvent) {
-      if (e.key === "Escape") setOpen(false);
+      if (e.key === "Escape") {
+        e.preventDefault();
+        setOpen(false);
+        return;
+      }
+
+      if (e.key !== "Tab" || !panel || !focusable?.length) return;
+
+      const items = Array.from(focusable);
+      const first = items[0];
+      const last = items[items.length - 1];
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
     }
+
     document.addEventListener("keydown", onKey);
     return () => {
       document.body.style.overflow = prev;
       document.removeEventListener("keydown", onKey);
+      previouslyFocused.current?.focus?.();
     };
   }, [open]);
 
   return (
-    <div className="xl:hidden">
+    <div className="lg:hidden">
       <button
         type="button"
         aria-expanded={open}
@@ -65,6 +95,7 @@ export function MobileNav({ labels, plannerCta, tone = "onTeal" }: Props) {
       {open ? (
         <div
           id={panelId}
+          ref={panelRef}
           role="dialog"
           aria-modal="true"
           aria-label={labels.mainAria}

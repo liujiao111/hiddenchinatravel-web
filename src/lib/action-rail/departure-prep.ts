@@ -11,8 +11,8 @@ export const DEPARTURE_PREP_CONTENT: ActionRailContent = {
   support:
     "Not a tour template — one-to-one planning and practical prep for foreigners who want to travel China on their own terms.",
   tabLabel: "Local partner",
-  mobileBarLabel: "Your local China partner",
-  primaryCtaLabel: "Plan my China trip",
+  mobileBarLabel: "Need a local partner?",
+  primaryCtaLabel: "Plan trip",
   ctas: [
     {
       id: "plan",

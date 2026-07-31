@@ -3,7 +3,7 @@
 export const differentiatorContent = {
   id: "differentiator",
   eyebrow: "On-trip human help",
-  title: "The Service AI Can't Replace",
+  title: "On-trip help when plans break",
   subtitle:
     "When maps fail, payments error, or the subway dumps you at the wrong exit — a real local walks you through it.",
   cta: {
@@ -15,7 +15,7 @@ export const differentiatorContent = {
   signals: [
     { id: "response", label: "30-min response", icon: "clock" as const },
     { id: "hours", label: "Mon–Fri 9AM–9PM", icon: "calendar" as const },
-    { id: "human", label: "Real human, not AI", icon: "person" as const },
+    { id: "human", label: "Local partner reply", icon: "person" as const },
   ],
   scenarios: [
     {
@@ -49,7 +49,7 @@ export const onTripHelpProduct = {
     '5 quick-answer credits for those "what do I do now" moments.',
   detail:
     "Not 24/7 concierge — message during business hours (9AM–9PM Mon–Fri, China time) and get a real answer within ~30 minutes for typical questions.",
-  priceLabel: "$29.9 / 5 Questions",
+  priceLabel: "$29.90 / 5 Questions",
   offerPrice: 29.9,
   priceCurrency: "USD",
   ctaText: "Get Help Now",

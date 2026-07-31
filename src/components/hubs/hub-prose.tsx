@@ -9,7 +9,7 @@ export function HubProse({ text, className }: { text: string; className?: string
       {blocks.map((block, i) => (
         <p
           key={i}
-          className="mb-4 text-base font-light leading-relaxed text-[var(--brand-ink-muted)] last:mb-0 md:text-lg"
+          className="mb-4 text-base font-normal leading-relaxed text-[var(--brand-ink-muted)] last:mb-0 md:text-lg"
         >
           {renderInline(block.replace(/\n/g, " "))}
         </p>

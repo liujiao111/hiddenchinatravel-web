@@ -23,13 +23,13 @@ export default function NotFound() {
             <SiteLogo size="sm" />
           </div>
 
-          <p className="mb-4 text-xs font-light uppercase tracking-[0.18em] text-[var(--brand-muted)]">
+          <p className="mb-4 text-xs font-normal uppercase tracking-[0.18em] text-[var(--brand-muted)]">
             Error 404
           </p>
-          <h1 className="mb-4 max-w-2xl text-2xl font-light tracking-wide text-[var(--brand-ink)] md:text-4xl">
+          <h1 className="mb-4 max-w-2xl text-2xl font-bold tracking-wide text-[var(--brand-ink)] md:text-4xl">
             This page took a wrong turn in China
           </h1>
-          <p className="mb-10 max-w-xl text-sm font-light leading-relaxed text-[var(--brand-ink-muted)] md:text-base">
+          <p className="mb-10 max-w-xl text-sm font-normal leading-relaxed text-[var(--brand-ink-muted)] md:text-base">
             The link may be outdated, or the guide has moved. Use one of the
             paths below — or head home and start again.
           </p>
@@ -48,7 +48,7 @@ export default function NotFound() {
           </div>
 
           <div className="surface-card max-w-lg bg-[var(--brand-surface)] p-6 md:p-7">
-            <p className="mb-4 text-xs font-light uppercase tracking-[0.14em] text-[var(--brand-muted)]">
+            <p className="mb-4 text-xs font-normal uppercase tracking-[0.14em] text-[var(--brand-muted)]">
               Helpful links
             </p>
             <ul className="grid gap-2 sm:grid-cols-2">
@@ -56,7 +56,7 @@ export default function NotFound() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="font-light tracking-wide text-[var(--brand-ink)] underline-offset-4 transition-colors duration-500 hover:underline"
+                    className="font-bold tracking-tight text-[var(--brand-ink)] underline-offset-4 transition-colors duration-500 hover:underline"
                   >
                     {link.label}
                   </Link>

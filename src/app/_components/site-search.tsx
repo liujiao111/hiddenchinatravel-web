@@ -11,11 +11,10 @@ import {
   useState,
 } from "react";
 import cn from "classnames";
-import { homePopularSearches } from "@/lib/home/content";
 import { matchSearchItems, searchTypeLabel } from "@/lib/search/match";
 import type { SearchItem } from "@/lib/search/types";
 
-const HEADER_PLACEHOLDER = `${homePopularSearches.map((item) => item.label).join(", ")}…`;
+const HEADER_PLACEHOLDER = "Visa, Alipay, eSIM…";
 
 type Props = {
   items: SearchItem[];

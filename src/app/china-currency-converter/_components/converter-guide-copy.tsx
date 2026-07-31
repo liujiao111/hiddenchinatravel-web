@@ -8,11 +8,11 @@ export function ConverterGuideCopy() {
     >
       <h2
         id="how-to-use-rates"
-        className="mb-4 text-xl font-light tracking-wide text-[var(--brand-ink)] md:text-2xl"
+        className="mb-4 text-xl font-bold tracking-wide text-[var(--brand-ink)] md:text-2xl"
       >
         How to use China exchange rates as a visitor
       </h2>
-      <div className="space-y-4 text-sm font-light leading-relaxed text-[var(--brand-ink-muted)] md:text-base">
+      <div className="space-y-4 text-sm font-normal leading-relaxed text-[var(--brand-ink-muted)] md:text-base">
         <p>
           Searching for a{" "}
           <strong className="font-medium text-[var(--brand-ink)]">

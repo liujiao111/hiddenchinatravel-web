@@ -44,7 +44,7 @@ export function SocialLinks({ className, variant = "icons" }: Props) {
             aria-label={link.label}
             title={link.label}
             className={cn(
-              "inline-flex items-center justify-center rounded-sm border border-[color-mix(in_srgb,var(--brand-cream-border)_40%,transparent)] font-light tracking-wide text-[var(--brand-ink)] transition-colors duration-300 active:scale-[0.98]",
+              "inline-flex items-center justify-center rounded-2xl border border-[color-mix(in_srgb,var(--brand-cream-border)_40%,transparent)] font-bold tracking-tight text-[var(--brand-ink)] transition-colors duration-300 active:scale-[0.98]",
               variant === "icons" &&
                 "h-10 w-10 hover:border-[var(--brand-cta)] hover:bg-[var(--brand-cta)] hover:text-[var(--brand-on)]",
               variant === "pills" &&

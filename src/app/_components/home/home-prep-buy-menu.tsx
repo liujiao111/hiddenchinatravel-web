@@ -52,7 +52,7 @@ export function HomePrepBuyMenu({ menu, onOptionClick }: Props) {
     <div className="space-y-2">
       <div
         ref={rootRef}
-        className={cn("relative", open && "z-40")}
+        className={cn("relative", open && "z-50")}
         onMouseEnter={canHover ? () => setOpen(true) : undefined}
         onMouseLeave={canHover ? () => setOpen(false) : undefined}
       >
@@ -79,7 +79,7 @@ export function HomePrepBuyMenu({ menu, onOptionClick }: Props) {
           id={menuId}
           role="menu"
           className={cn(
-            "absolute bottom-full left-0 right-0 z-40 pb-1.5 transition-all duration-200",
+            "absolute bottom-full left-0 right-0 z-50 pb-1.5 transition-all duration-200",
             open
               ? "visible translate-y-0 opacity-100"
               : "invisible translate-y-1 opacity-0 pointer-events-none",

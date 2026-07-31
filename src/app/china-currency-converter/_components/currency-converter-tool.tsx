@@ -86,11 +86,11 @@ export function CurrencyConverterTool({ initialRates }: Props) {
         <div>
           <h2
             id="converter-heading"
-            className="text-lg font-light tracking-wide text-[var(--brand-ink)] md:text-xl"
+            className="text-lg font-bold tracking-tight text-[var(--brand-ink)] md:text-xl"
           >
             Convert USD ↔ CNY (and more)
           </h2>
-          <p className="mt-1 text-sm font-light text-[var(--brand-ink-muted)]">
+          <p className="mt-1 text-sm font-normal text-[var(--brand-ink-muted)]">
             Mid-market reference for trip budgeting — not a bank quote.
           </p>
         </div>
@@ -103,7 +103,7 @@ export function CurrencyConverterTool({ initialRates }: Props) {
           >
             {isPending ? "Refreshing…" : "Refresh rates"}
           </button>
-          <p className="mt-1.5 max-w-[16rem] text-[11px] font-light leading-snug text-[var(--brand-muted)] sm:ml-auto">
+          <p className="mt-1.5 max-w-[16rem] text-[11px] font-normal leading-snug text-[var(--brand-muted)] sm:ml-auto">
             Rates refresh about hourly. This pulls the latest cached feed — not
             tick-by-tick market data.
           </p>
@@ -113,7 +113,7 @@ export function CurrencyConverterTool({ initialRates }: Props) {
       {!rates.ok ? (
         <div
           role="alert"
-          className="mb-6 rounded-sm border border-[color-mix(in_srgb,var(--brand-coral)_35%,transparent)] bg-[color-mix(in_srgb,var(--brand-coral)_8%,white)] px-4 py-3 text-sm font-light text-[var(--brand-ink)]"
+          className="mb-6 rounded-2xl border border-[color-mix(in_srgb,var(--brand-coral)_35%,transparent)] bg-[color-mix(in_srgb,var(--brand-coral)_8%,white)] px-4 py-3 text-sm font-normal text-[var(--brand-ink)]"
         >
           {rates.error}
         </div>
@@ -121,7 +121,7 @@ export function CurrencyConverterTool({ initialRates }: Props) {
       {refreshError ? (
         <p
           role="status"
-          className="mb-4 text-sm font-light text-[var(--brand-coral)]"
+          className="mb-4 text-sm font-normal text-[var(--brand-coral)]"
         >
           {refreshError}
         </p>
@@ -139,7 +139,7 @@ export function CurrencyConverterTool({ initialRates }: Props) {
         <button
           type="button"
           onClick={swap}
-          className="mx-auto flex h-12 w-12 items-center justify-center rounded-sm border border-[color-mix(in_srgb,var(--brand-cream-border)_50%,transparent)] text-lg text-[var(--brand-cta)] transition-colors hover:bg-[var(--brand-soft)]"
+          className="mx-auto flex h-12 w-12 items-center justify-center rounded-2xl border border-[color-mix(in_srgb,var(--brand-cream-border)_50%,transparent)] text-lg text-[var(--brand-cta)] transition-colors hover:bg-[var(--brand-soft)]"
           aria-label="Swap currencies"
         >
           ⇄
@@ -158,7 +158,7 @@ export function CurrencyConverterTool({ initialRates }: Props) {
       </div>
 
       {live && Number.isFinite(converted) ? (
-        <p className="mt-5 text-center text-base font-light text-[var(--brand-ink)] md:text-lg">
+        <p className="mt-5 text-center text-base font-normal text-[var(--brand-ink)] md:text-lg">
           <span className="text-[var(--brand-ink-muted)]">
             {formatMoney(amount, from)} ≈{" "}
           </span>
@@ -206,7 +206,7 @@ function CurrencyField({
     <div>
       <label
         htmlFor={id}
-        className="mb-2 block text-xs font-light uppercase tracking-[0.14em] text-[var(--brand-muted)]"
+        className="mb-2 block text-xs font-normal uppercase tracking-[0.14em] text-[var(--brand-muted)]"
       >
         {label}
       </label>
@@ -217,7 +217,7 @@ function CurrencyField({
           readOnly={readOnly}
           value={amountRaw}
           onChange={(e) => onAmountChange(e.target.value)}
-          className="min-w-0 flex-1 rounded-sm border border-[color-mix(in_srgb,var(--brand-cream-border)_55%,transparent)] bg-white px-3 py-3 text-base font-light text-[var(--brand-ink)] outline-none ring-[var(--brand-cta)] focus:ring-1 read-only:bg-[var(--brand-soft)]"
+          className="min-w-0 flex-1 rounded-2xl border border-[color-mix(in_srgb,var(--brand-cream-border)_55%,transparent)] bg-white px-3 py-3 text-base font-normal text-[var(--brand-ink)] outline-none ring-[var(--brand-cta)] focus:ring-1 read-only:bg-[var(--brand-soft)]"
         />
         <CurrencySelect
           aria-label={`${label} currency`}
@@ -245,7 +245,7 @@ function RateMeta({
   const updated = new Date(rates.fetchedAt);
 
   return (
-    <div className="mt-6 border-t border-[color-mix(in_srgb,var(--brand-cream-border)_40%,transparent)] pt-4 text-sm font-light text-[var(--brand-ink-muted)]">
+    <div className="mt-6 border-t border-[color-mix(in_srgb,var(--brand-cream-border)_40%,transparent)] pt-4 text-sm font-normal text-[var(--brand-ink-muted)]">
       <p className="text-[var(--brand-ink)]">
         1 {from} ≈{" "}
         <span className="font-medium">{formatUnitRate(forward, to)}</span>
@@ -281,16 +281,16 @@ function MarkupCompare({
   from: CurrencyCode;
 }) {
   return (
-    <div className="mt-8 rounded-sm border border-[color-mix(in_srgb,var(--brand-cream-border)_45%,transparent)] bg-[var(--brand-soft)] p-4 sm:p-5">
-      <h3 className="mb-2 text-sm font-light tracking-wide text-[var(--brand-ink)]">
+    <div className="mt-8 rounded-2xl border border-[color-mix(in_srgb,var(--brand-cream-border)_45%,transparent)] bg-[var(--brand-soft)] p-4 sm:p-5">
+      <h3 className="mb-2 text-sm font-bold tracking-tight text-[var(--brand-ink)]">
         Mid-market vs typical cash markup
       </h3>
-      <p className="mb-4 text-sm font-light leading-relaxed text-[var(--brand-ink-muted)]">
+      <p className="mb-4 text-sm font-normal leading-relaxed text-[var(--brand-ink-muted)]">
         Official mid-market is a reference. ATM withdrawals and airport desks
         often add a spread — so {formatMoney(amount, from)} may buy fewer yuan
         in cash than the converter shows.
       </p>
-      <ul className="space-y-2 text-sm font-light">
+      <ul className="space-y-2 text-sm font-normal">
         <li className="flex flex-wrap items-baseline justify-between gap-2">
           <span className="text-[var(--brand-ink-muted)]">
             Mid-market (this tool)
@@ -316,7 +316,7 @@ function MarkupCompare({
           );
         })}
       </ul>
-      <p className="mt-3 text-xs font-light text-[var(--brand-muted)]">
+      <p className="mt-3 text-xs font-normal text-[var(--brand-muted)]">
         Markup examples are illustrative averages for planning — your bank,
         network, and machine fees vary.
       </p>
@@ -337,19 +337,19 @@ function QuickTable({
   return (
     <div className="mt-8 space-y-8">
       <div>
-        <h3 className="mb-1 text-sm font-light tracking-wide text-[var(--brand-ink)]">
+        <h3 className="mb-1 text-sm font-bold tracking-tight text-[var(--brand-ink)]">
           Quick cheat sheet: CNY → {foreign}
         </h3>
-        <p className="mb-3 text-xs font-light text-[var(--brand-muted)]">
+        <p className="mb-3 text-xs font-normal text-[var(--brand-muted)]">
           Follows your selected pair ({foreignName}). Useful for “how much is
           100 yuan in {foreign}?”
         </p>
         <div className="overflow-x-auto">
-          <table className="w-full min-w-[20rem] border-collapse text-left text-sm font-light">
+          <table className="w-full min-w-[20rem] border-collapse text-left text-sm font-normal">
             <thead>
               <tr className="border-b border-[color-mix(in_srgb,var(--brand-cream-border)_45%,transparent)] text-[var(--brand-muted)]">
-                <th className="py-2 pr-4 font-light">CNY (RMB)</th>
-                <th className="py-2 font-light">{foreign} approx.</th>
+                <th className="py-2 pr-4 font-normal">CNY (RMB)</th>
+                <th className="py-2 font-normal">{foreign} approx.</th>
               </tr>
             </thead>
             <tbody>
@@ -380,18 +380,18 @@ function QuickTable({
       </div>
 
       <div>
-        <h3 className="mb-1 text-sm font-light tracking-wide text-[var(--brand-ink)]">
+        <h3 className="mb-1 text-sm font-bold tracking-tight text-[var(--brand-ink)]">
           Quick cheat sheet: {foreign} → CNY
         </h3>
-        <p className="mb-3 text-xs font-light text-[var(--brand-muted)]">
+        <p className="mb-3 text-xs font-normal text-[var(--brand-muted)]">
           Reverse direction for budgeting cash before you land.
         </p>
         <div className="overflow-x-auto">
-          <table className="w-full min-w-[20rem] border-collapse text-left text-sm font-light">
+          <table className="w-full min-w-[20rem] border-collapse text-left text-sm font-normal">
             <thead>
               <tr className="border-b border-[color-mix(in_srgb,var(--brand-cream-border)_45%,transparent)] text-[var(--brand-muted)]">
-                <th className="py-2 pr-4 font-light">{foreign}</th>
-                <th className="py-2 font-light">CNY approx.</th>
+                <th className="py-2 pr-4 font-normal">{foreign}</th>
+                <th className="py-2 font-normal">CNY approx.</th>
               </tr>
             </thead>
             <tbody>

@@ -11,6 +11,8 @@ export const homePopularSearches = [
 export type DestinationCity = {
   id: string;
   name: string;
+  /** Short eyebrow for cards — human label, not the slug */
+  label: string;
   pitch: string;
   guidesHint: string;
 };
@@ -19,36 +21,42 @@ export const destinationCities: DestinationCity[] = [
   {
     id: "beijing",
     name: "Beijing",
+    label: "Capital base",
     pitch: "Capital history, hutongs, and a practical first-city base for many arrivals.",
     guidesHint: "Entry city · culture & logistics",
   },
   {
     id: "shanghai",
     name: "Shanghai",
+    label: "Gateway city",
     pitch: "Transit hubs, riverside neighborhoods, and a smoother start for first-timers.",
     guidesHint: "Gateway · urban & coastal",
   },
   {
     id: "xian",
     name: "Xi'an",
+    label: "History stop",
     pitch: "Terracotta warriors, city walls, and a strong Silk Road history stop.",
     guidesHint: "History · multi-city routes",
   },
   {
     id: "chengdu",
     name: "Chengdu",
+    label: "Western China",
     pitch: "Food, pandas, and a calm pace before heading into Sichuan or Yunnan.",
     guidesHint: "Food · western China base",
   },
   {
     id: "kunming",
     name: "Kunming",
+    label: "Yunnan launch",
     pitch: "Spring weather and a natural launchpad into Yunnan’s landscapes.",
     guidesHint: "Yunnan · regional travel",
   },
   {
     id: "guilin",
     name: "Guilin & Yangshuo",
+    label: "Karst scenery",
     pitch: "Karst rivers, countryside stays, and classic south China scenery.",
     guidesHint: "Scenery · slower days",
   },
@@ -108,14 +116,14 @@ export const featuredGuideFallbacks = [
 /** Hero-adjacent trust strip — claim + 3 icon points */
 export const homeWhyUs = {
   claim:
-    "We're not a travel agency or an AI chatbot — we're your local partner for independent China travel.",
+    "Your local partner for independent China travel — practical help with visas, payments, internet, and on-trip questions.",
   storyCta: "Learn our story",
   storyHref: "/about#why-us",
   points: [
     {
       id: "experience",
-      title: "Real Experience, Not AI Guesses",
-      body: "Alipay declined at a night market? We've walked travelers through the fix in about 12 minutes — the kind of moment a chatbot can't sit with you through.",
+      title: "Lived experience on the ground",
+      body: "Alipay declined at a night market? We've walked travelers through the fix in about 12 minutes — calm, step-by-step help when it actually matters.",
       inlineLink: {
         href: "/services#differentiator",
         label: "See real on-trip help scenarios",
@@ -123,13 +131,13 @@ export const homeWhyUs = {
     },
     {
       id: "support",
-      title: "Support Before, During & After",
-      body: "We're with you the whole trip — not just a fixed itinerary, but real help when you twist an ankle or lose your visa.",
+      title: "Support before, during & after",
+      body: "We're with you the whole trip — not just a fixed itinerary, but real help when plans change mid-route.",
     },
     {
       id: "commission",
-      title: "Zero Commission, 100% Your Side",
-      body: "We don't take kickbacks from hotels or attractions — only a transparent service fee, with invoices provided.",
+      title: "Transparent fees, your side first",
+      body: "We don't take kickbacks from hotels or attractions — only a clear service fee, with invoices provided.",
     },
   ],
 } as const;

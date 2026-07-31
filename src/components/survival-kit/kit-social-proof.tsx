@@ -6,12 +6,12 @@ export function KitSocialProof() {
       aria-labelledby="social-proof-heading"
       className="border-b border-[color-mix(in_srgb,var(--brand-cream-border)_40%,transparent)] py-16 md:py-20"
     >
-      <p className="mb-3 text-[11px] font-light uppercase tracking-[0.18em] text-[var(--brand-warm)]">
+      <p className="mb-3 text-[11px] font-normal uppercase tracking-[0.18em] text-[var(--brand-warm)]">
         Social proof
       </p>
       <h2
         id="social-proof-heading"
-        className="mb-8 max-w-2xl text-xl font-light tracking-wide text-[var(--brand-ink)] md:text-3xl"
+        className="mb-8 max-w-2xl text-xl font-bold tracking-wide text-[var(--brand-ink)] md:text-3xl"
       >
         What first-time visitors say
       </h2>
@@ -21,13 +21,13 @@ export function KitSocialProof() {
             key={item.name}
             className="surface-card border border-[color-mix(in_srgb,var(--brand-cream-border)_40%,transparent)] bg-[var(--brand-surface)] p-6"
           >
-            <p className="mb-5 text-sm font-light leading-relaxed text-[var(--brand-ink-muted)] md:text-base">
+            <p className="mb-5 text-sm font-normal leading-relaxed text-[var(--brand-ink-muted)] md:text-base">
               “{item.quote}”
             </p>
-            <p className="text-sm font-light tracking-wide text-[var(--brand-ink)]">
+            <p className="text-sm font-bold tracking-tight text-[var(--brand-ink)]">
               {item.name}
             </p>
-            <p className="mt-1 text-xs font-light tracking-wide text-[var(--brand-muted)]">
+            <p className="mt-1 text-xs font-bold tracking-tight text-[var(--brand-muted)]">
               {item.meta}
             </p>
           </li>

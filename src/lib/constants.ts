@@ -15,7 +15,7 @@ export const SITE_LOGO_PATH = "/brand/logo.webp";
 export const SITE_HERO_PATH = "/brand/hero-home.webp";
 
 /** ISO date — bump when shipping sitewide content / chrome updates */
-export const SITE_LAST_UPDATED = "2026-07-26";
+export const SITE_LAST_UPDATED = "2026-07-30";
 
 export const socialLinks = [
   {
@@ -37,8 +37,6 @@ export const socialLinks = [
 
 export type SocialLinkId = (typeof socialLinks)[number]["id"];
 
-/** @deprecated legacy blog-starter constant */
-export const EXAMPLE_PATH = "blog-starter";
 /** @deprecated use SITE_NAME / content labels instead */
 export const CMS_NAME = "Hidden China Travel";
 

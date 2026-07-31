@@ -116,7 +116,7 @@ function PrepButton({
         className={
           variant === "primary"
             ? "btn-brand cursor-not-allowed px-6 py-2.5 text-sm opacity-50"
-            : "inline-flex cursor-not-allowed justify-center px-4 py-2.5 text-sm font-light underline opacity-50"
+            : "inline-flex cursor-not-allowed justify-center px-4 py-2.5 text-sm font-normal underline opacity-50"
         }
       >
         {label}
@@ -135,7 +135,7 @@ function PrepButton({
   return (
     <Link
       href={href}
-      className="inline-flex justify-center px-4 py-2.5 text-sm font-light tracking-wide underline underline-offset-4 transition-colors duration-500 hover:text-[var(--brand-cta)]"
+      className="inline-flex justify-center px-4 py-2.5 text-sm font-bold tracking-tight underline underline-offset-4 transition-colors duration-500 hover:text-[var(--brand-cta)]"
     >
       {label}
     </Link>
@@ -150,11 +150,11 @@ export function FirstTripPrep() {
     >
       <h2
         id="prep-heading"
-        className="mb-3 text-xl font-light leading-tight tracking-wide text-[var(--brand-ink)] md:text-3xl"
+        className="mb-3 text-xl font-bold leading-tight tracking-wide text-[var(--brand-ink)] md:text-3xl"
       >
         First trip to China? Start here
       </h2>
-      <p className="mb-10 max-w-2xl text-base font-light leading-relaxed text-[var(--brand-ink-muted)] md:text-lg">
+      <p className="mb-10 max-w-2xl text-base font-normal leading-relaxed text-[var(--brand-ink-muted)] md:text-lg">
         Beyond visas — payments, maps, tickets, and lodging are what trip up
         most first-time visitors. Start with the guides below.
       </p>
@@ -165,14 +165,14 @@ export function FirstTripPrep() {
             className="surface-card bg-[var(--brand-surface)] p-6 md:p-8"
           >
             <div className="mb-4 flex items-start gap-4">
-              <div className="shrink-0 rounded-sm border border-[color-mix(in_srgb,var(--brand-cream-border)_40%,transparent)] p-2 text-[var(--brand-ink)]">
+              <div className="shrink-0 rounded-2xl border border-[color-mix(in_srgb,var(--brand-cream-border)_40%,transparent)] p-2 text-[var(--brand-ink)]">
                 <PrepIcon icon={offer.icon} />
               </div>
               <div>
-                <h3 className="mb-2 text-lg font-light tracking-wide text-[var(--brand-ink)] md:text-xl">
+                <h3 className="mb-2 text-lg font-bold tracking-tight text-[var(--brand-ink)] md:text-xl">
                   {offer.title}
                 </h3>
-                <p className="text-base font-light leading-relaxed text-[var(--brand-ink-muted)]">
+                <p className="text-base font-normal leading-relaxed text-[var(--brand-ink-muted)]">
                   {offer.description}
                 </p>
               </div>
@@ -194,17 +194,21 @@ export function FirstTripPrep() {
           </article>
         ))}
       </div>
+      <p className="mt-6 text-xs font-normal leading-relaxed text-[var(--brand-ink-muted)]">
+        Some product links are affiliate partners — at no extra cost to you. We
+        only list tools we use or recommend for independent travelers.
+      </p>
 
       <div className="surface-card mt-12 overflow-hidden bg-[var(--brand-soft)]">
         <div className="flex flex-col gap-8 p-8 md:flex-row md:items-center md:justify-between md:p-10">
           <div className="max-w-xl">
-            <p className="mb-3 text-xs font-light uppercase tracking-[0.16em] text-[var(--brand-muted)]">
+            <p className="mb-3 text-xs font-normal uppercase tracking-[0.16em] text-[var(--brand-muted)]">
               Complete checklist
             </p>
-            <h3 className="mb-3 text-xl font-light leading-tight tracking-wide text-[var(--brand-ink)] md:text-3xl">
+            <h3 className="mb-3 text-xl font-bold leading-tight tracking-wide text-[var(--brand-ink)] md:text-3xl">
               Get every must-have in Survival Kit
             </h3>
-            <p className="text-base font-light leading-relaxed text-[var(--brand-ink-muted)]">
+            <p className="text-base font-normal leading-relaxed text-[var(--brand-ink-muted)]">
               Payments, maps, tickets, hotels, and more — one place for
               first-trip essentials before you land in China.
             </p>

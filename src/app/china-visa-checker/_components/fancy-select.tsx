@@ -105,12 +105,12 @@ export function FancySelect({
     <div ref={rootRef} className="relative">
       <label
         htmlFor={fieldId}
-        className="mb-1 block text-sm font-light tracking-wide text-[var(--brand-ink)]"
+        className="mb-1 block text-sm font-bold tracking-tight text-[var(--brand-ink)]"
       >
         {label}
       </label>
       {helper ? (
-        <p className="mb-2 text-xs font-light text-[var(--brand-muted)]">
+        <p className="mb-2 text-xs font-normal text-[var(--brand-muted)]">
           {helper}
         </p>
       ) : null}
@@ -125,7 +125,7 @@ export function FancySelect({
         onClick={() => setOpen((o) => !o)}
         onKeyDown={onKeyDown}
         className={cn(
-          "flex w-full items-center justify-between gap-3 rounded-sm border bg-[var(--brand-surface)] px-4 py-3.5 text-left text-sm font-light transition-colors duration-300",
+          "flex w-full items-center justify-between gap-3 rounded-2xl border bg-[var(--brand-surface)] px-4 py-3.5 text-left text-sm font-normal transition-colors duration-300",
           "focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--brand-ring)] focus-visible:ring-offset-2",
           open
             ? "border-[var(--brand-cta)] shadow-sm"
@@ -162,7 +162,7 @@ export function FancySelect({
 
       {open ? (
         <div
-          className="absolute z-30 mt-2 w-full overflow-hidden rounded-sm border border-[color-mix(in_srgb,var(--brand-cream-border)_40%,transparent)] bg-[var(--brand-surface)] shadow-lg"
+          className="absolute z-30 mt-2 w-full overflow-hidden rounded-2xl border border-[color-mix(in_srgb,var(--brand-cream-border)_40%,transparent)] bg-[var(--brand-surface)] shadow-lg"
           role="presentation"
         >
           {searchable ? (
@@ -173,7 +173,7 @@ export function FancySelect({
                 onChange={(e) => setQuery(e.target.value)}
                 onKeyDown={onKeyDown}
                 placeholder="Search…"
-                className="w-full rounded-sm border border-[color-mix(in_srgb,var(--brand-cream-border)_40%,transparent)] bg-[var(--brand-soft)] px-3 py-2 text-sm font-light focus:outline-none focus:ring-2 focus:ring-[var(--brand-ring)]"
+                className="w-full rounded-2xl border border-[color-mix(in_srgb,var(--brand-cream-border)_40%,transparent)] bg-[var(--brand-soft)] px-3 py-2 text-sm font-normal focus:outline-none focus:ring-2 focus:ring-[var(--brand-ring)]"
                 autoFocus
               />
             </div>
@@ -185,7 +185,7 @@ export function FancySelect({
             className="max-h-64 overflow-y-auto py-1"
           >
             {filtered.length === 0 ? (
-              <li className="px-4 py-3 text-sm font-light text-[var(--brand-muted)]">
+              <li className="px-4 py-3 text-sm font-normal text-[var(--brand-muted)]">
                 No matches
               </li>
             ) : (
@@ -201,7 +201,7 @@ export function FancySelect({
                     <button
                       type="button"
                       className={cn(
-                        "w-full px-4 py-2.5 text-left text-sm font-light transition-colors duration-300",
+                        "w-full px-4 py-2.5 text-left text-sm font-normal transition-colors duration-300",
                         isSelected &&
                           "bg-[var(--brand-cta)] text-[var(--brand-on)]",
                         !isSelected && isActive && "bg-[var(--brand-soft)]",
@@ -223,7 +223,7 @@ export function FancySelect({
       ) : null}
 
       {error && errorMessage ? (
-        <p className="mt-2 text-xs font-light text-amber-700">
+        <p className="mt-2 text-xs font-normal text-amber-700">
           {errorMessage}
         </p>
       ) : null}

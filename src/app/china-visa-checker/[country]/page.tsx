@@ -134,13 +134,13 @@ export default async function CountryVisaPage({ params }: Props) {
         />
 
         <section className="mb-8 md:mb-10">
-          <p className="mb-4 text-xs font-light uppercase tracking-[0.18em] text-[var(--brand-muted)]">
+          <p className="mb-4 text-xs font-normal uppercase tracking-[0.18em] text-[var(--brand-muted)]">
             Travel China Guide · Visa & Entry · {page.editorial.displayName}
           </p>
-          <h1 className="mb-4 text-2xl font-light leading-tight tracking-wide text-[var(--brand-ink)] md:text-4xl">
+          <h1 className="mb-4 text-2xl font-bold leading-tight tracking-wide text-[var(--brand-ink)] md:text-4xl">
             {page.h1}
           </h1>
-          <p className="max-w-3xl text-sm font-light leading-relaxed text-[var(--brand-ink-muted)] md:text-base">
+          <p className="max-w-3xl text-sm font-normal leading-relaxed text-[var(--brand-ink-muted)] md:text-base">
             Clear {page.editorial.displayName} passport rules for China in 2026
             — visa-free stay, 240-hour transit, or when you must apply before
             travel. Recheck edge cases in the{" "}

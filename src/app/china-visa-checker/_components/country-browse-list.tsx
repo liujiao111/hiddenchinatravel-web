@@ -36,11 +36,11 @@ export function CountryBrowseList({
     >
       <h2
         id="browse-nationality-heading"
-        className="mb-3 text-xl font-light tracking-wide text-[var(--brand-ink)] md:text-2xl"
+        className="mb-3 text-xl font-bold tracking-wide text-[var(--brand-ink)] md:text-2xl"
       >
         {heading}
       </h2>
-      <p className="mb-8 max-w-2xl text-sm font-light leading-relaxed text-[var(--brand-ink-muted)]">
+      <p className="mb-8 max-w-2xl text-sm font-normal leading-relaxed text-[var(--brand-ink-muted)]">
         Open a country page for a clear yes/no-style answer, then use the form
         above if your trip has transit stops, longer stays, or special purposes.
       </p>
@@ -48,7 +48,7 @@ export function CountryBrowseList({
         {sections.map((section) =>
           section.items.length ? (
             <div key={section.id}>
-              <h3 className="mb-3 text-sm font-light uppercase tracking-[0.14em] text-[var(--brand-muted)]">
+              <h3 className="mb-3 text-sm font-normal uppercase tracking-[0.14em] text-[var(--brand-muted)]">
                 {section.title}
               </h3>
               <ul className="flex flex-wrap gap-2">
@@ -56,7 +56,7 @@ export function CountryBrowseList({
                   <li key={item.slug}>
                     <Link
                       href={countryPagePath(item.slug)}
-                      className="inline-flex rounded-sm border border-[color-mix(in_srgb,var(--brand-cream-border)_45%,transparent)] bg-[var(--brand-surface)] px-3 py-1.5 text-sm font-light text-[var(--brand-ink)] transition-colors hover:border-[var(--brand-cta)] hover:text-[var(--brand-cta)]"
+                      className="inline-flex rounded-2xl border border-[color-mix(in_srgb,var(--brand-cream-border)_45%,transparent)] bg-[var(--brand-surface)] px-3 py-1.5 text-sm font-normal text-[var(--brand-ink)] transition-colors hover:border-[var(--brand-cta)] hover:text-[var(--brand-cta)]"
                     >
                       {item.displayName}
                     </Link>

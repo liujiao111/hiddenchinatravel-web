@@ -12,12 +12,12 @@ type Props = {
 };
 
 function buyButtonLabel(title: string): string {
-  if (/esim/i.test(title)) return "Get a China eSIM";
-  if (/vpn/i.test(title)) return "Get a travel VPN";
+  if (/esim/i.test(title)) return "Compare China eSIMs";
+  if (/vpn/i.test(title)) return "Compare travel VPNs";
   if (/wallet/i.test(title)) return "Set up a wallet";
   if (/trip\.com/i.test(title)) return "Book on Trip.com";
-  if (/^(get|set|book)\b/i.test(title)) return title;
-  return `Get ${title}`;
+  if (/^(get|set|book|compare)\b/i.test(title)) return title;
+  return `Compare ${title}`;
 }
 
 function toBuyMenu(card: KitPrepCardData): PrepBuyMenu | null {
@@ -30,7 +30,8 @@ function toBuyMenu(card: KitPrepCardData): PrepBuyMenu | null {
 
   return {
     buttonLabel: buyButtonLabel(card.title),
-    chooseHint: "Choose the option that fits your trip.",
+    chooseHint:
+      "Choose the option that fits your trip. Some product links are affiliate.",
     guide: { label: guideCta.label, href: guideCta.href },
     options: card.options.map((option) => ({
       label: option.name,
@@ -62,11 +63,11 @@ export function KitPrepCard({ card }: Props) {
 
       {card.comingSoon ? (
         <div className="mt-auto border-t border-[color-mix(in_srgb,var(--brand-cream-border)_35%,transparent)] pt-4">
-          <p className="text-[11px] font-light uppercase tracking-[0.16em] text-[var(--brand-warm)]">
+          <p className="text-[11px] font-normal uppercase tracking-[0.16em] text-[var(--brand-warm)]">
             Coming soon
           </p>
           {card.comingSoonNote ? (
-            <p className="mt-2 text-sm font-light leading-relaxed text-[var(--brand-muted)]">
+            <p className="mt-2 text-sm font-normal leading-relaxed text-[var(--brand-muted)]">
               {card.comingSoonNote}
             </p>
           ) : null}
@@ -77,16 +78,16 @@ export function KitPrepCard({ card }: Props) {
             {card.options.map((option) => (
               <li key={option.name} className="py-3 first:pt-4 last:pb-0">
                 <div className="mb-1 flex flex-wrap items-center gap-2">
-                  <p className="text-sm font-light tracking-wide text-[var(--brand-ink)]">
+                  <p className="text-sm font-bold tracking-tight text-[var(--brand-ink)]">
                     {option.name}
                   </p>
                   {option.badge ? (
-                    <span className="rounded-sm border border-[color-mix(in_srgb,var(--brand-cream-border)_45%,transparent)] bg-[var(--brand-soft)] px-1.5 py-0.5 text-[10px] font-light uppercase tracking-[0.14em] text-[var(--brand-muted)]">
+                    <span className="rounded-2xl border border-[color-mix(in_srgb,var(--brand-cream-border)_45%,transparent)] bg-[var(--brand-soft)] px-1.5 py-0.5 text-[10px] font-normal uppercase tracking-[0.14em] text-[var(--brand-muted)]">
                       {option.badge}
                     </span>
                   ) : null}
                 </div>
-                <p className="text-xs font-light leading-relaxed text-[var(--brand-muted)] md:text-[13px]">
+                <p className="text-xs font-normal leading-relaxed text-[var(--brand-muted)] md:text-[13px]">
                   {option.diff}
                 </p>
               </li>
@@ -119,16 +120,16 @@ export function KitPrepCard({ card }: Props) {
               >
                 <div>
                   <div className="mb-1 flex flex-wrap items-center gap-2">
-                    <p className="text-sm font-light tracking-wide text-[var(--brand-ink)]">
+                    <p className="text-sm font-bold tracking-tight text-[var(--brand-ink)]">
                       {option.name}
                     </p>
                     {option.badge ? (
-                      <span className="rounded-sm border border-[color-mix(in_srgb,var(--brand-cream-border)_45%,transparent)] bg-[var(--brand-soft)] px-1.5 py-0.5 text-[10px] font-light uppercase tracking-[0.14em] text-[var(--brand-muted)]">
+                      <span className="rounded-2xl border border-[color-mix(in_srgb,var(--brand-cream-border)_45%,transparent)] bg-[var(--brand-soft)] px-1.5 py-0.5 text-[10px] font-normal uppercase tracking-[0.14em] text-[var(--brand-muted)]">
                         {option.badge}
                       </span>
                     ) : null}
                   </div>
-                  <p className="text-xs font-light leading-relaxed text-[var(--brand-muted)] md:text-[13px]">
+                  <p className="text-xs font-normal leading-relaxed text-[var(--brand-muted)] md:text-[13px]">
                     {option.diff}
                   </p>
                 </div>

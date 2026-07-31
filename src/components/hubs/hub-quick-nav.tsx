@@ -52,7 +52,7 @@ export function HubQuickNav({ items }: Props) {
               <a
                 href={`#${item.id}`}
                 className={cn(
-                  "inline-flex rounded-sm px-3 py-2 text-sm font-light tracking-wide transition-colors duration-300",
+                  "inline-flex rounded-2xl px-3 py-2 text-sm font-bold tracking-tight transition-colors duration-300",
                   active === item.id
                     ? "bg-[var(--brand-soft)] text-[var(--brand-ink)]"
                     : "text-[var(--brand-ink-muted)] hover:text-[var(--brand-ink)]",
@@ -70,7 +70,7 @@ export function HubQuickNav({ items }: Props) {
         aria-label="Hub sections"
         className="sticky top-28 hidden lg:block"
       >
-        <p className="mb-4 text-xs font-light uppercase tracking-[0.18em] text-[var(--brand-warm)]">
+        <p className="mb-4 text-xs font-normal uppercase tracking-[0.18em] text-[var(--brand-warm)]">
           On this page
         </p>
         <ul className="space-y-1 border-l border-[color-mix(in_srgb,var(--brand-cream-border)_40%,transparent)]">
@@ -79,7 +79,7 @@ export function HubQuickNav({ items }: Props) {
               <a
                 href={`#${item.id}`}
                 className={cn(
-                  "block border-l-2 py-1.5 pl-4 text-sm font-light tracking-wide transition-colors duration-300",
+                  "block border-l-2 py-1.5 pl-4 text-sm font-bold tracking-tight transition-colors duration-300",
                   active === item.id
                     ? "-ml-px border-[var(--brand-cta)] text-[var(--brand-ink)]"
                     : "border-transparent text-[var(--brand-ink-muted)] hover:text-[var(--brand-ink)]",

@@ -5,7 +5,7 @@ export function CountryFaq({ faqs }: { faqs: CountryPageFaq[] }) {
     <section className="mb-10 md:mb-12" aria-labelledby="country-faq-heading">
       <h2
         id="country-faq-heading"
-        className="mb-6 text-xl font-light tracking-wide text-[var(--brand-ink)] md:text-2xl"
+        className="mb-6 text-xl font-bold tracking-wide text-[var(--brand-ink)] md:text-2xl"
       >
         Frequently asked questions
       </h2>
@@ -15,7 +15,7 @@ export function CountryFaq({ faqs }: { faqs: CountryPageFaq[] }) {
             key={item.id}
             className="surface-card group bg-[var(--brand-surface)] px-5 py-4"
           >
-            <summary className="cursor-pointer list-none text-sm font-light tracking-wide text-[var(--brand-ink)] marker:content-none [&::-webkit-details-marker]:hidden">
+            <summary className="cursor-pointer list-none text-sm font-bold tracking-tight text-[var(--brand-ink)] marker:content-none [&::-webkit-details-marker]:hidden">
               <span className="flex items-start justify-between gap-3">
                 {item.question}
                 <span
@@ -26,7 +26,7 @@ export function CountryFaq({ faqs }: { faqs: CountryPageFaq[] }) {
                 </span>
               </span>
             </summary>
-            <p className="mt-3 text-sm font-light leading-relaxed text-[var(--brand-ink-muted)]">
+            <p className="mt-3 text-sm font-normal leading-relaxed text-[var(--brand-ink-muted)]">
               {item.answer}
             </p>
           </details>

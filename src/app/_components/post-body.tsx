@@ -1,11 +1,14 @@
+import { ArticleToc } from "@/app/_components/article-toc";
 import { EndCTA, InlineCTA } from "@/components/cta";
 import {
   getEndCtaCopy,
   getInlineCtaCopy,
   resolveArticleCtaVariant,
 } from "@/config/cta";
+import { extractH2Toc, TOC_MIN_ITEMS } from "@/lib/article-toc";
 import { splitHtmlForInlineCta } from "@/lib/cta/split-html";
 import markdownStyles from "@/app/_components/markdown-styles.module.css";
+import cn from "classnames";
 
 type Props = {
   content: string;
@@ -28,9 +31,11 @@ export function PostBody({
   const inlineCopy = getInlineCtaCopy();
   const endCopy = getEndCtaCopy(variant);
   const { before, after, inserted } = splitHtmlForInlineCta(content);
+  const toc = extractH2Toc(content);
+  const showToc = toc.length >= TOC_MIN_ITEMS;
 
-  return (
-    <div className="mx-auto max-w-2xl">
+  const article = (
+    <>
       {inserted ? (
         <>
           <div
@@ -50,6 +55,31 @@ export function PostBody({
         />
       )}
       <EndCTA copy={endCopy} articleSlug={articleSlug} />
+    </>
+  );
+
+  if (!showToc) {
+    return <div className="mx-auto max-w-2xl">{article}</div>;
+  }
+
+  return (
+    <div
+      className={cn(
+        "mx-auto max-w-2xl",
+        // Real grid columns — TOC never paints over the reading column.
+        // Default stretch so the TOC column matches article height (needed for sticky).
+        "xl:grid xl:max-w-5xl xl:grid-cols-[12rem_minmax(0,38rem)] xl:justify-center xl:gap-12",
+        "2xl:max-w-6xl 2xl:grid-cols-[13.5rem_minmax(0,40rem)] 2xl:gap-14",
+      )}
+    >
+      {/*
+        ArticleToc renders mobile block + sidebar aside as siblings.
+        CSS grid places them into columns in DOM order on xl+.
+        Below xl, sidebar is hidden and mobile sits above the article —
+        so article must follow in a wrapper that spans correctly.
+      */}
+      <ArticleToc items={toc} />
+      <div className="min-w-0">{article}</div>
     </div>
   );
 }

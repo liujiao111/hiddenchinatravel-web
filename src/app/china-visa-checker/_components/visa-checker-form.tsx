@@ -118,7 +118,7 @@ export function VisaCheckerForm({
           >
             {isLoading ? (
               <span className="inline-flex items-center justify-center gap-3">
-                <span className="h-5 w-5 animate-spin rounded-sm border-2 border-current border-t-transparent" />
+                <span className="h-5 w-5 animate-spin rounded-2xl border-2 border-current border-t-transparent" />
                 Checking eligibility…
               </span>
             ) : (
@@ -130,7 +130,7 @@ export function VisaCheckerForm({
               </span>
             )}
           </button>
-          <p className="text-center text-sm font-light text-[var(--brand-muted)]">
+          <p className="text-center text-sm font-normal text-[var(--brand-muted)]">
             No personal data is stored. Result appears below.
           </p>
         </div>

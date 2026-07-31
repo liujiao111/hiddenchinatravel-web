@@ -10,11 +10,11 @@ type Props = {
 export function PageHeading({ title, description, lastUpdated }: Props) {
   return (
     <section className="mb-12 mt-8 md:mb-16 md:mt-10">
-      <h1 className="mb-4 max-w-3xl text-2xl font-light leading-tight tracking-wide text-[var(--brand-ink)] md:mb-5 md:text-4xl">
+      <h1 className="mb-4 max-w-3xl text-2xl font-bold leading-tight tracking-wide text-[var(--brand-ink)] md:mb-5 md:text-4xl">
         {title}
       </h1>
       {description ? (
-        <p className="max-w-2xl text-sm font-light leading-relaxed text-[var(--brand-ink-muted)] md:text-base">
+        <p className="max-w-2xl text-sm font-normal leading-relaxed text-[var(--brand-ink-muted)] md:text-base">
           {description}
         </p>
       ) : null}

@@ -21,7 +21,7 @@ export function AboutLinkList({ links, columns = 2, className }: Props) {
         <li key={link.href + link.label}>
           <Link
             href={link.href}
-            className="group inline-flex items-baseline gap-2 text-base font-light tracking-wide text-[var(--brand-ink)] underline-offset-4 transition-colors duration-500 hover:underline"
+            className="group inline-flex items-baseline gap-2 text-base font-bold tracking-tight text-[var(--brand-ink)] underline-offset-4 transition-colors duration-500 hover:underline"
           >
             <span
               aria-hidden

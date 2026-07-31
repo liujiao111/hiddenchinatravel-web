@@ -94,10 +94,10 @@ export function VisaCheckerTool({ countryOptions, portOptions }: Props) {
 
       <div className="surface-card bg-[var(--brand-surface)] p-6 shadow-sm sm:p-8 md:p-10">
         <div className="mb-8">
-          <h2 className="text-xl font-light tracking-wide text-[var(--brand-ink)] md:text-3xl">
+          <h2 className="text-xl font-bold tracking-wide text-[var(--brand-ink)] md:text-3xl">
             Your trip details
           </h2>
-          <p className="mt-2 max-w-2xl text-base font-light text-[var(--brand-muted)]">
+          <p className="mt-2 max-w-2xl text-base font-normal text-[var(--brand-muted)]">
             Complete all fields below to check visa-free, 240-hour transit, or
             visa requirements
           </p>
@@ -125,7 +125,7 @@ export function VisaCheckerTool({ countryOptions, portOptions }: Props) {
       </div>
 
       {!result && !isLoading ? (
-        <p className="mt-6 text-center text-sm font-light text-[var(--brand-muted)]">
+        <p className="mt-6 text-center text-sm font-normal text-[var(--brand-muted)]">
           Your eligibility result will appear here after you submit
         </p>
       ) : null}

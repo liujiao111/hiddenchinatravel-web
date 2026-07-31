@@ -12,16 +12,16 @@ export function PolicyExplainer() {
         <div>
           <h2
             id="policy-heading"
-            className="mb-3 text-xl font-light leading-tight tracking-wide text-[var(--brand-ink)] md:text-3xl"
+            className="mb-3 text-xl font-bold leading-tight tracking-wide text-[var(--brand-ink)] md:text-3xl"
           >
             China visa policies explained
           </h2>
-          <p className="max-w-2xl text-base font-light leading-relaxed text-[var(--brand-ink-muted)] md:text-lg">
+          <p className="max-w-2xl text-base font-normal leading-relaxed text-[var(--brand-ink-muted)] md:text-lg">
             Three main pathways for short visits. Which applies to you depends
             on nationality, route, and length of stay.
           </p>
         </div>
-        <p className="shrink-0 text-sm font-light text-[var(--brand-muted)]">
+        <p className="shrink-0 text-sm font-normal text-[var(--brand-muted)]">
           Last updated: {policyLastUpdated}
         </p>
       </div>
@@ -31,19 +31,19 @@ export function PolicyExplainer() {
             key={card.id}
             className="surface-card flex flex-col bg-[var(--brand-surface)] p-6 md:p-8"
           >
-            <h3 className="mb-3 text-lg font-light tracking-wide text-[var(--brand-ink)] md:text-xl">
+            <h3 className="mb-3 text-lg font-bold tracking-tight text-[var(--brand-ink)] md:text-xl">
               {card.title}
             </h3>
-            <p className="mb-5 text-base font-light leading-relaxed text-[var(--brand-ink-muted)]">
+            <p className="mb-5 text-base font-normal leading-relaxed text-[var(--brand-ink-muted)]">
               {card.definition}
             </p>
             <ul className="mb-6 flex-1 space-y-2">
               {card.bullets.map((bullet) => (
                 <li
                   key={bullet}
-                  className="flex gap-2 text-sm font-light leading-relaxed text-[var(--brand-ink-muted)]"
+                  className="flex gap-2 text-sm font-normal leading-relaxed text-[var(--brand-ink-muted)]"
                 >
-                  <span aria-hidden className="font-light text-[var(--brand-warm)]">
+                  <span aria-hidden className="font-normal text-[var(--brand-warm)]">
                     ·
                   </span>
                   {bullet}
@@ -52,7 +52,7 @@ export function PolicyExplainer() {
             </ul>
             <Link
               href={card.learnMoreHref}
-              className="font-light tracking-wide underline underline-offset-4 transition-colors duration-500 hover:text-[var(--brand-cta)]"
+              className="font-bold tracking-tight underline underline-offset-4 transition-colors duration-500 hover:text-[var(--brand-cta)]"
             >
               Learn more
             </Link>

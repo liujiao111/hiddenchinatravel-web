@@ -10,7 +10,7 @@ export function HomeHeroClient() {
   const copy = dict.home;
 
   return (
-    <section className="relative isolate -mt-14 min-h-[76svh] overflow-hidden bg-[var(--brand-cream)] md:-mt-16 md:min-h-[84svh]">
+    <section className="relative isolate min-h-[76svh] overflow-hidden bg-[var(--brand-cream)] md:min-h-[84svh]">
       <Image
         src={SITE_HERO_PATH}
         alt={`${SITE_NAME} — China travel atmosphere`}
@@ -38,7 +38,7 @@ export function HomeHeroClient() {
         className="pointer-events-none absolute bottom-10 right-0 h-40 w-40 rounded-full bg-[var(--brand-cta)]/10 blur-3xl md:h-56 md:w-56"
       />
 
-      <div className="relative z-10 mx-auto flex min-h-[76svh] max-w-6xl items-center px-4 pb-16 pt-24 md:min-h-[84svh] md:px-8 md:pb-20 md:pt-28 lg:px-12 lg:pb-28 lg:pt-32">
+      <div className="relative z-10 mx-auto flex min-h-[76svh] max-w-6xl items-center px-4 py-12 md:min-h-[84svh] md:px-8 md:py-16 lg:px-12 lg:py-20">
         <div className="w-full max-w-xl text-left md:max-w-2xl">
           <p className="mb-3 text-xs font-bold uppercase tracking-[0.18em] text-[var(--brand-muted)]">
             {copy.eyebrow}

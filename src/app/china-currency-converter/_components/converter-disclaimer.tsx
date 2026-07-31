@@ -8,16 +8,16 @@ export function ConverterDisclaimer() {
     >
       <div className="flex flex-col gap-4 sm:flex-row sm:items-start">
         <span
-          className="flex h-10 w-10 shrink-0 items-center justify-center rounded-sm border border-[color-mix(in_srgb,var(--brand-cream-border)_40%,transparent)] text-lg font-light text-[var(--brand-ink)]"
+          className="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl border border-[color-mix(in_srgb,var(--brand-cream-border)_40%,transparent)] text-lg font-normal text-[var(--brand-ink)]"
           aria-hidden
         >
           i
         </span>
         <div>
-          <p className="mb-1 text-sm font-light tracking-wide text-[var(--brand-ink)]">
+          <p className="mb-1 text-sm font-bold tracking-tight text-[var(--brand-ink)]">
             Reference rates only — not a bank quote or financial advice
           </p>
-          <p className="text-sm font-light leading-relaxed text-[var(--brand-ink-muted)]">
+          <p className="text-sm font-normal leading-relaxed text-[var(--brand-ink-muted)]">
             This China currency converter is for travel budgeting. Mid-market
             rates differ from ATM, airport, hotel, and card FX rates. Actual
             amounts depend on your bank, payment app, and exchange counter. We

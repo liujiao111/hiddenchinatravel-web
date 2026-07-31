@@ -12,20 +12,20 @@ const pills = [
 export function ToolHero({ title, description }: Props) {
   return (
     <section className="mb-10 md:mb-12">
-      <p className="mb-4 text-xs font-light uppercase tracking-[0.18em] text-[var(--brand-muted)]">
+      <p className="mb-4 text-xs font-normal uppercase tracking-[0.18em] text-[var(--brand-muted)]">
         Travel China Guide · Entry Planning
       </p>
-      <h1 className="mb-4 text-2xl font-light leading-tight tracking-wide text-[var(--brand-ink)] md:text-4xl">
+      <h1 className="mb-4 text-2xl font-bold leading-tight tracking-wide text-[var(--brand-ink)] md:text-4xl">
         {title}
       </h1>
-      <p className="mb-6 max-w-3xl text-sm font-light leading-relaxed text-[var(--brand-ink-muted)] md:text-base">
+      <p className="mb-6 max-w-3xl text-sm font-normal leading-relaxed text-[var(--brand-ink-muted)] md:text-base">
         {description}
       </p>
       <div className="flex flex-wrap gap-2.5">
         {pills.map((pill) => (
           <span
             key={pill}
-            className="inline-flex items-center gap-2 rounded-sm border border-[color-mix(in_srgb,var(--brand-cream-border)_40%,transparent)] bg-[var(--brand-surface)] px-3.5 py-1.5 text-sm font-light text-[var(--brand-ink)]"
+            className="inline-flex items-center gap-2 rounded-2xl border border-[color-mix(in_srgb,var(--brand-cream-border)_40%,transparent)] bg-[var(--brand-surface)] px-3.5 py-1.5 text-sm font-normal text-[var(--brand-ink)]"
           >
             <span aria-hidden className="text-[var(--brand-cta)]">
               ✓

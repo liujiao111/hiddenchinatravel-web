@@ -1,22 +1,38 @@
 "use client";
 
 import cn from "classnames";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
 const SHOW_AFTER_PX = 400;
 
+/** Paths that already own a bottom sticky CTA — hide BackToTop to avoid collisions. */
+const HIDDEN_PATH_PREFIXES = ["/survival-kit", "/services"];
+
 /** Sitewide floating control — scrolls smoothly to the top of the page. */
 export function BackToTop() {
+  const pathname = usePathname();
   const [visible, setVisible] = useState(false);
 
+  const suppressed = HIDDEN_PATH_PREFIXES.some(
+    (prefix) => pathname === prefix || pathname.startsWith(`${prefix}/`),
+  );
+
   useEffect(() => {
+    if (suppressed) {
+      setVisible(false);
+      return;
+    }
+
     function onScroll() {
       setVisible(window.scrollY > SHOW_AFTER_PX);
     }
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+  }, [suppressed]);
+
+  if (suppressed) return null;
 
   function scrollToTop() {
     const reduceMotion = window.matchMedia(
@@ -40,6 +56,7 @@ export function BackToTop() {
         "transition-all duration-300 active:scale-[0.98]",
         "hover:bg-[var(--brand-cta-hover)] hover:shadow-[0_8px_24px_rgba(0,137,123,0.4)]",
         "focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--brand-mango)] focus-visible:ring-offset-2",
+        /* Clear ActionRail edge tab on desktop; mobile stays above ActionRail bar */
         "md:bottom-8 md:right-24",
         visible
           ? "translate-y-0 opacity-100"

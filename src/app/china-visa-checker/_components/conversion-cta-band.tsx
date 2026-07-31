@@ -10,11 +10,11 @@ export function ConversionCtaBand() {
         <div className="lg:max-w-xl">
           <h2
             id="cta-heading"
-            className="mb-4 text-xl font-light leading-tight tracking-wide text-[var(--brand-ink)] md:text-3xl"
+            className="mb-4 text-xl font-bold leading-tight tracking-wide text-[var(--brand-ink)] md:text-3xl"
           >
             Ready for the rest of your trip?
           </h2>
-          <p className="text-base font-light leading-relaxed text-[var(--brand-ink-muted)] md:text-lg">
+          <p className="text-base font-normal leading-relaxed text-[var(--brand-ink-muted)] md:text-lg">
             Browse step-by-step survival guides and the trip-prep checklist for
             your first days in China.
           </p>

@@ -65,8 +65,9 @@ export function SiteLogo({
         >
           {compactOnMobile ? (
             <>
-              <span className="sm:hidden">Hidden China</span>
-              <span className="hidden sm:inline">{SITE_NAME}</span>
+              {/* Short wordmark until 2xl — full title + nav + search need the width */}
+              <span className="2xl:hidden">Hidden China</span>
+              <span className="hidden 2xl:inline">{SITE_NAME}</span>
             </>
           ) : (
             SITE_NAME

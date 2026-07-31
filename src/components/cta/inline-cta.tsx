@@ -16,11 +16,11 @@ export function InlineCTA({ copy, articleSlug }: Props) {
       className="my-10 border-y border-[color-mix(in_srgb,var(--brand-cream-border)_40%,transparent)] py-5"
       aria-label="Suggested next step"
     >
-      <p className="text-sm font-light leading-relaxed text-[var(--brand-ink-muted)] md:text-base">
+      <p className="text-sm font-normal leading-relaxed text-[var(--brand-ink-muted)] md:text-base">
         <span className="text-[var(--brand-ink)]">{copy.lead}</span>{" "}
         <Link
           href={copy.href}
-          className="font-light tracking-wide text-[var(--brand-cta)] underline decoration-[color-mix(in_srgb,var(--brand-cream-border)_50%,transparent)] underline-offset-4 transition-colors duration-300 hover:text-[var(--brand-cta-hover)]"
+          className="font-bold tracking-tight text-[var(--brand-cta)] underline decoration-[color-mix(in_srgb,var(--brand-cream-border)_50%,transparent)] underline-offset-4 transition-colors duration-300 hover:text-[var(--brand-cta-hover)]"
           onClick={() =>
             trackEvent(copy.trackingEvent, {
               placement: "inline",

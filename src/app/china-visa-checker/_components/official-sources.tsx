@@ -10,7 +10,7 @@ export function OfficialSources() {
       <div className="surface-card max-w-2xl bg-[var(--brand-surface)] p-6 md:p-8">
         <h2
           id="sources-heading"
-          className="mb-6 text-xl font-light tracking-wide text-[var(--brand-ink)] md:text-3xl"
+          className="mb-6 text-xl font-bold tracking-wide text-[var(--brand-ink)] md:text-3xl"
         >
           Official Sources
         </h2>
@@ -21,7 +21,7 @@ export function OfficialSources() {
                 href={source.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-between gap-4 py-3.5 text-sm font-light tracking-wide text-[var(--brand-ink)] transition-colors duration-500 hover:text-[var(--brand-cta)]"
+                className="flex items-center justify-between gap-4 py-3.5 text-sm font-bold tracking-tight text-[var(--brand-ink)] transition-colors duration-500 hover:text-[var(--brand-cta)]"
               >
                 <span>{source.label}</span>
                 <span aria-hidden className="shrink-0 text-[var(--brand-muted)]">

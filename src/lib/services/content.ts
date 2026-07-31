@@ -14,9 +14,9 @@ export const servicesPageMeta = {
 
 export const servicesHero = {
   eyebrow: "Services & pricing",
-  title: "Your China, Not the Tourist Version",
+  title: "Custom routes for independent travelers",
   subtitle:
-    "1-on-1 custom itinerary planning, built around real local experiences — not another checklist of landmarks.",
+    "1-on-1 itinerary planning built around your pace and interests — landmarks when you want them, local texture when you don't.",
 } as const;
 
 export const coreService = {

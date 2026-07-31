@@ -26,7 +26,7 @@ export function PostPreview({
       <div className="mb-5">
         <CoverImage slug={slug} title={title} src={coverImage} />
       </div>
-      <h3 className="mb-3 text-xl font-light leading-snug tracking-wide text-[var(--brand-ink)] md:text-2xl">
+      <h3 className="mb-3 text-xl font-bold leading-snug tracking-wide text-[var(--brand-ink)] md:text-2xl">
         <Link
           href={`/${slug}`}
           className="transition-colors duration-500 hover:underline"
@@ -34,10 +34,10 @@ export function PostPreview({
           {title}
         </Link>
       </h3>
-      <div className="mb-4 text-base font-light text-[var(--brand-muted)]">
+      <div className="mb-4 text-base font-normal text-[var(--brand-muted)]">
         <DateFormatter dateString={date} />
       </div>
-      <p className="mb-4 text-base font-light leading-relaxed text-[var(--brand-ink-muted)]">
+      <p className="mb-4 text-base font-normal leading-relaxed text-[var(--brand-ink-muted)]">
         {excerpt}
       </p>
       <Avatar name={author.name} picture={author.picture} />

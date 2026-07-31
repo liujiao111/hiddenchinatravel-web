@@ -31,25 +31,25 @@ export function HubPage({ hub }: Props) {
     <div id="top" className="pb-24 md:pb-32">
       <header className="mb-12 md:mb-16">
         {hub.eyebrow ? (
-          <p className="mb-4 text-xs font-light uppercase tracking-[0.18em] text-[var(--brand-warm)]">
+          <p className="mb-4 text-xs font-bold uppercase tracking-[0.18em] text-[var(--brand-mango)]">
             {hub.eyebrow}
           </p>
         ) : null}
-        <h1 className="mb-5 max-w-3xl text-2xl font-light leading-tight tracking-wide text-[var(--brand-ink)] md:mb-6 md:text-4xl">
+        <h1 className="mb-5 max-w-3xl text-2xl font-bold leading-tight tracking-tight text-[var(--brand-cta)] md:mb-6 md:text-4xl">
           {hub.title}
         </h1>
         {hub.description ? (
-          <p className="mb-8 max-w-2xl text-base font-light leading-relaxed text-[var(--brand-ink-muted)] md:text-lg">
+          <p className="mb-8 max-w-2xl text-base font-normal leading-relaxed text-[var(--brand-ink-muted)] md:text-lg">
             {hub.description}
           </p>
         ) : null}
 
         {hub.heroAnswer ? (
           <div className="surface-card max-w-3xl bg-[var(--brand-soft)] p-6 md:p-8">
-            <p className="mb-3 text-xs font-light uppercase tracking-[0.18em] text-[var(--brand-warm)]">
+            <p className="mb-3 text-xs font-bold uppercase tracking-[0.18em] text-[var(--brand-mango)]">
               Quick Answer
             </p>
-            <p className="text-base font-light leading-relaxed text-[var(--brand-ink)] md:text-lg">
+            <p className="text-base font-normal leading-relaxed text-[var(--brand-ink)] md:text-lg">
               {hub.heroAnswer}
             </p>
           </div>
@@ -74,7 +74,15 @@ export function HubPage({ hub }: Props) {
         </aside>
 
         <div className="min-w-0 space-y-20 md:space-y-28">
-          {hub.subtopics.map((subtopic) => (
+          {hub.subtopics
+            .map((subtopic) => ({
+              ...subtopic,
+              articles: subtopic.articles.filter(
+                (article) => article.status !== "placeholder",
+              ),
+            }))
+            .filter((subtopic) => subtopic.articles.length > 0)
+            .map((subtopic) => (
             <section
               key={subtopic.id}
               id={subtopic.id}
@@ -83,12 +91,12 @@ export function HubPage({ hub }: Props) {
             >
               <h2
                 id={`${subtopic.id}-heading`}
-                className="mb-4 text-xl font-light leading-tight tracking-wide text-[var(--brand-ink)] md:text-3xl"
+                className="mb-4 text-xl font-bold leading-tight tracking-tight text-[var(--brand-cta)] md:text-3xl"
               >
                 {subtopic.name}
               </h2>
               {subtopic.description ? (
-                <p className="mb-8 max-w-2xl text-base font-light leading-relaxed text-[var(--brand-ink-muted)]">
+                <p className="mb-8 max-w-2xl text-base font-normal leading-relaxed text-[var(--brand-ink-muted)]">
                   {subtopic.description}
                 </p>
               ) : null}
@@ -108,12 +116,12 @@ export function HubPage({ hub }: Props) {
               aria-labelledby="before-you-arrive-heading"
               className="scroll-mt-28"
             >
-              <p className="mb-3 text-xs font-light uppercase tracking-[0.18em] text-[var(--brand-warm)]">
+              <p className="mb-3 text-xs font-normal uppercase tracking-[0.18em] text-[var(--brand-warm)]">
                 Before you arrive
               </p>
               <h2
                 id="before-you-arrive-heading"
-                className="mb-6 text-xl font-light leading-tight tracking-wide text-[var(--brand-ink)] md:text-3xl"
+                className="mb-6 text-xl font-bold leading-tight tracking-wide text-[var(--brand-ink)] md:text-3xl"
               >
                 {hub.beforeYouArriveHeading ||
                   "Why this prep matters before you land"}
@@ -128,17 +136,17 @@ export function HubPage({ hub }: Props) {
               aria-labelledby="decision-guide-heading"
               className="scroll-mt-28"
             >
-              <p className="mb-3 text-xs font-light uppercase tracking-[0.18em] text-[var(--brand-warm)]">
+              <p className="mb-3 text-xs font-normal uppercase tracking-[0.18em] text-[var(--brand-warm)]">
                 Decision guide
               </p>
               <h2
                 id="decision-guide-heading"
-                className="mb-4 text-xl font-light leading-tight tracking-wide text-[var(--brand-ink)] md:text-3xl"
+                className="mb-4 text-xl font-bold leading-tight tracking-wide text-[var(--brand-ink)] md:text-3xl"
               >
                 {hub.decisionGuide.title}
               </h2>
               {hub.decisionGuide.intro ? (
-                <p className="mb-8 max-w-2xl text-base font-light leading-relaxed text-[var(--brand-ink-muted)] md:text-lg">
+                <p className="mb-8 max-w-2xl text-base font-normal leading-relaxed text-[var(--brand-ink-muted)] md:text-lg">
                   {hub.decisionGuide.intro}
                 </p>
               ) : null}
@@ -146,7 +154,7 @@ export function HubPage({ hub }: Props) {
                 {hub.decisionGuide.points.map((point) => (
                   <li
                     key={point.slice(0, 48)}
-                    className="border-l border-[color-mix(in_srgb,var(--brand-cream-border)_40%,transparent)] pl-4 text-base font-light leading-relaxed text-[var(--brand-ink-muted)]"
+                    className="border-l border-[color-mix(in_srgb,var(--brand-cream-border)_40%,transparent)] pl-4 text-base font-normal leading-relaxed text-[var(--brand-ink-muted)]"
                   >
                     {point}
                   </li>
@@ -154,10 +162,10 @@ export function HubPage({ hub }: Props) {
               </ul>
               {hub.decisionGuide.recommendation ? (
                 <div className="surface-card max-w-2xl bg-[var(--brand-surface)] p-6 md:p-8">
-                  <p className="mb-2 text-xs font-light uppercase tracking-[0.18em] text-[var(--brand-warm)]">
+                  <p className="mb-2 text-xs font-normal uppercase tracking-[0.18em] text-[var(--brand-warm)]">
                     Simplest recommendation
                   </p>
-                  <p className="text-base font-light leading-relaxed text-[var(--brand-ink)] md:text-lg">
+                  <p className="text-base font-normal leading-relaxed text-[var(--brand-ink)] md:text-lg">
                     {hub.decisionGuide.recommendation}
                   </p>
                 </div>
@@ -171,12 +179,12 @@ export function HubPage({ hub }: Props) {
               aria-labelledby="mistakes-heading"
               className="scroll-mt-28"
             >
-              <p className="mb-3 text-xs font-light uppercase tracking-[0.18em] text-[var(--brand-warm)]">
+              <p className="mb-3 text-xs font-normal uppercase tracking-[0.18em] text-[var(--brand-warm)]">
                 Mistakes to avoid
               </p>
               <h2
                 id="mistakes-heading"
-                className="mb-8 text-xl font-light leading-tight tracking-wide text-[var(--brand-ink)] md:text-3xl"
+                className="mb-8 text-xl font-bold leading-tight tracking-wide text-[var(--brand-ink)] md:text-3xl"
               >
                 {hub.mistakes.title}
               </h2>
@@ -186,16 +194,16 @@ export function HubPage({ hub }: Props) {
                     key={item.title}
                     className="surface-card border border-[color-mix(in_srgb,var(--brand-cream-border)_40%,transparent)] bg-[var(--brand-surface)] p-6 transition-colors duration-500 hover:bg-white"
                   >
-                    <h3 className="mb-3 text-base font-light tracking-wide text-[var(--brand-ink)] md:text-lg">
+                    <h3 className="mb-3 text-base font-bold tracking-tight text-[var(--brand-ink)] md:text-lg">
                       {item.title}
                     </h3>
-                    <p className="text-sm font-light leading-relaxed text-[var(--brand-ink-muted)] md:text-base">
+                    <p className="text-sm font-normal leading-relaxed text-[var(--brand-ink-muted)] md:text-base">
                       {item.body}
                     </p>
                     {item.href ? (
                       <Link
                         href={item.href}
-                        className="mt-4 inline-flex text-sm font-light tracking-wide text-[var(--brand-cta)] transition-colors duration-300 hover:text-[var(--brand-cta-hover)]"
+                        className="mt-4 inline-flex text-sm font-bold tracking-tight text-[var(--brand-cta)] transition-colors duration-300 hover:text-[var(--brand-cta-hover)]"
                       >
                         Read the guide →
                       </Link>
@@ -215,11 +223,11 @@ export function HubPage({ hub }: Props) {
               <div className="surface-card bg-[var(--brand-soft)] p-8 md:p-12">
                 <h2
                   id="tools-heading"
-                  className="mb-4 text-xl font-light leading-tight tracking-wide text-[var(--brand-ink)] md:text-3xl"
+                  className="mb-4 text-xl font-bold leading-tight tracking-wide text-[var(--brand-ink)] md:text-3xl"
                 >
                   {hub.toolsHeading || "Ready for the next step?"}
                 </h2>
-                <p className="mb-8 max-w-xl text-base font-light leading-relaxed text-[var(--brand-ink-muted)] md:text-lg">
+                <p className="mb-8 max-w-xl text-base font-normal leading-relaxed text-[var(--brand-ink-muted)] md:text-lg">
                   {hub.toolsIntro ||
                     "Start with the main guide, then go deeper based on what you need for your trip."}
                 </p>
@@ -253,12 +261,12 @@ export function HubPage({ hub }: Props) {
               aria-labelledby="related-hubs-heading"
               className="scroll-mt-28"
             >
-              <p className="mb-3 text-xs font-light uppercase tracking-[0.18em] text-[var(--brand-warm)]">
+              <p className="mb-3 text-xs font-normal uppercase tracking-[0.18em] text-[var(--brand-warm)]">
                 Related hubs
               </p>
               <h2
                 id="related-hubs-heading"
-                className="mb-8 text-xl font-light leading-tight tracking-wide text-[var(--brand-ink)] md:text-3xl"
+                className="mb-8 text-xl font-bold leading-tight tracking-wide text-[var(--brand-ink)] md:text-3xl"
               >
                 What to prepare next for your China trip
               </h2>
@@ -269,10 +277,10 @@ export function HubPage({ hub }: Props) {
                       href={item.href}
                       className="surface-card block h-full border border-[color-mix(in_srgb,var(--brand-cream-border)_40%,transparent)] bg-[var(--brand-surface)] p-6 transition-colors duration-500 hover:bg-white"
                     >
-                      <h3 className="mb-2 text-base font-light tracking-wide text-[var(--brand-ink)] md:text-lg">
+                      <h3 className="mb-2 text-base font-bold tracking-tight text-[var(--brand-ink)] md:text-lg">
                         {item.title}
                       </h3>
-                      <p className="text-sm font-light leading-relaxed text-[var(--brand-ink-muted)]">
+                      <p className="text-sm font-normal leading-relaxed text-[var(--brand-ink-muted)]">
                         {item.excerpt}
                       </p>
                     </Link>
@@ -282,7 +290,7 @@ export function HubPage({ hub }: Props) {
             </section>
           ) : null}
 
-          <footer className="flex flex-wrap items-center gap-x-6 gap-y-3 border-t border-[color-mix(in_srgb,var(--brand-cream-border)_40%,transparent)] pt-8 text-sm font-light tracking-wide text-[var(--brand-ink-muted)]">
+          <footer className="flex flex-wrap items-center gap-x-6 gap-y-3 border-t border-[color-mix(in_srgb,var(--brand-cream-border)_40%,transparent)] pt-8 text-sm font-bold tracking-tight text-[var(--brand-ink-muted)]">
             <a
               href="#top"
               className="transition-colors duration-300 hover:text-[var(--brand-ink)]"
@@ -310,37 +318,26 @@ function ArticleRow({
   const inner = (
     <>
       <div className="mb-2 flex flex-wrap items-center gap-3">
-        <h3 className="text-base font-light tracking-wide text-[var(--brand-ink)] md:text-lg">
+        <h3 className="text-base font-bold tracking-tight text-[var(--brand-cta)] md:text-lg">
           {article.title}
         </h3>
         {article.badge ? (
-          <span className="text-xs font-light uppercase tracking-[0.14em] text-[var(--brand-warm)]">
+          <span className="text-xs font-bold uppercase tracking-[0.14em] text-[var(--brand-mango)]">
             {article.badge}
           </span>
         ) : null}
-        {article.status === "placeholder" ? (
-          <span className="text-xs font-light tracking-wide text-[var(--brand-muted)]">
-            Coming soon
-          </span>
-        ) : null}
       </div>
-      <p className="text-sm font-light leading-relaxed text-[var(--brand-ink-muted)] md:text-base">
+      <p className="text-sm font-normal leading-relaxed text-[var(--brand-ink-muted)] md:text-base">
         {article.excerpt}
       </p>
-      {article.status === "published" ? (
-        <span className="mt-3 inline-flex text-sm font-light tracking-wide text-[var(--brand-cta)]">
-          Read guide →
-        </span>
-      ) : null}
+      <span className="mt-3 inline-flex text-sm font-bold tracking-tight text-[var(--brand-cta)]">
+        Read guide →
+      </span>
     </>
   );
 
   if (article.status === "placeholder") {
-    return (
-      <div className="surface-card border border-dashed border-[color-mix(in_srgb,var(--brand-cream-border)_50%,transparent)] bg-[var(--brand-surface)]/60 p-6 opacity-80">
-        {inner}
-      </div>
-    );
+    return null;
   }
 
   return (

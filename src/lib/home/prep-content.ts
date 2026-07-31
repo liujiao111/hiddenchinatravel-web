@@ -47,7 +47,9 @@ export type HomePrepStep =
       step: 6;
       title: string;
       body: string;
-      kind: "soon";
+      kind: "simple";
+      cta: { label: string; href: string };
+      guide: { label: string; href: string };
     };
 
 export const homePrepSection = {
@@ -77,9 +79,9 @@ export const homePrepSteps: HomePrepStep[] = [
     body: "Data + a VPN backup so maps, messages, and payments still work on day one.",
     menus: [
       {
-        buttonLabel: "Get a China eSIM",
+        buttonLabel: "Compare China eSIMs",
         chooseHint:
-          "Airalo if you only need data; Trip.com eSIM if you already book hotels there.",
+          "Airalo if you only need data; Trip.com eSIM if you already book hotels there. Some links are affiliate.",
         guide: {
           label: "eSIM guide",
           href: "/best-esim-for-china-travel",
@@ -100,9 +102,9 @@ export const homePrepSteps: HomePrepStep[] = [
         ],
       },
       {
-        buttonLabel: "Get a travel VPN",
+        buttonLabel: "Compare travel VPNs",
         chooseHint:
-          "NordVPN is our usual pick for phones and laptops; ExpressVPN if you prefer that app.",
+          "NordVPN is our usual pick for phones and laptops; ExpressVPN if you prefer that app. Some links are affiliate.",
         guide: {
           label: "VPN guide",
           href: "/best-vpn-for-china",
@@ -179,7 +181,7 @@ export const homePrepSteps: HomePrepStep[] = [
       {
         buttonLabel: "Book on Trip.com",
         chooseHint:
-          "Lock night-one hotels early; reserve popular sights with the passport you will travel on.",
+          "Lock night-one hotels early; reserve popular sights with the passport you will travel on. Trip.com links are affiliate.",
         guide: {
           label: "Hotel guide",
           href: "/hotels-in-china-for-foreigners",
@@ -207,8 +209,16 @@ export const homePrepSteps: HomePrepStep[] = [
   {
     id: "insurance",
     step: 6,
-    kind: "soon",
+    kind: "simple",
     title: "Cover medical surprises",
-    body: "Partner picks are coming soon. For now, arrange cover with a provider you trust before you fly.",
+    body: "Hospitals often expect payment first. Buy travel medical cover (with evacuation) from a provider you trust before you fly — we don't sell policies.",
+    cta: {
+      label: "Emergency numbers & tips",
+      href: "/survival-kit#section-practical",
+    },
+    guide: {
+      label: "Why travelers buy cover",
+      href: "/china-visa-free-countries-2026",
+    },
   },
 ];

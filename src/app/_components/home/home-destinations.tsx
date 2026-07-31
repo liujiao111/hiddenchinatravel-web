@@ -45,16 +45,16 @@ export function HomeDestinations({ variant = "home" }: Props) {
         <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 md:gap-6">
           {destinationCities.map((city) => {
             const href = isHub
-              ? `/china-itinerary-planner`
+              ? `/china-itinerary-planner#plan-trip`
               : `/china-destinations#${city.id}`;
-            const cta = isHub ? "Plan this trip" : "Explore";
+            const cta = isHub ? "Sketch a route" : "Explore";
 
             return (
               <li key={city.id} id={isHub ? city.id : undefined}>
                 <TropicalCard
                   href={href}
                   className="scroll-mt-28"
-                  label={city.id.replace(/-/g, " ")}
+                  label={city.label}
                   title={city.name}
                   footerMeta={city.guidesHint}
                   footerCta={cta}

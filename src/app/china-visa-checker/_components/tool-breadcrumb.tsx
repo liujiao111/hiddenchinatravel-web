@@ -12,7 +12,7 @@ type Props = {
 export function ToolBreadcrumb({ items }: Props) {
   return (
     <nav aria-label="Breadcrumb" className="mb-6 mt-8">
-      <ol className="flex flex-wrap items-center gap-2 text-sm font-light text-[var(--brand-muted)]">
+      <ol className="flex flex-wrap items-center gap-2 text-sm font-normal text-[var(--brand-muted)]">
         {items.map((item, index) => (
           <li key={item.label} className="flex items-center gap-2">
             {index > 0 ? (

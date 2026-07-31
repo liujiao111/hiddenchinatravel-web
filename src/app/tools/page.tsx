@@ -55,15 +55,6 @@ const featuredTools = [
   },
 ];
 
-const upcomingTools = [
-  {
-    name: "Holiday & closure calendar",
-    description:
-      "See major public holidays and plan around peak crowds.",
-    href: "#",
-  },
-];
-
 export default function ToolsPage() {
   return (
     <main>
@@ -96,23 +87,6 @@ export default function ToolsPage() {
                   {tool.cta}
                   <span aria-hidden>→</span>
                 </Link>
-              </div>
-            ))}
-
-            {upcomingTools.map((tool) => (
-              <div
-                key={tool.name}
-                className="surface-card bg-[var(--brand-surface)] p-8 md:p-10"
-              >
-                <h2 className="mb-3 text-xl font-light tracking-wide text-[var(--brand-ink)] md:text-3xl">
-                  {tool.name}
-                </h2>
-                <p className="mb-6 font-light leading-relaxed text-[var(--brand-ink-muted)]">
-                  {tool.description}
-                </p>
-                <span className="inline-block cursor-not-allowed border border-[color-mix(in_srgb,var(--brand-cream-border)_40%,transparent)] bg-[var(--brand-soft)] px-8 py-3 font-light tracking-wide text-[var(--brand-muted)] opacity-60">
-                  Coming soon
-                </span>
               </div>
             ))}
           </div>

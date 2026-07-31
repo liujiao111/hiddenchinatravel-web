@@ -1,4 +1,3 @@
-import { HomeBottomCta } from "@/app/_components/home/home-bottom-cta";
 import { HomeDestinations } from "@/app/_components/home/home-destinations";
 import { HomeFaqSection } from "@/app/_components/home/home-faq-section";
 import { HomeFeaturedGuides } from "@/app/_components/home/home-featured-guides";
@@ -52,7 +51,6 @@ export default function Index() {
       <HomeDestinations variant="home" />
       <HomeFaqSection />
       <HomeSurvivalKit />
-      <HomeBottomCta />
     </main>
   );
 }

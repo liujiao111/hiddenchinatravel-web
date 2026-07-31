@@ -1,16 +1,13 @@
 "use client";
 
 import { MobileNav } from "@/app/_components/mobile-nav";
-import { PlannerPromoBar } from "@/app/_components/planner-promo-bar";
 import { SiteLogo } from "@/app/_components/site-logo";
 import { SiteNav } from "@/app/_components/site-nav";
 import { SiteSearch } from "@/app/_components/site-search";
 import { WhatsAppContact } from "@/app/_components/whatsapp-contact";
 import { useLocaleDict } from "@/i18n/locale-provider";
 import type { SearchItem } from "@/lib/search/types";
-import cn from "classnames";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 
 type Props = {
   searchItems: SearchItem[];
@@ -18,75 +15,56 @@ type Props = {
 
 export function SiteHeader({ searchItems }: Props) {
   const { dict } = useLocaleDict();
-  const pathname = usePathname();
-  const isHome = pathname === "/";
-  const tone = isHome ? "default" : "onTeal";
-  const onTeal = tone === "onTeal";
+  const tone = "onTeal" as const;
 
   return (
-    <>
-      <PlannerPromoBar copy={dict.plannerPromo} />
-      <header
-        className={cn(
-          "sticky top-0 z-40",
-          isHome
-            ? "bg-transparent"
-            : "bg-[var(--brand-cta)] shadow-[0_4px_20px_rgba(0,137,123,0.18)]",
-        )}
-      >
-        <div className="mx-auto flex h-14 w-full max-w-7xl items-center gap-4 px-4 md:h-16 md:gap-6 md:px-6 lg:px-8 xl:gap-8">
-          <div className="shrink-0">
-            <SiteLogo size="sm" priority tone={tone} compactOnMobile />
-          </div>
-
-          <div className="hidden min-w-0 flex-1 xl:block">
-            <SiteNav labels={dict.nav} tone={tone} />
-          </div>
-
-          <div
-            className={cn(
-              "ml-auto flex shrink-0 items-center gap-2.5 sm:gap-3",
-              "xl:border-l xl:pl-4",
-              onTeal
-                ? "xl:border-white/25"
-                : "xl:border-[color-mix(in_srgb,var(--brand-cream-border)_55%,transparent)]",
-            )}
-          >
-            <div className="hidden min-w-0 md:block">
-              <SiteSearch
-                items={searchItems}
-                variant="header"
-                preferResultsPage
-              />
-            </div>
-            <Link
-              href="/search"
-              className={cn(
-                "inline-flex h-10 w-10 items-center justify-center rounded-full border transition-colors duration-300 md:hidden",
-                onTeal
-                  ? "border-white/30 text-white hover:bg-white/10"
-                  : "border-[color-mix(in_srgb,var(--brand-cta)_22%,transparent)] text-[var(--brand-cta)] hover:bg-[var(--brand-soft)]",
-              )}
-              aria-label="Search guides"
-            >
-              <SearchGlyph className="h-4 w-4" />
-            </Link>
-            <WhatsAppContact
-              variant="nav"
-              tone={tone}
-              showDivider={false}
-              label={dict.whatsapp.navLabel}
-              cardTitle={dict.whatsapp.cardTitle}
-            />
-            <MobileNav
-              labels={dict.nav}
-              plannerCta={dict.header.plannerCta}
-              tone={tone}
-            />
-          </div>
+    <header className="sticky top-0 z-40 bg-[var(--brand-cta)] shadow-[0_4px_20px_rgba(0,137,123,0.18)]">
+      <div className="mx-auto flex h-14 w-full max-w-7xl items-center gap-4 px-4 md:h-16 md:gap-6 md:px-6 lg:px-8 xl:gap-8">
+        <div className="relative z-10 shrink-0 bg-[var(--brand-cta)] pr-2">
+          <SiteLogo size="sm" priority tone={tone} compactOnMobile />
         </div>
-      </header>
-    </>
+
+        <div className="hidden min-w-0 flex-1 lg:block">
+          <SiteNav labels={dict.nav} tone={tone} />
+        </div>
+
+        <div className="relative z-10 ml-auto flex shrink-0 items-center gap-2.5 bg-[var(--brand-cta)] sm:gap-3 2xl:border-l 2xl:border-white/25 2xl:pl-4">
+          {/* Full search from 2xl — lg/xl keep the icon so nav stays readable */}
+          <div className="hidden min-w-0 2xl:block">
+            <SiteSearch
+              items={searchItems}
+              variant="header"
+              preferResultsPage
+            />
+          </div>
+          <Link
+            href="/search"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/30 text-white transition-colors duration-300 hover:bg-white/10 2xl:hidden"
+            aria-label="Search guides"
+          >
+            <SearchGlyph className="h-4 w-4" />
+          </Link>
+          <Link
+            href="/china-itinerary-planner#plan-trip"
+            className="btn-brand-inverse hidden h-10 items-center px-4 py-0 text-sm md:inline-flex"
+          >
+            {dict.header.plannerCta}
+          </Link>
+          <WhatsAppContact
+            variant="nav"
+            tone={tone}
+            showDivider={false}
+            label={dict.whatsapp.navLabel}
+            cardTitle={dict.whatsapp.cardTitle}
+          />
+          <MobileNav
+            labels={dict.nav}
+            plannerCta={dict.header.plannerCta}
+            tone={tone}
+          />
+        </div>
+      </div>
+    </header>
   );
 }
 

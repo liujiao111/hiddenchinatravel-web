@@ -13,7 +13,6 @@ import {
 } from "@/lib/constants";
 import {
   getWhatsAppHref,
-  isWhatsAppReady,
 } from "@/lib/whatsapp";
 import Link from "next/link";
 
@@ -70,8 +69,6 @@ function contactJsonLd() {
 }
 
 export default function ContactPage() {
-  const whatsappReady = isWhatsAppReady();
-
   return (
     <main className="bg-[var(--brand-cream)]">
       <script
@@ -166,20 +163,14 @@ export default function ContactPage() {
               <h2 className="mb-2 text-sm font-bold tracking-tight text-[var(--brand-cta)]">
                 WhatsApp
               </h2>
-              {whatsappReady ? (
-                <a
-                  href={getWhatsAppHref()}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm font-bold text-[var(--brand-coral)] underline decoration-[color-mix(in_srgb,var(--brand-coral)_35%,transparent)] underline-offset-2"
-                >
-                  Chat on WhatsApp →
-                </a>
-              ) : (
-                <p className="text-sm font-normal text-[var(--brand-ink-muted)]">
-                  Coming soon — use the form or email for now.
-                </p>
-              )}
+              <a
+                href={getWhatsAppHref()}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm font-bold text-[var(--brand-coral)] underline decoration-[color-mix(in_srgb,var(--brand-coral)_35%,transparent)] underline-offset-2"
+              >
+                Chat on WhatsApp →
+              </a>
             </div>
 
             <div>
