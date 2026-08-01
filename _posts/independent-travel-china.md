@@ -49,7 +49,7 @@ China is completely accessible to independent travelers. In most regions, you ca
 
 Modern infrastructure has made independent travel far easier than most people expect.
 
-Booking your train or flight tickets in China is simple using online platforms. You can book tickets in advance and avoid last-minute hassles on [Ctrip official website](https://www.ctrip.com/), one of the most reliable travel booking platforms in China.
+Booking your train or flight tickets in China is simple using online platforms. For intercity trains, most foreigners should start with Trip.com — full walkthrough in [How to Book High-Speed Rail Tickets in China](/book-china-high-speed-rail-foreigners).
 
 Take China’s high-speed rail network, for example. It connects nearly every major destination with trains that are fast, punctual, spotless, and surprisingly affordable. Many travelers say it’s one of the best parts of visiting the country.
 
@@ -138,8 +138,8 @@ Getting around can feel overwhelming at first. These apps help you find routes, 
 
 Booking trains, flights, and hotels is much easier with trusted apps installed ahead of time:
 
-  * [Trip.com Group official site](https://www.trip.com/)
-  * [Ctrip Group official site](https://www.ctrip.com/)
+  * [Trip.com](/go/trip-trains) — trains, hotels, and flights in English with foreign cards
+  * [How to Book High-Speed Rail Tickets in China](/book-china-high-speed-rail-foreigners) — passport booking, station check-in, sold-out backups
 
 These platforms let foreigners book tickets using passports, check schedules, and receive digital confirmations—no local ID required.
 
@@ -192,6 +192,7 @@ Planning your China trip? These practical guides may also help you travel more i
   * [Internet, VPN and SIM in China](/internet-in-china/)
   * [Maps and Navigation in China](/maps-navigation-in-china/)
   * [Transport in China](/transport-in-china/)
+  * [How to Book High-Speed Rail Tickets in China](/book-china-high-speed-rail-foreigners)
   * [Hotels in China for Foreigners](/hotels-in-china/)
   * [Attraction Tickets in China](/attraction-tickets-in-china/)
 

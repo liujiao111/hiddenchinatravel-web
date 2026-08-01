@@ -278,6 +278,22 @@ export const staticSearchCatalog: SearchItem[] = [
     keywords: ["transport", "train"],
   },
   {
+    id: "article-hsr-booking",
+    title: "Book High-Speed Rail Tickets in China",
+    href: "/book-china-high-speed-rail-foreigners",
+    description:
+      "12306 vs Trip.com, Chongqing to Dali walkthrough, and sold-out backups.",
+    type: "article",
+    keywords: [
+      "high-speed rail",
+      "train tickets",
+      "12306",
+      "trip.com",
+      "chongqing",
+      "dali",
+    ],
+  },
+  {
     id: "article-food",
     title: "How to Order Food Without a Chinese Number",
     href: "/order-food-china-without-chinese-number",

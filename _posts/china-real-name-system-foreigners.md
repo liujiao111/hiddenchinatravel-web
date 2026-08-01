@@ -46,7 +46,7 @@ Think of it as layers you have to build in sequence:
   2. **Chinese phone number** — registered in-person to that ID
   3. **WeChat or Alipay account** — tied to that phone number
   4. **Chinese bank account** — tied to passport and phone
-  5. **Everything else** — ride apps, food delivery, hotels, train tickets
+  5. **Everything else** — ride apps, food delivery, hotels, [train tickets](/book-china-high-speed-rail-foreigners)
 
 For a Chinese citizen, this assembles in about 20 minutes. Their ID is machine-readable, pre-indexed in government databases, and instantly verifiable. The whole thing clicks together.
 
@@ -218,6 +218,7 @@ You now know more about how this works than most people who’ve lived in China 
 Planning your China trip? These practical guides may also help you deal with real-name verification, bookings, payments, and travel apps:
 
   * [Travel China Guide for Foreigners](/independent-travel-china)
+  * [How to Book High-Speed Rail Tickets in China](/book-china-high-speed-rail-foreigners)
   * [Attraction Tickets in China](/attraction-tickets-in-china/)
   * [Hotels in China for Foreigners](/hotels-in-china/)
   * [Payments in China for Foreigners](/payments-in-china/)

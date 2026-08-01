@@ -232,6 +232,7 @@ The goal isn’t to master China’s booking ecosystem. The goal is to not miss 
 Planning your China trip? These practical guides may also help when booking tickets, arranging transport, and preparing your digital setup:
 
   * [Attraction Tickets in China](/attraction-tickets-in-china/)
+  * [How to Book High-Speed Rail Tickets in China](/book-china-high-speed-rail-foreigners)
   * [Payments in China for Foreigners](/payments-in-china/)
   * [Internet, VPN and SIM in China](/internet-in-china/)
   * [Transport in China](/transport-in-china/)

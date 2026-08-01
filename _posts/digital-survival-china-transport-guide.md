@@ -52,7 +52,7 @@ Traveling with others? One person with a verified account can add up to 15 passe
 
 ### At the Station
 
-The one thing to remember: **skip the automated gates and go to the manual lane** (look for 人工通道). Foreign passports are hit-or-miss with the automated readers, and the manual lane takes about ten seconds anyway. Hand your passport to the staff member, they scan it, the gate opens.
+Verified foreign passports often work at self-service gates now — but they’re still hit-or-miss by station. If the scan fails, or this is your first China train, **use the manual lane** (人工通道). Hand your passport to the staff member, they scan it, the gate opens in about ten seconds.
 
 Gates typically open 15 minutes before departure and close 5 minutes before. Don’t cut it close.
 
@@ -60,7 +60,7 @@ On the train, window seats are A and F, aisle seats are C and D. Every carriage 
 
 **One hard rule** : power banks over 100Wh (roughly 27,000mAh) are confiscated at security, not just flagged. Keep yours under that limit.
 
-→ _Full guide:[How to Book and Take High-Speed Rail in China as a Foreigner](/)_
+→ Full guide: [How to Book High-Speed Rail Tickets in China as a Foreigner](/book-china-high-speed-rail-foreigners)
 
 ## Didi: Ride-Hailing That Actually Works
 
@@ -150,6 +150,7 @@ Passport check| I need passport verification| 我要护照核验| Wǒ yào hùzh
 Getting transport sorted is only part of the puzzle. These cover the rest:
 
   * [Transport in China](/transport-in-china/) — transport hub in china
+  * [How to Book High-Speed Rail Tickets in China](/book-china-high-speed-rail-foreigners) — Trip.com vs 12306, passport check-in, sold-out backups
   * [China Payment Guide for Foreigners](/payments-in-china/) — Alipay, WeChat Pay, and how to actually use them without a Chinese bank account
   * [Internet & VPN Guide for China](/internet-in-china/) — Getting Google, WhatsApp, and everything else working
   * [Google Maps in China](/maps-navigation-in-china/) — Why it doesn’t work and what to use instead

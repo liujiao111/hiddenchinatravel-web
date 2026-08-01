@@ -292,7 +292,7 @@ export const kitBookingSection: KitPrepSectionData = {
   eyebrow: "Step 5 · Booking",
   title: "Book flights, hotels, and tickets",
   intro:
-    "Trip.com handles English booking and foreign cards for the pieces that hurt most when left late — flights in, night-one hotels, and popular sights.",
+    "Trip.com handles English booking and foreign cards for the pieces that hurt most when left late — flights in, night-one hotels, trains between cities, and popular sights.",
   cards: [
     {
       icon: "ticket",
@@ -328,6 +328,21 @@ export const kitBookingSection: KitPrepSectionData = {
             label: "Hotel guide",
             href: "/hotels-in-china-for-foreigners",
             trackingModule: "booking-hotels",
+          },
+        },
+        {
+          name: "High-speed rail",
+          diff: "Book intercity trains with your passport — English UI, no Chinese phone required.",
+          primaryCta: {
+            label: "Book trains",
+            href: go.tripTrains,
+            external: true,
+            trackingModule: "booking-trains",
+          },
+          secondaryCta: {
+            label: "Train booking guide",
+            href: "/book-china-high-speed-rail-foreigners",
+            trackingModule: "booking-trains",
           },
         },
         {
