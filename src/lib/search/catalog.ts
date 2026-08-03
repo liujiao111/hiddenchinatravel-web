@@ -294,6 +294,15 @@ export const staticSearchCatalog: SearchItem[] = [
     ],
   },
   {
+    id: "article-didi",
+    title: "How to Use DiDi in China as a Foreigner",
+    href: "/how-to-use-didi-china-foreigners",
+    description:
+      "DiDi app, Alipay/WeChat mini-program, or Amap taxi — plate checks, Safety Center, payment.",
+    type: "article",
+    keywords: ["didi", "taxi", "ride-hailing", "uber china", "pickup"],
+  },
+  {
     id: "article-food",
     title: "How to Order Food Without a Chinese Number",
     href: "/order-food-china-without-chinese-number",

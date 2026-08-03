@@ -83,7 +83,7 @@ Payment is automatic — once the driver ends the trip, your linked card is char
 
 **Watch out for unlicensed drivers** at tourist spots and train stations — people walking up asking “where are you going?” These are 黑车 (black taxis): no meter, no insurance, prices made up on the spot. Ignore them and use the app.
 
-→ _Full guide:[How to Use Didi in China as a Foreigner](/)_
+→ Full guide: [How to Use DiDi in China as a Foreigner](/how-to-use-didi-china-foreigners/)
 
 ## Metro & Bus: Your Phone Is Your Ticket
 

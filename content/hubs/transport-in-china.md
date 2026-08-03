@@ -8,7 +8,7 @@ canonical: /transport-in-china
 eyebrow: "China Digital Survival Guide · Transport Hub"
 heroAnswer: "If you want the simplest answer, do this: use high-speed rail for many trips between major cities, use metro for daily city travel, and use DiDi when you want the easiest door-to-door option. Make sure your passport, payment app, and internet setup are ready before you rely on any of them."
 description: "Getting around China is usually easier than first-time visitors expect — once you know what to use. This transport hub helps you figure out when to take high-speed rail, when metro is easiest, when DiDi makes more sense, and what setup matters before you start moving around."
-dateModified: "2026-08-01"
+dateModified: "2026-08-03"
 keywords:
   - transport in China for foreigners
   - China high-speed rail
@@ -34,6 +34,15 @@ subtopics:
         excerpt: "Chongqing → Dali walkthrough, 12306 vs Trip.com, passport check-in, and what to do when tickets sell out."
         badge: "Booking Guide"
         status: published
+  - id: didi-ride-hailing
+    name: "DiDi / ride-hailing"
+    description: "Book a car without Mandarin — app vs Alipay, destination search, plate checks, Safety Center, and payment."
+    articles:
+      - title: "How to Use DiDi in China as a Foreigner"
+        href: /how-to-use-didi-china-foreigners
+        excerpt: "Prep checklist, step-by-step booking, fares and payment, and rider FAQ."
+        badge: "App Guide"
+        status: published
   - id: supporting-setup
     name: "Make transport actually work"
     description: "Transport friction is often payments, maps, or data — not the train itself. Sort these before your first transfer."
@@ -58,6 +67,8 @@ toolCTA:
     href: /digital-survival-china-transport-guide
   - label: "Book High-Speed Rail"
     href: /book-china-high-speed-rail-foreigners
+  - label: "DiDi Guide"
+    href: /how-to-use-didi-china-foreigners
   - label: "Maps Hub"
     href: /maps-navigation-in-china
 faqHeading: "Quick answers to common China transport questions"
@@ -71,7 +82,7 @@ faqs:
   - question: "Is high-speed rail better than flying in China?"
     answer: "For many major city routes, yes. It often feels easier once you factor in airport travel, security, and waiting time. See the [high-speed rail booking guide](/book-china-high-speed-rail-foreigners) for stations, check-in, and sold-out backups."
   - question: "Should I use DiDi or regular taxis in China?"
-    answer: "For many visitors, DiDi feels easier because destination handling, pickup, and payment are managed in the app — if your [payments](/payments-in-china) and [maps](/maps-navigation-in-china) setup works."
+    answer: "For many visitors, DiDi feels easier because destination handling, pickup, and payment are managed in the app — if your [payments](/payments-in-china) and [maps](/maps-navigation-in-china) setup works. Full walkthrough: [How to Use DiDi in China](/how-to-use-didi-china-foreigners)."
   - question: "Do I need cash for transport in China?"
     answer: "Not as your main strategy. Many transport situations are easier with mobile payment, though a small cash backup is still reasonable."
   - question: "Do I need my passport for trains in China?"
