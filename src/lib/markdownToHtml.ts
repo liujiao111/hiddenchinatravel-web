@@ -48,9 +48,9 @@ function isCoverImageSrc(src: string): boolean {
 function isPhoneScreenshot(src: string, alt: string): boolean {
   if (isCompactIconSrc(src) || isCoverImageSrc(src)) return false;
   const blob = `${src} ${alt}`.toLowerCase();
-  // Explicit screenshot / UI cues only — do not treat trip photos as phones.
+  // Explicit screenshot / step-UI cues — do not treat trip photos as phones.
   if (
-    /screenshot|screen[-_]?shot|phone[-_]?ui|app[-_]?ui|app[-_]?screen|qr[-_]?code/.test(
+    /screenshot|screen[-_]?shot|phone[-_]?ui|app[-_]?ui|app[-_]?screen|qr[-_]?code|\/step-\d+|step\s*\d+/.test(
       blob,
     )
   ) {
@@ -61,7 +61,7 @@ function isPhoneScreenshot(src: string, alt: string): boolean {
       blob,
     );
   const mentionsUi =
-    /\b(ui|screen|settings|wallet|offline[-_]?map|add[-_]?card|home[-_]?screen|download|verif|language)\b/.test(
+    /\b(ui|screen|settings|wallet|offline[-_]?map|add[-_]?card|home[-_]?screen|download|verif|language|confirm|search\s+results|driver|where\s+to)\b/.test(
       blob,
     );
   return mentionsApp && mentionsUi;

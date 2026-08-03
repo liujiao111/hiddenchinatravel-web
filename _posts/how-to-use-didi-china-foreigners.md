@@ -3,7 +3,7 @@ title: "How to Use DiDi in China as a Foreigner (2026 Step-by-Step Guide)"
 excerpt: "Book a DiDi ride in China without Mandarin — app, Alipay or WeChat mini-program, or Amap taxi. Prep, plate checks, Safety Center, and payment."
 coverImage: "/assets/blog/how-to-use-didi-china-foreigners/cover.webp"
 date: "2026-08-03T10:00:00+00:00"
-dateModified: "2026-08-03T13:30:00+00:00"
+dateModified: "2026-08-03T14:00:00+00:00"
 author:
   name: "Joy Liu"
   picture: "/assets/blog/authors/joy-liu.jpg"
@@ -120,14 +120,14 @@ That's the whole loop. The annotated screenshots below use this same flow.
 
 Confirm your pickup pin on the map, then set where you're going.
 
-![Step 1 — DiDi home screen with Where to search bar highlighted](/assets/blog/how-to-use-didi-china-foreigners/step-01-where-to.webp "Step 1: Tap Where to?")
+![Step 1 screenshot — DiDi home screen with Where to search bar highlighted](/assets/blog/how-to-use-didi-china-foreigners/step-01-where-to.webp "Step 1: Tap Where to?")
 
 1. Tap **Where to?** and type in English (for example “Bell Tower” or paste a Chinese address).
 2. Check **both** the English name and the Chinese name/address in the results.
 3. Pick the one that matches your plan — hotel, sight entrance, or metro exit, not a random residential compound with a similar name. If gate options appear (South Gate, North Gate…), pick the entrance that matches your plan.
 4. Optional: save places you use often.
 
-![Step 2 — DiDi search results for Dali Ancient City with matching place highlighted](/assets/blog/how-to-use-didi-china-foreigners/step-02-search-results.webp "Step 2: Pick the right destination")
+![Step 2 screenshot — DiDi search results for Dali Ancient City with matching place highlighted](/assets/blog/how-to-use-didi-china-foreigners/step-02-search-results.webp "Step 2: Pick the right destination")
 
 **Practical tip:** English works for big landmarks. For hotels and restaurants, paste the **Chinese address** from your confirmation into DiDi (or into Amap first). Guessing the Pinyin spelling is how people end up at the wrong gate. More on map quirks → [Maps & Navigation in China](/google-maps-china-not-working/).
 
@@ -139,16 +139,16 @@ At busy stations and airports, use the app's suggested **pickup points** when th
 2. Check the **Upfront Fare** or **Estimated** price before Confirm.
 3. Tap **Confirm** to request the car.
 
-![Step 3 — DiDi ride type list and Confirm button highlighted](/assets/blog/how-to-use-didi-china-foreigners/step-03-confirm-ride.webp "Step 3: Choose ride type and Confirm")
+![Step 3 screenshot — DiDi ride type list and Confirm button highlighted](/assets/blog/how-to-use-didi-china-foreigners/step-03-confirm-ride.webp "Step 3: Choose ride type and Confirm")
 
 4. While DiDi is matching, you'll see **Finding a driver**. You can **Cancel Trip** if needed, or add more ride types for a faster pickup.
 
-![Step 4 — DiDi finding a driver screen with Cancel Trip highlighted](/assets/blog/how-to-use-didi-china-foreigners/step-04-finding-driver.webp "Step 4: Finding a driver")
+![Step 4 screenshot — DiDi finding a driver screen with Cancel Trip highlighted](/assets/blog/how-to-use-didi-china-foreigners/step-04-finding-driver.webp "Step 4: Finding a driver")
 
 5. When a driver accepts, read the screen carefully: **license plate**, car color, brand, driver details.
 6. Track the car. Use **Message** (often auto-translated) for “I'm at Exit B.” Calling is harder if you don't speak Mandarin or your foreign number can't take local calls — chat is usually enough.
 
-![Step 5 — Driver on the way with license plate and Message buttons highlighted](/assets/blog/how-to-use-didi-china-foreigners/step-05-driver-on-the-way.webp "Step 5: Match plate and Message if needed")
+![Step 5 screenshot — Driver on the way with license plate and Message buttons highlighted](/assets/blog/how-to-use-didi-china-foreigners/step-05-driver-on-the-way.webp "Step 5: Match plate and Message if needed")
 
 **Don't get in until the plate and car type match.** Ignore curb touts asking “taxi?” with no order — those are unlicensed 黑车.
 
