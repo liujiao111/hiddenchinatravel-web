@@ -15,6 +15,8 @@ type Props = {
   footerCta?: string;
   href?: string;
   className?: string;
+  /** Optional click hook when `href` is set (e.g. analytics). */
+  onNavigate?: () => void;
   /** @deprecated Ignored — all cards use brand teal for consistency */
   accent?: TropicalAccent;
   /** Use for quote cards without a CTA */
@@ -29,6 +31,7 @@ export function TropicalCard({
   footerCta,
   href,
   className,
+  onNavigate,
   as = "article",
 }: Props) {
   const Tag = as;
@@ -76,7 +79,12 @@ export function TropicalCard({
 
   if (href) {
     return (
-      <Link href={href} className={shellClass} style={style}>
+      <Link
+        href={href}
+        className={shellClass}
+        style={style}
+        onClick={onNavigate}
+      >
         {inner}
       </Link>
     );

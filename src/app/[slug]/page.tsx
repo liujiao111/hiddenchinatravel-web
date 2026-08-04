@@ -2,6 +2,10 @@ import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getAllPosts, getPostBySlug } from "@/lib/api";
 import { SITE_NAME, SITE_URL } from "@/lib/constants";
+import {
+  getRelatedPosts,
+  resolveArticleHub,
+} from "@/lib/content/article-related";
 import markdownToHtml from "@/lib/markdownToHtml";
 import Container from "@/app/_components/container";
 import { PostBody } from "@/app/_components/post-body";
@@ -17,6 +21,12 @@ export default async function PostPage(props: Params) {
   }
 
   const content = await markdownToHtml(post.content || "");
+  const hub = resolveArticleHub(post.section);
+  const relatedPosts = getRelatedPosts(post, getAllPosts(), 3).map((p) => ({
+    slug: p.slug,
+    title: p.title,
+    excerpt: p.excerpt,
+  }));
 
   return (
     <main>
@@ -39,6 +49,8 @@ export default async function PostPage(props: Params) {
             articleSlug={post.slug}
             section={post.section}
             keywords={post.keywords}
+            hub={hub}
+            relatedPosts={relatedPosts}
           />
         </article>
       </Container>

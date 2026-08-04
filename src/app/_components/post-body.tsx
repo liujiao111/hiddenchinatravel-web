@@ -1,11 +1,14 @@
 import { ArticleToc } from "@/app/_components/article-toc";
 import { EndCTA, InlineCTA } from "@/components/cta";
+import { ArticleHubLink, ContinueReading } from "@/components/content";
+import type { ContinueReadingItem } from "@/components/content/continue-reading";
 import {
   getEndCtaCopy,
   getInlineCtaCopy,
   resolveArticleCtaVariant,
 } from "@/config/cta";
 import { extractH2Toc, TOC_MIN_ITEMS } from "@/lib/article-toc";
+import type { ArticleHubRef } from "@/lib/content/article-related";
 import { splitHtmlForInlineCta } from "@/lib/cta/split-html";
 import markdownStyles from "@/app/_components/markdown-styles.module.css";
 import cn from "classnames";
@@ -15,17 +18,21 @@ type Props = {
   articleSlug?: string;
   section?: string;
   keywords?: string[];
+  hub?: ArticleHubRef | null;
+  relatedPosts?: ContinueReadingItem[];
 };
 
 /**
- * Article body with automated mid-article + end CTAs.
- * Insertion is computed from rendered HTML (not per-post Markdown).
+ * Article body with automated mid-article + end CTAs,
+ * hub back-link, and same-section Continue reading.
  */
 export function PostBody({
   content,
   articleSlug,
   section,
   keywords,
+  hub = null,
+  relatedPosts = [],
 }: Props) {
   const variant = resolveArticleCtaVariant(section, keywords);
   const inlineCopy = getInlineCtaCopy();
@@ -55,6 +62,12 @@ export function PostBody({
         />
       )}
       <EndCTA copy={endCopy} articleSlug={articleSlug} />
+      {hub ? <ArticleHubLink hub={hub} articleSlug={articleSlug} /> : null}
+      <ContinueReading
+        posts={relatedPosts}
+        articleSlug={articleSlug}
+        cardLabel={hub?.label}
+      />
     </>
   );
 

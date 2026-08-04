@@ -84,9 +84,9 @@ export const endCtaByVariant: Record<ArticleCtaVariantId, EndCtaCopy> = {
     trackingEvent: "article_end_cta_click",
   },
   transport: {
-    bridge: "Trains and rides make more sense when the cities are in order.",
+    bridge: "Got rides and trains sorted? Next is lining up the cities so day one connects.",
     valueProp:
-      "Plan the route first, then book the legs that matter most.",
+      "Sketch a simple China route — then DiDi, metro, and high-speed rail actually fit together.",
     buttonLabel: "Plan my China trip",
     href: PLANNER_HREF,
     trackingEvent: "article_end_cta_click",
@@ -133,22 +133,34 @@ const SECTION_VARIANT_RULES: { match: RegExp; variant: ArticleCtaVariantId }[] =
     { match: /payment|alipay|wechat pay/i, variant: "payments" },
     { match: /internet|vpn|sim|esim/i, variant: "internet" },
     { match: /map|navigation/i, variant: "maps" },
-    { match: /transport|train|metro/i, variant: "transport" },
+    { match: /transport|train|metro|didi|ride[- ]?hail/i, variant: "transport" },
     { match: /food|delivery|meituan/i, variant: "food" },
     { match: /hotel/i, variant: "hotels" },
     { match: /ticket|attraction/i, variant: "tickets" },
     { match: /essential|travel china/i, variant: "essentials" },
   ];
 
+function matchVariant(haystack: string): ArticleCtaVariantId | null {
+  if (!haystack.trim()) return null;
+  for (const rule of SECTION_VARIANT_RULES) {
+    if (rule.match.test(haystack)) return rule.variant;
+  }
+  return null;
+}
+
+/**
+ * Prefer frontmatter `section` over keywords.
+ * Keywords often mention Alipay/Amap/etc. and used to steal the wrong end CTA
+ * (e.g. DiDi transport posts showing “Payments sorted?”).
+ */
 export function resolveArticleCtaVariant(
   section?: string,
   keywords?: string[],
 ): ArticleCtaVariantId {
-  const haystack = [section, ...(keywords ?? [])].filter(Boolean).join(" ");
-  if (!haystack) return "default";
-  for (const rule of SECTION_VARIANT_RULES) {
-    if (rule.match.test(haystack)) return rule.variant;
-  }
+  const fromSection = matchVariant(section ?? "");
+  if (fromSection) return fromSection;
+  const fromKeywords = matchVariant((keywords ?? []).join(" "));
+  if (fromKeywords) return fromKeywords;
   return "default";
 }
 
