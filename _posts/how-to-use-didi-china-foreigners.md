@@ -3,7 +3,7 @@ title: "How to Use DiDi in China as a Foreigner (2026 Step-by-Step Guide)"
 excerpt: "Book a DiDi ride in China without Mandarin — app, Alipay or WeChat mini-program, or Amap taxi. Prep, plate checks, Safety Center, and payment."
 coverImage: "/assets/blog/how-to-use-didi-china-foreigners/cover.webp"
 date: "2026-08-03T10:00:00+00:00"
-dateModified: "2026-08-03T14:00:00+00:00"
+dateModified: "2026-08-04T03:10:00+00:00"
 author:
   name: "Joy Liu"
   picture: "/assets/blog/authors/joy-liu.jpg"
@@ -203,10 +203,9 @@ No. DiDi inside Alipay or WeChat works for many travelers, and **Amap taxi** is 
 
 ## Related Guides
 
-- [Transport in China hub](/transport-in-china/) — trains, metro, and DiDi overview
-- [China Transport Guide](/digital-survival-china-transport-guide/) — when to use each mode
-- [Book High-Speed Rail as a Foreigner](/book-china-high-speed-rail-foreigners/) — intercity trains
-- [Payments in China](/digital-survival-china-payment-guide/) — Alipay / WeChat for DiDi
-- [Google Maps / Amap guide](/google-maps-china-not-working/) — addresses that actually find the pin
+Cross-topic prep that makes DiDi smoother (same-topic guides are under **Continue reading** below):
+
+- [Payments in China](/digital-survival-china-payment-guide/) — Alipay / WeChat for in-app rides
+- [Google Maps / Amap guide](/google-maps-china-not-working/) — addresses and pickup pins that actually work
 
 Need help locking apps and payments before day one? [Get the Free Survival Kit](/survival-kit/) or [Plan my China trip](/china-itinerary-planner/).

@@ -26,6 +26,7 @@ export default async function PostPage(props: Params) {
     slug: p.slug,
     title: p.title,
     excerpt: p.excerpt,
+    coverImage: p.coverImage,
   }));
 
   return (

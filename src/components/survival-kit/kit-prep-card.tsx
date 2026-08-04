@@ -42,6 +42,45 @@ function toBuyMenu(card: KitPrepCardData): PrepBuyMenu | null {
   };
 }
 
+function OptionLogo({ src, name }: { src: string; name: string }) {
+  return (
+    // eslint-disable-next-line @next/next/no-img-element -- mixed svg/webp brand marks
+    <img
+      src={src}
+      alt=""
+      width={28}
+      height={28}
+      className="h-7 w-7 shrink-0 rounded-[0.55rem] object-cover shadow-sm ring-1 ring-[color-mix(in_srgb,var(--brand-cream-border)_55%,transparent)]"
+      aria-hidden
+      data-app={name}
+    />
+  );
+}
+
+function OptionHeading({
+  name,
+  badge,
+  logoSrc,
+}: {
+  name: string;
+  badge?: string;
+  logoSrc?: string;
+}) {
+  return (
+    <div className="mb-1 flex flex-wrap items-center gap-2">
+      {logoSrc ? <OptionLogo src={logoSrc} name={name} /> : null}
+      <p className="text-sm font-bold tracking-tight text-[var(--brand-ink)]">
+        {name}
+      </p>
+      {badge ? (
+        <span className="rounded-2xl border border-[color-mix(in_srgb,var(--brand-cream-border)_45%,transparent)] bg-[var(--brand-soft)] px-1.5 py-0.5 text-[10px] font-normal uppercase tracking-[0.14em] text-[var(--brand-muted)]">
+          {badge}
+        </span>
+      ) : null}
+    </div>
+  );
+}
+
 export function KitPrepCard({ card }: Props) {
   const buyMenu = !card.comingSoon ? toBuyMenu(card) : null;
 
@@ -77,16 +116,11 @@ export function KitPrepCard({ card }: Props) {
           <ul className="mb-4 flex flex-1 flex-col divide-y divide-[color-mix(in_srgb,var(--brand-cream-border)_35%,transparent)] border-t border-[color-mix(in_srgb,var(--brand-cream-border)_35%,transparent)]">
             {card.options.map((option) => (
               <li key={option.name} className="py-3 first:pt-4 last:pb-0">
-                <div className="mb-1 flex flex-wrap items-center gap-2">
-                  <p className="text-sm font-bold tracking-tight text-[var(--brand-ink)]">
-                    {option.name}
-                  </p>
-                  {option.badge ? (
-                    <span className="rounded-2xl border border-[color-mix(in_srgb,var(--brand-cream-border)_45%,transparent)] bg-[var(--brand-soft)] px-1.5 py-0.5 text-[10px] font-normal uppercase tracking-[0.14em] text-[var(--brand-muted)]">
-                      {option.badge}
-                    </span>
-                  ) : null}
-                </div>
+                <OptionHeading
+                  name={option.name}
+                  badge={option.badge}
+                  logoSrc={option.logoSrc}
+                />
                 <p className="text-xs font-normal leading-relaxed text-[var(--brand-muted)] md:text-[13px]">
                   {option.diff}
                 </p>
@@ -119,16 +153,11 @@ export function KitPrepCard({ card }: Props) {
                 className="flex flex-col gap-3 py-4 first:pt-4 last:pb-0"
               >
                 <div>
-                  <div className="mb-1 flex flex-wrap items-center gap-2">
-                    <p className="text-sm font-bold tracking-tight text-[var(--brand-ink)]">
-                      {option.name}
-                    </p>
-                    {option.badge ? (
-                      <span className="rounded-2xl border border-[color-mix(in_srgb,var(--brand-cream-border)_45%,transparent)] bg-[var(--brand-soft)] px-1.5 py-0.5 text-[10px] font-normal uppercase tracking-[0.14em] text-[var(--brand-muted)]">
-                        {option.badge}
-                      </span>
-                    ) : null}
-                  </div>
+                  <OptionHeading
+                    name={option.name}
+                    badge={option.badge}
+                    logoSrc={option.logoSrc}
+                  />
                   <p className="text-xs font-normal leading-relaxed text-[var(--brand-muted)] md:text-[13px]">
                     {option.diff}
                   </p>

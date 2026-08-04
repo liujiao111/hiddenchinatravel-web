@@ -124,6 +124,7 @@ export const kitNetworkSection: KitPrepSectionData = {
         {
           name: "Airalo",
           diff: "eSIM specialist — quick app install if you only need data.",
+          logoSrc: "/assets/survival-kit/apps/airalo.svg",
           primaryCta: {
             label: "Get Airalo eSIM",
             href: go.airalo,
@@ -139,6 +140,7 @@ export const kitNetworkSection: KitPrepSectionData = {
         {
           name: "Trip.com eSIM",
           diff: "Same account as hotels and flights — handy if you already book on Trip.",
+          logoSrc: "/assets/survival-kit/apps/trip.svg",
           primaryCta: {
             label: "Get Trip.com eSIM",
             href: go.tripEsim,
@@ -167,6 +169,7 @@ export const kitNetworkSection: KitPrepSectionData = {
         {
           name: "NordVPN",
           diff: "Our usual pick for travel — solid for phones and laptops.",
+          logoSrc: "/assets/survival-kit/apps/nordvpn.svg",
           primaryCta: {
             label: "Get NordVPN",
             href: go.nordvpn,
@@ -182,6 +185,7 @@ export const kitNetworkSection: KitPrepSectionData = {
         {
           name: "ExpressVPN",
           diff: "Strong alternative if you prefer another brand’s app and pricing.",
+          logoSrc: "/assets/survival-kit/apps/expressvpn.svg",
           primaryCta: {
             label: "Get ExpressVPN",
             href: go.expressvpn,
@@ -222,6 +226,7 @@ export const kitPaymentSection: KitPrepSectionData = {
           name: "Alipay",
           badge: "Recommended",
           diff: "Usually the easiest first wallet for foreign visitors.",
+          logoSrc: "/assets/survival-kit/apps/alipay.webp",
           primaryCta: {
             label: "Set up Alipay",
             href: "/alipay-for-foreigners-china",
@@ -237,6 +242,7 @@ export const kitPaymentSection: KitPrepSectionData = {
           name: "WeChat Pay",
           badge: "Backup",
           diff: "Useful second wallet when a merchant only accepts WeChat.",
+          logoSrc: "/assets/survival-kit/apps/wechat-pay.webp",
           primaryCta: {
             label: "Set up WeChat Pay",
             href: "/wechat-pay-for-foreigners-china",
@@ -270,6 +276,7 @@ export const kitMapsSection: KitPrepSectionData = {
         {
           name: "Amap setup",
           diff: "Best everyday navigation for metros, walking, and taxis in China.",
+          logoSrc: "/assets/survival-kit/apps/amap.svg",
           primaryCta: {
             label: "How to use Amap",
             href: "/google-maps-china-not-working",
@@ -303,6 +310,7 @@ export const kitBookingSection: KitPrepSectionData = {
         {
           name: "Flights",
           diff: "Search international routes in English and pay with a foreign card.",
+          logoSrc: "/assets/survival-kit/apps/trip.svg",
           primaryCta: {
             label: "Search flights",
             href: go.tripFlight,
@@ -318,6 +326,7 @@ export const kitBookingSection: KitPrepSectionData = {
         {
           name: "Hotels",
           diff: "Book places that handle passport check-in without day-one drama.",
+          logoSrc: "/assets/survival-kit/apps/trip.svg",
           primaryCta: {
             label: "Search hotels",
             href: go.tripHotels,
@@ -333,6 +342,7 @@ export const kitBookingSection: KitPrepSectionData = {
         {
           name: "High-speed rail",
           diff: "Book intercity trains with your passport — English UI, no Chinese phone required.",
+          logoSrc: "/assets/survival-kit/apps/trip.svg",
           primaryCta: {
             label: "Book trains",
             href: go.tripTrains,
@@ -348,6 +358,7 @@ export const kitBookingSection: KitPrepSectionData = {
         {
           name: "Attraction tickets",
           diff: "Reserve popular sights early with the passport you will travel on.",
+          logoSrc: "/assets/survival-kit/apps/trip.svg",
           primaryCta: {
             label: "Book tickets",
             href: go.tripTickets,

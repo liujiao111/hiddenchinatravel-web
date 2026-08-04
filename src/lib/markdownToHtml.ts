@@ -1,6 +1,9 @@
 import { remark } from "remark";
 import remarkGfm from "remark-gfm";
 import html from "remark-html";
+import { existsSync } from "fs";
+import { join } from "path";
+import sharp from "sharp";
 import { ensureHeadingIds } from "@/lib/article-toc";
 
 /** Add sponsored rel to affiliate short links in rendered HTML. */
@@ -67,18 +70,60 @@ function isPhoneScreenshot(src: string, alt: string): boolean {
   return mentionsApp && mentionsUi;
 }
 
+function resolvePublicAssetPath(src: string): string | null {
+  if (!src.startsWith("/")) return null;
+  const full = join(process.cwd(), "public", src.replace(/^\//, ""));
+  return existsSync(full) ? full : null;
+}
+
+/** True when asset is wider than tall (wide UI crops / maps / photos). */
+async function isLandscapeAsset(src: string): Promise<boolean> {
+  const full = resolvePublicAssetPath(src);
+  if (!full) return false;
+  try {
+    const meta = await sharp(full).metadata();
+    const w = meta.width ?? 0;
+    const h = meta.height ?? 0;
+    return w > 0 && h > 0 && w > h;
+  } catch {
+    return false;
+  }
+}
+
 /**
  * Wrap Markdown images in shared blog media frames so every post
  * (current + future) gets consistent presentation without per-article CSS.
+ *
+ * Portrait phone UI → blog-media-shot (narrow phone canvas).
+ * Landscape UI / photos → blog-media-frame (readable article width).
  */
-function wrapBlogImages(markup: string): string {
-  return markup.replace(/<img\b([^>]*)\/?>/gi, (full, attrs: string) => {
+async function wrapBlogImages(markup: string): Promise<string> {
+  const tagRe = /<img\b([^>]*)\/?>/gi;
+  const matches = [...markup.matchAll(tagRe)];
+  if (!matches.length) return markup;
+
+  const landscapeFlags = await Promise.all(
+    matches.map(async (m) => {
+      const attrs = m[1] ?? "";
+      const srcMatch = attrs.match(/\bsrc=(["'])(.*?)\1/i);
+      const src = srcMatch?.[2] ?? "";
+      return isLandscapeAsset(src);
+    }),
+  );
+
+  let i = 0;
+  return markup.replace(tagRe, (full, attrs: string) => {
+    const landscape = landscapeFlags[i++] ?? false;
     const srcMatch = attrs.match(/\bsrc=(["'])(.*?)\1/i);
     const altMatch = attrs.match(/\balt=(["'])(.*?)\1/i);
     const src = srcMatch?.[2] ?? "";
     const alt = altMatch?.[2] ?? "";
     if (isCompactIconSrc(src)) {
       return `<span class="blog-media-icon">${full}</span>`;
+    }
+    // Wide UI crops must not be squeezed into the phone canvas.
+    if (landscape) {
+      return `<span class="blog-media-frame">${full}</span>`;
     }
     if (isPhoneScreenshot(src, alt)) {
       return `<span class="blog-media-shot">${full}</span>`;
@@ -147,8 +192,11 @@ export function normalizePipeTables(markdown: string): string {
       }
 
       if (block.length >= 2 && isTableSeparatorLine(block[1])) {
-        const normalized = block.map((row) => {
-          const cells = splitTableCells(row);
+        const cellRows = block.map((row) => splitTableCells(row));
+        const colCount = Math.max(...cellRows.map((cells) => cells.length), 1);
+        const normalized = block.map((row, idx) => {
+          const cells = [...cellRows[idx]];
+          while (cells.length < colCount) cells.push("");
           if (isTableSeparatorLine(row)) {
             return formatGfmTableRow(
               cells.map((cell) => {
@@ -181,5 +229,6 @@ export default async function markdownToHtml(markdown: string) {
   const normalized = normalizePipeTables(markdown);
   const result = await remark().use(remarkGfm).use(html).process(normalized);
   const withAffiliates = decorateAffiliateAnchors(result.toString());
-  return ensureHeadingIds(wrapTables(wrapBlogImages(withAffiliates)));
+  const withImages = await wrapBlogImages(withAffiliates);
+  return ensureHeadingIds(wrapTables(withImages));
 }

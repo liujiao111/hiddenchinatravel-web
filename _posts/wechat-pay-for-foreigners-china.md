@@ -118,13 +118,13 @@ In practice, for most of what travelers need — meals, transport, shopping, acc
 
 Both apps are worth having. They’re accepted in most of the same places, and neither one is dramatically better than the other in terms of coverage. The difference, at least for foreign users, tends to show up in reliability:
 
-| WeChat Pay| Alipay  
----|---|---  
-Setup Difficulty| ⚠️ Moderate| ✅ Generally easier  
-Foreign Card Reliability| ⚠️ Good but inconsistent| ✅ More stable  
-Acceptance| ✅ Very wide| ✅ Very wide  
-Overall Stability| ⚠️ Moderate| ✅ Better for foreigners  
-  
+| | WeChat Pay | Alipay |
+| --- | --- | --- |
+| Setup Difficulty | ⚠️ Moderate | ✅ Generally easier |
+| Foreign Card Reliability | ⚠️ Good but inconsistent | ✅ More stable |
+| Acceptance | ✅ Very wide | ✅ Very wide |
+| Overall Stability | ⚠️ Moderate | ✅ Better for foreigners |
+
 The honest take: use WeChat Pay because it’s convenient and deeply integrated into daily life in China (you’ll use the WeChat app for other things anyway), but treat Alipay as your more dependable backup for when things don’t go through. More details in the [Alipay for Foreigners guide](/alipay-for-foreigners-china).
 
 ## Is WeChat Pay Enough on Its Own?

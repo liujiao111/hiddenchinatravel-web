@@ -72,17 +72,16 @@ export function PostBody({
   );
 
   if (!showToc) {
-    return <div className="mx-auto max-w-2xl">{article}</div>;
+    return <div className="mx-auto max-w-3xl">{article}</div>;
   }
 
   return (
     <div
       className={cn(
-        "mx-auto max-w-2xl",
-        // Real grid columns — TOC never paints over the reading column.
-        // Default stretch so the TOC column matches article height (needed for sticky).
-        "xl:grid xl:max-w-5xl xl:grid-cols-[12rem_minmax(0,38rem)] xl:justify-center xl:gap-12",
-        "2xl:max-w-6xl 2xl:grid-cols-[13.5rem_minmax(0,40rem)] 2xl:gap-14",
+        "mx-auto max-w-3xl",
+        // TOC + reading column: keep TOC slim, give prose most of the row.
+        "xl:grid xl:w-full xl:max-w-6xl xl:grid-cols-[10rem_minmax(0,48rem)] xl:justify-center xl:gap-10",
+        "2xl:grid-cols-[11rem_minmax(0,52rem)] 2xl:gap-12",
       )}
     >
       {/*

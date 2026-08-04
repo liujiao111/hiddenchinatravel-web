@@ -163,7 +163,7 @@ It has a 30-day refund policy — so if it doesn’t work for your trip, you’r
 
 ## Related guides
 
-  * [Best eSIM for China](/best-esim-for-china-travel): `[/best-esim-for-china-travel](/best-esim-for-china-travel)`
+  * [Best eSIM for China](/best-esim-for-china-travel) — pick a plan that works for short trips
   * [China internet & VPN & SIM & ESIM full guide](/digital-survival-china-internet-guide)
   * [Google Maps in China (and what to use instead)](/maps-navigation-in-china)
   * [Alipay for foreigners](/alipay-for-foreigners-china)

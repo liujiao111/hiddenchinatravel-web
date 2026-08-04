@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { TropicalCard } from "@/app/_components/tropical-card";
 import { trackEvent } from "@/lib/analytics/track";
 
@@ -7,6 +8,7 @@ export type ContinueReadingItem = {
   slug: string;
   title: string;
   excerpt: string;
+  coverImage: string;
 };
 
 type Props = {
@@ -37,8 +39,21 @@ export function ContinueReading({ posts, articleSlug, cardLabel }: Props) {
               href={href}
               label={cardLabel || "Guide"}
               title={post.title}
-              footerCta="Read"
+              footerCta="Read More →"
               className="h-full"
+              titleLines={4}
+              bodyLines={4}
+              media={
+                <div className="relative aspect-[16/10] w-full bg-[var(--brand-soft)]">
+                  <Image
+                    src={post.coverImage}
+                    alt=""
+                    fill
+                    className="object-cover object-center"
+                    sizes="(max-width: 768px) 100vw, 280px"
+                  />
+                </div>
+              }
               onNavigate={() =>
                 trackEvent("article_related_click", {
                   href,

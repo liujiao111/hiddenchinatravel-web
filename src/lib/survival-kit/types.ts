@@ -46,6 +46,8 @@ export type KitProductOption = {
   /** One-line when-to-choose / difference */
   diff: string;
   badge?: string;
+  /** Official / brand app icon under /assets/survival-kit/apps/ */
+  logoSrc?: string;
   primaryCta: KitCta;
   secondaryCta?: KitCta;
 };
