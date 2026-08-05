@@ -325,6 +325,7 @@ Hidden China Travel
 #### Tickets
 
 - Book tickets Guide：/china-attraction-ticket-booking-foreigners-2026/
+- Why attractions require reservations：/why-china-attractions-require-reservations/
 
 
 

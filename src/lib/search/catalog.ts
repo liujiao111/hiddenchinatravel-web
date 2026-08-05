@@ -335,6 +335,14 @@ export const staticSearchCatalog: SearchItem[] = [
     keywords: ["tickets", "attractions"],
   },
   {
+    id: "article-tickets-why-reserve",
+    title: "Why China Attractions Require Reservations",
+    href: "/why-china-attractions-require-reservations",
+    description: "Timed entry, crowd control, and what first-timers should check before going.",
+    type: "article",
+    keywords: ["reservation", "timed entry", "attractions", "tickets"],
+  },
+  {
     id: "article-real-name",
     title: "China’s Real-Name System for Foreigners",
     href: "/china-real-name-system-foreigners",

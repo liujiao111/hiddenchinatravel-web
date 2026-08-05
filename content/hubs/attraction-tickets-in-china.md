@@ -8,7 +8,7 @@ canonical: /attraction-tickets-in-china
 eyebrow: "China Digital Survival Guide · Tickets Hub"
 heroAnswer: "If you want the simplest answer, book important attractions in advance, use the exact passport details you will travel with, and keep your payment and internet setup ready before you start booking. For many popular attractions, this is much less stressful than assuming you can sort everything at the gate."
 description: "Booking attraction tickets in China is much easier once you know what to watch for. This ticket hub helps you handle passport-based booking, real-name reservation rules, advance booking decisions, and the most common mistakes that make famous attractions harder to visit than they should be."
-dateModified: "2026-06-01"
+dateModified: "2026-08-05"
 keywords:
   - attraction tickets China foreigners
   - book China tickets passport
@@ -24,6 +24,15 @@ subtopics:
         excerpt: "Passport booking, advance reservations, platform friction, and how to avoid entry mismatches."
         badge: "Main Guide"
         status: published
+  - id: why-it-matters
+    name: "Why reservations exist"
+    description: "Understand timed entry and crowd control before you assume you can buy at the gate."
+    articles:
+      - title: "Why China Attractions Require Reservations"
+        href: /why-china-attractions-require-reservations
+        excerpt: "Crowd control, heritage protection, passport-linked tickets, and what to check before you go."
+        badge: "Why It Matters"
+        status: published
   - id: related-systems
     name: "Systems behind tickets"
     description: "Tickets fail for reasons that look technical but are really identity, payment, or connection problems."
@@ -31,7 +40,7 @@ subtopics:
       - title: "China Real-Name System Explained"
         href: /china-real-name-system-foreigners
         excerpt: "Why many attractions expect named reservations matched to your passport."
-        badge: "Why It Matters"
+        badge: "Identity"
         status: published
       - title: "Payments in China"
         href: /digital-survival-china-payment-guide
@@ -55,9 +64,9 @@ faqs:
   - question: "Can foreigners book attraction tickets in China with a passport?"
     answer: "Yes, many foreign travelers can book using passport details — but details must match the document you travel with. See the [tickets guide](/china-attraction-ticket-booking-foreigners-2026)."
   - question: "Do I need to book popular attractions in advance?"
-    answer: "Often yes. The more famous the attraction and the busier the date, the safer it is to book ahead."
+    answer: "Often yes. The more famous the attraction and the busier the date, the safer it is to book ahead. For the crowd-control reasons behind timed entry, see [Why China Attractions Require Reservations](/why-china-attractions-require-reservations)."
   - question: "Can I buy attraction tickets at the gate in China?"
-    answer: "Sometimes, but not always the way travelers expect. Treat gate purchase as backup, not the main plan."
+    answer: "Sometimes, but not always the way travelers expect. Treat gate purchase as backup, not the main plan. [Why reservations exist](/why-china-attractions-require-reservations) explains when walk-ins fail."
   - question: "Why can attraction ticket booking fail in China?"
     answer: "Common reasons: passport mismatches, sold-out slots, payment problems, platform friction, or booking too late."
   - question: "Do all attractions in China use real-name booking?"
@@ -80,7 +89,7 @@ mistakes:
   items:
     - title: "Waiting until the morning of the visit"
       body: "Popular slots sell out. Treat advance booking as default for icons."
-      href: /china-attraction-ticket-booking-foreigners-2026
+      href: /why-china-attractions-require-reservations
     - title: "Passport name mismatches"
       body: "Booking identity must match the passport you present at entry."
       href: /china-real-name-system-foreigners

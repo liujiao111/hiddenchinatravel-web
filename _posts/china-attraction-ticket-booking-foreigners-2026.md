@@ -47,6 +47,8 @@ You show up anyway, hoping to buy at the gate. There is no gate sale. There are 
 
 This isn’t a freak incident. It’s one of the most common frustrations in **China ticket booking for foreigners** , and it happens to experienced travelers all the time. Understanding _why_ the system works this way — and how to work around it — is the only way to actually get inside the places you came to see.
 
+If you’re still stuck on the bigger question — why so many places won’t sell at the gate at all — start with [Why China Attractions Require Reservations](/why-china-attractions-require-reservations), then come back here for the booking paths that actually work.
+
 **Find your situation and skip straight to what works:**
 
 Your Situation| Best Method  
@@ -232,6 +234,7 @@ The goal isn’t to master China’s booking ecosystem. The goal is to not miss 
 Planning your China trip? These practical guides may also help when booking tickets, arranging transport, and preparing your digital setup:
 
   * [Attraction Tickets in China](/attraction-tickets-in-china/)
+  * [Why China Attractions Require Reservations](/why-china-attractions-require-reservations)
   * [How to Book High-Speed Rail Tickets in China](/book-china-high-speed-rail-foreigners)
   * [Payments in China for Foreigners](/payments-in-china/)
   * [Internet, VPN and SIM in China](/internet-in-china/)

@@ -95,6 +95,7 @@ async function isLandscapeAsset(src: string): Promise<boolean> {
  * (current + future) gets consistent presentation without per-article CSS.
  *
  * Portrait phone UI → blog-media-shot (narrow phone canvas).
+ * Portrait trip photos → blog-media-portrait (full frame, capped width).
  * Landscape UI / photos → blog-media-frame (readable article width).
  */
 async function wrapBlogImages(markup: string): Promise<string> {
@@ -128,7 +129,7 @@ async function wrapBlogImages(markup: string): Promise<string> {
     if (isPhoneScreenshot(src, alt)) {
       return `<span class="blog-media-shot">${full}</span>`;
     }
-    return `<span class="blog-media-frame">${full}</span>`;
+    return `<span class="blog-media-portrait">${full}</span>`;
   });
 }
 
