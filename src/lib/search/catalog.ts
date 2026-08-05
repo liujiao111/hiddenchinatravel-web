@@ -28,6 +28,14 @@ export const staticSearchCatalog: SearchItem[] = [
     keywords: ["legal", "privacy", "cookies"],
   },
   {
+    id: "page-terms",
+    title: "Terms of Service",
+    href: "/terms-of-service",
+    description: "Terms for using the site, paid planning services, and payments.",
+    type: "page",
+    keywords: ["legal", "terms", "refund", "stripe", "tos"],
+  },
+  {
     id: "page-survival-guides",
     title: "Survival Guides",
     href: "/survival-guides",

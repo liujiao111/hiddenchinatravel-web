@@ -147,6 +147,16 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
+        source: "/terms",
+        destination: "/terms-of-service",
+        permanent: true,
+      },
+      {
+        source: "/tos",
+        destination: "/terms-of-service",
+        permanent: true,
+      },
+      {
         source: "/survive-guides",
         destination: "/survival-guides",
         permanent: true,

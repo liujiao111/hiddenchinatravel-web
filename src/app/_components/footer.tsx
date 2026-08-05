@@ -188,12 +188,20 @@ export function Footer() {
                   label="Site last updated"
                 />
               </div>
-              <Link
-                href="/privacy-policy"
-                className="transition-colors duration-300 hover:text-[var(--brand-cta)]"
-              >
-                Privacy policy
-              </Link>
+              <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
+                <Link
+                  href="/terms-of-service"
+                  className="transition-colors duration-300 hover:text-[var(--brand-cta)]"
+                >
+                  Terms of Service
+                </Link>
+                <Link
+                  href="/privacy-policy"
+                  className="transition-colors duration-300 hover:text-[var(--brand-cta)]"
+                >
+                  Privacy policy
+                </Link>
+              </div>
             </div>
           </div>
         </div>

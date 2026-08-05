@@ -10,6 +10,7 @@ export const RESERVED_TOP_SEGMENTS = new Set([
   "survival-kit",
   "china-destinations",
   "privacy-policy",
+  "terms-of-service",
   "services",
   "checkout",
   "china-itinerary-planner",
