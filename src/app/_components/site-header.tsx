@@ -6,14 +6,9 @@ import { SiteNav } from "@/app/_components/site-nav";
 import { SiteSearch } from "@/app/_components/site-search";
 import { WhatsAppContact } from "@/app/_components/whatsapp-contact";
 import { useLocaleDict } from "@/i18n/locale-provider";
-import type { SearchItem } from "@/lib/search/types";
 import Link from "next/link";
 
-type Props = {
-  searchItems: SearchItem[];
-};
-
-export function SiteHeader({ searchItems }: Props) {
+export function SiteHeader() {
   const { dict } = useLocaleDict();
   const tone = "onTeal" as const;
 
@@ -21,7 +16,8 @@ export function SiteHeader({ searchItems }: Props) {
     <header className="sticky top-0 z-40 bg-[var(--brand-cta)] shadow-[0_4px_20px_rgba(0,137,123,0.18)]">
       <div className="mx-auto flex h-14 w-full max-w-7xl items-center gap-4 px-4 md:h-16 md:gap-6 md:px-6 lg:px-8 xl:gap-8">
         <div className="relative z-10 shrink-0 bg-[var(--brand-cta)] pr-2">
-          <SiteLogo size="sm" priority tone={tone} compactOnMobile />
+          {/* No priority — avoid competing with page LCP (e.g. home hero) */}
+          <SiteLogo size="sm" tone={tone} compactOnMobile />
         </div>
 
         <div className="hidden min-w-0 flex-1 lg:block">
@@ -32,9 +28,9 @@ export function SiteHeader({ searchItems }: Props) {
           {/* Full search from 2xl — lg/xl keep the icon so nav stays readable */}
           <div className="hidden min-w-0 2xl:block">
             <SiteSearch
-              items={searchItems}
               variant="header"
               preferResultsPage
+              loadIndexOnFocus
             />
           </div>
           <Link

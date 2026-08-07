@@ -1,7 +1,22 @@
+import dynamic from "next/dynamic";
 import Container from "@/app/_components/container";
-import { HomeFaqAccordion } from "@/app/_components/home/home-faq-accordion";
 import { homeFaqSection, homeFaqs } from "@/lib/home/faq-content";
 import Link from "next/link";
+
+const HomeFaqAccordion = dynamic(
+  () =>
+    import("@/app/_components/home/home-faq-accordion").then(
+      (m) => m.HomeFaqAccordion,
+    ),
+  {
+    loading: () => (
+      <div
+        className="min-h-[12rem] rounded-2xl border border-[color-mix(in_srgb,var(--brand-cta)_12%,transparent)] bg-white/70"
+        aria-hidden
+      />
+    ),
+  },
+);
 
 function buildFaqJsonLd() {
   return {

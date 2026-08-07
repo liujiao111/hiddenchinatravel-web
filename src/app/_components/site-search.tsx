@@ -17,21 +17,25 @@ import type { SearchItem } from "@/lib/search/types";
 const HEADER_PLACEHOLDER = "Visa, Alipay, eSIM…";
 
 type Props = {
-  items: SearchItem[];
+  /** Omit when `loadIndexOnFocus` — keeps layout payload lean */
+  items?: SearchItem[];
   /** Compact for hero; full for /search page input; slim for site header */
   variant?: "hero" | "page" | "header";
   initialQuery?: string;
   className?: string;
   /** When true, selecting Enter always goes to /search */
   preferResultsPage?: boolean;
+  /** Fetch `/api/search-index` on first focus instead of embedding the catalog */
+  loadIndexOnFocus?: boolean;
 };
 
 export function SiteSearch({
-  items,
+  items: itemsProp,
   variant = "hero",
   initialQuery = "",
   className,
   preferResultsPage = false,
+  loadIndexOnFocus = false,
 }: Props) {
   const router = useRouter();
   const listId = useId();
@@ -41,6 +45,27 @@ export function SiteSearch({
   const [open, setOpen] = useState(false);
   const [activeIndex, setActiveIndex] = useState(0);
   const [debounced, setDebounced] = useState(initialQuery);
+  const [lazyItems, setLazyItems] = useState<SearchItem[] | null>(null);
+  const indexFetchRef = useRef<Promise<void> | null>(null);
+
+  const items = itemsProp ?? lazyItems ?? [];
+
+  const ensureIndex = useCallback(() => {
+    if (!loadIndexOnFocus || itemsProp || lazyItems || indexFetchRef.current) {
+      return;
+    }
+    indexFetchRef.current = fetch("/api/search-index")
+      .then((res) => {
+        if (!res.ok) throw new Error("search index failed");
+        return res.json() as Promise<SearchItem[]>;
+      })
+      .then((data) => {
+        setLazyItems(data);
+      })
+      .catch(() => {
+        indexFetchRef.current = null;
+      });
+  }, [loadIndexOnFocus, itemsProp, lazyItems]);
 
   useEffect(() => {
     const t = window.setTimeout(() => setDebounced(query), 120);
@@ -128,7 +153,8 @@ export function SiteSearch({
         "relative",
         variant === "header"
           ? "w-[min(100%,15rem)] sm:w-[17rem] lg:w-[18.5rem]"
-          : "w-full",        className,
+          : "w-full",
+        className,
       )}
     >
       <label htmlFor={`${listId}-input`} className="sr-only">
@@ -173,10 +199,14 @@ export function SiteSearch({
           }
           value={query}
           onChange={(e) => {
+            ensureIndex();
             setQuery(e.target.value);
             setOpen(true);
           }}
-          onFocus={() => setOpen(true)}
+          onFocus={() => {
+            ensureIndex();
+            setOpen(true);
+          }}
           onKeyDown={onKeyDown}
           className={cn(
             "min-w-0 flex-1 bg-transparent font-normal tracking-wide text-[var(--brand-ink)] outline-none placeholder:text-[color-mix(in_srgb,var(--brand-cream-border)_50%,transparent)]",

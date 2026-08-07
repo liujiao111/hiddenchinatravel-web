@@ -11,8 +11,12 @@ function normalizeHref(href: string): string {
   return href;
 }
 
+let cachedIndex: SearchItem[] | null = null;
+
 /** Build deduped sitewide search index (posts + static catalog + visa country pages). */
 export function getSearchIndex(): SearchItem[] {
+  if (cachedIndex) return cachedIndex;
+
   const byHref = new Map<string, SearchItem>();
 
   for (const item of staticSearchCatalog) {
@@ -50,5 +54,6 @@ export function getSearchIndex(): SearchItem[] {
     });
   }
 
-  return Array.from(byHref.values());
+  cachedIndex = Array.from(byHref.values());
+  return cachedIndex;
 }

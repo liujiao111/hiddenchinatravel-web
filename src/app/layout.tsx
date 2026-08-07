@@ -1,5 +1,5 @@
 import Footer from "@/app/_components/footer";
-import { DeparturePrepRail } from "@/components/action-rail";
+import { DeferredDeparturePrepRail } from "@/app/_components/deferred-departure-prep-rail";
 import { ConditionalSiteChrome } from "@/app/_components/conditional-site-chrome";
 import SiteHeader from "@/app/_components/site-header";
 import { SiteAnalytics } from "@/components/analytics/site-analytics";
@@ -14,7 +14,6 @@ import {
   SITE_URL,
   socialLinks,
 } from "@/lib/constants";
-import { getSearchIndex } from "@/lib/search/build-index";
 import type { Metadata } from "next";
 import { Outfit } from "next/font/google";
 import cn from "classnames";
@@ -139,11 +138,11 @@ export default function RootLayout({
         />
         <LocaleProvider>
           <ConditionalSiteChrome
-            header={<SiteHeader searchItems={getSearchIndex()} />}
+            header={<SiteHeader />}
             footer={
               <>
                 <Footer />
-                <DeparturePrepRail />
+                <DeferredDeparturePrepRail />
               </>
             }
           >
