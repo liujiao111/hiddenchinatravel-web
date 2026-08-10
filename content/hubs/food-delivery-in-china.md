@@ -1,14 +1,14 @@
 ---
 type: hub
 title: "Food & Delivery in China"
-seoTitle: "Food & Delivery in China for Foreigners (Meituan, Ele.me & QR Menu Guide 2026)"
+seoTitle: "Order Food in China: Meituan & QR Menus (2026)"
 slug: food-delivery-in-china
-metaDescription: "Learn how to order food in China as a foreigner, from restaurant QR menus to Meituan and Ele.me delivery apps. Find the easiest setup before your trip."
+metaDescription: "Order food in China without a Chinese number — Meituan, Ele.me/Taobao Instant, QR menus, and the Alipay setup that unlocks delivery before night one."
 canonical: /food-delivery-in-china
 eyebrow: "China Digital Survival Guide · Food Hub"
 heroAnswer: "If you want the simplest answer, start with in-person ordering, be ready for QR code menus, keep translation tools handy, and only move into delivery apps once your payment, internet, and address setup are working properly."
 description: "Eating in China is often easier than first-time visitors expect — once you understand how the system works. This food hub helps you handle restaurant ordering, QR code menus, food delivery apps, and the setup issues that make ordering feel harder than it should."
-dateModified: "2026-07-16"
+dateModified: "2026-08-10"
 keywords:
   - order food in China
   - Meituan for foreigners
@@ -57,6 +57,10 @@ faqs:
     answer: "Yes, but it becomes much easier once payment, internet, and location details work. Start with [ordering food without a Chinese number](/order-food-china-without-chinese-number), then see [How to Use Meituan](/how-to-use-meituan)."
   - question: "Do I need a Chinese phone number to order food in China?"
     answer: "Not always, but some delivery and verification steps are easier with a local number. See the [SIM guide](/china-sim-card-for-foreigners) if you stay longer."
+  - question: "How do I order Meituan without a Chinese number?"
+    answer: "Try the WeChat mini-program or Alipay food flows first, and keep a working payment app ready. Walk through [How to Use Meituan](/how-to-use-meituan) and the [no-Chinese-number food guide](/order-food-china-without-chinese-number)."
+  - question: "What if Alipay fails when I try to pay for food?"
+    answer: "Treat it as a payment-setup problem, not a restaurant problem. Fix verification first with [Alipay/WeChat verification failed](/alipay-wechat-pay-verification-failed), then retry checkout."
   - question: "Are QR code menus common in China?"
     answer: "Yes. In many cities, especially modern or chain restaurants, QR ordering is normal — and usually needs a working payment app."
   - question: "What if I cannot read the menu in Chinese?"

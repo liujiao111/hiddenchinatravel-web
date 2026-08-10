@@ -126,9 +126,44 @@ const wordpressCutoverRedirects = [
     destination: "/",
     permanent: true,
   },
+  {
+    source: "/author/:slug*",
+    destination: "/about",
+    permanent: true,
+  },
+  {
+    source: "/tag/:slug*",
+    destination: "/survival-guides",
+    permanent: true,
+  },
+  {
+    source: "/page/:num(\\d+)",
+    destination: "/survival-guides",
+    permanent: true,
+  },
+  {
+    source: "/wp-admin/:path*",
+    destination: "/",
+    permanent: true,
+  },
+  {
+    source: "/wp-login.php",
+    destination: "/",
+    permanent: true,
+  },
+  {
+    source: "/xmlrpc.php",
+    destination: "/",
+    permanent: true,
+  },
 ] as const;
 
 const nextConfig: NextConfig = {
+  // Keep URLs without trailing slash so HTML canonical, sitemap, and GSC agree.
+  trailingSlash: false,
+  images: {
+    formats: ["image/avif", "image/webp"],
+  },
   async redirects() {
     return [
       {
@@ -196,7 +231,55 @@ const nextConfig: NextConfig = {
         destination: "/china-destinations",
         permanent: true,
       },
+      // Missing draft guides referenced from visa articles (Semrush broken links)
+      {
+        source: "/china-l-visa-tourist-guide",
+        destination: "/do-i-need-a-visa-for-china",
+        permanent: true,
+      },
+      {
+        source: "/china-entry-border-immigration-guide",
+        destination: "/do-i-need-a-visa-for-china",
+        permanent: true,
+      },
+      {
+        source: "/china-240-hour-transit-visa-free",
+        destination: "/china-visa-checker",
+        permanent: true,
+      },
+      // Soft-404 / thin WP leftovers that still show up in GSC discoveries
+      {
+        source: "/wp-content/:path*",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/wp-includes/:path*",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/wp-json/:path*",
+        destination: "/",
+        permanent: true,
+      },
       ...wordpressCutoverRedirects,
+    ];
+  },
+  async headers() {
+    return [
+      {
+        source: "/search",
+        headers: [{ key: "X-Robots-Tag", value: "noindex, follow" }],
+      },
+      {
+        source: "/checkout/:path*",
+        headers: [{ key: "X-Robots-Tag", value: "noindex, follow" }],
+      },
+      {
+        source: "/api/:path*",
+        headers: [{ key: "X-Robots-Tag", value: "noindex, nofollow" }],
+      },
     ];
   },
 };

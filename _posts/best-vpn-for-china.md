@@ -1,32 +1,40 @@
 ---
 title: "Best VPN for China in 2026: What Works After LetsVPN Stopped"
-excerpt: "Looking for the best VPN for China in 2026? LetsVPN shut down — here's what actually works, tested over 3 months."
+seoTitle: "Best VPN for China in 2026: What Works After LetsVPN Stopped"
+excerpt: "Best VPN for China after LetsVPN shut down: what still works in 2026 for hotel Wi‑Fi and local SIMs, tested over months — install before you fly."
 coverImage: "/assets/blog/best-vpn-for-china/cover.webp"
 date: "2026-06-27T13:53:33+00:00"
-dateModified: "2026-06-29T10:38:13+00:00"
+dateModified: "2026-08-10T14:00:00+00:00"
 author:
   name: "Joy Liu"
   picture: "/assets/blog/authors/joy-liu.jpg"
 ogImage:
   url: "/assets/blog/best-vpn-for-china/cover.webp"
-canonical: "https://hiddenchinatravel.com/best-vpn-for-china/"
+canonical: "https://hiddenchinatravel.com/best-vpn-for-china"
 keywords:
-  - "best VPN 2026"
   - "China Internet"
-  - "China travel"
-  - "China Travel Guide"
+  - "China travel VPN"
   - "digital survival China"
   - "foreigners in china"
   - "Great Firewall"
   - "internet in china"
-  - "LetsVPN"
-  - "NordVPN"
-  - "travel tips"
-  - "VPN"
-  - "VPN 2026"
+  - "LetsVPN alternative"
+  - "NordVPN China"
   - "VPN for China"
+  - "VPN for China 2026"
 section: "Internet & VPN & SIM in China"
-sourceUrl: "https://hiddenchinatravel.com/best-vpn-for-china/"
+sourceUrl: "https://hiddenchinatravel.com/best-vpn-for-china"
+faqs:
+  - question: "Does LetsVPN still work in China in 2026?"
+    answer: "No. LetsVPN shut down mainland operations. Plan on another travel VPN installed and tested before departure."
+  - question: "Is NordVPN legal in China?"
+    answer: "Technically a gray area. In practice, enforcement against foreign tourists for personal use is essentially nonexistent — not legal advice."
+  - question: "Can I download a VPN from inside China?"
+    answer: "Do not count on it. Sites and App Store availability are inconsistent. Download and log in before you fly."
+  - question: "Do I need a VPN for a short China trip?"
+    answer: "If you want Google, Instagram, WhatsApp, or YouTube on hotel Wi‑Fi or a local SIM, yes. A travel eSIM alone may cover some apps on mobile data."
+  - question: "What if my VPN stops working mid-trip?"
+    answer: "Switch servers first (Hong Kong, Singapore, Japan often hold up). Try obfuscated/OpenVPN modes. Wait out crackdown windows if many servers fail at once."
 ---
 _Disclosure: This guide contains affiliate links (including NordVPN). If you buy through them, I may earn a small commission at no extra cost to you. I recommend NordVPN based on my own trips after LetsVPN exited China — this is lived experience, not a paid “#1 VPN” ranking of every brand._
 
@@ -146,22 +154,17 @@ If you want a physical SIM option instead: [China SIM Card Guide for Foreigners]
 
 Get both sorted before you fly. Either one alone and you’re one problem away from a bad evening.
 
-**A few questions people ask**
+## FAQ
 
-**Is NordVPN legal in China?**  
-Gray area, technically. In practice, enforcement against foreign tourists is essentially nonexistent — this is extremely common and nobody is getting pulled aside at immigration over it. Not legal advice, but that’s the reality.
+**Does LetsVPN still work in China in 2026?** No. LetsVPN shut down mainland operations. Plan on another travel VPN installed and tested before departure.
 
-**Can I download it from inside China?**  
-Don’t count on it. NordVPN’s site is blocked, App Store availability is inconsistent. Download before you get on the plane.
+**Is NordVPN legal in China?** Technically a gray area. In practice, enforcement against foreign tourists for personal use is essentially nonexistent — not legal advice.
 
-**iPhone or Android?**  
-Yes, both. iOS, Android, macOS, Windows — all have dedicated apps.
+**Can I download a VPN from inside China?** Do not count on it. Sites and App Store availability are inconsistent. Download and log in before you fly.
 
-**What if it stops working mid-trip?**  
-Switch servers first. Hong Kong, Singapore, Japan tend to hold up better from the mainland. If a bunch of servers fail at once, it’s usually a crackdown moment — wait a few hours. There’s also an obfuscated server option in settings that helps when things tighten up.
+**Do I need a VPN for a short China trip?** If you want Google, Instagram, WhatsApp, or YouTube on hotel Wi‑Fi or a local SIM, yes. A travel eSIM alone may cover some apps on mobile data. [More here.](/do-you-need-vpn-china)
 
-**Do I need one for a short trip?**  
-Google, Instagram, WhatsApp, YouTube — all blocked. If you want any of that, yes. [More here.](/do-you-need-vpn-china)
+**What if my VPN stops working mid-trip?** Switch servers first (Hong Kong, Singapore, Japan often hold up). Try obfuscated/OpenVPN modes. Wait out crackdown windows if many servers fail at once.
 
 **Related reading**
 
@@ -169,3 +172,4 @@ Google, Instagram, WhatsApp, YouTube — all blocked. If you want any of that, y
   * [Best eSIM for China Travel](/best-esim-for-china-travel)
   * [Do You Need a VPN in China?](/do-you-need-vpn-china)
   * [China SIM Card Guide](/china-sim-card-for-foreigners)
+  * [Alipay or WeChat Pay Verification Failed?](/alipay-wechat-pay-verification-failed) — unstable connections can stall payment setup too

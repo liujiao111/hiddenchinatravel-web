@@ -1,6 +1,7 @@
 import fs from "fs";
 import matter from "gray-matter";
 import { join } from "path";
+import { pageCanonicalPath } from "@/lib/seo/canonical";
 import type { Hub } from "./types";
 
 const hubsDirectory = join(process.cwd(), "content/hubs");
@@ -16,7 +17,7 @@ function normalizeHub(data: Record<string, unknown>, slug: string): Hub {
     seoTitle: data.seoTitle ? String(data.seoTitle) : undefined,
     slug: String(data.slug ?? slug),
     metaDescription: String(data.metaDescription ?? ""),
-    canonical: String(data.canonical ?? `/${slug}`),
+    canonical: pageCanonicalPath(String(data.canonical ?? `/${slug}`)),
     heroAnswer: String(data.heroAnswer ?? ""),
     description: String(data.description ?? ""),
     eyebrow: data.eyebrow ? String(data.eyebrow) : undefined,
@@ -36,6 +37,9 @@ function normalizeHub(data: Record<string, unknown>, slug: string): Hub {
     mistakes: data.mistakes as Hub["mistakes"],
     relatedHubs: Array.isArray(data.relatedHubs)
       ? (data.relatedHubs as Hub["relatedHubs"])
+      : undefined,
+    affiliateExit: data.affiliateExit
+      ? (data.affiliateExit as Hub["affiliateExit"])
       : undefined,
     dateModified: data.dateModified ? String(data.dateModified) : undefined,
     keywords: Array.isArray(data.keywords)

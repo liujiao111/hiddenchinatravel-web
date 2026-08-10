@@ -9,7 +9,7 @@ author:
   picture: "/assets/blog/authors/joy-liu.jpg"
 ogImage:
   url: "/assets/blog/digital-survival-china-transport-guide/cover.webp"
-canonical: "https://hiddenchinatravel.com/digital-survival-china-transport-guide/"
+canonical: "https://hiddenchinatravel.com/digital-survival-china-transport-guide"
 keywords:
   - "12306 Ticket Booking"
   - "China High Speed Train"
@@ -24,11 +24,11 @@ keywords:
   - "Travel China as a Foreigner"
   - "Yunnan Travel"
 section: "Transport in China"
-sourceUrl: "https://hiddenchinatravel.com/digital-survival-china-transport-guide/"
+sourceUrl: "https://hiddenchinatravel.com/digital-survival-china-transport-guide"
 ---
 Getting around China as a foreigner is genuinely easier than most people expect — but only once you understand that the whole system runs on a different logic than what you’re used to. No printed tickets. No cash at the gate. Your passport is basically your transit card. Once that clicks, everything else follows.
 
-This guide covers the four things you’ll actually use: high-speed rail, ride-hailing, the metro, and what to do when something goes wrong. If you haven’t sorted out payments yet, do that first — almost everything here requires Alipay or WeChat Pay to work properly. → [China Payment Guide for Foreigners](/payments-in-china/)
+This guide covers the four things you’ll actually use: high-speed rail, ride-hailing, the metro, and what to do when something goes wrong. If you haven’t sorted out payments yet, do that first — almost everything here requires Alipay or WeChat Pay to work properly. → [China Payment Guide for Foreigners](/payments-in-china)
 
 ## High-Speed Rail: Fast, Cheap, and Actually Not That Complicated
 
@@ -83,7 +83,7 @@ Payment is automatic — once the driver ends the trip, your linked card is char
 
 **Watch out for unlicensed drivers** at tourist spots and train stations — people walking up asking “where are you going?” These are 黑车 (black taxis): no meter, no insurance, prices made up on the spot. Ignore them and use the app.
 
-→ Full guide: [How to Use DiDi in China as a Foreigner](/how-to-use-didi-china-foreigners/)
+→ Full guide: [How to Use DiDi in China as a Foreigner](/how-to-use-didi-china-foreigners)
 
 ## Metro & Bus: Your Phone Is Your Ticket
 
@@ -149,9 +149,9 @@ Passport check| I need passport verification| 我要护照核验| Wǒ yào hùzh
 
 Getting transport sorted is only part of the puzzle. These cover the rest:
 
-  * [Transport in China](/transport-in-china/) — transport hub in china
+  * [Transport in China](/transport-in-china) — transport hub in china
   * [How to Book High-Speed Rail Tickets in China](/book-china-high-speed-rail-foreigners) — Trip.com vs 12306, passport check-in, sold-out backups
-  * [China Payment Guide for Foreigners](/payments-in-china/) — Alipay, WeChat Pay, and how to actually use them without a Chinese bank account
-  * [Internet & VPN Guide for China](/internet-in-china/) — Getting Google, WhatsApp, and everything else working
-  * [Google Maps in China](/maps-navigation-in-china/) — Why it doesn’t work and what to use instead
-  * [Booking Attraction Tickets in China](/attraction-tickets-in-china/) — The Great Wall, the Forbidden City, and everything that needs advance booking
+  * [China Payment Guide for Foreigners](/payments-in-china) — Alipay, WeChat Pay, and how to actually use them without a Chinese bank account
+  * [Internet & VPN Guide for China](/internet-in-china) — Getting Google, WhatsApp, and everything else working
+  * [Google Maps in China](/maps-navigation-in-china) — Why it doesn’t work and what to use instead
+  * [Booking Attraction Tickets in China](/attraction-tickets-in-china) — The Great Wall, the Forbidden City, and everything that needs advance booking

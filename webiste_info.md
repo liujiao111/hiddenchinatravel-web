@@ -348,6 +348,8 @@ Hidden China Travel
 - 后续如果 AI 需要插入联盟链接，优先使用 pretty 短链
 - 不要直接输出原始联盟长链接，除非我明确要求
 - 如果是文章或页面中的推荐链接，应优先使用对应 short link
+- **Viator：当前未接入**（`data/affiliate-links.csv` 无 slug）。不计入本站联盟 KPI；景点侧以 Trip.com tickets（`/go/trip-tickets`）为主。若未来接入，再写入 CSV 并只挂门票相关 hub/文。
+- 联盟是次要转化：主 CTA 仍是 Planner + Survival Kit；勿在全站堆硬广 OTA 条
 
 
 

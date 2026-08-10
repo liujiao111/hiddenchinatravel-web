@@ -1,17 +1,18 @@
 ---
 title: "China Real-Name System: Why Foreign Passports Get Blocked (2026 Guide)"
-excerpt: "Learn how China’s real-name system affects foreigners. This 2026 guide explains why passport verification fails and how to avoid common issues."
+seoTitle: "China Real-Name System 2026: Why Passports Fail"
+excerpt: "Why foreign passports fail China’s real-name system for SIMs, hotels, and apps — and the sequence that avoids silent registration blocks in 2026."
 coverImage: "/assets/blog/china-real-name-system-foreigners/cover.webp"
 date: "2026-03-23T09:38:03+00:00"
-dateModified: "2026-06-23T05:51:25+00:00"
+dateModified: "2026-08-10T14:00:00+00:00"
 author:
   name: "Joy Liu"
   picture: "/assets/blog/authors/joy-liu.jpg"
 ogImage:
   url: "/assets/blog/china-real-name-system-foreigners/cover.webp"
-canonical: "https://hiddenchinatravel.com/china-real-name-system-foreigners/"
+canonical: "https://hiddenchinatravel.com/china-real-name-system-foreigners"
 section: "Travel China Essentials"
-sourceUrl: "https://hiddenchinatravel.com/china-real-name-system-foreigners/"
+sourceUrl: "https://hiddenchinatravel.com/china-real-name-system-foreigners"
 ---
 You’re standing at a China Mobile counter in Shanghai. You’ve handed over your passport. The staff member has typed in your details carefully — you watched every keystroke. The screen flashes red. _Registration failed._
 
@@ -217,11 +218,11 @@ You now know more about how this works than most people who’ve lived in China 
 
 Planning your China trip? These practical guides may also help you deal with real-name verification, bookings, payments, and travel apps:
 
-  * [Travel China Guide for Foreigners](/independent-travel-china)
-  * [How to Book High-Speed Rail Tickets in China](/book-china-high-speed-rail-foreigners)
-  * [Attraction Tickets in China](/attraction-tickets-in-china/)
-  * [Hotels in China for Foreigners](/hotels-in-china/)
-  * [Payments in China for Foreigners](/payments-in-china/)
-  * [Internet, VPN and SIM in China](/internet-in-china/)
+  * [China SIM Card for Foreigners](/china-sim-card-for-foreigners) — passport registration for a +86 number
+  * [Alipay or WeChat Pay Verification Failed?](/alipay-wechat-pay-verification-failed) — when identity checks block payment setup
+  * [Hotels in China for Foreigners](/hotels-in-china-for-foreigners) — passport check-in that matches real-name rules
+  * [Attraction Tickets in China](/attraction-tickets-in-china) — passport booking for popular sights
+  * [Payments in China for Foreigners](/payments-in-china)
+  * [Internet, VPN and SIM in China](/internet-in-china)
 
 _Last updated: March 2026. Real-name verification rules, passport support, and app requirements in China may change over time — always confirm details with the carrier, bank, or app during setup._

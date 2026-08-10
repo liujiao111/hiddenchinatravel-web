@@ -86,6 +86,12 @@ mistakes:
       href: /china-real-name-system-foreigners
     - title: "No offline booking proof"
       body: "If data fails at the airport, a screenshot saves the conversation."
+affiliateExit:
+  eyebrow: "Optional booking path"
+  title: "Book hotels in English on Trip.com"
+  body: "Useful when you want foreign-card checkout and clearer guest policies — after you’ve read the hotels guide above."
+  ctaLabel: "Browse Trip.com hotels"
+  href: /go/trip-hotels
 relatedHubs:
   - title: "Travel Essentials"
     href: /china-travel-essentials

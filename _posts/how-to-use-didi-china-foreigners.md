@@ -9,7 +9,7 @@ author:
   picture: "/assets/blog/authors/joy-liu.jpg"
 ogImage:
   url: "/assets/blog/how-to-use-didi-china-foreigners/cover.webp"
-canonical: "https://hiddenchinatravel.com/how-to-use-didi-china-foreigners/"
+canonical: "https://hiddenchinatravel.com/how-to-use-didi-china-foreigners"
 keywords:
   - "how to use DiDi in China"
   - "DiDi for foreigners"
@@ -25,11 +25,11 @@ keywords:
   - "DiDi pickup point China"
   - "DiDi license plate check"
 section: "Transport in China"
-sourceUrl: "https://hiddenchinatravel.com/how-to-use-didi-china-foreigners/"
+sourceUrl: "https://hiddenchinatravel.com/how-to-use-didi-china-foreigners"
 ---
 You've just walked out of a Chinese train station with a suitcase. Metro signs are in Chinese, taxi touts are already asking where you're going, and Uber doesn't work here.
 
-**DiDi is the app locals use instead** — China's main ride-hailing service. For most first-time visitors it's the easiest door-to-door option when metro feels hard or you're tired and don't want to haggle. This guide is part of our [Transport in China hub](/transport-in-china/).
+**DiDi is the app locals use instead** — China's main ride-hailing service. For most first-time visitors it's the easiest door-to-door option when metro feels hard or you're tired and don't want to haggle. This guide is part of our [Transport in China hub](/transport-in-china).
 
 ![DiDi ride-hailing car on a Chinese city street — how to use DiDi in China as a foreigner](/assets/blog/how-to-use-didi-china-foreigners/didi-ride-hailing-car-china-foreigners.webp "DiDi car in China")
 
@@ -37,7 +37,7 @@ You've just walked out of a Chinese train station with a suitcase. Metro signs a
 
 You can usually hail a car with a **foreign phone number** that receives SMS, **Alipay or WeChat Pay** (often linked to an international card), and **mobile data**. Use the **DiDi app**, open DiDi inside **Alipay or WeChat** as a mini-program, or book from **Amap (高德地图)** taxi — same habits either way: check the destination name, match the license plate before you get in, pay in-app when the trip ends.
 
-Payments not ready yet? Start here → [China Payment Guide for Foreigners](/digital-survival-china-payment-guide/).
+Payments not ready yet? Start here → [China Payment Guide for Foreigners](/digital-survival-china-payment-guide).
 
 ## What You Must Have Before Booking
 
@@ -51,13 +51,13 @@ DiDi (and most ride apps) need a number that can get verification codes. It **do
 
 Have at least one working option ready: Alipay, WeChat Pay, or whatever card/wallet the app offers you. International Visa/Mastercard often work once linked, but it depends on your bank.
 
-→ [China Payment Guide for Foreigners](/digital-survival-china-payment-guide/)
+→ [China Payment Guide for Foreigners](/digital-survival-china-payment-guide)
 
 ### 3. Internet / data
 
 Hailing, tracking, and chat all need a live connection. Install DiDi or Amap on hotel Wi‑Fi if you want — but keep mobile data on for the ride.
 
-→ [China SIM / eSIM for Foreigners](/china-sim-card-for-foreigners/)
+→ [China SIM / eSIM for Foreigners](/china-sim-card-for-foreigners)
 
 ## Ways to Book: DiDi App, Mini-Programs, or Amap
 
@@ -91,7 +91,7 @@ Handy when you don't want another app install — as long as WeChat Pay actually
 
 If you already use **Amap** for navigation, you can hail from there too — look for the taxi / ride-hailing tab (打车). You'll still get a plate, car type, and in-app payment; the booking flow feels similar to DiDi.
 
-Amap is often the better map for Chinese addresses and pickup pins, so some travelers search the place in Amap first, then tap taxi from that pin. More on Amap setup → [Maps & Navigation in China](/google-maps-china-not-working/).
+Amap is often the better map for Chinese addresses and pickup pins, so some travelers search the place in Amap first, then tap taxi from that pin. More on Amap setup → [Maps & Navigation in China](/google-maps-china-not-working).
 
 **Which should you use first?**
 
@@ -129,7 +129,7 @@ Confirm your pickup pin on the map, then set where you're going.
 
 ![Step 2 screenshot — DiDi search results for Dali Ancient City with matching place highlighted](/assets/blog/how-to-use-didi-china-foreigners/step-02-search-results.webp "Step 2: Pick the right destination")
 
-**Practical tip:** English works for big landmarks. For hotels and restaurants, paste the **Chinese address** from your confirmation into DiDi (or into Amap first). Guessing the Pinyin spelling is how people end up at the wrong gate. More on map quirks → [Maps & Navigation in China](/google-maps-china-not-working/).
+**Practical tip:** English works for big landmarks. For hotels and restaurants, paste the **Chinese address** from your confirmation into DiDi (or into Amap first). Guessing the Pinyin spelling is how people end up at the wrong gate. More on map quirks → [Maps & Navigation in China](/google-maps-china-not-working).
 
 At busy stations and airports, use the app's suggested **pickup points** when they appear — drivers look for you there.
 
@@ -174,7 +174,7 @@ If the total looks off, pause before paying and check with the driver or in-app 
 
 Some cards put a temporary hold on your account, then settle the final fare later. A pending charge that looks high often drops to the real total — compare it with the trip receipt before you panic.
 
-Payment setup failing? → [Alipay / WeChat verification troubleshooting](/alipay-wechat-pay-verification-failed/)
+Payment setup failing? → [Alipay / WeChat verification troubleshooting](/alipay-wechat-pay-verification-failed)
 
 ## FAQ and Small Tips
 
@@ -205,7 +205,7 @@ No. DiDi inside Alipay or WeChat works for many travelers, and **Amap taxi** is 
 
 Cross-topic prep that makes DiDi smoother (same-topic guides are under **Continue reading** below):
 
-- [Payments in China](/digital-survival-china-payment-guide/) — Alipay / WeChat for in-app rides
-- [Google Maps / Amap guide](/google-maps-china-not-working/) — addresses and pickup pins that actually work
+- [Payments in China](/digital-survival-china-payment-guide) — Alipay / WeChat for in-app rides
+- [Google Maps / Amap guide](/google-maps-china-not-working) — addresses and pickup pins that actually work
 
-Need help locking apps and payments before day one? [Get the Free Survival Kit](/survival-kit/) or [Plan my China trip](/china-itinerary-planner/).
+Need help locking apps and payments before day one? [Get the Free Survival Kit](/survival-kit) or [Plan my China trip](/china-itinerary-planner).

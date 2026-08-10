@@ -112,6 +112,12 @@ mistakes:
     - title: "Leaving payment setup until the platform gate"
       body: "Metro and DiDi are awkward without a working mobile payment app."
       href: /payments-in-china
+affiliateExit:
+  eyebrow: "Optional booking path"
+  title: "Book high-speed rail in English"
+  body: "Trip.com trains helps when you want passport booking and foreign-card payment for intercity trips."
+  ctaLabel: "Open Trip.com trains"
+  href: /go/trip-trains
 relatedHubs:
   - title: "Maps & Navigation"
     href: /maps-navigation-in-china

@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { getAllPosts } from "@/lib/api";
 import { getAllHubs } from "@/lib/hubs/api";
-import { SITE_URL } from "@/lib/constants";
+import { absoluteCanonicalUrl } from "@/lib/seo/canonical";
 import {
   countryPagePath,
   getPhase1CountryEditorials,
@@ -10,14 +10,14 @@ import {
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
   const posts = getAllPosts().map((post) => ({
-    url: `${SITE_URL}/${post.slug}`,
+    url: absoluteCanonicalUrl(`/${post.slug}`),
     lastModified: post.date ? new Date(post.date) : now,
     changeFrequency: "monthly" as const,
     priority: 0.6,
   }));
 
   const hubs = getAllHubs().map((hub) => ({
-    url: `${SITE_URL}${hub.canonical || `/${hub.slug}`}`,
+    url: absoluteCanonicalUrl(hub.canonical || `/${hub.slug}`),
     lastModified: hub.dateModified ? new Date(hub.dateModified) : now,
     changeFrequency: "weekly" as const,
     priority: 0.9,
@@ -25,7 +25,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const visaCountryPages: MetadataRoute.Sitemap =
     getPhase1CountryEditorials().map((country) => ({
-      url: `${SITE_URL}${countryPagePath(country.slug)}`,
+      url: absoluteCanonicalUrl(countryPagePath(country.slug)),
       lastModified: country.lastReviewed
         ? new Date(country.lastReviewed)
         : now,
@@ -34,75 +34,80 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }));
 
   const staticRoutes: MetadataRoute.Sitemap = [
-    { url: SITE_URL, lastModified: now, changeFrequency: "weekly", priority: 1 },
     {
-      url: `${SITE_URL}/survival-guides`,
+      url: absoluteCanonicalUrl("/"),
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 1,
+    },
+    {
+      url: absoluteCanonicalUrl("/survival-guides"),
       lastModified: now,
       changeFrequency: "weekly",
       priority: 0.9,
     },
     {
-      url: `${SITE_URL}/china-destinations`,
+      url: absoluteCanonicalUrl("/china-destinations"),
       lastModified: now,
       changeFrequency: "weekly",
       priority: 0.85,
     },
     {
-      url: `${SITE_URL}/survival-kit`,
+      url: absoluteCanonicalUrl("/survival-kit"),
       lastModified: now,
       changeFrequency: "monthly",
       priority: 0.7,
     },
     {
-      url: `${SITE_URL}/tools`,
+      url: absoluteCanonicalUrl("/tools"),
       lastModified: now,
       changeFrequency: "weekly",
       priority: 0.8,
     },
     {
-      url: `${SITE_URL}/china-visa-checker`,
+      url: absoluteCanonicalUrl("/china-visa-checker"),
       lastModified: now,
       changeFrequency: "weekly",
       priority: 0.95,
     },
     {
-      url: `${SITE_URL}/china-currency-converter`,
+      url: absoluteCanonicalUrl("/china-currency-converter"),
       lastModified: now,
       changeFrequency: "daily",
       priority: 0.95,
     },
     {
-      url: `${SITE_URL}/china-itinerary-planner`,
+      url: absoluteCanonicalUrl("/china-itinerary-planner"),
       lastModified: now,
       changeFrequency: "weekly",
       priority: 0.95,
     },
     {
-      url: `${SITE_URL}/services`,
+      url: absoluteCanonicalUrl("/services"),
       lastModified: now,
       changeFrequency: "weekly",
       priority: 0.9,
     },
     {
-      url: `${SITE_URL}/about`,
+      url: absoluteCanonicalUrl("/about"),
       lastModified: now,
       changeFrequency: "monthly",
       priority: 0.6,
     },
     {
-      url: `${SITE_URL}/contact`,
+      url: absoluteCanonicalUrl("/contact"),
       lastModified: now,
       changeFrequency: "monthly",
       priority: 0.5,
     },
     {
-      url: `${SITE_URL}/privacy-policy`,
+      url: absoluteCanonicalUrl("/privacy-policy"),
       lastModified: now,
       changeFrequency: "yearly",
       priority: 0.3,
     },
     {
-      url: `${SITE_URL}/terms-of-service`,
+      url: absoluteCanonicalUrl("/terms-of-service"),
       lastModified: now,
       changeFrequency: "yearly",
       priority: 0.3,

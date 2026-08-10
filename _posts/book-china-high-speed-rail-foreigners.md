@@ -9,7 +9,7 @@ author:
   picture: "/assets/blog/authors/joy-liu.jpg"
 ogImage:
   url: "/assets/blog/book-china-high-speed-rail-foreigners/cover.webp"
-canonical: "https://hiddenchinatravel.com/book-china-high-speed-rail-foreigners/"
+canonical: "https://hiddenchinatravel.com/book-china-high-speed-rail-foreigners"
 keywords:
   - "book china high speed rail"
   - "book high-speed rail tickets China"
@@ -24,11 +24,11 @@ keywords:
   - "China travel"
   - "China travel tips"
 section: "Transport in China"
-sourceUrl: "https://hiddenchinatravel.com/book-china-high-speed-rail-foreigners/"
+sourceUrl: "https://hiddenchinatravel.com/book-china-high-speed-rail-foreigners"
 ---
 A real-world walkthrough using a Chongqing → Dali high-speed train, plus what to do when things go wrong.
 
-**Booking high-speed rail in China with a foreign passport?** This guide is part of our [Transport in China hub](/transport-in-china/), covering trains, metro, DiDi, and the payment and maps setup that make getting around easier.
+**Booking high-speed rail in China with a foreign passport?** This guide is part of our [Transport in China hub](/transport-in-china), covering trains, metro, DiDi, and the payment and maps setup that make getting around easier.
 
 ## Quick Answer
 
@@ -120,7 +120,7 @@ Around holidays or for popular routes, tickets can sell out fast — Chongqing t
 
 **Try booking one station earlier or later.** Sometimes tickets for the exact Chongqing–Dali segment are sold out, but seats are available on the same train if you book from one stop earlier or get off one stop later. This works because seat inventory is sometimes allocated differently by segment. The tradeoff is extra travel time on either end, so it's best treated as a backup plan rather than a first choice.
 
-**Consider a ride-hailing option for shorter distances.** If the gap is not too large — for example, traveling within the same province — apps like Didi or Amap's carpool feature can be a practical fallback. This usually requires a phone number that can receive verification codes, so it's worth setting up in advance rather than scrambling for it at the last minute. For the broader DiDi workflow (and why English addresses often fail), see the [China Transport Guide](/digital-survival-china-transport-guide/).
+**Consider a ride-hailing option for shorter distances.** If the gap is not too large — for example, traveling within the same province — apps like Didi or Amap's carpool feature can be a practical fallback. This usually requires a phone number that can receive verification codes, so it's worth setting up in advance rather than scrambling for it at the last minute. For the broader DiDi workflow (and why English addresses often fail), see the [China Transport Guide](/digital-survival-china-transport-guide).
 
 If you’re stitching several cities together and inventory keeps shifting, sketch the route first — then book the legs that matter most. → [Plan my China trip](/china-itinerary-planner)
 
@@ -162,9 +162,9 @@ Yes. Use the spelling in the machine-readable zone at the bottom of your passpor
 
 Planning the rest of your China trip? These guides pair well with train booking:
 
-- [Transport in China](/transport-in-china/) — hub for trains, metro, and DiDi
-- [China Transport Guide for Foreigners](/digital-survival-china-transport-guide/) — full overview of getting around
-- [Payments in China](/payments-in-china/) — Alipay, WeChat Pay, and card backups
+- [Transport in China](/transport-in-china) — hub for trains, metro, and DiDi
+- [China Transport Guide for Foreigners](/digital-survival-china-transport-guide) — full overview of getting around
+- [Payments in China](/payments-in-china) — Alipay, WeChat Pay, and card backups
 - [China’s Real-Name System for Foreigners](/china-real-name-system-foreigners) — why passport verification matters
 - [Why Google Maps Doesn’t Work Well in China](/google-maps-china-not-working) — station pins and exits that actually work
 - [China Trip Prep Checklist](/survival-kit) — eSIM, payments, bookings in one place

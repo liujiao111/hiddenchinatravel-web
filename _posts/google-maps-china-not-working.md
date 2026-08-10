@@ -9,7 +9,7 @@ author:
   picture: "/assets/blog/authors/joy-liu.jpg"
 ogImage:
   url: "/assets/blog/google-maps-china-not-working/cover.webp"
-canonical: "https://hiddenchinatravel.com/google-maps-china-not-working/"
+canonical: "https://hiddenchinatravel.com/google-maps-china-not-working"
 keywords:
   - "Amap"
   - "Apple Maps China"
@@ -23,7 +23,7 @@ keywords:
   - "map apps China"
   - "navigation China"
 section: "Maps & Navigation in China"
-sourceUrl: "https://hiddenchinatravel.com/google-maps-china-not-working/"
+sourceUrl: "https://hiddenchinatravel.com/google-maps-china-not-working"
 ---
 Google Maps is blocked in China — and even with a VPN running, it’s unreliable for actual navigation.
 
@@ -137,7 +137,7 @@ Searching in English works for major landmarks, but for anything smaller — a s
 
 The fix: when you book a hotel or restaurant, copy the Chinese address from the confirmation email and paste it directly into Amap’s search bar. Don’t try to translate it yourself. The Chinese characters map exactly to what’s in the database; a transliteration often doesn’t.
 
-If you’re using Didi and need to set a pickup or drop-off point, the same principle applies — paste the Chinese address from wherever you found the location rather than typing the English name. The [DiDi guide](/how-to-use-didi-china-foreigners/) covers this workflow in more detail.  
+If you’re using Didi and need to set a pickup or drop-off point, the same principle applies — paste the Chinese address from wherever you found the location rather than typing the English name. The [DiDi guide](/how-to-use-didi-china-foreigners) covers this workflow in more detail.  
 
 ## Apple Maps: If You’re on iPhone
 
@@ -177,8 +177,8 @@ If you haven’t sorted your internet setup yet, the [China SIM card and eSIM gu
 
 Sorting out navigation is one piece of the puzzle. These cover the rest:
 
-  * [China Transport Guide for Foreigners](/transport-in-china/) — High-speed rail, Didi, metro, and how to pay for all of it
-  * [How to Use DiDi in China](/how-to-use-didi-china-foreigners/) — The full workflow for getting a ride without speaking Mandarin
+  * [China Transport Guide for Foreigners](/transport-in-china) — High-speed rail, Didi, metro, and how to pay for all of it
+  * [How to Use DiDi in China](/how-to-use-didi-china-foreigners) — The full workflow for getting a ride without speaking Mandarin
   * [China SIM Card & eSIM Guide](/china-sim-card-for-foreigners) — Getting data on your phone before and after you land
   * [Internet & VPN Guide for China](/internet-in-china) — What’s blocked, what isn’t, and which VPNs actually work
   * [China Payment Guide for Foreigners](/payments-in-china) — Alipay, WeChat Pay, and how to link your foreign card

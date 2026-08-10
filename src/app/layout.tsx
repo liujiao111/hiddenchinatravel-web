@@ -23,7 +23,8 @@ import "./globals.css";
 const outfit = Outfit({
   subsets: ["latin"],
   display: "swap",
-  weight: ["400", "500", "600", "700"],
+  // Keep critical path lean — medium/semibold map to nearest loaded weights via CSS.
+  weight: ["400", "700"],
   variable: "--font-sans",
 });
 

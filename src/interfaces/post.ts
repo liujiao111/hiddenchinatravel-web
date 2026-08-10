@@ -1,8 +1,19 @@
 import { type Author } from "./author";
 
+export type PostFaq = {
+  question: string;
+  answer: string;
+};
+
 export type Post = {
   slug: string;
   title: string;
+  /**
+   * Optional SERP/document title. When set, metadata uses `title.absolute`
+   * so the layout brand suffix is not appended (keeps intent keywords visible).
+   * Page H1 still uses `title`.
+   */
+  seoTitle?: string;
   date: string;
   coverImage: string;
   author: Author;
@@ -18,4 +29,6 @@ export type Post = {
   keywords?: string[];
   section?: string;
   sourceUrl?: string;
+  /** FAQ rich-result answers (FAQPage JSON-LD). */
+  faqs?: PostFaq[];
 };

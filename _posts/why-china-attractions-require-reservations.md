@@ -9,7 +9,7 @@ author:
   picture: "/assets/blog/authors/joy-liu.jpg"
 ogImage:
   url: "/assets/blog/why-china-attractions-require-reservations/cover.webp"
-canonical: "https://hiddenchinatravel.com/why-china-attractions-require-reservations/"
+canonical: "https://hiddenchinatravel.com/why-china-attractions-require-reservations"
 keywords:
   - "why China attractions require reservations"
   - "timed entry China attractions"
@@ -33,7 +33,7 @@ On a first trip to China, that moment is more common than most guidebooks admit.
 
 It’s not personal. Once you know why the system exists, planning gets simpler.
 
-**Wondering whether your must-see stops need advance booking?** This guide is part of our [Attraction Tickets in China hub](/attraction-tickets-in-china/), where we cover timed entry, passport-based reservations, and how foreigners actually get tickets.
+**Wondering whether your must-see stops need advance booking?** This guide is part of our [Attraction Tickets in China hub](/attraction-tickets-in-china), where we cover timed entry, passport-based reservations, and how foreigners actually get tickets.
 
 ## Quick Answer
 
@@ -149,12 +149,12 @@ Because many tickets are real-name: the booking is tied to your ID, name, and ti
 
 ## Related Guides
 
-- [Attraction Tickets in China](/attraction-tickets-in-china/)
+- [Attraction Tickets in China](/attraction-tickets-in-china)
 - [How to Book Attraction Tickets in China as a Foreigner](/china-attraction-ticket-booking-foreigners-2026)
 - [China Real-Name System for Foreigners](/china-real-name-system-foreigners)
-- [Payments in China for Foreigners](/payments-in-china/)
-- [Internet, VPN and SIM in China](/internet-in-china/)
-- [Travel China Essentials](/china-travel-essentials/)
+- [Payments in China for Foreigners](/payments-in-china)
+- [Internet, VPN and SIM in China](/internet-in-china)
+- [Travel China Essentials](/china-travel-essentials)
 
 * * *
 

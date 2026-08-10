@@ -9,7 +9,7 @@ author:
   picture: "/assets/blog/authors/joy-liu.jpg"
 ogImage:
   url: "/assets/blog/digital-survival-china-internet-guide/cover.webp"
-canonical: "https://hiddenchinatravel.com/digital-survival-china-internet-guide/"
+canonical: "https://hiddenchinatravel.com/digital-survival-china-internet-guide"
 keywords:
   - "china mobile data"
   - "china travel internet"
@@ -19,7 +19,7 @@ keywords:
   - "staying connected in china"
   - "vpn in china"
 section: "Internet & VPN & SIM in China"
-sourceUrl: "https://hiddenchinatravel.com/digital-survival-china-internet-guide/"
+sourceUrl: "https://hiddenchinatravel.com/digital-survival-china-internet-guide"
 ---
 I’ll be honest — I didn’t figure any of this out as a tourist. I’m Chinese, but I spent several years in the Philippines, so I’ve been bouncing between the two countries long enough to feel the difference firsthand every time I cross back through immigration.
 

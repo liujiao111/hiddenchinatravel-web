@@ -49,6 +49,15 @@ export type HubRelatedLink = {
   excerpt: string;
 };
 
+/** Optional booking path — secondary to guides / Survival Kit. */
+export type HubAffiliateExit = {
+  eyebrow: string;
+  title: string;
+  body: string;
+  ctaLabel: string;
+  href: string;
+};
+
 export type Hub = {
   type: "hub";
   title: string;
@@ -71,6 +80,8 @@ export type Hub = {
   decisionGuide?: HubDecisionGuide;
   mistakes?: HubMistakes;
   relatedHubs?: HubRelatedLink[];
+  /** Scenario booking exit (Trip / eSIM / VPN) — not a hard sell. */
+  affiliateExit?: HubAffiliateExit;
   dateModified?: string;
   keywords?: string[];
 };

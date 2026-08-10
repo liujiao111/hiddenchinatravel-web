@@ -6,6 +6,10 @@ import {
   getRelatedPosts,
   resolveArticleHub,
 } from "@/lib/content/article-related";
+import {
+  absoluteCanonicalUrl,
+  pageCanonicalPath,
+} from "@/lib/seo/canonical";
 import markdownToHtml from "@/lib/markdownToHtml";
 import Container from "@/app/_components/container";
 import { PostBody } from "@/app/_components/post-body";
@@ -67,16 +71,16 @@ type Params = {
 
 function absoluteUrl(pathOrUrl: string): string {
   if (/^https?:\/\//i.test(pathOrUrl)) return pathOrUrl;
-  const path = pathOrUrl.startsWith("/") ? pathOrUrl : `/${pathOrUrl}`;
-  return `${SITE_URL}${path}`;
+  const path = pageCanonicalPath(pathOrUrl);
+  return path === "/" ? SITE_URL : `${SITE_URL}${path}`;
 }
 
 function articleJsonLd(post: Post) {
-  const url = absoluteUrl(`/${post.slug}`);
+  const url = absoluteCanonicalUrl(post.canonical || `/${post.slug}`);
   const image = absoluteUrl(post.ogImage?.url || post.coverImage);
-  return {
-    "@context": "https://schema.org",
+  const article: Record<string, unknown> = {
     "@type": "Article",
+    "@id": `${url}#article`,
     headline: post.title,
     description: post.excerpt,
     image: [image],
@@ -99,6 +103,32 @@ function articleJsonLd(post: Post) {
     ...(post.keywords?.length ? { keywords: post.keywords.join(", ") } : {}),
     ...(post.section ? { articleSection: post.section } : {}),
   };
+
+  const faqs = (post.faqs ?? []).filter(
+    (f) => f.question?.trim() && f.answer?.trim(),
+  );
+  if (!faqs.length) {
+    return { "@context": "https://schema.org", ...article };
+  }
+
+  return {
+    "@context": "https://schema.org",
+    "@graph": [
+      article,
+      {
+        "@type": "FAQPage",
+        "@id": `${url}#faq`,
+        mainEntity: faqs.map((faq) => ({
+          "@type": "Question",
+          name: faq.question.trim(),
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: faq.answer.trim(),
+          },
+        })),
+      },
+    ],
+  };
 }
 
 export async function generateMetadata(props: Params): Promise<Metadata> {
@@ -109,12 +139,15 @@ export async function generateMetadata(props: Params): Promise<Metadata> {
     return notFound();
   }
 
-  const canonicalPath = `/${post.slug}`;
+  const canonicalPath = pageCanonicalPath(post.canonical || `/${post.slug}`);
   const ogImage = absoluteUrl(post.ogImage?.url || post.coverImage);
+  const metaTitle = post.seoTitle?.trim() || post.title;
 
   return {
-    // Layout already applies `%s | ${SITE_NAME}` — pass bare title only.
-    title: post.title,
+    // seoTitle → absolute (no brand suffix). Plain title keeps layout template.
+    title: post.seoTitle?.trim()
+      ? { absolute: metaTitle }
+      : post.title,
     description: post.excerpt,
     authors: post.author?.name ? [{ name: post.author.name }] : undefined,
     keywords: post.keywords?.length ? post.keywords : undefined,
@@ -125,7 +158,7 @@ export async function generateMetadata(props: Params): Promise<Metadata> {
       type: "article",
       locale: "en_US",
       siteName: SITE_NAME,
-      title: post.title,
+      title: metaTitle,
       description: post.excerpt,
       url: canonicalPath,
       images: [{ url: ogImage, alt: post.title }],
@@ -137,7 +170,7 @@ export async function generateMetadata(props: Params): Promise<Metadata> {
     },
     twitter: {
       card: "summary_large_image",
-      title: post.title,
+      title: metaTitle,
       description: post.excerpt,
       images: [ogImage],
     },

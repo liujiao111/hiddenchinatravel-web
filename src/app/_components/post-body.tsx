@@ -1,4 +1,6 @@
 import { ArticleToc } from "@/app/_components/article-toc";
+import { AffiliateClickTracker } from "@/components/affiliates/affiliate-click-tracker";
+import { ArticleBookingBlockCard } from "@/components/affiliates/article-booking-block";
 import { EndCTA, InlineCTA } from "@/components/cta";
 import { ArticleHubLink, ContinueReading } from "@/components/content";
 import type { ContinueReadingItem } from "@/components/content/continue-reading";
@@ -7,6 +9,7 @@ import {
   getInlineCtaCopy,
   resolveArticleCtaVariant,
 } from "@/config/cta";
+import { getArticleBookingBlock } from "@/lib/affiliates/article-booking-blocks";
 import { extractH2Toc, TOC_MIN_ITEMS } from "@/lib/article-toc";
 import type { ArticleHubRef } from "@/lib/content/article-related";
 import { splitHtmlForInlineCta } from "@/lib/cta/split-html";
@@ -37,12 +40,14 @@ export function PostBody({
   const variant = resolveArticleCtaVariant(section, keywords);
   const inlineCopy = getInlineCtaCopy();
   const endCopy = getEndCtaCopy(variant);
+  const bookingBlock = getArticleBookingBlock(articleSlug);
   const { before, after, inserted } = splitHtmlForInlineCta(content);
   const toc = extractH2Toc(content);
   const showToc = toc.length >= TOC_MIN_ITEMS;
 
   const article = (
     <>
+      <AffiliateClickTracker surface="article" articleSlug={articleSlug} />
       {inserted ? (
         <>
           <div
@@ -61,6 +66,12 @@ export function PostBody({
           dangerouslySetInnerHTML={{ __html: content }}
         />
       )}
+      {bookingBlock ? (
+        <ArticleBookingBlockCard
+          block={bookingBlock}
+          articleSlug={articleSlug}
+        />
+      ) : null}
       <EndCTA copy={endCopy} articleSlug={articleSlug} />
       {hub ? <ArticleHubLink hub={hub} articleSlug={articleSlug} /> : null}
       <ContinueReading

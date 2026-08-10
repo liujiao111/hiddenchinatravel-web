@@ -1,5 +1,10 @@
 "use client";
 
+import { trackEvent } from "@/lib/analytics/track";
+import {
+  AFFILIATE_CLICK_EVENT,
+  affiliateSlugFromHref,
+} from "@/lib/affiliates/tracking";
 import type { PrepBuyMenu, PrepBuyOption } from "@/lib/home/prep-content";
 import Link from "next/link";
 import { useEffect, useId, useRef, useState } from "react";
@@ -23,12 +28,22 @@ function useCanHover(): boolean {
   return canHover;
 }
 
-/** Compact CTA — hover (desktop) or tap (touch) reveals buy options. */
+function trackOption(option: PrepBuyOption, surface = "home_prep_buy_menu") {
+  const slug = affiliateSlugFromHref(option.href);
+  if (!slug) return;
+  trackEvent(AFFILIATE_CLICK_EVENT, {
+    affiliate_slug: slug,
+    surface,
+  });
+}
+
+/** Compact CTA — featured primary + hover/tap menu for alternatives. */
 export function HomePrepBuyMenu({ menu, onOptionClick }: Props) {
   const [open, setOpen] = useState(false);
   const rootRef = useRef<HTMLDivElement>(null);
   const menuId = useId();
   const canHover = useCanHover();
+  const featured = menu.featured;
 
   useEffect(() => {
     if (!open) return;
@@ -48,97 +63,134 @@ export function HomePrepBuyMenu({ menu, onOptionClick }: Props) {
     };
   }, [open]);
 
+  function handleOption(option: PrepBuyOption) {
+    trackOption(option);
+    onOptionClick?.(option);
+    setOpen(false);
+  }
+
+  const featuredIsGo =
+    featured &&
+    (featured.href.startsWith("/go/") || featured.href.includes("/go/"));
+
   return (
     <div className="space-y-2">
-      <div
-        ref={rootRef}
-        className={cn("relative", open && "z-50")}
-        onMouseEnter={canHover ? () => setOpen(true) : undefined}
-        onMouseLeave={canHover ? () => setOpen(false) : undefined}
-      >
-        <button
-          type="button"
-          aria-expanded={open}
-          aria-haspopup="menu"
-          aria-controls={menuId}
-          onClick={() => {
-            // Touch devices: click is the only open/close. Hover devices: click
-            // still toggles for keyboard / intentional close without leaving.
-            setOpen((v) => !v);
-          }}
-          className="btn-brand w-full px-4 py-2.5 text-sm"
-        >
-          {menu.buttonLabel}
-          <span aria-hidden className="text-[0.7em] opacity-80">
-            ▴
-          </span>
-        </button>
+      {featured ? (
+        featured.external || featuredIsGo ? (
+          <a
+            href={featured.href}
+            target="_blank"
+            rel={
+              featuredIsGo
+                ? "sponsored noopener noreferrer"
+                : "noopener noreferrer"
+            }
+            onClick={() => handleOption(featured)}
+            className="btn-brand inline-flex w-full justify-center px-4 py-2.5 text-sm"
+          >
+            {featured.label}
+          </a>
+        ) : (
+          <Link
+            href={featured.href}
+            onClick={() => handleOption(featured)}
+            className="btn-brand inline-flex w-full justify-center px-4 py-2.5 text-sm"
+          >
+            {featured.label}
+          </Link>
+        )
+      ) : null}
 
-        {/* Open upward so the panel clears the card edge (surface-card clips by default). */}
+      {menu.options.length > 0 ? (
         <div
-          id={menuId}
-          role="menu"
-          className={cn(
-            "absolute bottom-full left-0 right-0 z-50 pb-1.5 transition-all duration-200",
-            open
-              ? "visible translate-y-0 opacity-100"
-              : "invisible translate-y-1 opacity-0 pointer-events-none",
-          )}
+          ref={rootRef}
+          className={cn("relative", open && "z-50")}
+          onMouseEnter={canHover ? () => setOpen(true) : undefined}
+          onMouseLeave={canHover ? () => setOpen(false) : undefined}
         >
-          <ul className="overflow-hidden rounded-2xl border-2 border-[#00897b]/20 bg-white py-1 shadow-[0_8px_30px_rgba(0,137,123,0.18)]">
-            {menu.options.map((option) => {
-              const isAffiliateGo =
-                option.href.startsWith("/go/") || option.href.includes("/go/");
-              const className =
-                "flex items-center justify-between gap-2 px-4 py-2.5 text-sm font-bold text-[var(--brand-cta)] transition-colors duration-300 hover:bg-[var(--brand-soft)]";
-              const body = (
-                <>
-                  <span>{option.label}</span>
-                  {option.hint ? (
-                    <span className="text-xs font-normal text-[var(--brand-ink-muted)]">
-                      {option.hint}
-                    </span>
-                  ) : null}
-                </>
-              );
-              const handleClick = () => {
-                onOptionClick?.(option);
-                setOpen(false);
-              };
+          <button
+            type="button"
+            aria-expanded={open}
+            aria-haspopup="menu"
+            aria-controls={menuId}
+            onClick={() => {
+              setOpen((v) => !v);
+            }}
+            className={cn(
+              "w-full px-4 py-2.5 text-sm font-bold",
+              featured
+                ? "inline-flex items-center justify-center gap-1 rounded-full border-2 border-[color-mix(in_srgb,var(--brand-cta)_25%,transparent)] bg-white text-[var(--brand-cta)] transition-colors duration-300 hover:border-[var(--brand-cta)]"
+                : "btn-brand",
+            )}
+          >
+            {menu.buttonLabel}
+            <span aria-hidden className="text-[0.7em] opacity-80">
+              ▴
+            </span>
+          </button>
 
-              return (
-                <li key={option.href} role="none">
-                  {option.external || isAffiliateGo ? (
-                    <a
-                      role="menuitem"
-                      href={option.href}
-                      target="_blank"
-                      rel={
-                        isAffiliateGo
-                          ? "sponsored noopener noreferrer"
-                          : "noopener noreferrer"
-                      }
-                      onClick={handleClick}
-                      className={className}
-                    >
-                      {body}
-                    </a>
-                  ) : (
-                    <Link
-                      role="menuitem"
-                      href={option.href}
-                      onClick={handleClick}
-                      className={className}
-                    >
-                      {body}
-                    </Link>
-                  )}
-                </li>
-              );
-            })}
-          </ul>
+          <div
+            id={menuId}
+            role="menu"
+            className={cn(
+              "absolute bottom-full left-0 right-0 z-50 pb-1.5 transition-all duration-200",
+              open
+                ? "visible translate-y-0 opacity-100"
+                : "invisible translate-y-1 opacity-0 pointer-events-none",
+            )}
+          >
+            <ul className="overflow-hidden rounded-2xl border-2 border-[#00897b]/20 bg-white py-1 shadow-[0_8px_30px_rgba(0,137,123,0.18)]">
+              {menu.options.map((option) => {
+                const isAffiliateGo =
+                  option.href.startsWith("/go/") ||
+                  option.href.includes("/go/");
+                const className =
+                  "flex items-center justify-between gap-2 px-4 py-2.5 text-sm font-bold text-[var(--brand-cta)] transition-colors duration-300 hover:bg-[var(--brand-soft)]";
+                const body = (
+                  <>
+                    <span>{option.label}</span>
+                    {option.hint ? (
+                      <span className="text-xs font-normal text-[var(--brand-ink-muted)]">
+                        {option.hint}
+                      </span>
+                    ) : null}
+                  </>
+                );
+
+                return (
+                  <li key={option.href} role="none">
+                    {option.external || isAffiliateGo ? (
+                      <a
+                        role="menuitem"
+                        href={option.href}
+                        target="_blank"
+                        rel={
+                          isAffiliateGo
+                            ? "sponsored noopener noreferrer"
+                            : "noopener noreferrer"
+                        }
+                        onClick={() => handleOption(option)}
+                        className={className}
+                      >
+                        {body}
+                      </a>
+                    ) : (
+                      <Link
+                        role="menuitem"
+                        href={option.href}
+                        onClick={() => handleOption(option)}
+                        className={className}
+                      >
+                        {body}
+                      </Link>
+                    )}
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
         </div>
-      </div>
+      ) : null}
 
       <p className="text-xs font-normal leading-relaxed text-[var(--brand-ink-muted)]">
         {menu.chooseHint}{" "}

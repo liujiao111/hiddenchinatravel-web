@@ -1,6 +1,11 @@
 "use client";
 
 import Link from "next/link";
+import { trackEvent as trackSiteEvent } from "@/lib/analytics/track";
+import {
+  AFFILIATE_CLICK_EVENT,
+  affiliateSlugFromHref,
+} from "@/lib/affiliates/tracking";
 import { trackEvent } from "@/lib/survival-kit/track";
 import type { KitCta } from "@/lib/survival-kit/types";
 
@@ -18,6 +23,14 @@ export function KitTrackedLink({ cta, variant = "primary", className }: Props) {
       href: cta.href,
       external: Boolean(cta.external),
     });
+    const slug = affiliateSlugFromHref(cta.href);
+    if (slug) {
+      trackSiteEvent(AFFILIATE_CLICK_EVENT, {
+        affiliate_slug: slug,
+        surface: "survival_kit",
+        module: cta.trackingModule,
+      });
+    }
   };
 
   const base =

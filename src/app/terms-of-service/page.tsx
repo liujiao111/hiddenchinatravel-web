@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Container from "@/app/_components/container";
 import { LastUpdated } from "@/app/_components/last-updated";
+import { ClientEmailLink } from "@/components/contact/client-email-link";
 import {
   SITE_EMAIL,
   SITE_FOUNDER_NAME,
@@ -156,12 +157,7 @@ export default function TermsOfServicePage() {
               </p>
               <p>
                 Contact:{" "}
-                <a
-                  href={`mailto:${SITE_EMAIL}`}
-                  className="break-all underline underline-offset-4 transition-colors duration-500 hover:text-[var(--brand-cta)]"
-                >
-                  {SITE_EMAIL}
-                </a>
+                <ClientEmailLink className="break-all underline underline-offset-4 transition-colors duration-500 hover:text-[var(--brand-cta)]" />
               </p>
             </Section>
 
@@ -236,12 +232,7 @@ export default function TermsOfServicePage() {
               </ul>
               <p>
                 Refund requests: email{" "}
-                <a
-                  href={`mailto:${SITE_EMAIL}`}
-                  className="break-all underline underline-offset-4"
-                >
-                  {SITE_EMAIL}
-                </a>{" "}
+                <ClientEmailLink className="break-all underline underline-offset-4" />{" "}
                 with your name, order/payment reference, and reason. Approved
                 refunds are returned to the original payment method via Stripe
                 (or the processor used) within a reasonable processing time.
@@ -396,12 +387,7 @@ export default function TermsOfServicePage() {
                 {SITE_LOCATION}
                 <br />
                 Email:{" "}
-                <a
-                  href={`mailto:${SITE_EMAIL}`}
-                  className="break-all font-light underline underline-offset-4 transition-colors duration-500 hover:text-[var(--brand-cta)]"
-                >
-                  {SITE_EMAIL}
-                </a>
+                <ClientEmailLink className="break-all font-light underline underline-offset-4 transition-colors duration-500 hover:text-[var(--brand-cta)]" />
               </p>
             </Section>
           </article>

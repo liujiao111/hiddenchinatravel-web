@@ -1,12 +1,27 @@
 import Container from "@/app/_components/container";
-import { HomeFeaturedGuidesClient } from "@/app/_components/home/home-featured-guides-client";
 import { featuredGuideFallbacks } from "@/lib/home/content";
 import {
   getHomeHubTabs,
   type HomeGuideCard,
 } from "@/lib/home/featured-guides";
 import type { Post } from "@/interfaces/post";
+import dynamic from "next/dynamic";
 import Link from "next/link";
+
+const HomeFeaturedGuidesClient = dynamic(
+  () =>
+    import("@/app/_components/home/home-featured-guides-client").then(
+      (m) => m.HomeFeaturedGuidesClient,
+    ),
+  {
+    loading: () => (
+      <div
+        className="min-h-[16rem] rounded-2xl border border-[color-mix(in_srgb,var(--brand-cta)_12%,transparent)] bg-white/70"
+        aria-hidden
+      />
+    ),
+  },
+);
 
 type Props = {
   posts: Post[];

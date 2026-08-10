@@ -1,14 +1,14 @@
 ---
 type: hub
 title: "Payments in China for Foreigners"
-seoTitle: "Payments in China for Foreigners (Alipay & WeChat Pay Guide 2026)"
+seoTitle: "Payments in China 2026: Alipay, WeChat & Fixes"
 slug: payments-in-china
-metaDescription: "How to pay in China as a foreigner in 2026 — Alipay, WeChat Pay, foreign cards, cash backup, verification fixes, and why payments fail."
+metaDescription: "Pay in China as a foreigner in 2026 — Alipay and WeChat Pay setup, foreign cards, cash backup, verification failed fixes, and why checkout still declines."
 canonical: /payments-in-china
 eyebrow: "China Digital Survival Guide · Payment Hub"
 heroAnswer: "For many tourists and short-term visitors, the easiest way to pay in China is to set up Alipay with an international card first, add WeChat Pay as a backup, carry a small amount of cash for edge cases, and understand what usually causes verification or payment failure before you arrive."
 description: "Heading to China soon? This payment hub helps you understand what actually works on the ground — from Alipay and WeChat Pay setup to card linking, cash backup, and common payment problems. Start here for the key guides, practical answers, and next steps before your trip."
-dateModified: "2026-05-29"
+dateModified: "2026-08-10"
 keywords:
   - payments in China for foreigners
   - Alipay for foreigners
@@ -61,13 +61,15 @@ toolsHeading: "Want the full payment system before your trip?"
 toolsIntro: "Convert yuan for budgeting, then set up Alipay or WeChat Pay and keep a cash backup ready."
 faqs:
   - question: "How much is 100 yuan in dollars?"
-    answer: "It changes with the market. Use our free [China currency converter](/china-currency-converter/) for a live mid-market CNY to USD estimate, then expect ATM and airport desks to be a bit worse."
+    answer: "It changes with the market. Use our free [China currency converter](/china-currency-converter) for a live mid-market CNY to USD estimate, then expect ATM and airport desks to be a bit worse."
   - question: "Can tourists use Alipay in China with an international card?"
     answer: "Yes, many tourists can use Alipay in China with an eligible international card, as long as the setup and identity verification steps are completed properly. See the [Alipay for Foreigners guide](/alipay-for-foreigners-china) for the step-by-step flow."
   - question: "Can foreigners use WeChat Pay in China without a Chinese bank account?"
     answer: "Often yes, but the experience can feel less straightforward for some users than Alipay. That is one reason many travelers start with Alipay and keep [WeChat Pay](/wechat-pay-for-foreigners-china) as backup."
   - question: "What should I do if Alipay or WeChat Pay verification fails?"
     answer: "First identify where the failure happened: passport verification, SMS code, foreign card verification, or app risk control. Do not keep retrying blindly. Start with the [verification failure guide](/alipay-wechat-pay-verification-failed)."
+  - question: "Why does Alipay say passport verification failed or server busy?"
+    answer: "Usually the passport scan, name match, or risk check stalled — not your card. Follow the exact failure path in [Alipay/WeChat verification failed](/alipay-wechat-pay-verification-failed), and read [China’s real-name system](/china-real-name-system-foreigners) if identity fields keep mismatching."
   - question: "Why does payment fail even after linking a foreign card?"
     answer: "A linked card does not always mean the whole payment setup is complete. Identity verification, security checks, card compatibility, or transaction-specific controls can still cause payment failure. Start with the [payment failure troubleshooting guide](/why-your-payment-fails-in-china)."
   - question: "Do I need cash in China as a tourist?"

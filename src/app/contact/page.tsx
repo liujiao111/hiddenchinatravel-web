@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Container from "@/app/_components/container";
 import { LastUpdated } from "@/app/_components/last-updated";
 import { ContactForm } from "@/app/contact/_components/contact-form";
+import { ClientEmailLink } from "@/components/contact/client-email-link";
 import {
   SITE_EMAIL,
   SITE_FOUNDER_NAME,
@@ -147,12 +148,7 @@ export default function ContactPage() {
               <h2 className="mb-2 text-sm font-bold tracking-tight text-[var(--brand-cta)]">
                 Email
               </h2>
-              <a
-                href={`mailto:${SITE_EMAIL}`}
-                className="break-all text-sm font-normal text-[var(--brand-ink-muted)] transition-colors duration-300 hover:text-[var(--brand-coral)]"
-              >
-                {SITE_EMAIL}
-              </a>
+              <ClientEmailLink className="break-all text-sm font-normal text-[var(--brand-ink-muted)] transition-colors duration-300 hover:text-[var(--brand-coral)]" />
               <p className="mt-2 text-sm font-normal leading-relaxed text-[var(--brand-ink-muted)]">
                 Prefer email? Write anytime — we aim to reply within 24–48
                 hours.

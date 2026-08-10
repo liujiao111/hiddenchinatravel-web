@@ -1,4 +1,5 @@
 import Container from "@/app/_components/container";
+import { DeferredPlannerForm } from "@/app/_components/itinerary-planner/deferred-planner-form";
 import { ItineraryPlannerForm } from "@/app/_components/itinerary-planner/itinerary-planner-form";
 import { PlannerServicePanel } from "@/app/_components/itinerary-planner/planner-service-panel";
 import { getQuickVisaLookup } from "@/lib/home/get-quick-visa-lookup";
@@ -10,13 +11,19 @@ type Props = {
   source?: PlannerFormSource;
   /** Extra top padding for standalone tool pages */
   dense?: boolean;
+  /**
+   * On the homepage, load the interactive form as a separate client chunk
+   * so it does not compete with LCP / first paint.
+   */
+  deferForm?: boolean;
 };
 
 export function ItineraryPlannerSection({
   source = "home",
   dense = false,
+  deferForm = false,
 }: Props) {
-  const visaLookup = getQuickVisaLookup();
+  const visaLookup = deferForm ? null : getQuickVisaLookup();
 
   return (
     <section
@@ -50,7 +57,11 @@ export function ItineraryPlannerSection({
             <PlannerServicePanel />
           </aside>
           <div className="order-2 lg:order-1 lg:col-span-3">
-            <ItineraryPlannerForm visaLookup={visaLookup} source={source} />
+            {deferForm || !visaLookup ? (
+              <DeferredPlannerForm source={source} />
+            ) : (
+              <ItineraryPlannerForm visaLookup={visaLookup} source={source} />
+            )}
           </div>
         </div>
       </Container>

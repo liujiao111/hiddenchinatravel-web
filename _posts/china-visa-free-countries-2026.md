@@ -9,7 +9,7 @@ author:
   picture: "/assets/blog/authors/joy-liu.jpg"
 ogImage:
   url: "/assets/blog/china-visa-free-countries-2026/cover.webp"
-canonical: "https://hiddenchinatravel.com/china-visa-free-countries-2026/"
+canonical: "https://hiddenchinatravel.com/china-visa-free-countries-2026"
 keywords:
   - "china 30 day visa free"
   - "china entry requirements"
@@ -26,7 +26,7 @@ keywords:
   - "china visa free list"
   - "china visa free uk"
 section: "Visa & Entry"
-sourceUrl: "https://hiddenchinatravel.com/china-visa-free-countries-2026/"
+sourceUrl: "https://hiddenchinatravel.com/china-visa-free-countries-2026"
 ---
 > _Last updated: July 2026. The unilateral visa-free policy runs through December 31, 2026 for most countries. We update this page when the official list changes._
 
@@ -34,7 +34,7 @@ China’s visa-free expansion over the past two years has been genuinely signifi
 
 That said, “visa-free China” gets written about loosely online, and the actual picture is more layered than the headlines suggest. There are at least three different programs running simultaneously — unilateral exemptions, bilateral mutual agreements, and transit passes — and they operate under different rules, different stay limits, and sometimes different ports of entry. Lumping them all together as “77 countries” (a number that floats around travel sites) without explaining which bucket you fall into isn’t actually helpful.
 
-This page separates those out clearly. Quick lookup if you just want an answer: [China Visa Checker](/china-visa-checker/).
+This page separates those out clearly. Quick lookup if you just want an answer: [China Visa Checker](/china-visa-checker).
 
 ## How China’s Visa-Free Policy Actually Works
 
@@ -90,7 +90,7 @@ Japan, South Korea, Brunei
 
 Argentina, Brazil, **Canada** _(added February 17, 2026)_ , Chile, Peru, Uruguay
 
-> **The US is not on this list.** US passport holders qualify for the 240-hour transit program only — [see the full transit guide](/china-240-hour-transit-visa-free).
+> **The US is not on this list.** US passport holders qualify for the 240-hour transit program only — [check the Visa Checker](/china-visa-checker/united-states).
 > 
 > ![Chinese national flag flying outside a Chinese embassy building, representing China visa application requirements for foreign travelers](/assets/blog/china-visa-free-countries-2026/chinese-embassy-building-with-national-flag.webp)
 
@@ -100,7 +100,7 @@ Bahrain, Kuwait, Oman, Saudi Arabia
 
 > UAE and Qatar have separate bilateral agreements — see Part 2.
 
-> _This list reflects the official unilateral policy as confirmed by China’s Ministry of Foreign Affairs and National Immigration Administration as of July 2026. Use the[visa checker](/china-visa-checker/) to verify before booking._nia+1
+> _This list reflects the official unilateral policy as confirmed by China’s Ministry of Foreign Affairs and National Immigration Administration as of July 2026. Use the[visa checker](/china-visa-checker) to verify before booking._nia+1
 
 ## Part 2: Bilateral Mutual Agreements (Additional ~29 Countries)
 
@@ -137,7 +137,7 @@ Uzbekistan| 30 days|
 Azerbaijan| 30 days|   
 Mongolia| 30 days|   
   
-> **Bilateral agreements are governed by different terms than unilateral exemptions.** If your country appears here but not in Part 1, the rules may be slightly different — check your country’s specific agreement before travel. The [visa checker tool](/china-visa-checker/) pulls the correct rules for each nationality.
+> **Bilateral agreements are governed by different terms than unilateral exemptions.** If your country appears here but not in Part 1, the rules may be slightly different — check your country’s specific agreement before travel. The [visa checker tool](/china-visa-checker) pulls the correct rules for each nationality.
 
 ## Part 3: 240-Hour Transit (For Everyone Else With a Connecting Itinerary)
 
@@ -151,7 +151,7 @@ USA → China → USA ✗
 
 You can stay up to 10 days (240 hours), travel around within the covered regions, and you don’t apply for anything in advance. A lot of people use this to structure a real China trip into a wider Asia itinerary.
 
-Full rules, eligible ports, and what immigration actually checks: [China 240-hour transit visa-free guide](/china-240-hour-transit-visa-free).
+Full rules, eligible ports, and what immigration actually checks: [China Visa Checker](/china-visa-checker) and [Do I need a visa for China?](/do-i-need-a-visa-for-china).
 
 ## What You Need to Bring
 
@@ -182,7 +182,7 @@ Land crossings are a different story. Not all land ports participate, and rules 
 
 **Hong Kong and Macau note:** They’re separate immigration systems. Entering mainland China from Hong Kong — via Shenzhen Bay, Lo Wu, or the high-speed rail at West Kowloon — counts as a fresh mainland entry. Your 30-day clock starts from that crossing, not from when you first landed in Hong Kong. This catches people who spend a week in Hong Kong and assume their mainland days started then.
 
-For what to actually expect at the immigration counter — the questions, the arrival card, the lines, the occasional secondary screening: [China airport immigration guide](/china-entry-border-immigration-guide).
+For what to actually expect at the immigration counter — the questions, the arrival card, the lines, the occasional secondary screening: [Do I need a visa for China?](/do-i-need-a-visa-for-china).
 
 ## Stay Limits and Overstaying
 
@@ -194,29 +194,29 @@ For what to actually expect at the immigration counter — the questions, the ar
 
 ## Not on the List? Your Actual Options
 
-**If you’re American:** The 240-hour transit program covers you if your trip continues to a third country. Hainan also has a separate 30-day visa-free program specifically for that island province, accessible through registered tour operators. For a standalone mainland trip, you’ll need an L visa. [Full transit guide here](/china-240-hour-transit-visa-free).
+**If you’re American:** The 240-hour transit program covers you if your trip continues to a third country. Hainan also has a separate 30-day visa-free program specifically for that island province, accessible through registered tour operators. For a standalone mainland trip, you’ll need an L visa. [US visa checker page](/china-visa-checker/united-states).
 
-**If you’re from the Philippines, India, most of Africa, or other unlisted countries:** L visa, applied before travel. The application process is online first, then one in-person visit to a Chinese visa application center. From Manila the timeline is roughly 7–9 working days online review, then 3–4 working days processing after the in-person submission. Plan three weeks minimum to be comfortable. [Full L visa guide here](/china-l-visa-tourist-guide).
+**If you’re from the Philippines, India, most of Africa, or other unlisted countries:** L visa, applied before travel. The application process is online first, then one in-person visit to a Chinese visa application center. From Manila the timeline is roughly 7–9 working days online review, then 3–4 working days processing after the in-person submission. Plan three weeks minimum to be comfortable. [Visa overview](/do-i-need-a-visa-for-china).
 
 ## Frequently Asked Questions
 
 **Is China visa-free for US citizens?**  
-Not for the standard 30-day program. The US is not on China’s unilateral visa-free list as of July 2026. US passport holders can enter via the 240-hour transit program if their itinerary connects onward to a third country, or use the Hainan island visa-free policy through a registered tour. A standalone mainland China trip requires an L visa. See [Do US citizens need a visa for China?](/china-visa-checker/united-states/).
+Not for the standard 30-day program. The US is not on China’s unilateral visa-free list as of July 2026. US passport holders can enter via the 240-hour transit program if their itinerary connects onward to a third country, or use the Hainan island visa-free policy through a registered tour. A standalone mainland China trip requires an L visa. See [Do US citizens need a visa for China?](/china-visa-checker/united-states).
 
 **Is China visa-free for UK citizens?**  
-Yes — added to the unilateral list on February 17, 2026. UK ordinary passport holders can enter for up to 30 days without any prior application. The emergency 12-page UK passport is excluded — if you’re on one of those, you’ll need to apply for a visa regardless. Details: [British citizens China visa guide](/china-visa-checker/united-kingdom/).
+Yes — added to the unilateral list on February 17, 2026. UK ordinary passport holders can enter for up to 30 days without any prior application. The emergency 12-page UK passport is excluded — if you’re on one of those, you’ll need to apply for a visa regardless. Details: [British citizens China visa guide](/china-visa-checker/united-kingdom).
 
 **Is China visa-free for Australian citizens?**  
-Yes. Australia has been on the unilateral list since 2024. 30 days, ordinary passport, no application needed. Country page: [Australian citizens](/china-visa-checker/australia/).
+Yes. Australia has been on the unilateral list since 2024. 30 days, ordinary passport, no application needed. Country page: [Australian citizens](/china-visa-checker/australia).
 
 **Is China visa-free for Canadian citizens?**  
-Yes — also added February 17, 2026, same batch as the UK. 30 days, ordinary passport. See [Canadian citizens](/china-visa-checker/canada/).
+Yes — also added February 17, 2026, same batch as the UK. 30 days, ordinary passport. See [Canadian citizens](/china-visa-checker/canada).
 
 **Is China visa-free for Singaporean citizens?**  
-Yes, under a bilateral mutual agreement effective since February 2024. 30 days per visit. This is a separate program from the unilateral list but the practical result at the border is the same — no visa needed. More: [Singaporean citizens](/china-visa-checker/singapore/).
+Yes, under a bilateral mutual agreement effective since February 2024. 30 days per visit. This is a separate program from the unilateral list but the practical result at the border is the same — no visa needed. More: [Singaporean citizens](/china-visa-checker/singapore).
 
 **Is China visa-free for Filipino citizens?**  
-No. Philippine passport holders need to apply for an L visa before traveling to mainland China. The Philippines doesn’t qualify for the unilateral program, the 240-hour transit, or a bilateral agreement with mainland China. There are limited group tour exemptions for Hainan and a couple of other regions, but those are narrow exceptions. [Full L visa guide](/china-l-visa-tourist-guide) · [Filipino country page](/china-visa-checker/philippines/).
+No. Philippine passport holders need to apply for an L visa before traveling to mainland China. The Philippines doesn’t qualify for the unilateral program, the 240-hour transit, or a bilateral agreement with mainland China. There are limited group tour exemptions for Hainan and a couple of other regions, but those are narrow exceptions. [Visa overview](/do-i-need-a-visa-for-china) · [Filipino country page](/china-visa-checker/philippines).
 
 **Can I extend a visa-free stay inside China?**  
 Only in genuine documented emergencies — hospitalization, natural disaster, flight cancellations with paperwork to prove it. The public security bureau has discretion but exercises it narrowly. This is not a realistic plan. If you need more than 30 days, get an L visa before you travel.
@@ -242,7 +242,7 @@ Getting the visa question sorted is step one. Here’s everything else that actu
 
 **Entry paperwork**
 
-  * ✅ Confirm your passport qualifies — [China Visa Checker](/china-visa-checker/) or your [country page](/china-visa-checker/#browse-nationality-heading)
+  * ✅ Confirm your passport qualifies — [China Visa Checker](/china-visa-checker) or your [country page](/china-visa-checker/#browse-nationality-heading)
   * ✅ Passport validity — 6 months remaining is the practical standard
   * ✅ Return or onward flight booked and accessible offline on your phone
   * ✅ Hotel confirmation for at least the first night — have the Chinese-character address saved somewhere
@@ -255,7 +255,7 @@ Getting the visa question sorted is step one. Here’s everything else that actu
 
 **Payments**
 
-  * ✅ Understand how cash and mobile payments work before you land — [Payments in China for Foreigners](/payments-in-china/)
+  * ✅ Understand how cash and mobile payments work before you land — [Payments in China for Foreigners](/payments-in-china)
   * ✅ Some Chinese Yuan (RMB) in cash for the first day — airport transport, small vendors, anything before you get WeChat Pay or Alipay set up
 
 **On the plane**
@@ -271,26 +271,26 @@ If you’re still figuring out what to actually do once you’re there — where
 
 Country pages for high-intent passports (visa-free, 240-hour transit, or visa required):
 
-  * [United Kingdom](/china-visa-checker/united-kingdom/)
-  * [Germany](/china-visa-checker/germany/)
-  * [France](/china-visa-checker/france/)
-  * [Australia](/china-visa-checker/australia/)
-  * [Canada](/china-visa-checker/canada/)
-  * [Japan](/china-visa-checker/japan/)
-  * [South Korea](/china-visa-checker/south-korea/)
-  * [Singapore](/china-visa-checker/singapore/)
-  * [United States](/china-visa-checker/united-states/)
+  * [United Kingdom](/china-visa-checker/united-kingdom)
+  * [Germany](/china-visa-checker/germany)
+  * [France](/china-visa-checker/france)
+  * [Australia](/china-visa-checker/australia)
+  * [Canada](/china-visa-checker/canada)
+  * [Japan](/china-visa-checker/japan)
+  * [South Korea](/china-visa-checker/south-korea)
+  * [Singapore](/china-visa-checker/singapore)
+  * [United States](/china-visa-checker/united-states)
   * [More countries on the visa checker](/china-visa-checker/#browse-nationality-heading)
 
 ## Related Reading
 
   * [Do I Need a Visa for China? Answer for Every Passport](/do-i-need-a-visa-for-china)
-  * [China 240-Hour Transit Visa-Free: Full Guide](/china-240-hour-transit-visa-free)
-  * [How to Apply for a China L Visa (Tourist Visa)](/china-l-visa-tourist-guide)
-  * [China Airport Immigration: What to Expect](/china-entry-border-immigration-guide)
-  * [Internet in China: What Actually Works](/internet-in-china/)
+  * [China Visa Checker](/china-visa-checker)
+  * [Do I Need a Visa for China?](/do-i-need-a-visa-for-china)
+  * [US passport — China entry rules](/china-visa-checker/united-states)
+  * [Internet in China: What Actually Works](/internet-in-china)
   * [Best eSIM for China Travel](/best-esim-for-china-travel)
   * [Best VPN for China 2026](/best-vpn-for-china)
-  * [Payments in China for Foreigners](/payments-in-china/)
+  * [Payments in China for Foreigners](/payments-in-china)
 
-> _Information on this page is accurate as of July 2026, based on official announcements from China’s Ministry of Foreign Affairs and National Immigration Administration. The unilateral visa-free program runs through December 31, 2026 for most countries. Verify current status at[en.nia.gov.cn](https://en.nia.gov.cn/) or via the [visa checker tool](/china-visa-checker/) before booking._
+> _Information on this page is accurate as of July 2026, based on official announcements from China’s Ministry of Foreign Affairs and National Immigration Administration. The unilateral visa-free program runs through December 31, 2026 for most countries. Verify current status at[en.nia.gov.cn](https://en.nia.gov.cn/) or via the [visa checker tool](/china-visa-checker) before booking._

@@ -5,6 +5,10 @@ import { HubPage } from "@/components/hubs/hub-page";
 import { getHubBySlug } from "@/lib/hubs/api";
 import type { Hub } from "@/lib/hubs/types";
 import { SITE_NAME, SITE_URL } from "@/lib/constants";
+import {
+  absoluteCanonicalUrl,
+  pageCanonicalPath,
+} from "@/lib/seo/canonical";
 
 export function createHubMetadata(slug: string): Metadata {
   const hub = getHubBySlug(slug);
@@ -12,7 +16,7 @@ export function createHubMetadata(slug: string): Metadata {
 
   const title = hub.seoTitle || hub.title;
   const description = hub.metaDescription;
-  const canonical = hub.canonical || `/${hub.slug}`;
+  const canonical = pageCanonicalPath(hub.canonical || `/${hub.slug}`);
 
   return {
     title: { absolute: title },
@@ -36,7 +40,7 @@ export function createHubMetadata(slug: string): Metadata {
 }
 
 function hubJsonLd(hub: Hub) {
-  const url = `${SITE_URL}${hub.canonical || `/${hub.slug}`}`;
+  const url = absoluteCanonicalUrl(hub.canonical || `/${hub.slug}`);
   const graph: Record<string, unknown>[] = [
     {
       "@type": "CollectionPage",
@@ -55,7 +59,7 @@ function hubJsonLd(hub: Hub) {
           .map((a) => ({
             "@type": "WebPage",
             name: a.title,
-            url: `${SITE_URL}${a.href}`,
+            url: absoluteCanonicalUrl(a.href),
             description: a.excerpt,
           })),
       ),

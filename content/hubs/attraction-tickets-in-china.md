@@ -96,6 +96,12 @@ mistakes:
     - title: "Starting booking without working payments/data"
       body: "Mid-checkout failures waste scarce slots. Prep Alipay and internet first."
       href: /payments-in-china
+affiliateExit:
+  eyebrow: "Optional booking path"
+  title: "Check English ticket inventory on Trip.com"
+  body: "A practical backup when official Chinese apps are confusing or sold out — still use exact passport details."
+  ctaLabel: "Browse Trip.com tickets"
+  href: /go/trip-tickets
 relatedHubs:
   - title: "Travel Essentials"
     href: /china-travel-essentials

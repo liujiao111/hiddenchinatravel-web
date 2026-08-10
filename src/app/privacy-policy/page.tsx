@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Container from "@/app/_components/container";
 import { LastUpdated } from "@/app/_components/last-updated";
+import { ClientEmailLink } from "@/components/contact/client-email-link";
 import { SITE_EMAIL, SITE_LAST_UPDATED, SITE_NAME, SITE_URL } from "@/lib/constants";
 import type { Metadata } from "next";
 
@@ -214,12 +215,7 @@ export default function PrivacyPage() {
               </ul>
               <p>
                 To exercise these rights, please contact us at{" "}
-                <a
-                  href={`mailto:${SITE_EMAIL}`}
-                  className="font-light underline underline-offset-4 transition-colors duration-500 hover:text-[var(--brand-cta)]"
-                >
-                  {SITE_EMAIL}
-                </a>
+                <ClientEmailLink className="font-light underline underline-offset-4 transition-colors duration-500 hover:text-[var(--brand-cta)]" />
                 .
               </p>
             </Section>
@@ -249,12 +245,7 @@ export default function PrivacyPage() {
               </p>
               <p>
                 Email:{" "}
-                <a
-                  href={`mailto:${SITE_EMAIL}`}
-                  className="break-all font-light underline underline-offset-4 transition-colors duration-500 hover:text-[var(--brand-cta)]"
-                >
-                  {SITE_EMAIL}
-                </a>
+                <ClientEmailLink className="break-all font-light underline underline-offset-4 transition-colors duration-500 hover:text-[var(--brand-cta)]" />
               </p>
             </Section>
 

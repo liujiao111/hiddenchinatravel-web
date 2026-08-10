@@ -1,15 +1,16 @@
 ---
-title: "How to Use Meituan for Foreigners In china (2026)"
-excerpt: "Trying to use Meituan without a Chinese phone number? Here’s the real answer, what actually works, and the best alternatives for foreigners in China."
+title: "How to Use Meituan for Foreigners in China (2026)"
+seoTitle: "Meituan Without a Chinese Number (2026 Guide)"
+excerpt: "Meituan without a Chinese number: what works via WeChat or Alipay, where signup blocks foreigners, and backup paths that still get you deals and delivery."
 coverImage: "/assets/blog/how-to-use-meituan/cover.webp"
 date: "2026-07-16T02:54:46+00:00"
-dateModified: "2026-07-16T02:55:13+00:00"
+dateModified: "2026-08-10T14:00:00+00:00"
 author:
   name: "Joy Liu"
   picture: "/assets/blog/authors/joy-liu.jpg"
 ogImage:
   url: "/assets/blog/how-to-use-meituan/cover.webp"
-canonical: "https://hiddenchinatravel.com/how-to-use-meituan/"
+canonical: "https://hiddenchinatravel.com/how-to-use-meituan"
 keywords:
   - "China food deals"
   - "China local deals"
@@ -26,7 +27,16 @@ keywords:
   - "Meituan for foreigners"
   - "WeChat Pay for foreigners"
 section: "Food & Delivery in China"
-sourceUrl: "https://hiddenchinatravel.com/how-to-use-meituan/"
+sourceUrl: "https://hiddenchinatravel.com/how-to-use-meituan"
+faqs:
+  - question: "Can foreigners use Meituan without a Chinese number?"
+    answer: "Often yes via WeChat login or the WeChat mini-program, depending on your WeChat verification status. A local +86 number makes signup smoother but is not always mandatory for every flow."
+  - question: "What do I need before using Meituan in China?"
+    answer: "A working payment app (Alipay or WeChat Pay), stable mobile data, and a usable delivery address pin. Fix payment verification before fighting the Meituan signup screen."
+  - question: "Is Meituan only for food delivery?"
+    answer: "No. Meituan also covers restaurant deals, cafés, attractions, and local services. Food delivery is just the part most travelers hit first."
+  - question: "What if Meituan asks for a Chinese phone number and blocks me?"
+    answer: "Try WeChat login, the Alipay food path (Taobao Instant / Ele.me), in-person QR menus with staff help, or ask your hotel to place an order."
 ---
 A few years ago, a friend we visited in Dali, China let us in on a little China hack that changed how we travel China forever. Its name is  _Meituan_.
 
@@ -166,13 +176,25 @@ Planning the rest of your China trip? [Trip.com](/go/trip-hotels) is the easiest
 
 If you’re heading to China and sorting out your full toolkit, check out our [survive kit](/survival-kit) for preparing china travel guides to squeeze even more value out of your travels.
 
+## FAQ
+
+**Can foreigners use Meituan without a Chinese number?** Often yes via WeChat login or the WeChat mini-program, depending on your WeChat verification status. A local +86 number makes signup smoother but is not always mandatory for every flow.
+
+**What do I need before using Meituan in China?** A working payment app (Alipay or WeChat Pay), stable mobile data, and a usable delivery address pin. Fix payment verification before fighting the Meituan signup screen.
+
+**Is Meituan only for food delivery?** No. Meituan also covers restaurant deals, cafés, attractions, and local services. Food delivery is just the part most travelers hit first.
+
+**What if Meituan asks for a Chinese phone number and blocks me?** Try WeChat login, the Alipay food path (Taobao Instant / Ele.me), in-person QR menus with staff help, or ask your hotel to place an order.
+
 ## Related Guides
 
 Planning your China trip? These practical guides may also help:
 
-  * [How to order food in china without Chinese number](/order-food-china-without-chinese-number)
+  * [Order Food in China Without a Chinese Number](/order-food-china-without-chinese-number)
+  * [Food Delivery in China](/food-delivery-in-china)
   * [Payments in China for Foreigners](/payments-in-china)
   * [How to Pay in China as a Foreigner](/digital-survival-china-payment-guide)
   * [WeChat Pay for Foreigners](/wechat-pay-for-foreigners-china)
-  * [Best ESIM in china ](/internet-in-china)[for Foreigners](/best-esim-for-china-travel)
-  * [](/best-vpn-for-china)[Best VPN in china ](/internet-in-china)[for Foreigners](/wechat-pay-for-foreigners-china)
+  * [Best eSIM for China Travel](/best-esim-for-china-travel)
+  * [Best VPN for China](/best-vpn-for-china)
+  * [Internet in China](/internet-in-china)

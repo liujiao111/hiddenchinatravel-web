@@ -1,5 +1,6 @@
-import Link from "next/link";
+import { AffiliateClickTracker } from "@/components/affiliates/affiliate-click-tracker";
 import type { Hub } from "@/lib/hubs/types";
+import Link from "next/link";
 import { HubFaq } from "./hub-faq";
 import { HubProse } from "./hub-prose";
 import { HubQuickNav, type HubNavItem } from "./hub-quick-nav";
@@ -19,6 +20,9 @@ export function HubPage({ hub }: Props) {
       : []),
     ...(hub.mistakes ? [{ id: "mistakes", label: "Mistakes to avoid" }] : []),
     ...(hub.toolCTA.length ? [{ id: "tools", label: "Next steps" }] : []),
+    ...(hub.affiliateExit
+      ? [{ id: "booking-path", label: "Booking path" }]
+      : []),
     ...(hub.faqs.length ? [{ id: "faq", label: "FAQ" }] : []),
     ...(hub.relatedHubs?.length
       ? [{ id: "related-hubs", label: "Related hubs" }]
@@ -29,6 +33,7 @@ export function HubPage({ hub }: Props) {
 
   return (
     <div id="top" className="pb-24 md:pb-32">
+      <AffiliateClickTracker surface="hub" />
       <header className="mb-12 md:mb-16">
         {hub.eyebrow ? (
           <p className="mb-4 text-xs font-bold uppercase tracking-[0.18em] text-[var(--brand-mango)]">
@@ -247,6 +252,42 @@ export function HubPage({ hub }: Props) {
                     </Link>
                   ))}
                 </div>
+              </div>
+            </section>
+          ) : null}
+
+          {hub.affiliateExit ? (
+            <section
+              id="booking-path"
+              aria-labelledby="booking-path-heading"
+              className="scroll-mt-28"
+            >
+              <div className="surface-card border border-[color-mix(in_srgb,var(--brand-cta)_14%,transparent)] bg-white p-8 md:p-10">
+                <div className="surface-card-bar" aria-hidden />
+                <p className="mb-2 text-xs font-bold uppercase tracking-[0.18em] text-[var(--brand-mango)]">
+                  {hub.affiliateExit.eyebrow}
+                </p>
+                <h2
+                  id="booking-path-heading"
+                  className="mb-3 text-xl font-bold leading-tight tracking-tight text-[var(--brand-cta)] md:text-2xl"
+                >
+                  {hub.affiliateExit.title}
+                </h2>
+                <p className="mb-6 max-w-xl text-sm font-normal leading-relaxed text-[var(--brand-ink-muted)] md:text-base">
+                  {hub.affiliateExit.body}
+                </p>
+                <a
+                  href={hub.affiliateExit.href}
+                  target="_blank"
+                  rel="sponsored noopener noreferrer"
+                  className="btn-brand-outline inline-flex px-6 py-3 text-sm"
+                >
+                  {hub.affiliateExit.ctaLabel}
+                </a>
+                <p className="mt-4 text-xs font-normal text-[var(--brand-ink-muted)]">
+                  Affiliate link — at no extra cost to you. Guides above stay
+                  commission-neutral.
+                </p>
               </div>
             </section>
           ) : null}

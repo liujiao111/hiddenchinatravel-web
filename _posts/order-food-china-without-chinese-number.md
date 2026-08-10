@@ -1,15 +1,16 @@
 ---
 title: "How to Order Food in China Without a Chinese Number (2026 Guide)"
-excerpt: "No Chinese number? You can still order delivery in 30 minutes. This guide covers Alipay's built-in delivery, Meituan workarounds, and what to do when the QR code menu won't cooperate."
+seoTitle: "Order Food in China Without a Chinese Number (2026)"
+excerpt: "No Chinese number? Still order food in China: Alipay delivery, Meituan workarounds, QR menu tips, and what to do when apps demand a local phone."
 coverImage: "/assets/blog/order-food-china-without-chinese-number/cover.webp"
 date: "2026-03-31T03:12:50+00:00"
-dateModified: "2026-07-16T03:02:14+00:00"
+dateModified: "2026-08-10T14:00:00+00:00"
 author:
   name: "Joy Liu"
   picture: "/assets/blog/authors/joy-liu.jpg"
 ogImage:
   url: "/assets/blog/order-food-china-without-chinese-number/cover.webp"
-canonical: "https://hiddenchinatravel.com/order-food-china-without-chinese-number/"
+canonical: "https://hiddenchinatravel.com/order-food-china-without-chinese-number"
 keywords:
   - "alipay food delivery"
   - "china apps guide"
@@ -21,7 +22,18 @@ keywords:
   - "no chinese number"
   - "order food china"
 section: "Food & Delivery in China"
-sourceUrl: "https://hiddenchinatravel.com/order-food-china-without-chinese-number/"
+sourceUrl: "https://hiddenchinatravel.com/order-food-china-without-chinese-number"
+faqs:
+  - question: "Can I use Meituan without a Chinese phone number?"
+    answer: "Sometimes. The WeChat mini-program often works without a separate Meituan account, depending on WeChat verification. The standalone app may allow WeChat login. If neither works, ask your hotel — but do not rely on that alone."
+  - question: "Does Taobao Instant (Ele.me) work with a foreign card?"
+    answer: "Yes, if you order through the Alipay mini-program. Alipay handles payment with your linked Visa or Mastercard — no separate delivery-app account needed."
+  - question: "What if the QR code menu asks for a Chinese phone number?"
+    answer: "Skip the app. Call the waiter, point at dishes, and say 我要这个. Most staff will understand in-person ordering without the mini-program."
+  - question: "Is food delivery in China expensive?"
+    answer: "Usually affordable. Delivery fees are typically ¥3–6, often waived above ¥20–30. A full meal with delivery often lands around ¥20–40 ($3–6 USD)."
+  - question: "What if none of the food apps work?"
+    answer: "Use convenience stores with ready-to-eat food (they take Alipay, WeChat Pay, and usually cash), or ask hotel reception to order for you — common in tourist areas."
 ---
 It’s 7pm. You just landed in Chengdu, dropped your bags, and you’re starving. You walk into the first restaurant you see — plastic stools, steaming pots, the smell of chili oil everywhere. Perfect.
 
@@ -202,10 +214,10 @@ Delicious!| 好吃！| Hào chī!
 ## Related Guides
 
   * [How to Set Up Alipay as a Foreigner](/alipay-for-foreigners-china) — The foundation for QR ordering, delivery, and payments
+  * [Alipay or WeChat Pay Verification Failed?](/alipay-wechat-pay-verification-failed) — Fix passport / SMS blocks before checkout
+  * [How to Use Meituan](/how-to-use-meituan) — App walkthrough once payments work
   * [China Payment Guide for Foreigners](/payments-in-china) — Alipay, WeChat Pay, and what to do when payment fails
   * [China SIM Card & eSIM Guide](/china-sim-card-for-foreigners) — Getting the mobile data you need for all of the above
   * [Internet & VPN Guide for China](/internet-in-china) — Google is blocked in China; sort your VPN before you land if you plan to use Google Translate
-  * [China Transport Guide for Foreigners](/digital-survival-china-transport-guide) — Getting around the city once you’ve eaten
-  * [/How to use MEITUAN APP in China](/how-to-use-meituan) — Get Guide for using meituan app to order food
 
 _Last updated: June 2026. App interfaces, platform names, and availability vary by city and app version — confirm current steps within the app if something looks different from what’s described here._

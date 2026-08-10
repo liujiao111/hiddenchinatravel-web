@@ -8,7 +8,6 @@ import { SocialLinks } from "@/app/_components/social-links";
 import { WhatsAppContact } from "@/app/_components/whatsapp-contact";
 import { useLocaleDict } from "@/i18n/locale-provider";
 import {
-  SITE_EMAIL,
   SITE_LAST_UPDATED,
   SITE_LOCATION,
   SITE_LOCATION_ZH,
@@ -146,12 +145,12 @@ export function Footer() {
               <h4 className={headingClass}>{dict.footer.contact}</h4>
               <ul className="space-y-3 text-sm font-normal text-[var(--brand-ink-muted)]">
                 <li>
-                  <a
-                    href={`mailto:${SITE_EMAIL}`}
-                    className="break-all transition-colors duration-300 hover:text-[var(--brand-cta)]"
+                  <Link
+                    href="/contact"
+                    className="transition-colors duration-300 hover:text-[var(--brand-cta)]"
                   >
-                    {SITE_EMAIL}
-                  </a>
+                    {dict.nav.contact}
+                  </Link>
                 </li>
                 <li>
                   {SITE_LOCATION}

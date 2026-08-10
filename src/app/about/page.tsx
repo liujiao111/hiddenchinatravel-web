@@ -19,6 +19,7 @@ import {
   supportScenarios,
   whyChooseUs,
 } from "@/lib/about/partner-content";
+import { ClientEmailLink } from "@/components/contact/client-email-link";
 import {
   SITE_EMAIL,
   SITE_FOUNDER_NAME,
@@ -365,12 +366,7 @@ export default function AboutUsPage() {
                 <br />
                 {SITE_LOCATION_ZH}
               </p>
-              <a
-                href={`mailto:${SITE_EMAIL}`}
-                className="break-all text-sm font-normal underline underline-offset-4 transition-colors duration-300 hover:text-[var(--brand-cta)]"
-              >
-                {SITE_EMAIL}
-              </a>
+              <ClientEmailLink className="break-all text-sm font-normal underline underline-offset-4 transition-colors duration-300 hover:text-[var(--brand-cta)]" />
               <div className="mt-5 border-t border-[color-mix(in_srgb,var(--brand-cta)_12%,transparent)] pt-5">
                 <p className="mb-3 text-xs font-bold uppercase tracking-wide text-[var(--brand-cta)]">
                   Follow

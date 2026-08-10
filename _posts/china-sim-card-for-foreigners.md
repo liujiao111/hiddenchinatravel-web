@@ -1,19 +1,36 @@
 ---
 title: "China SIM Card for Foreigners (2026): How to Buy, Setup & Avoid Mistakes"
-excerpt: "Physical SIM or eSIM? We explain which gives you a Chinese number, which bypasses the Great Firewall, and what to expect at the store."
+seoTitle: "China SIM for Foreigners 2026: Buy, Setup, Mistakes"
+excerpt: "Buying a China SIM as a foreigner in 2026: passport + face scan, Unicom vs eSIM, when you need a +86 number, and the store mistakes that get you rejected."
 coverImage: "/assets/blog/china-sim-card-for-foreigners/cover.webp"
 date: "2026-03-19T06:46:13+00:00"
-dateModified: "2026-07-09T09:08:53+00:00"
+dateModified: "2026-08-10T14:00:00+00:00"
 author:
   name: "Joy Liu"
   picture: "/assets/blog/authors/joy-liu.jpg"
 ogImage:
   url: "/assets/blog/china-sim-card-for-foreigners/cover.webp"
-canonical: "https://hiddenchinatravel.com/china-sim-card-for-foreigners/"
+canonical: "https://hiddenchinatravel.com/china-sim-card-for-foreigners"
 keywords:
-  - "can foreigners buy sim card in china best esim for china china mobile vs unicom china sim card airport china phone number verification china sim card for foreigners china esim sim card china tourist"
+  - "China SIM card for foreigners"
+  - "China Unicom prepaid SIM"
+  - "buy SIM card China passport"
+  - "China phone number verification"
+  - "China eSIM vs physical SIM"
+  - "airport SIM card China tourist"
 section: "Internet & VPN & SIM in China"
-sourceUrl: "https://hiddenchinatravel.com/china-sim-card-for-foreigners/"
+sourceUrl: "https://hiddenchinatravel.com/china-sim-card-for-foreigners"
+faqs:
+  - question: "Can foreigners buy a SIM card in China with a passport?"
+    answer: "Yes. You must complete real-name registration and facial verification at an official carrier store or airport counter. Bring your original passport."
+  - question: "Should I get a physical China SIM or a travel eSIM?"
+    answer: "Need a +86 number for app SMS or new local accounts? Get a physical SIM. Only need data and international apps? A travel eSIM is usually easier."
+  - question: "Which carrier is best for foreigners?"
+    answer: "China Unicom is the usual first pick for foreign phones and tourist prepaid plans. Go to a flagship or directly operated store, not a small franchise."
+  - question: "What if face verification fails at the store?"
+    answer: "Remove glasses, improve lighting, retry. Ask for supervisor help or try another official branch. Online/pre-order SIMs that verify with uploaded photos can be a workaround."
+  - question: "Do I need a Chinese number for Alipay and food delivery?"
+    answer: "Not always — foreign cards work in many Alipay/WeChat flows now. A local number still helps with SMS codes, Meituan signup, and some registrations."
 ---
 For most visitors: buy a China Unicom prepaid SIM at the airport or an official city store, bring your original passport, and expect a face scan as part of the process.
 
@@ -127,56 +144,33 @@ Don’t leave the store without confirming all of this:
 
 The SMS test is the one people skip and then regret. Sixty seconds at the counter saves a lot of frustration later.
 
-## FAQ: The Problems You’ll Actually Run Into
+## FAQ
 
 ![easy esim setup china travel stay connected](/assets/blog/china-sim-card-for-foreigners/sim-card-setup-guide.webp)
 
-### 1\. The Face Scan Failed
+**Can foreigners buy a SIM card in China with a passport?** Yes. You must complete real-name registration and facial verification at an official carrier store or airport counter. Bring your original passport.
 
-This happens more often than guides admit. The system compares your live face against your passport photo — if you’re wearing glasses, the lighting is bad, your passport photo is old, or the system just isn’t confident, it fails.
+**Should I get a physical China SIM or a travel eSIM?** Need a +86 number for app SMS or new local accounts? Get a physical SIM. Only need data and international apps? A travel eSIM is usually easier.
 
-What to do: remove glasses and hats, face the camera straight on, ask to try again in better lighting. If it keeps failing, ask if there’s an alternative manual verification process — some stores can escalate to a supervisor who handles it differently. If one branch fails, try a different branch. And if you’re consistently hitting this wall, an online SIM pre-purchase (where verification uses uploaded photos rather than a live scan) is a legitimate workaround.
-
-### 2\. Not Receiving SMS Verification Codes
-
-Your SIM is active and has signal, but the code from WeChat or your bank never arrives.
-
-Check these in order:
-
-  * **International SMS may be disabled on your plan.** Go back to the store or call customer service and ask them to enable SMS reception from foreign numbers.
-  * **Prefix issue.** Numbers beginning with 170 or 171 are virtual number ranges that some platforms block. Ask for a number in the standard 130–189 range when buying.
-  * **Network delay.** Wait 2–3 minutes, restart your phone, and request the code again.
-
-The simplest prevention: have the store send you a test SMS before you leave. If it arrives, international reception is working.
-
-### 3\. Signal But No Internet
-
-You have bars, but nothing loads.
-
-Check in this order:
-
-  1. **Mobile data off.** Settings → Mobile Data → toggle on.
-  2. **APN not configured.** Go to Settings → Mobile Data → APN. Enter: China Unicom = `3gnet`, China Mobile = `cmnet`, China Telecom = `ctnet`.
-  3. **You’re hitting the Great Firewall.** If Baidu loads but Google doesn’t, your data is working fine. Turn on your VPN.
-  4. **Band incompatibility.** If signal is stuck at 2G in a major city, your phone may not support the carrier’s 4G bands. See the pre-departure checklist above.
-
-### 4\. Which Plan Should You Get?
-
-Plans change frequently (e.g., Unicom 2026: ¥59/15GB+500min/30 days), but these are the general ranges:
+**Which carrier is best for foreigners?** China Unicom is the usual first pick for foreign phones and tourist prepaid plans. Go to a flagship or directly operated store, not a small franchise. Ask for **预付费 (yùfùfèi) prepaid** — not a postpaid contract — and confirm hotspot (热点) if you need tethering.
 
 Trip Length| What to Look For| Approx. Cost  
 ---|---|---  
 1–7 days| 3–5GB data, no calls| ¥30–50  
 1–4 weeks| 10–20GB data + calls| ¥50–80  
 1–3 months| Unlimited (throttled after 20–30GB)| ¥80–150/month  
-  
-Ask specifically for **预付费 (yùfùfèi) prepaid plans** — not postpaid contracts. And if you plan to use your phone as a hotspot for a laptop or tablet, confirm the plan includes 热点 (rèdiǎn) tethering, because some tourist plans disable it.
 
-### 5\. Do You Need to Cancel Before Leaving?
+**What if face verification fails at the store?** Remove glasses, improve lighting, retry. Ask for supervisor help or try another official branch. Online/pre-order SIMs that verify with uploaded photos can be a workaround. The system compares your live face to the passport photo — glasses, bad lighting, or an old passport photo are the usual failure triggers.
 
-No. Prepaid SIMs expire naturally when the plan period ends and no top-up is added. The number gets deactivated and reassigned after 30–90 days of inactivity.
+**Do I need a Chinese number for Alipay and food delivery?** Not always — foreign cards work in many Alipay/WeChat flows now. A local number still helps with SMS codes, Meituan signup, and some registrations.
 
-Two things worth noting though: if you’ve linked a WeChat or Alipay account to that number, you’ll lose the ability to recover those accounts by SMS once the number is reassigned. Before you leave China, link a backup email to any accounts you want to keep. And if you plan to return and want the same number, you can top up remotely via the carrier app or WeChat mini-program before it expires.
+### After you buy: SMS, data, and leaving China
+
+**Not receiving SMS codes:** International SMS may be disabled (ask the store to enable it), numbers starting with 170/171 are often blocked by apps (prefer 130–189), or the network is slow — wait, restart, retry. Have the store send a test SMS before you leave.
+
+**Signal but no internet:** Toggle mobile data on; set APN (Unicom `3gnet`, Mobile `cmnet`, Telecom `ctnet`); if Baidu loads but Google doesn’t, turn on your VPN; stuck on 2G may mean band incompatibility.
+
+**Do you need to cancel before leaving?** No. Prepaid SIMs expire when the plan ends. Before you leave, link a backup email to WeChat/Alipay tied to that number so you can recover accounts after the number is reassigned.
 
 ### Can You Just Use International Roaming?
 
@@ -213,11 +207,11 @@ If you’re undecided between a physical SIM and an eSIM, use this as a final ti
 
 Planning your China trip? These practical guides may also help with internet access, payments, navigation, and daily travel setup:
 
-  * [Internet, VPN and SIM in China](/internet-in-china/)
-  * [Best eSIM in china](/best-esim-for-china-travel)
-  * [Payments in China for Foreigners](/payments-in-china/)
-  * [Maps and Navigation in China](/maps-navigation-in-china/)
-  * [Transport in China](/transport-in-china/)
-  * [Food Delivery in China](/food-delivery-in-china/)
+  * [Internet, VPN and SIM in China](/internet-in-china)
+  * [Best eSIM for China Travel](/best-esim-for-china-travel)
+  * [Best VPN for China](/best-vpn-for-china)
+  * [China Real-Name System Explained](/china-real-name-system-foreigners)
+  * [Order Food Without a Chinese Number](/order-food-china-without-chinese-number)
+  * [Payments in China for Foreigners](/payments-in-china)
 
 _Last updated: May 2026. Carrier plans and pricing change frequently — confirm details with the carrier at time of purchase._

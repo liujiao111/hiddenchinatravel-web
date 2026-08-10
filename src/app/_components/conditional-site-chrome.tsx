@@ -1,5 +1,3 @@
-"use client";
-
 import { BackToTop } from "@/app/_components/back-to-top";
 
 type Props = {
@@ -8,6 +6,7 @@ type Props = {
   footer: React.ReactNode;
 };
 
+/** Server chrome shell — only BackToTop needs a client boundary. */
 export function ConditionalSiteChrome({ children, header, footer }: Props) {
   return (
     <>

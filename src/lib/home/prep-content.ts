@@ -15,6 +15,11 @@ export type PrepBuyMenu = {
   options: PrepBuyOption[];
   chooseHint: string;
   guide: { label: string; href: string };
+  /**
+   * Shown as a one-click primary CTA above the compare menu
+   * (reduces friction for the recommended partner).
+   */
+  featured?: PrepBuyOption;
 };
 
 export type HomePrepStep =
@@ -79,20 +84,20 @@ export const homePrepSteps: HomePrepStep[] = [
     body: "Data + a VPN backup so maps, messages, and payments still work on day one.",
     menus: [
       {
-        buttonLabel: "Compare China eSIMs",
+        buttonLabel: "Compare other eSIMs",
         chooseHint:
           "Airalo if you only need data; Trip.com eSIM if you already book hotels there. Some links are affiliate.",
         guide: {
           label: "eSIM guide",
           href: "/best-esim-for-china-travel",
         },
+        featured: {
+          label: "Get Airalo eSIM",
+          href: "/go/airalo",
+          external: true,
+          hint: "Recommended",
+        },
         options: [
-          {
-            label: "Airalo",
-            href: "/go/airalo",
-            external: true,
-            hint: "Data specialist",
-          },
           {
             label: "Trip.com eSIM",
             href: "/go/trip-esim",
@@ -102,20 +107,20 @@ export const homePrepSteps: HomePrepStep[] = [
         ],
       },
       {
-        buttonLabel: "Compare travel VPNs",
+        buttonLabel: "Compare other VPNs",
         chooseHint:
           "NordVPN is our usual pick for phones and laptops; ExpressVPN if you prefer that app. Some links are affiliate.",
         guide: {
           label: "VPN guide",
           href: "/best-vpn-for-china",
         },
+        featured: {
+          label: "Try NordVPN",
+          href: "/go/nordvpn",
+          external: true,
+          hint: "Usual pick",
+        },
         options: [
-          {
-            label: "NordVPN",
-            href: "/go/nordvpn",
-            external: true,
-            hint: "Usual pick",
-          },
           {
             label: "ExpressVPN",
             href: "/go/expressvpn",
@@ -179,22 +184,23 @@ export const homePrepSteps: HomePrepStep[] = [
     body: "Use Trip.com in English with a foreign card for the pieces that hurt when left late.",
     menus: [
       {
-        buttonLabel: "Book on Trip.com",
+        buttonLabel: "More Trip.com options",
         chooseHint:
           "Lock night-one hotels early; reserve popular sights with the passport you will travel on. Trip.com links are affiliate.",
         guide: {
           label: "Hotel guide",
           href: "/hotels-in-china-for-foreigners",
         },
+        featured: {
+          label: "Book hotels on Trip.com",
+          href: "/go/trip-hotels",
+          external: true,
+          hint: "Night one",
+        },
         options: [
           {
             label: "Flights",
             href: "/go/trip-flight",
-            external: true,
-          },
-          {
-            label: "Hotels",
-            href: "/go/trip-hotels",
             external: true,
           },
           {

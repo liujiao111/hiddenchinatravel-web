@@ -9,7 +9,7 @@ author:
   picture: "/assets/blog/authors/joy-liu.jpg"
 ogImage:
   url: "/assets/blog/hotels-in-china-for-foreigners/cover.webp"
-canonical: "https://hiddenchinatravel.com/hotels-in-china-for-foreigners/"
+canonical: "https://hiddenchinatravel.com/hotels-in-china-for-foreigners"
 keywords:
   - "china accommodation guide"
   - "china hotel booking guide"
@@ -25,7 +25,7 @@ keywords:
   - "stay in china as a foreigner"
   - "trip.com china"
 section: "Hotels in China for Foreigners"
-sourceUrl: "https://hiddenchinatravel.com/hotels-in-china-for-foreigners/"
+sourceUrl: "https://hiddenchinatravel.com/hotels-in-china-for-foreigners"
 ---
 You arrive at your hotel in China after a long, exhausting flight. All you want is a hot shower and a soft bed.
 
@@ -50,7 +50,7 @@ When a foreigner checks in, the hotel staff must enter your passport details int
 
 Bottom line: It’s not personal. It’s a mix of policy, technology, and convenience. Your job is to bypass these hotels entirely.
 
-**Booking a hotel in China as a foreign traveler?** This guide is part of our [Hotels in China for Foreigners hub](/hotels-in-china/), where we explain passport-friendly hotels, police registration, booking checks, rejection risks, and what to prepare before you arrive.
+**Booking a hotel in China as a foreign traveler?** This guide is part of our [Hotels in China for Foreigners hub](/hotels-in-china), where we explain passport-friendly hotels, police registration, booking checks, rejection risks, and what to prepare before you arrive.
 
 ## How to Book Hotels That Accept Foreigners
 
@@ -216,9 +216,9 @@ Does your hotel offer a free airport shuttle?| 你们酒店有免费接送机吗
 
 Planning your China trip? These practical guides may also help before and after you check in:
 
-  * [Payments in China for Foreigners](/payments-in-china/)
-  * [Internet, VPN and SIM in China](/internet-in-china/)
-  * [Maps and Navigation in China](/maps-navigation-in-china/)
-  * [Transport in China](/transport-in-china/)
+  * [Payments in China for Foreigners](/payments-in-china)
+  * [Internet, VPN and SIM in China](/internet-in-china)
+  * [Maps and Navigation in China](/maps-navigation-in-china)
+  * [Transport in China](/transport-in-china)
 
 ⚠️ Last updated: May 2026 (Verified for current hotel policies). Always double-check with your hotel or booking platform if something seems unclear.

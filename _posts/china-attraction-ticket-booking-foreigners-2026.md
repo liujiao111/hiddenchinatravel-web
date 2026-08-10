@@ -9,7 +9,7 @@ author:
   picture: "/assets/blog/authors/joy-liu.jpg"
 ogImage:
   url: "/assets/blog/china-attraction-ticket-booking-foreigners-2026/cover.webp"
-canonical: "https://hiddenchinatravel.com/china-attraction-ticket-booking-foreigners-2026/"
+canonical: "https://hiddenchinatravel.com/china-attraction-ticket-booking-foreigners-2026"
 keywords:
   - "alipay booking china"
   - "attraction tickets china"
@@ -31,7 +31,7 @@ keywords:
   - "visiting china tips"
   - "wechat booking china"
 section: "Attraction Tickets in China"
-sourceUrl: "https://hiddenchinatravel.com/china-attraction-ticket-booking-foreigners-2026/"
+sourceUrl: "https://hiddenchinatravel.com/china-attraction-ticket-booking-foreigners-2026"
 ---
 Last updated: 2026 | Reading time: ~8 minutes
 
@@ -61,7 +61,7 @@ Golden Week / May holiday travel| Book 2–4 weeks out the moment the window ope
 Small local attraction, not on Trip.com| WeChat mini-program or official attraction website with passport number  
 ![foreigner unable to book attraction tickets in China on smartphone showing booking failed error](/assets/blog/china-attraction-ticket-booking-foreigners-2026/image-3.webp)
 
-**Booking attraction tickets in China with a foreign passport?** This guide is part of our [Attraction Tickets in China hub](/attraction-tickets-in-china/), where we explain real-name booking, passport verification, official platforms, third-party apps, booking windows, and common ticket problems foreign travelers may face.
+**Booking attraction tickets in China with a foreign passport?** This guide is part of our [Attraction Tickets in China hub](/attraction-tickets-in-china), where we explain real-name booking, passport verification, official platforms, third-party apps, booking windows, and common ticket problems foreign travelers may face.
 
 Before diving in — if you just need a quick answer: **Trip.com** is where most foreigners should start. English interface, international card support, foreign passport accepted. If your attraction isn’t listed there, keep reading.
 
@@ -233,13 +233,13 @@ The goal isn’t to master China’s booking ecosystem. The goal is to not miss 
 
 Planning your China trip? These practical guides may also help when booking tickets, arranging transport, and preparing your digital setup:
 
-  * [Attraction Tickets in China](/attraction-tickets-in-china/)
+  * [Attraction Tickets in China](/attraction-tickets-in-china)
   * [Why China Attractions Require Reservations](/why-china-attractions-require-reservations)
   * [How to Book High-Speed Rail Tickets in China](/book-china-high-speed-rail-foreigners)
-  * [Payments in China for Foreigners](/payments-in-china/)
-  * [Internet, VPN and SIM in China](/internet-in-china/)
-  * [Transport in China](/transport-in-china/)
-  * [Hotels in China for Foreigners](/hotels-in-china/)
+  * [Payments in China for Foreigners](/payments-in-china)
+  * [Internet, VPN and SIM in China](/internet-in-china)
+  * [Transport in China](/transport-in-china)
+  * [Hotels in China for Foreigners](/hotels-in-china)
 
 * * *
 

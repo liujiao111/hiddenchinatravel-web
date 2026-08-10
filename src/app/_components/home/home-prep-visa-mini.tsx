@@ -1,6 +1,7 @@
 "use client";
 
 import { FancySelect } from "@/app/china-visa-checker/_components/fancy-select";
+import { useQuickVisaLookup } from "@/lib/home/use-quick-visa-lookup";
 import {
   evaluateQuickVisa,
   type QuickVisaLookup,
@@ -11,15 +12,27 @@ import { useMemo, useState } from "react";
 const DEFAULT_COUNTRY = "United States";
 
 type Props = {
-  lookup: QuickVisaLookup;
+  /** Optional SSR payload; omit on homepage to keep HTML lean */
+  lookup?: QuickVisaLookup;
 };
 
-export function HomePrepVisaMini({ lookup }: Props) {
+export function HomePrepVisaMini({ lookup: initialLookup }: Props) {
+  const lookup = useQuickVisaLookup(initialLookup);
   const [country, setCountry] = useState(DEFAULT_COUNTRY);
   const result = useMemo(
-    () => evaluateQuickVisa(country, lookup),
+    () => (lookup ? evaluateQuickVisa(country, lookup) : { status: "idle" as const }),
     [country, lookup],
   );
+
+  if (!lookup) {
+    return (
+      <div
+        className="h-12 rounded-full bg-[var(--brand-cream)]"
+        aria-busy
+        aria-label="Loading visa checker"
+      />
+    );
+  }
 
   return (
     <div className="relative z-10 space-y-3">

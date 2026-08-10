@@ -11,9 +11,9 @@ import { HOME_OG_IMAGE_URL } from "@/lib/constants";
 import type { Metadata } from "next";
 
 const pageTitle =
-  "China Travel Guide for Foreigners 2026: Payments, Internet & Entry";
+  "China Trip Prep for Foreigners: Alipay, eSIM, VPN & Visa (2026)";
 const pageDescription =
-  "Plan your first China trip with practical 2026 guides for visas, Alipay, WeChat Pay, eSIMs, maps, hotels, and trains.";
+  "Practical prep for a first China trip: Alipay and WeChat Pay, eSIM or SIM, VPN backup, maps, hotels, and visa checks — not a generic sightseeing guide.";
 
 export const metadata: Metadata = {
   title: {
@@ -46,7 +46,7 @@ export default function Index() {
       <HomeHero />
       <HomeWhyUs />
       <HomeGettingStarted />
-      <ItineraryPlannerSection source="home" />
+      <ItineraryPlannerSection source="home" deferForm />
       <HomeFeaturedGuides posts={allPosts} />
       <HomeDestinations variant="home" />
       <HomeFaqSection />

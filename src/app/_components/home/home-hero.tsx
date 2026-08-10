@@ -12,6 +12,7 @@ export function HomeHero() {
         fill
         priority
         fetchPriority="high"
+        quality={70}
         sizes="100vw"
         className="object-cover object-center scale-[1.02] brightness-[1.05] contrast-[0.95] saturate-[1.05]"
       />

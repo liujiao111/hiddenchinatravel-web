@@ -46,28 +46,131 @@ const SECTION_HUB_MAP: Record<string, ArticleHubRef> = {
   },
 };
 
+/**
+ * High-intent SEO clusters (food / payments / real-name / VPN / SIM).
+ * Prefer these cross-links in Continue reading even across sections.
+ */
+const CLUSTER_RELATED_SLUGS: Record<string, readonly string[]> = {
+  "order-food-china-without-chinese-number": [
+    "how-to-use-meituan",
+    "alipay-for-foreigners-china",
+    "china-sim-card-for-foreigners",
+    "alipay-wechat-pay-verification-failed",
+  ],
+  "how-to-use-meituan": [
+    "order-food-china-without-chinese-number",
+    "alipay-for-foreigners-china",
+    "china-sim-card-for-foreigners",
+  ],
+  "alipay-wechat-pay-verification-failed": [
+    "why-your-payment-fails-in-china",
+    "alipay-for-foreigners-china",
+    "china-real-name-system-foreigners",
+    "china-sim-card-for-foreigners",
+  ],
+  "why-your-payment-fails-in-china": [
+    "alipay-wechat-pay-verification-failed",
+    "alipay-for-foreigners-china",
+    "wechat-pay-for-foreigners-china",
+    "digital-survival-china-payment-guide",
+  ],
+  "alipay-for-foreigners-china": [
+    "alipay-wechat-pay-verification-failed",
+    "why-your-payment-fails-in-china",
+    "wechat-pay-for-foreigners-china",
+    "order-food-china-without-chinese-number",
+  ],
+  "wechat-pay-for-foreigners-china": [
+    "alipay-wechat-pay-verification-failed",
+    "alipay-for-foreigners-china",
+    "why-your-payment-fails-in-china",
+  ],
+  "china-real-name-system-foreigners": [
+    "china-sim-card-for-foreigners",
+    "alipay-wechat-pay-verification-failed",
+    "hotels-in-china-for-foreigners",
+    "china-attraction-ticket-booking-foreigners-2026",
+  ],
+  "best-vpn-for-china": [
+    "do-you-need-vpn-china",
+    "best-esim-for-china-travel",
+    "china-sim-card-for-foreigners",
+    "digital-survival-china-internet-guide",
+  ],
+  "do-you-need-vpn-china": [
+    "best-vpn-for-china",
+    "best-esim-for-china-travel",
+    "china-sim-card-for-foreigners",
+  ],
+  "china-sim-card-for-foreigners": [
+    "china-real-name-system-foreigners",
+    "best-esim-for-china-travel",
+    "best-vpn-for-china",
+    "order-food-china-without-chinese-number",
+  ],
+  "best-esim-for-china-travel": [
+    "china-sim-card-for-foreigners",
+    "do-you-need-vpn-china",
+    "best-vpn-for-china",
+  ],
+  "digital-survival-china-payment-guide": [
+    "alipay-wechat-pay-verification-failed",
+    "alipay-for-foreigners-china",
+    "why-your-payment-fails-in-china",
+  ],
+  "digital-survival-china-internet-guide": [
+    "best-vpn-for-china",
+    "china-sim-card-for-foreigners",
+    "best-esim-for-china-travel",
+  ],
+};
+
 export function resolveArticleHub(section?: string): ArticleHubRef | null {
   if (!section) return null;
   return SECTION_HUB_MAP[section] ?? null;
 }
 
 /**
- * Same-section posts only, newest first, exclude current.
- * No cross-topic filler when the section has fewer than `limit` posts.
+ * Prefer curated cluster links for proven SEO pages, then fill with
+ * same-section posts (newest first). Never invent missing slugs.
  */
 export function getRelatedPosts(
   current: Pick<Post, "slug" | "section">,
   allPosts: Post[],
   limit = 3,
 ): Post[] {
-  if (!current.section || limit <= 0) return [];
-  return allPosts
-    .filter(
-      (p) =>
-        p.slug !== current.slug &&
-        Boolean(p.section) &&
-        p.section === current.section,
-    )
-    .sort((a, b) => (a.date > b.date ? -1 : 1))
-    .slice(0, limit);
+  if (limit <= 0) return [];
+
+  const bySlug = new Map(allPosts.map((p) => [p.slug, p]));
+  const picked: Post[] = [];
+  const seen = new Set<string>([current.slug]);
+
+  const pushSlug = (slug: string) => {
+    if (picked.length >= limit || seen.has(slug)) return;
+    const post = bySlug.get(slug);
+    if (!post) return;
+    seen.add(slug);
+    picked.push(post);
+  };
+
+  for (const slug of CLUSTER_RELATED_SLUGS[current.slug] ?? []) {
+    pushSlug(slug);
+  }
+
+  if (picked.length < limit && current.section) {
+    const sameSection = allPosts
+      .filter(
+        (p) =>
+          !seen.has(p.slug) &&
+          Boolean(p.section) &&
+          p.section === current.section,
+      )
+      .sort((a, b) => (a.date > b.date ? -1 : 1));
+    for (const post of sameSection) {
+      pushSlug(post.slug);
+      if (picked.length >= limit) break;
+    }
+  }
+
+  return picked;
 }
