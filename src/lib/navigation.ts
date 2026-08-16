@@ -55,9 +55,9 @@ export const toolsNav: NavItem[] = [
 ];
 
 export const mainNav: NavItem[] = [
-  { id: "guides", href: "/survival-guides", children: guidesNav },
-  { id: "survivalKit", href: "/survival-kit" },
   { id: "services", href: "/services" },
+  { id: "survivalKit", href: "/survival-kit" },
+  { id: "guides", href: "/survival-guides", children: guidesNav },
   { id: "tools", href: "/tools", children: toolsNav },
   { id: "contact", href: "/contact" },
   { id: "about", href: "/about" },
