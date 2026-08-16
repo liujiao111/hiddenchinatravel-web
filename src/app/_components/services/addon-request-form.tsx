@@ -4,6 +4,8 @@ import {
   submitAddonServiceRequest,
   type AddonRequestState,
 } from "@/app/services/actions";
+import { ContinueOnWhatsApp } from "@/app/_components/forms/continue-on-whatsapp";
+import { WhatsAppOptInFields } from "@/app/_components/forms/whatsapp-opt-in-fields";
 import cn from "classnames";
 import { useActionState } from "react";
 
@@ -22,7 +24,7 @@ type Props = {
   intro: string;
 };
 
-/** Two-field request form: need + contact. */
+/** Need + email (required) + optional WhatsApp opt-in. */
 export function AddonRequestForm({ id, serviceId, title, intro }: Props) {
   const [state, formAction, pending] = useActionState(
     submitAddonServiceRequest,
@@ -36,7 +38,14 @@ export function AddonRequestForm({ id, serviceId, title, intro }: Props) {
         className="scroll-mt-28 rounded-2xl border border-[color-mix(in_srgb,var(--brand-olive)_35%,transparent)] bg-white p-5 md:p-6"
         role="status"
       >
-        <p className="text-sm font-bold text-[var(--brand-olive)]">{state.message}</p>
+        <p className="text-sm font-bold text-[var(--brand-olive)]">
+          {state.message}
+        </p>
+        <ContinueOnWhatsApp
+          name={state.name}
+          context={`I'd like to continue about my ${serviceId} request.`}
+          className="btn-brand mt-4 inline-flex min-h-11 w-full items-center justify-center px-6 py-3 text-sm sm:w-auto"
+        />
       </div>
     );
   }
@@ -81,20 +90,40 @@ export function AddonRequestForm({ id, serviceId, title, intro }: Props) {
         </div>
 
         <div>
-          <label htmlFor={`${id}-contact`} className={labelClass}>
-            Email or WhatsApp
+          <label htmlFor={`${id}-name`} className={labelClass}>
+            Name{" "}
+            <span className="font-normal text-[var(--brand-ink-muted)]">
+              (optional)
+            </span>
           </label>
           <input
-            id={`${id}-contact`}
-            name="contact"
+            id={`${id}-name`}
+            name="name"
             type="text"
-            required
-            maxLength={200}
-            autoComplete="email"
-            placeholder="you@example.com or +86…"
+            maxLength={120}
+            autoComplete="name"
+            placeholder="Your name"
             className={fieldClass}
           />
         </div>
+
+        <div>
+          <label htmlFor={`${id}-email`} className={labelClass}>
+            Email
+          </label>
+          <input
+            id={`${id}-email`}
+            name="email"
+            type="email"
+            required
+            maxLength={200}
+            autoComplete="email"
+            placeholder="you@example.com"
+            className={fieldClass}
+          />
+        </div>
+
+        <WhatsAppOptInFields idPrefix={id} />
 
         {state.message && !state.ok ? (
           <p className="text-sm text-[var(--brand-coral)]" role="alert">

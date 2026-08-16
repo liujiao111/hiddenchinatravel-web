@@ -2,12 +2,17 @@
 
 import { SITE_EMAIL } from "@/lib/constants";
 import { sendFormNotify } from "@/lib/forms/notify";
+import {
+  parseWhatsAppField,
+  whatsappNotifyLines,
+} from "@/lib/forms/whatsapp-field";
 import { appendFile, access, mkdir, writeFile } from "fs/promises";
 import path from "path";
 
 export type ContactFormState = {
   ok: boolean;
   message: string;
+  name?: string;
 };
 
 const ALLOWED_SERVICE_TYPES = new Set([
@@ -20,7 +25,7 @@ const ALLOWED_SERVICE_TYPES = new Set([
 ]);
 
 const CSV_HEADER =
-  "timestamp,name,email,subject,serviceType,message\n";
+  "timestamp,name,email,whatsapp,whatsappOptIn,subject,serviceType,message\n";
 const DATA_DIR = path.join(process.cwd(), "data");
 const CSV_PATH = path.join(DATA_DIR, "contact-submissions.csv");
 
@@ -53,7 +58,7 @@ export async function submitContactForm(
   const honeypot = String(formData.get("company") ?? "").trim();
 
   if (honeypot) {
-    return { ok: true, message: "Thanks — your message has been received." };
+    return { ok: true, message: "Thanks — your message has been received.", name };
   }
 
   if (!name || name.length > 120) {
@@ -62,6 +67,11 @@ export async function submitContactForm(
 
   if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) || email.length > 200) {
     return { ok: false, message: "Please enter a valid email address." };
+  }
+
+  const whatsappField = parseWhatsAppField(formData);
+  if (!whatsappField.ok) {
+    return { ok: false, message: whatsappField.message };
   }
 
   if (!ALLOWED_SERVICE_TYPES.has(serviceType)) {
@@ -89,6 +99,8 @@ export async function submitContactForm(
     timestamp,
     escapeCsv(name),
     escapeCsv(email),
+    escapeCsv(whatsappField.whatsapp),
+    whatsappField.optIn ? "yes" : "no",
     escapeCsv(subjectLine),
     escapeCsv(serviceType),
     escapeCsv(message),
@@ -103,6 +115,7 @@ export async function submitContactForm(
       `Time: ${timestamp}`,
       `Name: ${name}`,
       `Email: ${email}`,
+      ...whatsappNotifyLines(whatsappField.whatsapp, whatsappField.optIn),
       `Type: ${serviceType}`,
       `Subject: ${subjectLine}`,
       "",
@@ -136,6 +149,8 @@ export async function submitContactForm(
 
   return {
     ok: true,
-    message: "Thanks — message received. We’ll reply within 24–48 hours.",
+    name,
+    message:
+      "Thanks — message received. We usually reply within 30 minutes.",
   };
 }

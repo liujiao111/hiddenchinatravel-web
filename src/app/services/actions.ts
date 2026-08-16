@@ -2,15 +2,21 @@
 
 import { SITE_EMAIL } from "@/lib/constants";
 import { sendFormNotify } from "@/lib/forms/notify";
+import {
+  parseWhatsAppField,
+  whatsappNotifyLines,
+} from "@/lib/forms/whatsapp-field";
 import { appendFile, access, mkdir, writeFile } from "fs/promises";
 import path from "path";
 
 export type AddonRequestState = {
   ok: boolean;
   message: string;
+  name?: string;
 };
 
-const CSV_HEADER = "timestamp,service,contact,need\n";
+const CSV_HEADER =
+  "timestamp,service,name,email,whatsapp,whatsappOptIn,need\n";
 const DATA_DIR = path.join(process.cwd(), "data");
 const CSV_PATH = path.join(DATA_DIR, "service-addon-submissions.csv");
 
@@ -41,18 +47,25 @@ export async function submitAddonServiceRequest(
   }
 
   const service = String(formData.get("service") ?? "").trim();
-  const contact = String(formData.get("contact") ?? "").trim();
+  const name = String(formData.get("name") ?? "").trim();
+  const email = String(formData.get("email") ?? "").trim();
   const need = String(formData.get("need") ?? "").trim();
 
   if (!service) {
     return { ok: false, message: "Missing service type." };
   }
 
-  if (!contact || contact.length > 200) {
-    return {
-      ok: false,
-      message: "Please leave an email or WhatsApp we can reach.",
-    };
+  if (name.length > 120) {
+    return { ok: false, message: "Name is too long." };
+  }
+
+  if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) || email.length > 200) {
+    return { ok: false, message: "Please enter a valid email address." };
+  }
+
+  const whatsappField = parseWhatsAppField(formData);
+  if (!whatsappField.ok) {
+    return { ok: false, message: whatsappField.message };
   }
 
   if (!need || need.length < 10) {
@@ -70,18 +83,24 @@ export async function submitAddonServiceRequest(
   const row = [
     timestamp,
     escapeCsv(service),
-    escapeCsv(contact),
+    escapeCsv(name),
+    escapeCsv(email),
+    escapeCsv(whatsappField.whatsapp),
+    whatsappField.optIn ? "yes" : "no",
     escapeCsv(need),
   ].join(",");
 
   const requireEmail = Boolean(process.env.RESEND_API_KEY?.trim());
   const emailed = await sendFormNotify({
     subject: `[Service request] ${service}`,
+    replyTo: email,
     text: [
       "New service / add-on request",
       `Time: ${timestamp}`,
       `Service: ${service}`,
-      `Contact: ${contact}`,
+      `Name: ${name || "(not provided)"}`,
+      `Email: ${email}`,
+      ...whatsappNotifyLines(whatsappField.whatsapp, whatsappField.optIn),
       "",
       need,
     ].join("\n"),
@@ -100,7 +119,7 @@ export async function submitAddonServiceRequest(
     console.error("[service-addon-submission-failed]", {
       timestamp,
       service,
-      contact,
+      email,
       emailed,
       savedCsv,
     });
@@ -112,6 +131,7 @@ export async function submitAddonServiceRequest(
 
   return {
     ok: true,
+    name: name || undefined,
     message: "Thanks — we'll reply within 24–48 hours.",
   };
 }

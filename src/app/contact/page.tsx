@@ -19,7 +19,7 @@ import Link from "next/link";
 
 const pageTitle = `Contact ${SITE_NAME}`;
 const pageDescription =
-  "Contact Hidden China Travel for custom itineraries, booking help, on-trip questions, partnerships, or guide feedback. We usually reply within 24–48 hours.";
+  "Contact Hidden China Travel for custom itineraries, booking help, on-trip questions, partnerships, or guide feedback. We usually reply within 30 minutes.";
 
 export const metadata: Metadata = {
   title: {
@@ -89,7 +89,7 @@ export default function ContactPage() {
             Planning help, booking questions, partnerships, or guide feedback —
             send a note. {SITE_FOUNDER_NAME} reads every message and usually
             replies within{" "}
-            <span className="font-bold text-[var(--brand-cta)]">24–48 hours</span>
+            <span className="font-bold text-[var(--brand-cta)]">30 minutes</span>
             .
           </p>
         </header>
@@ -150,8 +150,8 @@ export default function ContactPage() {
               </h2>
               <ClientEmailLink className="break-all text-sm font-normal text-[var(--brand-ink-muted)] transition-colors duration-300 hover:text-[var(--brand-coral)]" />
               <p className="mt-2 text-sm font-normal leading-relaxed text-[var(--brand-ink-muted)]">
-                Prefer email? Write anytime — we aim to reply within 24–48
-                hours.
+                Prefer email? Write anytime — we usually reply within 30
+                minutes.
               </p>
             </div>
 

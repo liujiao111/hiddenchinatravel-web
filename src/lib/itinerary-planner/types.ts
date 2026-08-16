@@ -6,6 +6,8 @@ export type PlannerFormValues = {
   budget: string;
   name: string;
   email: string;
+  whatsapp: string;
+  whatsappOptIn: boolean;
   nationality: string;
   notes: string;
 };
@@ -22,6 +24,8 @@ export const defaultPlannerFormValues = (
   budget: "",
   name: "",
   email: "",
+  whatsapp: "",
+  whatsappOptIn: false,
   nationality,
   notes: "",
 });

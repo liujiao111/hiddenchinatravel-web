@@ -5,6 +5,8 @@ import {
   submitItineraryPlan,
   type PlannerFormState,
 } from "@/app/china-itinerary-planner/actions";
+import { ContinueOnWhatsApp } from "@/app/_components/forms/continue-on-whatsapp";
+import { WhatsAppOptInFields } from "@/app/_components/forms/whatsapp-opt-in-fields";
 import { ChipSelect } from "@/app/_components/itinerary-planner/chip-select";
 import { StyleIcon } from "@/app/_components/itinerary-planner/planner-icons";
 import {
@@ -135,6 +137,13 @@ export function ItineraryPlannerForm({
         <p className="text-sm font-normal leading-relaxed text-[var(--brand-ink-muted)] md:text-base">
           {plannerSuccessCopy.body}
         </p>
+        <p className="mt-4 text-sm font-normal text-[var(--brand-cta)]">
+          {plannerSuccessCopy.whatsappHint}
+        </p>
+        <ContinueOnWhatsApp
+          name={state.name}
+          context="I'd like to continue about my China itinerary request."
+        />
       </div>
     );
   }
@@ -395,6 +404,14 @@ export function ItineraryPlannerForm({
               placeholder="you@example.com"
             />
           </div>
+
+          <WhatsAppOptInFields
+            idPrefix="planner"
+            value={values.whatsapp}
+            optIn={values.whatsappOptIn}
+            onChange={(whatsapp) => patch({ whatsapp })}
+            onOptInChange={(whatsappOptIn) => patch({ whatsappOptIn })}
+          />
 
           <FancySelect
             id="planner-nationality"

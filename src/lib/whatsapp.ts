@@ -38,3 +38,23 @@ export function getWhatsAppHref(prefill: string = SITE_WHATSAPP_PREFILL): string
   }
   return `https://wa.me/${digits}?text=${encodeURIComponent(prefill)}`;
 }
+
+/**
+ * Prefer number + prefilled text (form success CTAs).
+ * Falls back to the branded chat URL when no business number is configured.
+ */
+export function getWhatsAppPrefillHref(prefill: string): string {
+  const digits = SITE_WHATSAPP_NUMBER.replace(/\D/g, "");
+  if (digits) {
+    return `https://wa.me/${digits}?text=${encodeURIComponent(prefill)}`;
+  }
+  return getWhatsAppHref(prefill);
+}
+
+export function buildLeadWhatsAppPrefill(input: {
+  name?: string;
+  context: string;
+}): string {
+  const who = input.name?.trim() ? ` — ${input.name.trim()}` : "";
+  return `Hi! I just submitted a request on Hidden China Travel${who}. ${input.context}`;
+}

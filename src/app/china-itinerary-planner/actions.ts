@@ -2,16 +2,21 @@
 
 import { SITE_EMAIL } from "@/lib/constants";
 import { sendFormNotify } from "@/lib/forms/notify";
+import {
+  parseWhatsAppField,
+  whatsappNotifyLines,
+} from "@/lib/forms/whatsapp-field";
 import { appendFile, access, mkdir, writeFile } from "fs/promises";
 import path from "path";
 
 export type PlannerFormState = {
   ok: boolean;
   message: string;
+  name?: string;
 };
 
 const CSV_HEADER =
-  "timestamp,source,name,email,nationality,destinations,days,travelers,styles,budget,notes\n";
+  "timestamp,source,name,email,whatsapp,whatsappOptIn,nationality,destinations,days,travelers,styles,budget,notes\n";
 const DATA_DIR = path.join(process.cwd(), "data");
 const CSV_PATH = path.join(DATA_DIR, "itinerary-submissions.csv");
 
@@ -37,6 +42,8 @@ type SubmissionPayload = {
   source: string;
   name: string;
   email: string;
+  whatsapp: string;
+  whatsappOptIn: boolean;
   nationality: string;
   destinations: string;
   days: number;
@@ -65,6 +72,7 @@ async function persistViaResend(payload: SubmissionPayload): Promise<boolean> {
       `Time: ${payload.timestamp}`,
       `Name: ${payload.name}`,
       `Email: ${payload.email}`,
+      ...whatsappNotifyLines(payload.whatsapp, payload.whatsappOptIn),
       `Passport: ${payload.nationality}`,
       `Destinations: ${payload.destinations}`,
       `Days: ${payload.days}`,
@@ -101,6 +109,7 @@ export async function submitItineraryPlan(
     return {
       ok: true,
       message: "Thanks — your itinerary request has been received.",
+      name: String(formData.get("name") ?? "").trim() || undefined,
     };
   }
 
@@ -144,6 +153,11 @@ export async function submitItineraryPlan(
     return { ok: false, message: "Please enter a valid email address." };
   }
 
+  const whatsappField = parseWhatsAppField(formData);
+  if (!whatsappField.ok) {
+    return { ok: false, message: whatsappField.message };
+  }
+
   if (!nationality || nationality.length > 120) {
     return { ok: false, message: "Please select your passport country." };
   }
@@ -159,6 +173,8 @@ export async function submitItineraryPlan(
     source: allowedSource,
     name,
     email,
+    whatsapp: whatsappField.whatsapp,
+    whatsappOptIn: whatsappField.optIn,
     nationality,
     destinations,
     days,
@@ -173,6 +189,8 @@ export async function submitItineraryPlan(
     escapeCsv(allowedSource),
     escapeCsv(name),
     escapeCsv(email),
+    escapeCsv(payload.whatsapp),
+    payload.whatsappOptIn ? "yes" : "no",
     escapeCsv(nationality),
     escapeCsv(destinations),
     String(days),
@@ -199,6 +217,7 @@ export async function submitItineraryPlan(
 
   return {
     ok: true,
+    name,
     message: "Thanks — your itinerary request has been received.",
   };
 }

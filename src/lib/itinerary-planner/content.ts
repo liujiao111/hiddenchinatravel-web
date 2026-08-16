@@ -158,4 +158,6 @@ export const plannerAddonLinksFooter = {
 export const plannerSuccessCopy = {
   title: "We've got your request.",
   body: "Thanks — your custom itinerary request is in. We'll reply within 24–48 hours with next steps and pricing for your dates. Nothing is charged until you confirm scope with us.",
+  whatsappHint:
+    "Want a faster reply? Continue on WhatsApp — we’ll match your request to this chat.",
 } as const;
