@@ -2,11 +2,11 @@ import Link from "next/link";
 import Container from "@/app/_components/container";
 import { LastUpdated } from "@/app/_components/last-updated";
 import { ClientEmailLink } from "@/components/contact/client-email-link";
-import { SITE_EMAIL, SITE_LAST_UPDATED, SITE_NAME, SITE_URL } from "@/lib/constants";
+import { SITE_LAST_UPDATED, SITE_NAME, SITE_URL } from "@/lib/constants";
 import type { Metadata } from "next";
 
 const pageTitle = `Privacy Policy | ${SITE_NAME}`;
-const pageDescription = `How ${SITE_NAME} collects, uses, and protects information when you visit our website.`;
+const pageDescription = `How ${SITE_NAME} collects, uses, and protects information when you visit our website, submit a form, or buy a planning service.`;
 
 export const metadata: Metadata = {
   title: {
@@ -42,255 +42,226 @@ function Section({
 }) {
   return (
     <section id={id} className="mb-12 scroll-mt-32 md:mb-14">
-      <h2 className="mb-4 text-xl font-light tracking-wide text-[var(--brand-ink)] md:text-3xl">
-        <span className="mr-2 font-light text-[var(--brand-muted)]">
-          {number}.
-        </span>
+      <h2 className="mb-4 text-xl font-bold tracking-tight text-[var(--brand-cta)] md:text-2xl">
+        <span className="mr-2 text-[var(--brand-mango)]">{number}.</span>
         {title}
       </h2>
-      <div className="max-w-3xl space-y-4 text-base font-light leading-relaxed text-[var(--brand-ink-muted)] md:text-lg">
+      <div className="max-w-3xl space-y-4 text-base font-normal leading-relaxed text-[var(--brand-ink-muted)] md:text-lg">
         {children}
       </div>
     </section>
   );
 }
 
+const toc = [
+  { href: "#information-we-collect", label: "Information we collect" },
+  { href: "#how-we-use", label: "How we use it" },
+  { href: "#email-whatsapp", label: "Email & WhatsApp" },
+  { href: "#payments", label: "Payments" },
+  { href: "#cookies", label: "Cookies & analytics" },
+  { href: "#affiliate-links", label: "Affiliate links" },
+  { href: "#your-rights", label: "Your rights" },
+  { href: "#contact", label: "Contact" },
+];
+
 export default function PrivacyPage() {
   return (
     <main>
       <Container>
         <nav aria-label="Breadcrumb" className="mb-6 mt-8">
-          <ol className="flex flex-wrap items-center gap-2 text-sm font-light text-[var(--brand-muted)]">
+          <ol className="flex flex-wrap items-center gap-2 text-sm font-normal text-[var(--brand-ink-muted)]">
             <li>
               <Link
                 href="/"
-                className="transition-colors duration-500 hover:text-[var(--brand-ink)] hover:underline"
+                className="transition-colors duration-300 hover:text-[var(--brand-cta)] hover:underline"
               >
                 Home
               </Link>
             </li>
-            <li aria-hidden className="text-[var(--brand-warm)]">
-              /
-            </li>
+            <li aria-hidden>/</li>
             <li className="text-[var(--brand-ink)]">Privacy</li>
           </ol>
         </nav>
 
         <header className="mb-12 max-w-3xl md:mb-16">
-          <p className="mb-4 text-xs font-light uppercase tracking-[0.16em] text-[var(--brand-muted)]">
+          <p className="mb-3 text-xs font-bold uppercase tracking-[0.18em] text-[var(--brand-mango)]">
             Legal
           </p>
-          <h1 className="mb-4 text-2xl font-light leading-tight tracking-wide text-[var(--brand-ink)] md:text-4xl">
+          <h1 className="mb-4 text-2xl font-bold leading-tight tracking-tight text-[var(--brand-cta)] md:text-4xl">
             Privacy Policy
           </h1>
           <LastUpdated date={SITE_LAST_UPDATED} className="mb-6" />
-          <p className="text-sm font-light leading-relaxed text-[var(--brand-ink-muted)] md:text-base">
-            Welcome to{" "}
-            <span className="font-light tracking-wide text-[var(--brand-ink)]">
-              hiddenchinatravel
-            </span>
-            . This Privacy Policy explains how we collect, use, and protect your
-            information when you visit our website.
-          </p>
-          <p className="mt-4 text-sm font-light leading-relaxed text-[var(--brand-ink-muted)] md:text-base">
-            By using this website, you agree to the terms of this Privacy
-            Policy.
+          <p className="text-sm font-normal leading-relaxed text-[var(--brand-ink-muted)] md:text-base">
+            This policy explains how {SITE_NAME} (
+            <a href={SITE_URL} className="underline underline-offset-4">
+              {SITE_URL.replace(/^https?:\/\//, "")}
+            </a>
+            ) collects, uses, and protects information when you visit the site,
+            send a message, request an itinerary, or pay for a planning service.
           </p>
         </header>
 
         <div className="grid grid-cols-1 items-start gap-12 pb-24 lg:grid-cols-[minmax(0,1fr)_240px] lg:gap-16">
           <article>
-            <Section id="information-we-collect" number={1} title="Information We Collect">
-              <p>We may collect the following types of information:</p>
-
-              <h3 className="!mt-6 text-lg font-light tracking-wide text-[var(--brand-ink)] md:text-xl">
-                a. Personal Information
+            <Section
+              id="information-we-collect"
+              number={1}
+              title="Information We Collect"
+            >
+              <p>We collect information in these ways:</p>
+              <h3 className="!mt-6 text-lg font-bold tracking-tight text-[var(--brand-cta)]">
+                a. Information you give us
               </h3>
               <p>
-                We do not directly collect personal information unless you
-                voluntarily provide it (for example, contacting us via email).
+                When you use the contact form, itinerary planner, service
+                request forms, or WhatsApp opt-in, we may collect your name,
+                email, WhatsApp number (if you choose to share it), trip
+                details (cities, dates, style, passport country), and the
+                message you write.
               </p>
-
-              <h3 className="!mt-6 text-lg font-light tracking-wide text-[var(--brand-ink)] md:text-xl">
-                b. Non-Personal Information
+              <h3 className="!mt-6 text-lg font-bold tracking-tight text-[var(--brand-cta)]">
+                b. Information collected automatically
               </h3>
-              <p>When you visit our website, we may automatically collect:</p>
-              <ul className="list-disc space-y-2 pl-5 marker:text-[var(--brand-muted)]">
-                <li>IP address</li>
-                <li>Browser type</li>
-                <li>Device information</li>
-                <li>Pages visited</li>
-                <li>Time spent on pages</li>
+              <p>When you visit the website, we may collect:</p>
+              <ul className="list-disc space-y-2 pl-5 marker:text-[var(--brand-coral)]">
+                <li>IP address and approximate location</li>
+                <li>Browser and device type</li>
+                <li>Pages viewed and referring URL</li>
+                <li>Click events on CTAs and affiliate links</li>
               </ul>
-              <p>
-                This information is used for analytics and improving user
-                experience.
-              </p>
             </Section>
 
             <Section id="how-we-use" number={2} title="How We Use Your Information">
-              <p>We use the collected information to:</p>
-              <ul className="list-disc space-y-2 pl-5 marker:text-[var(--brand-muted)]">
-                <li>Improve website content and user experience</li>
-                <li>Understand how visitors use our site</li>
-                <li>Monitor website performance</li>
-                <li>Prevent fraud and ensure security</li>
-              </ul>
-            </Section>
-
-            <Section id="cookies" number={3} title="Cookies">
-              <p>We use cookies to enhance your browsing experience.</p>
-              <p>Cookies help us:</p>
-              <ul className="list-disc space-y-2 pl-5 marker:text-[var(--brand-muted)]">
-                <li>Understand user behavior</li>
-                <li>Remember preferences</li>
-                <li>Analyze traffic</li>
+              <p>We use this information to:</p>
+              <ul className="list-disc space-y-2 pl-5 marker:text-[var(--brand-coral)]">
+                <li>Reply to trip requests and messages</li>
+                <li>Confirm scope, pricing, and deliver paid planning work</li>
+                <li>Improve guides, tools, and site performance</li>
+                <li>Understand which pages help travelers most</li>
+                <li>Prevent spam and abuse of forms</li>
               </ul>
               <p>
-                You can disable cookies through your browser settings. However,
-                some parts of the website may not function properly.
+                We do not sell your personal information. We do not use your
+                trip details for unrelated marketing lists.
               </p>
             </Section>
 
-            <Section id="third-party" number={4} title="Third-Party Services">
+            <Section
+              id="email-whatsapp"
+              number={3}
+              title="Email, Forms & WhatsApp"
+            >
               <p>
-                We may use third-party services that collect, monitor, and
-                analyze usage data.
-              </p>
-              <p>These may include:</p>
-              <ul className="list-disc space-y-2 pl-5 marker:text-[var(--brand-muted)]">
-                <li>Google Analytics (for traffic analysis)</li>
-                <li>
-                  Advertising platforms such as Google AdSense (future use)
-                </li>
-              </ul>
-              <p>
-                These third parties may use cookies and similar tracking
-                technologies.
+                Form notifications are sent through Resend so we can reply from
+                our {SITE_NAME} inbox. If you opt in to WhatsApp, we may
+                continue the same request in that chat. WhatsApp is operated by
+                Meta; their privacy policy applies to that channel.
               </p>
               <p>
-                We do not control how these third parties collect or use your
-                data. Please review their respective privacy policies.
+                Submissions may also be stored so we can follow up on your
+                request. We keep them only as long as needed to deliver the
+                service or meet legal record-keeping needs.
               </p>
             </Section>
 
-            <Section id="affiliate-links" number={5} title="Affiliate Links">
+            <Section id="payments" number={4} title="Payments">
               <p>
-                Some pages on this website may contain affiliate links.
+                Paid services may be purchased through Stripe checkout or
+                Stripe Payment Links. Stripe processes card details. We do not
+                store full card numbers on our servers. See Stripe’s privacy
+                policy for how they handle payment data.
               </p>
-              <p>This means:</p>
-              <ul className="list-disc space-y-2 pl-5 marker:text-[var(--brand-muted)]">
-                <li>
-                  We may earn a small commission if you make a purchase
-                </li>
-                <li>There is no extra cost to you</li>
-              </ul>
+            </Section>
+
+            <Section id="cookies" number={5} title="Cookies & Analytics">
               <p>
-                We only recommend services and products that we believe are
-                useful for travelers. Affiliate links on this site typically use
-                short paths such as{" "}
-                <code className="rounded-sm bg-[var(--brand-soft)] px-1.5 py-0.5 text-sm font-light">
+                We use cookies and similar tools to understand traffic and
+                improve the site. This may include Google Analytics (when
+                configured) and Vercel Analytics. These providers may set their
+                own cookies.
+              </p>
+              <p>
+                You can disable cookies in your browser. Some site features may
+                then work less smoothly.
+              </p>
+            </Section>
+
+            <Section id="affiliate-links" number={6} title="Affiliate Links">
+              <p>
+                Some pages include affiliate links (usually short paths such as{" "}
+                <code className="rounded-full bg-[var(--brand-soft)] px-2 py-0.5 text-sm">
                   /go/…
                 </code>
-                .
+                ). If you book or buy through them, we may earn a small
+                commission at no extra cost to you. Click tracking may record
+                that a link was used — not your payment details.
               </p>
             </Section>
 
-            <Section id="data-protection" number={6} title="Data Protection">
+            <Section id="third-party" number={7} title="Other Third Parties">
               <p>
-                We take reasonable measures to protect your information.
-              </p>
-              <p>
-                However, no method of transmission over the Internet is 100%
-                secure. We cannot guarantee absolute security.
+                Hosting and delivery may involve Vercel. Maps, fonts, and
+                similar utilities may load from their providers. We do not
+                control how those services use data; please read their policies.
               </p>
             </Section>
 
-            <Section id="your-rights" number={7} title="Your Rights">
+            <Section id="your-rights" number={8} title="Your Rights">
               <p>Depending on your location, you may have the right to:</p>
-              <ul className="list-disc space-y-2 pl-5 marker:text-[var(--brand-muted)]">
+              <ul className="list-disc space-y-2 pl-5 marker:text-[var(--brand-coral)]">
                 <li>Request access to your data</li>
                 <li>Request correction or deletion</li>
-                <li>Withdraw consent</li>
+                <li>Withdraw consent for optional contact (such as WhatsApp)</li>
               </ul>
               <p>
-                To exercise these rights, please contact us at{" "}
-                <ClientEmailLink className="font-light underline underline-offset-4 transition-colors duration-500 hover:text-[var(--brand-cta)]" />
+                To exercise these rights, email us at{" "}
+                <ClientEmailLink className="font-bold underline underline-offset-4 transition-colors duration-300 hover:text-[var(--brand-cta)]" />
                 .
               </p>
             </Section>
 
-            <Section id="external-links" number={8} title="External Links">
-              <p>Our website may contain links to external websites.</p>
+            <Section id="changes" number={9} title="Changes">
               <p>
-                We are not responsible for the privacy practices or content of
-                those third-party sites.
+                We may update this Privacy Policy from time to time. Changes
+                will be posted on this page with an updated “Last updated”
+                date.
               </p>
             </Section>
 
-            <Section id="changes" number={9} title="Changes to This Policy">
+            <Section id="contact" number={10} title="Contact">
               <p>
-                We may update this Privacy Policy from time to time.
-              </p>
-              <p>
-                Changes will be posted on this page with an updated “Last
-                updated” date.
-              </p>
-            </Section>
-
-            <Section id="contact" number={10} title="Contact Us">
-              <p>
-                If you have any questions about this Privacy Policy, you can
-                contact us at:
-              </p>
-              <p>
-                Email:{" "}
-                <ClientEmailLink className="break-all font-light underline underline-offset-4 transition-colors duration-500 hover:text-[var(--brand-cta)]" />
-              </p>
-            </Section>
-
-            <Section id="consent" number={11} title="Consent">
-              <p>
-                By using our website, you hereby consent to our Privacy Policy
-                and agree to its terms.
+                Questions about this policy:{" "}
+                <ClientEmailLink className="break-all font-bold underline underline-offset-4 transition-colors duration-300 hover:text-[var(--brand-cta)]" />{" "}
+                or the{" "}
+                <Link
+                  href="/contact"
+                  className="font-bold text-[var(--brand-coral)] underline decoration-[color-mix(in_srgb,var(--brand-coral)_35%,transparent)] underline-offset-2"
+                >
+                  contact form
+                </Link>
+                .
               </p>
             </Section>
           </article>
 
           <aside className="sticky top-32 hidden lg:block">
-            <nav
-              aria-label="On this page"
-              className="surface-card bg-[var(--brand-surface)] p-5"
-            >
-              <p className="mb-3 text-xs font-light uppercase tracking-wider text-[var(--brand-muted)]">
+            <nav aria-label="On this page" className="surface-card p-5">
+              <div className="surface-card-bar" aria-hidden />
+              <p className="mb-3 text-xs font-bold uppercase tracking-[0.18em] text-[var(--brand-mango)]">
                 On this page
               </p>
-              <ul className="space-y-2 text-sm font-light text-[var(--brand-ink-muted)]">
-                {[
-                  { href: "#information-we-collect", label: "Information we collect" },
-                  { href: "#how-we-use", label: "How we use it" },
-                  { href: "#cookies", label: "Cookies" },
-                  { href: "#third-party", label: "Third parties" },
-                  { href: "#affiliate-links", label: "Affiliate links" },
-                  { href: "#your-rights", label: "Your rights" },
-                  { href: "#contact", label: "Contact" },
-                ].map((item) => (
+              <ul className="space-y-2 text-sm font-normal text-[var(--brand-ink-muted)]">
+                {toc.map((item) => (
                   <li key={item.href}>
                     <a
                       href={item.href}
-                      className="underline-offset-4 transition-colors duration-500 hover:text-[var(--brand-ink)] hover:underline"
+                      className="transition-colors duration-300 hover:text-[var(--brand-cta)] hover:underline hover:underline-offset-4"
                     >
                       {item.label}
                     </a>
                   </li>
                 ))}
               </ul>
-              <p className="mt-5 border-t border-[color-mix(in_srgb,var(--brand-cream-border)_40%,transparent)] pt-4 text-xs font-light text-[var(--brand-muted)]">
-                Site:{" "}
-                <a href={SITE_URL} className="break-all underline">
-                  {SITE_URL.replace(/^https?:\/\//, "")}
-                </a>
-              </p>
             </nav>
           </aside>
         </div>

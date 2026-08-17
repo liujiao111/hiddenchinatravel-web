@@ -7,13 +7,18 @@ import { LocaleProvider } from "@/i18n/locale-provider";
 import { defaultLocale } from "@/i18n/config";
 import {
   HOME_OG_IMAGE_URL,
-  SITE_EMAIL,
+  SITE_FOUNDER_NAME,
+  SITE_FOUNDER_PATH,
   SITE_LOGO_PATH,
   SITE_NAME,
   SITE_TAGLINE,
   SITE_URL,
-  socialLinks,
 } from "@/lib/constants";
+import {
+  founderPersonJsonLd,
+  organizationJsonLd,
+  websiteJsonLd,
+} from "@/lib/seo/jsonld";
 import type { Metadata } from "next";
 import { Outfit } from "next/font/google";
 import cn from "classnames";
@@ -36,8 +41,8 @@ export const metadata: Metadata = {
   },
   description: SITE_TAGLINE,
   applicationName: SITE_NAME,
-  authors: [{ name: SITE_NAME }],
-  creator: SITE_NAME,
+  authors: [{ name: SITE_FOUNDER_NAME, url: `${SITE_URL}${SITE_FOUNDER_PATH}` }],
+  creator: SITE_FOUNDER_NAME,
   publisher: SITE_NAME,
   alternates: {
     canonical: "/",
@@ -71,46 +76,6 @@ export const metadata: Metadata = {
   },
 };
 
-function organizationJsonLd() {
-  return {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "@id": `${SITE_URL}/#organization`,
-    name: SITE_NAME,
-    url: SITE_URL,
-    logo: `${SITE_URL}${SITE_LOGO_PATH}`,
-    email: SITE_EMAIL,
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: "Kunming",
-      addressRegion: "Yunnan",
-      addressCountry: "CN",
-    },
-    description: SITE_TAGLINE,
-    sameAs: socialLinks.map((s) => s.href),
-    contactPoint: {
-      "@type": "ContactPoint",
-      email: SITE_EMAIL,
-      contactType: "customer support",
-      areaServed: "Worldwide",
-      availableLanguage: ["English"],
-    },
-  };
-}
-
-function websiteJsonLd() {
-  return {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "@id": `${SITE_URL}/#website`,
-    name: SITE_NAME,
-    url: SITE_URL,
-    description: SITE_TAGLINE,
-    publisher: { "@id": `${SITE_URL}/#organization` },
-    inLanguage: "en-US",
-  };
-}
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -134,7 +99,11 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify([organizationJsonLd(), websiteJsonLd()]),
+            __html: JSON.stringify([
+              organizationJsonLd(),
+              websiteJsonLd(),
+              founderPersonJsonLd(),
+            ]),
           }}
         />
         <LocaleProvider>

@@ -3,19 +3,21 @@
  * Source of truth for messaging: webiste_info.md §1 / §1.1
  */
 
+import { PRIMARY_CTA_LABEL, SECONDARY_CTA_LABEL } from "@/lib/trust/copy";
+
 export const partnerHero = {
   eyebrow: "Local partner",
   title: "Your local partner for independent China travel",
   lead: "We help independent travelers plan and move through China with local clarity — not a tour group, not a guidebook alone.",
-  primaryCta: "Plan my China trip",
-  secondaryCta: "Open Survival Checklist",
+  primaryCta: PRIMARY_CTA_LABEL,
+  secondaryCta: SECONDARY_CTA_LABEL,
 } as const;
 
 export const partnerWhoWeAre = {
   title: "Who we are",
   paragraphs: [
     "We are a China travel partner for visitors who want to travel independently — not join a tour group.",
-    "We offer one-to-one pre-trip planning, real-time support during your trip, and calm guidance when something goes wrong. Our role is a bridge of information and lived experience — not a traditional travel agency, and not a tour guide.",
+    "We offer one-to-one pre-trip planning, optional on-trip help during business hours, and calm guidance when something goes wrong. Our role is a bridge of information and lived experience — not a traditional travel agency, and not a tour guide.",
   ],
   oneLiner: "Your local partner for independent travel.",
 } as const;
@@ -57,7 +59,7 @@ export const partnerServices: PartnerService[] = [
   {
     id: "consult-pack",
     phase: "During your trip",
-    label: "Add-on · from $29.9",
+    label: "Add-on · from $29.90",
     title: "On-trip quick help",
     body: "5 quick-answer credits for those “what do I do now” moments. Message during business hours (9AM–9PM Mon–Fri, China time) and get a real answer within ~30 minutes for typical questions — not round-the-clock coverage.",
     accent: "teal",
@@ -138,7 +140,7 @@ export const whyChooseUs: WhyUsBlock[] = [
     title: "Why us when agencies offer free itineraries?",
     paragraphs: [
       "We do not take commissions from attractions, hotels, or OTAs. There is no inventory to push — recommendations stay on your side.",
-      "Planning is one-to-one, not a recycled template. And we stay with you as a support partner before and during the trip: if you twist an ankle, we help you find the nearest hospital, explain how foreigners register, and when needed help with booking and urgent medicine paths.",
+      "Planning is one-to-one, not a recycled template. Optional paid on-trip help (business hours, China time) can walk you through paths like finding a hospital after a sprain — information support, not 24/7 concierge.",
       "Agencies sell standardized days. We plan distinctive days — famous sights when they matter, plus local craft, neighborhoods, and everyday culture.",
       "If we book tickets or hotels for you, we issue an invoice and charge only a service fee.",
     ],

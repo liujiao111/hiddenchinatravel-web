@@ -133,7 +133,7 @@ export const plannerAddonLinks = [
   {
     id: "on-trip",
     label: "On-trip quick help",
-    price: "from $29.9",
+    price: "from $29.90",
     href: "/services#differentiator",
   },
   {
@@ -157,7 +157,7 @@ export const plannerAddonLinksFooter = {
 
 export const plannerSuccessCopy = {
   title: "We've got your request.",
-  body: "Thanks — your custom itinerary request is in. We'll reply within 24–48 hours with next steps and pricing for your dates. Nothing is charged until you confirm scope with us.",
+  body: "Thanks — your custom itinerary request is in. We'll reply within 24–48 hours with next steps and pricing for your dates. Nothing is charged until you confirm scope with us. WhatsApp during business hours is usually faster.",
   whatsappHint:
     "Want a faster reply? Continue on WhatsApp — we’ll match your request to this chat.",
 } as const;

@@ -17,7 +17,7 @@ const blocksBySlug: Record<string, ArticleBookingBlock> = {
     title: "Ready to lock a hotel?",
     body: "Trip.com works in English with many foreign cards — useful once you know the area and dates.",
     primary: { label: "Browse Trip.com hotels", href: "/go/trip-hotels" },
-    secondary: { label: "Open Survival Kit", href: "/survival-kit" },
+    secondary: { label: "Get Free Survival Kit", href: "/survival-kit" },
   },
   "book-china-high-speed-rail-foreigners": {
     eyebrow: "Optional booking path",

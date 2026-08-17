@@ -11,9 +11,9 @@ import { HOME_OG_IMAGE_URL } from "@/lib/constants";
 import type { Metadata } from "next";
 
 const pageTitle =
-  "China Trip Prep for Foreigners: Alipay, eSIM, VPN & Visa (2026)";
+  "Your Local Partner for Independent China Travel (Visa, Alipay & Prep)";
 const pageDescription =
-  "Practical prep for a first China trip: Alipay and WeChat Pay, eSIM or SIM, VPN backup, maps, hotels, and visa checks — not a generic sightseeing guide.";
+  "Hidden China Travel is your local partner for independent China travel — 1:1 itinerary planning, Survival Kit prep for payments, eSIM, VPN and visas, plus optional on-trip help during business hours.";
 
 export const metadata: Metadata = {
   title: {

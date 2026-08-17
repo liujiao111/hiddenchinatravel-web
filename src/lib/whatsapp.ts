@@ -20,7 +20,7 @@ export const SITE_WHATSAPP_QR_PATH =
   process.env.NEXT_PUBLIC_WHATSAPP_QR_PATH ?? "/brand/whatsapp-qr-card.webp";
 
 export const SITE_WHATSAPP_PREFILL =
-  "Hi! I'd like help planning an independent trip to China.";
+  "Hi! I'd like help from Hidden China Travel planning an independent trip to China.";
 
 export function isWhatsAppReady(): boolean {
   return Boolean(

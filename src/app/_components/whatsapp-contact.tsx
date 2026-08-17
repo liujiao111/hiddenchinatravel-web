@@ -4,6 +4,7 @@ import {
   getWhatsAppHref,
   SITE_WHATSAPP_QR_PATH,
 } from "@/lib/whatsapp";
+import { WHATSAPP_CARD_TITLE, WHATSAPP_NAV_LABEL } from "@/lib/trust/copy";
 import cn from "classnames";
 import Image from "next/image";
 import { useEffect, useState } from "react";
@@ -41,8 +42,8 @@ export function WhatsAppContact({
   variant = "nav",
   tone = "default",
   showDivider = true,
-  label = "Chat us",
-  cardTitle = "Scan to chat with our travel advisor",
+  label = WHATSAPP_NAV_LABEL,
+  cardTitle = WHATSAPP_CARD_TITLE,
   className,
 }: Props) {
   const href = getWhatsAppHref();

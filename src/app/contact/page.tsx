@@ -5,13 +5,13 @@ import { ContactForm } from "@/app/contact/_components/contact-form";
 import { ClientEmailLink } from "@/components/contact/client-email-link";
 import {
   SITE_EMAIL,
-  SITE_FOUNDER_NAME,
   SITE_LAST_UPDATED,
   SITE_LOCATION,
   SITE_LOCATION_ZH,
   SITE_NAME,
   SITE_URL,
 } from "@/lib/constants";
+import { SLA } from "@/lib/trust/copy";
 import {
   getWhatsAppHref,
 } from "@/lib/whatsapp";
@@ -19,7 +19,7 @@ import Link from "next/link";
 
 const pageTitle = `Contact ${SITE_NAME}`;
 const pageDescription =
-  "Contact Hidden China Travel for custom itineraries, booking help, on-trip questions, partnerships, or guide feedback. We usually reply within 30 minutes.";
+  "Contact Hidden China Travel for custom itineraries, booking help, on-trip questions, partnerships, or guide feedback. We usually reply within 30 minutes during business hours.";
 
 export const metadata: Metadata = {
   title: {
@@ -87,10 +87,11 @@ export default function ContactPage() {
           </h1>
           <p className="text-sm font-normal leading-relaxed text-[var(--brand-ink-muted)] md:text-base">
             Planning help, booking questions, partnerships, or guide feedback —
-            send a note. {SITE_FOUNDER_NAME} reads every message and usually
-            replies within{" "}
-            <span className="font-bold text-[var(--brand-cta)]">30 minutes</span>
-            .
+            send a note. We usually reply within{" "}
+            <span className="font-bold text-[var(--brand-cta)]">
+              {SLA.inquiryReplyShort}
+            </span>{" "}
+            ({SLA.businessHours}). Planner requests take {SLA.plannerReply}.
           </p>
         </header>
 
@@ -150,8 +151,8 @@ export default function ContactPage() {
               </h2>
               <ClientEmailLink className="break-all text-sm font-normal text-[var(--brand-ink-muted)] transition-colors duration-300 hover:text-[var(--brand-coral)]" />
               <p className="mt-2 text-sm font-normal leading-relaxed text-[var(--brand-ink-muted)]">
-                Prefer email? Write anytime — we usually reply within 30
-                minutes.
+                Prefer email? Write anytime — we {SLA.inquiryReply} (
+                {SLA.businessHours}). Planner requests take {SLA.plannerReply}.
               </p>
             </div>
 

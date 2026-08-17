@@ -1,6 +1,8 @@
 import { kitTestimonials } from "@/lib/survival-kit/content";
 
 export function KitSocialProof() {
+  if (!kitTestimonials.length) return null;
+
   return (
     <section
       aria-labelledby="social-proof-heading"

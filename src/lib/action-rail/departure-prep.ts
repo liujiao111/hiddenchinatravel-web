@@ -23,7 +23,7 @@ export const DEPARTURE_PREP_CONTENT: ActionRailContent = {
     },
     {
       id: "kit",
-      label: "Open Survival Checklist",
+      label: "Get Free Survival Kit",
       href: "/survival-kit",
       variant: "secondary",
       trackingId: "prep-rail|kit",

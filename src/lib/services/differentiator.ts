@@ -22,19 +22,19 @@ export const differentiatorContent = {
       id: "alipay",
       icon: "pay" as const,
       situation: "Alipay declined at a night-market stall — dinner on the line.",
-      resolution: "Walked through the fix in 12 minutes.",
+      resolution: "Example path: we walk you through a backup payment method.",
     },
     {
       id: "metro",
       icon: "metro" as const,
       situation: "Wrong Beijing subway exit — luggage, no Chinese, rush hour.",
-      resolution: "Rerouted to the street exit in 8 minutes.",
+      resolution: "Example path: we reroute you to the street exit.",
     },
     {
       id: "wifi",
       icon: "wifi" as const,
       situation: "Hotel Wi‑Fi blocks WhatsApp and maps after midnight.",
-      resolution: "Working VPN path restored in 15 minutes.",
+      resolution: "Example path: we help restore a working VPN connection.",
     },
   ],
 } as const;

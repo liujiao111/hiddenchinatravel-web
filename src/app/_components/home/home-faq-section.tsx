@@ -63,7 +63,7 @@ export function HomeFaqSection() {
             href="/survival-kit"
             className="btn-brand-outline shrink-0 text-sm"
           >
-            Open Survival Checklist
+            Get Free Survival Kit
           </Link>
         </div>
 

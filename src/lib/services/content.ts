@@ -33,7 +33,7 @@ export const coreService = {
   regularLabel: "Regular price (after early-bird)",
   currency: "USD",
   cta: {
-    label: "Start My Custom Itinerary",
+    label: "Plan my China trip",
     href: "/china-itinerary-planner#plan-trip",
     trackingEvent: "services_core_cta_click",
   },
@@ -108,7 +108,7 @@ export const servicesFaqs: ServicesFaqItem[] = [
 ];
 
 export const servicesStickyCta = {
-  label: "Get My Custom Itinerary",
+  label: "Plan my China trip",
   href: "/china-itinerary-planner#plan-trip",
   trackingEvent: "services_sticky_cta_click",
 } as const;

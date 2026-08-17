@@ -50,7 +50,8 @@ export function ContactForm() {
         />
         <p className="text-xs font-normal text-[var(--brand-ink-muted)]">
           Prefer email? We’ll still reply to the address you left — usually
-          within 30 minutes.
+          within 30 minutes during business hours (Mon–Fri 9AM–9PM, China
+          time).
         </p>
       </div>
     );

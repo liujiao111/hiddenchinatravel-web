@@ -1,4 +1,5 @@
 import { ArticleToc } from "@/app/_components/article-toc";
+import { ArticleAuthorBio } from "@/app/_components/article-author-bio";
 import { AffiliateClickTracker } from "@/components/affiliates/affiliate-click-tracker";
 import { ArticleBookingBlockCard } from "@/components/affiliates/article-booking-block";
 import { EndCTA, InlineCTA } from "@/components/cta";
@@ -73,6 +74,7 @@ export function PostBody({
         />
       ) : null}
       <EndCTA copy={endCopy} articleSlug={articleSlug} />
+      <ArticleAuthorBio />
       {hub ? <ArticleHubLink hub={hub} articleSlug={articleSlug} /> : null}
       <ContinueReading
         posts={relatedPosts}

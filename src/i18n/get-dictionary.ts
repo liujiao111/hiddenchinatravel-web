@@ -1,4 +1,10 @@
 import type { Locale } from "./config";
+import {
+  PRIMARY_CTA_LABEL,
+  SECONDARY_CTA_LABEL,
+  WHATSAPP_CARD_TITLE,
+  WHATSAPP_NAV_LABEL,
+} from "@/lib/trust/copy";
 
 export type Dictionary = {
   nav: {
@@ -82,11 +88,11 @@ const en: Dictionary = {
     guidesMenuAria: "Survival Guides",
   },
   header: {
-    plannerCta: "Plan my China trip",
+    plannerCta: PRIMARY_CTA_LABEL,
   },
   whatsapp: {
-    navLabel: "Chat us",
-    cardTitle: "Scan to chat with our travel advisor",
+    navLabel: WHATSAPP_NAV_LABEL,
+    cardTitle: WHATSAPP_CARD_TITLE,
   },
   locale: {
     switchAria: "Language",
@@ -111,8 +117,8 @@ const en: Dictionary = {
     title: "Your Local Partner for Independent China Travel",
     subtitle:
       "Practical help with visas, payments, internet, and a custom itinerary — so your first China trip feels independent, not overwhelming.",
-    primaryCta: "Plan my China trip",
-    secondaryCta: "Open Survival Checklist",
+    primaryCta: PRIMARY_CTA_LABEL,
+    secondaryCta: SECONDARY_CTA_LABEL,
   },
 };
 
@@ -145,7 +151,7 @@ const zh: Dictionary = {
   },
   whatsapp: {
     navLabel: "联系我们",
-    cardTitle: "扫码咨询旅行顾问",
+    cardTitle: "扫码联系 Hidden China Travel",
   },
   locale: {
     switchAria: "语言",
@@ -170,7 +176,7 @@ const zh: Dictionary = {
     subtitle:
       "签证、支付、网络与定制行程 — 帮你第一次去中国也能独立出行、少踩坑。",
     primaryCta: "规划行程",
-    secondaryCta: "打开行前清单",
+    secondaryCta: "获取免费生存套件",
   },
 };
 

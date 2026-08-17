@@ -7,7 +7,7 @@ export const staticSearchCatalog: SearchItem[] = [
     id: "page-home",
     title: "Home",
     href: "/",
-    description: "Practical China travel guides for foreign visitors.",
+    description: "Your local partner for independent China travel — planning, prep, and practical guides.",
     type: "page",
     keywords: ["hidden china travel", "start"],
   },

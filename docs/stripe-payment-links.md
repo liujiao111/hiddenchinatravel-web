@@ -1,6 +1,9 @@
 # Stripe Payment Links — Hidden China Travel
 
-Generated: 2026-08-05T02:53:18Z
+Generated: 2026-08-05T02:53:18Z  
+Trust-signal pass: 2026-08-17 (public name Hidden China Travel, Terms/Privacy, ToS checkbox + PDF invoice after payment on all catalog links)
+
+Ops: catalog links = fixed packs only. Personalized booking / $100+ % fees → Stripe Invoice. See `docs/stripe-products.md`.
 
 | Product | price_id | Payment Link |
 |---|---|---|

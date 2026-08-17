@@ -10,12 +10,14 @@ export const SITE_WHATSAPP = "";
 export const SITE_LOCATION = "Kunming, Yunnan, China";
 export const SITE_LOCATION_ZH = "中国云南昆明";
 export const SITE_FOUNDER_NAME = "Joy Liu";
+export const SITE_FOUNDER_PATH = "/about#founder";
+export const SITE_FOUNDER_PICTURE = "/assets/blog/authors/joy-liu.jpg";
 
 export const SITE_LOGO_PATH = "/brand/logo.webp";
 export const SITE_HERO_PATH = "/brand/hero-home.webp";
 
 /** ISO date — bump when shipping sitewide content / chrome updates */
-export const SITE_LAST_UPDATED = "2026-08-10";
+export const SITE_LAST_UPDATED = "2026-08-17";
 
 export const socialLinks = [
   {
@@ -40,4 +42,4 @@ export type SocialLinkId = (typeof socialLinks)[number]["id"];
 /** @deprecated use SITE_NAME / content labels instead */
 export const CMS_NAME = "Hidden China Travel";
 
-export const HOME_OG_IMAGE_URL = SITE_LOGO_PATH;
+export const HOME_OG_IMAGE_URL = SITE_HERO_PATH;

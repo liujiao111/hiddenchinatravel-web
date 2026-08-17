@@ -1,6 +1,7 @@
 "use server";
 
 import { SITE_EMAIL } from "@/lib/constants";
+import { SLA_INQUIRY_SUCCESS } from "@/lib/trust/copy";
 import { sendFormNotify } from "@/lib/forms/notify";
 import {
   parseWhatsAppField,
@@ -150,7 +151,6 @@ export async function submitContactForm(
   return {
     ok: true,
     name,
-    message:
-      "Thanks — message received. We usually reply within 30 minutes.",
+    message: SLA_INQUIRY_SUCCESS,
   };
 }

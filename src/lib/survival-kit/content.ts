@@ -491,26 +491,8 @@ export const kitChecklistItems: KitChecklistItem[] = [
   { id: "insurance", label: "Travel insurance arranged" },
 ];
 
-export const kitTestimonials: KitTestimonial[] = [
-  {
-    quote:
-      "I set up Alipay and an eSIM the week before — first metro ride in Shanghai felt normal instead of stressful.",
-    name: "Emma R.",
-    meta: "First trip · 10 days",
-  },
-  {
-    quote:
-      "The VPN tip for hotel Wi-Fi alone was worth it. I would have been stuck refreshing Google Maps otherwise.",
-    name: "Jonas K.",
-    meta: "Business + weekend travel",
-  },
-  {
-    quote:
-      "Checklist format is what I needed. Not another long article — just what to finish before the flight.",
-    name: "Priya S.",
-    meta: "Independent traveler",
-  },
-];
+/** Real traveler quotes only — keep empty until we have permission to publish. */
+export const kitTestimonials: KitTestimonial[] = [];
 
 export const kitStickyCta = {
   label: "Plan my China trip",

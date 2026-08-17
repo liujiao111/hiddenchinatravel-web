@@ -64,7 +64,7 @@ export function AddonBonusBanner() {
           href={addonBonus.href}
           className="mt-3 inline-flex text-sm font-bold text-[var(--brand-coral)] underline decoration-[color-mix(in_srgb,var(--brand-coral)_35%,transparent)] underline-offset-2"
         >
-          Open full Survival Kit →
+          Get Free Survival Kit →
         </Link>
       </div>
     </div>

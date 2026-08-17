@@ -21,8 +21,8 @@ import {
 } from "@/lib/about/partner-content";
 import { ClientEmailLink } from "@/components/contact/client-email-link";
 import {
-  SITE_EMAIL,
   SITE_FOUNDER_NAME,
+  SITE_FOUNDER_PICTURE,
   SITE_LAST_UPDATED,
   SITE_LOCATION,
   SITE_LOCATION_ZH,
@@ -30,11 +30,13 @@ import {
   SITE_TAGLINE,
   SITE_URL,
 } from "@/lib/constants";
+import { founderPersonJsonLd } from "@/lib/seo/jsonld";
+import Image from "next/image";
 import type { Metadata } from "next";
 
 const pageTitle = `About ${SITE_NAME} — Your Local Partner for Independent China Travel`;
 const pageDescription =
-  "Hidden China Travel is your local partner for independent China travel: 1:1 itinerary planning, on-trip support, and practical prep — not a tour agency.";
+  "Hidden China Travel is your local partner for independent China travel: 1:1 itinerary planning, practical prep, and optional on-trip help during business hours — not a tour agency.";
 
 export const metadata: Metadata = {
   title: {
@@ -77,23 +79,7 @@ function aboutJsonLd() {
         name: SITE_NAME,
         url: SITE_URL,
       },
-      mainEntity: {
-        "@type": "Person",
-        name: SITE_FOUNDER_NAME,
-        jobTitle: "Founder",
-        worksFor: {
-          "@type": "Organization",
-          name: SITE_NAME,
-          url: SITE_URL,
-        },
-        address: {
-          "@type": "PostalAddress",
-          addressLocality: "Kunming",
-          addressRegion: "Yunnan",
-          addressCountry: "CN",
-        },
-        email: SITE_EMAIL,
-      },
+      mainEntity: founderPersonJsonLd(),
     },
     {
       "@context": "https://schema.org",
@@ -275,22 +261,40 @@ export default function AboutUsPage() {
               title={`I'm ${SITE_FOUNDER_NAME}`}
               eyebrow="Founder"
             >
-              <p>
-                I&apos;m {SITE_FOUNDER_NAME}, currently based in Kunming,
-                Yunnan.
-              </p>
-              <p>
-                I grew up in China and later lived overseas for years — including
-                three years in the Philippines, with travel across Southeast Asia
-                and Hong Kong. I know the fear before a first landing: Will it
-                feel safe? What if I don&apos;t speak the language? What if the
-                card fails? What if I can&apos;t reach family?
-              </p>
+              <div className="flex flex-col gap-5 sm:flex-row sm:items-start">
+                <div className="relative h-28 w-28 shrink-0 overflow-hidden rounded-2xl border-2 border-[#00897b]/15 sm:h-32 sm:w-32">
+                  <Image
+                    src={SITE_FOUNDER_PICTURE}
+                    alt={`${SITE_FOUNDER_NAME}, founder of ${SITE_NAME}`}
+                    fill
+                    className="object-cover"
+                    sizes="128px"
+                  />
+                </div>
+                <div className="space-y-5">
+                  <p>
+                    I&apos;m {SITE_FOUNDER_NAME}, currently based in Kunming,
+                    Yunnan.
+                  </p>
+                  <p>
+                    I grew up in China and later lived overseas for years —
+                    including three years in the Philippines, with travel across
+                    Southeast Asia and Hong Kong. I know the fear before a first
+                    landing: Will it feel safe? What if I don&apos;t speak the
+                    language? What if the card fails? What if I can&apos;t reach
+                    family?
+                  </p>
+                </div>
+              </div>
               <p>
                 That two-way life is why {SITE_NAME} exists — to be a{" "}
                 <strong className="text-[var(--brand-cta)]">local partner</strong>{" "}
                 who has lived both in China and abroad, and can translate the
                 practical gaps most first-time visitors hit.
+              </p>
+              <p>
+                WhatsApp may show a Philippine number — that&apos;s from years
+                living there. I work from Kunming.
               </p>
             </AboutSection>
 
@@ -342,7 +346,7 @@ export default function AboutUsPage() {
                   href="/survival-kit"
                   className="btn-brand-outline text-sm"
                 >
-                  Open Survival Checklist
+                  Get Free Survival Kit
                 </Link>
               </div>
               <LastUpdated
@@ -358,6 +362,15 @@ export default function AboutUsPage() {
               <p className="mb-2 text-xs font-bold uppercase tracking-[0.18em] text-[var(--brand-mango)]">
                 Founder
               </p>
+              <div className="mb-3 relative h-20 w-20 overflow-hidden rounded-2xl border border-[#00897b]/15">
+                <Image
+                  src={SITE_FOUNDER_PICTURE}
+                  alt={SITE_FOUNDER_NAME}
+                  fill
+                  className="object-cover"
+                  sizes="80px"
+                />
+              </div>
               <p className="mb-1 text-xl font-bold tracking-tight text-[var(--brand-cta)]">
                 {SITE_FOUNDER_NAME}
               </p>
@@ -391,7 +404,7 @@ export default function AboutUsPage() {
                   Plan my China trip
                 </Link>
                 <Link href="/survival-kit" className="btn-brand-outline text-sm">
-                  Open Survival Checklist
+                  Get Free Survival Kit
                 </Link>
               </div>
               <ul className="space-y-2.5">
@@ -423,6 +436,7 @@ export default function AboutUsPage() {
                   { href: "#services", label: "Services" },
                   { href: "#support-scenarios", label: "Support scenarios" },
                   { href: "#why-us", label: "Why choose us" },
+                  { href: "#founder", label: "Founder" },
                   { href: "#guides", label: "Guides & tools" },
                   { href: "#start-here", label: "Start here" },
                 ].map((item) => (

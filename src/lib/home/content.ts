@@ -84,7 +84,7 @@ export const homeTools = [
     href: "/survival-kit",
     title: "Survival Kit",
     body: "First-trip essentials for payments, maps, data, and booking — ready before airport pressure.",
-    cta: "Open Survival Checklist",
+    cta: "Get Free Survival Kit",
     featured: false,
   },
 ] as const;
@@ -123,16 +123,16 @@ export const homeWhyUs = {
     {
       id: "experience",
       title: "Lived experience on the ground",
-      body: "Alipay declined at a night market? We've walked travelers through the fix in about 12 minutes — calm, step-by-step help when it actually matters.",
+      body: "Alipay declined at a stall? We walk you through backup payment paths during business hours — calm, step-by-step help, not a 24/7 concierge.",
       inlineLink: {
         href: "/services#differentiator",
-        label: "See real on-trip help scenarios",
+        label: "See on-trip help scenarios",
       },
     },
     {
       id: "support",
-      title: "Support before, during & after",
-      body: "We're with you the whole trip — not just a fixed itinerary, but real help when plans change mid-route.",
+      title: "Planning first — optional help on the ground",
+      body: "Pre-trip planning is the core. Optional on-trip help is available Mon–Fri 9AM–9PM China time when plans change.",
     },
     {
       id: "commission",

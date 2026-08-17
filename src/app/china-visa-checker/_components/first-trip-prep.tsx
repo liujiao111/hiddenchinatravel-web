@@ -217,7 +217,7 @@ export function FirstTripPrep() {
             href="/survival-kit"
             className="btn-brand shrink-0 px-8 py-3.5 text-[15px]"
           >
-            Open Survival Kit
+            Get Free Survival Kit
             <span aria-hidden>→</span>
           </Link>
         </div>

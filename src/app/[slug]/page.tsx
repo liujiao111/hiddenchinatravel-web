@@ -1,7 +1,8 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getAllPosts, getPostBySlug } from "@/lib/api";
-import { SITE_NAME, SITE_URL } from "@/lib/constants";
+import { SITE_FOUNDER_PATH, SITE_LOGO_PATH, SITE_NAME, SITE_URL } from "@/lib/constants";
+import { articleAuthorJsonLd } from "@/lib/seo/jsonld";
 import {
   getRelatedPosts,
   resolveArticleHub,
@@ -86,14 +87,15 @@ function articleJsonLd(post: Post) {
     image: [image],
     datePublished: post.date,
     dateModified: post.dateModified || post.date,
-    author: {
-      "@type": "Person",
-      name: post.author?.name || SITE_NAME,
-    },
+    author: articleAuthorJsonLd({
+      name: post.author?.name,
+      picture: post.author?.picture,
+    }),
     publisher: {
       "@type": "Organization",
       name: SITE_NAME,
       url: SITE_URL,
+      logo: `${SITE_URL}${SITE_LOGO_PATH}`,
     },
     mainEntityOfPage: {
       "@type": "WebPage",
@@ -149,7 +151,9 @@ export async function generateMetadata(props: Params): Promise<Metadata> {
       ? { absolute: metaTitle }
       : post.title,
     description: post.excerpt,
-    authors: post.author?.name ? [{ name: post.author.name }] : undefined,
+    authors: post.author?.name
+      ? [{ name: post.author.name, url: `${SITE_URL}${SITE_FOUNDER_PATH}` }]
+      : undefined,
     keywords: post.keywords?.length ? post.keywords : undefined,
     alternates: {
       canonical: canonicalPath,

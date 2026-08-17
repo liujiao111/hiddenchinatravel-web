@@ -134,7 +134,7 @@ A lot of what people remember from China is unplanned: a tea shop with three tab
 1. List must-see stops and mark which ones need advance booking.
 2. Book fixed-date icons as soon as their window opens — then leave room for walks and local meals.
 3. If you want help matching cities, days, and ticket timing, [Plan my China trip](/china-itinerary-planner).
-4. For payments, internet, and other pre-trip basics, [Get the Free Survival Kit](/survival-kit).
+4. For payments, internet, and other pre-trip basics, [Get Free Survival Kit](/survival-kit).
 
 ## Frequently Asked Questions
 
