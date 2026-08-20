@@ -144,8 +144,12 @@ Hidden China Travel
 1. 对外清晰传达 **Local Partner** 定位（不是纯博客，也不是旅行社）
 2. 把主转化导向 **Plan my China trip** → 行程规划器（咨询包等服务包后续嵌在规划器内）
 3. 用指南 + Survival Kit（**Get Free Survival Kit**）建立信任与自助准备能力
-4. 保持支付 / 网络 / 导航 / 交通 / 酒店 / 签证等 SEO 实用内容，作为获客与信任层
+4. 保持支付 / 网络 / 导航 / 交通 / 酒店 / 签证等 SEO 实用内容，作为获客与信任层；**行程规划 SEO 集群**（`/china-itinerary-planning`）与生存指南并列，服务主转化
 5. About 用场景卡片讲清服务；Contact 预留服务类型槽位，待服务包模块接入
+6. **信任骨架（当前业务重点，三支柱）**
+   - 规划师 / 作者合作 → `/partners`，真实点评仅在书面许可后进入 `/reviews`（空列表是诚实状态，禁止编造）
+   - 围绕自由行行程规划做 SEO → hub + 指南，内链到规划器与产品页
+   - 产品详情落地页 → `/services/custom-itinerary`（案例图须标明 sample，不是客户行程）
 
 ### 内容与产品的关系
 
@@ -259,6 +263,7 @@ Hidden China Travel
 - Hotels hub：/hotels-in-china/
 - Tickets hub：/attraction-tickets-in-china/
 - 🧳 Travel Essentials Hub：/china-travel-essentials
+- Itinerary Planning Hub：/china-itinerary-planning
 
 
 
@@ -267,6 +272,12 @@ Hidden China Travel
 - 签证检查工具：/china-visa-checker
 
 - 行程规划器：/china-itinerary-planner
+
+产品与信任页：
+
+- 定制行程落地页：/services/custom-itinerary（服务目录仍在 /services）
+- 旅行者点评：/reviews（无书面许可前保持空列表，禁止假点评）
+- 规划师合作：/partners（Contact `?service=partnership`）
 
 ### 当前已有文章（articles）
 
@@ -333,6 +344,10 @@ Hidden China Travel
 
 - Real Name Explain：/china-real-name-system-foreigners/
 - Is China safe for independent travel：/independent-travel-china/
+
+#### Itinerary Planning
+
+- How to plan a China itinerary independently：/how-to-plan-china-itinerary
 
 ---
 
@@ -548,7 +563,7 @@ This post contains affiliate links at no extra cost to you.
 ### 来华实用指南方向
 
 - Visa / visa-free / entry rules / transit policy
-- China itineraries by trip length
+- China itineraries by trip length（骨架已有：hub `/china-itinerary-planning` + `/how-to-plan-china-itinerary`；后续可按天数拆文）
 - Apps foreigners need in China
 - Trains / station boarding / 12306 alternatives
 - How to book attractions and tours as a foreigner

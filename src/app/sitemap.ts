@@ -89,6 +89,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
+      url: absoluteCanonicalUrl("/services/custom-itinerary"),
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 0.9,
+    },
+    {
+      url: absoluteCanonicalUrl("/reviews"),
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.5,
+    },
+    {
+      url: absoluteCanonicalUrl("/partners"),
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.5,
+    },
+    {
       url: absoluteCanonicalUrl("/about"),
       lastModified: now,
       changeFrequency: "monthly",

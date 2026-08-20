@@ -17,6 +17,7 @@ export const aboutTopicHubs: AboutLink[] = [
   { label: "Hotels in China", href: "/hotels-in-china" },
   { label: "Attraction Tickets in China", href: "/attraction-tickets-in-china" },
   { label: "Travel Essentials", href: "/china-travel-essentials" },
+  { label: "Itinerary Planning", href: "/china-itinerary-planning" },
   { label: "Visa & Entry", href: "/china-visa-checker" },
 ];
 
@@ -75,6 +76,10 @@ export const aboutStartHereGuides: AboutLink[] = [
   {
     label: "Independent Travel in China",
     href: "/independent-travel-china",
+  },
+  {
+    label: "How to Plan a China Itinerary Independently",
+    href: "/how-to-plan-china-itinerary",
   },
 ];
 

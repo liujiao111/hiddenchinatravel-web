@@ -31,12 +31,25 @@ const SERVICE_TYPE_OPTIONS = [
   { value: "general", label: "General question / feedback" },
 ] as const;
 
-export function ContactForm() {
+function initialServiceType(raw?: string): string {
+  if (!raw) return "";
+  return SERVICE_TYPE_OPTIONS.some((option) => option.value === raw)
+    ? raw
+    : "";
+}
+
+export function ContactForm({
+  defaultServiceType,
+}: {
+  defaultServiceType?: string;
+}) {
   const [state, formAction, pending] = useActionState(
     submitContactForm,
     initialState,
   );
-  const [serviceType, setServiceType] = useState("");
+  const [serviceType, setServiceType] = useState(() =>
+    initialServiceType(defaultServiceType),
+  );
 
   if (state.ok) {
     return (

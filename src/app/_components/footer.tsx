@@ -37,6 +37,10 @@ export function Footer() {
       label: dict.home.primaryCta,
     },
     { href: "/services", label: dict.nav.services },
+    {
+      href: "/services/custom-itinerary",
+      label: dict.footer.customItinerary,
+    },
     { href: "/survival-kit", label: dict.home.secondaryCta },
     ...toolsNav.map((item) => ({
       href: item.href,
@@ -46,6 +50,8 @@ export function Footer() {
 
   const companyLinks = [
     { href: "/about", label: dict.nav.about },
+    { href: "/reviews", label: dict.footer.reviews },
+    { href: "/partners", label: dict.footer.partners },
     { href: "/china-destinations", label: dict.footer.destinations },
     { href: "/survival-guides", label: dict.nav.guides },
     { href: "/contact", label: dict.nav.contact },

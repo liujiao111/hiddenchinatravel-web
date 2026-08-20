@@ -150,7 +150,7 @@ relatedHubs:
   - title: "Maps & Navigation"
     href: /maps-navigation-in-china
     excerpt: "Find places once your phone is online."
-  - title: "Transport in China"
-    href: /transport-in-china
-    excerpt: "Move between cities and neighborhoods."
+  - title: "Itinerary Planning"
+    href: /china-itinerary-planning
+    excerpt: "City pacing after the digital stack works."
 ---

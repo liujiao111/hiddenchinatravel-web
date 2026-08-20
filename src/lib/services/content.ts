@@ -23,11 +23,11 @@ export const coreService = {
   id: "custom-itinerary",
   title: "1-on-1 Custom Itinerary Planning",
   subtitle:
-    "A ready-to-follow PDF route for your dates, pace, and interests — hand-crafted locally and delivered in 48–72 hours.",
-  body: "Skip the cookie-cutter routes. Every itinerary is hand-crafted by someone who actually grew up here — blending must-see landmarks with the hidden alleys, hands-on craft experiences, and everyday local culture that guidebooks never mention. You get a clear, ready-to-follow PDF route, delivered in 48-72 hours.",
+    "A ready-to-follow PDF route for your dates, pace, and interests — hand-crafted locally. Paid PDF in 48–72 hours after you confirm.",
+  body: "Skip the cookie-cutter routes. Every itinerary is hand-crafted by someone who actually grew up here — blending must-see landmarks with the hidden alleys, hands-on craft experiences, and everyday local culture that guidebooks never mention. You get a clear, ready-to-follow PDF route. Paid delivery is 48–72 hours after you confirm scope.",
   differentiator:
     "Local handcrafted routes — not another copy-paste landmark checklist.",
-  deliveryLabel: "48–72 hour delivery",
+  deliveryLabel: "48–72 hours after confirm",
   earlyBirdDeadline: "2027-01-01",
   earlyBirdLabel: "Early bird (founding rate)",
   regularLabel: "Regular price (after early-bird)",

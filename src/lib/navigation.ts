@@ -16,7 +16,8 @@ export type NavId =
   | "hubFood"
   | "hubHotels"
   | "hubTickets"
-  | "hubEssentials";
+  | "hubEssentials"
+  | "hubItinerary";
 
 export type NavItem = {
   id: NavId;
@@ -37,6 +38,7 @@ export const guidesNav: NavItem[] = [
   { id: "hubHotels", href: "/hotels-in-china", icon: "🏨" },
   { id: "hubTickets", href: "/attraction-tickets-in-china", icon: "🎫" },
   { id: "hubEssentials", href: "/china-travel-essentials", icon: "🧳" },
+  { id: "hubItinerary", href: "/china-itinerary-planning", icon: "🗺️" },
 ];
 
 export const toolsNav: NavItem[] = [

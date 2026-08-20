@@ -26,6 +26,7 @@ export type Dictionary = {
     hubHotels: string;
     hubTickets: string;
     hubEssentials: string;
+    hubItinerary: string;
     mainAria: string;
     toolsMenuAria: string;
     guidesMenuAria: string;
@@ -50,6 +51,9 @@ export type Dictionary = {
     company: string;
     contact: string;
     destinations: string;
+    customItinerary: string;
+    reviews: string;
+    partners: string;
     disclaimer: string;
     affiliateDisclosure: string;
     affiliateLearnMore: string;
@@ -83,6 +87,7 @@ const en: Dictionary = {
     hubHotels: "Hotels",
     hubTickets: "Tickets",
     hubEssentials: "Travel Essentials",
+    hubItinerary: "Itinerary Planning",
     mainAria: "Main",
     toolsMenuAria: "Tools",
     guidesMenuAria: "Survival Guides",
@@ -106,6 +111,9 @@ const en: Dictionary = {
     company: "Company",
     contact: "Contact",
     destinations: "Destinations",
+    customItinerary: "Custom itinerary",
+    reviews: "Traveler notes",
+    partners: "Planner partnerships",
     disclaimer:
       "Practical guidance for independent travelers — not official visa, immigration, or government advice. Always verify with official sources before you go.",
     affiliateDisclosure:
@@ -142,6 +150,7 @@ const zh: Dictionary = {
     hubHotels: "酒店",
     hubTickets: "门票",
     hubEssentials: "旅行必备",
+    hubItinerary: "行程规划",
     mainAria: "主导航",
     toolsMenuAria: "工具",
     guidesMenuAria: "生存指南",
@@ -165,6 +174,9 @@ const zh: Dictionary = {
     company: "关于",
     contact: "联系",
     destinations: "目的地",
+    customItinerary: "定制行程",
+    reviews: "旅行者点评",
+    partners: "规划师合作",
     disclaimer:
       "面向独立旅行者的实用参考，不构成官方签证、移民或政府建议。出行前请核对官方信息来源。",
     affiliateDisclosure: "部分链接可能为联盟推广链接，对你不额外收费。",

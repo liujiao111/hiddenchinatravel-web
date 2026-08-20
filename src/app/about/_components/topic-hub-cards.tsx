@@ -18,6 +18,10 @@ const hubMeta: Record<
   },
   "/attraction-tickets-in-china": { short: "Tickets", hint: "Book sights with a passport" },
   "/china-travel-essentials": { short: "Kit", hint: "First-trip essentials" },
+  "/china-itinerary-planning": {
+    short: "Plan",
+    hint: "Independent itinerary pacing",
+  },
   "/china-visa-checker": { short: "Visa", hint: "Visa-free & transit check" },
 };
 

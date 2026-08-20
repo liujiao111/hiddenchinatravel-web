@@ -112,7 +112,7 @@ export function CoreServiceCard() {
                     From {formatUsd(tier.regular)}
                   </p>
                   <p className="mt-1 text-xs font-normal text-[var(--brand-ink-muted)]">
-                    48–72 hour delivery
+                    {coreService.deliveryLabel}
                   </p>
                 </div>
               </div>
@@ -169,7 +169,7 @@ export function CoreServiceCard() {
                     From {formatUsd(tier.regular)}
                   </td>
                   <td className="px-4 py-3.5 text-[var(--brand-ink-muted)]">
-                    48–72 hours
+                    {coreService.deliveryLabel}
                   </td>
                 </tr>
               ))}
@@ -187,17 +187,25 @@ export function CoreServiceCard() {
         ).
       </p>
 
-      <Link
-        href={coreService.cta.href}
-        className="btn-brand inline-flex min-h-12 w-full justify-center px-6 py-3.5 text-sm sm:px-8 md:w-auto md:text-base"
-        data-cta={coreService.cta.trackingEvent}
-        onClick={() =>
-          trackEvent(coreService.cta.trackingEvent, { source: "core-card" })
-        }
-      >
-        {coreService.cta.label}
-        <span aria-hidden>→</span>
-      </Link>
+      <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
+        <Link
+          href={coreService.cta.href}
+          className="btn-brand inline-flex min-h-12 w-full justify-center px-6 py-3.5 text-sm sm:w-auto sm:px-8 md:text-base"
+          data-cta={coreService.cta.trackingEvent}
+          onClick={() =>
+            trackEvent(coreService.cta.trackingEvent, { source: "core-card" })
+          }
+        >
+          {coreService.cta.label}
+          <span aria-hidden>→</span>
+        </Link>
+        <Link
+          href="/services/custom-itinerary"
+          className="inline-flex min-h-12 items-center justify-center rounded-full border-2 border-[#00897b]/30 px-6 py-3 text-sm font-bold text-[var(--brand-cta)] transition-all duration-300 hover:bg-[#00897b]/8 sm:px-8"
+        >
+          See the full planning page
+        </Link>
+      </div>
     </article>
   );
 }

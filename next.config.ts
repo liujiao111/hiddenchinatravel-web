@@ -159,6 +159,8 @@ const wordpressCutoverRedirects = [
 ] as const;
 
 const nextConfig: NextConfig = {
+  // Native decoder used by markdownToHtml — keep off the client bundle.
+  serverExternalPackages: ["sharp"],
   // Keep URLs without trailing slash so HTML canonical, sitemap, and GSC agree.
   trailingSlash: false,
   images: {

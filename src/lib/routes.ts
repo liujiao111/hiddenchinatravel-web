@@ -12,6 +12,8 @@ export const RESERVED_TOP_SEGMENTS = new Set([
   "privacy-policy",
   "terms-of-service",
   "services",
+  "reviews",
+  "partners",
   "checkout",
   "china-itinerary-planner",
   "china-visa-checker",

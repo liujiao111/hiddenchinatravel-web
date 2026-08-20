@@ -121,6 +121,38 @@ export const staticSearchCatalog: SearchItem[] = [
       "booking help",
     ],
   },
+  {
+    id: "page-custom-itinerary",
+    title: "Custom China Itinerary Planning",
+    href: "/services/custom-itinerary",
+    description:
+      "Local PDF route for independent travelers — what’s included, USD fees, and a labeled sample (not a client trip).",
+    type: "tool",
+    keywords: [
+      "custom itinerary",
+      "itinerary PDF",
+      "planning service",
+      "sample route",
+    ],
+  },
+  {
+    id: "page-reviews",
+    title: "Traveler notes",
+    href: "/reviews",
+    description:
+      "Permissioned quotes from completed itineraries. The list stays empty until we have written permission.",
+    type: "page",
+    keywords: ["reviews", "testimonials", "traveler notes"],
+  },
+  {
+    id: "page-partners",
+    title: "Planner partnerships",
+    href: "/partners",
+    description:
+      "Work with independent itinerary planners and travel writers — not tour agencies.",
+    type: "page",
+    keywords: ["partnership", "itinerary planner", "collaboration"],
+  },
 
   // Hubs
   {
@@ -194,6 +226,20 @@ export const staticSearchCatalog: SearchItem[] = [
       "Independent travel prep: payments, internet, maps, hotels, tickets, and real-name rules.",
     type: "hub",
     keywords: ["essentials", "prep", "independent travel", "checklist"],
+  },
+  {
+    id: "hub-itinerary",
+    title: "China Itinerary Planning for Independent Travelers",
+    href: "/china-itinerary-planning",
+    description:
+      "How to plan an independent China itinerary: city pacing, rail backbone, DIY vs a local PDF.",
+    type: "hub",
+    keywords: [
+      "itinerary",
+      "trip planning",
+      "independent itinerary",
+      "how many days",
+    ],
   },
 
   // Planned / mapped articles
@@ -357,6 +403,15 @@ export const staticSearchCatalog: SearchItem[] = [
     description: "Is China safe and practical for independent travel?",
     type: "article",
     keywords: ["independent", "safety"],
+  },
+  {
+    id: "article-plan-itinerary",
+    title: "How to Plan a China Itinerary Independently",
+    href: "/how-to-plan-china-itinerary",
+    description:
+      "City count, high-speed rail as the backbone, rest days, and when a local planner is worth the fee.",
+    type: "article",
+    keywords: ["plan itinerary", "itinerary", "diy china trip"],
   },
   {
     id: "article-visa-need",

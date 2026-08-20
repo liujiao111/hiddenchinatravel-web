@@ -28,13 +28,121 @@ Configure in WhatsApp Business (phone) or WhatsApp Web → Settings → Business
 | Address | Kunming, Yunnan, China |
 | Photo | Site logo (`public/brand/logo.png`) |
 
-Do **not** use Catalog (this is consult + booking-help, not OTA packages).
+Use **Catalog** for fixed-price **service fees** only (aligned with Stripe — see `docs/stripe-products.md`). Not tour packages or OTA inventory.
 
 Do **not** mass-broadcast. Do **not** change the phone number.
+
+### Live account status (2026-08-17, WhatsApp Web)
+
+Done on [web.whatsapp.com](https://web.whatsapp.com/) Business profile:
+
+- Hours: Mon–Fri 9:00 AM–9:00 PM China time; Saturday and Sunday closed (was 24/7)
+- Description, address (`Kunming, Yunnan, China`), website, email
+- Categories: 旅遊資訊中心 + 旅行社 (removed 導遊). Prefer dropping 旅行社 on the phone if the chip still shows.
+- Avatar was already the brand logo
+
+**Phone app only** (Web has no editor, or Save does not persist) — full steps: [Phone app checklist](#phone-app-checklist-web-cannot-finish).
+
+1. Display name → `Hidden China Travel`
+2. Greeting + Away messages
+3. Six Quick Replies
+4. Six Lists: `New lead`, `Planner`, `Quote sent`, `Paid`, `On-trip`, `Cold`
+5. Drop 旅行社 category if still shown
+6. Re-export QR after name approval → replace `public/brand/whatsapp-qr-card.webp`
+
+Site prefill already includes the brand name (`src/lib/whatsapp.ts`).
+
+### Catalog (service fees — live 2026-08-18)
+
+WhatsApp Web → **工具 → 目錄**. Ten items, USD amounts in descriptions (WhatsApp may show PHP on a +63 account — always say **US dollars** in chat when sending a link).
+
+| # | Name | From (USD) | SKU |
+|---|---|---|---|
+| 1 | Custom Itinerary — up to 5 days | 99 | `plan-5d` |
+| 2 | Custom Itinerary — 6–10 days | 129 | `plan-6-10d` |
+| 3 | Custom Itinerary — 10+ days | 199 | `plan-10d` |
+| 4 | Itinerary Review — 30 minutes | 25 | `review-30m` |
+| 5 | Itinerary Review — 1 hour | 50 | `review-1h` |
+| 6 | On-Trip Quick Help — 5 questions | 29.90 | `ontrip-5q` |
+| 7 | Booking Help — under US$100 | 5 | `book-under100` |
+| 8 | Booking Help — domestic flight | 10 | `book-dom-flight` |
+| 9 | Booking Help — intl flight (standard) | 15 | `book-intl-std` |
+| 10 | Booking Help — intl flight (complex) | 20 | `book-intl-cpx` |
+
+Each item links to `https://hiddenchinatravel.com/china-itinerary-planner`, origin **China**, logo image. Descriptions say *service fee only* / *not a tour package*.
+
+**In catalog:** fixed planning, review, on-trip, and booking-help service fees.  
+**Not in catalog:** Survival Kit (free bonus), early-bird vs standard tier pick (confirm in chat), $100+ booking % fees (Stripe Invoice), one-off quotes.
+
+New items may show **under review** until Meta approves — normal for Business Catalog.
+
+**Currency note (+63 number):** Catalog prices display as **PHP** (Philippines default). Amounts match USD service fees numerically; descriptions say *US$*. WhatsApp does **not** let you change currency after a product is saved — only fix is delete + recreate with **USD** chosen at creation (if the phone app offers it). In chat, always confirm **US dollars** and send the Stripe link for actual payment.
+
+---
+
+## Phone app checklist (Web cannot finish)
+
+Do these on the **WhatsApp Business phone app** (linked device). WhatsApp Web profile hours/description are done; Catalog (10 items) is done on Web. Web **Save** for quick replies often fails — use the phone.
+
+### 1. Display name
+
+**Path:** Settings → Business tools → Business profile → **Name**  
+**Set to:** `Hidden China Travel`  
+Meta may review **1–3 days**. Until approved, QR and public link may still show `hiddenchinatravel`.
+
+### 2. Categories
+
+**Path:** Business profile → **Category**  
+**Keep:** Travel & tourism / 旅遊資訊中心  
+**Remove if shown:** 旅行社 (looks like a tour agency)
+
+### 3. Greeting + Away
+
+**Path:** Settings → Business tools → **Greeting message** / **Away message**  
+Turn **on** both. Paste copy from [Greeting](#greeting-new-chat--14-days-inactive) and [Away](#away-outside-business-hours) below.
+
+### 4. Quick replies (6)
+
+**Path:** Settings → Business tools → **Quick replies** → Add  
+For each row: **Shortcut** (left) + **Message** (right) → tap **Save** on the phone (not Web).
+
+| Shortcut | Message (paste) |
+|---|---|
+| `/hello` | See [/hello](#hello--form-opt-in-no-inbound-yet) below |
+| `/plan` | See [/plan](#plan--send-them-to-the-planner) below |
+| `/quote` | See [/quote](#quote--before-sending-a-price) below |
+| `/pay` | See [/pay](#pay--sending-a-payment-link-or-invoice) below |
+| `/hours` | See [/hours](#hours--response-time) below |
+| `/number` | See [/number](#number--why-63) below |
+
+Replace `{name}` in `/hello` when sending.
+
+### 5. Lists / labels (6)
+
+**Path:** Chats → **⋮** or filter bar → **Manage lists** (分類名單) → Create  
+Create exactly:
+
+`New lead` · `Planner` · `Quote sent` · `Paid` · `On-trip` · `Cold`
+
+Apply one primary list per chat; update as the thread moves (see [Chat labels](#chat-labels)).
+
+### 6. After display name is approved
+
+1. Business tools → **Short link** / QR → export new QR card  
+2. Replace `public/brand/whatsapp-qr-card.webp` on the site  
+3. Spot-check: profile name, catalog visible to test contact, one quick reply in a test chat
+
+### Optional — Catalog USD on phone
+
+If the phone **Add product** form shows a currency picker before first save, you could delete all 10 Web items and re-add with **USD**. Not required if descriptions + `/pay` already state USD; Stripe is the payment source of truth.
+
+**Done on Web (no phone needed):** profile hours/description/address/website/email, avatar, **Catalog 10 items** (2026-08-18).
 
 ---
 
 ## Automated messages
+
+Set these on the **WhatsApp Business phone app** (Settings → Business tools → Greeting message / Away message). They are not in WhatsApp Web settings.
 
 ### Greeting (new chat / 14 days inactive)
 
@@ -98,6 +206,8 @@ Here’s the payment link for the service fee we confirmed. It’s priced in US 
 
 You’ll see Hidden China Travel on the page, plus terms and a receipt/invoice to the email you enter.
 
+You can also browse our service fees in the WhatsApp catalog (planning, review, on-trip help, booking help) — I’ll still send the exact Stripe link for what we agreed.
+
 For booking help on items US$100+, I’ll send a personalized Stripe Invoice instead of a catalog link (so the line item matches your name and booking).
 ```
 
@@ -117,7 +227,7 @@ This WhatsApp number is Philippine (+63) from years living there. I work from Ku
 
 ## Chat labels
 
-Apply one primary label; update as the thread moves.
+WhatsApp Web now calls these **分類名單** (Lists); the phone Business app may still say Labels. Apply one primary label; update as the thread moves.
 
 | Label | When |
 |---|---|

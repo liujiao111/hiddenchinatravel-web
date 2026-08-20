@@ -69,7 +69,13 @@ function contactJsonLd() {
   };
 }
 
-export default function ContactPage() {
+export default async function ContactPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ service?: string }>;
+}) {
+  const { service } = await searchParams;
+
   return (
     <main className="bg-[var(--brand-cream)]">
       <script
@@ -141,7 +147,7 @@ export default function ContactPage() {
               For general questions, partnerships, or anything that doesn&apos;t
               fit the planner form.
             </p>
-            <ContactForm />
+            <ContactForm defaultServiceType={service} />
           </section>
 
           <aside className="space-y-8">

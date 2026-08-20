@@ -47,7 +47,7 @@ function buildJsonLd() {
         price: String(tier.earlyBird),
         priceCurrency: coreService.currency,
         priceValidUntil: coreService.earlyBirdDeadline,
-        url: `${SITE_URL}${coreService.cta.href.split("#")[0]}`,
+        url: `${SITE_URL}/services/custom-itinerary`,
       })),
     },
     ...secondaryServices.map((s) => ({

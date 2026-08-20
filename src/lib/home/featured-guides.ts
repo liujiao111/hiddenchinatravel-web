@@ -26,6 +26,7 @@ const HUB_TAB_LABELS: Record<string, string> = {
   "hotels-in-china": "Hotels",
   "attraction-tickets-in-china": "Tickets",
   "china-travel-essentials": "Essentials",
+  "china-itinerary-planning": "Itinerary",
 };
 
 function publishedArticlesFromHub(hub: Hub): HomeGuideCard[] {

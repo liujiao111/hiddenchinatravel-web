@@ -44,6 +44,10 @@ const SECTION_HUB_MAP: Record<string, ArticleHubRef> = {
     href: "/china-visa-checker",
     label: "Visa & Entry",
   },
+  "China Itinerary Planning": {
+    href: "/china-itinerary-planning",
+    label: "Itinerary Planning",
+  },
 };
 
 /**
@@ -122,6 +126,14 @@ const CLUSTER_RELATED_SLUGS: Record<string, readonly string[]> = {
     "best-vpn-for-china",
     "china-sim-card-for-foreigners",
     "best-esim-for-china-travel",
+  ],
+  "how-to-plan-china-itinerary": [
+    "independent-travel-china",
+    "digital-survival-china-payment-guide",
+    "digital-survival-china-internet-guide",
+  ],
+  "independent-travel-china": [
+    "how-to-plan-china-itinerary",
   ],
 };
 

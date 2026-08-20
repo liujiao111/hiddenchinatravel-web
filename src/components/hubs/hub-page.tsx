@@ -170,9 +170,10 @@ export function HubPage({ hub }: Props) {
                   <p className="mb-2 text-xs font-normal uppercase tracking-[0.18em] text-[var(--brand-warm)]">
                     Simplest recommendation
                   </p>
-                  <p className="text-base font-normal leading-relaxed text-[var(--brand-ink)] md:text-lg">
-                    {hub.decisionGuide.recommendation}
-                  </p>
+                  <HubProse
+                    text={hub.decisionGuide.recommendation}
+                    className="text-[var(--brand-ink)]"
+                  />
                 </div>
               ) : null}
             </section>

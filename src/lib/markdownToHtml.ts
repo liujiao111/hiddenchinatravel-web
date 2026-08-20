@@ -3,7 +3,7 @@ import remarkGfm from "remark-gfm";
 import html from "remark-html";
 import { existsSync } from "fs";
 import { join } from "path";
-import sharp from "sharp";
+import "server-only";
 import { ensureHeadingIds } from "@/lib/article-toc";
 
 /** Add sponsored rel to affiliate short links in rendered HTML. */
@@ -81,6 +81,7 @@ async function isLandscapeAsset(src: string): Promise<boolean> {
   const full = resolvePublicAssetPath(src);
   if (!full) return false;
   try {
+    const { default: sharp } = await import("sharp");
     const meta = await sharp(full).metadata();
     const w = meta.width ?? 0;
     const h = meta.height ?? 0;
