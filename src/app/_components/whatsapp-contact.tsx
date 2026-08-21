@@ -88,7 +88,7 @@ export function WhatsAppContact({
               "px-2 py-1.5 text-sm md:px-2.5",
               onTeal
                 ? "text-white hover:bg-white/10"
-                : "text-[var(--brand-ink)] hover:bg-[var(--brand-soft)]",
+                : "text-neutral-900 hover:bg-neutral-50",
             ),
           !isNav &&
             "h-10 w-10 justify-center border border-[color-mix(in_srgb,var(--brand-cream-border)_40%,transparent)] text-[var(--brand-ink)] hover:border-[#25D366]/50 hover:bg-[#25D366]/8",

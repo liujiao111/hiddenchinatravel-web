@@ -209,8 +209,10 @@ export function SiteSearch({
           }}
           onKeyDown={onKeyDown}
           className={cn(
-            "min-w-0 flex-1 bg-transparent font-normal tracking-wide text-[var(--brand-ink)] outline-none placeholder:text-[color-mix(in_srgb,var(--brand-cream-border)_50%,transparent)]",
-            variant === "header" ? "text-sm" : "text-sm md:text-base",
+            "min-w-0 flex-1 bg-transparent font-normal tracking-wide outline-none",
+            variant === "header"
+              ? "text-sm text-neutral-900 placeholder:text-neutral-400"
+              : "text-sm text-[var(--brand-ink)] placeholder:text-[color-mix(in_srgb,var(--brand-cream-border)_50%,transparent)] md:text-base",
           )}
         />
         {query ? (

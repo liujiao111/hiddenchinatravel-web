@@ -6,7 +6,7 @@
 
 全站统一使用 **热带天堂（Tropical Paradise）**。完整规范与禁止项见根目录 [`tropical-paradise.md`](tropical-paradise.md)；Cursor 规则 `.cursor/rules/tropical-paradise-ui.mdc` 始终生效。对照样例：[StyleKit showcase](https://www.stylekit.top/styles/tropical-paradise/showcase#colors)。
 
-不论大小页面、工具页还是内容页，设计与改版都必须遵守该规范（Sunshine 奶油底、Ocean Teal CTA、胶囊按钮、`rounded-2xl` 卡片 + 细顶色条）。已废弃：北欧极简（Scandinavian）、赤陶暖调（Terracotta）、旧海军蓝主按钮体系。
+不论大小页面、工具页还是内容页，设计与改版都必须遵守该规范（Sunshine 奶油底、Ocean Teal CTA、胶囊按钮、`rounded-2xl` 卡片 + 细顶色条）。顶栏为白底黑字，不要青绿满铺。已废弃：北欧极简（Scandinavian）、赤陶暖调（Terracotta）、旧海军蓝主按钮体系。
 
 ---
 

@@ -12,8 +12,8 @@ type Props = {
   showWordmark?: boolean;
   /** Slightly tighter wordmark in the header so the full brand still fits */
   compactOnMobile?: boolean;
-  /** White wordmark for teal header chrome */
-  tone?: "default" | "onTeal";
+  /** White wordmark for teal header chrome; black wordmark for the light header */
+  tone?: "default" | "onTeal" | "onWhite";
   priority?: boolean;
 };
 
@@ -34,6 +34,7 @@ export function SiteLogo({
 }: Props) {
   const s = sizes[size];
   const onTeal = tone === "onTeal";
+  const onWhite = tone === "onWhite";
 
   const content = (
     <>
@@ -42,7 +43,9 @@ export function SiteLogo({
           "relative shrink-0 overflow-hidden rounded-2xl border",
           onTeal
             ? "border-white/35 bg-white/10"
-            : "border-[color-mix(in_srgb,var(--brand-cream-border)_40%,transparent)]",
+            : onWhite
+              ? "border-neutral-200 bg-white"
+              : "border-[color-mix(in_srgb,var(--brand-cream-border)_40%,transparent)]",
           s.box,
         )}
       >
@@ -59,7 +62,11 @@ export function SiteLogo({
         <span
           className={cn(
             "font-bold tracking-wide leading-tight whitespace-nowrap",
-            onTeal ? "text-white" : "text-[var(--brand-ink)]",
+            onTeal
+              ? "text-white"
+              : onWhite
+                ? "text-neutral-900"
+                : "text-[var(--brand-ink)]",
             compactOnMobile ? "text-base sm:text-lg md:text-xl" : s.text,
           )}
         >

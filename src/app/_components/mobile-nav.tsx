@@ -16,17 +16,15 @@ function labelFor(id: NavId, labels: NavLabels): string {
 type Props = {
   labels: NavLabels;
   plannerCta: string;
-  tone?: "default" | "onTeal";
 };
 
 /** Full-screen menu — used below the `lg` breakpoint (matches SiteHeader). */
-export function MobileNav({ labels, plannerCta, tone = "onTeal" }: Props) {
+export function MobileNav({ labels, plannerCta }: Props) {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
   const panelId = useId();
   const panelRef = useRef<HTMLDivElement>(null);
   const previouslyFocused = useRef<HTMLElement | null>(null);
-  const onTeal = tone === "onTeal";
 
   useEffect(() => {
     setOpen(false);
@@ -82,12 +80,7 @@ export function MobileNav({ labels, plannerCta, tone = "onTeal" }: Props) {
         aria-controls={panelId}
         aria-label={open ? "Close menu" : "Open menu"}
         onClick={() => setOpen((v) => !v)}
-        className={cn(
-          "inline-flex h-11 w-11 items-center justify-center rounded-full border-2 transition-colors duration-300",
-          onTeal
-            ? "border-white/30 text-white hover:bg-white/10"
-            : "border-[color-mix(in_srgb,var(--brand-cta)_25%,transparent)] text-[var(--brand-cta)] hover:bg-[var(--brand-soft)]",
-        )}
+        className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-neutral-200 text-neutral-900 transition-colors duration-300 hover:bg-neutral-50"
       >
         {open ? <CloseIcon /> : <MenuIcon />}
       </button>
@@ -99,15 +92,15 @@ export function MobileNav({ labels, plannerCta, tone = "onTeal" }: Props) {
           role="dialog"
           aria-modal="true"
           aria-label={labels.mainAria}
-          className="fixed inset-0 z-[70] flex flex-col bg-[var(--brand-cta)]"
+          className="fixed inset-0 z-[70] flex flex-col bg-white"
         >
-          <div className="flex h-14 items-center justify-between px-5">
-            <p className="text-sm font-bold text-white">Menu</p>
+          <div className="flex h-14 items-center justify-between border-b border-neutral-200 px-5">
+            <p className="text-sm font-bold text-neutral-900">Menu</p>
             <button
               type="button"
               aria-label="Close menu"
               onClick={() => setOpen(false)}
-              className="inline-flex h-11 w-11 items-center justify-center rounded-full border-2 border-white/30 text-white"
+              className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-neutral-200 text-neutral-900"
             >
               <CloseIcon />
             </button>
@@ -128,7 +121,7 @@ export function MobileNav({ labels, plannerCta, tone = "onTeal" }: Props) {
             <Link
               href="/china-itinerary-planner#plan-trip"
               onClick={() => setOpen(false)}
-              className="btn-brand-inverse mt-8 flex min-h-12 w-full justify-center px-6 py-3 text-sm"
+              className="btn-brand mt-8 flex min-h-12 w-full justify-center px-6 py-3 text-sm"
             >
               {plannerCta}
             </Link>
@@ -157,7 +150,7 @@ function MobileNavItem({
         <Link
           href={item.href}
           onClick={onNavigate}
-          className="flex min-h-12 items-center border-b border-white/15 py-3 text-base font-bold text-white"
+          className="flex min-h-12 items-center border-b border-neutral-200 py-3 text-base font-bold text-neutral-900"
         >
           {labelFor(item.id, labels)}
         </Link>
@@ -166,12 +159,12 @@ function MobileNavItem({
   }
 
   return (
-    <li className="border-b border-white/15">
+    <li className="border-b border-neutral-200">
       <div className="flex items-stretch">
         <Link
           href={item.href}
           onClick={onNavigate}
-          className="flex min-h-12 flex-1 items-center py-3 text-base font-bold text-white"
+          className="flex min-h-12 flex-1 items-center py-3 text-base font-bold text-neutral-900"
         >
           {labelFor(item.id, labels)}
         </Link>
@@ -180,7 +173,7 @@ function MobileNavItem({
           aria-expanded={expanded}
           aria-label={`Expand ${labelFor(item.id, labels)}`}
           onClick={() => setExpanded((v) => !v)}
-          className="inline-flex min-h-12 w-12 items-center justify-center text-white/80"
+          className="inline-flex min-h-12 w-12 items-center justify-center text-neutral-500"
         >
           <span className={cn("text-lg transition-transform", expanded && "rotate-45")}>
             +
@@ -194,7 +187,7 @@ function MobileNavItem({
               <Link
                 href={child.href}
                 onClick={onNavigate}
-                className="flex min-h-11 items-center gap-2 rounded-xl px-3 py-2 text-sm font-normal text-white/85 hover:bg-white/10"
+                className="flex min-h-11 items-center gap-2 rounded-xl px-3 py-2 text-sm font-normal text-neutral-700 hover:bg-neutral-50"
               >
                 {child.icon ? (
                   <span className="w-5 text-center" aria-hidden>

@@ -54,9 +54,9 @@ Shadows（青绿 tint，禁止冷黑大阴影）：
 
 ### 导航（site chrome）
 
-- 实底 Ocean Teal 顶栏；白字 logo / 链接
-- Header CTA：奶油胶囊 + 青绿字 — `.btn-brand-inverse`
-- Promo 条：略深青绿底 + 浅色字链
+- 白底顶栏 + 底部分割线；黑字 logo / 链接（简约，不要青绿满铺）
+- Header CTA：青绿胶囊 `.btn-brand`
+- 移动端全屏菜单同样白底黑字
 
 ### 按钮
 
@@ -64,7 +64,7 @@ Shadows（青绿 tint，禁止冷黑大阴影）：
 |------|------|------|
 | Primary | `.btn-brand` / `.btn-hero` | `rounded-full` · `font-bold` · 青绿底 · 白字 · teal shadow |
 | Outline / 副 CTA | 描边胶囊 | `border-2 border-[#00897b]/30` · 透明底 · 青绿字 · `hover:scale-105` · `hover:bg-[#00897b]/8` |
-| Inverse | 顶栏 CTA | 奶油底 · 青绿字 — `.btn-brand-inverse` |
+| Inverse | 深色带上的 CTA | 奶油底 · 青绿字 — `.btn-brand-inverse`；顶栏改用 `.btn-brand` |
 
 必须包含：`rounded-full` · `font-bold` · `transition-all duration-300`
 

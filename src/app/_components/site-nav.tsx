@@ -103,8 +103,8 @@ function NavDropdown({
               ? "font-bold text-white"
               : "text-white/85 hover:text-white"
             : isActive
-              ? "text-[var(--brand-ink)]"
-              : "text-[var(--brand-ink-muted)] hover:text-[var(--brand-ink)]",
+              ? "font-semibold text-neutral-900"
+              : "text-neutral-900 hover:text-black",
         )}
       >
         {labelFor(item.id, labels)}
@@ -207,8 +207,8 @@ export function SiteNav({ labels, tone = "default" }: Props) {
                   ? "font-bold text-white"
                   : "text-white/85 hover:text-white"
                 : isActive
-                  ? "text-[var(--brand-ink)]"
-                  : "text-[var(--brand-ink-muted)] hover:text-[var(--brand-ink)]",
+                  ? "font-semibold text-neutral-900"
+                  : "text-neutral-900 hover:text-black",
             )}
           >
             {labelFor(item.id, labels)}
