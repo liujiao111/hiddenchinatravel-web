@@ -16,10 +16,12 @@ function labelFor(id: NavId, labels: NavLabels): string {
 type Props = {
   labels: NavLabels;
   plannerCta: string;
+  /** White hamburger when the header sits on the hero photo */
+  tone?: "default" | "onPhoto";
 };
 
 /** Full-screen menu — used below the `lg` breakpoint (matches SiteHeader). */
-export function MobileNav({ labels, plannerCta }: Props) {
+export function MobileNav({ labels, plannerCta, tone = "default" }: Props) {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
   const panelId = useId();
@@ -80,7 +82,12 @@ export function MobileNav({ labels, plannerCta }: Props) {
         aria-controls={panelId}
         aria-label={open ? "Close menu" : "Open menu"}
         onClick={() => setOpen((v) => !v)}
-        className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-neutral-200 text-neutral-900 transition-colors duration-300 hover:bg-neutral-50"
+        className={cn(
+          "inline-flex h-11 w-11 items-center justify-center rounded-full border transition-colors duration-300",
+          tone === "onPhoto"
+            ? "border-white/40 text-white hover:bg-white/10"
+            : "border-neutral-200 text-neutral-900 hover:bg-neutral-50",
+        )}
       >
         {open ? <CloseIcon /> : <MenuIcon />}
       </button>

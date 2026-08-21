@@ -9,7 +9,7 @@ export function HomeHeroCopy() {
   const copy = dict.home;
 
   return (
-    <div className="relative z-10 mx-auto flex min-h-[76svh] max-w-6xl items-center px-4 py-12 md:min-h-[84svh] md:px-8 md:py-16 lg:px-12 lg:py-20">
+    <div className="relative z-10 mx-auto flex min-h-[100svh] max-w-6xl items-center px-4 pb-12 pt-20 md:px-8 md:pb-16 md:pt-24 lg:px-12 lg:pb-20">
       <div className="w-full max-w-xl text-left md:max-w-2xl">
         <p className="mb-3 text-xs font-bold uppercase tracking-[0.18em] text-[var(--brand-mango)]">
           {copy.eyebrow}
