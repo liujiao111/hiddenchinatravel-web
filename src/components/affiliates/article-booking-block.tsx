@@ -1,6 +1,5 @@
 "use client";
 
-import { AffiliateNote } from "@/components/affiliates/affiliate-note";
 import { trackEvent } from "@/lib/analytics/track";
 import type { ArticleBookingBlock } from "@/lib/affiliates/article-booking-blocks";
 import {
@@ -86,7 +85,6 @@ export function ArticleBookingBlockCard({ block, articleSlug }: Props) {
           )
         ) : null}
       </div>
-      <AffiliateNote variant="cta" className="mt-4" />
     </aside>
   );
 }

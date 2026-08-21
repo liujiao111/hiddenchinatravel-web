@@ -491,26 +491,17 @@ Hidden China Travel
 3. 如果写的是信息性内容，推荐要克制，不要全篇像销售页
 4. 推荐必须与文章主题高度相关
 5. 优先真实帮助用户，而不是为了插链接而插链接
-6. **Disclosure 要清晰，但不要每张卡片重复。** 行程规划「不吃回扣」和内容页工具联盟是两件分开的事，不要写在同一句里互相解释。
-7. 首页 Why Us / 服务页只讲规划中立（不拿酒店/景点/OTA 回扣）。联盟说明放页脚 + 每个工具 CTA 集群一次。
-8. 不要在 eSIM / VPN / 酒店每张卡上写 "some links are affiliate"。用 `AffiliateNote`（`src/components/affiliates/affiliate-note.tsx`），文案以 `src/lib/affiliates/disclosure.ts` 为准。
-9. 文章级评测（如 VPN / eSIM 长文）可在文首保留一条 disclosure；页面级工具条只用短版 CTA note。
+6. **联盟披露只放页脚**（并把行程规划不吃回扣 / 指南工具链接可能有联盟 这两件事说开）。Why Us / 服务页只讲规划中立。不要在页面、卡片、预订条上再写 "some links are affiliate" 或 Partner link 提示。
+7. `/go/xxx` 链接继续使用 `rel="sponsored"`；不要为了披露再加可见横幅。
+8. 文章级评测（如 VPN / eSIM 长文）可在文首保留一条 disclosure，那是评测文本身，不是全站提示。
 
 
 
 ### 推荐使用的 disclosure 文案
 
-#### 页脚 / 站点级（把两件事说开）
+#### 页脚 / 站点级（唯一可见披露）
 
 Itinerary advice does not take hotel or attraction kickbacks. Some tool links in our guides may be affiliate — at no extra cost to you.
-
-#### 工具 CTA 集群（每页一次）
-
-A few tool links on this page (eSIM, VPN, hotel search) may earn us a small referral — your price does not change.
-
-#### 单条预订 / 对比 CTA
-
-Partner link — same price to you.
 
 #### 文章评测文首（仅长文）
 
