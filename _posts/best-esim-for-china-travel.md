@@ -36,8 +36,6 @@ However, most travel eSIMs are **data-only** and do not provide a Chinese phone 
   * **If you only need mobile data and international apps:** a travel eSIM is usually the simplest first step.
   * **If you need a Chinese phone number:** read the [China SIM Card for Foreigners guide](/china-sim-card-for-foreigners) before deciding.
 
-_Disclosure: This guide may contain affiliate links. If you buy through these links, I may earn a small commission at no extra cost to you. I only recommend tools that are relevant to China travel planning._
-
 > **Before you fly:** Set up your eSIM at home, and download your VPN app before departure — both are much harder to sort out once you are inside China.
 
 ## What Is a China Travel eSIM?

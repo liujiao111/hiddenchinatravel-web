@@ -36,9 +36,7 @@ faqs:
   - question: "What if my VPN stops working mid-trip?"
     answer: "Switch servers first (Hong Kong, Singapore, Japan often hold up). Try obfuscated/OpenVPN modes. Wait out crackdown windows if many servers fail at once."
 ---
-_Disclosure: This guide contains affiliate links (including NordVPN). If you buy through them, I may earn a small commission at no extra cost to you. I recommend NordVPN based on my own trips after LetsVPN exited China — this is lived experience, not a paid “#1 VPN” ranking of every brand._
-
-_I’ve been going back and forth between the Philippines and mainland China for the past few years. NordVPN is what I’m currently using — $14.99/month, three months in. Here’s what led me there._
+_I’ve been going back and forth between the Philippines and mainland China for the past few years. NordVPN is what I’m currently using — $14.99/month, three months in. Here’s what led me there. This is lived experience after LetsVPN exited China, not a paid “#1 VPN” ranking of every brand._
 
 **What happened with LetsVPN**
 
