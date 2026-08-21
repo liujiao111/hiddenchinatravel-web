@@ -40,7 +40,7 @@ export function HubPage({ hub }: Props) {
             {hub.eyebrow}
           </p>
         ) : null}
-        <h1 className="mb-5 max-w-3xl text-2xl font-bold leading-tight tracking-tight text-[var(--brand-cta)] md:mb-6 md:text-4xl">
+        <h1 className="mb-5 max-w-3xl text-2xl font-bold leading-tight tracking-tight text-[var(--brand-ink)] md:mb-6 md:text-4xl">
           {hub.title}
         </h1>
         {hub.description ? (
@@ -96,7 +96,7 @@ export function HubPage({ hub }: Props) {
             >
               <h2
                 id={`${subtopic.id}-heading`}
-                className="mb-4 text-xl font-bold leading-tight tracking-tight text-[var(--brand-cta)] md:text-3xl"
+                className="mb-4 text-xl font-bold leading-tight tracking-tight text-[var(--brand-ink)] md:text-3xl"
               >
                 {subtopic.name}
               </h2>
@@ -270,7 +270,7 @@ export function HubPage({ hub }: Props) {
                 </p>
                 <h2
                   id="booking-path-heading"
-                  className="mb-3 text-xl font-bold leading-tight tracking-tight text-[var(--brand-cta)] md:text-2xl"
+                  className="mb-3 text-xl font-bold leading-tight tracking-tight text-[var(--brand-ink)] md:text-2xl"
                 >
                   {hub.affiliateExit.title}
                 </h2>
@@ -360,7 +360,7 @@ function ArticleRow({
   const inner = (
     <>
       <div className="mb-2 flex flex-wrap items-center gap-3">
-        <h3 className="text-base font-bold tracking-tight text-[var(--brand-cta)] md:text-lg">
+        <h3 className="text-base font-bold tracking-tight text-[var(--brand-ink)] md:text-lg">
           {article.title}
         </h3>
         {article.badge ? (
@@ -372,7 +372,7 @@ function ArticleRow({
       <p className="text-sm font-normal leading-relaxed text-[var(--brand-ink-muted)] md:text-base">
         {article.excerpt}
       </p>
-      <span className="mt-3 inline-flex text-sm font-bold tracking-tight text-[var(--brand-cta)]">
+      <span className="mt-3 inline-flex text-sm font-bold tracking-tight text-[var(--brand-ink)]">
         Read guide →
       </span>
     </>

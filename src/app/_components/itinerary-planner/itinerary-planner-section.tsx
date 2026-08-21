@@ -40,7 +40,7 @@ export function ItineraryPlannerSection({
           <p className="mb-2 text-xs font-bold uppercase tracking-[0.18em] text-[var(--brand-mango)]">
             {plannerSectionCopy.eyebrow}
           </p>
-          <h2 className="mb-3 text-2xl font-bold tracking-tight text-[var(--brand-cta)] md:text-3xl lg:text-4xl">
+          <h2 className="mb-3 text-2xl font-bold tracking-tight text-[var(--brand-ink)] md:text-3xl lg:text-4xl">
             {plannerSectionCopy.title}
           </h2>
           <p className="text-sm font-normal leading-relaxed text-[var(--brand-ink-muted)] md:text-base">

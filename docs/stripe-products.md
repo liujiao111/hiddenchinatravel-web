@@ -96,7 +96,7 @@ Live Payment Links pick presentment currency from the **visitor’s IP**, not th
 - Public business name: `Hidden China Travel`
 - Terms: https://hiddenchinatravel.com/terms-of-service
 - Privacy: https://hiddenchinatravel.com/privacy-policy
-- Branding logo + Ocean Teal `#00897b`
+- Branding logo + Clay `#c45c3e`
 - Payment Links: require Terms acceptance + create PDF invoice after payment
 
 ---

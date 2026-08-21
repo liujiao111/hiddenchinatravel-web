@@ -120,7 +120,7 @@ export default function AboutUsPage() {
           <p className="mb-3 text-xs font-bold uppercase tracking-[0.18em] text-[var(--brand-mango)]">
             {partnerHero.eyebrow}
           </p>
-          <h1 className="mb-5 text-2xl font-bold leading-tight tracking-tight text-[var(--brand-cta)] md:text-4xl">
+          <h1 className="mb-5 text-2xl font-bold leading-tight tracking-tight text-[var(--brand-ink)] md:text-4xl">
             {partnerHero.title}
           </h1>
           <p className="mb-3 text-sm font-normal leading-relaxed text-[var(--brand-ink-muted)] md:text-base">
@@ -139,7 +139,7 @@ export default function AboutUsPage() {
             </Link>
             <Link
               href="/survival-kit"
-              className="inline-flex items-center justify-center rounded-full border-2 border-[#00897b]/30 bg-transparent px-8 py-3.5 text-sm font-bold text-[var(--brand-cta)] transition-all duration-300 hover:scale-105 hover:border-[var(--brand-cta)] hover:bg-[#00897b]/8"
+              className="inline-flex items-center justify-center rounded-full border-2 border-[var(--brand-cta)]/30 bg-transparent px-8 py-3.5 text-sm font-bold text-[var(--brand-cta)] transition-all duration-300 hover:scale-105 hover:border-[var(--brand-cta)] hover:bg-[var(--brand-cta)]/8"
             >
               {partnerHero.secondaryCta}
             </Link>
@@ -152,7 +152,7 @@ export default function AboutUsPage() {
               {partnerWhoWeAre.paragraphs.map((p) => (
                 <p key={p.slice(0, 24)}>{p}</p>
               ))}
-              <p className="!mt-6 text-lg font-bold tracking-tight text-[var(--brand-cta)]">
+              <p className="!mt-6 text-lg font-bold tracking-tight text-[var(--brand-ink)]">
                 {partnerWhoWeAre.oneLiner}
               </p>
             </AboutSection>
@@ -167,7 +167,7 @@ export default function AboutUsPage() {
                 fly; support continues when you are on the ground.
               </p>
 
-              <h3 className="mb-4 text-lg font-bold tracking-tight text-[var(--brand-cta)]">
+              <h3 className="mb-4 text-lg font-bold tracking-tight text-[var(--brand-ink)]">
                 Before you go
               </h3>
               <ul className="mb-10 grid gap-4 sm:grid-cols-2 md:gap-5">
@@ -185,7 +185,7 @@ export default function AboutUsPage() {
                 ))}
               </ul>
 
-              <h3 className="mb-3 text-lg font-bold tracking-tight text-[var(--brand-cta)]">
+              <h3 className="mb-3 text-lg font-bold tracking-tight text-[var(--brand-ink)]">
                 During your trip
               </h3>
               <p className="mb-6 text-sm font-bold leading-relaxed text-[var(--brand-coral)] md:text-base">
@@ -244,7 +244,7 @@ export default function AboutUsPage() {
             <AboutSection id="why-us" title="Why choose us" eyebrow="Trust">
               {whyChooseUs.map((block) => (
                 <div key={block.id} className="mb-10 last:mb-0">
-                  <h3 className="mb-3 text-lg font-bold tracking-tight text-[var(--brand-cta)] md:text-xl">
+                  <h3 className="mb-3 text-lg font-bold tracking-tight text-[var(--brand-ink)] md:text-xl">
                     {block.title}
                   </h3>
                   {block.paragraphs.map((p) => (
@@ -262,7 +262,7 @@ export default function AboutUsPage() {
               eyebrow="Founder"
             >
               <div className="flex flex-col gap-5 sm:flex-row sm:items-start">
-                <div className="relative h-28 w-28 shrink-0 overflow-hidden rounded-2xl border-2 border-[#00897b]/15 sm:h-32 sm:w-32">
+                <div className="relative h-28 w-28 shrink-0 overflow-hidden rounded-2xl border-2 border-[var(--brand-cta)]/15 sm:h-32 sm:w-32">
                   <Image
                     src={SITE_FOUNDER_PICTURE}
                     alt={`${SITE_FOUNDER_NAME}, founder of ${SITE_NAME}`}
@@ -311,7 +311,7 @@ export default function AboutUsPage() {
               <div className="!max-w-none pt-2">
                 <TopicHubCards links={aboutTopicHubs} />
               </div>
-              <p className="!mt-8 font-bold tracking-tight text-[var(--brand-cta)]">
+              <p className="!mt-8 font-bold tracking-tight text-[var(--brand-ink)]">
                 Useful starting points:
               </p>
               <AboutLinkList links={aboutStartHereGuides.slice(0, 6)} />
@@ -362,7 +362,7 @@ export default function AboutUsPage() {
               <p className="mb-2 text-xs font-bold uppercase tracking-[0.18em] text-[var(--brand-mango)]">
                 Founder
               </p>
-              <div className="mb-3 relative h-20 w-20 overflow-hidden rounded-2xl border border-[#00897b]/15">
+              <div className="mb-3 relative h-20 w-20 overflow-hidden rounded-2xl border border-[var(--brand-cta)]/15">
                 <Image
                   src={SITE_FOUNDER_PICTURE}
                   alt={SITE_FOUNDER_NAME}
@@ -371,7 +371,7 @@ export default function AboutUsPage() {
                   sizes="80px"
                 />
               </div>
-              <p className="mb-1 text-xl font-bold tracking-tight text-[var(--brand-cta)]">
+              <p className="mb-1 text-xl font-bold tracking-tight text-[var(--brand-ink)]">
                 {SITE_FOUNDER_NAME}
               </p>
               <p className="mb-4 text-sm font-normal text-[var(--brand-ink-muted)]">
@@ -381,7 +381,7 @@ export default function AboutUsPage() {
               </p>
               <ClientEmailLink className="break-all text-sm font-normal underline underline-offset-4 transition-colors duration-300 hover:text-[var(--brand-cta)]" />
               <div className="mt-5 border-t border-[color-mix(in_srgb,var(--brand-cta)_12%,transparent)] pt-5">
-                <p className="mb-3 text-xs font-bold uppercase tracking-wide text-[var(--brand-cta)]">
+                <p className="mb-3 text-xs font-bold uppercase tracking-wide text-[var(--brand-ink)]">
                   Follow
                 </p>
                 <SocialLinks />
@@ -393,7 +393,7 @@ export default function AboutUsPage() {
               <p className="mb-3 text-xs font-bold uppercase tracking-[0.18em] text-[var(--brand-mango)]">
                 Start
               </p>
-              <h2 className="mb-4 text-lg font-bold tracking-tight text-[var(--brand-cta)]">
+              <h2 className="mb-4 text-lg font-bold tracking-tight text-[var(--brand-ink)]">
                 Plan or prepare
               </h2>
               <div className="mb-4 flex flex-col gap-2">

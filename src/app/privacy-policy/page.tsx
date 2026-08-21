@@ -42,7 +42,7 @@ function Section({
 }) {
   return (
     <section id={id} className="mb-12 scroll-mt-32 md:mb-14">
-      <h2 className="mb-4 text-xl font-bold tracking-tight text-[var(--brand-cta)] md:text-2xl">
+      <h2 className="mb-4 text-xl font-bold tracking-tight text-[var(--brand-ink)] md:text-2xl">
         <span className="mr-2 text-[var(--brand-mango)]">{number}.</span>
         {title}
       </h2>
@@ -87,7 +87,7 @@ export default function PrivacyPage() {
           <p className="mb-3 text-xs font-bold uppercase tracking-[0.18em] text-[var(--brand-mango)]">
             Legal
           </p>
-          <h1 className="mb-4 text-2xl font-bold leading-tight tracking-tight text-[var(--brand-cta)] md:text-4xl">
+          <h1 className="mb-4 text-2xl font-bold leading-tight tracking-tight text-[var(--brand-ink)] md:text-4xl">
             Privacy Policy
           </h1>
           <LastUpdated date={SITE_LAST_UPDATED} className="mb-6" />
@@ -109,7 +109,7 @@ export default function PrivacyPage() {
               title="Information We Collect"
             >
               <p>We collect information in these ways:</p>
-              <h3 className="!mt-6 text-lg font-bold tracking-tight text-[var(--brand-cta)]">
+              <h3 className="!mt-6 text-lg font-bold tracking-tight text-[var(--brand-ink)]">
                 a. Information you give us
               </h3>
               <p>
@@ -119,7 +119,7 @@ export default function PrivacyPage() {
                 details (cities, dates, style, passport country), and the
                 message you write.
               </p>
-              <h3 className="!mt-6 text-lg font-bold tracking-tight text-[var(--brand-cta)]">
+              <h3 className="!mt-6 text-lg font-bold tracking-tight text-[var(--brand-ink)]">
                 b. Information collected automatically
               </h3>
               <p>When you visit the website, we may collect:</p>

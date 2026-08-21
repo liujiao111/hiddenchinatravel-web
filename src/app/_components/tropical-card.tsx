@@ -2,7 +2,7 @@ import Link from "next/link";
 import cn from "classnames";
 import type { CSSProperties, ReactNode } from "react";
 
-/** Kept for call-site compat; cards now use a single brand teal accent. */
+/** Kept for call-site compat; cards now use a single clay accent. */
 export type TropicalAccent = "teal" | "palm" | "coral";
 
 type Props = {
@@ -23,7 +23,7 @@ type Props = {
   titleLines?: number;
   /** Body/excerpt line clamp (default 2). Use 0 for no clamp. */
   bodyLines?: number;
-  /** @deprecated Ignored — all cards use brand teal for consistency */
+  /** @deprecated Ignored — all cards use brand clay for consistency */
   accent?: TropicalAccent;
   /** Use for quote cards without a CTA */
   as?: "article" | "blockquote" | "div";
@@ -65,7 +65,7 @@ export function TropicalCard({
       {title != null ? (
         <h3
           className={cn(
-            "mb-2 text-lg font-bold leading-snug tracking-tight text-[var(--brand-cta)] md:text-xl",
+            "mb-2 text-lg font-bold leading-snug tracking-tight text-[var(--brand-ink)] md:text-xl",
             lineClampClass(titleLines, 2),
           )}
         >
@@ -136,7 +136,7 @@ export function TropicalCard({
   );
 }
 
-/** @deprecated Accents no longer cycle — always brand teal. */
+/** @deprecated Accents no longer cycle — always brand clay. */
 export function tropicalAccentAt(_index: number): TropicalAccent {
   return "teal";
 }

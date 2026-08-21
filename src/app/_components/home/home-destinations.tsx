@@ -23,10 +23,10 @@ export function HomeDestinations({ variant = "home" }: Props) {
         {!isHub ? (
           <div className="mb-10 flex flex-col gap-6 md:mb-12 md:flex-row md:items-end md:justify-between">
             <div className="max-w-2xl">
-              <p className="mb-2 text-xs font-bold uppercase tracking-[0.18em] text-[var(--brand-muted)]">
+              <p className="mb-2 text-xs font-bold uppercase tracking-[0.18em] text-[var(--brand-mango)]">
                 Destinations
               </p>
-              <h2 className="mb-3 text-2xl font-bold tracking-tight text-[var(--brand-cta)] md:text-3xl">
+              <h2 className="mb-3 text-2xl font-bold tracking-tight text-[var(--brand-ink)] md:text-3xl">
                 Where to begin in China
               </h2>
               <p className="text-sm font-normal leading-relaxed text-[var(--brand-ink-muted)] md:text-base">

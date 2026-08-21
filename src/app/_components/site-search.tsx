@@ -164,10 +164,10 @@ export function SiteSearch({
         className={cn(
           "flex items-center gap-2 transition-all duration-300",
           variant === "hero" || variant === "page"
-            ? "rounded-full border-2 border-[color-mix(in_srgb,var(--brand-cta)_20%,transparent)] bg-white px-5 py-3 focus-within:border-[var(--brand-cta)] focus-within:outline-none focus-within:shadow-[0_0_0_3px_rgba(0,137,123,0.15)]"
+            ? "rounded-full border-2 border-[color-mix(in_srgb,var(--brand-cta)_20%,transparent)] bg-white px-5 py-3 focus-within:border-[var(--brand-cta)] focus-within:outline-none focus-within:shadow-[0_0_0_3px_rgba(196,92,62,0.15)]"
             : null,
           variant === "header" &&
-            "rounded-full border border-[color-mix(in_srgb,var(--brand-cta)_18%,transparent)] bg-white px-3 py-1.5 shadow-[0_1px_0_rgba(0,137,123,0.06)] focus-within:border-[var(--brand-cta)] focus-within:shadow-[0_0_0_3px_rgba(0,137,123,0.12)]",
+            "rounded-full border border-[color-mix(in_srgb,var(--brand-cta)_18%,transparent)] bg-white px-3 py-1.5 shadow-[0_1px_0_rgba(80,40,24,0.06)] focus-within:border-[var(--brand-cta)] focus-within:shadow-[0_0_0_3px_rgba(196,92,62,0.12)]",
         )}
       >
         <SearchIcon
@@ -232,7 +232,7 @@ export function SiteSearch({
           <button
             type="button"
             onClick={() => goToResults(query)}
-            className="shrink-0 text-sm font-medium tracking-wide text-[var(--brand-cta)] transition-colors duration-300 hover:text-[var(--brand-cta-hover)] active:scale-95"
+            className="shrink-0 text-sm font-medium tracking-wide text-[var(--brand-ink)] transition-colors duration-300 hover:text-[var(--brand-cta-hover)] active:scale-95"
           >
             search →
           </button>
@@ -244,7 +244,7 @@ export function SiteSearch({
           id={listId}
           role="listbox"
           className={cn(
-            "absolute z-50 overflow-hidden rounded-2xl border-2 border-[color-mix(in_srgb,var(--brand-cta)_20%,transparent)] bg-white shadow-[0_4px_20px_rgba(0,137,123,0.12)]",
+            "absolute z-50 overflow-hidden rounded-2xl border-2 border-[color-mix(in_srgb,var(--brand-cta)_20%,transparent)] bg-white shadow-[0_4px_20px_rgba(80,40,24,0.12)]",
             variant === "header"
               ? "right-0 top-[calc(100%+0.4rem)] w-[min(22rem,calc(100vw-2rem))]"
               : "left-0 right-0 top-[calc(100%+0.5rem)] text-left",
@@ -289,7 +289,7 @@ export function SiteSearch({
           <button
             type="button"
             onClick={() => goToResults(query)}
-            className="flex w-full items-center justify-between border-t border-[color-mix(in_srgb,var(--brand-cream-border)_40%,transparent)] px-4 py-3 text-left text-sm font-normal tracking-wide text-[var(--brand-cta)] transition-colors duration-500 hover:bg-[var(--brand-cream)] hover:text-[var(--brand-ink)]"
+            className="flex w-full items-center justify-between border-t border-[color-mix(in_srgb,var(--brand-cream-border)_40%,transparent)] px-4 py-3 text-left text-sm font-normal tracking-wide text-[var(--brand-ink)] transition-colors duration-500 hover:bg-[var(--brand-cream)] hover:text-[var(--brand-ink)]"
           >
             <span>View all results for “{query.trim()}”</span>
             <span aria-hidden>→</span>

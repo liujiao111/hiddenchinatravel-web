@@ -74,7 +74,7 @@ export default function ToolsPage() {
                 <span className="absolute right-0 top-0 rounded-bl-2xl bg-[var(--brand-cta)] px-3 py-1 text-xs font-bold uppercase tracking-wider text-white">
                   {tool.badge}
                 </span>
-                <h2 className="mb-3 mt-2 text-xl font-bold tracking-tight text-[var(--brand-cta)] md:text-3xl">
+                <h2 className="mb-3 mt-2 text-xl font-bold tracking-tight text-[var(--brand-ink)] md:text-3xl">
                   {tool.name}
                 </h2>
                 <p className="mb-6 text-base font-normal leading-relaxed text-[var(--brand-ink-muted)] md:text-lg">

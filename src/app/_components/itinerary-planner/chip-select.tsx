@@ -52,7 +52,7 @@ export const ChipSelect = forwardRef<HTMLFieldSetElement, Props>(
     return (
       <fieldset ref={ref}>
         <legend className="mb-3 w-full">
-          <span className="block text-sm font-bold tracking-tight text-[var(--brand-cta)]">
+          <span className="block text-sm font-bold tracking-tight text-[var(--brand-ink)]">
             {legend}
           </span>
           {legendHint ? (
@@ -73,8 +73,8 @@ export const ChipSelect = forwardRef<HTMLFieldSetElement, Props>(
                 className={cn(
                   "inline-flex min-h-11 items-center gap-2 rounded-full border-2 px-4 py-2.5 text-sm font-bold transition-all duration-300 active:scale-[0.98]",
                   selected
-                    ? "border-[var(--brand-cta)] bg-[var(--brand-cta)] text-white shadow-[0_4px_16px_rgba(0,137,123,0.28)] ring-2 ring-[var(--brand-cta)]/30 ring-offset-2 ring-offset-white"
-                    : "border-[#00897b]/25 bg-white text-[var(--brand-cta)] hover:border-[var(--brand-cta)] hover:bg-[#00897b]/8",
+                    ? "border-[var(--brand-cta)] bg-[var(--brand-cta)] text-white shadow-[0_4px_16px_rgba(196,92,62,0.28)] ring-2 ring-[var(--brand-cta)]/30 ring-offset-2 ring-offset-white"
+                    : "border-[var(--brand-cta)]/25 bg-white text-[var(--brand-cta)] hover:border-[var(--brand-cta)] hover:bg-[var(--brand-cta)]/8",
                 )}
               >
                 {opt.icon ? (

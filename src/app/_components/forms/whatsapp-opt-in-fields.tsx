@@ -4,10 +4,10 @@ import { WHATSAPP_OPT_IN_LABEL } from "@/lib/forms/whatsapp-field";
 import type { ChangeEvent } from "react";
 
 const fieldClass =
-  "min-h-11 w-full rounded-full border-2 border-[#00897b]/20 bg-white px-4 py-3 text-sm font-normal tracking-wide text-[var(--brand-cta)] placeholder:text-[var(--brand-ink-muted)] transition-all duration-300 focus:border-[var(--brand-cta)] focus:outline-none focus:shadow-[0_0_0_3px_rgba(0,137,123,0.15)]";
+  "min-h-11 w-full rounded-full border-2 border-[var(--brand-cta)]/20 bg-white px-4 py-3 text-sm font-normal tracking-wide text-[var(--brand-ink)] placeholder:text-[var(--brand-ink-muted)] transition-all duration-300 focus:border-[var(--brand-cta)] focus:outline-none focus:shadow-[0_0_0_3px_rgba(196,92,62,0.15)]";
 
 const labelClass =
-  "mb-2 block text-sm font-bold tracking-tight text-[var(--brand-cta)]";
+  "mb-2 block text-sm font-bold tracking-tight text-[var(--brand-ink)]";
 
 type Props = {
   idPrefix: string;
@@ -64,14 +64,14 @@ export function WhatsAppOptInFields({
 
       <label
         htmlFor={optInId}
-        className="flex cursor-pointer items-start gap-3 rounded-2xl border border-[#00897b]/15 bg-[var(--brand-soft)] px-4 py-3 text-sm font-normal leading-relaxed text-[var(--brand-cta)]"
+        className="flex cursor-pointer items-start gap-3 rounded-2xl border border-[var(--brand-cta)]/15 bg-[var(--brand-soft)] px-4 py-3 text-sm font-normal leading-relaxed text-[var(--brand-ink)]"
       >
         <input
           id={optInId}
           name="whatsappOptIn"
           type="checkbox"
           value="on"
-          className="mt-1 h-4 w-4 shrink-0 rounded border-[#00897b]/40 text-[var(--brand-cta)] accent-[var(--brand-cta)]"
+          className="mt-1 h-4 w-4 shrink-0 rounded border-[var(--brand-cta)]/40 text-[var(--brand-cta)] accent-[var(--brand-cta)]"
           {...(controlled
             ? {
                 checked: Boolean(optIn),

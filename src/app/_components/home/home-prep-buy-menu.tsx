@@ -139,7 +139,7 @@ export function HomePrepBuyMenu({ menu, onOptionClick }: Props) {
                 : "invisible translate-y-1 opacity-0 pointer-events-none",
             )}
           >
-            <ul className="overflow-hidden rounded-2xl border-2 border-[#00897b]/20 bg-white py-1 shadow-[0_8px_30px_rgba(0,137,123,0.18)]">
+            <ul className="overflow-hidden rounded-2xl border-2 border-[var(--brand-cta)]/20 bg-white py-1 shadow-[0_8px_30px_rgba(80,40,24,0.18)]">
               {menu.options.map((option) => {
                 const isAffiliateGo =
                   option.href.startsWith("/go/") ||

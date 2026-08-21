@@ -21,14 +21,14 @@ export function ArticleAuthorBio({
   return (
     <aside
       className={cn(
-        "mt-12 rounded-2xl border-2 border-[#00897b]/15 bg-white p-5 shadow-[0_4px_20px_rgba(0,137,123,0.08)] md:p-6",
+        "mt-12 rounded-2xl border-2 border-[var(--brand-cta)]/15 bg-white p-5 shadow-[0_4px_20px_rgba(80,40,24,0.08)] md:p-6",
         className,
       )}
     >
       <div className="flex gap-4">
         <Link
           href={SITE_FOUNDER_PATH}
-          className="relative h-16 w-16 shrink-0 overflow-hidden rounded-2xl border border-[#00897b]/15"
+          className="relative h-16 w-16 shrink-0 overflow-hidden rounded-2xl border border-[var(--brand-cta)]/15"
         >
           <img
             src={picture}
@@ -42,7 +42,7 @@ export function ArticleAuthorBio({
           <p className="mb-1 text-xs font-bold uppercase tracking-[0.16em] text-[var(--brand-mango)]">
             Written by
           </p>
-          <p className="text-base font-bold tracking-tight text-[var(--brand-cta)]">
+          <p className="text-base font-bold tracking-tight text-[var(--brand-ink)]">
             <Link
               href={SITE_FOUNDER_PATH}
               className="transition-colors duration-300 hover:text-[var(--brand-coral)]"

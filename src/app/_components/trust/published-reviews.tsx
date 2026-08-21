@@ -16,7 +16,7 @@ export function PublishedReviews({
         <p className="mb-2 text-xs font-bold uppercase tracking-[0.18em] text-[var(--brand-mango)]">
           Traveler notes
         </p>
-        <p className="mb-3 text-xl font-bold tracking-tight text-[var(--brand-cta)]">
+        <p className="mb-3 text-xl font-bold tracking-tight text-[var(--brand-ink)]">
           {reviewsPageCopy.emptyTitle}
         </p>
         <p className="max-w-2xl text-sm font-normal leading-relaxed text-[var(--brand-ink-muted)] md:text-base">
@@ -32,7 +32,7 @@ export function PublishedReviews({
             </Link>
             <Link
               href="/partners"
-              className="inline-flex min-h-11 items-center justify-center rounded-full border-2 border-[#00897b]/30 px-5 py-2.5 text-sm font-bold text-[var(--brand-cta)]"
+              className="inline-flex min-h-11 items-center justify-center rounded-full border-2 border-[var(--brand-cta)]/30 px-5 py-2.5 text-sm font-bold text-[var(--brand-cta)]"
             >
               Planner partnerships
             </Link>

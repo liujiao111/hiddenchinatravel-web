@@ -65,7 +65,7 @@ export function Footer() {
             {/* Brand + CTAs */}
             <div className="lg:col-span-4">
               <SiteLogo size="lg" />
-              <p className="mt-5 max-w-md text-base font-bold leading-snug tracking-tight text-[var(--brand-cta)]">
+              <p className="mt-5 max-w-md text-base font-bold leading-snug tracking-tight text-[var(--brand-ink)]">
                 {SITE_TAGLINE}
               </p>
               <p className="mt-3 max-w-md text-sm font-normal leading-relaxed text-[var(--brand-ink-muted)]">
@@ -81,7 +81,7 @@ export function Footer() {
                 </Link>
                 <Link
                   href="/survival-kit"
-                  className="inline-flex min-h-11 items-center justify-center rounded-full border-2 border-[#00897b]/30 px-5 py-2.5 text-sm font-bold text-[var(--brand-cta)] transition-all duration-300 hover:bg-[#00897b]/8"
+                  className="inline-flex min-h-11 items-center justify-center rounded-full border-2 border-[var(--brand-cta)]/30 px-5 py-2.5 text-sm font-bold text-[var(--brand-cta)] transition-all duration-300 hover:bg-[var(--brand-cta)]/8"
                 >
                   {dict.home.secondaryCta}
                 </Link>

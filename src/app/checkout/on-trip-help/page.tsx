@@ -46,11 +46,11 @@ export default function OnTripHelpCheckoutPage() {
           <span>Request purchase</span>
         </nav>
 
-        <div className="mx-auto max-w-xl rounded-2xl border-2 border-[#00897b]/15 bg-white p-6 shadow-[0_4px_20px_rgba(0,137,123,0.1)] md:p-8">
+        <div className="mx-auto max-w-xl rounded-2xl border-2 border-[var(--brand-cta)]/15 bg-white p-6 shadow-[0_4px_20px_rgba(80,40,24,0.1)] md:p-8">
           <p className="mb-2 text-xs font-bold uppercase tracking-[0.16em] text-[var(--brand-mango)]">
             Request to purchase
           </p>
-          <h1 className="mb-2 text-2xl font-bold tracking-tight text-[var(--brand-cta)] md:text-3xl">
+          <h1 className="mb-2 text-2xl font-bold tracking-tight text-[var(--brand-ink)] md:text-3xl">
             {product.title}
           </h1>
           <p className="mb-3 text-sm font-bold text-[var(--brand-coral)]">
@@ -85,7 +85,7 @@ export default function OnTripHelpCheckoutPage() {
               )}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex min-h-11 items-center justify-center rounded-full border-2 border-[#00897b]/30 px-6 py-3 text-sm font-bold text-[var(--brand-cta)] transition-colors hover:bg-[#00897b]/8"
+              className="inline-flex min-h-11 items-center justify-center rounded-full border-2 border-[var(--brand-cta)]/30 px-6 py-3 text-sm font-bold text-[var(--brand-cta)] transition-colors hover:bg-[var(--brand-cta)]/8"
             >
               WhatsApp
             </a>

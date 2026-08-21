@@ -80,7 +80,7 @@ export function HomeWhyUs() {
           <p className="mb-3 text-xs font-bold uppercase tracking-[0.18em] text-[var(--brand-mango)]">
             Why us
           </p>
-          <h2 className="text-xl font-bold leading-snug tracking-tight text-[var(--brand-cta)] md:text-2xl lg:text-[1.65rem]">
+          <h2 className="text-xl font-bold leading-snug tracking-tight text-[var(--brand-ink)] md:text-2xl lg:text-[1.65rem]">
             {homeWhyUs.claim}
           </h2>
         </div>
@@ -88,11 +88,11 @@ export function HomeWhyUs() {
         <ul className="grid grid-cols-1 gap-3 md:grid-cols-3 md:gap-5">
           {homeWhyUs.points.map((point) => (
             <li key={point.id}>
-              <article className="flex h-full flex-col items-center rounded-2xl border border-[#00897b]/10 bg-white px-5 py-6 text-center shadow-[0_4px_20px_rgba(0,137,123,0.1)] transition-all duration-300 hover:shadow-[0_8px_32px_rgba(0,137,123,0.18)] md:min-h-[220px] md:px-6 md:py-7">
+              <article className="flex h-full flex-col items-center rounded-2xl border border-[var(--brand-cta)]/10 bg-white px-5 py-6 text-center shadow-[0_4px_20px_rgba(80,40,24,0.1)] transition-all duration-300 hover:shadow-[0_8px_32px_rgba(80,40,24,0.18)] md:min-h-[220px] md:px-6 md:py-7">
                 <div className="mb-4 flex h-11 w-11 items-center justify-center text-[var(--brand-cta)]">
                   {icons[point.id]}
                 </div>
-                <h3 className="mb-2 text-base font-bold leading-snug tracking-tight text-[var(--brand-cta)] md:text-lg">
+                <h3 className="mb-2 text-base font-bold leading-snug tracking-tight text-[var(--brand-ink)] md:text-lg">
                   {point.title}
                 </h3>
                 <p className="text-xs font-normal leading-relaxed text-[var(--brand-ink-muted)] md:text-sm">

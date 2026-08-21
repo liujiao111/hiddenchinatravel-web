@@ -16,7 +16,7 @@ export default function PartnersPage() {
         <p className="mb-2 text-xs font-bold uppercase tracking-[0.18em] text-[var(--brand-mango)]">
           Partnerships
         </p>
-        <h1 className="mb-4 max-w-3xl text-3xl font-bold tracking-tight text-[var(--brand-cta)] md:text-4xl">
+        <h1 className="mb-4 max-w-3xl text-3xl font-bold tracking-tight text-[var(--brand-ink)] md:text-4xl">
           {partnersPageCopy.title}
         </h1>
         <p className="mb-10 max-w-2xl text-sm font-normal leading-relaxed text-[var(--brand-ink-muted)] md:text-base">
@@ -32,7 +32,7 @@ export default function PartnersPage() {
               key={block.title}
               className="rounded-2xl border border-[color-mix(in_srgb,var(--brand-cta)_15%,transparent)] bg-white p-5"
             >
-              <h2 className="mb-3 text-base font-bold text-[var(--brand-cta)]">
+              <h2 className="mb-3 text-base font-bold text-[var(--brand-ink)]">
                 {block.title}
               </h2>
               <ul className="space-y-2 text-sm font-normal leading-relaxed text-[var(--brand-ink-muted)]">

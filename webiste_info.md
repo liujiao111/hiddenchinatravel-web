@@ -6,7 +6,7 @@
 
 全站统一使用 **热带天堂（Tropical Paradise）**。完整规范与禁止项见根目录 [`tropical-paradise.md`](tropical-paradise.md)；Cursor 规则 `.cursor/rules/tropical-paradise-ui.mdc` 始终生效。对照样例：[StyleKit showcase](https://www.stylekit.top/styles/tropical-paradise/showcase#colors)。
 
-不论大小页面、工具页还是内容页，设计与改版都必须遵守该规范（Sunshine 奶油底、Ocean Teal CTA、胶囊按钮、`rounded-2xl` 卡片 + 细顶色条）。顶栏为白底黑字，不要青绿满铺。已废弃：北欧极简（Scandinavian）、赤陶暖调（Terracotta）、旧海军蓝主按钮体系。
+不论大小页面、工具页还是内容页，设计与改版都必须遵守该规范（纸色奶油底、暖黑标题、陶土 CTA、胶囊按钮、`rounded-2xl` 卡片 + 细顶色条）。顶栏为白底黑字，不要品牌色满铺。不要再用 Ocean Teal `#00897b`（SaaS 后台感）。已废弃：北欧极简（Scandinavian）、旧版整站赤陶（Terracotta.md）、旧海军蓝主按钮体系。
 
 ---
 
@@ -227,7 +227,7 @@ Hidden China Travel
 
 ### 视觉倾向
 
-- 遵循 [`tropical-paradise.md`](tropical-paradise.md)：Sunshine 奶油底、Ocean Teal CTA、Coral / Mango 点缀
+- 遵循 [`tropical-paradise.md`](tropical-paradise.md)：纸色奶油底、暖黑标题、陶土 CTA、Antique gold eyebrow
 - 多留白、圆润胶囊按钮、`TropicalCard` 场景卡片
 - 图片优先真实旅行摄影，不要假 stock 感
 - 文案突出 **local partner**，避免旅行社促销腔与空洞 AI 口号

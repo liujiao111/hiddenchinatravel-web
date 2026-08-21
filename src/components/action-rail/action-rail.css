@@ -5,7 +5,7 @@
   --action-rail-ink: var(--brand-ink);
   --action-rail-ink-muted: var(--brand-ink-muted);
   --action-rail-border: color-mix(in srgb, var(--brand-cream-border) 40%, transparent);
-  /* Teal primary — keep rail aligned with site CTA, not coral jump */
+  /* Keep rail aligned with site CTA */
   --action-rail-accent: var(--brand-cta);
   --action-rail-accent-hover: var(--brand-cta-hover);
 }

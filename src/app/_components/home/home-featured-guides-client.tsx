@@ -72,7 +72,7 @@ export function HomeFeaturedGuidesClient({ featured, hubs }: Props) {
       ) : null}
 
       {items.length === 0 ? (
-        <p className="rounded-2xl border border-dashed border-[#00897b]/25 bg-white/70 px-4 py-8 text-center text-sm text-[var(--brand-ink-muted)]">
+        <p className="rounded-2xl border border-dashed border-[var(--brand-cta)]/25 bg-white/70 px-4 py-8 text-center text-sm text-[var(--brand-ink-muted)]">
           No published guides in this hub yet.{" "}
           {activeHub ? (
             <Link
@@ -131,8 +131,8 @@ function TabButton({
       className={cn(
         "inline-flex min-h-11 shrink-0 items-center rounded-full border-2 px-4 py-2 text-sm font-bold transition-all duration-300 active:scale-[0.98]",
         selected
-          ? "border-[var(--brand-cta)] bg-[var(--brand-cta)] text-white shadow-[0_4px_16px_rgba(0,137,123,0.28)]"
-          : "border-[#00897b]/20 bg-white text-[var(--brand-cta)] hover:border-[var(--brand-cta)] hover:bg-[#00897b]/8",
+          ? "border-[var(--brand-cta)] bg-[var(--brand-cta)] text-white shadow-[0_4px_16px_rgba(196,92,62,0.28)]"
+          : "border-[var(--brand-cta)]/20 bg-white text-[var(--brand-cta)] hover:border-[var(--brand-cta)] hover:bg-[var(--brand-cta)]/8",
       )}
     >
       {label}

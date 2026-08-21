@@ -35,7 +35,7 @@ export function ServiceCard({
   }
 
   const ctaClass =
-    "mt-auto inline-flex min-h-11 w-full items-center justify-center rounded-full border-2 border-[#00897b]/30 px-4 py-2.5 text-sm font-bold text-[var(--brand-cta)] transition-all duration-300 hover:border-[var(--brand-cta)] hover:bg-[#00897b]/8 active:scale-[0.98]";
+    "mt-auto inline-flex min-h-11 w-full items-center justify-center rounded-full border-2 border-[var(--brand-cta)]/30 px-4 py-2.5 text-sm font-bold text-[var(--brand-cta)] transition-all duration-300 hover:border-[var(--brand-cta)] hover:bg-[var(--brand-cta)]/8 active:scale-[0.98]";
 
   return (
     <article
@@ -43,8 +43,8 @@ export function ServiceCard({
       itemScope
       itemType="https://schema.org/Service"
       className={cn(
-        "flex h-full flex-col rounded-2xl border border-[color-mix(in_srgb,var(--brand-cta)_12%,transparent)] bg-white p-4 shadow-[0_2px_12px_rgba(0,137,123,0.06)] transition-all duration-300 md:p-5",
-        "hover:border-[var(--brand-cta)]/40 hover:shadow-[0_6px_20px_rgba(0,137,123,0.12)]",
+        "flex h-full flex-col rounded-2xl border border-[color-mix(in_srgb,var(--brand-cta)_12%,transparent)] bg-white p-4 shadow-[0_2px_12px_rgba(80,40,24,0.06)] transition-all duration-300 md:p-5",
+        "hover:border-[var(--brand-cta)]/40 hover:shadow-[0_6px_20px_rgba(80,40,24,0.12)]",
         className,
       )}
     >
@@ -60,10 +60,10 @@ export function ServiceCard({
         <meta itemProp="priceCurrency" content={priceCurrency} />
       </div>
 
-      <div className="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-full bg-[#00897b]/10 text-[var(--brand-cta)]">
+      <div className="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-full bg-[var(--brand-cta)]/10 text-[var(--brand-cta)]">
         <ServiceIcon name={icon} />
       </div>
-      <h3 className="mb-2 text-base font-bold leading-snug tracking-tight text-[var(--brand-cta)] md:text-lg">
+      <h3 className="mb-2 text-base font-bold leading-snug tracking-tight text-[var(--brand-ink)] md:text-lg">
         {title}
       </h3>
       {slogan ? (
@@ -93,7 +93,7 @@ export function ServiceCard({
         </ul>
       ) : null}
 
-      <p className="mb-1 text-xl font-bold tracking-tight text-[var(--brand-cta)]">
+      <p className="mb-1 text-xl font-bold tracking-tight text-[var(--brand-ink)]">
         {priceLabel}
       </p>
       {reassurance ? (

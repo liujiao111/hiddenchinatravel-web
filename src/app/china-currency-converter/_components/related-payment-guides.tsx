@@ -44,7 +44,7 @@ export function RelatedPaymentGuides() {
               href={item.href}
               className="surface-card block h-full bg-[var(--brand-surface)] p-5 transition-colors hover:bg-[var(--brand-soft)]"
             >
-              <span className="mb-2 block text-sm font-bold tracking-tight text-[var(--brand-cta)]">
+              <span className="mb-2 block text-sm font-bold tracking-tight text-[var(--brand-ink)]">
                 {item.title}
               </span>
               <span className="text-sm font-normal leading-relaxed text-[var(--brand-ink-muted)]">

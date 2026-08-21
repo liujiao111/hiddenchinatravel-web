@@ -12,7 +12,7 @@ type Props = {
   showWordmark?: boolean;
   /** Slightly tighter wordmark in the header so the full brand still fits */
   compactOnMobile?: boolean;
-  /** White wordmark for teal header chrome; black wordmark for the light header */
+  /** White wordmark for dark/photo chrome; black wordmark for the light header */
   tone?: "default" | "onTeal" | "onWhite";
   priority?: boolean;
 };

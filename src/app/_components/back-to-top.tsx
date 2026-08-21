@@ -52,9 +52,9 @@ export function BackToTop() {
       className={cn(
         "fixed bottom-24 right-5 z-50 flex h-12 w-12 items-center justify-center rounded-full",
         "border-2 border-white/30 bg-[var(--brand-cta)] text-white",
-        "shadow-[0_4px_16px_rgba(0,137,123,0.35)]",
+        "shadow-[0_4px_16px_rgba(196,92,62,0.35)]",
         "transition-all duration-300 active:scale-[0.98]",
-        "hover:bg-[var(--brand-cta-hover)] hover:shadow-[0_8px_24px_rgba(0,137,123,0.4)]",
+        "hover:bg-[var(--brand-cta-hover)] hover:shadow-[0_8px_24px_rgba(196,92,62,0.4)]",
         "focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--brand-mango)] focus-visible:ring-offset-2",
         /* Clear ActionRail edge tab on desktop; mobile stays above ActionRail bar */
         "md:bottom-8 md:right-24",

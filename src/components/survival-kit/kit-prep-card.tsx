@@ -93,7 +93,7 @@ export function KitPrepCard({ card }: Props) {
         </span>
         <span className="surface-card-label">Prep</span>
       </div>
-      <h3 className="mb-2 line-clamp-2 text-lg font-bold leading-snug tracking-tight text-[var(--brand-cta)] md:text-xl">
+      <h3 className="mb-2 line-clamp-2 text-lg font-bold leading-snug tracking-tight text-[var(--brand-ink)] md:text-xl">
         {card.title}
       </h3>
       <p className="mb-5 line-clamp-2 text-sm font-normal leading-relaxed text-[var(--brand-ink-muted)]">

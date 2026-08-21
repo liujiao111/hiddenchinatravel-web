@@ -35,7 +35,7 @@ export function AddonBonusBanner() {
           type="button"
           aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
-          className="inline-flex min-h-11 shrink-0 items-center justify-center rounded-full border-2 border-[#00897b]/25 bg-white px-4 py-2 text-xs font-bold text-[var(--brand-cta)] transition-all duration-300 hover:bg-[#00897b]/8"
+          className="inline-flex min-h-11 shrink-0 items-center justify-center rounded-full border-2 border-[var(--brand-cta)]/25 bg-white px-4 py-2 text-xs font-bold text-[var(--brand-cta)] transition-all duration-300 hover:bg-[var(--brand-cta)]/8"
         >
           {open ? "Hide checklist" : "See kit checklist"}
         </button>

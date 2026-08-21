@@ -37,7 +37,7 @@ export function ArticleBookingBlockCard({ block, articleSlug }: Props) {
       <p className="mb-2 text-xs font-bold uppercase tracking-[0.18em] text-[var(--brand-mango)]">
         {block.eyebrow}
       </p>
-      <h2 className="mb-3 text-lg font-bold tracking-tight text-[var(--brand-cta)] md:text-xl">
+      <h2 className="mb-3 text-lg font-bold tracking-tight text-[var(--brand-ink)] md:text-xl">
         {block.title}
       </h2>
       <p className="mb-6 max-w-xl text-sm font-normal leading-relaxed text-[var(--brand-ink-muted)] md:text-base">

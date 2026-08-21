@@ -3,37 +3,34 @@
 @tailwind utilities;
 
 /**
- * Tropical Paradise (热带天堂) — Hidden China Travel
- * Spec: tropical-paradise.md
- * Teal #00897b · coral accent · sunny cream · rounded-2xl / pill CTAs
- * Ignore neo-brutalism templates from stylekit paste.
+ * Hidden China Travel — C-end travel palette
+ * Warm ink + clay CTA (not SaaS teal). Cream paper, gold eyebrows.
  */
 :root {
-  /* StyleKit Tropical Paradise palette — stylekit.top showcase */
-  --brand: #00897b;
-  --brand-hover: #00796b;
-  --brand-olive: #4caf50; /* Palm Green */
-  --brand-olive-hover: #43a047;
-  --brand-coral: #ff6f61; /* Coral Sunset */
-  --brand-coral-hover: #f05545;
-  --brand-mango: #ffc107; /* Mango */
-  --brand-muted: #5a7a76;
-  --brand-soft: #fffde7; /* Sunshine */
+  --brand: #c45c3e;
+  --brand-hover: #a84b32;
+  --brand-olive: #6b7d5a; /* muted foliage, not admin green */
+  --brand-olive-hover: #5c6d4d;
+  --brand-coral: #c45c3e;
+  --brand-coral-hover: #a84b32;
+  --brand-mango: #c9952a; /* antique gold, less candy */
+  --brand-muted: #6f675e;
+  --brand-soft: #f4eee6;
   --brand-on: #ffffff;
-  --brand-ink: #00897b;
-  --brand-ink-muted: #6b7280; /* gray-500 body on showcase */
-  --brand-cta: #00897b;
-  --brand-cta-hover: #00796b;
+  --brand-ink: #1c1917;
+  --brand-ink-muted: #6b645c;
+  --brand-cta: #c45c3e;
+  --brand-cta-hover: #a84b32;
   --brand-accent: var(--brand-coral);
   --brand-accent-hover: var(--brand-coral-hover);
-  --brand-cream: #fffde7;
-  --brand-cream-border: #00897b;
-  --brand-warm: #ffc107;
+  --brand-cream: #faf6ef;
+  --brand-cream-border: #c45c3e;
+  --brand-warm: #c9952a;
   --brand-surface: #ffffff;
-  --brand-ring: rgba(0, 137, 123, 0.15);
-  --brand-shadow: 0 4px 20px rgba(0, 137, 123, 0.1);
-  --brand-shadow-hover: 0 8px 32px rgba(0, 137, 123, 0.22);
-  --brand-btn-shadow: 0 4px 16px rgba(0, 137, 123, 0.3);
+  --brand-ring: rgba(196, 92, 62, 0.18);
+  --brand-shadow: 0 4px 20px rgba(80, 40, 24, 0.08);
+  --brand-shadow-hover: 0 8px 32px rgba(80, 40, 24, 0.14);
+  --brand-btn-shadow: 0 4px 16px rgba(196, 92, 62, 0.28);
 }
 
 @layer components {
@@ -60,25 +57,25 @@
     box-shadow: 0 0 0 3px var(--brand-ring), var(--brand-btn-shadow);
   }
 
-  /* Cream pill on teal chrome (header CTA) */
+  /* Cream pill on dark / photo chrome */
   .btn-brand-inverse {
     @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 font-bold tracking-tight transition-all duration-300;
     background-color: var(--brand-cream);
     color: var(--brand-cta);
     border: 1px solid var(--brand-cream);
-    box-shadow: 0 4px 16px rgba(0, 137, 123, 0.3);
+    box-shadow: 0 4px 16px rgba(196, 92, 62, 0.28);
   }
 
   .btn-brand-inverse:hover {
     background-color: #ffffff;
     border-color: #ffffff;
     color: var(--brand-cta-hover);
-    box-shadow: 0 8px 30px rgba(0, 137, 123, 0.15);
+    box-shadow: 0 8px 30px rgba(80, 40, 24, 0.12);
   }
 
   .btn-brand-inverse:focus-visible {
     outline: none;
-    box-shadow: 0 0 0 3px rgba(255, 250, 240, 0.45), 0 4px 16px rgba(0, 137, 123, 0.3);
+    box-shadow: 0 0 0 3px rgba(255, 250, 240, 0.45), 0 4px 16px rgba(196, 92, 62, 0.28);
   }
 
   .btn-brand-outline {
@@ -86,7 +83,7 @@
     color: var(--brand-cta);
     background: var(--brand-surface);
     border: 2px solid color-mix(in srgb, var(--brand-cta) 20%, transparent);
-    box-shadow: 0 2px 8px rgba(0, 137, 123, 0.08);
+    box-shadow: 0 2px 8px rgba(80, 40, 24, 0.06);
   }
 
   .btn-brand-outline:hover {
@@ -122,7 +119,7 @@
 
   /*
    * StyleKit card shell:
-   * rounded-2xl + border-[#00897b]/15 + teal shadow + hover:scale-105
+   * rounded-2xl + warm clay border + soft shadow
    * Thin accent top bar is added by TropicalCard (absolute h-1)
    */
   .surface-card {

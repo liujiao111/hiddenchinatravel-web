@@ -73,7 +73,7 @@ export function KitPracticalSection() {
                   <td className="px-4 py-3.5 font-bold tracking-tight text-[var(--brand-ink)]">
                     {row.service}
                   </td>
-                  <td className="px-4 py-3.5 font-normal tabular-nums tracking-wide text-[var(--brand-cta)]">
+                  <td className="px-4 py-3.5 font-normal tabular-nums tracking-wide text-[var(--brand-ink)]">
                     <a
                       href={`tel:${row.number}`}
                       className="underline decoration-[color-mix(in_srgb,var(--brand-cta)_30%,transparent)] underline-offset-4 transition-colors duration-300 hover:text-[var(--brand-cta-hover)]"

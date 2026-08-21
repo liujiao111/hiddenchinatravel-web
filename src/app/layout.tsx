@@ -87,7 +87,7 @@ export default function RootLayout({
         <link rel="icon" href={SITE_LOGO_PATH} type="image/webp" />
         <link rel="apple-touch-icon" href={SITE_LOGO_PATH} />
         <link rel="manifest" href="/favicon/site.webmanifest" />
-        <meta name="theme-color" content="#00897b" />
+        <meta name="theme-color" content="#c45c3e" />
       </head>
       <body
         className={cn(

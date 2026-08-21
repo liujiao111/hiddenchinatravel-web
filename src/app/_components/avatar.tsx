@@ -26,12 +26,12 @@ const Avatar = ({ name, picture, href = SITE_FOUNDER_PATH }: Props) => {
       {href ? (
         <Link
           href={href}
-          className="mr-4 shrink-0 overflow-hidden rounded-2xl border border-[#00897b]/15 transition-transform duration-300 hover:scale-105"
+          className="mr-4 shrink-0 overflow-hidden rounded-2xl border border-[var(--brand-cta)]/15 transition-transform duration-300 hover:scale-105"
         >
           {img}
         </Link>
       ) : (
-        <span className="mr-4 shrink-0 overflow-hidden rounded-2xl border border-[#00897b]/15">
+        <span className="mr-4 shrink-0 overflow-hidden rounded-2xl border border-[var(--brand-cta)]/15">
           {img}
         </span>
       )}
@@ -44,7 +44,7 @@ const Avatar = ({ name, picture, href = SITE_FOUNDER_PATH }: Props) => {
             {name}
           </Link>
         ) : (
-          <span className="text-base font-bold tracking-tight text-[var(--brand-cta)]">
+          <span className="text-base font-bold tracking-tight text-[var(--brand-ink)]">
             {name}
           </span>
         )}

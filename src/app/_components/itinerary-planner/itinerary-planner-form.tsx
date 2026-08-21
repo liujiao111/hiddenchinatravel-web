@@ -35,10 +35,10 @@ import { useActionState, useEffect, useMemo, useRef, useState } from "react";
 const initialState: PlannerFormState = { ok: false, message: "" };
 
 const fieldClass =
-  "min-h-11 w-full rounded-full border-2 border-[#00897b]/20 bg-white px-4 py-3 text-sm font-normal tracking-wide text-[var(--brand-cta)] placeholder:text-[var(--brand-ink-muted)] transition-all duration-300 focus:border-[var(--brand-cta)] focus:outline-none focus:shadow-[0_0_0_3px_rgba(0,137,123,0.15)]";
+  "min-h-11 w-full rounded-full border-2 border-[var(--brand-cta)]/20 bg-white px-4 py-3 text-sm font-normal tracking-wide text-[var(--brand-ink)] placeholder:text-[var(--brand-ink-muted)] transition-all duration-300 focus:border-[var(--brand-cta)] focus:outline-none focus:shadow-[0_0_0_3px_rgba(196,92,62,0.15)]";
 
 const labelClass =
-  "mb-2 block text-sm font-bold tracking-tight text-[var(--brand-cta)]";
+  "mb-2 block text-sm font-bold tracking-tight text-[var(--brand-ink)]";
 
 type Props = {
   visaLookup: QuickVisaLookup;
@@ -124,14 +124,14 @@ export function ItineraryPlannerForm({
     return (
       <div
         ref={rootRef}
-        className="scroll-mt-28 rounded-2xl border-2 border-[#00897b]/25 bg-white p-6 text-center shadow-[0_4px_20px_rgba(0,137,123,0.1)] md:p-8"
+        className="scroll-mt-28 rounded-2xl border-2 border-[var(--brand-cta)]/25 bg-white p-6 text-center shadow-[0_4px_20px_rgba(80,40,24,0.1)] md:p-8"
         role="status"
         aria-live="polite"
       >
         <p className="mb-2 text-xs font-bold uppercase tracking-[0.18em] text-[var(--brand-mango)]">
           Request received
         </p>
-        <h3 className="mb-2 text-xl font-bold tracking-tight text-[var(--brand-cta)]">
+        <h3 className="mb-2 text-xl font-bold tracking-tight text-[var(--brand-ink)]">
           {plannerSuccessCopy.title}
         </h3>
         <p className="text-sm font-normal leading-relaxed text-[var(--brand-ink-muted)] md:text-base">
@@ -153,11 +153,11 @@ export function ItineraryPlannerForm({
   return (
     <div
       ref={rootRef}
-      className="scroll-mt-28 rounded-2xl border-2 border-[#00897b]/15 bg-white p-5 shadow-[0_4px_20px_rgba(0,137,123,0.1)] md:p-8"
+      className="scroll-mt-28 rounded-2xl border-2 border-[var(--brand-cta)]/15 bg-white p-5 shadow-[0_4px_20px_rgba(80,40,24,0.1)] md:p-8"
     >
       <div className="mb-6">
         <div className="mb-3 flex items-center justify-between gap-3">
-          <p className="text-sm font-bold tracking-tight text-[var(--brand-cta)]">
+          <p className="text-sm font-bold tracking-tight text-[var(--brand-ink)]">
             {plannerStepMeta[step]?.label}
           </p>
           <p className="text-xs font-bold tabular-nums text-[var(--brand-ink-muted)]">
@@ -165,7 +165,7 @@ export function ItineraryPlannerForm({
           </p>
         </div>
         <div
-          className="h-1.5 overflow-hidden rounded-full bg-[#00897b]/12"
+          className="h-1.5 overflow-hidden rounded-full bg-[var(--brand-cta)]/12"
           role="progressbar"
           aria-valuemin={1}
           aria-valuemax={plannerStepMeta.length}
@@ -240,7 +240,7 @@ export function ItineraryPlannerForm({
               max={plannerDayBounds.max}
               value={values.days}
               onChange={(e) => patch({ days: Number(e.target.value) })}
-              className="mt-1 h-2 w-full cursor-pointer appearance-none rounded-full bg-[#00897b]/15 accent-[var(--brand-cta)]"
+              className="mt-1 h-2 w-full cursor-pointer appearance-none rounded-full bg-[var(--brand-cta)]/15 accent-[var(--brand-cta)]"
             />
             <div className="mt-2 flex justify-between text-xs font-normal text-[var(--brand-ink-muted)]">
               <span>{plannerDayBounds.min} days</span>
@@ -260,7 +260,7 @@ export function ItineraryPlannerForm({
               <button
                 type="button"
                 aria-label="Fewer travelers"
-                className="inline-flex h-11 w-11 items-center justify-center rounded-full border-2 border-[#00897b]/25 text-lg font-bold text-[var(--brand-cta)] transition-colors duration-300 hover:bg-[#00897b]/8"
+                className="inline-flex h-11 w-11 items-center justify-center rounded-full border-2 border-[var(--brand-cta)]/25 text-lg font-bold text-[var(--brand-cta)] transition-colors duration-300 hover:bg-[var(--brand-cta)]/8"
                 onClick={() =>
                   patch({
                     travelers: Math.max(
@@ -293,7 +293,7 @@ export function ItineraryPlannerForm({
               <button
                 type="button"
                 aria-label="More travelers"
-                className="inline-flex h-11 w-11 items-center justify-center rounded-full border-2 border-[#00897b]/25 text-lg font-bold text-[var(--brand-cta)] transition-colors duration-300 hover:bg-[#00897b]/8"
+                className="inline-flex h-11 w-11 items-center justify-center rounded-full border-2 border-[var(--brand-cta)]/25 text-lg font-bold text-[var(--brand-cta)] transition-colors duration-300 hover:bg-[var(--brand-cta)]/8"
                 onClick={() =>
                   patch({
                     travelers: Math.min(
@@ -468,7 +468,7 @@ export function ItineraryPlannerForm({
               maxLength={5000}
               value={values.notes}
               onChange={(e) => patch({ notes: e.target.value })}
-              className="min-h-[7rem] w-full rounded-2xl border-2 border-[#00897b]/20 bg-white px-4 py-3 text-sm font-normal tracking-wide text-[var(--brand-cta)] placeholder:text-[var(--brand-ink-muted)] transition-all duration-300 focus:border-[var(--brand-cta)] focus:outline-none focus:shadow-[0_0_0_3px_rgba(0,137,123,0.15)]"
+              className="min-h-[7rem] w-full rounded-2xl border-2 border-[var(--brand-cta)]/20 bg-white px-4 py-3 text-sm font-normal tracking-wide text-[var(--brand-ink)] placeholder:text-[var(--brand-ink-muted)] transition-all duration-300 focus:border-[var(--brand-cta)] focus:outline-none focus:shadow-[0_0_0_3px_rgba(196,92,62,0.15)]"
               placeholder="Must-sees, dates, pace, dietary needs…"
             />
           </div>
@@ -484,7 +484,7 @@ export function ItineraryPlannerForm({
             <button
               type="button"
               onClick={goBack}
-              className="inline-flex min-h-11 items-center justify-center rounded-full border-2 border-[#00897b]/30 px-6 py-3 text-sm font-bold text-[var(--brand-cta)] transition-all duration-300 hover:bg-[#00897b]/8"
+              className="inline-flex min-h-11 items-center justify-center rounded-full border-2 border-[var(--brand-cta)]/30 px-6 py-3 text-sm font-bold text-[var(--brand-cta)] transition-all duration-300 hover:bg-[var(--brand-cta)]/8"
             >
               {plannerCtaCopy.back}
             </button>
@@ -509,7 +509,7 @@ export function ItineraryPlannerForm({
             <button
               type="button"
               onClick={goBack}
-              className="inline-flex min-h-11 items-center justify-center rounded-full border-2 border-[#00897b]/30 px-6 py-3 text-sm font-bold text-[var(--brand-cta)] transition-all duration-300 hover:bg-[#00897b]/8"
+              className="inline-flex min-h-11 items-center justify-center rounded-full border-2 border-[var(--brand-cta)]/30 px-6 py-3 text-sm font-bold text-[var(--brand-cta)] transition-all duration-300 hover:bg-[var(--brand-cta)]/8"
             >
               {plannerCtaCopy.back}
             </button>

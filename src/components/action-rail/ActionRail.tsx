@@ -109,7 +109,7 @@ export function ActionRail({ content, visibility, behavior }: ActionRailProps) {
   };
 
   const panelShellClass =
-    "action-rail border-2 border-[var(--action-rail-border)] bg-[var(--action-rail-bg)] text-[var(--action-rail-ink)] shadow-[0_8px_30px_rgba(0,137,123,0.15)]";
+    "action-rail border-2 border-[var(--action-rail-border)] bg-[var(--action-rail-bg)] text-[var(--action-rail-ink)] shadow-[0_8px_30px_rgba(80,40,24,0.15)]";
 
   return (
     <>

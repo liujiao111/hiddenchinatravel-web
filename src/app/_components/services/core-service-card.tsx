@@ -45,7 +45,7 @@ export function CoreServiceCard() {
   return (
     <article
       id="custom-itinerary"
-      className="relative min-w-0 overflow-hidden rounded-2xl border-2 border-[var(--brand-cta)]/25 bg-white p-4 shadow-[0_8px_32px_rgba(0,137,123,0.14)] sm:p-5 md:p-8 lg:p-10"
+      className="relative min-w-0 overflow-hidden rounded-2xl border-2 border-[var(--brand-cta)]/25 bg-white p-4 shadow-[0_8px_32px_rgba(80,40,24,0.14)] sm:p-5 md:p-8 lg:p-10"
     >
       <div
         className="absolute left-0 right-0 top-0 h-1.5 bg-[var(--brand-cta)]"
@@ -61,7 +61,7 @@ export function CoreServiceCard() {
         </span>
       </div>
 
-      <h2 className="mb-3 text-xl font-bold tracking-tight text-[var(--brand-cta)] sm:text-2xl md:text-3xl lg:text-4xl">
+      <h2 className="mb-3 text-xl font-bold tracking-tight text-[var(--brand-ink)] sm:text-2xl md:text-3xl lg:text-4xl">
         {coreService.title}
       </h2>
       <p className="mb-4 max-w-3xl text-sm font-normal leading-relaxed text-[var(--brand-ink-muted)] md:text-base">
@@ -201,7 +201,7 @@ export function CoreServiceCard() {
         </Link>
         <Link
           href="/services/custom-itinerary"
-          className="inline-flex min-h-12 items-center justify-center rounded-full border-2 border-[#00897b]/30 px-6 py-3 text-sm font-bold text-[var(--brand-cta)] transition-all duration-300 hover:bg-[#00897b]/8 sm:px-8"
+          className="inline-flex min-h-12 items-center justify-center rounded-full border-2 border-[var(--brand-cta)]/30 px-6 py-3 text-sm font-bold text-[var(--brand-cta)] transition-all duration-300 hover:bg-[var(--brand-cta)]/8 sm:px-8"
         >
           See the full planning page
         </Link>

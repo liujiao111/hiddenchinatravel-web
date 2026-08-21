@@ -9,7 +9,7 @@ export function HomeSurvivalKit() {
           <p className="mb-2 text-xs font-bold uppercase tracking-[0.18em] text-[var(--brand-mango)]">
             Survival Kit
           </p>
-          <h2 className="mb-4 text-2xl font-bold tracking-tight text-[var(--brand-cta)] md:text-3xl">
+          <h2 className="mb-4 text-2xl font-bold tracking-tight text-[var(--brand-ink)] md:text-3xl">
             First-trip essentials, ready before you land
           </h2>
           <p className="mb-8 text-sm font-normal leading-relaxed text-[var(--brand-ink-muted)] md:text-base">

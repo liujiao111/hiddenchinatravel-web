@@ -18,11 +18,11 @@ export function ServicesFaq() {
       </p>
       <h2
         id="services-faq-heading"
-        className="mb-8 text-2xl font-bold tracking-tight text-[var(--brand-cta)] md:text-3xl"
+        className="mb-8 text-2xl font-bold tracking-tight text-[var(--brand-ink)] md:text-3xl"
       >
         Common questions before you book
       </h2>
-      <div className="overflow-hidden rounded-2xl border border-[color-mix(in_srgb,var(--brand-cta)_15%,transparent)] bg-white shadow-[0_4px_20px_rgba(0,137,123,0.08)]">
+      <div className="overflow-hidden rounded-2xl border border-[color-mix(in_srgb,var(--brand-cta)_15%,transparent)] bg-white shadow-[0_4px_20px_rgba(80,40,24,0.08)]">
         {servicesFaqs.map((item, index) => {
           const id = String(index);
           const isOpen = openId === id;
@@ -36,7 +36,7 @@ export function ServicesFaq() {
                 onClick={() => setOpenId(isOpen ? null : id)}
                 aria-expanded={isOpen}
                 aria-controls={`services-faq-panel-${id}`}
-                className="flex min-h-14 w-full items-center justify-between gap-4 px-5 py-4 text-left text-sm font-bold tracking-tight text-[var(--brand-cta)] transition-colors duration-300 hover:bg-[var(--brand-soft)] md:px-6 md:text-base"
+                className="flex min-h-14 w-full items-center justify-between gap-4 px-5 py-4 text-left text-sm font-bold tracking-tight text-[var(--brand-ink)] transition-colors duration-300 hover:bg-[var(--brand-soft)] md:px-6 md:text-base"
               >
                 {item.question}
                 <span

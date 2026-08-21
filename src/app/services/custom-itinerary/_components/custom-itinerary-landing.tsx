@@ -41,7 +41,7 @@ export function CustomItineraryLanding() {
         <Container>
           <div className="grid gap-10 lg:grid-cols-5">
             <div className="lg:col-span-3">
-              <h2 className="mb-4 text-2xl font-bold tracking-tight text-[var(--brand-cta)]">
+              <h2 className="mb-4 text-2xl font-bold tracking-tight text-[var(--brand-ink)]">
                 What you get
               </h2>
               <ul className="space-y-3 text-sm font-normal leading-relaxed text-[var(--brand-ink-muted)] md:text-base">
@@ -111,7 +111,7 @@ export function CustomItineraryLanding() {
         className="border-t border-[color-mix(in_srgb,var(--brand-cta)_12%,transparent)] bg-[var(--brand-cream)] py-12 md:py-16"
       >
         <Container>
-          <h2 className="mb-2 text-2xl font-bold tracking-tight text-[var(--brand-cta)]">
+          <h2 className="mb-2 text-2xl font-bold tracking-tight text-[var(--brand-ink)]">
             A sample of how a route can feel
           </h2>
           <p className="mb-8 max-w-2xl text-sm font-normal text-[var(--brand-ink-muted)]">
@@ -123,7 +123,7 @@ export function CustomItineraryLanding() {
 
       <section className="border-t border-[color-mix(in_srgb,var(--brand-cta)_12%,transparent)] bg-[var(--brand-cream)] py-12 md:py-16">
         <Container>
-          <h2 className="mb-6 text-2xl font-bold tracking-tight text-[var(--brand-cta)]">
+          <h2 className="mb-6 text-2xl font-bold tracking-tight text-[var(--brand-ink)]">
             Traveler notes
           </h2>
           <PublishedReviews showEmptyCtas={false} />

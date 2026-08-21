@@ -26,9 +26,9 @@ const toneStyles: Record<
   },
   pricing: {
     iconWrap: "bg-[color-mix(in_srgb,var(--brand-mango)_22%,white)]",
-    icon: "text-[#c79100]",
-    title: "text-[#c79100]",
-    mark: "text-[#c79100]",
+    icon: "text-[var(--brand-mango)]",
+    title: "text-[var(--brand-mango)]",
+    mark: "text-[var(--brand-mango)]",
   },
   response: {
     iconWrap: "bg-[color-mix(in_srgb,var(--brand-cta)_12%,white)]",
@@ -165,7 +165,7 @@ function AddonLinksBlock({ compact = false }: { compact?: boolean }) {
     >
       <p
         className={cn(
-          "mb-2 font-bold tracking-tight text-[var(--brand-cta)]",
+          "mb-2 font-bold tracking-tight text-[var(--brand-ink)]",
           compact ? "text-xs" : "text-sm",
         )}
       >
@@ -215,7 +215,7 @@ type Props = {
 export function PlannerServicePanel({ showTrust = true }: Props) {
   return (
     <div className="lg:sticky lg:top-28 lg:self-start">
-      <div className="rounded-2xl border-2 border-[#00897b]/15 bg-white p-4 shadow-[0_4px_20px_rgba(0,137,123,0.1)] sm:p-5 md:p-6">
+      <div className="rounded-2xl border-2 border-[var(--brand-cta)]/15 bg-white p-4 shadow-[0_4px_20px_rgba(80,40,24,0.1)] sm:p-5 md:p-6">
         <p className="mb-4 text-xs font-bold uppercase tracking-[0.16em] text-[var(--brand-mango)]">
           Service & pricing
         </p>

@@ -88,7 +88,7 @@ export default async function ContactPage({
           <p className="mb-2 text-xs font-bold uppercase tracking-[0.18em] text-[var(--brand-mango)]">
             Contact
           </p>
-          <h1 className="mb-4 text-3xl font-bold tracking-tight text-[var(--brand-cta)] md:text-4xl">
+          <h1 className="mb-4 text-3xl font-bold tracking-tight text-[var(--brand-ink)] md:text-4xl">
             Let&apos;s talk about your China trip
           </h1>
           <p className="text-sm font-normal leading-relaxed text-[var(--brand-ink-muted)] md:text-base">
@@ -104,7 +104,7 @@ export default async function ContactPage({
         <div className="mb-8 grid gap-3 sm:grid-cols-2 md:mb-10">
           <Link
             href="/china-itinerary-planner#plan-trip"
-            className="rounded-2xl border-2 border-[#00897b]/15 bg-white px-5 py-4 shadow-[0_4px_20px_rgba(0,137,123,0.08)] transition-all duration-300 hover:border-[var(--brand-cta)] hover:shadow-[0_8px_28px_rgba(0,137,123,0.14)]"
+            className="rounded-2xl border-2 border-[var(--brand-cta)]/15 bg-white px-5 py-4 shadow-[0_4px_20px_rgba(80,40,24,0.08)] transition-all duration-300 hover:border-[var(--brand-cta)] hover:shadow-[0_8px_28px_rgba(80,40,24,0.14)]"
           >
             <p className="text-xs font-bold uppercase tracking-wide text-[var(--brand-mango)]">
               Fastest for planning
@@ -118,7 +118,7 @@ export default async function ContactPage({
           </Link>
           <Link
             href="/services"
-            className="rounded-2xl border-2 border-[#00897b]/15 bg-white px-5 py-4 shadow-[0_4px_20px_rgba(0,137,123,0.08)] transition-all duration-300 hover:border-[var(--brand-cta)] hover:shadow-[0_8px_28px_rgba(0,137,123,0.14)]"
+            className="rounded-2xl border-2 border-[var(--brand-cta)]/15 bg-white px-5 py-4 shadow-[0_4px_20px_rgba(80,40,24,0.08)] transition-all duration-300 hover:border-[var(--brand-cta)] hover:shadow-[0_8px_28px_rgba(80,40,24,0.14)]"
           >
             <p className="text-xs font-bold uppercase tracking-wide text-[var(--brand-mango)]">
               See pricing first
@@ -135,11 +135,11 @@ export default async function ContactPage({
         <div className="grid grid-cols-1 gap-10 pb-24 lg:grid-cols-[minmax(0,1fr)_280px] lg:gap-12">
           <section
             aria-labelledby="contact-form-heading"
-            className="rounded-2xl border-2 border-[#00897b]/15 bg-white p-6 shadow-[0_4px_20px_rgba(0,137,123,0.1)] md:p-8"
+            className="rounded-2xl border-2 border-[var(--brand-cta)]/15 bg-white p-6 shadow-[0_4px_20px_rgba(80,40,24,0.1)] md:p-8"
           >
             <h2
               id="contact-form-heading"
-              className="mb-2 text-xl font-bold tracking-tight text-[var(--brand-cta)]"
+              className="mb-2 text-xl font-bold tracking-tight text-[var(--brand-ink)]"
             >
               Send a message
             </h2>
@@ -152,7 +152,7 @@ export default async function ContactPage({
 
           <aside className="space-y-8">
             <div>
-              <h2 className="mb-2 text-sm font-bold tracking-tight text-[var(--brand-cta)]">
+              <h2 className="mb-2 text-sm font-bold tracking-tight text-[var(--brand-ink)]">
                 Email
               </h2>
               <ClientEmailLink className="break-all text-sm font-normal text-[var(--brand-ink-muted)] transition-colors duration-300 hover:text-[var(--brand-coral)]" />
@@ -163,7 +163,7 @@ export default async function ContactPage({
             </div>
 
             <div>
-              <h2 className="mb-2 text-sm font-bold tracking-tight text-[var(--brand-cta)]">
+              <h2 className="mb-2 text-sm font-bold tracking-tight text-[var(--brand-ink)]">
                 WhatsApp
               </h2>
               <a
@@ -177,7 +177,7 @@ export default async function ContactPage({
             </div>
 
             <div>
-              <h2 className="mb-2 text-sm font-bold tracking-tight text-[var(--brand-cta)]">
+              <h2 className="mb-2 text-sm font-bold tracking-tight text-[var(--brand-ink)]">
                 Based in
               </h2>
               <p className="text-sm font-normal text-[var(--brand-ink-muted)]">

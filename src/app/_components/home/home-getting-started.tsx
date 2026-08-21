@@ -43,7 +43,7 @@ function PrepCardShell({
     <article className="surface-card flex h-full flex-col p-5 md:p-6">
       <div className="surface-card-bar" aria-hidden />
       <p className="surface-card-label mb-3">Step {step.step}</p>
-      <h3 className="mb-2 line-clamp-2 text-lg font-bold leading-snug tracking-tight text-[var(--brand-cta)] md:text-xl">
+      <h3 className="mb-2 line-clamp-2 text-lg font-bold leading-snug tracking-tight text-[var(--brand-ink)] md:text-xl">
         {step.title}
       </h3>
       <p className="mb-4 line-clamp-2 text-sm font-normal leading-relaxed text-[var(--brand-ink-muted)]">
@@ -62,10 +62,10 @@ export function HomeGettingStarted() {
     >
       <Container>
         <div className="mb-10 max-w-2xl md:mb-12">
-          <p className="mb-2 text-xs font-bold uppercase tracking-[0.18em] text-[var(--brand-muted)]">
+          <p className="mb-2 text-xs font-bold uppercase tracking-[0.18em] text-[var(--brand-mango)]">
             {homePrepSection.eyebrow}
           </p>
-          <h2 className="mb-3 text-2xl font-bold tracking-tight text-[var(--brand-cta)] md:text-3xl">
+          <h2 className="mb-3 text-2xl font-bold tracking-tight text-[var(--brand-ink)] md:text-3xl">
             {homePrepSection.title}
           </h2>
           <p className="text-sm font-normal leading-relaxed text-[var(--brand-ink-muted)] md:text-base">

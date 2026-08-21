@@ -120,7 +120,7 @@ function NavDropdown({
           aria-label={menuAriaFor(item, labels)}
           className="absolute left-0 top-full z-50 min-w-[240px] pt-2"
         >
-          <ul className="rounded-2xl border-2 border-[#00897b]/20 bg-white py-2 shadow-[0_4px_20px_rgba(0,137,123,0.12)]">
+          <ul className="rounded-2xl border-2 border-[var(--brand-cta)]/20 bg-white py-2 shadow-[0_4px_20px_rgba(80,40,24,0.12)]">
             <li role="none">
               <Link
                 role="menuitem"

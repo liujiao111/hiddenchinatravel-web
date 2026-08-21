@@ -13,13 +13,13 @@ type Props = {
 export function EndCTA({ copy, articleSlug }: Props) {
   return (
     <aside
-      className="mt-14 rounded-2xl border-2 border-[#00897b]/15 bg-[var(--brand-soft)] p-6 md:mt-16 md:p-8"
+      className="mt-14 rounded-2xl border-2 border-[var(--brand-cta)]/15 bg-[var(--brand-soft)] p-6 md:mt-16 md:p-8"
       aria-label="Plan my China trip"
     >
       <p className="mb-2 text-[11px] font-bold uppercase tracking-[0.16em] text-[var(--brand-mango)]">
         Next step
       </p>
-      <p className="mb-3 text-base font-bold leading-snug tracking-tight text-[var(--brand-cta)] md:text-lg">
+      <p className="mb-3 text-base font-bold leading-snug tracking-tight text-[var(--brand-ink)] md:text-lg">
         {copy.bridge}
       </p>
       <p className="mb-6 max-w-xl text-sm font-normal leading-relaxed text-[var(--brand-ink-muted)] md:text-base">

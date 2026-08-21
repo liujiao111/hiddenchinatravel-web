@@ -12,10 +12,10 @@ import { useActionState } from "react";
 const initialState: AddonRequestState = { ok: false, message: "" };
 
 const fieldClass =
-  "min-h-11 w-full rounded-full border-2 border-[#00897b]/20 bg-white px-4 py-3 text-sm font-normal tracking-wide text-[var(--brand-cta)] placeholder:text-[var(--brand-ink-muted)] transition-all duration-300 focus:border-[var(--brand-cta)] focus:outline-none focus:shadow-[0_0_0_3px_rgba(0,137,123,0.15)]";
+  "min-h-11 w-full rounded-full border-2 border-[var(--brand-cta)]/20 bg-white px-4 py-3 text-sm font-normal tracking-wide text-[var(--brand-ink)] placeholder:text-[var(--brand-ink-muted)] transition-all duration-300 focus:border-[var(--brand-cta)] focus:outline-none focus:shadow-[0_0_0_3px_rgba(196,92,62,0.15)]";
 
 const labelClass =
-  "mb-2 block text-sm font-bold tracking-tight text-[var(--brand-cta)]";
+  "mb-2 block text-sm font-bold tracking-tight text-[var(--brand-ink)]";
 
 type Props = {
   id: string;
@@ -53,9 +53,9 @@ export function AddonRequestForm({ id, serviceId, title, intro }: Props) {
   return (
     <div
       id={id}
-      className="scroll-mt-28 rounded-2xl border border-[color-mix(in_srgb,var(--brand-cta)_15%,transparent)] bg-white p-5 shadow-[0_4px_20px_rgba(0,137,123,0.08)] md:p-6"
+      className="scroll-mt-28 rounded-2xl border border-[color-mix(in_srgb,var(--brand-cta)_15%,transparent)] bg-white p-5 shadow-[0_4px_20px_rgba(80,40,24,0.08)] md:p-6"
     >
-      <h3 className="mb-1 text-lg font-bold tracking-tight text-[var(--brand-cta)]">
+      <h3 className="mb-1 text-lg font-bold tracking-tight text-[var(--brand-ink)]">
         {title}
       </h3>
       <p className="mb-5 text-sm font-normal text-[var(--brand-ink-muted)]">
@@ -85,7 +85,7 @@ export function AddonRequestForm({ id, serviceId, title, intro }: Props) {
             rows={4}
             maxLength={5000}
             placeholder="Share your itinerary link, dates, or booking details…"
-            className="min-h-[7rem] w-full rounded-2xl border-2 border-[#00897b]/20 bg-white px-4 py-3 text-sm font-normal tracking-wide text-[var(--brand-cta)] placeholder:text-[var(--brand-ink-muted)] transition-all duration-300 focus:border-[var(--brand-cta)] focus:outline-none focus:shadow-[0_0_0_3px_rgba(0,137,123,0.15)]"
+            className="min-h-[7rem] w-full rounded-2xl border-2 border-[var(--brand-cta)]/20 bg-white px-4 py-3 text-sm font-normal tracking-wide text-[var(--brand-ink)] placeholder:text-[var(--brand-ink-muted)] transition-all duration-300 focus:border-[var(--brand-cta)] focus:outline-none focus:shadow-[0_0_0_3px_rgba(196,92,62,0.15)]"
           />
         </div>
 

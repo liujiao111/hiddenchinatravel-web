@@ -29,7 +29,7 @@ export function AboutSection({
       ) : null}
       <h2
         id={id ? `${id}-heading` : undefined}
-        className="mb-6 text-xl font-bold leading-tight tracking-tight text-[var(--brand-cta)] md:text-3xl"
+        className="mb-6 text-xl font-bold leading-tight tracking-tight text-[var(--brand-ink)] md:text-3xl"
       >
         {title}
       </h2>
