@@ -5,7 +5,7 @@ import Image from "next/image";
 /** Full-bleed hero that tucks under the overlay nav (Evaneos-style). */
 export function HomeHero() {
   return (
-    <section className="relative isolate -mt-14 min-h-[100svh] overflow-hidden bg-[var(--brand-cream)] md:-mt-16">
+    <section className="relative isolate flex min-h-[max(32rem,72svh)] -mt-14 overflow-hidden bg-[var(--brand-cream)] md:-mt-16">
       <Image
         src={SITE_HERO_PATH}
         alt={`${SITE_NAME} — Great Wall in autumn`}
