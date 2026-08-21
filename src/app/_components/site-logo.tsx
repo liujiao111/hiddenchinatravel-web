@@ -10,7 +10,7 @@ type Props = {
   size?: "sm" | "md" | "lg";
   /** Show wordmark text beside the logo mark */
   showWordmark?: boolean;
-  /** Hide wordmark below `sm` to free header space on phones */
+  /** Slightly tighter wordmark in the header so the full brand still fits */
   compactOnMobile?: boolean;
   /** White wordmark for teal header chrome */
   tone?: "default" | "onTeal";
@@ -58,20 +58,12 @@ export function SiteLogo({
       {showWordmark ? (
         <span
           className={cn(
-            "font-bold tracking-wide leading-tight",
+            "font-bold tracking-wide leading-tight whitespace-nowrap",
             onTeal ? "text-white" : "text-[var(--brand-ink)]",
-            s.text,
+            compactOnMobile ? "text-base sm:text-lg md:text-xl" : s.text,
           )}
         >
-          {compactOnMobile ? (
-            <>
-              {/* Short wordmark until 2xl — full title + nav + search need the width */}
-              <span className="2xl:hidden">Hidden China</span>
-              <span className="hidden 2xl:inline">{SITE_NAME}</span>
-            </>
-          ) : (
-            SITE_NAME
-          )}
+          {SITE_NAME}
         </span>
       ) : null}
     </>
