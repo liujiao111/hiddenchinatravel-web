@@ -36,11 +36,11 @@ export function ItineraryPlannerSection({
       )}
     >
       <Container>
-        <div className="mx-auto mb-8 max-w-3xl text-center md:mb-10">
+        <div className="mb-8 max-w-2xl md:mb-10">
           <p className="mb-2 text-xs font-bold uppercase tracking-[0.18em] text-[var(--brand-mango)]">
             {plannerSectionCopy.eyebrow}
           </p>
-          <h2 className="mb-3 text-2xl font-bold tracking-tight text-[var(--brand-cta)] md:text-3xl lg:text-4xl">
+          <h2 className="mb-3 text-2xl font-bold tracking-tight text-[var(--brand-cta)] md:text-3xl">
             {plannerSectionCopy.title}
           </h2>
           <p className="text-sm font-normal leading-relaxed text-[var(--brand-ink-muted)] md:text-base">

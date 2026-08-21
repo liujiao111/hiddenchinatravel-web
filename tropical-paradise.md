@@ -93,6 +93,15 @@ Shadows（青绿 tint，禁止冷黑大阴影）：
 - 容器: `px-4 md:px-8 lg:px-12`（或项目 Container）
 - 卡片内边距参考 StyleKit：`p-7`
 
+### 首页气质（强制）
+
+首页是 **local partner / 旅行手记**，不是 SaaS 产品落地页。
+
+- 信任与准备：用左对齐标题 + 编号清单，不要三列图标功能卡、六宫格 onboarding 卡、双胶囊 CTA
+- 主 CTA 一颗胶囊即可；Survival Kit 等次要入口用文字链
+- 目的地 / 指南：编辑式列表或内容卡可以，不要在首页再堆一套「功能卖点」白卡网格
+- 工具页、Survival Kit 对比卡仍可用 `.surface-card`
+
 ---
 
 ## [FORBIDDEN]

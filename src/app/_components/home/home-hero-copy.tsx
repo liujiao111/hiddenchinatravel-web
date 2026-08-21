@@ -21,7 +21,7 @@ export function HomeHeroCopy() {
           {copy.subtitle}
         </p>
 
-        <div className="flex w-full flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:gap-4">
+        <div className="flex w-full flex-col gap-4 sm:flex-row sm:flex-wrap sm:items-center sm:gap-x-8 sm:gap-y-3">
           <Link
             href="/china-itinerary-planner"
             className="btn-hero inline-flex min-h-12 w-full items-center justify-center px-8 py-3.5 text-base sm:w-auto md:px-10"
@@ -30,9 +30,9 @@ export function HomeHeroCopy() {
           </Link>
           <Link
             href="/survival-kit"
-            className="inline-flex min-h-12 w-full items-center justify-center rounded-full border-2 border-[var(--brand-cta)] bg-[var(--brand-cream)]/95 px-8 py-3.5 text-sm font-bold text-[var(--brand-cta)] shadow-[0_6px_20px_rgba(0,80,70,0.08)] transition-all duration-300 hover:bg-white hover:shadow-[0_8px_24px_rgba(0,80,70,0.12)] active:scale-[0.98] sm:w-auto md:px-10"
+            className="inline-flex min-h-12 items-center justify-center text-sm font-bold text-[var(--brand-cta)] underline decoration-[color-mix(in_srgb,var(--brand-cta)_35%,transparent)] underline-offset-[6px] transition-colors duration-300 hover:text-[var(--brand-cta-hover)]"
           >
-            {copy.secondaryCta}
+            {copy.secondaryCta} →
           </Link>
         </div>
       </div>
