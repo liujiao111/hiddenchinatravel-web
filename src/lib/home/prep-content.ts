@@ -86,7 +86,7 @@ export const homePrepSteps: HomePrepStep[] = [
       {
         buttonLabel: "Compare other eSIMs",
         chooseHint:
-          "Airalo if you only need data; Trip.com eSIM if you already book hotels there. Some links are affiliate.",
+          "Airalo if you only need data; Trip.com eSIM if you already book hotels there.",
         guide: {
           label: "eSIM guide",
           href: "/best-esim-for-china-travel",
@@ -109,7 +109,7 @@ export const homePrepSteps: HomePrepStep[] = [
       {
         buttonLabel: "Compare other VPNs",
         chooseHint:
-          "NordVPN is our usual pick for phones and laptops; ExpressVPN if you prefer that app. Some links are affiliate.",
+          "NordVPN is our usual pick for phones and laptops; ExpressVPN if you prefer that app.",
         guide: {
           label: "VPN guide",
           href: "/best-vpn-for-china",
@@ -186,7 +186,7 @@ export const homePrepSteps: HomePrepStep[] = [
       {
         buttonLabel: "More Trip.com options",
         chooseHint:
-          "Lock night-one hotels early; reserve popular sights with the passport you will travel on. Trip.com links are affiliate.",
+          "Lock night-one hotels early; reserve popular sights with the passport you will travel on.",
         guide: {
           label: "Hotel guide",
           href: "/hotels-in-china-for-foreigners",

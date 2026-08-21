@@ -1,4 +1,5 @@
 import Container from "@/app/_components/container";
+import { AffiliateNote } from "@/components/affiliates/affiliate-note";
 import { KitArrivalChecklist } from "@/components/survival-kit/kit-arrival-checklist";
 import { KitHero } from "@/components/survival-kit/kit-hero";
 import { KitPlannerCtaBand } from "@/components/survival-kit/kit-planner-cta-band";
@@ -70,10 +71,16 @@ export default function SurvivalKitPage() {
         <div className="pt-8 md:pt-12">
           <KitHero />
           <KitPrepSection section={kitVisaPrepSection} />
-          <KitPrepSection section={kitNetworkSection} />
+          <KitPrepSection
+            section={kitNetworkSection}
+            note={<AffiliateNote />}
+          />
           <KitPrepSection section={kitPaymentSection} />
           <KitPrepSection section={kitMapsSection} />
-          <KitPrepSection section={kitBookingSection} />
+          <KitPrepSection
+            section={kitBookingSection}
+            note={<AffiliateNote variant="cta" />}
+          />
           <KitPrepSection section={kitInsuranceSection} />
           <KitPracticalSection />
           <div className="border-b border-[color-mix(in_srgb,var(--brand-cream-border)_40%,transparent)] py-10 md:py-12">

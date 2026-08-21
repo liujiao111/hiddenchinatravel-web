@@ -1,4 +1,5 @@
 import Container from "@/app/_components/container";
+import { AffiliateNote } from "@/components/affiliates/affiliate-note";
 import {
   homePrepSection,
   homePrepSteps,
@@ -116,15 +117,18 @@ export function HomeGettingStarted() {
           ))}
         </ul>
 
-        <p className="mt-10 text-center text-sm font-normal text-[var(--brand-ink-muted)] md:mt-12">
-          Prefer a full checklist?{" "}
-          <Link
-            href={homePrepSection.kitCta.href}
-            className="font-bold text-[var(--brand-cta)] underline decoration-[color-mix(in_srgb,var(--brand-cta)_35%,transparent)] underline-offset-2"
-          >
-            {homePrepSection.kitCta.label} →
-          </Link>
-        </p>
+        <div className="mt-10 space-y-3 text-center md:mt-12">
+          <p className="text-sm font-normal text-[var(--brand-ink-muted)]">
+            Prefer a full checklist?{" "}
+            <Link
+              href={homePrepSection.kitCta.href}
+              className="font-bold text-[var(--brand-cta)] underline decoration-[color-mix(in_srgb,var(--brand-cta)_35%,transparent)] underline-offset-2"
+            >
+              {homePrepSection.kitCta.label} →
+            </Link>
+          </p>
+          <AffiliateNote className="mx-auto max-w-xl text-xs font-normal leading-relaxed text-[var(--brand-ink-muted)]" />
+        </div>
       </Container>
     </section>
   );

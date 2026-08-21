@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { AffiliateNote } from "@/components/affiliates/affiliate-note";
 import { prepOffers } from "@/lib/visa-checker/prep-offers";
 
 function PrepIcon({ icon }: { icon: (typeof prepOffers)[number]["icon"] }) {
@@ -194,10 +195,7 @@ export function FirstTripPrep() {
           </article>
         ))}
       </div>
-      <p className="mt-6 text-xs font-normal leading-relaxed text-[var(--brand-ink-muted)]">
-        Some product links are affiliate partners — at no extra cost to you. We
-        only list tools we use or recommend for independent travelers.
-      </p>
+      <AffiliateNote className="mt-6" />
 
       <div className="surface-card mt-12 overflow-hidden bg-[var(--brand-soft)]">
         <div className="flex flex-col gap-8 p-8 md:flex-row md:items-center md:justify-between md:p-10">

@@ -7,6 +7,7 @@ import { SiteLogo } from "@/app/_components/site-logo";
 import { SocialLinks } from "@/app/_components/social-links";
 import { WhatsAppContact } from "@/app/_components/whatsapp-contact";
 import { useLocaleDict } from "@/i18n/locale-provider";
+import { TRANSPARENCY_HREF } from "@/lib/affiliates/disclosure";
 import {
   SITE_LAST_UPDATED,
   SITE_LOCATION,
@@ -176,7 +177,7 @@ export function Footer() {
             <p className="max-w-3xl text-sm font-normal text-[var(--brand-ink-muted)]">
               {dict.footer.affiliateDisclosure}{" "}
               <Link
-                href="/privacy-policy#affiliate-links"
+                href={TRANSPARENCY_HREF}
                 className="font-bold text-[var(--brand-coral)] underline decoration-[color-mix(in_srgb,var(--brand-coral)_35%,transparent)] underline-offset-2"
               >
                 {dict.footer.affiliateLearnMore}

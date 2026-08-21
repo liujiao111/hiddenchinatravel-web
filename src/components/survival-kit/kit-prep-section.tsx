@@ -1,11 +1,13 @@
 import { KitPrepCard } from "./kit-prep-card";
 import type { KitPrepSectionData } from "@/lib/survival-kit/types";
+import type { ReactNode } from "react";
 
 type Props = {
   section: KitPrepSectionData;
+  note?: ReactNode;
 };
 
-export function KitPrepSection({ section }: Props) {
+export function KitPrepSection({ section, note }: Props) {
   return (
     <section
       id={section.id}
@@ -35,6 +37,7 @@ export function KitPrepSection({ section }: Props) {
           <KitPrepCard key={card.title} card={card} />
         ))}
       </div>
+      {note ? <div className="mt-6 max-w-2xl">{note}</div> : null}
     </section>
   );
 }

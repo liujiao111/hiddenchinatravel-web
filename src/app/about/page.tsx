@@ -319,14 +319,16 @@ export default function AboutUsPage() {
 
             <AboutSection id="transparency" title="Transparency">
               <p>
-                Some guides include affiliate links to tools that help with
-                travel logistics. They never raise your price. We only include
-                them when they directly help solve the problem in that guide.
+                Paid planning and booking help are commission-neutral: we do
+                not take attraction, hotel, or OTA kickbacks for itinerary
+                advice. If we book something for you, you pay a clear service
+                fee — with an invoice.
               </p>
               <p>
-                Partner planning and booking help are separate: we do not take
-                attraction / hotel / OTA commissions for itinerary advice. Paid
-                booking help uses a clear service fee.
+                Free guides are a separate layer. Some pages include affiliate
+                links to tools such as eSIM, VPN, or hotel search. They never
+                raise your price, and we only include them when they help with
+                that guide.
               </p>
             </AboutSection>
 

@@ -30,8 +30,7 @@ function toBuyMenu(card: KitPrepCardData): PrepBuyMenu | null {
 
   return {
     buttonLabel: buyButtonLabel(card.title),
-    chooseHint:
-      "Choose the option that fits your trip. Some product links are affiliate.",
+    chooseHint: "Choose the option that fits your trip.",
     guide: { label: guideCta.label, href: guideCta.href },
     options: card.options.map((option) => ({
       label: option.name,

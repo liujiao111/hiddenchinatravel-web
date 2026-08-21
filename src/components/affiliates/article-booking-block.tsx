@@ -1,5 +1,6 @@
 "use client";
 
+import { AffiliateNote } from "@/components/affiliates/affiliate-note";
 import { trackEvent } from "@/lib/analytics/track";
 import type { ArticleBookingBlock } from "@/lib/affiliates/article-booking-blocks";
 import {
@@ -85,10 +86,7 @@ export function ArticleBookingBlockCard({ block, articleSlug }: Props) {
           )
         ) : null}
       </div>
-      <p className="mt-4 text-xs font-normal text-[var(--brand-ink-muted)]">
-        Some links are affiliate — at no extra cost to you. Our primary advice
-        stays commission-neutral.
-      </p>
+      <AffiliateNote variant="cta" className="mt-4" />
     </aside>
   );
 }

@@ -1,4 +1,5 @@
 import { AffiliateClickTracker } from "@/components/affiliates/affiliate-click-tracker";
+import { AffiliateNote } from "@/components/affiliates/affiliate-note";
 import type { Hub } from "@/lib/hubs/types";
 import Link from "next/link";
 import { HubFaq } from "./hub-faq";
@@ -285,10 +286,7 @@ export function HubPage({ hub }: Props) {
                 >
                   {hub.affiliateExit.ctaLabel}
                 </a>
-                <p className="mt-4 text-xs font-normal text-[var(--brand-ink-muted)]">
-                  Affiliate link — at no extra cost to you. Guides above stay
-                  commission-neutral.
-                </p>
+                <AffiliateNote variant="cta" className="mt-4" />
               </div>
             </section>
           ) : null}
