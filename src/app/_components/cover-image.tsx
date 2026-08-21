@@ -19,7 +19,6 @@ const CoverImage = ({ title, src, slug, priority = false }: Props) => {
     <div
       className={cn(
         "blog-cover-frame",
-        slug && "transition-shadow duration-300 hover:shadow-md",
       )}
     >
       <Image

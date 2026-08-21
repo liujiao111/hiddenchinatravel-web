@@ -43,8 +43,7 @@ export function ServiceCard({
       itemScope
       itemType="https://schema.org/Service"
       className={cn(
-        "flex h-full flex-col rounded-2xl border border-[color-mix(in_srgb,var(--brand-cta)_12%,transparent)] bg-white p-4 shadow-[0_2px_12px_rgba(80,40,24,0.06)] transition-all duration-300 md:p-5",
-        "hover:border-[var(--brand-cta)]/40 hover:shadow-[0_6px_20px_rgba(80,40,24,0.12)]",
+        "surface-card flex h-full flex-col p-4 md:p-5",
         className,
       )}
     >

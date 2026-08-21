@@ -76,15 +76,16 @@ Shadows（暖棕 / 陶土 tint，禁止冷黑大阴影，也禁止青绿 glow）
 
 ### 卡片 — `TropicalCard` / `.surface-card`
 
-1. 白底 · `rounded-2xl` · 浅陶土描边 · 暖棕 soft shadow  
-2. 顶部细色条 `h-1`（`--brand-cta`）  
-3. uppercase label（muted / gold）  
-4. 标题暖黑 · hover 可略加深，不要整卡变青绿  
-5. 正文 muted  
-6. 底栏 CTA 用陶土胶囊  
-7. `hover` 轻微上浮（尊重 `prefers-reduced-motion`）— `.surface-card-lift`
+对齐 [Evaneos](https://www.evaneos.it/) 行程卡 / 目的地砖：
 
-禁止卡片套卡片。
+1. **行程卡（默认）**：白底 · `rounded-lg`（8px）· 浅灰描边 `--brand-border-subtle` · **无阴影、无顶色条、无胶囊 CTA**  
+2. 封面 5:4；hover 深色蒙层 + 图片微放大  
+3. uppercase label（sans）  
+4. 标题 **sans bold**（Open Sauce One），不要陶土、不要青绿  
+5. 正文 muted；底栏只放日期等 meta，或文字 `→`  
+6. **目的地砖** `variant="destination"`：高图 2:3 + 衬线地名，卡片外没有白盒  
+
+禁止：StyleKit 顶色条、三色圆点、卡片套卡片、hover 上浮阴影。
 
 ### 输入框
 
@@ -96,7 +97,7 @@ Shadows（暖棕 / 陶土 tint，禁止冷黑大阴影，也禁止青绿 glow）
 
 - Section: `py-12 md:py-20 lg:py-28`
 - 容器: `px-4 md:px-8 lg:px-12`（或项目 Container）
-- 卡片内边距参考：`p-7`
+- 卡片内边距参考：`p-4`
 
 ---
 
@@ -137,7 +138,7 @@ Shadows（暖棕 / 陶土 tint，禁止冷黑大阴影，也禁止青绿 glow）
 
 - [ ] 无深色/黑底主题；无紫蓝 SaaS 渐变  
 - [ ] 无 Inter / Roboto / Geist / Outfit；UI 用 Open Sauce One，大标题用衬线
-- [ ] 按钮为胶囊；卡片为 `rounded-2xl` + 细顶条  
+- [ ] 按钮为胶囊；卡片为 Evaneos 式 `rounded-lg` + 浅描边，无顶条无阴影  
 - [ ] 标题是暖黑，不是青绿，也不是满屏陶土  
 - [ ] 阴影为暖棕 / 陶土 tint，无 `#00897b` glow  
 - [ ] 未改写营销文案（除非用户明确要求）  

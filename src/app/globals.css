@@ -27,6 +27,7 @@
   --brand-cream-border: #c45c3e;
   --brand-warm: #c9952a;
   --brand-surface: #ffffff;
+  --brand-border-subtle: #e4ddd4;
   --brand-ring: rgba(196, 92, 62, 0.18);
   --brand-shadow: 0 4px 20px rgba(80, 40, 24, 0.08);
   --brand-shadow-hover: 0 8px 32px rgba(80, 40, 24, 0.14);
@@ -118,54 +119,102 @@
   }
 
   /*
-   * StyleKit card shell:
-   * rounded-2xl + warm clay border + soft shadow
-   * Thin accent top bar is added by TropicalCard (absolute h-1)
+   * Evaneos itinerary card:
+   * 8px radius, subtle border, no shadow, no top bar.
+   * Photo hover is a dark wash + slight zoom (.surface-card-media).
    */
   .surface-card {
-    @apply relative flex h-full flex-col overflow-hidden rounded-2xl bg-white transition-all duration-300;
-    border: 1px solid color-mix(in srgb, var(--brand-cta) 15%, transparent);
-    box-shadow: var(--brand-shadow);
-  }
-
-  .surface-card:hover {
-    box-shadow: var(--brand-shadow-hover);
-  }
-
-  @media (prefers-reduced-motion: no-preference) {
-    .surface-card.surface-card-lift:hover {
-      transform: translateY(-2px);
-    }
+    @apply relative flex h-full flex-col overflow-hidden rounded-lg bg-white;
+    border: 1px solid var(--brand-border-subtle);
   }
 
   .surface-card-bar {
-    @apply absolute left-0 right-0 top-0 h-1 rounded-t-2xl;
-    background-color: var(--brand-cta);
+    display: none;
+  }
+
+  .surface-card-media {
+    @apply relative w-full overflow-hidden bg-[var(--brand-soft)];
+    aspect-ratio: 5 / 4;
+  }
+
+  .surface-card-media > * {
+    height: 100%;
+    width: 100%;
+  }
+
+  .surface-card-media img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .surface-card-media::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #1f22268c;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    pointer-events: none;
+  }
+
+  .group:hover .surface-card-media::after,
+  .surface-card:hover .surface-card-media::after {
+    opacity: 1;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .surface-card-media img {
+      transition: transform 0.2s ease-out;
+    }
+
+    .group:hover .surface-card-media img,
+    .surface-card:hover .surface-card-media img {
+      transform: scale(1.05);
+    }
+  }
+
+  .surface-card-poster {
+    @apply flex h-full min-h-[12rem] items-end p-4 md:min-h-[14rem];
+    background: linear-gradient(
+      165deg,
+      color-mix(in srgb, var(--brand-soft) 70%, white) 0%,
+      var(--brand-soft) 55%,
+      color-mix(in srgb, var(--brand-cream) 80%, var(--brand-cta)) 100%
+    );
   }
 
   .surface-card-label {
-    @apply text-xs font-bold uppercase tracking-[0.14em] text-[var(--brand-muted)];
+    @apply text-[11px] font-bold uppercase tracking-[0.14em] text-[var(--brand-muted)];
   }
 
   .surface-card-footer {
-    @apply mt-auto flex flex-wrap items-center justify-between gap-3 border-t border-[color-mix(in_srgb,var(--brand-cta)_10%,transparent)] pt-4;
+    @apply mt-auto flex flex-wrap items-end justify-between gap-2 pt-3;
   }
 
   .surface-card-cta {
-    @apply inline-flex shrink-0 items-center justify-center rounded-full px-4 py-2 text-xs font-bold text-white transition-all duration-300;
-    background-color: var(--brand-cta);
+    @apply inline-flex shrink-0 items-center text-sm font-bold text-[var(--brand-ink)];
   }
 
-  .surface-card-cta:is(a):hover,
   .group:hover .surface-card-cta {
-    background-color: var(--brand-cta-hover);
+    color: var(--brand-cta);
+  }
+
+  /* Destination tile: photo (or poster) + serif caption, no box */
+  .surface-card-destination {
+    @apply relative flex h-full flex-col;
+  }
+
+  .surface-card-destination .surface-card-media {
+    @apply rounded-lg;
+    aspect-ratio: 2 / 3;
   }
 
   .blog-cover-frame {
-    @apply relative w-full overflow-hidden rounded-2xl;
+    @apply relative w-full overflow-hidden rounded-lg;
     aspect-ratio: 1200 / 630;
     background-color: var(--brand-soft);
-    border: 2px solid color-mix(in srgb, var(--brand-cta) 20%, transparent);
   }
 
   /* General article photos / diagrams — natural aspect, centered. */

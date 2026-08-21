@@ -98,7 +98,6 @@ export function HomeFeaturedGuidesClient({ featured, hubs }: Props) {
                     "Survival guide"
                   )
                 }
-                footerCta="Read guide"
               >
                 <p>{item.excerpt}</p>
               </TropicalCard>

@@ -40,9 +40,8 @@ function PrepCardShell({
   children: ReactNode;
 }) {
   return (
-    <article className="surface-card flex h-full flex-col p-5 md:p-6">
-      <div className="surface-card-bar" aria-hidden />
-      <p className="surface-card-label mb-3">Step {step.step}</p>
+    <article className="surface-card flex h-full flex-col p-4">
+      <p className="surface-card-label mb-2">Step {step.step}</p>
       <h3 className="mb-2 line-clamp-2 text-lg font-bold leading-snug tracking-tight text-[var(--brand-ink)] md:text-xl">
         {step.title}
       </h3>

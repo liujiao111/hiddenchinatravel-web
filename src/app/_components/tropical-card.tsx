@@ -1,32 +1,33 @@
 import Link from "next/link";
 import cn from "classnames";
-import type { CSSProperties, ReactNode } from "react";
+import type { ReactNode } from "react";
 
-/** Kept for call-site compat; cards now use a single clay accent. */
+/** Kept for call-site compat; accents no longer cycle. */
 export type TropicalAccent = "teal" | "palm" | "coral";
 
 type Props = {
-  label: string;
+  label?: string;
   title?: ReactNode;
-  children: ReactNode;
-  /** Optional top media (cover image, etc.) — full-bleed under accent bar */
+  children?: ReactNode;
+  /** Optional top media (cover image, poster). */
   media?: ReactNode;
-  /** Footer left meta (date / price) — muted, not competing with CTA */
+  /** Footer left meta (date / duration) */
   footerMeta?: ReactNode;
-  /** Pill CTA label on footer right */
+  /** Text CTA (whole card is already clickable when href is set) */
   footerCta?: string;
   href?: string;
   className?: string;
-  /** Optional click hook when `href` is set (e.g. analytics). */
   onNavigate?: () => void;
-  /** Title line clamp (default 2). Use 0 for no clamp. */
   titleLines?: number;
-  /** Body/excerpt line clamp (default 2). Use 0 for no clamp. */
   bodyLines?: number;
-  /** @deprecated Ignored — all cards use brand clay for consistency */
+  /** @deprecated Ignored */
   accent?: TropicalAccent;
-  /** Use for quote cards without a CTA */
   as?: "article" | "blockquote" | "div";
+  /**
+   * `itinerary` — Evaneos trip card (border, 5:4 cover, sans title).
+   * `destination` — Evaneos destination tile (tall photo + serif name).
+   */
+  variant?: "itinerary" | "destination";
 };
 
 function lineClampClass(lines: number | undefined, fallback: number): string {
@@ -54,33 +55,41 @@ export function TropicalCard({
   titleLines,
   bodyLines,
   as = "article",
+  variant = "itinerary",
 }: Props) {
   const Tag = as;
-  const showFooter = footerMeta != null || footerCta != null;
-  const style = { "--card-accent": "var(--brand-cta)" } as CSSProperties;
+  const isDestination = variant === "destination";
+  const showFooter = !isDestination && (footerMeta != null || footerCta != null);
+  const hasBodyCopy = children != null && children !== false;
+
+  const titleClass = isDestination
+    ? cn(
+        "px-2 pt-2 font-serif text-xl font-bold leading-tight tracking-tight text-[var(--brand-ink)] md:text-2xl",
+        lineClampClass(titleLines, 2),
+      )
+    : cn(
+        "mb-2 font-sans text-base font-bold leading-snug text-[var(--brand-ink)]",
+        lineClampClass(titleLines, 2),
+      );
 
   const body = (
     <>
-      <p className="surface-card-label mb-3">{label}</p>
-      {title != null ? (
-        <h3
+      {label && !isDestination ? (
+        <p className="surface-card-label mb-2">{label}</p>
+      ) : null}
+      {title != null ? <h3 className={titleClass}>{title}</h3> : null}
+      {hasBodyCopy ? (
+        <div
           className={cn(
-            "mb-2 font-sans text-lg font-extrabold leading-snug tracking-tight text-[var(--brand-ink)] md:text-xl",
-            lineClampClass(titleLines, 2),
+            "text-sm font-normal leading-relaxed text-[var(--brand-ink-muted)]",
+            isDestination
+              ? cn("px-2 pt-1", lineClampClass(bodyLines, 2))
+              : cn("flex-1", lineClampClass(bodyLines, 2), showFooter && "mb-3"),
           )}
         >
-          {title}
-        </h3>
+          {children}
+        </div>
       ) : null}
-      <div
-        className={cn(
-          "flex-1 text-sm font-normal leading-relaxed text-[var(--brand-ink-muted)]",
-          lineClampClass(bodyLines, 2),
-          showFooter && "mb-5",
-        )}
-      >
-        {children}
-      </div>
       {showFooter ? (
         <div className="surface-card-footer">
           {footerMeta != null ? (
@@ -91,52 +100,59 @@ export function TropicalCard({
             <span className="flex-1" />
           )}
           {footerCta ? (
-            <span className="surface-card-cta">{footerCta}</span>
+            <span className="surface-card-cta">
+              {footerCta}
+              <span aria-hidden className="ml-1">
+                →
+              </span>
+            </span>
           ) : null}
         </div>
       ) : null}
     </>
   );
 
-  const inner = (
+  const mediaBlock = media ? (
+    <div className="surface-card-media">{media}</div>
+  ) : null;
+
+  const inner = isDestination ? (
     <>
-      <div className="surface-card-bar" aria-hidden />
-      {media}
-      {media ? (
-        <div className="flex flex-1 flex-col p-5 md:p-6">{body}</div>
-      ) : (
-        body
-      )}
+      {mediaBlock}
+      {body}
+    </>
+  ) : (
+    <>
+      {mediaBlock}
+      <div
+        className={cn(
+          "flex flex-1 flex-col",
+          mediaBlock ? "p-4" : "p-4 md:p-5",
+        )}
+      >
+        {body}
+      </div>
     </>
   );
 
   const shellClass = cn(
-    "surface-card surface-card-lift group cursor-pointer",
-    media ? "p-0" : "p-5 md:p-6",
+    "group cursor-pointer",
+    isDestination ? "surface-card-destination" : "surface-card",
     className,
   );
 
   if (href) {
     return (
-      <Link
-        href={href}
-        className={shellClass}
-        style={style}
-        onClick={onNavigate}
-      >
+      <Link href={href} className={shellClass} onClick={onNavigate}>
         {inner}
       </Link>
     );
   }
 
-  return (
-    <Tag className={shellClass} style={style}>
-      {inner}
-    </Tag>
-  );
+  return <Tag className={shellClass}>{inner}</Tag>;
 }
 
-/** @deprecated Accents no longer cycle — always brand clay. */
+/** @deprecated Accents no longer cycle. */
 export function tropicalAccentAt(_index: number): TropicalAccent {
   return "teal";
 }

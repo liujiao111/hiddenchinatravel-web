@@ -47,17 +47,15 @@ export function HomeDestinations({ variant = "home" }: Props) {
             const href = isHub
               ? `/china-itinerary-planner#plan-trip`
               : `/china-destinations#${city.id}`;
-            const cta = isHub ? "Sketch a route" : "Explore";
 
             return (
               <li key={city.id} id={isHub ? city.id : undefined}>
                 <TropicalCard
+                  variant="destination"
                   href={href}
                   className="scroll-mt-28"
-                  label={city.label}
                   title={city.name}
-                  footerMeta={city.guidesHint}
-                  footerCta={cta}
+                  media={<div className="surface-card-poster" />}
                 >
                   <p>{city.pitch}</p>
                 </TropicalCard>
