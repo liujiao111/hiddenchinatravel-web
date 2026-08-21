@@ -65,7 +65,7 @@ export function TropicalCard({
       {title != null ? (
         <h3
           className={cn(
-            "mb-2 text-lg font-bold leading-snug tracking-tight text-[var(--brand-ink)] md:text-xl",
+            "mb-2 font-sans text-lg font-extrabold leading-snug tracking-tight text-[var(--brand-ink)] md:text-xl",
             lineClampClass(titleLines, 2),
           )}
         >

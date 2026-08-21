@@ -20,17 +20,46 @@ import {
   websiteJsonLd,
 } from "@/lib/seo/jsonld";
 import type { Metadata } from "next";
-import { Outfit } from "next/font/google";
+import { Newsreader } from "next/font/google";
+import localFont from "next/font/local";
 import cn from "classnames";
 
 import "./globals.css";
 
-const outfit = Outfit({
+/** Same sans as Evaneos (Open Sauce One, OFL). */
+const openSauceOne = localFont({
+  src: [
+    {
+      path: "../fonts/open-sauce-one/open-sauce-one-latin-400-normal.woff2",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../fonts/open-sauce-one/open-sauce-one-latin-700-normal.woff2",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "../fonts/open-sauce-one/open-sauce-one-latin-800-normal.woff2",
+      weight: "800",
+      style: "normal",
+    },
+  ],
+  display: "swap",
+  variable: "--font-sans",
+  fallback: ["Arial", "sans-serif"],
+});
+
+/**
+ * Evaneos display face is Moret (commercial). Newsreader is the licensed
+ * stand-in: a high-x-height editorial serif used at large, tight sizes.
+ */
+const newsreader = Newsreader({
   subsets: ["latin"],
   display: "swap",
-  // Keep critical path lean — medium/semibold map to nearest loaded weights via CSS.
-  weight: ["400", "700"],
-  variable: "--font-sans",
+  weight: ["400", "600", "700"],
+  variable: "--font-serif",
+  fallback: ["Times New Roman", "serif"],
 });
 
 export const metadata: Metadata = {
@@ -82,7 +111,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang={defaultLocale} suppressHydrationWarning>
+    <html
+      lang={defaultLocale}
+      suppressHydrationWarning
+      className={cn(openSauceOne.variable, newsreader.variable)}
+    >
       <head>
         <link rel="icon" href={SITE_LOGO_PATH} type="image/webp" />
         <link rel="apple-touch-icon" href={SITE_LOGO_PATH} />
@@ -90,11 +123,7 @@ export default function RootLayout({
         <meta name="theme-color" content="#c45c3e" />
       </head>
       <body
-        className={cn(
-          outfit.variable,
-          outfit.className,
-          "min-h-screen bg-[var(--brand-cream)] text-[var(--brand-ink)] font-normal antialiased",
-        )}
+        className="min-h-screen bg-[var(--brand-cream)] font-sans text-[var(--brand-ink)] font-normal antialiased"
       >
         <script
           type="application/ld+json"

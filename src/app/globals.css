@@ -36,7 +36,7 @@
 @layer components {
   .btn-brand,
   .btn-hero {
-    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 font-bold tracking-tight transition-all duration-300;
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 font-sans font-bold tracking-tight transition-all duration-300;
     background-color: var(--brand-cta);
     color: var(--brand-on);
     border: 1px solid var(--brand-cta);
@@ -59,7 +59,7 @@
 
   /* Cream pill on dark / photo chrome */
   .btn-brand-inverse {
-    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 font-bold tracking-tight transition-all duration-300;
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 font-sans font-bold tracking-tight transition-all duration-300;
     background-color: var(--brand-cream);
     color: var(--brand-cta);
     border: 1px solid var(--brand-cream);
@@ -79,7 +79,7 @@
   }
 
   .btn-brand-outline {
-    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 font-bold tracking-tight transition-all duration-300;
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 font-sans font-bold tracking-tight transition-all duration-300;
     color: var(--brand-cta);
     background: var(--brand-surface);
     border: 2px solid color-mix(in srgb, var(--brand-cta) 20%, transparent);
@@ -97,7 +97,7 @@
   }
 
   .btn-brand-ghost {
-    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 font-bold tracking-tight transition-all duration-300;
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 font-sans font-bold tracking-tight transition-all duration-300;
     color: var(--brand-ink);
     background: color-mix(in srgb, var(--brand-cta) 6%, white);
     border: 2px solid color-mix(in srgb, var(--brand-cta) 15%, transparent);
@@ -294,7 +294,15 @@
   body {
     background-color: var(--brand-cream);
     color: var(--brand-ink-muted);
+    font-family: var(--font-sans), Arial, sans-serif;
     font-weight: 400;
+  }
+
+  /* Evaneos pairing: Moret-style serif for page/section titles */
+  h1,
+  h2 {
+    font-family: var(--font-serif), "Times New Roman", serif;
+    font-weight: 700;
   }
 
   @media (prefers-reduced-motion: reduce) {

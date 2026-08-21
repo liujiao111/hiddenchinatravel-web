@@ -45,10 +45,14 @@ Shadows（暖棕 / 陶土 tint，禁止冷黑大阴影，也禁止青绿 glow）
 
 ## Typography
 
-- Font: **Outfit**（已接 layout）— 禁止 Inter / Roboto / Geist / 默认 serif UI
+配对对齐 [Evaneos](https://www.evaneos.it/)：
+
+- **正文 / UI / 按钮 / 导航**：Open Sauce One（`--font-sans`，自托管 OFL）
+- **Hero / h1 / h2**：衬线标题。Evaneos 用商用字体 Moret；本站用 **Newsreader**（`--font-serif`）作合法替代
+- 禁止 Inter / Roboto / Geist / Outfit / 默认系统 UI 字
 - Titles: `font-bold tracking-tight`，**暖黑** `text-[var(--brand-ink)]`（不要整页陶土标题）
 - Body: `font-normal` / `leading-relaxed`，muted
-- Section / hero eyebrow: `text-xs font-bold uppercase tracking-[0.18em] text-[var(--brand-mango)]`
+- Section / hero eyebrow: `text-xs font-bold uppercase tracking-[0.18em] text-[var(--brand-mango)]`（sans）
 
 ---
 
@@ -132,7 +136,7 @@ Shadows（暖棕 / 陶土 tint，禁止冷黑大阴影，也禁止青绿 glow）
 ## 交付前自检
 
 - [ ] 无深色/黑底主题；无紫蓝 SaaS 渐变  
-- [ ] 无 Inter / Roboto / Geist；UI 用 Outfit  
+- [ ] 无 Inter / Roboto / Geist / Outfit；UI 用 Open Sauce One，大标题用衬线
 - [ ] 按钮为胶囊；卡片为 `rounded-2xl` + 细顶条  
 - [ ] 标题是暖黑，不是青绿，也不是满屏陶土  
 - [ ] 阴影为暖棕 / 陶土 tint，无 `#00897b` glow  

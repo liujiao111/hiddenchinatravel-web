@@ -61,7 +61,7 @@ export function SiteLogo({
       {showWordmark ? (
         <span
           className={cn(
-            "font-bold tracking-wide leading-tight whitespace-nowrap",
+            "font-extrabold tracking-wide leading-tight whitespace-nowrap",
             onTeal
               ? "text-white"
               : onWhite

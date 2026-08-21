@@ -1,5 +1,5 @@
 .markdown {
-  @apply text-base font-light leading-relaxed text-[var(--brand-ink-muted)] md:text-lg;
+  @apply text-base font-normal leading-relaxed text-[var(--brand-ink-muted)] md:text-lg;
 }
 
 .markdown p,
@@ -10,11 +10,11 @@
 }
 
 .markdown h2 {
-  @apply mb-4 mt-12 scroll-mt-28 text-xl font-light leading-snug tracking-wide text-[var(--brand-ink)] md:text-3xl;
+  @apply mb-4 mt-12 scroll-mt-28 font-serif text-xl font-bold leading-snug tracking-tight text-[var(--brand-ink)] md:text-3xl;
 }
 
 .markdown h3 {
-  @apply mb-4 mt-8 scroll-mt-28 text-lg font-light leading-snug tracking-wide text-[var(--brand-ink)] md:text-xl;
+  @apply mb-4 mt-8 scroll-mt-28 text-lg font-extrabold leading-snug tracking-tight text-[var(--brand-ink)] md:text-xl;
 }
 
 .markdown a {
@@ -22,7 +22,7 @@
 }
 
 .markdown strong {
-  @apply font-normal text-[var(--brand-ink)];
+  @apply font-bold text-[var(--brand-ink)];
 }
 
 .markdown :global(.table-wrap),

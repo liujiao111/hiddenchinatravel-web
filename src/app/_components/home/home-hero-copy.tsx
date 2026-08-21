@@ -14,7 +14,7 @@ export function HomeHeroCopy() {
         <p className="mb-3 text-xs font-bold uppercase tracking-[0.18em] text-[var(--brand-mango)]">
           {copy.eyebrow}
         </p>
-        <h1 className="mb-5 max-w-xl text-3xl font-bold leading-tight tracking-tight text-[var(--brand-ink)] md:mb-6 md:text-5xl">
+        <h1 className="mb-5 max-w-xl font-serif text-3xl font-bold leading-[1.1] tracking-tight text-[var(--brand-ink)] md:mb-6 md:text-5xl">
           {copy.title}
         </h1>
         <p className="mb-8 max-w-md text-sm font-normal leading-relaxed text-[var(--brand-ink)] md:mb-10 md:text-base">
