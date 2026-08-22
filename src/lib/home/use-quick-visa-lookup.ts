@@ -27,12 +27,18 @@ async function loadQuickVisaLookup(): Promise<QuickVisaLookup> {
 
 /** Shared client fetch for deferred homepage visa widgets. */
 export function useQuickVisaLookup(initial?: QuickVisaLookup) {
+  // Never seed from the module cache during render. `next/dynamic` can
+  // hydrate this widget after a sibling has already filled `cachedLookup`,
+  // which would SSR a loading shell and then client-render the form.
   const [lookup, setLookup] = useState<QuickVisaLookup | null>(
-    initial ?? cachedLookup,
+    initial ?? null,
   );
 
   useEffect(() => {
-    if (lookup) return;
+    if (initial) {
+      cachedLookup = initial;
+      return;
+    }
     let cancelled = false;
     loadQuickVisaLookup()
       .then((data) => {
@@ -44,7 +50,7 @@ export function useQuickVisaLookup(initial?: QuickVisaLookup) {
     return () => {
       cancelled = true;
     };
-  }, [lookup]);
+  }, [initial]);
 
   return lookup;
 }
