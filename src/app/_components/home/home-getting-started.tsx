@@ -1,36 +1,14 @@
 import Container from "@/app/_components/container";
+import { HomePrepBuyMenu } from "@/app/_components/home/home-prep-buy-menu";
+import { HomePrepVisaMini } from "@/app/_components/home/home-prep-visa-mini";
+import { getQuickVisaLookup } from "@/lib/home/get-quick-visa-lookup";
 import {
   homePrepSection,
   homePrepSteps,
   type HomePrepStep,
 } from "@/lib/home/prep-content";
-import dynamic from "next/dynamic";
 import Link from "next/link";
 import type { ReactNode } from "react";
-
-const HomePrepVisaMini = dynamic(
-  () =>
-    import("@/app/_components/home/home-prep-visa-mini").then(
-      (m) => m.HomePrepVisaMini,
-    ),
-  {
-    loading: () => (
-      <div className="h-12 rounded-full bg-[var(--brand-cream)]" aria-hidden />
-    ),
-  },
-);
-
-const HomePrepBuyMenu = dynamic(
-  () =>
-    import("@/app/_components/home/home-prep-buy-menu").then(
-      (m) => m.HomePrepBuyMenu,
-    ),
-  {
-    loading: () => (
-      <div className="h-11 rounded-full bg-[var(--brand-cream)]" aria-hidden />
-    ),
-  },
-);
 
 function PrepCardShell({
   step,
@@ -54,6 +32,8 @@ function PrepCardShell({
 }
 
 export function HomeGettingStarted() {
+  const visaLookup = getQuickVisaLookup();
+
   return (
     <section
       id="getting-started"
@@ -83,7 +63,9 @@ export function HomeGettingStarted() {
               }
             >
               <PrepCardShell step={step}>
-                {step.kind === "visa" ? <HomePrepVisaMini /> : null}
+                {step.kind === "visa" ? (
+                  <HomePrepVisaMini lookup={visaLookup} />
+                ) : null}
 
                 {step.kind === "buy-menus"
                   ? step.menus.map((menu) => (
