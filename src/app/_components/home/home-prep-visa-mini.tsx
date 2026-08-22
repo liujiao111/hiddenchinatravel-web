@@ -12,12 +12,15 @@ import { useMemo, useState } from "react";
 const DEFAULT_COUNTRY = "United States";
 
 type Props = {
-  /** Optional SSR payload; omit on homepage to keep HTML lean */
+  /** Server snapshot — pass this on the homepage so SSR matches the client. */
   lookup?: QuickVisaLookup;
 };
 
 export function HomePrepVisaMini({ lookup: initialLookup }: Props) {
-  const lookup = useQuickVisaLookup(initialLookup);
+  const fetched = useQuickVisaLookup(initialLookup);
+  // Prefer the server-provided snapshot so SSR and hydration cannot diverge
+  // into the loading shell vs FancySelect mismatch.
+  const lookup = initialLookup ?? fetched;
   const [country, setCountry] = useState(DEFAULT_COUNTRY);
   const result = useMemo(
     () => (lookup ? evaluateQuickVisa(country, lookup) : { status: "idle" as const }),

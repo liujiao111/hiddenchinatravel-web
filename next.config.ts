@@ -159,6 +159,9 @@ const wordpressCutoverRedirects = [
 ] as const;
 
 const nextConfig: NextConfig = {
+  // Cursor / port-forward previews hit 127.0.0.1; without this, HMR and
+  // /_next chunks can stay stale and keep serving the old visa widget.
+  allowedDevOrigins: ["127.0.0.1", "localhost"],
   // Native decoder used by markdownToHtml — keep off the client bundle.
   serverExternalPackages: ["sharp"],
   // Keep URLs without trailing slash so HTML canonical, sitemap, and GSC agree.
