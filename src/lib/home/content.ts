@@ -113,8 +113,10 @@ export const featuredGuideFallbacks = [
   },
 ] as const;
 
-/** Hero-adjacent trust strip — claim + 3 icon points */
+/** Hero-adjacent trust strip — editorial, not a feature-card grid */
 export const homeWhyUs = {
+  eyebrow: "Why us",
+  headline: "A local partner — not a booking platform.",
   claim:
     "Your local partner for independent China travel — practical help with visas, payments, internet, and on-trip questions.",
   storyCta: "Learn our story",
