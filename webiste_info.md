@@ -35,7 +35,11 @@ Hidden China Travel
 
 副标题：
 
-> We've crossed the invisible wall between China and the world, so you can travel independently—planning and support, whenever you need it.
+> Tell us your cities and days. We send a 1-on-1 PDF route — not a tour template. Survival Kit prep is included so payments and data work on day one.
+
+Hero 主按钮下方 hint（不标价）：
+
+> Old lanes, quiet cafés, neighborhood food, and the corners only locals name — not a group-tour checklist.
 
 ### 核心受众
 

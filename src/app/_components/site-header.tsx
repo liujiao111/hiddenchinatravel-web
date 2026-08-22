@@ -40,8 +40,8 @@ export function SiteHeader() {
           : "border-b border-neutral-200 bg-white",
       )}
     >
-      <div className="mx-auto flex h-14 w-full max-w-7xl items-center gap-4 px-4 md:h-16 md:gap-6 md:px-6 lg:px-8 xl:gap-8">
-        <div className="relative z-10 shrink-0 pr-2">
+      <div className="mx-auto grid h-14 w-full max-w-7xl grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-3 px-4 md:h-16 md:gap-4 md:px-6 lg:px-8">
+        <div className="relative z-10 shrink-0 pr-1 md:pr-2">
           <SiteLogo
             size="sm"
             tone={overlay ? "onTeal" : "onWhite"}
@@ -49,30 +49,18 @@ export function SiteHeader() {
           />
         </div>
 
-        <div className="hidden min-w-0 flex-1 lg:block">
+        <div className="hidden min-w-0 xl:block">
           <SiteNav labels={dict.nav} tone={overlay ? "onTeal" : "default"} />
         </div>
 
-        <div className="relative z-10 ml-auto flex shrink-0 items-center gap-2.5 sm:gap-3">
-          <div className="hidden min-w-0 2xl:block">
+        <div className="flex min-w-0 items-center justify-end gap-2 sm:gap-2.5 md:gap-3">
+          <div className="w-[8.5rem] min-w-0 sm:w-[11rem] md:w-[12rem] xl:w-[12.5rem] 2xl:w-[15rem]">
             <SiteSearch
               variant="header"
-              preferResultsPage
               loadIndexOnFocus
+              tone={overlay ? "onPhoto" : "default"}
             />
           </div>
-          <Link
-            href="/search"
-            className={cn(
-              "inline-flex h-10 w-10 items-center justify-center rounded-full border transition-colors duration-300 2xl:hidden",
-              overlay
-                ? "border-white/40 text-white hover:bg-white/10"
-                : "border-neutral-200 text-neutral-900 hover:bg-neutral-50",
-            )}
-            aria-label="Search guides"
-          >
-            <SearchGlyph className="h-4 w-4" />
-          </Link>
           <Link
             href="/china-itinerary-planner#plan-trip"
             className="btn-brand hidden h-10 items-center px-4 py-0 text-sm md:inline-flex"
@@ -94,22 +82,6 @@ export function SiteHeader() {
         </div>
       </div>
     </header>
-  );
-}
-
-function SearchGlyph({ className }: { className?: string }) {
-  return (
-    <svg
-      className={className}
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.75"
-      aria-hidden
-    >
-      <circle cx="11" cy="11" r="7" />
-      <path d="M20 20l-3.5-3.5" strokeLinecap="round" />
-    </svg>
   );
 }
 

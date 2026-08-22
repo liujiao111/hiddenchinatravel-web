@@ -50,7 +50,16 @@ export const staticSearchCatalog: SearchItem[] = [
     description:
       "First-base cities for foreign visitors — Beijing, Shanghai, Xi’an, Chengdu, Kunming, and more.",
     type: "page",
-    keywords: ["destinations", "cities", "beijing", "shanghai", "kunming"],
+    keywords: [
+      "destinations",
+      "cities",
+      "beijing",
+      "shanghai",
+      "kunming",
+      "chongqing",
+      "zhangjiajie",
+      "guangzhou",
+    ],
   },
   {
     id: "page-survival-kit",

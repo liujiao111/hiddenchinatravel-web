@@ -10,14 +10,14 @@ export function HomeHeroCopy() {
 
   return (
     <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-1 items-center px-4 pb-12 pt-20 md:px-8 md:pb-16 md:pt-24 lg:px-12 lg:pb-20">
-      <div className="w-full max-w-xl text-left md:max-w-2xl">
-        <p className="mb-3 text-xs font-bold uppercase tracking-[0.18em] text-[var(--brand-mango)]">
+      <div className="w-full max-w-xl text-left md:max-w-xl">
+        <p className="mb-3 text-xs font-bold uppercase tracking-[0.18em] text-[var(--brand-mango)] [text-shadow:0_0_18px_rgba(250,246,239,0.95),0_1px_0_rgba(250,246,239,0.8)]">
           {copy.eyebrow}
         </p>
-        <h1 className="mb-5 max-w-xl font-serif text-3xl font-bold leading-[1.1] tracking-tight text-[var(--brand-ink)] md:mb-6 md:text-5xl">
+        <h1 className="mb-5 max-w-xl font-serif text-3xl font-bold leading-[1.1] tracking-tight text-[var(--brand-ink)] [text-shadow:0_1px_0_rgba(250,246,239,0.9),0_0_28px_rgba(250,246,239,0.75)] md:mb-6 md:text-5xl">
           {copy.title}
         </h1>
-        <p className="mb-8 max-w-md text-sm font-normal leading-relaxed text-[var(--brand-ink)] md:mb-10 md:text-base">
+        <p className="mb-8 max-w-md text-sm font-normal leading-relaxed text-[var(--brand-ink)] [text-shadow:0_1px_0_rgba(250,246,239,0.9),0_0_22px_rgba(250,246,239,0.75)] md:mb-10 md:text-base">
           {copy.subtitle}
         </p>
 
@@ -30,11 +30,14 @@ export function HomeHeroCopy() {
           </Link>
           <Link
             href="/survival-kit"
-            className="inline-flex min-h-12 w-full items-center justify-center rounded-full border-2 border-[var(--brand-cta)] bg-[var(--brand-cream)]/95 px-8 py-3.5 text-sm font-bold text-[var(--brand-cta)] shadow-[0_6px_20px_rgba(80,40,24,0.08)] transition-all duration-300 hover:bg-white hover:shadow-[0_8px_24px_rgba(80,40,24,0.12)] active:scale-[0.98] sm:w-auto md:px-10"
+            className="inline-flex min-h-12 w-full items-center justify-center rounded-full border border-white/70 bg-white/20 px-8 py-3.5 text-sm font-bold text-[var(--brand-cta)] transition-all duration-300 hover:border-white hover:bg-white/35 sm:w-auto md:px-10"
           >
             {copy.secondaryCta}
           </Link>
         </div>
+        <p className="mt-4 max-w-md text-xs font-normal leading-relaxed text-[var(--brand-ink)] [text-shadow:0_1px_0_rgba(250,246,239,0.9),0_0_20px_rgba(250,246,239,0.8)] md:text-sm">
+          {copy.ctaHint}
+        </p>
       </div>
     </div>
   );

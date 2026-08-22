@@ -9,6 +9,8 @@ export const ON_TRIP_PRICE_FROM = "from $29.90";
 
 export const WHATSAPP_NAV_LABEL = "Message us";
 export const WHATSAPP_CARD_TITLE = "Scan to message Hidden China Travel";
+export const WHATSAPP_FLOAT_LABEL = "Contact us";
+export const WHATSAPP_FLOAT_HINT = "WhatsApp";
 
 export const SLA = {
   businessHours: "Mon–Fri 9AM–9PM, China time",

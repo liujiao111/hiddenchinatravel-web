@@ -4,8 +4,9 @@ import { destinationCities } from "@/lib/home/content";
 
 export const plannerSectionCopy = {
   eyebrow: "Itinerary planning",
-  title: "Ready to go? Let's plan your trip.",
-  subtitle: "Tell us where you want to go — we'll handle the how.",
+  title: "Request a custom independent itinerary",
+  subtitle:
+    "Share cities, days, and pace. After we confirm scope, you get a ready-to-follow PDF in 48–72 hours — early bird from $99. The request is free, and this is not a tour.",
   pricingHint:
     "Early-bird planning from $99 by trip length — we confirm scope and fee before you pay. This request is free.",
   trustLine:

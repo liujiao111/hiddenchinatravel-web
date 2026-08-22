@@ -34,15 +34,16 @@ export type ArticleCtaVariantId =
 const PLANNER_HREF = "/china-itinerary-planner";
 
 export const inlineCtaDefault: InlineCtaCopy = {
-  lead: "Still mapping the trip?",
-  linkLabel: "Sketch my China route",
+  lead: "Want a local to sequence this?",
+  linkLabel: "Request a custom itinerary",
   href: PLANNER_HREF,
   trackingEvent: "article_inline_cta_click",
 };
 
 export const endCtaByVariant: Record<ArticleCtaVariantId, EndCtaCopy> = {
   default: {
-    bridge: "Guides get you prepared — a local partner makes the days feel real.",
+    bridge:
+      "Guides cover the systems. A custom PDF covers city order, pace, and what to skip.",
     valueProp:
       "One-to-one planning with local, independent-travel clarity — not a tour template.",
     buttonLabel: "Plan my China trip",

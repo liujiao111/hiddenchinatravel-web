@@ -14,6 +14,8 @@ type Props = {
   compactOnMobile?: boolean;
   /** White wordmark for dark/photo chrome; black wordmark for the light header */
   tone?: "default" | "onTeal" | "onWhite";
+  /** Let the wordmark wrap so a long brand name cannot overflow a footer column */
+  wrapWordmark?: boolean;
   priority?: boolean;
 };
 
@@ -30,6 +32,7 @@ export function SiteLogo({
   showWordmark = true,
   compactOnMobile = false,
   tone = "default",
+  wrapWordmark = false,
   priority = false,
 }: Props) {
   const s = sizes[size];
@@ -61,7 +64,8 @@ export function SiteLogo({
       {showWordmark ? (
         <span
           className={cn(
-            "font-extrabold tracking-wide leading-tight whitespace-nowrap",
+            "font-extrabold tracking-wide leading-tight",
+            wrapWordmark ? "min-w-0" : "whitespace-nowrap",
             onTeal
               ? "text-white"
               : onWhite
@@ -78,7 +82,13 @@ export function SiteLogo({
 
   if (!href) {
     return (
-      <span className={cn("inline-flex items-center gap-3", className)}>
+      <span
+        className={cn(
+          "inline-flex items-center gap-3",
+          wrapWordmark ? "min-w-0 max-w-full" : "shrink-0",
+          className,
+        )}
+      >
         {content}
       </span>
     );
@@ -88,7 +98,8 @@ export function SiteLogo({
     <Link
       href={href}
       className={cn(
-        "inline-flex items-center gap-3 hover:opacity-90 transition-opacity duration-200 shrink-0",
+        "inline-flex items-center gap-3 transition-opacity duration-200 hover:opacity-90",
+        wrapWordmark ? "min-w-0 max-w-full" : "shrink-0",
         className,
       )}
     >

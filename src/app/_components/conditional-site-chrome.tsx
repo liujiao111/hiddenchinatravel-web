@@ -1,4 +1,4 @@
-import { BackToTop } from "@/app/_components/back-to-top";
+import { FloatingDock } from "@/app/_components/floating-dock";
 
 type Props = {
   children: React.ReactNode;
@@ -6,14 +6,14 @@ type Props = {
   footer: React.ReactNode;
 };
 
-/** Server chrome shell — only BackToTop needs a client boundary. */
+/** Server chrome shell — floating dock is the only client boundary here. */
 export function ConditionalSiteChrome({ children, header, footer }: Props) {
   return (
     <>
       {header}
       {children}
       {footer}
-      <BackToTop />
+      <FloatingDock />
     </>
   );
 }

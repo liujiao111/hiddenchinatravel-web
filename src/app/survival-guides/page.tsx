@@ -5,9 +5,9 @@ import { getAllPosts } from "@/lib/api";
 import { SITE_LAST_UPDATED } from "@/lib/constants";
 import type { Metadata } from "next";
 
-const pageTitle = "Survival Guides";
+const pageTitle = "China Travel Guides for Independent Visitors";
 const pageDescription =
-  "Step-by-step guides for payments, transport, connectivity, and everyday life in China.";
+  "Practical China prep for independent travelers — visas, payments, internet, and maps — plus how to plan an itinerary without a tour."
 
 export const metadata: Metadata = {
   title: pageTitle,
@@ -35,8 +35,8 @@ export default function SurvivalGuidesPage() {
     <main>
       <Container>
         <PageHeading
-          title="Survival Guides"
-          description="Long-form articles to help you navigate visas, apps, trains, and culture—before and during your trip."
+          title="China travel guides for independent visitors"
+          description="Long-form prep for visas, apps, trains, and daily systems — and a hub for planning an independent itinerary before you polish day-by-day sightseeing."
           lastUpdated={SITE_LAST_UPDATED}
         />
         {posts.length > 0 ? (

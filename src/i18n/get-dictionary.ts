@@ -3,6 +3,8 @@ import {
   PRIMARY_CTA_LABEL,
   SECONDARY_CTA_LABEL,
   WHATSAPP_CARD_TITLE,
+  WHATSAPP_FLOAT_HINT,
+  WHATSAPP_FLOAT_LABEL,
   WHATSAPP_NAV_LABEL,
 } from "@/lib/trust/copy";
 
@@ -38,6 +40,8 @@ export type Dictionary = {
   whatsapp: {
     navLabel: string;
     cardTitle: string;
+    floatLabel: string;
+    floatHint: string;
   };
   locale: {
     switchAria: string;
@@ -64,6 +68,8 @@ export type Dictionary = {
     subtitle: string;
     primaryCta: string;
     secondaryCta: string;
+    /** Line under hero CTAs — local-planning character, no price */
+    ctaHint: string;
   };
 };
 
@@ -98,6 +104,8 @@ const en: Dictionary = {
   whatsapp: {
     navLabel: WHATSAPP_NAV_LABEL,
     cardTitle: WHATSAPP_CARD_TITLE,
+    floatLabel: WHATSAPP_FLOAT_LABEL,
+    floatHint: WHATSAPP_FLOAT_HINT,
   },
   locale: {
     switchAria: "Language",
@@ -124,9 +132,11 @@ const en: Dictionary = {
     eyebrow: "For Independent visitors to China",
     title: "Your Local Partner for Independent China Travel",
     subtitle:
-      "Practical help with visas, payments, internet, and a custom itinerary — so your first China trip feels independent, not overwhelming.",
+      "Tell us your cities and days. We send a 1-on-1 PDF route — not a tour template. Survival Kit prep is included so payments and data work on day one.",
     primaryCta: PRIMARY_CTA_LABEL,
     secondaryCta: SECONDARY_CTA_LABEL,
+    ctaHint:
+      "Old lanes, quiet cafés, neighborhood food, and the corners only locals name — not a group-tour checklist.",
   },
 };
 
@@ -161,6 +171,8 @@ const zh: Dictionary = {
   whatsapp: {
     navLabel: "联系我们",
     cardTitle: "扫码联系 Hidden China Travel",
+    floatLabel: "联系我们",
+    floatHint: "WhatsApp",
   },
   locale: {
     switchAria: "语言",
@@ -186,9 +198,11 @@ const zh: Dictionary = {
     eyebrow: "写给独立自由行的旅行者",
     title: "独立中国旅行的本地伙伴",
     subtitle:
-      "签证、支付、网络与定制行程 — 帮你第一次去中国也能独立出行、少踩坑。",
+      "告诉我们城市和天数，一对一做出可独立执行的 PDF 行程——不是跟团模板。Survival Kit 行前准备包含在内，落地当天支付和网络能用。",
     primaryCta: "规划行程",
     secondaryCta: "获取免费生存套件",
+    ctaHint:
+      "古巷、秘境、巷子美食、幽静小馆——按本地人的走法排，不是跟团打卡清单。",
   },
 };
 

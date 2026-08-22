@@ -58,10 +58,10 @@ export type HomePrepStep =
     };
 
 export const homePrepSection = {
-  eyebrow: "First-trip prep",
-  title: "6 steps to prepare your independent China trip",
+  eyebrow: "Included with planning",
+  title: "Survival prep that comes with a custom itinerary",
   intro:
-    "A calm checklist before you land — visa, network, payments, maps, bookings, and insurance.",
+    "Visa, network, payments, maps, bookings, and insurance — the Survival Kit checklist included with partner planning, and free to use on its own.",
   kitCta: {
     label: "View the full Survival Kit for China",
     href: "/survival-kit",

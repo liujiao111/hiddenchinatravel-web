@@ -33,7 +33,14 @@ export function HomeFeaturedGuides({ posts }: Props) {
     href: `/${post.slug}`,
     excerpt: post.excerpt,
     date: post.date,
+    coverImage: post.coverImage,
   }));
+
+  const coverByHref = new Map(
+    posts
+      .filter((post) => post.coverImage)
+      .map((post) => [`/${post.slug}`, post.coverImage]),
+  );
 
   const featured: HomeGuideCard[] =
     fromPosts.length >= 4
@@ -42,10 +49,20 @@ export function HomeFeaturedGuides({ posts }: Props) {
           ...fromPosts,
           ...featuredGuideFallbacks
             .filter((g) => !fromPosts.some((p) => p.href === g.href))
-            .map((g) => ({ ...g, date: undefined as string | undefined })),
+            .map((g) => ({
+              ...g,
+              date: undefined as string | undefined,
+              coverImage: coverByHref.get(g.href),
+            })),
         ].slice(0, 6);
 
-  const hubs = getHomeHubTabs();
+  const hubs = getHomeHubTabs().map((hub) => ({
+    ...hub,
+    articles: hub.articles.map((article) => ({
+      ...article,
+      coverImage: article.coverImage ?? coverByHref.get(article.href),
+    })),
+  }));
 
   return (
     <section

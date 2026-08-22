@@ -179,7 +179,7 @@ export function SiteNav({ labels, tone = "default" }: Props) {
 
   return (
     <nav
-      className="flex flex-nowrap items-center justify-start gap-x-3 whitespace-nowrap xl:gap-x-5 2xl:gap-x-6"
+      className="flex flex-nowrap items-center justify-start gap-x-3 whitespace-nowrap 2xl:gap-x-5"
       aria-label={labels.mainAria}
     >
       {mainNav.map((item) => {
@@ -202,6 +202,7 @@ export function SiteNav({ labels, tone = "default" }: Props) {
             href={item.href}
             className={cn(
               "text-sm font-normal tracking-wide transition-all duration-300",
+              item.id === "about" && "hidden 2xl:inline",
               onTeal
                 ? isActive
                   ? "font-bold text-white"

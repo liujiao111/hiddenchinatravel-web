@@ -1,6 +1,7 @@
 import Container from "@/app/_components/container";
 import { TropicalCard } from "@/app/_components/tropical-card";
 import { destinationCities } from "@/lib/home/content";
+import Image from "next/image";
 import Link from "next/link";
 
 type Props = {
@@ -55,7 +56,19 @@ export function HomeDestinations({ variant = "home" }: Props) {
                   href={href}
                   className="scroll-mt-28"
                   title={city.name}
-                  media={<div className="surface-card-poster" />}
+                  media={
+                    city.image ? (
+                      <Image
+                        src={city.image}
+                        alt={city.imageAlt ?? city.name}
+                        fill
+                        sizes="(max-width: 640px) 92vw, (max-width: 1024px) 45vw, 320px"
+                        className="object-cover"
+                      />
+                    ) : (
+                      <div className="surface-card-poster" />
+                    )
+                  }
                 >
                   <p>{city.pitch}</p>
                 </TropicalCard>

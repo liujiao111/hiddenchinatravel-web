@@ -27,6 +27,8 @@ type Props = {
   preferResultsPage?: boolean;
   /** Fetch `/api/search-index` on first focus instead of embedding the catalog */
   loadIndexOnFocus?: boolean;
+  /** Header on the homepage hero photo */
+  tone?: "default" | "onPhoto";
 };
 
 export function SiteSearch({
@@ -36,6 +38,7 @@ export function SiteSearch({
   className,
   preferResultsPage = false,
   loadIndexOnFocus = false,
+  tone = "default",
 }: Props) {
   const router = useRouter();
   const listId = useId();
@@ -149,13 +152,7 @@ export function SiteSearch({
   return (
     <div
       ref={rootRef}
-      className={cn(
-        "relative",
-        variant === "header"
-          ? "w-[min(100%,15rem)] sm:w-[17rem] lg:w-[18.5rem]"
-          : "w-full",
-        className,
-      )}
+      className={cn("relative w-full", className)}
     >
       <label htmlFor={`${listId}-input`} className="sr-only">
         Search guides and tools
@@ -167,13 +164,18 @@ export function SiteSearch({
             ? "rounded-full border-2 border-[color-mix(in_srgb,var(--brand-cta)_20%,transparent)] bg-white px-5 py-3 focus-within:border-[var(--brand-cta)] focus-within:outline-none focus-within:shadow-[0_0_0_3px_rgba(196,92,62,0.15)]"
             : null,
           variant === "header" &&
-            "rounded-full border border-[color-mix(in_srgb,var(--brand-cta)_18%,transparent)] bg-white px-3 py-1.5 shadow-[0_1px_0_rgba(80,40,24,0.06)] focus-within:border-[var(--brand-cta)] focus-within:shadow-[0_0_0_3px_rgba(196,92,62,0.12)]",
+            (tone === "onPhoto"
+              ? "rounded-full border border-white/40 bg-white/15 px-3 py-1.5 focus-within:border-white/70 focus-within:bg-white/25"
+              : "rounded-full border border-[color-mix(in_srgb,var(--brand-cta)_18%,transparent)] bg-white px-3 py-1.5 shadow-[0_1px_0_rgba(80,40,24,0.06)] focus-within:border-[var(--brand-cta)] focus-within:shadow-[0_0_0_3px_rgba(196,92,62,0.12)]"),
         )}
       >
         <SearchIcon
           className={cn(
-            "shrink-0 text-[var(--brand-muted)]",
+            "shrink-0",
             variant === "header" ? "h-4 w-4" : "h-5 w-5",
+            variant === "header" && tone === "onPhoto"
+              ? "text-white/75"
+              : "text-[var(--brand-muted)]",
           )}
         />
         <input
@@ -211,7 +213,9 @@ export function SiteSearch({
           className={cn(
             "min-w-0 flex-1 bg-transparent font-normal tracking-wide outline-none",
             variant === "header"
-              ? "text-sm text-neutral-900 placeholder:text-neutral-400"
+              ? tone === "onPhoto"
+                ? "text-sm text-white placeholder:text-white/55"
+                : "text-sm text-neutral-900 placeholder:text-neutral-400"
               : "text-sm text-[var(--brand-ink)] placeholder:text-[color-mix(in_srgb,var(--brand-cream-border)_50%,transparent)] md:text-base",
           )}
         />
@@ -223,7 +227,12 @@ export function SiteSearch({
               setDebounced("");
               inputRef.current?.focus();
             }}
-            className="text-xs font-medium tracking-wide text-[var(--brand-muted)] transition-colors duration-300 hover:text-[var(--brand-ink)]"
+            className={cn(
+              "text-xs font-medium tracking-wide transition-colors duration-300",
+              tone === "onPhoto"
+                ? "text-white/70 hover:text-white"
+                : "text-[var(--brand-muted)] hover:text-[var(--brand-ink)]",
+            )}
           >
             Clear
           </button>

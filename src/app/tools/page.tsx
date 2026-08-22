@@ -5,9 +5,9 @@ import { PlaceholderSection } from "@/app/_components/placeholder-section";
 import { SITE_LAST_UPDATED } from "@/lib/constants";
 import type { Metadata } from "next";
 
-const pageTitle = "Tools";
+const pageTitle = "China Itinerary Request & Visa Checker";
 const pageDescription =
-  "Online planners and utilities for building your China itinerary.";
+  "Request a custom China itinerary from a local partner, check visa rules by passport, and convert currency for trip budgeting."
 
 export const metadata: Metadata = {
   title: pageTitle,
@@ -60,8 +60,8 @@ export default function ToolsPage() {
     <main>
       <Container>
         <PageHeading
-          title="Tools"
-          description="Lightweight web apps to plan faster. No install required—save or share from your browser."
+          title="China itinerary request & visa checker"
+          description="Request a 1-on-1 custom itinerary, check entry rules by passport, or convert currency — in the browser, no install."
           lastUpdated={SITE_LAST_UPDATED}
         />
         <PlaceholderSection>

@@ -20,7 +20,7 @@ type Props = {
   tone?: "default" | "onPhoto";
 };
 
-/** Full-screen menu — used below the `lg` breakpoint (matches SiteHeader). */
+/** Full-screen menu — used below the `xl` breakpoint (matches SiteHeader). */
 export function MobileNav({ labels, plannerCta, tone = "default" }: Props) {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
@@ -75,7 +75,7 @@ export function MobileNav({ labels, plannerCta, tone = "default" }: Props) {
   }, [open]);
 
   return (
-    <div className="lg:hidden">
+    <div className="xl:hidden">
       <button
         type="button"
         aria-expanded={open}

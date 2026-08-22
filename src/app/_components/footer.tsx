@@ -21,7 +21,7 @@ const linkClass =
   "text-sm font-normal tracking-wide text-[var(--brand-ink-muted)] transition-colors duration-300 hover:text-[var(--brand-cta)]";
 
 const headingClass =
-  "mb-4 text-xs font-bold uppercase tracking-[0.16em] text-[var(--brand-mango)]";
+  "mb-3 text-xs font-bold uppercase tracking-[0.16em] text-[var(--brand-mango)]";
 
 export function Footer() {
   const year = new Date().getFullYear();
@@ -60,46 +60,35 @@ export function Footer() {
   return (
     <footer className="border-t border-[color-mix(in_srgb,var(--brand-cta)_12%,transparent)] bg-[var(--brand-cream)]">
       <Container>
-        <div className="py-14 md:py-20">
-          <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-12 lg:gap-10">
-            {/* Brand + CTAs */}
-            <div className="lg:col-span-4">
-              <SiteLogo size="lg" />
-              <p className="mt-5 max-w-md text-base font-bold leading-snug tracking-tight text-[var(--brand-ink)]">
-                {SITE_TAGLINE}
+        <div className="py-10 md:py-12">
+          <div className="grid grid-cols-1 items-start gap-10 md:grid-cols-2 md:gap-x-10 lg:grid-cols-[minmax(13.5rem,1.15fr)_0.9fr_minmax(0,1.45fr)_0.9fr] lg:gap-x-8">
+            <div className="min-w-0">
+              <SiteLogo size="sm" wrapWordmark />
+              <p className="mt-2.5 text-sm font-normal leading-snug text-[var(--brand-ink-muted)]">
+                <span className="font-bold tracking-tight text-[var(--brand-ink)]">
+                  {SITE_TAGLINE}
+                </span>{" "}
+                One-to-one planning — not a tour template.
               </p>
-              <p className="mt-3 max-w-md text-sm font-normal leading-relaxed text-[var(--brand-ink-muted)]">
-                One-to-one planning and practical prep for foreigners traveling
-                China independently — not a tour template.
-              </p>
-              <div className="mt-6 flex flex-col gap-2.5 sm:flex-row sm:flex-wrap">
+              <div className="mt-3 flex flex-col items-start gap-1.5">
                 <Link
                   href="/china-itinerary-planner#plan-trip"
-                  className="btn-brand inline-flex min-h-11 justify-center px-5 py-2.5 text-sm"
+                  className="btn-brand !h-8 !min-h-8 !px-3.5 !py-0 text-xs leading-none"
                 >
                   {dict.home.primaryCta}
                 </Link>
                 <Link
                   href="/survival-kit"
-                  className="inline-flex min-h-11 items-center justify-center rounded-full border-2 border-[var(--brand-cta)]/30 px-5 py-2.5 text-sm font-bold text-[var(--brand-cta)] transition-all duration-300 hover:bg-[var(--brand-cta)]/8"
+                  className="inline-flex h-8 min-h-8 items-center justify-center rounded-full border-2 border-[var(--brand-cta)]/30 px-3.5 text-xs font-bold leading-none text-[var(--brand-cta)] transition-all duration-300 hover:bg-[var(--brand-cta)]/8"
                 >
                   {dict.home.secondaryCta}
                 </Link>
               </div>
-              <div className="mt-6 flex flex-wrap items-center gap-3">
-                <SocialLinks />
-                <WhatsAppContact
-                  variant="footer"
-                  label={dict.whatsapp.navLabel}
-                  cardTitle={dict.whatsapp.cardTitle}
-                />
-              </div>
             </div>
 
-            {/* Plan & services */}
-            <div className="lg:col-span-2">
+            <div className="min-w-0">
               <h4 className={headingClass}>{dict.footer.plan}</h4>
-              <ul className="space-y-3">
+              <ul className="space-y-2.5">
                 {planLinks.map((item) => (
                   <li key={`${item.href}-${item.label}`}>
                     <Link href={item.href} className={linkClass}>
@@ -110,15 +99,17 @@ export function Footer() {
               </ul>
             </div>
 
-            {/* Topic hubs */}
-            <div className="lg:col-span-3">
+            <div className="min-w-0">
               <h4 className={headingClass}>{dict.footer.guides}</h4>
-              <ul className="space-y-3 lg:columns-2 lg:gap-x-6">
+              <ul className="grid grid-cols-1 gap-x-8 gap-y-2.5 lg:grid-cols-2 lg:grid-flow-col lg:grid-rows-5">
                 {guidesNav.map((item) => (
-                  <li key={item.href} className="break-inside-avoid lg:mb-3">
+                  <li key={item.href}>
                     <Link
                       href={item.href}
-                      className={cn(linkClass, "inline-flex items-center gap-2")}
+                      className={cn(
+                        linkClass,
+                        "inline-flex max-w-full items-center gap-2",
+                      )}
                     >
                       {item.icon ? (
                         <span
@@ -128,17 +119,16 @@ export function Footer() {
                           {item.icon}
                         </span>
                       ) : null}
-                      {navLabel(item.id)}
+                      <span className="min-w-0">{navLabel(item.id)}</span>
                     </Link>
                   </li>
                 ))}
               </ul>
             </div>
 
-            {/* Company + contact */}
-            <div className="lg:col-span-3">
+            <div className="min-w-0">
               <h4 className={headingClass}>{dict.footer.company}</h4>
-              <ul className="mb-8 space-y-3">
+              <ul className="space-y-2.5">
                 {companyLinks.map((item) => (
                   <li key={item.href}>
                     <Link href={item.href} className={linkClass}>
@@ -147,29 +137,17 @@ export function Footer() {
                   </li>
                 ))}
               </ul>
-
-              <h4 className={headingClass}>{dict.footer.contact}</h4>
-              <ul className="space-y-3 text-sm font-normal text-[var(--brand-ink-muted)]">
-                <li>
-                  <Link
-                    href="/contact"
-                    className="transition-colors duration-300 hover:text-[var(--brand-cta)]"
-                  >
-                    {dict.nav.contact}
-                  </Link>
-                </li>
-                <li>
-                  {SITE_LOCATION}
-                  <span className="text-[var(--brand-ink-muted)]/80">
-                    {" "}
-                    · {SITE_LOCATION_ZH}
-                  </span>
-                </li>
-              </ul>
+              <p className="mt-5 text-sm font-normal leading-snug text-[var(--brand-ink-muted)]">
+                {SITE_LOCATION}
+                <span className="text-[var(--brand-ink-muted)]/80">
+                  {" "}
+                  · {SITE_LOCATION_ZH}
+                </span>
+              </p>
             </div>
           </div>
 
-          <div className="mt-12 space-y-4 border-t border-[color-mix(in_srgb,var(--brand-cta)_12%,transparent)] pt-8 md:mt-16">
+          <div className="mt-8 space-y-3 border-t border-[color-mix(in_srgb,var(--brand-cta)_12%,transparent)] pt-6 md:mt-10">
             <p className="max-w-3xl text-sm font-normal leading-relaxed text-[var(--brand-ink-muted)]">
               {dict.footer.disclaimer}
             </p>
@@ -183,7 +161,7 @@ export function Footer() {
               </Link>
             </p>
 
-            <div className="flex flex-col items-start justify-between gap-4 pt-2 text-sm font-normal text-[var(--brand-ink-muted)] md:flex-row md:items-center">
+            <div className="flex flex-col gap-4 pt-2 text-sm font-normal text-[var(--brand-ink-muted)] md:flex-row md:items-center md:justify-between">
               <div>
                 <p>
                   © {year} {SITE_NAME}. All rights reserved.
@@ -194,6 +172,16 @@ export function Footer() {
                 />
               </div>
               <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
+                <SocialLinks size="sm" />
+                <WhatsAppContact
+                  variant="footer"
+                  label={dict.whatsapp.navLabel}
+                  cardTitle={dict.whatsapp.cardTitle}
+                />
+                <span
+                  className="hidden h-4 w-px bg-[color-mix(in_srgb,var(--brand-cta)_18%,transparent)] md:block"
+                  aria-hidden
+                />
                 <Link
                   href="/terms-of-service"
                   className="transition-colors duration-300 hover:text-[var(--brand-cta)]"

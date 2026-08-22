@@ -11,9 +11,9 @@ import { HOME_OG_IMAGE_URL } from "@/lib/constants";
 import type { Metadata } from "next";
 
 const pageTitle =
-  "Your Local Partner for Independent China Travel (Visa, Alipay & Prep)";
+  "Custom China Itinerary Planning for Independent Travelers | Hidden China Travel";
 const pageDescription =
-  "Hidden China Travel is your local partner for independent China travel — 1:1 itinerary planning, Survival Kit prep for payments, eSIM, VPN and visas, plus optional on-trip help during business hours.";
+  "1-on-1 custom China itinerary PDF from $99 — cities, days, and pace, not a tour template. Survival Kit prep for visas, payments, and data is included. Your local partner for independent China travel.";
 
 export const metadata: Metadata = {
   title: {
@@ -44,11 +44,11 @@ export default function Index() {
   return (
     <main>
       <HomeHero />
+      <HomeDestinations variant="home" />
       <HomeWhyUs />
       <HomeGettingStarted />
       <ItineraryPlannerSection source="home" deferForm />
       <HomeFeaturedGuides posts={allPosts} />
-      <HomeDestinations variant="home" />
       <HomeFaqSection />
       <HomeSurvivalKit />
     </main>

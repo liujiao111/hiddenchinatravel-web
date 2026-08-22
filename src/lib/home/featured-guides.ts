@@ -7,6 +7,7 @@ export type HomeGuideCard = {
   href: string;
   excerpt: string;
   date?: string;
+  coverImage?: string;
 };
 
 export type HomeHubTab = {

@@ -4,6 +4,7 @@ import DateFormatter from "@/app/_components/date-formatter";
 import { TropicalCard } from "@/app/_components/tropical-card";
 import type { HomeGuideCard, HomeHubTab } from "@/lib/home/featured-guides";
 import cn from "classnames";
+import Image from "next/image";
 import Link from "next/link";
 import { useMemo, useState } from "react";
 
@@ -91,6 +92,17 @@ export function HomeFeaturedGuidesClient({ featured, hubs }: Props) {
                 href={item.href}
                 label="Guide"
                 title={item.title}
+                media={
+                  item.coverImage ? (
+                    <Image
+                      src={item.coverImage}
+                      alt={item.title}
+                      fill
+                      sizes="(max-width: 640px) 92vw, (max-width: 1024px) 45vw, 360px"
+                      className="object-cover"
+                    />
+                  ) : undefined
+                }
                 footerMeta={
                   item.date ? (
                     <DateFormatter dateString={item.date} />

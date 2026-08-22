@@ -48,14 +48,15 @@ export function HomeFaqAccordion() {
                 <p className="text-sm font-normal leading-relaxed text-[var(--brand-ink-muted)]">
                   {item.answerLead}
                 </p>
-                {item.link ? (
+                {(item.links ?? (item.link ? [item.link] : [])).map((link) => (
                   <Link
-                    href={item.link.href}
-                    className="inline-flex text-sm font-bold text-[var(--brand-coral)] underline decoration-[color-mix(in_srgb,var(--brand-coral)_35%,transparent)] underline-offset-2"
+                    key={link.href}
+                    href={link.href}
+                    className="mr-4 inline-flex text-sm font-bold text-[var(--brand-coral)] underline decoration-[color-mix(in_srgb,var(--brand-coral)_35%,transparent)] underline-offset-2"
                   >
-                    {item.link.label} →
+                    {link.label} →
                   </Link>
-                ) : null}
+                ))}
               </div>
             </div>
           </div>

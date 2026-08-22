@@ -1,25 +1,67 @@
 /** High-intent China travel FAQs for homepage SEO — link out to guides/hubs. */
 
+export type HomeFaqLink = {
+  href: string;
+  label: string;
+};
+
 export type HomeFaqItem = {
   question: string;
   /** Plain-text answer for schema.org (no markdown links). */
   answerPlain: string;
   /** Short answer shown in UI; link rendered separately when present. */
   answerLead: string;
-  link?: {
-    href: string;
-    label: string;
-  };
+  link?: HomeFaqLink;
+  links?: HomeFaqLink[];
 };
 
 export const homeFaqSection = {
   eyebrow: "Common questions",
-  title: "China travel FAQs for first-timers",
+  title: "China itinerary and first-trip FAQs",
   intro:
-    "Quick answers to the survival questions travelers search before they land — payments, internet, visas, maps, and hotels.",
+    "Custom itineraries, plus the visa, payments, and prep questions first-timers search before they land.",
 } as const;
 
 export const homeFaqs: HomeFaqItem[] = [
+  {
+    question: "Is a custom China itinerary a tour?",
+    answerPlain:
+      "No. A custom itinerary here is a PDF route you follow independently — city order, pace, and what to skip. It is not a guided package, bus tour, or group departure.",
+    answerLead:
+      "No. You get a PDF route to follow independently — not a guided package or group tour.",
+    link: {
+      href: "/services/custom-itinerary",
+      label: "What’s in a custom itinerary",
+    },
+  },
+  {
+    question: "Should I plan my China trip myself or pay for a local PDF?",
+    answerPlain:
+      "DIY works if you already know city order, rail time, and how payments and data work. A local PDF is worth the fee when you have dates but the route still feels like a 12-city sprint, or you want someone on the ground to sequence pace and skips. Read the itinerary planning hub first, then the custom itinerary page for what a paid PDF includes.",
+    answerLead:
+      "DIY is fine if city order and systems already make sense. Pay for a local PDF when dates are real but the route still feels like too many cities — or you want pace and skips sequenced for you.",
+    links: [
+      {
+        href: "/china-itinerary-planning",
+        label: "Itinerary planning hub",
+      },
+      {
+        href: "/services/custom-itinerary",
+        label: "Custom itinerary details",
+      },
+    ],
+  },
+  {
+    question: "What does a custom itinerary cost, and how do I start?",
+    answerPlain:
+      "Early-bird planning starts at $99 by trip length. The request form is free. We confirm scope and the matching fee before you pay; the PDF is delivered 48–72 hours after you confirm.",
+    answerLead:
+      "Early bird from $99 by trip length. The request is free — we confirm scope and fee before you pay.",
+    link: {
+      href: "/china-itinerary-planner#plan-trip",
+      label: "Request a custom itinerary",
+    },
+  },
   {
     question: "Do I need a visa for China in 2026?",
     answerPlain:

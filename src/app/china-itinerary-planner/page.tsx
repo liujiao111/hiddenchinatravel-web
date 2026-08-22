@@ -4,10 +4,9 @@ import { SITE_NAME, SITE_URL } from "@/lib/constants";
 import Link from "next/link";
 import type { Metadata } from "next";
 
-const pageTitle =
-  "China Itinerary Planner: Custom Trip Plans for Independent Travelers";
+const pageTitle = "Request a Custom China Itinerary";
 const pageDescription =
-  "Tell us your cities, days, and travel style — get a custom China itinerary from a local partner. Early-bird planning from $99.";
+  "Share cities, days, and travel style — request a 1-on-1 custom China itinerary PDF from a local partner. Early-bird planning from $99. The request is free."
 
 export const metadata: Metadata = {
   title: {
@@ -103,11 +102,12 @@ export default function ChinaItineraryPlannerPage() {
             Custom planning request
           </p>
           <h1 className="max-w-3xl text-3xl font-bold tracking-tight text-white md:text-4xl lg:text-5xl">
-            China Itinerary Planner
+            Request a custom China itinerary
           </h1>
           <p className="mt-3 max-w-2xl text-sm font-normal leading-relaxed text-white/85 md:text-base">
-            Independent travel, planned with a local partner — not a tour
-            template. Share a few details and we&apos;ll draft a practical route.
+            Share cities, days, and pace. After we confirm scope, you get a
+            ready-to-follow PDF — not a tour template. Early bird from $99; the
+            request is free.
           </p>
         </Container>
       </div>

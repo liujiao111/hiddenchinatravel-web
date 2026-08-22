@@ -15,6 +15,9 @@ export type DestinationCity = {
   label: string;
   pitch: string;
   guidesHint: string;
+  /** Optional 2:3 card photo under `public/`. */
+  image?: string;
+  imageAlt?: string;
 };
 
 export const destinationCities: DestinationCity[] = [
@@ -24,6 +27,8 @@ export const destinationCities: DestinationCity[] = [
     label: "Capital base",
     pitch: "Capital history, hutongs, and a practical first-city base for many arrivals.",
     guidesHint: "Entry city · culture & logistics",
+    image: "/brand/destinations/beijing.webp",
+    imageAlt: "Forbidden City rooftops from Jingshan Park, Beijing",
   },
   {
     id: "shanghai",
@@ -31,6 +36,8 @@ export const destinationCities: DestinationCity[] = [
     label: "Gateway city",
     pitch: "Transit hubs, riverside neighborhoods, and a smoother start for first-timers.",
     guidesHint: "Gateway · urban & coastal",
+    image: "/brand/destinations/shanghai.webp",
+    imageAlt: "Shanghai skyline across the Huangpu from a riverside park",
   },
   {
     id: "xian",
@@ -38,6 +45,8 @@ export const destinationCities: DestinationCity[] = [
     label: "History stop",
     pitch: "Terracotta warriors, city walls, and a strong Silk Road history stop.",
     guidesHint: "History · multi-city routes",
+    image: "/brand/destinations/xian.webp",
+    imageAlt: "Bell Tower rising above the trees in Xi'an",
   },
   {
     id: "chengdu",
@@ -45,6 +54,8 @@ export const destinationCities: DestinationCity[] = [
     label: "Western China",
     pitch: "Food, pandas, and a calm pace before heading into Sichuan or Yunnan.",
     guidesHint: "Food · western China base",
+    image: "/brand/destinations/chengdu.webp",
+    imageAlt: "Giant panda eating bamboo in Chengdu",
   },
   {
     id: "kunming",
@@ -52,6 +63,8 @@ export const destinationCities: DestinationCity[] = [
     label: "Yunnan launch",
     pitch: "Spring weather and a natural launchpad into Yunnan’s landscapes.",
     guidesHint: "Yunnan · regional travel",
+    image: "/brand/destinations/kunming.webp",
+    imageAlt: "Spring blossoms and snow-capped mountains in Yunnan",
   },
   {
     id: "guilin",
@@ -59,6 +72,38 @@ export const destinationCities: DestinationCity[] = [
     label: "Karst scenery",
     pitch: "Karst rivers, countryside stays, and classic south China scenery.",
     guidesHint: "Scenery · slower days",
+    image: "/brand/destinations/guilin.webp",
+    imageAlt: "Boat on a karst river near Guilin and Yangshuo",
+  },
+  {
+    id: "chongqing",
+    name: "Chongqing",
+    label: "Mountain city",
+    pitch:
+      "River bridges, night skyline, and a vertical city that rewards extra days in southwest China.",
+    guidesHint: "Urban · Sichuan–Chongqing",
+    image: "/brand/destinations/chongqing.webp",
+    imageAlt: "Chongqing skyline and bridge lights reflected in the river at night",
+  },
+  {
+    id: "zhangjiajie",
+    name: "Zhangjiajie",
+    label: "Sandstone peaks",
+    pitch:
+      "Quartz-sandstone pillars and park days — a scenery stop after a first-city base.",
+    guidesHint: "Scenery · national park",
+    image: "/brand/destinations/zhangjiajie.webp",
+    imageAlt: "Sandstone pillars rising from forest in Zhangjiajie",
+  },
+  {
+    id: "guangzhou",
+    name: "Guangzhou",
+    label: "South China gateway",
+    pitch:
+      "Pearl River arrival city, Cantonese food, and a practical start in the south.",
+    guidesHint: "Gateway · south China",
+    image: "/brand/destinations/guangzhou.webp",
+    imageAlt: "Canton Tower lit at night in Guangzhou",
   },
 ];
 
@@ -116,22 +161,22 @@ export const featuredGuideFallbacks = [
 /** Hero-adjacent trust strip — claim + 3 icon points */
 export const homeWhyUs = {
   claim:
-    "Your local partner for independent China travel — practical help with visas, payments, internet, and on-trip questions.",
+    "Your local partner for independent China travel — 1-on-1 custom itineraries first, with practical prep and optional on-trip help.",
   storyCta: "Learn our story",
   storyHref: "/about#why-us",
   points: [
     {
       id: "experience",
-      title: "Lived experience on the ground",
-      body: "Alipay declined at a stall? We walk you through backup payment paths during business hours — calm, step-by-step help, not a 24/7 concierge.",
+      title: "Planning first — local routes, not templates",
+      body: "We sequence cities, pace, and what to skip into a PDF you follow independently. If Alipay fails on the ground, we walk through a backup during business hours — not a 24/7 concierge.",
       inlineLink: {
-        href: "/services#differentiator",
-        label: "See on-trip help scenarios",
+        href: "/services/custom-itinerary",
+        label: "See what’s in a custom itinerary",
       },
     },
     {
       id: "support",
-      title: "Planning first — optional help on the ground",
+      title: "Optional help on the ground",
       body: "Pre-trip planning is the core. Optional on-trip help is available Mon–Fri 9AM–9PM China time when plans change.",
     },
     {

@@ -1,8 +1,14 @@
 import cn from "classnames";
 import { socialLinks, type SocialLinkId } from "@/lib/constants";
 
-function SocialIcon({ id }: { id: SocialLinkId }) {
-  const className = "h-5 w-5";
+function SocialIcon({
+  id,
+  compact = false,
+}: {
+  id: SocialLinkId;
+  compact?: boolean;
+}) {
+  const className = compact ? "h-4 w-4" : "h-5 w-5";
 
   switch (id) {
     case "youtube":
@@ -30,11 +36,24 @@ type Props = {
   className?: string;
   /** Icon-only circle buttons (footer/header) */
   variant?: "icons" | "pills";
+  size?: "sm" | "md";
 };
 
-export function SocialLinks({ className, variant = "icons" }: Props) {
+export function SocialLinks({
+  className,
+  variant = "icons",
+  size = "md",
+}: Props) {
+  const compact = size === "sm";
+
   return (
-    <ul className={cn("flex flex-wrap items-center gap-3", className)}>
+    <ul
+      className={cn(
+        "flex flex-wrap items-center",
+        compact ? "gap-2" : "gap-3",
+        className,
+      )}
+    >
       {socialLinks.map((link) => (
         <li key={link.id}>
           <a
@@ -44,14 +63,18 @@ export function SocialLinks({ className, variant = "icons" }: Props) {
             aria-label={link.label}
             title={link.label}
             className={cn(
-              "inline-flex items-center justify-center rounded-2xl border border-[color-mix(in_srgb,var(--brand-cream-border)_40%,transparent)] font-bold tracking-tight text-[var(--brand-ink)] transition-colors duration-300 active:scale-[0.98]",
+              "inline-flex items-center justify-center border border-[color-mix(in_srgb,var(--brand-cream-border)_40%,transparent)] font-bold tracking-tight text-[var(--brand-ink)] transition-colors duration-300 active:scale-[0.98]",
+              compact ? "rounded-xl" : "rounded-2xl",
               variant === "icons" &&
-                "h-10 w-10 hover:border-[var(--brand-cta)] hover:bg-[var(--brand-cta)] hover:text-[var(--brand-on)]",
+                cn(
+                  compact ? "h-8 w-8" : "h-10 w-10",
+                  "hover:border-[var(--brand-cta)] hover:bg-[var(--brand-cta)] hover:text-[var(--brand-on)]",
+                ),
               variant === "pills" &&
                 "gap-2 px-4 py-2 text-sm hover:border-[var(--brand-cta)] hover:bg-[var(--brand-cta)] hover:text-[var(--brand-on)]",
             )}
           >
-            <SocialIcon id={link.id} />
+            <SocialIcon id={link.id} compact={compact} />
             {variant === "pills" ? <span>{link.label}</span> : null}
           </a>
         </li>

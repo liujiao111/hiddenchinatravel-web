@@ -1,5 +1,4 @@
 import Footer from "@/app/_components/footer";
-import { DeferredDeparturePrepRail } from "@/app/_components/deferred-departure-prep-rail";
 import { ConditionalSiteChrome } from "@/app/_components/conditional-site-chrome";
 import SiteHeader from "@/app/_components/site-header";
 import { SiteAnalytics } from "@/components/analytics/site-analytics";
@@ -138,12 +137,7 @@ export default function RootLayout({
         <LocaleProvider>
           <ConditionalSiteChrome
             header={<SiteHeader />}
-            footer={
-              <>
-                <Footer />
-                <DeferredDeparturePrepRail />
-              </>
-            }
+            footer={<Footer />}
           >
             <div className="min-h-screen">{children}</div>
           </ConditionalSiteChrome>

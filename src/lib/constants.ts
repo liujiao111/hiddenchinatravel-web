@@ -14,10 +14,10 @@ export const SITE_FOUNDER_PATH = "/about#founder";
 export const SITE_FOUNDER_PICTURE = "/assets/blog/authors/joy-liu.jpg";
 
 export const SITE_LOGO_PATH = "/brand/logo.webp";
-export const SITE_HERO_PATH = "/brand/hero-home.webp";
+export const SITE_HERO_PATH = "/brand/hero-lijiang.webp";
 
 /** ISO date — bump when shipping sitewide content / chrome updates */
-export const SITE_LAST_UPDATED = "2026-08-17";
+export const SITE_LAST_UPDATED = "2026-08-22";
 
 export const socialLinks = [
   {

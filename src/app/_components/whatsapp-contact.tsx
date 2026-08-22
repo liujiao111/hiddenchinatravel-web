@@ -91,10 +91,12 @@ export function WhatsAppContact({
                 : "text-neutral-900 hover:bg-neutral-50",
             ),
           !isNav &&
-            "h-10 w-10 justify-center border border-[color-mix(in_srgb,var(--brand-cream-border)_40%,transparent)] text-[var(--brand-ink)] hover:border-[#25D366]/50 hover:bg-[#25D366]/8",
+            "h-8 w-8 justify-center rounded-xl border border-[color-mix(in_srgb,var(--brand-cream-border)_40%,transparent)] text-[var(--brand-ink)] hover:border-[#25D366]/50 hover:bg-[#25D366]/8",
         )}
       >
-        <WhatsAppGlyph className="h-5 w-5 shrink-0" />
+        <WhatsAppGlyph
+          className={cn("shrink-0", isNav ? "h-5 w-5" : "h-4 w-4")}
+        />
         {isNav ? (
           <span className="hidden whitespace-nowrap 2xl:inline">{label}</span>
         ) : null}

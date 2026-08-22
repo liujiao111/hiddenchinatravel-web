@@ -1,9 +1,9 @@
 /** Structured services & pricing — edit here, not in JSX. */
 
 export const servicesPageMeta = {
-  title: "China Itinerary Planning Service: Custom Routes, Local Support & Pricing",
+  title: "China Travel Planning, On-Trip Help & Booking Fees",
   description:
-    "1-on-1 China itinerary planning from $99 early bird, plus itinerary review, on-trip Q&A packs, and transparent booking help — built for independent travelers.",
+    "Custom itinerary PDFs from $99 early bird, plus itinerary review, on-trip Q&A packs, and transparent booking help — for independent travelers, not tour groups.",
   keywords: [
     "China itinerary planning service",
     "custom China itinerary",
