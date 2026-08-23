@@ -8,7 +8,7 @@ canonical: /china-itinerary-planning
 eyebrow: "Independent travel · Itinerary hub"
 heroAnswer: "A workable China itinerary starts with pace and systems — not a list of famous sights. Confirm entry rules, lock payments and data, then choose fewer cities connected by high-speed rail. Polish day-by-day only after that stack works."
 description: "Independent China itineraries fail when travelers pack too many cities, treat Google Maps as gospel, or polish sightseeing before Alipay and data work. This hub is the planning layer: how to sequence cities, when a local PDF route helps, and which prep guides to read first."
-dateModified: "2026-08-18"
+dateModified: "2026-08-23"
 keywords:
   - plan China itinerary
   - independent China itinerary
@@ -84,6 +84,15 @@ subtopics:
         excerpt: "Passport reservations for popular sights — do not leave these to walk-up."
         badge: "Hub"
         status: published
+  - id: regional-loops
+    name: "Regional loops"
+    description: "Once the China skeleton is set, one province is enough for a first independent week."
+    articles:
+      - title: "Independent Yunnan travel"
+        href: /china-destinations/yunnan
+        excerpt: "7-day Kunming–Dali–Lijiang without a tour — plus when to add Jinghong or Shangri-La."
+        badge: "Destination"
+        status: published
 toolCTA:
   - label: "Open the itinerary planner"
     href: /china-itinerary-planner
@@ -103,6 +112,8 @@ faqs:
     answer: "When you have a time window, mixed interests (cities plus countryside), or you want a local to sanity-check pacing and trains. We sell a PDF route, not a tour package — details on the [custom itinerary page](/services/custom-itinerary)."
   - question: "What is the backbone of most independent China routes?"
     answer: "Overnight cities connected by high-speed rail, with one buffer day. Start with the [transport hub](/transport-in-china) and [rail booking guide](/book-china-high-speed-rail-foreigners)."
+  - question: "How do I plan a Yunnan itinerary independently?"
+    answer: "The usual first loop is Kunming–Dali–Lijiang in seven to ten days, trains in your own name, no Tibet-style permit. [Independent Yunnan travel](/china-destinations/yunnan) has the 7-day sketch, best time to go, and when Shangri-La or Xishuangbanna actually fits."
 beforeYouArrive: "Do not start with a 14-city spreadsheet. Confirm how you enter China, then payments and data, then pick overnight cities you can actually reach by rail. Day-level sightseeing is the last layer — not the first.\n\nIf you want a local to turn that skeleton into a PDF, use the planner. If you want to DIY, read the how-to guide and keep the essentials hub open."
 beforeYouArriveHeading: "Plan the skeleton before the sightseeing list"
 decisionGuide:
@@ -130,6 +141,9 @@ relatedHubs:
   - title: "China Travel Essentials"
     href: /china-travel-essentials
     excerpt: "Prep order before you polish days."
+  - title: "Independent Yunnan travel"
+    href: /china-destinations/yunnan
+    excerpt: "A 7-day independent loop once the China skeleton is set."
   - title: "Transport in China"
     href: /transport-in-china
     excerpt: "Rail, metro, and DiDi once the route exists."

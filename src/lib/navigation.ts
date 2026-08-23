@@ -3,6 +3,8 @@ export type NavId =
   | "tools"
   | "survivalKit"
   | "services"
+  | "destinations"
+  | "destYunnan"
   | "contact"
   | "about"
   | "planner"
@@ -56,9 +58,18 @@ export const toolsNav: NavItem[] = [
   },
 ];
 
+export const destinationsNav: NavItem[] = [
+  { id: "destYunnan", href: "/china-destinations/yunnan" },
+];
+
 export const mainNav: NavItem[] = [
   { id: "services", href: "/services" },
   { id: "survivalKit", href: "/survival-kit" },
+  {
+    id: "destinations",
+    href: "/china-destinations",
+    children: destinationsNav,
+  },
   { id: "guides", href: "/survival-guides", children: guidesNav },
   { id: "tools", href: "/tools", children: toolsNav },
   { id: "contact", href: "/contact" },

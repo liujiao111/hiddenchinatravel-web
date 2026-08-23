@@ -4,7 +4,7 @@ seoTitle: "How to Plan a China Itinerary Independently (2026)"
 excerpt: "A practical order for independent China trip planning: how many cities, high-speed rail as the backbone, rest days, and when a local PDF route is worth paying for."
 coverImage: "/assets/blog/independent-travel-china/cover.webp"
 date: "2026-08-18T12:00:00+08:00"
-dateModified: "2026-08-18T12:00:00+08:00"
+dateModified: "2026-08-23T12:00:00+08:00"
 author:
   name: "Joy Liu"
   picture: "/assets/blog/authors/joy-liu.jpg"
@@ -70,6 +70,8 @@ Write the trip as **nights**, then hang trains on those nights.
 - Put **one buffer night** near the end. Sold-out trains and weather are normal.
 
 Example shape (not a promise, not a client trip): fly into Chongqing, overnight there, then a slower corridor, then one landscape stop, then back to the same airport city. That is how a [sample southwest loop](/services/custom-itinerary) is sketched — labeled as a sample on purpose.
+
+A first independent week often looks simpler than that: fly into Kunming, then fast trains to Dali and Lijiang. [Independent Yunnan travel](/china-destinations/yunnan) is the worked example — days, trains, and when not to bolt on Xishuangbanna.
 
 For trains and stations, use the [transport hub](/transport-in-china). For night-one lodging that accepts a foreign passport, use [hotels in China](/hotels-in-china). Iconic sights that need passport reservations belong in [attraction tickets](/attraction-tickets-in-china) — not in a walk-up fantasy.
 

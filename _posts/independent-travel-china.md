@@ -4,7 +4,7 @@ seoTitle: "Independent Travel in China 2026: Apps & Payments"
 excerpt: "Can foreigners travel China independently in 2026? What changes: Alipay, local apps, hotels, transport — and the prep that prevents day-one chaos."
 coverImage: "/assets/blog/independent-travel-china/cover.webp"
 date: "2026-02-14T05:25:19+00:00"
-dateModified: "2026-08-17T12:00:00+00:00"
+dateModified: "2026-08-23T12:00:00+00:00"
 author:
   name: "Joy Liu"
   picture: "/assets/blog/authors/joy-liu.jpg"
@@ -180,7 +180,7 @@ China may feel unfamiliar at first glance, but that unfamiliarity is exactly wha
 
 Independent travel here isn’t just possible—it offers a level of discovery that packaged tours often miss.
 
-In the next articles, we’ll explore where to begin, including why regions like Yunnan are often recommended as the perfect first step into the country.
+Yunnan is the usual first independent loop: Kunming, then fast trains west to Dali and Lijiang, without a tour bus. The [independent Yunnan travel guide](/china-destinations/yunnan) has a 7-day sketch, best time to go, and when Shangri-La or Xishuangbanna actually fits.
 
 If you have questions about traveling in China, [send a note](/contact) — we usually reply during business hours. For a custom route, [plan your China trip](/china-itinerary-planner).
 
@@ -188,6 +188,7 @@ If you have questions about traveling in China, [send a note](/contact) — we u
 
 Planning your China trip? These practical guides may also help you travel more independently and avoid common first-time mistakes:
 
+  * [Independent Yunnan Travel](/china-destinations/yunnan)
   * [Travel China Guide for Foreigners](/independent-travel-china)
   * [Payments in China for Foreigners](/payments-in-china)
   * [Internet, VPN and SIM in China](/internet-in-china)

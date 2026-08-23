@@ -53,6 +53,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.85,
     },
     {
+      url: absoluteCanonicalUrl("/china-destinations/yunnan"),
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 0.85,
+    },
+    {
       url: absoluteCanonicalUrl("/survival-kit"),
       lastModified: now,
       changeFrequency: "monthly",

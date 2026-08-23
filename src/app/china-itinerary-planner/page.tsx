@@ -1,6 +1,7 @@
 import { ItineraryPlannerSection } from "@/app/_components/itinerary-planner/itinerary-planner-section";
 import Container from "@/app/_components/container";
 import { SITE_NAME, SITE_URL } from "@/lib/constants";
+import { parsePlannerDestQuery } from "@/lib/itinerary-planner/content";
 import Link from "next/link";
 import type { Metadata } from "next";
 
@@ -78,7 +79,14 @@ function buildJsonLd() {
   ];
 }
 
-export default function ChinaItineraryPlannerPage() {
+export default async function ChinaItineraryPlannerPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ dest?: string | string[] }>;
+}) {
+  const { dest } = await searchParams;
+  const initialDestinations = parsePlannerDestQuery(dest);
+
   return (
     <main>
       <script
@@ -112,7 +120,11 @@ export default function ChinaItineraryPlannerPage() {
         </Container>
       </div>
 
-      <ItineraryPlannerSection source="planner" dense />
+      <ItineraryPlannerSection
+        source="planner"
+        dense
+        initialDestinations={initialDestinations}
+      />
     </main>
   );
 }

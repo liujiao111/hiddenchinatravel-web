@@ -76,7 +76,7 @@ const wordpressCutoverRedirects = [
   },
   {
     source: "/category/yunnan-travel",
-    destination: "/china-destinations",
+    destination: "/china-destinations/yunnan",
     permanent: true,
   },
   // Category RSS (must be before the catch-all)
@@ -106,7 +106,7 @@ const wordpressCutoverRedirects = [
   },
   {
     source: "/yunnan-hidden-gems",
-    destination: "/china-destinations",
+    destination: "/china-destinations/yunnan",
     permanent: true,
   },
   {

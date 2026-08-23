@@ -39,6 +39,29 @@ export const plannerDestinations: PlannerDestinationOption[] = [
   { id: "other", label: "Other / not sure" },
 ];
 
+const plannerDestinationIds = new Set(plannerDestinations.map((d) => d.id));
+
+const plannerDestAliases: Record<string, string> = {
+  kunming: "yunnan",
+};
+
+/** `?dest=yunnan` or `?dest=yunnan,chengdu` — unknown ids are dropped. */
+export function parsePlannerDestQuery(
+  raw?: string | string[],
+): string[] {
+  const value = Array.isArray(raw) ? raw.join(",") : (raw ?? "");
+  const seen = new Set<string>();
+  for (const part of value.split(",")) {
+    const id =
+      plannerDestAliases[part.trim().toLowerCase()] ??
+      part.trim().toLowerCase();
+    if (plannerDestinationIds.has(id) && !seen.has(id)) {
+      seen.add(id);
+    }
+  }
+  return [...seen];
+}
+
 export const plannerDayBounds = { min: 3, max: 21, default: 7 } as const;
 
 export const plannerTravelerBounds = { min: 1, max: 8, default: 2 } as const;

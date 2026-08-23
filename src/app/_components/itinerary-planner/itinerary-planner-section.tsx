@@ -16,12 +16,14 @@ type Props = {
    * so it does not compete with LCP / first paint.
    */
   deferForm?: boolean;
+  initialDestinations?: string[];
 };
 
 export function ItineraryPlannerSection({
   source = "home",
   dense = false,
   deferForm = false,
+  initialDestinations,
 }: Props) {
   const visaLookup = deferForm ? null : getQuickVisaLookup();
 
@@ -58,9 +60,16 @@ export function ItineraryPlannerSection({
           </aside>
           <div className="order-2 lg:order-1 lg:col-span-3">
             {deferForm || !visaLookup ? (
-              <DeferredPlannerForm source={source} />
+              <DeferredPlannerForm
+                source={source}
+                initialDestinations={initialDestinations}
+              />
             ) : (
-              <ItineraryPlannerForm visaLookup={visaLookup} source={source} />
+              <ItineraryPlannerForm
+                visaLookup={visaLookup}
+                source={source}
+                initialDestinations={initialDestinations}
+              />
             )}
           </div>
         </div>

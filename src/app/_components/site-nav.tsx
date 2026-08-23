@@ -17,6 +17,7 @@ function labelFor(id: NavId, labels: NavLabels): string {
 function menuAriaFor(item: NavItem, labels: NavLabels): string {
   if (item.id === "guides") return labels.guidesMenuAria;
   if (item.id === "tools") return labels.toolsMenuAria;
+  if (item.id === "destinations") return labels.destinationsMenuAria;
   return labelFor(item.id, labels);
 }
 
@@ -179,10 +180,12 @@ export function SiteNav({ labels, tone = "default" }: Props) {
 
   return (
     <nav
-      className="flex flex-nowrap items-center justify-start gap-x-3 whitespace-nowrap 2xl:gap-x-5"
+      className="flex flex-nowrap items-center justify-start gap-x-3 whitespace-nowrap xl:gap-x-4 2xl:gap-x-5"
       aria-label={labels.mainAria}
     >
-      {mainNav.map((item) => {
+      {mainNav
+        .filter((item) => item.id !== "contact" && item.id !== "about")
+        .map((item) => {
         if (item.children?.length) {
           return (
             <NavDropdown
@@ -202,7 +205,6 @@ export function SiteNav({ labels, tone = "default" }: Props) {
             href={item.href}
             className={cn(
               "text-sm font-normal tracking-wide transition-all duration-300",
-              item.id === "about" && "hidden 2xl:inline",
               onTeal
                 ? isActive
                   ? "font-bold text-white"

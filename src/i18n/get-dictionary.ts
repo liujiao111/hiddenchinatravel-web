@@ -14,6 +14,8 @@ export type Dictionary = {
     tools: string;
     survivalKit: string;
     services: string;
+    destinations: string;
+    destYunnan: string;
     contact: string;
     about: string;
     planner: string;
@@ -32,6 +34,7 @@ export type Dictionary = {
     mainAria: string;
     toolsMenuAria: string;
     guidesMenuAria: string;
+    destinationsMenuAria: string;
   };
   header: {
     /** Global itinerary planner button label */
@@ -79,6 +82,8 @@ const en: Dictionary = {
     tools: "Tools",
     survivalKit: "Survival Kit",
     services: "Services",
+    destinations: "Destinations",
+    destYunnan: "Yunnan",
     contact: "Contact",
     about: "About",
     planner: "China Itinerary Planner",
@@ -97,6 +102,7 @@ const en: Dictionary = {
     mainAria: "Main",
     toolsMenuAria: "Tools",
     guidesMenuAria: "Survival Guides",
+    destinationsMenuAria: "Destinations",
   },
   header: {
     plannerCta: PRIMARY_CTA_LABEL,
@@ -146,6 +152,8 @@ const zh: Dictionary = {
     tools: "工具",
     survivalKit: "生存套件",
     services: "服务与定价",
+    destinations: "目的地",
+    destYunnan: "云南",
     contact: "联系",
     about: "关于",
     planner: "中国行程规划器",
@@ -164,6 +172,7 @@ const zh: Dictionary = {
     mainAria: "主导航",
     toolsMenuAria: "工具",
     guidesMenuAria: "生存指南",
+    destinationsMenuAria: "目的地",
   },
   header: {
     plannerCta: "规划行程",

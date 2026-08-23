@@ -21,10 +21,14 @@ const ItineraryPlannerForm = dynamic(
 
 type Props = {
   source: PlannerFormSource;
+  initialDestinations?: string[];
 };
 
 /** Client boundary: form chunk + visa lookup load after first paint. */
-export function DeferredPlannerForm({ source }: Props) {
+export function DeferredPlannerForm({
+  source,
+  initialDestinations,
+}: Props) {
   const visaLookup = useQuickVisaLookup();
 
   if (!visaLookup) {
@@ -37,5 +41,11 @@ export function DeferredPlannerForm({ source }: Props) {
     );
   }
 
-  return <ItineraryPlannerForm visaLookup={visaLookup} source={source} />;
+  return (
+    <ItineraryPlannerForm
+      visaLookup={visaLookup}
+      source={source}
+      initialDestinations={initialDestinations}
+    />
+  );
 }

@@ -18,6 +18,8 @@ export type DestinationCity = {
   /** Optional 2:3 card photo under `public/`. */
   image?: string;
   imageAlt?: string;
+  /** Regional guide when a city is a launch into a province hub. */
+  guideHref?: string;
 };
 
 export const destinationCities: DestinationCity[] = [
@@ -58,13 +60,15 @@ export const destinationCities: DestinationCity[] = [
     imageAlt: "Giant panda eating bamboo in Chengdu",
   },
   {
-    id: "kunming",
-    name: "Kunming",
-    label: "Yunnan launch",
-    pitch: "Spring weather and a natural launchpad into Yunnan’s landscapes.",
-    guidesHint: "Yunnan · regional travel",
+    id: "yunnan",
+    name: "Yunnan",
+    label: "Regional loop",
+    pitch:
+      "Rainforest to snow mountains — the usual first independent loop, without a tour bus.",
+    guidesHint: "Independent · regional travel",
     image: "/brand/destinations/kunming.webp",
     imageAlt: "Spring blossoms and snow-capped mountains in Yunnan",
+    guideHref: "/china-destinations/yunnan",
   },
   {
     id: "guilin",

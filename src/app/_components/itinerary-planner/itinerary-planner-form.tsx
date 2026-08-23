@@ -43,17 +43,20 @@ const labelClass =
 type Props = {
   visaLookup: QuickVisaLookup;
   source?: PlannerFormSource;
+  initialDestinations?: string[];
 };
 
 export function ItineraryPlannerForm({
   visaLookup,
   source = "planner",
+  initialDestinations = [],
 }: Props) {
   const [step, setStep] = useState(0);
   const [showErrors, setShowErrors] = useState(false);
-  const [values, setValues] = useState<PlannerFormValues>(() =>
-    defaultPlannerFormValues(),
-  );
+  const [values, setValues] = useState<PlannerFormValues>(() => ({
+    ...defaultPlannerFormValues(),
+    destinations: initialDestinations,
+  }));
   const [state, formAction, pending] = useActionState(
     submitItineraryPlan,
     initialState,
