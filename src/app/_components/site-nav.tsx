@@ -121,7 +121,7 @@ function NavDropdown({
           aria-label={menuAriaFor(item, labels)}
           className="absolute left-0 top-full z-50 min-w-[240px] pt-2"
         >
-          <ul className="rounded-2xl border-2 border-[var(--brand-cta)]/20 bg-white py-2 shadow-[0_4px_20px_rgba(80,40,24,0.12)]">
+          <ul className="overflow-hidden rounded-2xl border-2 border-[var(--brand-cta)]/20 bg-white py-2 shadow-[0_4px_20px_rgba(80,40,24,0.12)]">
             <li role="none">
               <Link
                 role="menuitem"
@@ -129,7 +129,7 @@ function NavDropdown({
                 onClick={() => setOpen(false)}
                 className={cn(
                   "block px-4 py-2.5 text-sm font-normal tracking-wide transition-colors duration-500",
-                  pathname === item.href || pathname.startsWith(`${item.href}/`)
+                  pathname === item.href
                     ? "bg-[var(--brand-soft)] text-[var(--brand-ink)]"
                     : "text-[var(--brand-ink-muted)] hover:bg-[var(--brand-cream)] hover:text-[var(--brand-ink)]",
                 )}

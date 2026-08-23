@@ -1,4 +1,3 @@
-import { SITE_HERO_PATH } from "@/lib/constants";
 import type { RegionDestination } from "./types";
 
 const PLANNER = "/china-itinerary-planner?dest=yunnan#plan-trip";
@@ -21,10 +20,9 @@ export const yunnanDestination: RegionDestination = {
   heroMain: {
     id: "hero-main",
     aspect: "16/9",
-    keywords:
-      "Jade Dragon Snow Mountain reflection Black Dragon Pool Lijiang sunrise",
-    alt: "Jade Dragon Snow Mountain over Black Dragon Pool, Lijiang",
-    src: SITE_HERO_PATH,
+    keywords: "Erhai Lake Dali white village shoreline Cangshan Yunnan",
+    alt: "White village on Erhai’s shore under mountains, Dali, Yunnan",
+    src: "/brand/destinations/yunnan/hero-erhai.webp",
   },
   heroSideA: {
     id: "hero-side-a",

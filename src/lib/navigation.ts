@@ -64,12 +64,12 @@ export const destinationsNav: NavItem[] = [
 
 export const mainNav: NavItem[] = [
   { id: "services", href: "/services" },
-  { id: "survivalKit", href: "/survival-kit" },
   {
     id: "destinations",
     href: "/china-destinations",
     children: destinationsNav,
   },
+  { id: "survivalKit", href: "/survival-kit" },
   { id: "guides", href: "/survival-guides", children: guidesNav },
   { id: "tools", href: "/tools", children: toolsNav },
   { id: "contact", href: "/contact" },
