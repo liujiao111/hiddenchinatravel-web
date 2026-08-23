@@ -183,9 +183,7 @@ export function SiteNav({ labels, tone = "default" }: Props) {
       className="flex flex-nowrap items-center justify-start gap-x-3 whitespace-nowrap xl:gap-x-4 2xl:gap-x-5"
       aria-label={labels.mainAria}
     >
-      {mainNav
-        .filter((item) => item.id !== "contact" && item.id !== "about")
-        .map((item) => {
+      {mainNav.map((item) => {
         if (item.children?.length) {
           return (
             <NavDropdown
