@@ -52,9 +52,13 @@ export const yunnanDestination: RegionDestination = {
     { label: "Money", value: "CNY · Alipay/WeChat in cities, cash in villages" },
     {
       label: "Air",
-      value: "Kunming (KMG) hub · Dali, Lijiang, Jinghong for hops",
+      value: "Kunming (KMG) hub · Dali, Lijiang, Jinghong, Diqing for hops",
     },
-    { label: "Rail", value: "Fast trains Kunming–Dali–Lijiang · Kunming–Jinghong ~3.5 hrs" },
+    {
+      label: "Rail",
+      value:
+        "Fast trains Kunming–Dali–Lijiang · Lijiang–Shangri-La ~1 hr · Kunming–Jinghong ~3.5 hrs",
+    },
     {
       label: "Travel",
       value: "Independent: you buy the train, pick the nights",
@@ -147,7 +151,7 @@ export const yunnanDestination: RegionDestination = {
       role: "Naxi highlands",
       pitch: "Jade Dragon on the skyline — and an old town that is magic before 10am.",
       seasonHint: "Comfortable April–October; winter is clear and cold.",
-      body: "Come for the mountain, not the souvenir alleys after dark. Sleep in Shuhe or a slope village if you want quiet. Plan Jade Dragon around weather and altitude, then leave the night market to the tour groups. Dayan, Shuhe, and Baisha sit in a world-heritage zone — independent travelers may be asked for a 50 RMB yearly conservation fee, most often at Black Dragon Pool.",
+      body: "Come for the mountain, not the souvenir alleys after dark. Sleep in Shuhe or a slope village if you want quiet. Plan Jade Dragon around weather and altitude, then leave the night market to the tour groups. Dayan, Shuhe, and Baisha sit in a world-heritage zone — independent travelers may be asked for a 50 RMB yearly conservation fee, most often at Black Dragon Pool. Tiger Leaping Gorge and Shangri-La sit northwest of here — name them as their own stops, not Lijiang day-trip boxes.",
       plannerHref: PLANNER,
       photo: {
         id: "city-lijiang",
@@ -208,6 +212,44 @@ export const yunnanDestination: RegionDestination = {
         altKeywords: ["Kunming Changshui", "Green Lake Park Kunming"],
         alt: "Autumn metasequoia lining a lake in Kunming, reflected in still water",
         src: "/brand/destinations/yunnan/city-kunming.webp",
+      },
+    },
+    {
+      id: "tiger-leaping-gorge",
+      name: "Tiger Leaping Gorge",
+      role: "Jinsha gorge",
+      pitch:
+        "One of Yunnan’s most famous walks — a river slot, not a fifth old town.",
+      seasonHint:
+        "April–June and September–November are the usual trail months; summer rain and winter ice both close sections.",
+      body: "The gorge cuts the Jinsha between Yulong County (Lijiang) and Shangri-La — it is not a Lijiang suburb. The Upper Trail is a one- or two-night hike for fit walkers; the roadside viewpoint is a long, crowded day. Qiaotou is the usual trailhead. Independent travelers often slot the gorge between Lijiang and Shangri-La rather than as a round-trip from Dayan. Check trail notices — rockfall closes it without warning.",
+      plannerHref: PLANNER,
+      photo: {
+        id: "city-tiger-leaping-gorge",
+        aspect: "16/9",
+        keywords:
+          "Tiger Leaping Gorge Jinsha river cliffs hiking trail Yunnan",
+        altKeywords: ["Hutiaoxia Upper Trail Qiaotou"],
+        alt: "Jinsha River squeezed between cliffs in Tiger Leaping Gorge, Yunnan",
+      },
+    },
+    {
+      id: "shangri-la",
+      name: "Shangri-La",
+      role: "Tibetan plateau",
+      pitch:
+        "A 3,200 m Tibetan town — Diqing Prefecture, not a Lijiang neighborhood.",
+      seasonHint:
+        "May–October is the usable window; winter is genuine highland cold.",
+      body: "Shangri-La (香格里拉) is the seat of Diqing Tibetan Autonomous Prefecture. The Lijiang–Shangri-La train takes just over an hour since 2023 — that is why it feels close, not because it belongs to Lijiang. Add one or two nights for thinner air, Songzanlin, and a slower old town (rebuilt after the 2014 fire). Pudacuo is a park day, not the whole trip. Skip it if you are already stacking Xishuangbanna on a first loop — pick plateau or rainforest, not both.",
+      plannerHref: PLANNER,
+      photo: {
+        id: "city-shangri-la",
+        aspect: "16/9",
+        keywords: "Shangri-La Pudacuo golden meadow autumn mountains",
+        altKeywords: ["Songzanlin Monastery Shangri-La"],
+        alt: "Wooden village roofs and yellow autumn trees under snow peaks near Shangri-La",
+        src: "/brand/destinations/yunnan/season-autumn.webp",
       },
     },
   ],
@@ -289,7 +331,8 @@ export const yunnanDestination: RegionDestination = {
       },
       cityAnchors: [
         { id: "lijiang", label: "Lijiang" },
-        { id: "dali", label: "Dali" },
+        { id: "shangri-la", label: "Shangri-La" },
+        { id: "tiger-leaping-gorge", label: "Tiger Leaping Gorge" },
       ],
     },
     {
@@ -423,9 +466,15 @@ export const yunnanDestination: RegionDestination = {
   headings: {
     places: {
       eyebrow: "Where to go",
-      title: "Kunming, Dali, Lijiang, Xishuangbanna — sequenced, not a checklist",
+      title: "Four bases — then name the gorge and the plateau",
       intro:
-        "Lijiang for the mountain, Dali for the lake, Xishuangbanna for the rainforest, Kunming as the landing. Four stops you sequence yourself — skip the night-market old town, and add the south or the plateau only with spare days.",
+        "Kunming, Dali, Lijiang, and Xishuangbanna are the overnight bases. Tiger Leaping Gorge and Shangri-La are famous enough to list on their own, but they hang off Lijiang: a hike on the Jinsha, and a Tibetan town in Diqing — not two more first-loop cities.",
+    },
+    placesExtras: {
+      eyebrow: "From Lijiang",
+      title: "Tiger Leaping Gorge and Shangri-La",
+      intro:
+        "Travelers search these names. Treat them as northwest add-ons: the gorge as a trail, Shangri-La as one or two plateau nights — not extras you squeeze into a Dali week.",
     },
     seasons: {
       eyebrow: "Best time to go",
@@ -567,6 +616,11 @@ export const yunnanDestination: RegionDestination = {
         "Pick one, not both. Shangri-La is just over an hour by train from Lijiang — add one or two nights if you want plateau and thinner air. Xishuangbanna is a separate Kunming fast train (about 3.5 hours) or a flight, and needs three to four extra days. The 7-day loop itself stops at Lijiang.",
     },
     {
+      question: "Is Tiger Leaping Gorge a day trip from Lijiang?",
+      answer:
+        "The roadside viewpoint can be a long day. The Upper Trail is one or two nights. The gorge sits on the Jinsha between Lijiang’s Yulong County and Shangri-La — Qiaotou is the usual trailhead. Many independent travelers walk it on the way to Shangri-La rather than as a round-trip from the old town.",
+    },
+    {
       question: "Can I visit Yunnan without a tour?",
       answer:
         "Yes. Independent travel is the usual way foreigners do Kunming–Dali–Lijiang: you buy the fast trains, book hotels that take a foreign passport, and skip the night-market old town if you want sleep. Prep payments and data before you land — then use [how to plan a China itinerary](/china-itinerary-planning) if Yunnan sits on a wider China route.",
@@ -629,5 +683,5 @@ export const yunnanDestination: RegionDestination = {
       excerpt: "Whether China is realistic without a tour — and what to set up first.",
     },
   ],
-  dateModified: "2026-08-23",
+  dateModified: "2026-08-24",
 };

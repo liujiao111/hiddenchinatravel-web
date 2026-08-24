@@ -7,12 +7,18 @@ import Link from "next/link";
 type Props = {
   cities: DestinationCityStop[];
   heading: DestinationSectionCopy;
+  extrasHeading?: DestinationSectionCopy;
 };
 
-export function DestinationPlaces({ cities, heading }: Props) {
+export function DestinationPlaces({
+  cities,
+  heading,
+  extrasHeading,
+}: Props) {
   const featured = cities[0];
   const stacked = cities.slice(1, 3);
   const gateway = cities[3];
+  const extras = cities.slice(4);
 
   if (!featured || stacked.length < 2 || !gateway) return null;
 
@@ -65,6 +71,39 @@ export function DestinationPlaces({ cities, heading }: Props) {
             sizes="(max-width: 768px) 100vw, 992px"
           />
         </Link>
+
+        {extras.length > 0 ? (
+          <div className="mt-10 md:mt-12">
+            {extrasHeading ? (
+              <div className="mb-6 max-w-2xl md:mb-8">
+                <p className="mb-2 text-xs font-bold uppercase tracking-[0.18em] text-[var(--brand-mango)]">
+                  {extrasHeading.eyebrow}
+                </p>
+                <h3 className="font-serif text-xl font-bold tracking-tight text-[var(--brand-ink)] md:text-2xl">
+                  {extrasHeading.title}
+                </h3>
+                {extrasHeading.intro ? (
+                  <p className="mt-3 text-sm font-normal leading-relaxed text-[var(--brand-ink-muted)] md:text-base">
+                    {extrasHeading.intro}
+                  </p>
+                ) : null}
+              </div>
+            ) : null}
+            <div className="grid gap-3 md:grid-cols-2">
+              {extras.map((city) => (
+                <Link key={city.id} href={`#${city.id}`} className="group">
+                  <DestinationPhotoSlot
+                    photo={{ ...city.photo, aspect: "16/9" }}
+                    overlayTitle={city.name}
+                    overlayMeta={city.role}
+                    showCopy={false}
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                  />
+                </Link>
+              ))}
+            </div>
+          </div>
+        ) : null}
 
         <ul className="mt-12 space-y-10 md:mt-16 md:space-y-14">
           {cities.map((city) => (

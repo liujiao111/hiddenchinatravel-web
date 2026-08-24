@@ -66,7 +66,7 @@ export const staticSearchCatalog: SearchItem[] = [
     title: "Independent Yunnan travel: 7-day Kunming–Dali–Lijiang guide",
     href: "/china-destinations/yunnan",
     description:
-      "Independent Yunnan without a tour: why Kunming is Spring City, a 7-day Kunming–Dali–Lijiang loop, and the prep foreigners actually need.",
+      "Independent Yunnan without a tour: Kunming–Dali–Lijiang loop, plus Tiger Leaping Gorge and Shangri-La if you have spare days.",
     type: "page",
     keywords: [
       "yunnan",
@@ -74,6 +74,13 @@ export const staticSearchCatalog: SearchItem[] = [
       "lijiang",
       "kunming",
       "xishuangbanna",
+      "shangri-la",
+      "shangri la",
+      "tiger leaping gorge",
+      "hutiaoxia",
+      "虎跳峡",
+      "香格里拉",
+      "diqing",
       "independent yunnan travel",
       "yunnan without a tour",
       "7 days in yunnan",

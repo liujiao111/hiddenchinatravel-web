@@ -118,13 +118,18 @@ export type RegionDestination = {
   facts: DestinationFact[];
   nav: DestinationNavItem[];
   prepare?: DestinationPrepare;
-  /** Mosaic: first city is the large landscape; next two stack as portraits. */
+  /**
+   * Mosaic uses the first four stops (large + two portraits + gateway).
+   * Anything after that renders as named add-ons under the mosaic.
+   */
   cities: DestinationCityStop[];
   climate?: DestinationClimateNote;
   seasons: DestinationSeason[];
   foods: DestinationFood[];
   headings: {
     places: DestinationSectionCopy;
+    /** Optional row for stops after the first four mosaic cities. */
+    placesExtras?: DestinationSectionCopy;
     seasons: DestinationSectionCopy;
     foods: DestinationSectionCopy;
     route: DestinationSectionCopy;
