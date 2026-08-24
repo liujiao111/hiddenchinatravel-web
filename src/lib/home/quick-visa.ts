@@ -12,6 +12,8 @@ export type QuickVisaLookup = {
   visaFreeDays: Record<string, number>;
   /** Canonical country names on 240h transit list */
   transit240: string[];
+  /** Canonical country names on Hainan 30-day island visa-free list */
+  hainan30: string[];
 };
 
 export type QuickVisaResult =
@@ -25,6 +27,7 @@ export type QuickVisaResult =
   | {
       status: "transit-only";
       country: string;
+      alsoHainan30: boolean;
     }
   | {
       status: "visa-likely";
@@ -33,11 +36,12 @@ export type QuickVisaResult =
 
 export function evaluateQuickVisa(
   country: string,
-  lookup: Pick<QuickVisaLookup, "visaFreeDays" | "transit240">,
+  lookup: Pick<QuickVisaLookup, "visaFreeDays" | "transit240" | "hainan30">,
 ): QuickVisaResult {
   if (!country) return { status: "idle" };
   const days = lookup.visaFreeDays[country];
   const alsoTransit240 = lookup.transit240.includes(country);
+  const alsoHainan30 = (lookup.hainan30 ?? []).includes(country);
   if (typeof days === "number") {
     return {
       status: "visa-free",
@@ -46,8 +50,8 @@ export function evaluateQuickVisa(
       alsoTransit240,
     };
   }
-  if (alsoTransit240) {
-    return { status: "transit-only", country };
+  if (alsoTransit240 || alsoHainan30) {
+    return { status: "transit-only", country, alsoHainan30 };
   }
   return { status: "visa-likely", country };
 }

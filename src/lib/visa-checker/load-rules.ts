@@ -15,6 +15,8 @@ export const RULE_FILES = {
     "china_visa_for_foreigners_countries - transit_240_country_rules.csv",
   transit240Ports:
     "china_visa_for_foreigners_countries - transit_240_ports.csv",
+  hainan30Countries:
+    "china_visa_for_foreigners_countries - hainan_30_country_rules.csv",
 } as const;
 
 export type CountryOption = {
@@ -47,6 +49,15 @@ export type Transit240Port = {
   portType: string;
   allowedStayArea: string;
   ruleType: string;
+};
+
+/** Island-only Hainan 30-day visa-free — not nationwide mainland entry. */
+export type Hainan30CountryRule = {
+  country: string;
+  region: string;
+  ruleType: string;
+  maxStayDays: number;
+  requirement: string;
 };
 
 function readCsv(fileName: string): string[][] {
@@ -110,6 +121,7 @@ let cache: {
   countries: CountryOption[];
   visaFreeByKey: Map<string, VisaFreeRule>;
   transit240ByKey: Map<string, Transit240CountryRule>;
+  hainan30ByKey: Map<string, Hainan30CountryRule>;
   ports: Transit240Port[];
   portsById: Map<string, Transit240Port>;
 } | null = null;
@@ -153,6 +165,20 @@ function buildCache() {
     transit240ByKey.set(normalizeCountryKey(country), rule);
   }
 
+  const hainan30ByKey = new Map<string, Hainan30CountryRule>();
+  for (const r of rowsToObjects(readCsv(RULE_FILES.hainan30Countries))) {
+    const country = r.Country;
+    if (!country) continue;
+    const rule: Hainan30CountryRule = {
+      country,
+      region: r.Region,
+      ruleType: r.rule_type,
+      maxStayDays: Number(r["Max Stay Days"]) || 30,
+      requirement: r.Requirement,
+    };
+    hainan30ByKey.set(normalizeCountryKey(country), rule);
+  }
+
   const ports: Transit240Port[] = rowsToObjects(
     readCsv(RULE_FILES.transit240Ports),
   )
@@ -173,6 +199,7 @@ function buildCache() {
     countries,
     visaFreeByKey,
     transit240ByKey,
+    hainan30ByKey,
     ports,
     portsById,
   };
@@ -207,6 +234,17 @@ export function getTransit240Rule(
 ): Transit240CountryRule | undefined {
   const canonical = toCanonicalCountryName(countryName);
   return getCache().transit240ByKey.get(normalizeCountryKey(canonical));
+}
+
+export function getHainan30Rule(
+  countryName: string,
+): Hainan30CountryRule | undefined {
+  const canonical = toCanonicalCountryName(countryName);
+  return getCache().hainan30ByKey.get(normalizeCountryKey(canonical));
+}
+
+export function isHainanPort(port: Transit240Port | undefined): boolean {
+  return Boolean(port && /hainan/i.test(port.province));
 }
 
 export type SelectOption = {

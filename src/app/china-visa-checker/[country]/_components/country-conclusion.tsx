@@ -1,14 +1,19 @@
 import Link from "next/link";
 import type { CountryPageModel } from "@/lib/visa-checker/country-pages";
 
-const BUCKET_LABEL: Record<CountryPageModel["bucket"], string> = {
-  visa_free: "Visa-free short stay likely",
-  transit_240_only: "Visa usually required · 240-hour transit possible",
-  visa_required: "Visa required before travel",
-};
+function bucketLabel(page: CountryPageModel): string {
+  if (page.bucket === "visa_free") return "Visa-free short stay likely";
+  if (page.bucket === "transit_240_only" && page.hasHainan30) {
+    return "240-hour transit and Hainan 30-day stay";
+  }
+  if (page.bucket === "transit_240_only") {
+    return "240-hour transit possible · mainland holiday needs a visa";
+  }
+  return "Visa required before travel";
+}
 
 export function CountryConclusion({ page }: { page: CountryPageModel }) {
-  const { editorial, bucket, visaFree, transit240, primaryResult } = page;
+  const { editorial, visaFree, transit240, hainan30 } = page;
 
   return (
     <section
@@ -16,7 +21,7 @@ export function CountryConclusion({ page }: { page: CountryPageModel }) {
       aria-labelledby="conclusion-heading"
     >
       <p className="mb-3 text-xs font-normal uppercase tracking-[0.16em] text-[var(--brand-muted)]">
-        {BUCKET_LABEL[bucket]}
+        {bucketLabel(page)}
       </p>
       <h2
         id="conclusion-heading"
@@ -37,6 +42,14 @@ export function CountryConclusion({ page }: { page: CountryPageModel }) {
             <dt className="text-[var(--brand-muted)]">Visa-free stay</dt>
             <dd className="text-[var(--brand-ink)]">
               Up to {visaFree.maxStayDays} days ({visaFree.policyType})
+            </dd>
+          </div>
+        ) : null}
+        {hainan30 ? (
+          <div>
+            <dt className="text-[var(--brand-muted)]">Hainan 30-day stay</dt>
+            <dd className="text-[var(--brand-ink)]">
+              Up to {hainan30.maxStayDays} days inside Hainan Province only
             </dd>
           </div>
         ) : null}
@@ -63,9 +76,9 @@ export function CountryConclusion({ page }: { page: CountryPageModel }) {
           </dd>
         </div>
       </dl>
-      {primaryResult.checklist?.length ? (
+      {page.conclusionChecklist.length ? (
         <ul className="mt-6 space-y-2 border-t border-[color-mix(in_srgb,var(--brand-cream-border)_40%,transparent)] pt-5 text-sm font-normal text-[var(--brand-ink-muted)]">
-          {primaryResult.checklist.slice(0, 5).map((item) => (
+          {page.conclusionChecklist.map((item) => (
             <li key={item} className="flex gap-2">
               <span className="text-[var(--brand-cta)]" aria-hidden>
                 ✓

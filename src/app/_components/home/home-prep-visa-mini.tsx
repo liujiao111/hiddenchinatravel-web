@@ -64,12 +64,23 @@ export function HomePrepVisaMini({ lookup: initialLookup }: Props) {
 
       {result.status === "transit-only" ? (
         <p className="rounded-2xl bg-[var(--brand-soft)] px-3 py-2.5 text-sm font-normal leading-snug text-[var(--brand-cta)]">
-          <span className="font-bold text-[var(--brand-mango)]">
-            Visa usually required for a standalone trip
-          </span>{" "}
-          — 240-hour transit may still apply if you have a confirmed ticket
-          onward to a third country. Check ports and route rules in the full
-          tool.
+          {result.alsoHainan30 ? (
+            <>
+              <span className="font-bold text-[var(--brand-mango)]">
+                240-hour transit and Hainan 30-day island stay
+              </span>{" "}
+              — a mainland round-trip holiday still needs a visa. Confirm ports
+              and route rules in the full tool.
+            </>
+          ) : (
+            <>
+              <span className="font-bold text-[var(--brand-mango)]">
+                240-hour transit may apply
+              </span>{" "}
+              if you have a confirmed ticket onward to a third country. A
+              standalone mainland trip still needs a visa.
+            </>
+          )}
         </p>
       ) : null}
 

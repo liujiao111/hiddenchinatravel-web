@@ -141,9 +141,7 @@ export default async function CountryVisaPage({ params }: Props) {
             {page.h1}
           </h1>
           <p className="max-w-3xl text-sm font-normal leading-relaxed text-[var(--brand-ink-muted)] md:text-base">
-            Clear {page.editorial.displayName} passport rules for China in 2026
-            — visa-free stay, 240-hour transit, or when you must apply before
-            travel. Recheck edge cases in the{" "}
+            {page.description} Recheck edge cases in the{" "}
             <Link
               href="/china-visa-checker"
               className="underline underline-offset-4 hover:text-[var(--brand-cta)]"

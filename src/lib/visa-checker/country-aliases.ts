@@ -31,6 +31,9 @@ const ALIASES: Record<string, string> = {
   macedonia: "North Macedonia",
   // Vietnam
   "viet nam": "Vietnam",
+  // Kyrgyzstan
+  kyrgyz: "Kyrgyzstan",
+  "kyrgyz republic": "Kyrgyzstan",
   // Iran
   "iran, islamic republic of": "Iran",
   // Syria

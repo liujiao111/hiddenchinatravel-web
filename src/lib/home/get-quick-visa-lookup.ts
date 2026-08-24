@@ -3,6 +3,7 @@ import "server-only";
 import type { QuickVisaLookup } from "@/lib/home/quick-visa";
 import {
   getCountrySelectOptions,
+  getHainan30Rule,
   getTransit240Rule,
   getVisaFreeRule,
 } from "@/lib/visa-checker/load-rules";
@@ -16,12 +17,14 @@ export function getQuickVisaLookup(): QuickVisaLookup {
   }));
   const visaFreeDays: Record<string, number> = {};
   const transit240: string[] = [];
+  const hainan30: string[] = [];
 
   for (const c of countries) {
     const free = getVisaFreeRule(c.value);
     if (free) visaFreeDays[c.value] = free.maxStayDays;
     if (getTransit240Rule(c.value)) transit240.push(c.value);
+    if (getHainan30Rule(c.value)) hainan30.push(c.value);
   }
 
-  return { countries, visaFreeDays, transit240 };
+  return { countries, visaFreeDays, transit240, hainan30 };
 }

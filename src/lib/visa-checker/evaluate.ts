@@ -1,8 +1,11 @@
 import { toCanonicalCountryName } from "./country-aliases";
 import {
+  getHainan30Rule,
   getPortById,
   getTransit240Rule,
   getVisaFreeRule,
+  isHainanPort,
+  type Hainan30CountryRule,
   type Transit240CountryRule,
   type Transit240Port,
   type VisaFreeRule,
@@ -27,6 +30,7 @@ export type TransitRoute =
 
 export type VisaOutcome =
   | "visa_free"
+  | "hainan_30"
   | "transit_240"
   | "near_miss_240"
   | "visa_required";
@@ -156,6 +160,43 @@ function visaFreeResult(
   };
 }
 
+function hainan30Result(
+  input: VisaCheckInput,
+  rule: Hainan30CountryRule,
+  port: Transit240Port,
+): VisaEvaluationResult {
+  return {
+    outcome: "hainan_30",
+    kicker: "May qualify · Hainan 30-day visa-free",
+    headline: `You may stay in Hainan visa-free for up to ${rule.maxStayDays} days`,
+    summary: `From 20 August 2026, ${rule.country} ordinary-passport holders may enter through a Hainan open port and stay up to ${rule.maxStayDays} days inside Hainan Province only. This is not nationwide mainland visa-free entry.`,
+    note: rule.requirement,
+    checklist: [
+      "Hold an ordinary passport",
+      `Enter through a Hainan open port — you selected ${port.portName}`,
+      "Remain inside Hainan Province for the whole stay",
+      `Leave within ${rule.maxStayDays} days`,
+      "Tourism, business, family visits, and similar short activities only — work, study, and journalism still need a visa in advance",
+    ],
+    meta: baseMeta(input, port),
+    policy: {
+      policyType: "Hainan 30-day visa-free (island only)",
+      ruleType: rule.ruleType,
+      maxStayDays: rule.maxStayDays,
+      requirement: rule.requirement,
+      allowedStayArea: "Hainan Province",
+    },
+    primaryCta: {
+      label: "Read Hainan stay notes",
+      href: "#official-sources",
+    },
+    secondaryCta: {
+      label: "Official sources",
+      href: "#official-sources",
+    },
+  };
+}
+
 function transit240Result(
   input: VisaCheckInput,
   rule: Transit240CountryRule,
@@ -236,19 +277,28 @@ function visaRequiredResult(
   input: VisaCheckInput,
   reason: string,
   port?: Transit240Port,
+  extras?: { kicker?: string; headline?: string; checklist?: string[] },
 ): VisaEvaluationResult {
   const special = SPECIAL_VISA_PURPOSES.has(input.purpose);
   return {
     outcome: "visa_required",
-    kicker: special
-      ? "Visa required · Special purpose"
-      : "Visa likely required",
-    headline: special
-      ? "You will need the correct visa category before travel"
-      : "You will probably need a China visa before travel",
+    kicker: extras?.kicker
+      ? extras.kicker
+      : special
+        ? "Visa required · Special purpose"
+        : "Visa likely required",
+    headline: extras?.headline
+      ? extras.headline
+      : special
+        ? "You will need the correct visa category before travel"
+        : "You will probably need a China visa before travel",
     summary: reason,
-    note: "Apply at a Chinese embassy, consulate, or authorized visa application center. Processing times vary by country and season.",
-    checklist: special
+    note: extras?.checklist
+      ? "Immigration officers make the final decision. Work, study, and journalism still need a visa in advance."
+      : "Apply at a Chinese embassy, consulate, or authorized visa application center. Processing times vary by country and season.",
+    checklist: extras?.checklist
+      ? extras.checklist
+      : special
       ? [
           "Confirm the correct visa type (e.g. Z work, X study, J journalism)",
           "Gather invitation letters and supporting documents early",
@@ -304,6 +354,17 @@ export function evaluateVisa(input: VisaCheckInput): VisaEvaluationResult {
     return visaFreeResult(input, visaFree, port);
   }
 
+  const hainan = getHainan30Rule(nationality);
+  if (
+    hainan &&
+    isHainanPort(port) &&
+    port &&
+    VISA_FREE_PURPOSES.has(input.purpose) &&
+    input.stayDays <= hainan.maxStayDays
+  ) {
+    return hainan30Result(input, hainan, port);
+  }
+
   // Visa-free country but stay too long
   if (visaFree && input.stayDays > visaFree.maxStayDays) {
     // Fall through — may still qualify for 240h if stay ≤ 10, else required
@@ -357,10 +418,41 @@ export function evaluateVisa(input: VisaCheckInput): VisaEvaluationResult {
   }
 
   if (transitRule && input.transitRoute === "no_transit") {
+    if (hainan) {
+      return visaRequiredResult(
+        input,
+        `From 20 August 2026, ${nationality} ordinary-passport holders have two visa-free paths: (1) 240-hour transit with a confirmed onward ticket to a third country through a designated port, or (2) up to 30 days in Hainan Province only after entering through a Hainan open port. A mainland round-trip holiday that starts and ends at home still needs a visa.`,
+        port,
+        {
+          kicker: "Two visa-free paths · mainland holiday still needs a visa",
+          headline:
+            "240-hour transit and Hainan 30-day stay — not nationwide visa-free",
+          checklist: [
+            "Hainan 30-day stay: enter through Haikou, Sanya, or another Hainan open port and remain on the island",
+            "240-hour transit: confirmed onward ticket to a third country through a designated port",
+            "A mainland round-trip holiday that starts and ends at home still needs a visa",
+            "Tourism, business, visits, and family stays only — work, study, and journalism need a visa in advance",
+            "Ordinary passport required",
+          ],
+        },
+      );
+    }
     return visaRequiredResult(
       input,
       `For a standalone ${PURPOSE_LABELS[input.purpose] ?? "trip"} to China (no third-country transit), ${nationality} passport holders typically need a China visa before travel. 240-hour transit is a separate path only when you have a confirmed onward ticket to a third country.`,
       port,
+      {
+        kicker: "240-hour transit possible · mainland holiday needs a visa",
+        headline:
+          "A mainland holiday still needs a visa — 240-hour transit is a separate path",
+        checklist: [
+          "Confirmed onward ticket to a third country or region (not a same-country return)",
+          "Enter through an eligible 240-hour port",
+          "Stay within 240 hours and inside the allowed region for that port",
+          "A standalone holiday that starts and ends at home still needs a tourist visa",
+          "Confirm entry requirements with your airline before check-in",
+        ],
+      },
     );
   }
 

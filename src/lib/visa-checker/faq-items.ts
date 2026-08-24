@@ -15,7 +15,13 @@ export const faqItems: FaqItem[] = [
     id: "240-hour-transit",
     question: "What is the 240-hour (10-day) visa-free transit policy?",
     answer:
-      "Eligible travelers transiting through China to a third country may stay up to 240 hours without a visa in designated regions. You typically need proof of onward travel and must enter through approved ports.",
+      "Eligible travelers transiting through China to a third country may stay up to 240 hours (10 days) without a visa in designated regions. As of 20 August 2026 this covers 57 countries, including Kyrgyzstan and Vietnam, at 65 designated ports. You typically need proof of onward travel and must enter through an approved port.",
+  },
+  {
+    id: "hainan-30",
+    question: "What is Hainan’s 30-day visa-free entry?",
+    answer:
+      "Some ordinary-passport holders may enter through Hainan’s open ports and stay up to 30 days inside Hainan Province only. As of 20 August 2026 this covers 61 countries, including Kyrgyzstan and Vietnam. It is not a nationwide mainland visa-free stay. Work, study, and journalism still need a visa in advance.",
   },
   {
     id: "purpose-mismatch",
@@ -43,4 +49,4 @@ export const faqItems: FaqItem[] = [
   },
 ];
 
-export const policyLastUpdated = "July 2026";
+export const policyLastUpdated = "August 2026";
