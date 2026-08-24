@@ -65,6 +65,7 @@ export function DestinationPhotoSlot({
           alt={photo.alt}
           fill
           priority={priority}
+          quality={90}
           sizes={sizes}
           className="object-cover transition-transform duration-300 motion-safe:group-hover:scale-105"
         />
