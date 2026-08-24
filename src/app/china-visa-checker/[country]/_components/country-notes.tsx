@@ -1,7 +1,7 @@
 import type { CountryPageModel } from "@/lib/visa-checker/country-pages";
 
 export function CountryNotes({ page }: { page: CountryPageModel }) {
-  const { editorial, bucket, transitResult, transit240 } = page;
+  const { editorial, bucket, transitResult, transit240, hainan30 } = page;
 
   return (
     <section className="mb-10 md:mb-12" aria-labelledby="notes-heading">
@@ -21,6 +21,26 @@ export function CountryNotes({ page }: { page: CountryPageModel }) {
           </li>
         ))}
       </ul>
+
+      {hainan30 ? (
+        <div className="surface-card mb-6 bg-[var(--brand-surface)] p-5 md:p-6">
+          <h3 className="mb-2 text-base font-bold tracking-tight text-[var(--brand-ink)]">
+            If you use Hainan’s 30-day visa-free stay
+          </h3>
+          <p className="mb-3 text-sm font-normal leading-relaxed text-[var(--brand-ink-muted)]">
+            {editorial.displayName} ordinary-passport holders may enter through
+            a Hainan open port and stay up to {hainan30.maxStayDays} days
+            inside Hainan Province only.
+          </p>
+          <ul className="space-y-2 text-sm font-normal text-[var(--brand-ink-muted)]">
+            <li>Enter through Haikou, Sanya, or another Hainan open port</li>
+            <li>Remain inside Hainan Province for the whole stay</li>
+            <li>
+              This does not authorize travel around the rest of mainland China
+            </li>
+          </ul>
+        </div>
+      ) : null}
 
       {bucket === "transit_240_only" && transit240 ? (
         <div className="surface-card bg-[var(--brand-surface)] p-5 md:p-6">

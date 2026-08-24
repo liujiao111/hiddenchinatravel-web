@@ -17,7 +17,7 @@ export function PolicyExplainer() {
             China visa policies explained
           </h2>
           <p className="max-w-2xl text-base font-normal leading-relaxed text-[var(--brand-ink-muted)] md:text-lg">
-            Three main pathways for short visits. Which applies to you depends
+            Three main pathways for short visits, plus a Hainan-only 30-day stay for some passports. Which applies to you depends
             on nationality, route, and length of stay.
           </p>
         </div>
