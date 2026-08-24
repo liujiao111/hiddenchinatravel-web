@@ -21,6 +21,12 @@ const accentByOutcome: Record<
     iconBg: "bg-[var(--brand-cta)] text-[var(--brand-on)]",
     icon: "✓",
   },
+  hainan_30: {
+    border: "border-l-[var(--brand-cta)]",
+    badge: "bg-[var(--brand-cta)] text-[var(--brand-on)]",
+    iconBg: "bg-[var(--brand-cta)] text-[var(--brand-on)]",
+    icon: "✓",
+  },
   transit_240: {
     border: "border-l-[var(--brand-warm)]",
     badge: "bg-[var(--brand-warm)] text-[var(--brand-on)]",

@@ -19,7 +19,7 @@ export function CountryBrowseList({
     },
     {
       id: "transit-240",
-      title: "240-hour transit (visa usually required for holidays)",
+      title: "240-hour transit (mainland holiday still needs a visa)",
       items: groups.transit240Only,
     },
     {
