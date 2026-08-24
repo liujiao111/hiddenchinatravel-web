@@ -26,6 +26,7 @@ export const policyCards: PolicyCard[] = [
       "Transit without a visa while traveling to a third country, within approved regions and entry ports.",
     bullets: [
       "Up to 240 hours (10 days) in designated areas",
+      "57 countries as of 20 August 2026",
       "Onward ticket to a third country required",
       "Cannot change to other visa types in-country easily",
     ],

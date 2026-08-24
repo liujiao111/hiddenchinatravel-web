@@ -483,6 +483,33 @@
     ]
   },
   {
+    "slug": "kyrgyzstan",
+    "iso2": "KG",
+    "canonicalName": "Kyrgyzstan",
+    "displayName": "Kyrgyzstan",
+    "demonym": "Kyrgyz citizens",
+    "demonymSingular": "a Kyrgyz citizen",
+    "priority": "phase1",
+    "lastReviewed": "2026-08-24",
+    "uniqueNotes": [
+      "From 20 August 2026, Kyrgyzstan is on China’s 240-hour (10-day) visa-free transit list (57 countries). A standalone Bishkek–China–Bishkek holiday still needs a visa.",
+      "240-hour transit requires an ordinary passport, a confirmed onward ticket to a third country or region, and entry through one of 65 designated ports.",
+      "The same announcement also lets Kyrgyz ordinary-passport holders enter through Hainan’s open ports and stay up to 30 days inside Hainan Province only.",
+      "This is not China’s nationwide 30-day visa-free program. Work, study, and journalism still need a visa before travel."
+    ],
+    "commonRoutes": "Typical connections are via regional hubs into Beijing, Urumqi, Guangzhou, or Shanghai; Haikou and Sanya for Hainan-only stays.",
+    "faqOverrides": [
+      {
+        "question": "Do Kyrgyz citizens need a visa for a China holiday?",
+        "answer": "Yes for a standalone holiday that starts and ends in Kyrgyzstan. From 20 August 2026 you may use 240-hour transit only with a confirmed onward ticket to a third country, or the Hainan 30-day visa-free stay if you enter through a Hainan port and remain in Hainan."
+      },
+      {
+        "question": "Can Kyrgyz citizens visit Hainan without a mainland visa?",
+        "answer": "Yes under the 20 August 2026 Hainan 30-day visa-free policy: ordinary passport, enter through a Hainan open port, and stay inside Hainan Province. Work, study, and journalism still need a visa in advance. This does not authorize travel around the rest of mainland China."
+      }
+    ]
+  },
+  {
     "slug": "vietnam",
     "iso2": "VN",
     "canonicalName": "Vietnam",
@@ -490,18 +517,22 @@
     "demonym": "Vietnamese citizens",
     "demonymSingular": "a Vietnamese citizen",
     "priority": "phase1",
-    "lastReviewed": "2026-07-29",
+    "lastReviewed": "2026-08-24",
     "uniqueNotes": [
-      "Vietnam is not covered by China’s unilateral 30-day visa-free list or our 240-hour transit country list.",
-      "Apply for the correct China visa before travel for tourism or business — including most land-border crossings into Guangxi, Yunnan, or Guangdong.",
-      "Common air entries include Guangzhou, Nanning, Kunming, and Shenzhen from Hanoi or Ho Chi Minh City.",
-      "Border runs and same-day land crossings still require a valid Chinese visa and supporting documents; do not assume visa-free land entry."
+      "From 20 August 2026, Vietnam is on China’s 240-hour (10-day) visa-free transit list (57 countries). A standalone Vietnam–China–Vietnam holiday still needs a visa.",
+      "240-hour transit requires an ordinary passport, a confirmed onward ticket to a third country or region, and entry through one of 65 designated ports (Beijing, Shanghai, and others).",
+      "The same announcement also lets Vietnamese ordinary-passport holders enter through Hainan’s open ports and stay up to 30 days inside Hainan Province only — not a nationwide mainland visa-free stay.",
+      "Typical Vietnam land borders (Hekou, Dongxing, and similar) are not a substitute for an eligible 240-hour port. Do not assume visa-free land entry into Guangxi or Yunnan."
     ],
-    "commonRoutes": "Common entries include Guangzhou, Nanning, Kunming, and Shenzhen from Hanoi or Ho Chi Minh City.",
+    "commonRoutes": "Common air entries include Guangzhou, Nanning, Kunming, and Shenzhen from Hanoi or Ho Chi Minh City; Haikou and Sanya for Hainan-only stays.",
     "faqOverrides": [
       {
         "question": "Can Vietnamese citizens cross into China by land without a visa?",
-        "answer": "No for ordinary tourism. Land borders into Guangxi, Yunnan, and other provinces still require a valid Chinese visa and the documents your crossing point demands. Apply before you travel."
+        "answer": "Not at ordinary Vietnam–China land crossings for tourism. From 20 August 2026, visa-free transit is through designated ports with a confirmed third-country ticket. A Hanoi–Nanning bus or a Hekou walk-across still needs a valid Chinese visa unless you actually qualify at an eligible port."
+      },
+      {
+        "question": "Can Vietnamese citizens visit Hainan without a mainland visa?",
+        "answer": "Yes under the 20 August 2026 Hainan 30-day visa-free policy: ordinary passport, enter through a Hainan open port, and stay inside Hainan Province. Work, study, and journalism still need a visa in advance. This does not authorize travel around the rest of mainland China."
       }
     ]
   },

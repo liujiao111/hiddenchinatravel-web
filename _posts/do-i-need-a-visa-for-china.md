@@ -3,7 +3,7 @@ title: "Do I Need a Visa for China? The 2026 Answer for Every Passport"
 excerpt: "Find out in 30 seconds if your passport needs a China visa in 2026. Most Europeans get 30 days visa-free. US passports, Indian passports — here's your exact answer."
 coverImage: "/assets/blog/do-i-need-a-visa-for-china/cover.webp"
 date: "2026-07-09T09:53:58+00:00"
-dateModified: "2026-07-09T10:02:10+00:00"
+dateModified: "2026-08-24T07:00:00+00:00"
 author:
   name: "Joy Liu"
   picture: "/assets/blog/authors/joy-liu.jpg"
@@ -18,7 +18,7 @@ keywords:
 section: "Travel China Essentials"
 sourceUrl: "https://hiddenchinatravel.com/do-i-need-a-visa-for-china"
 ---
-_Last updated: July 2026 — China’s visa-free policy is in effect until December 31, 2026 for most countries. We’ll update this page if anything changes._
+_Last updated: August 2026 — China’s visa-free policy is in effect until December 31, 2026 for most countries. We’ll update this page if anything changes._
 
 A Filipino friend asked me this once, pretty casually — “China’s visa-free now, right? So I can just book a flight and go?”
 
@@ -31,7 +31,7 @@ Here’s the straightforward answer based on your situation.
 Your passport| What you need| How long you can stay  
 ---|---|---  
 One of 77 visa-free countries (UK, Australia, France, Japan, etc.)| Nothing — just arrive| Up to 30 days  
-One of 54 transit-eligible countries (US, Canada, Singapore, etc.)| A ticket to a third country| Up to 10 days (240 hours)  
+One of 57 transit-eligible countries (US, Canada, Singapore, Vietnam, etc.)| A ticket to a third country| Up to 10 days (240 hours)  
 All other passports (Philippines, India, most of Africa, etc.)| Apply for a visa before you travel| Depends on visa granted  
   
 Use the [visa checker tool](/china-visa-checker) if you want a quick lookup by nationality — or open a dedicated country page such as [US citizens](/china-visa-checker/united-states), [British citizens](/china-visa-checker/united-kingdom), [Filipino citizens](/china-visa-checker/philippines), or [Indian citizens](/china-visa-checker/india).
@@ -56,7 +56,7 @@ For everything that happens once you land — immigration lines, arrival cards, 
 
 ## Group 2: Up to 10 Days Without a Visa (240-Hour Transit)
 
-This one trips people up constantly. If your passport is from one of 54 countries — including the US, Canada, Singapore, Mexico, and most of Europe — you can enter China without a visa for up to 240 hours (10 days), but only under specific conditions.
+This one trips people up constantly. If your passport is from one of 57 countries — including the US, Canada, Singapore, Mexico, Vietnam, Kyrgyzstan, and most of Europe — you can enter China without a visa for up to 240 hours (10 days), but only under specific conditions.
 
 **The key rule:** you need a confirmed onward ticket to a _third country_ — meaning a country different from where you came from.
 
@@ -67,13 +67,13 @@ USA → China → USA ✗
 
 You don’t apply for anything in advance. You just show up at immigration with your passport and that onward ticket, tell them you’re doing a transit visit, and you’re in.
 
-The 240-hour policy covers 24 provinces and over 60 ports of entry, so you’re not restricted to just the airport city — you can travel around. Some travelers use this creatively to do a 7–10 day China trip as part of a longer Asia itinerary.
+The 240-hour policy covers 24 provinces and 65 designated ports of entry, so you’re not restricted to just the airport city — you can travel within the allowed stay area for that port. Some travelers use this creatively to do a 7–10 day China trip as part of a longer Asia itinerary.
 
 Full details on the rules, which ports are eligible, and the most common mistakes: [China Visa Checker](/china-visa-checker) (including 240-hour transit).
 
 ## Group 3: You Need to Apply for a Visa First
 
-If your passport doesn’t fall into either group above — Philippines, India, most of Southeast Asia outside Singapore, most of Africa, and several others — you need to apply for an L visa (tourist visa) before you travel.
+If your passport doesn’t fall into either group above — Philippines, India, most of Africa, and several others — you need to apply for an L visa (tourist visa) before you travel. Vietnam and Kyrgyzstan now qualify for 240-hour transit (and a Hainan-only 30-day stay), but a standalone mainland holiday still needs a visa.
 
 My friend I mentioned earlier? Filipino passport. He needed to go through the full application process. It’s not complicated, but it does take time and a bit of paperwork.
 
@@ -162,6 +162,8 @@ Popular passport pages (clear yes/no-style answers for 2026):
   * [Japan](/china-visa-checker/japan)
   * [India](/china-visa-checker/india)
   * [Philippines](/china-visa-checker/philippines)
+  * [Vietnam](/china-visa-checker/vietnam)
+  * [Kyrgyzstan](/china-visa-checker/kyrgyzstan)
   * [More countries on the visa checker](/china-visa-checker/#browse-nationality-heading)
 
-> _Policies above are accurate as of July 2026. Visa-free entry for most countries is confirmed through December 31, 2026. Check[the visa tool](/china-visa-checker) or the [China NIA website](https://en.nia.gov.cn)_ _for the latest before you travel._
+> _Policies above are accurate as of August 2026. Visa-free entry for most countries is confirmed through December 31, 2026. Check[the visa tool](/china-visa-checker) or the [China NIA website](https://en.nia.gov.cn)_ _for the latest before you travel._
