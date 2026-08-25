@@ -51,10 +51,10 @@ export function DestinationHero({ destination }: Props) {
                 {destination.plannerCtaLabel ?? PRIMARY_CTA_LABEL}
               </Link>
               <Link
-                href="/survival-kit"
+                href={destination.secondaryCtaHref ?? "/survival-kit"}
                 className="inline-flex min-h-12 w-full items-center justify-center rounded-full border border-white/70 bg-white/20 px-8 py-3.5 text-sm font-bold text-[var(--brand-cta)] transition-all duration-300 hover:border-white hover:bg-white/35 sm:w-auto md:px-10"
               >
-                {SECONDARY_CTA_LABEL}
+                {destination.secondaryCtaLabel ?? SECONDARY_CTA_LABEL}
               </Link>
             </div>
             <p className="mt-4 max-w-md text-xs font-normal leading-relaxed text-[var(--brand-ink)] [text-shadow:0_1px_0_rgba(250,246,239,0.9),0_0_20px_rgba(250,246,239,0.8)] md:text-sm">

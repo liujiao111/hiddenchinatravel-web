@@ -17,6 +17,7 @@ type Props = {
    */
   deferForm?: boolean;
   initialDestinations?: string[];
+  initialYunnanShape?: string;
 };
 
 export function ItineraryPlannerSection({
@@ -24,6 +25,7 @@ export function ItineraryPlannerSection({
   dense = false,
   deferForm = false,
   initialDestinations,
+  initialYunnanShape,
 }: Props) {
   const visaLookup = deferForm ? null : getQuickVisaLookup();
 
@@ -63,12 +65,14 @@ export function ItineraryPlannerSection({
               <DeferredPlannerForm
                 source={source}
                 initialDestinations={initialDestinations}
+                initialYunnanShape={initialYunnanShape}
               />
             ) : (
               <ItineraryPlannerForm
                 visaLookup={visaLookup}
                 source={source}
                 initialDestinations={initialDestinations}
+                initialYunnanShape={initialYunnanShape}
               />
             )}
           </div>

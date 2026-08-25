@@ -98,6 +98,102 @@ export type DestinationPrepare = {
   ctaBody: string;
 };
 
+export type DestinationFit = {
+  eyebrow: string;
+  title: string;
+  intro: string;
+  yesLabel: string;
+  noLabel: string;
+  yes: string[];
+  no: string[];
+};
+
+export type DestinationHighlight = {
+  id: string;
+  name: string;
+  localName?: string;
+  role: string;
+  body: string;
+  photo: DestinationPhoto;
+};
+
+export type DestinationTextureNote = {
+  id: string;
+  name: string;
+  localName?: string;
+  body: string;
+};
+
+export type DestinationBudgetLine = {
+  label: string;
+  value: string;
+  note?: string;
+};
+
+export type DestinationBudget = {
+  eyebrow: string;
+  title: string;
+  intro: string;
+  lines: DestinationBudgetLine[];
+  planningNote: string;
+};
+
+export type DestinationTrainStop = {
+  id: string;
+  name: string;
+  localName: string;
+  body: string;
+};
+
+export type DestinationTrains = {
+  eyebrow: string;
+  title: string;
+  intro: string;
+  stations: DestinationTrainStop[];
+};
+
+export type DestinationAddon = {
+  id: string;
+  name: string;
+  localName?: string;
+  /** On the Kunming–Dali–Lijiang rail spine vs a separate southbound hop. */
+  onLine: boolean;
+  badge: string;
+  body: string;
+};
+
+export type DestinationAddons = {
+  eyebrow: string;
+  title: string;
+  intro: string;
+  items: DestinationAddon[];
+};
+
+export type DestinationMapPoint = {
+  id: string;
+  name: string;
+  localName?: string;
+  lat: number;
+  lng: number;
+  role: string;
+  /** Stops on the 7-day rail spine (drawn as the main line). */
+  onLoop: boolean;
+};
+
+export type DestinationLoopMap = {
+  eyebrow: string;
+  title: string;
+  intro: string;
+  points: DestinationMapPoint[];
+};
+
+export type DestinationPlaceLink = {
+  id: string;
+  label: string;
+  href: string;
+  note?: string;
+};
+
 export type RegionDestination = {
   slug: string;
   name: string;
@@ -112,11 +208,30 @@ export type RegionDestination = {
   plannerCtaLabel?: string;
   /** Planner URL for this region. Defaults to `/china-itinerary-planner#plan-trip`. */
   plannerHref?: string;
+  secondaryCtaLabel?: string;
+  secondaryCtaHref?: string;
+  /** Path under /public for Open Graph. Falls back to the site hero. */
+  ogImage?: string;
+  /** Early-bird custom-planning price for this loop (USD). */
+  offerPrice?: number;
   heroMain: DestinationPhoto;
   heroSideA: DestinationPhoto;
   heroSideB: DestinationPhoto;
   facts: DestinationFact[];
   nav: DestinationNavItem[];
+  fit?: DestinationFit;
+  loopMap?: DestinationLoopMap;
+  highlights?: DestinationHighlight[];
+  texture?: {
+    eyebrow: string;
+    title: string;
+    intro: string;
+    notes: DestinationTextureNote[];
+  };
+  budget?: DestinationBudget;
+  trains?: DestinationTrains;
+  addons?: DestinationAddons;
+  placeLinks?: DestinationPlaceLink[];
   prepare?: DestinationPrepare;
   /** Mosaic: first city is the large landscape; next two stack as portraits. */
   cities: DestinationCityStop[];
@@ -128,6 +243,7 @@ export type RegionDestination = {
     seasons: DestinationSectionCopy;
     foods: DestinationSectionCopy;
     route: DestinationSectionCopy;
+    skeleton?: DestinationSectionCopy;
     related: DestinationSectionCopy;
     faq: string;
   };

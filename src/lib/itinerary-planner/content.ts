@@ -62,6 +62,46 @@ export function parsePlannerDestQuery(
   return [...seen];
 }
 
+export const yunnanShapes = [
+  {
+    id: "loop-7",
+    label: "7-day Kunming–Dali–Lijiang loop",
+    hint: "The rail spine · $129 early bird",
+    days: 7,
+  },
+  {
+    id: "shangrila-10",
+    label: "10 days + Shangri-La",
+    hint: "On the line from Lijiang",
+    days: 10,
+  },
+  {
+    id: "banna-10",
+    label: "10 days + Xishuangbanna",
+    hint: "Off-line · 3–4 days + backtrack",
+    days: 10,
+  },
+  {
+    id: "custom",
+    label: "Not sure / custom shape",
+    hint: "We’ll confirm in the reply",
+    days: 7,
+  },
+] as const;
+
+export type YunnanShapeId = (typeof yunnanShapes)[number]["id"];
+
+const yunnanShapeIds = new Set<string>(yunnanShapes.map((s) => s.id));
+
+/** `?shape=loop-7` from the Yunnan hub. */
+export function parsePlannerShapeQuery(
+  raw?: string | string[],
+): YunnanShapeId | "" {
+  const value = Array.isArray(raw) ? raw[0] : raw;
+  const id = (value ?? "").trim().toLowerCase();
+  return yunnanShapeIds.has(id) ? (id as YunnanShapeId) : "";
+}
+
 export const plannerDayBounds = { min: 3, max: 21, default: 7 } as const;
 
 export const plannerTravelerBounds = { min: 1, max: 8, default: 2 } as const;

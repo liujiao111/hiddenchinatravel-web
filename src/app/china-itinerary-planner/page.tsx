@@ -1,7 +1,7 @@
 import { ItineraryPlannerSection } from "@/app/_components/itinerary-planner/itinerary-planner-section";
 import Container from "@/app/_components/container";
 import { SITE_NAME, SITE_URL } from "@/lib/constants";
-import { parsePlannerDestQuery } from "@/lib/itinerary-planner/content";
+import { parsePlannerDestQuery, parsePlannerShapeQuery } from "@/lib/itinerary-planner/content";
 import Link from "next/link";
 import type { Metadata } from "next";
 
@@ -82,10 +82,13 @@ function buildJsonLd() {
 export default async function ChinaItineraryPlannerPage({
   searchParams,
 }: {
-  searchParams: Promise<{ dest?: string | string[] }>;
+  searchParams: Promise<{ dest?: string | string[]; shape?: string | string[] }>;
 }) {
-  const { dest } = await searchParams;
+  const { dest, shape } = await searchParams;
   const initialDestinations = parsePlannerDestQuery(dest);
+  const initialYunnanShape =
+    parsePlannerShapeQuery(shape) ||
+    (initialDestinations.includes("yunnan") ? "loop-7" : "");
 
   return (
     <main>
@@ -124,6 +127,7 @@ export default async function ChinaItineraryPlannerPage({
         source="planner"
         dense
         initialDestinations={initialDestinations}
+        initialYunnanShape={initialYunnanShape}
       />
     </main>
   );

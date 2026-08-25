@@ -8,12 +8,16 @@ type Props = {
   prepare: DestinationPrepare;
   plannerCtaLabel?: string;
   plannerHref?: string;
+  secondaryCtaLabel?: string;
+  secondaryCtaHref?: string;
 };
 
 export function DestinationPrepareSection({
   prepare,
   plannerCtaLabel,
   plannerHref = "/china-itinerary-planner#plan-trip",
+  secondaryCtaLabel = SECONDARY_CTA_LABEL,
+  secondaryCtaHref = "/survival-kit",
 }: Props) {
   return (
     <section
@@ -106,10 +110,10 @@ export function DestinationPrepareSection({
               {plannerCtaLabel ?? PRIMARY_CTA_LABEL}
             </Link>
             <Link
-              href="/survival-kit"
+              href={secondaryCtaHref}
               className="inline-flex min-h-12 items-center justify-center rounded-full border-2 border-[color-mix(in_srgb,var(--brand-cta)_30%,transparent)] px-8 py-3.5 text-sm font-bold text-[var(--brand-cta)] transition-all duration-300 hover:bg-[color-mix(in_srgb,var(--brand-cta)_8%,transparent)]"
             >
-              {SECONDARY_CTA_LABEL}
+              {secondaryCtaLabel}
             </Link>
           </div>
         </div>
