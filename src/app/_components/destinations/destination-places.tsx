@@ -40,7 +40,7 @@ export function DestinationPlaces({ cities, heading }: Props) {
               overlayTitle={featured.name}
               overlayMeta={featured.role}
               showCopy={false}
-              sizes="(max-width: 768px) 100vw, 700px"
+              sizes="(max-width: 768px) 100vw, 768px"
             />
           </Link>
           {stacked.map((city) => (
@@ -62,7 +62,7 @@ export function DestinationPlaces({ cities, heading }: Props) {
             overlayTitle={gateway.name}
             overlayMeta={`${gateway.role} · ${gateway.pitch}`}
             showCopy={false}
-            sizes="(max-width: 768px) 100vw, 992px"
+            sizes="(max-width: 768px) 100vw, 1152px"
           />
         </Link>
 
