@@ -27,6 +27,8 @@ export type NavItem = {
   children?: NavItem[];
   /** Optional leading icon (emoji) for hub rows */
   icon?: string;
+  /** Optional thumbnail for destination rows */
+  thumb?: string;
 };
 
 /** Core topic hubs — shared by Survival Guides nav + footer Guides column */
@@ -59,7 +61,11 @@ export const toolsNav: NavItem[] = [
 ];
 
 export const destinationsNav: NavItem[] = [
-  { id: "destYunnan", href: "/china-destinations/yunnan" },
+  {
+    id: "destYunnan",
+    href: "/china-destinations/yunnan",
+    thumb: "/brand/destinations/yunnan/city-dali.webp",
+  },
 ];
 
 export const mainNav: NavItem[] = [

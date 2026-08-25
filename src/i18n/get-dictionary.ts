@@ -15,7 +15,11 @@ export type Dictionary = {
     survivalKit: string;
     services: string;
     destinations: string;
+    destinationsAll: string;
     destYunnan: string;
+    destYunnanHint: string;
+    guidesAll: string;
+    toolsAll: string;
     contact: string;
     about: string;
     planner: string;
@@ -83,7 +87,11 @@ const en: Dictionary = {
     survivalKit: "Survival Kit",
     services: "Services",
     destinations: "Destinations",
+    destinationsAll: "All destinations",
     destYunnan: "Yunnan",
+    destYunnanHint: "Kunming · Dali · Lijiang",
+    guidesAll: "All guides",
+    toolsAll: "All tools",
     contact: "Contact",
     about: "About",
     planner: "China Itinerary Planner",
@@ -153,7 +161,11 @@ const zh: Dictionary = {
     survivalKit: "生存套件",
     services: "服务与定价",
     destinations: "目的地",
+    destinationsAll: "全部目的地",
     destYunnan: "云南",
+    destYunnanHint: "昆明 · 大理 · 丽江",
+    guidesAll: "全部指南",
+    toolsAll: "全部工具",
     contact: "联系",
     about: "关于",
     planner: "中国行程规划器",
