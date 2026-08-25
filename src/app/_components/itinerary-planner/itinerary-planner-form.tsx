@@ -19,6 +19,7 @@ import {
   plannerStyles,
   plannerSuccessCopy,
   plannerTravelerBounds,
+  yunnanShapes,
 } from "@/lib/itinerary-planner/content";
 import {
   defaultPlannerFormValues,
@@ -44,18 +45,24 @@ type Props = {
   visaLookup: QuickVisaLookup;
   source?: PlannerFormSource;
   initialDestinations?: string[];
+  initialYunnanShape?: string;
 };
 
 export function ItineraryPlannerForm({
   visaLookup,
   source = "planner",
   initialDestinations = [],
+  initialYunnanShape = "",
 }: Props) {
   const [step, setStep] = useState(0);
   const [showErrors, setShowErrors] = useState(false);
   const [values, setValues] = useState<PlannerFormValues>(() => ({
     ...defaultPlannerFormValues(),
     destinations: initialDestinations,
+    yunnanShape: initialYunnanShape,
+    days:
+      yunnanShapes.find((s) => s.id === initialYunnanShape)?.days ??
+      defaultPlannerFormValues().days,
   }));
   const [state, formAction, pending] = useActionState(
     submitItineraryPlan,
@@ -84,8 +91,10 @@ export function ItineraryPlannerForm({
   }
 
   function step1Valid() {
+    const needsShape = values.destinations.includes("yunnan");
     return (
       values.destinations.length > 0 &&
+      (!needsShape || Boolean(values.yunnanShape)) &&
       values.days >= plannerDayBounds.min &&
       values.days <= plannerDayBounds.max
     );
@@ -223,13 +232,55 @@ export function ItineraryPlannerForm({
               label: d.label,
             }))}
             values={values.destinations}
-            onChange={(destinations) => patch({ destinations })}
+            onChange={(destinations) => {
+              const droppedYunnan =
+                values.destinations.includes("yunnan") &&
+                !destinations.includes("yunnan");
+              const addedYunnan =
+                !values.destinations.includes("yunnan") &&
+                destinations.includes("yunnan");
+              patch({
+                destinations,
+                yunnanShape: droppedYunnan
+                  ? ""
+                  : addedYunnan
+                    ? values.yunnanShape || "loop-7"
+                    : values.yunnanShape,
+              });
+            }}
             error={
               showErrors && values.destinations.length === 0
                 ? "Pick at least one destination."
                 : undefined
             }
           />
+
+          {values.destinations.includes("yunnan") ? (
+            <ChipSelect
+              legend="Yunnan shape"
+              legendHint="The 7-day loop is $129 early bird (6–10 days), not the $99 five-day price"
+              options={yunnanShapes.map((s) => ({
+                id: s.id,
+                label: s.label,
+                hint: s.hint,
+              }))}
+              values={values.yunnanShape ? [values.yunnanShape] : []}
+              onChange={(next) => {
+                const id = next[0] ?? "";
+                const matched = yunnanShapes.find((s) => s.id === id);
+                patch({
+                  yunnanShape: id,
+                  days: matched?.days ?? values.days,
+                });
+              }}
+              multi={false}
+              error={
+                showErrors && !values.yunnanShape
+                  ? "Pick a Yunnan shape for this week."
+                  : undefined
+              }
+            />
+          ) : null}
 
           <div>
             <label htmlFor="planner-days" className={labelClass}>
@@ -361,6 +412,11 @@ export function ItineraryPlannerForm({
             type="hidden"
             name="destinations"
             value={values.destinations.join("|")}
+          />
+          <input
+            type="hidden"
+            name="yunnanShape"
+            value={values.yunnanShape}
           />
           <input type="hidden" name="days" value={String(values.days)} />
           <input

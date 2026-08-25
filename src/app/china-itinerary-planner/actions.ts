@@ -16,7 +16,7 @@ export type PlannerFormState = {
 };
 
 const CSV_HEADER =
-  "timestamp,source,name,email,whatsapp,whatsappOptIn,nationality,destinations,days,travelers,styles,budget,notes\n";
+  "timestamp,source,name,email,whatsapp,whatsappOptIn,nationality,destinations,yunnanShape,days,travelers,styles,budget,notes\n";
 const DATA_DIR = path.join(process.cwd(), "data");
 const CSV_PATH = path.join(DATA_DIR, "itinerary-submissions.csv");
 
@@ -46,6 +46,7 @@ type SubmissionPayload = {
   whatsappOptIn: boolean;
   nationality: string;
   destinations: string;
+  yunnanShape: string;
   days: number;
   travelers: number;
   styles: string;
@@ -75,6 +76,7 @@ async function persistViaResend(payload: SubmissionPayload): Promise<boolean> {
       ...whatsappNotifyLines(payload.whatsapp, payload.whatsappOptIn),
       `Passport: ${payload.nationality}`,
       `Destinations: ${payload.destinations}`,
+      `Yunnan shape: ${payload.yunnanShape}`,
       `Days: ${payload.days}`,
       `Travelers: ${payload.travelers}`,
       `Styles: ${payload.styles}`,
@@ -117,6 +119,7 @@ export async function submitItineraryPlan(
   const email = String(formData.get("email") ?? "").trim();
   const nationality = String(formData.get("nationality") ?? "").trim();
   const destinations = String(formData.get("destinations") ?? "").trim();
+  const yunnanShape = String(formData.get("yunnanShape") ?? "").trim();
   const daysRaw = String(formData.get("days") ?? "").trim();
   const travelersRaw = String(formData.get("travelers") ?? "").trim();
   const styles = String(formData.get("styles") ?? "").trim();
@@ -126,6 +129,16 @@ export async function submitItineraryPlan(
 
   if (!destinations) {
     return { ok: false, message: "Please choose at least one destination." };
+  }
+
+  if (
+    destinations.split("|").includes("yunnan") &&
+    !["loop-7", "shangrila-10", "banna-10", "custom"].includes(yunnanShape)
+  ) {
+    return {
+      ok: false,
+      message: "Please choose a Yunnan shape (7-day loop, 10-day add-on, or custom).",
+    };
   }
 
   const days = Number(daysRaw);
@@ -177,6 +190,7 @@ export async function submitItineraryPlan(
     whatsappOptIn: whatsappField.optIn,
     nationality,
     destinations,
+    yunnanShape: yunnanShape || "(none)",
     days,
     travelers,
     styles,
@@ -193,6 +207,7 @@ export async function submitItineraryPlan(
     payload.whatsappOptIn ? "yes" : "no",
     escapeCsv(nationality),
     escapeCsv(destinations),
+    escapeCsv(payload.yunnanShape),
     String(days),
     String(travelers),
     escapeCsv(styles),

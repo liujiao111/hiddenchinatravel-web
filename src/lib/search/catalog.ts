@@ -63,10 +63,10 @@ export const staticSearchCatalog: SearchItem[] = [
   },
   {
     id: "page-yunnan",
-    title: "Independent Yunnan travel: 7-day Kunming–Dali–Lijiang guide",
+    title: "Independent Yunnan: a 7-day Kunming–Dali–Lijiang loop",
     href: "/china-destinations/yunnan",
     description:
-      "Independent Yunnan without a tour: why Kunming is Spring City, a 7-day Kunming–Dali–Lijiang loop, and the prep foreigners actually need.",
+      "Independent Kunming–Dali–Lijiang week: Erhai, Jade Dragon, Shuhe, and a Kunming landing. Custom PDF $129 early bird (6–10 days), not $99.",
     type: "page",
     keywords: [
       "yunnan",

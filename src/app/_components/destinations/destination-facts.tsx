@@ -8,7 +8,7 @@ type Props = {
 export function DestinationFacts({ facts }: Props) {
   return (
     <section
-      aria-label="Yunnan snapshot"
+      aria-label="Snapshot"
       className="border-b border-[color-mix(in_srgb,var(--brand-cta)_12%,transparent)] bg-white py-8 md:py-10"
     >
       <Container>

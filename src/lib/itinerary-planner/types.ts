@@ -1,5 +1,6 @@
 export type PlannerFormValues = {
   destinations: string[];
+  yunnanShape: string;
   days: number;
   travelers: number;
   styles: string[];
@@ -18,6 +19,7 @@ export const defaultPlannerFormValues = (
   nationality = "",
 ): PlannerFormValues => ({
   destinations: [],
+  yunnanShape: "",
   days: 7,
   travelers: 2,
   styles: [],

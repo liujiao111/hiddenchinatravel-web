@@ -1,22 +1,27 @@
 import type { RegionDestination } from "./types";
 
-const PLANNER = "/china-itinerary-planner?dest=yunnan#plan-trip";
+const PLANNER = "/china-itinerary-planner?dest=yunnan&shape=loop-7#plan-trip";
+const PREP = "/survival-kit";
 
 export const yunnanDestination: RegionDestination = {
   slug: "yunnan",
   name: "Yunnan",
-  seoTitle: "Independent Yunnan Travel: 7-Day Kunming–Dali–Lijiang Guide",
+  seoTitle: "Independent Yunnan: 7-Day Kunming–Dali–Lijiang Loop",
   metaDescription:
-    "Independent Yunnan without a tour: why Kunming is Spring City (四季如春), a 7-day Kunming–Dali–Lijiang loop, and the prep foreigners actually need before they buy the train.",
+    "A 7-day independent Kunming–Dali–Lijiang loop: Erhai, Jade Dragon, Shuhe, and a Kunming landing — without a tour bus. Custom PDF from $129 (6–10 day early bird).",
   canonical: "/china-destinations/yunnan",
-  h1: "Independent Yunnan: From Rainforest to Snow Mountains",
+  h1: "Independent Yunnan: a 7-day Kunming–Dali–Lijiang loop",
   eyebrow: "Southwest China · Spring City",
   lede:
-    "Yunnan is famous for 四季如春 — spring in every season. The reason is Kunming: high plateau, southern sun, mild winters, no brutal summer. Then the independent loop leaves the basin — Erhai, a snow mountain, rainforest only with spare days. You hold your own tickets.",
+    "Fly into Kunming, take the westbound fast train, and keep the week on one rail spine: Erhai, a Dali walk, Lijiang mornings, Jade Dragon if the sky is clean. Rainforest and the plateau are spare-day add-ons — not this loop.",
   ctaHint:
-    "Tell us your days. We send a 1-on-1 PDF you follow yourself — not a seven-day coach script.",
+    "A 7-day Yunnan loop is the 6–10 day planning tier: $129 early bird, not $99. Survival Kit prep is included with the paid PDF.",
   plannerCtaLabel: "Plan this Yunnan loop",
   plannerHref: PLANNER,
+  secondaryCtaLabel: "Open the free prep checklist",
+  secondaryCtaHref: PREP,
+  ogImage: "/brand/destinations/yunnan/hero-erhai.webp",
+  offerPrice: 129,
   heroMain: {
     id: "hero-main",
     aspect: "16/9",
@@ -37,47 +42,320 @@ export const yunnanDestination: RegionDestination = {
     alt: "Tropical palms and a Dai temple near Jinghong, Xishuangbanna",
   },
   facts: [
-    {
-      label: "Where",
-      value: "Southwest China, bordering Vietnam, Laos, and Myanmar",
-    },
-    {
-      label: "Climate",
-      value: "Spring City in Kunming · cold north · tropical south",
-    },
-    {
-      label: "Languages",
-      value: "Mandarin in cities; Bai, Naxi, Dai and others in towns",
-    },
-    { label: "Money", value: "CNY · Alipay/WeChat in cities, cash in villages" },
-    {
-      label: "Air",
-      value: "Kunming (KMG) hub · Dali, Lijiang, Jinghong for hops",
-    },
-    { label: "Rail", value: "Fast trains Kunming–Dali–Lijiang · Kunming–Jinghong ~3.5 hrs" },
-    {
-      label: "Travel",
-      value: "Independent: you buy the train, pick the nights",
-    },
-    {
-      label: "Permits",
-      value: "No Tibet-style permit on the usual Yunnan loop",
-    },
+    { label: "Loop", value: "Kunming → Dali → Lijiang · 7 days" },
+    { label: "Rail", value: "One westbound spine · you buy the tickets" },
+    { label: "Landing", value: "Kunming (KMG) · Spring City, not the climax" },
+    { label: "Altitude", value: "Kunming ~1,900 m · Lijiang ~2,400 m" },
+    { label: "Permit", value: "No Tibet-style permit on this loop" },
+    { label: "Planning", value: "$129 early bird · 6–10 day PDF" },
+    { label: "Add-on", value: "Shangri-La on-line · Jinghong off-line" },
+    { label: "Style", value: "Independent — not a seven-day coach" },
   ],
   nav: [
-    { href: "#overview", label: "Overview" },
+    { href: "#fit", label: "Fit" },
+    { href: "#route", label: "Route" },
+    { href: "#highlights", label: "Highlights" },
+    { href: "#days", label: "7 days" },
+    { href: "#texture", label: "Local" },
+    { href: "#budget", label: "Budget" },
+    { href: "#trains", label: "Trains" },
+    { href: "#addon", label: "10 days" },
     { href: "#places", label: "Places" },
     { href: "#season", label: "Season" },
-    { href: "#food", label: "Food" },
     { href: "#prepare", label: "Prepare" },
-    { href: "#route", label: "Route" },
+    { href: "#food", label: "Food" },
     { href: "#faq", label: "FAQ" },
+  ],
+  fit: {
+    eyebrow: "Who this loop is for",
+    title: "A first independent Yunnan week — not the whole province",
+    intro:
+      "Seven days is enough if you stay on the Kunming–Dali–Lijiang trains. It is not enough if you treat Yunnan as a checklist of rainforest, gorge, and plateau.",
+    yesLabel: "This loop fits",
+    noLabel: "Skip this shape if",
+    yes: [
+      "You have about a week and want trains in your own name",
+      "You would rather land in Kunming than start on a coach in Dali",
+      "Erhai, a Dali walk, Shuhe mornings, and Jade Dragon are the point",
+      "You can leave Shangri-La or Jinghong for spare days — or a later trip",
+    ],
+    no: [
+      "You want Dali, Lijiang, Shangri-La, and Xishuangbanna in seven nights",
+      "You need a guide on the bus and a fixed shopping-stop script",
+      "You only have five days — that is a different (and shorter) PDF tier",
+      "You want the rainforest as a casual day trip from Lijiang",
+    ],
+  },
+  loopMap: {
+    eyebrow: "The 7-day spine",
+    title: "One rail line west — Kunming, Dali, Lijiang",
+    intro:
+      "The map is the itinerary. Stay on this line for seven days. Shangri-La continues the same rail north of Lijiang. Jinghong does not — that hop drops you off the spine and costs a backtrack.",
+    points: [
+      {
+        id: "kunming",
+        name: "Kunming",
+        localName: "昆明",
+        lat: 25.0389,
+        lng: 102.7183,
+        role: "Landing · Day 1",
+        onLoop: true,
+      },
+      {
+        id: "dali",
+        name: "Dali",
+        localName: "大理",
+        lat: 25.6913,
+        lng: 100.158,
+        role: "Erhai · Days 2–3",
+        onLoop: true,
+      },
+      {
+        id: "lijiang",
+        name: "Lijiang",
+        localName: "丽江",
+        lat: 26.855,
+        lng: 100.227,
+        role: "Highlands · Days 4–7",
+        onLoop: true,
+      },
+      {
+        id: "shangri-la",
+        name: "Shangri-La",
+        localName: "香格里拉",
+        lat: 27.829,
+        lng: 99.706,
+        role: "On-line add · 10-day",
+        onLoop: false,
+      },
+      {
+        id: "jinghong",
+        name: "Jinghong",
+        localName: "景洪",
+        lat: 22.0057,
+        lng: 100.7979,
+        role: "Off-line add · 3–4 days",
+        onLoop: false,
+      },
+    ],
+  },
+  highlights: [
+    {
+      id: "erhai",
+      name: "Erhai",
+      localName: "洱海",
+      role: "The lake the week is for",
+      body: "A slow day on the village side — bike or bus, not a full-lake trophy lap. Save the Three Pagodas for a short paid stop if you want the postcard.",
+      photo: {
+        id: "highlight-erhai",
+        aspect: "16/9",
+        keywords: "Erhai lakeside village cangshan reflection",
+        alt: "Bai village fields beside Erhai Lake with Cangshan across the water",
+        src: "/brand/destinations/yunnan/route-d3.webp",
+      },
+    },
+    {
+      id: "jade-dragon",
+      name: "Jade Dragon",
+      localName: "玉龙雪山",
+      role: "Mountain day — if the sky is clean",
+      body: "Plan around weather and altitude, not a boxed cable-car + show combo. If the peak is in cloud, spend the day in Shuhe instead.",
+      photo: {
+        id: "highlight-jade-dragon",
+        aspect: "16/9",
+        keywords: "Shuhe ancient town quiet stream Jade Dragon",
+        alt: "Turquoise Blue Moon Valley below snow peaks of Jade Dragon",
+        src: "/brand/destinations/yunnan/route-d6.webp",
+      },
+    },
+    {
+      id: "dali-old-town",
+      name: "Dali Old Town",
+      localName: "大理古城",
+      role: "A town you can walk",
+      body: "No ticket gate on the old town itself. Stay near it or in a quieter Erhai village. Skip the bar strip if you came for mountains.",
+      photo: {
+        id: "highlight-dali-old-town",
+        aspect: "2/3",
+        keywords: "Dali ancient town wall gate mountains",
+        alt: "South gate of Dali Old Town with lanterns and flower beds",
+        src: "/brand/destinations/yunnan/route-d2.webp",
+      },
+    },
+    {
+      id: "shuhe",
+      name: "Shuhe",
+      localName: "束河",
+      role: "Quieter Lijiang nights",
+      body: "Sleep here or on a slope village if you want canals without the night-market mall. Dayan is a morning walk, not the hotel belt.",
+      photo: {
+        id: "highlight-shuhe",
+        aspect: "2/3",
+        keywords: "Lijiang canal bridges willow old town day",
+        alt: "Lijiang Old Town rooftops and pink blossom with Jade Dragon beyond",
+        src: "/brand/destinations/yunnan/route-d5.webp",
+      },
+    },
+    {
+      id: "kunming-landing",
+      name: "Kunming landing",
+      localName: "昆明",
+      role: "Spring City — one night, then west",
+      body: "Green Lake, a bowl of mixian, early night after a long-haul. Do not spend three days unless you like cities. The 四季如春 slogan is this basin, not Lijiang frost.",
+      photo: {
+        id: "highlight-kunming",
+        aspect: "16/9",
+        keywords: "Kunming autumn metasequoia cypress lake reflection",
+        alt: "Autumn metasequoia lining a lake in Kunming, reflected in still water",
+        src: "/brand/destinations/yunnan/city-kunming.webp",
+      },
+    },
+  ],
+  texture: {
+    eyebrow: "Local texture",
+    title: "What the coach script skips",
+    intro:
+      "The 7-day spine still has corners you sequence yourself: a flower market, a wet market breakfast, a Bai table, an optional Shaxi pause, and the quiet streets after the tour groups leave.",
+    notes: [
+      {
+        id: "dounan",
+        name: "Dounan flower market",
+        localName: "斗南",
+        body: "Kunming’s wholesale flower yards — go early if your landing night has spare hours. It is a working market, not a garden ticket.",
+      },
+      {
+        id: "wet-market",
+        name: "Wet market breakfast",
+        localName: "菜场",
+        body: "A neighborhood 菜场 is where mixian actually happens. Point at toppings. You do not need a translated menu.",
+      },
+      {
+        id: "shaxi",
+        name: "Shaxi",
+        localName: "沙溪",
+        body: "A Tea Horse Road town between Dali and Lijiang. Only if you have a spare night — it is a pause, not a seventh old-town checkbox.",
+      },
+      {
+        id: "bai-food",
+        name: "Bai table",
+        localName: "白族菜",
+        body: "Rushan, clay-pot fish, and Erhai grill smoke. Walk the strip, pick a stall with a line of locals, sit down.",
+      },
+      {
+        id: "quiet-corners",
+        name: "Quiet corners",
+        body: "Shuhe before 10am, an Erhai village after the bikes leave, a slope lane instead of Dayan’s night market. The week gets better when you drop the souvenir street.",
+      },
+    ],
+  },
+  budget: {
+    eyebrow: "What a week costs",
+    title: "Independent spend — then the PDF if you want it built",
+    intro:
+      "These are ballpark figures for two people travelling independently on the 7-day spine, mid-range beds, trains in second class. Your flights sit outside this.",
+    lines: [
+      {
+        label: "Fast trains",
+        value: "About ¥200–350 pp",
+        note: "Kunming–Dali–Lijiang, second class, bought on Trip.com or 12306",
+      },
+      {
+        label: "Beds",
+        value: "¥400–800 / night",
+        note: "Shuhe or an Erhai village, foreign-passport hotels",
+      },
+      {
+        label: "Food",
+        value: "¥80–150 / day pp",
+        note: "Mixian and grill; mushroom hotpot is a splurge night",
+      },
+      {
+        label: "Custom PDF",
+        value: "$129 early bird",
+        note: "6–10 day tier — this 7-day loop is not the $99 (≤5 day) price",
+      },
+    ],
+    planningNote:
+      "The $129 is 1-on-1 planning for a 6–10 day independent route, Survival Kit included. Nothing is charged until we confirm scope. Regular 6–10 day pricing is $169 after the early-bird window.",
+  },
+  trains: {
+    eyebrow: "Do not miss the train",
+    title: "Kunming Station vs Kunming South",
+    intro:
+      "昆明站 and 昆明南站 are different stations, about 25–30 km apart. The ticket’s 始发站 is the one that matters. Mix them up and the westbound train leaves without you.",
+    stations: [
+      {
+        id: "kunming-station",
+        name: "Kunming Station",
+        localName: "昆明站",
+        body: "Downtown. Many C-trains to Dali and Lijiang start here. Closer to Green Lake and the old city grid. If your ticket says 昆明 (not 昆明南), this is you.",
+      },
+      {
+        id: "kunming-south",
+        name: "Kunming South",
+        localName: "昆明南站",
+        body: "Chenggong, south-east of the city. Long-distance G-trains and some Dali departures. Metro Line 1. Do not assume the airport bus drops you at the same place as 昆明站.",
+      },
+    ],
+  },
+  addons: {
+    eyebrow: "If you have 10 days",
+    title: "Shangri-La stays on the line. Xishuangbanna does not.",
+    intro:
+      "Add one extra region, not both. The 7-day loop still ends at Lijiang. A 10-day PDF is the same $129 early-bird tier as this week — the geography changes, the price band does not.",
+    items: [
+      {
+        id: "shangri-la",
+        name: "Shangri-La",
+        localName: "香格里拉",
+        onLine: true,
+        badge: "On the rail line",
+        body: "Lijiang–Shangri-La is just over an hour by train since 2023. Add one or two plateau nights at ~3,200 m. It is Diqing, not a Lijiang suburb. Pick this if you want thinner air and Songzanlin — not if you already stacked Jinghong.",
+      },
+      {
+        id: "xishuangbanna",
+        name: "Xishuangbanna",
+        localName: "西双版纳",
+        onLine: false,
+        badge: "Off-line · 3–4 days + backtrack",
+        body: "Jinghong is a separate Kunming fast train (about 3.5 hours) or a flight. It is not a day trip from Lijiang. Budget three to four extra days and a return to the Kunming hub. Do not bolt rainforest onto a tight Dali–Lijiang week.",
+      },
+    ],
+  },
+  placeLinks: [
+    { id: "erhai", label: "Erhai", href: "#erhai", note: "Lake day" },
+    { id: "jade-dragon", label: "Jade Dragon", href: "#jade-dragon", note: "Mountain" },
+    {
+      id: "dali-old-town",
+      label: "Dali Old Town",
+      href: "#dali-old-town",
+      note: "Walkable",
+    },
+    { id: "shuhe", label: "Shuhe", href: "#shuhe", note: "Quiet nights" },
+    {
+      id: "kunming-landing",
+      label: "Kunming",
+      href: "#kunming-landing",
+      note: "Landing",
+    },
+    {
+      id: "shangri-la",
+      label: "Shangri-La",
+      href: "#shangri-la",
+      note: "On-line add",
+    },
+    {
+      id: "xishuangbanna",
+      label: "Xishuangbanna",
+      href: "#xishuangbanna",
+      note: "Off-line add",
+    },
   ],
   prepare: {
     eyebrow: "Before you fly",
     title: "How to prepare for Yunnan — independently",
     intro:
-      "Skip the seven-day coach: old town, cable car, night show, next city. Independent Yunnan is slower and better — you buy the Kunming–Dali–Lijiang train, sleep outside the souvenir streets, and add rainforest or plateau only if you have spare days. Do the digital prep at home so a village lunch still works.",
+      "Skip the seven-day coach: old town, cable car, night show, next city. Independent Yunnan is slower — you buy the Kunming–Dali–Lijiang train, sleep outside the souvenir streets, and add rainforest or plateau only with spare days.",
     tourLabel: "Typical tour loop",
     independentLabel: "Independent Yunnan",
     tourPoints: [
@@ -124,7 +402,7 @@ export const yunnanDestination: RegionDestination = {
       {
         id: "rail",
         title: "Buy the westbound train yourself",
-        body: "Kunming–Dali–Lijiang is fast rail, not a mystery coach. Jinghong is a separate Kunming fast train (about 3.5 hours) or a flight — not a casual day trip from Lijiang.",
+        body: "Read 昆明 vs 昆明南 on the ticket. Kunming–Dali–Lijiang is fast rail, not a mystery coach. Jinghong is a separate Kunming hop.",
         href: "/transport-in-china",
         linkLabel: "Trains and tickets",
       },
@@ -136,9 +414,9 @@ export const yunnanDestination: RegionDestination = {
         linkLabel: "Hotels for foreigners",
       },
     ],
-    ctaTitle: "Want a Yunnan loop built around your days?",
+    ctaTitle: "Want this 7-day loop built around your dates?",
     ctaBody:
-      "Tell us your dates and whether you actually want the rainforest. We send a PDF you follow independently. Survival Kit prep is included.",
+      "A Kunming–Dali–Lijiang week is the 6–10 day planning tier: $129 early bird. We send a PDF you follow independently. Survival Kit prep is included.",
   },
   cities: [
     {
@@ -147,7 +425,7 @@ export const yunnanDestination: RegionDestination = {
       role: "Naxi highlands",
       pitch: "Jade Dragon on the skyline — and an old town that is magic before 10am.",
       seasonHint: "Comfortable April–October; winter is clear and cold.",
-      body: "Come for the mountain, not the souvenir alleys after dark. Sleep in Shuhe or a slope village if you want quiet. Plan Jade Dragon around weather and altitude, then leave the night market to the tour groups. Dayan, Shuhe, and Baisha sit in a world-heritage zone — independent travelers may be asked for a 50 RMB yearly conservation fee, most often at Black Dragon Pool.",
+      body: "Come for the mountain, not the souvenir alleys after dark. Sleep in Shuhe or a slope village if you want quiet. Plan Jade Dragon around weather and altitude, then leave the night market to the tour groups.",
       plannerHref: PLANNER,
       photo: {
         id: "city-lijiang",
@@ -164,7 +442,7 @@ export const yunnanDestination: RegionDestination = {
       role: "Lake basin",
       pitch: "Erhai, Cangshan, and a town you can walk — no ticket queue required.",
       seasonHint: "Best March–May and September–November; summer storms roll off the lake.",
-      body: "Stay near the old town or a quieter Erhai village. Bike a morning of the shoreline; skip the bar strip if you came for mountains. The Three Pagodas are a short paid stop, not a full day — the old town itself has no ticket gate.",
+      body: "Stay near the old town or a quieter Erhai village. Bike a morning of the shoreline; skip the bar strip if you came for mountains.",
       plannerHref: PLANNER,
       photo: {
         id: "city-dali",
@@ -178,11 +456,11 @@ export const yunnanDestination: RegionDestination = {
     {
       id: "xishuangbanna",
       name: "Xishuangbanna",
-      role: "Tropical south",
-      pitch: "Palms, Dai temples, and heat — Yunnan’s tropical other half.",
+      role: "Tropical south · off-line",
+      pitch: "Palms and heat — not on the 7-day rail spine.",
       seasonHint: "Warm year-round; July–August is the muddiest rainforest stretch.",
-      body: "This is not a casual day trip from Lijiang. Take the Kunming–Jinghong fast train (about 3.5 hours) or fly; a Lijiang–Jinghong through train exists but eats most of a day. Slow down: a monastery morning, a rainforest walk, grilled fish on banana leaf. Do not bolt it onto a tight Dali–Lijiang week.",
-      plannerHref: PLANNER,
+      body: "Take the Kunming–Jinghong fast train (about 3.5 hours) or fly. Budget three to four extra days and a backtrack. Do not bolt it onto a tight Dali–Lijiang week.",
+      plannerHref: "/china-itinerary-planner?dest=yunnan&shape=banna-10#plan-trip",
       photo: {
         id: "city-xishuangbanna",
         aspect: "2/3",
@@ -198,8 +476,7 @@ export const yunnanDestination: RegionDestination = {
       role: "Spring City",
       pitch: "Mixian, mild weather, and the airport that starts almost every Yunnan loop.",
       seasonHint: "Mild most of the year — a landing, not the scenery climax.",
-      body:
-        "Kunming is 春城, Spring City, because it sits near 25°N at about 1,900 m: altitude takes the summer heat off, latitude keeps winter from freezing in town. That is the 四季如春 poster. Use a night here to reset after a long-haul — Green Lake, a bowl of mixian — then take the train west. Do not spend three days unless you like cities. The slogan stops at the basin; Lijiang mornings are another climate.",
+      body: "Use a night here to reset after a long-haul — Green Lake, a bowl of mixian — then take the train west. Check 昆明 vs 昆明南 on the ticket.",
       plannerHref: PLANNER,
       photo: {
         id: "city-kunming",
@@ -215,19 +492,19 @@ export const yunnanDestination: RegionDestination = {
     label: "四季如春 · Eternal spring",
     title: "四季如春 — why the Spring City stays mild",
     body:
-      "Kunming sits near 25°N at about 1,900 m. Altitude takes the summer heat off; southern latitude keeps winter from freezing in town. That is 春城, and why you can land in January in a light jacket. A 7-day loop then climbs into frost and, if you add Jinghong, into rainforest heat. Come year-round for the basin — pack a warm layer for the mountain.",
+      "Kunming sits near 25°N at about 1,900 m. Altitude takes the summer heat off; southern latitude keeps winter from freezing in town. That is 春城. The 7-day loop then climbs into frost. Come year-round for the basin — pack a warm layer for the mountain.",
     points: [
       {
         label: "Central plateau",
-        body: "Kunming and the Dali basin. Cool summers, usable winters, flowers most of the year. This is the slogan.",
+        body: "Kunming and the Dali basin. Cool summers, usable winters. This is the slogan.",
       },
       {
         label: "Northwest highlands",
-        body: "Lijiang (~2,400 m) and Shangri-La (~3,200 m). Clear, cold nights; frost and snow on Jade Dragon. A warm layer is not optional.",
+        body: "Lijiang (~2,400 m) and Shangri-La (~3,200 m). Clear, cold nights. A warm layer is not optional.",
       },
       {
         label: "Tropical south",
-        body: "Xishuangbanna. Hot, wet, rainforest — the opposite of spring. Don’t bolt it onto a tight Dali–Lijiang week.",
+        body: "Xishuangbanna. Hot, wet, rainforest — off this 7-day line. Don’t bolt it on.",
       },
     ],
   },
@@ -237,7 +514,7 @@ export const yunnanDestination: RegionDestination = {
       name: "Spring",
       months: "Mar–May",
       climate: "Spring City days · flowers in the east",
-      body: "The easiest first-timer window — and the one we suggest if you can move dates. Luoping’s canola peaks in February–March (gone by May), Kunming is walkable, and Yuanyang terraces still hold water in March. Book Dali and Lijiang beds early around holidays.",
+      body: "The easiest first-timer window. Luoping’s canola peaks in February–March (gone by May). Book Dali and Lijiang beds early around holidays.",
       photo: {
         id: "season-spring",
         aspect: "2/3",
@@ -247,16 +524,16 @@ export const yunnanDestination: RegionDestination = {
         src: "/brand/destinations/yunnan/season-spring.webp",
       },
       cityAnchors: [
-        { id: "kunming", label: "Kunming" },
-        { id: "dali", label: "Dali" },
+        { id: "kunming-landing", label: "Kunming" },
+        { id: "dali-old-town", label: "Dali" },
       ],
     },
     {
       id: "summer",
       name: "Summer",
       months: "Jun–Aug",
-      climate: "Rainforest heat · highland storms",
-      body: "Green, loud, and worth it if you came for rainforest. Afternoons often rain. Xishuangbanna is hot and wet; Lijiang and Shangri-La stay cooler. Pack a shell and keep one indoor backup per day.",
+      climate: "Highland storms · rainforest heat off-line",
+      body: "Afternoons often rain on the spine. Lijiang stays cooler than Jinghong. Pack a shell and keep one indoor backup per day.",
       photo: {
         id: "season-summer",
         aspect: "2/3",
@@ -269,8 +546,8 @@ export const yunnanDestination: RegionDestination = {
         src: "/brand/destinations/yunnan/season-summer.webp",
       },
       cityAnchors: [
-        { id: "xishuangbanna", label: "Xishuangbanna" },
         { id: "lijiang", label: "Lijiang" },
+        { id: "xishuangbanna", label: "Xishuangbanna" },
       ],
     },
     {
@@ -278,7 +555,7 @@ export const yunnanDestination: RegionDestination = {
       name: "Autumn",
       months: "Sep–Nov",
       climate: "Clearest mountain skies",
-      body: "The photo season — Jade Dragon and the high northwest at their clearest. Days are stable; nights drop fast above 2,400 m. If you can move dates, take autumn.",
+      body: "The photo season — Jade Dragon at its clearest. Days are stable; nights drop fast above 2,400 m. If you can move dates, take autumn.",
       photo: {
         id: "season-autumn",
         aspect: "2/3",
@@ -288,8 +565,8 @@ export const yunnanDestination: RegionDestination = {
         src: "/brand/destinations/yunnan/season-autumn.webp",
       },
       cityAnchors: [
-        { id: "lijiang", label: "Lijiang" },
-        { id: "dali", label: "Dali" },
+        { id: "jade-dragon", label: "Jade Dragon" },
+        { id: "dali-old-town", label: "Dali" },
       ],
     },
     {
@@ -297,7 +574,7 @@ export const yunnanDestination: RegionDestination = {
       name: "Winter",
       months: "Dec–Feb",
       climate: "Mild Kunming · cold north Yunnan",
-      body: "Fewer crowds, sharper mountains. Kunming stays usable; Lijiang mornings freeze. Yunshanping sits under Jade Dragon in snow. North Yunnan needs layers, not a beach wardrobe.",
+      body: "Fewer crowds, sharper mountains. Kunming stays usable; Lijiang mornings freeze. North Yunnan needs layers, not a beach wardrobe.",
       photo: {
         id: "season-winter",
         aspect: "2/3",
@@ -310,8 +587,8 @@ export const yunnanDestination: RegionDestination = {
         src: "/brand/destinations/yunnan/season-winter-yunshanping.webp",
       },
       cityAnchors: [
-        { id: "lijiang", label: "Lijiang" },
-        { id: "kunming", label: "Kunming" },
+        { id: "shuhe", label: "Shuhe" },
+        { id: "kunming-landing", label: "Kunming" },
       ],
     },
   ],
@@ -320,7 +597,7 @@ export const yunnanDestination: RegionDestination = {
       id: "guoqiao",
       name: "Crossing-the-bridge noodles",
       localName: "过桥米线",
-      body: "Yunnan’s most famous bowl. You assemble it at the table: scalding broth, rice noodles, thin meat, herbs. Order it once as a landing ritual — then hunt neighborhood mixian, which locals eat every day.",
+      body: "Yunnan’s most famous bowl. You assemble it at the table: scalding broth, rice noodles, thin meat, herbs. Order it once as a landing ritual — then hunt neighborhood mixian.",
       photo: {
         id: "food-guoqiao",
         aspect: "2/3",
@@ -333,7 +610,7 @@ export const yunnanDestination: RegionDestination = {
       id: "mixian",
       name: "Mixian rice noodles",
       localName: "米线",
-      body: "The bowl you will eat twice a day. Breakfast, hangover food, midnight food. Chili, pickled greens, a runny egg if you want it. Point at the toppings — you do not need a translated menu.",
+      body: "The bowl you will eat twice a day. Breakfast, hangover food, midnight food. Chili, pickled greens, a runny egg if you want it.",
       photo: {
         id: "food-mixian",
         aspect: "2/3",
@@ -346,7 +623,7 @@ export const yunnanDestination: RegionDestination = {
       id: "mushrooms",
       name: "Wild mushroom hotpot",
       localName: "野生菌火锅",
-      body: "The rainy-season luxury people fly in for — not a street-stall dare. Go with a busy local restaurant. Yunnan’s forests have toxic lookalikes: if a stall cannot name the mushroom, skip it.",
+      body: "The rainy-season luxury people fly in for — not a street-stall dare. If a stall cannot name the fungus, skip it.",
       photo: {
         id: "food-mushrooms",
         aspect: "2/3",
@@ -359,7 +636,7 @@ export const yunnanDestination: RegionDestination = {
       id: "qiguo",
       name: "Steam-pot chicken",
       localName: "汽锅鸡",
-      body: "Jianshui’s clay steam-pot, chicken, and a clear broth that tastes like the pot did the work. Heavy enough for a cool highland evening — share it, then walk.",
+      body: "Jianshui’s clay steam-pot, chicken, and a clear broth. Heavy enough for a cool highland evening — share it, then walk.",
       photo: {
         id: "food-qiguo",
         aspect: "2/3",
@@ -369,36 +646,10 @@ export const yunnanDestination: RegionDestination = {
       },
     },
     {
-      id: "xuanwei",
-      name: "Xuanwei ham",
-      localName: "宣威火腿",
-      body: "Yunnan’s famous ham — cured, sliced thin, hiding in fried rice or a simple stir-fry. Salty, not a whole meal. Good for the train if you buy a sealed pack.",
-      photo: {
-        id: "food-xuanwei",
-        aspect: "2/3",
-        keywords: "Xuanwei ham Yunnan cured",
-        alt: "Thin slice of Xuanwei ham lifted with chopsticks",
-        src: "/brand/destinations/yunnan/food-xuanwei.webp",
-      },
-    },
-    {
-      id: "dai-fish",
-      name: "Dai grilled fish",
-      localName: "傣味烤鱼",
-      body: "Xishuangbanna on a plate: lemongrass, chili, banana leaf. Eat it outdoors if you can — the smoke is half the point.",
-      photo: {
-        id: "food-dai-fish",
-        aspect: "2/3",
-        keywords: "Dai grilled fish lemongrass banana leaf Xishuangbanna",
-        alt: "Dai grilled fish with lemongrass and chili sauce on a banana leaf",
-        src: "/brand/destinations/yunnan/food-dai-fish.webp",
-      },
-    },
-    {
       id: "flower-cake",
       name: "Rose flower cake",
       localName: "鲜花饼",
-      body: "The Kunming pastry worth flying home with. Fresh batches beat airport boxes. Buy a small tin the day you leave — they crush in a backpack.",
+      body: "The Kunming pastry worth flying home with. Fresh batches beat airport boxes. Buy a small tin the day you leave.",
       photo: {
         id: "food-flower-cake",
         aspect: "2/3",
@@ -407,41 +658,35 @@ export const yunnanDestination: RegionDestination = {
         src: "/brand/destinations/yunnan/food-flower-cake.webp",
       },
     },
-    {
-      id: "erhai-grill",
-      name: "Erhai lakeside grill",
-      body: "The Dali night you came for: grilled fish, tofu, cumin smoke. Walk the strip, pick a stall with a line of locals, sit down — this is not a tasting menu.",
-      photo: {
-        id: "food-erhai",
-        aspect: "2/3",
-        keywords: "Erhai lakeside grilled Dali street food night",
-        alt: "Shared grill table at a Dali night restaurant, with dipping spices and plates",
-        src: "/brand/destinations/yunnan/food-erhai.webp",
-      },
-    },
   ],
   headings: {
     places: {
-      eyebrow: "Where to go",
-      title: "Kunming, Dali, Lijiang, Xishuangbanna — sequenced, not a checklist",
+      eyebrow: "On this loop",
+      title: "Jump to a stop",
       intro:
-        "Lijiang for the mountain, Dali for the lake, Xishuangbanna for the rainforest, Kunming as the landing. Four stops you sequence yourself — skip the night-market old town, and add the south or the plateau only with spare days.",
+        "Highlights sit on the 7-day spine. Shangri-La and Xishuangbanna are 10-day add-ons — one on the rail, one off it.",
     },
     seasons: {
       eyebrow: "Best time to go",
       title: "Best time to visit Yunnan",
       intro:
-        "四季如春 is Kunming’s plateau, not a packing list for the whole province. Spring is flowers and easy first-timer days. Summer is rainforest heat. Autumn is Jade Dragon’s clearest skies. Winter is snow at Yunshanping and fewer crowds. Pick the season for the region you came for.",
+        "四季如春 is Kunming’s plateau, not a packing list for the whole loop. Spring is the easiest first-timer window. Autumn is Jade Dragon’s clearest skies.",
     },
     foods: {
       eyebrow: "What to eat",
-      title: "What to eat in Yunnan (and what to skip)",
+      title: "Five bowls on the loop",
       intro:
-        "Crossing-the-bridge noodles and mixian are the landing bowls. Wild mushroom hotpot is seasonal — skip any stall that cannot name the fungus. Eight dishes first-timers actually hunt down, plus the pastry you fly home with.",
+        "Crossing-the-bridge once, mixian every day, mushroom hotpot only in season. Bai grill lives in Local texture — not a sixth dish here.",
     },
     route: {
-      eyebrow: "7-day itinerary",
-      title: "A 7-day Yunnan itinerary you can actually follow",
+      eyebrow: "7-day spine",
+      title: "The trains you actually buy",
+    },
+    skeleton: {
+      eyebrow: "7-day skeleton",
+      title: "A week you can keep",
+      intro:
+        "Thin on purpose. Drop a day in Dali if you hate old towns; add one if Erhai is the point. We do not pad this into a tour script.",
     },
     related: {
       eyebrow: "Keep going",
@@ -450,12 +695,12 @@ export const yunnanDestination: RegionDestination = {
     faq: "Yunnan travel questions, answered",
   },
   routeIntro:
-    "The classic independent loop: fly into Kunming, fast trains west, then decide whether Lijiang is your last night. It is a sketch you can keep — drop a day in Dali if you hate old towns, add one if Erhai is the point.",
+    "Fly into Kunming, ride west, end at Lijiang. Shangri-La is an on-line extra. Jinghong is not on this map’s main stroke.",
   routeDays: [
     {
       day: 1,
       title: "Land in Kunming",
-      body: "Green Lake at dusk, a bowl of mixian, early night. Do not schedule a museum marathon after a long-haul.",
+      body: "Green Lake at dusk, a bowl of mixian, early night.",
       photo: {
         id: "route-d1",
         aspect: "2/3",
@@ -466,8 +711,8 @@ export const yunnanDestination: RegionDestination = {
     },
     {
       day: 2,
-      title: "High-speed rail to Dali",
-      body: "Morning fast train (about two hours). Walk the old town and Cangshan views; save Erhai for tomorrow.",
+      title: "Rail to Dali",
+      body: "Morning fast train (~2 hrs). Old town walk; save Erhai for tomorrow.",
       photo: {
         id: "route-d2",
         aspect: "2/3",
@@ -478,8 +723,8 @@ export const yunnanDestination: RegionDestination = {
     },
     {
       day: 3,
-      title: "A slow day on Erhai",
-      body: "Village side of the lake, bike or bus. Three Pagodas only if you want the postcard — a short paid stop, not a pilgrimage.",
+      title: "Erhai, slow",
+      body: "Village side of the lake. Three Pagodas only if you want the postcard.",
       photo: {
         id: "route-d3",
         aspect: "2/3",
@@ -491,7 +736,7 @@ export const yunnanDestination: RegionDestination = {
     {
       day: 4,
       title: "Train to Lijiang",
-      body: "Another short rail hop (about 1.5–2 hours). Check in at Shuhe or a quieter lane, not the loudest old-town gate.",
+      body: "Short rail hop. Check in at Shuhe, not the loudest old-town gate.",
       photo: {
         id: "route-d4",
         aspect: "2/3",
@@ -502,8 +747,8 @@ export const yunnanDestination: RegionDestination = {
     },
     {
       day: 5,
-      title: "Lijiang before the crowds",
-      body: "Canals and willow light in the morning. Leave the night market if it feels like a mall with lanterns.",
+      title: "Lijiang morning",
+      body: "Canals before the crowds. Leave the night market if it feels like a mall.",
       photo: {
         id: "route-d5",
         aspect: "2/3",
@@ -514,8 +759,8 @@ export const yunnanDestination: RegionDestination = {
     },
     {
       day: 6,
-      title: "Jade Dragon — or quiet Shuhe",
-      body: "Mountain day if the sky is clean; Shuhe streams if it is not. Check altitude if you came from sea level.",
+      title: "Jade Dragon — or Shuhe",
+      body: "Mountain if the sky is clean; streams if it is not.",
       photo: {
         id: "route-d6",
         aspect: "2/3",
@@ -526,8 +771,8 @@ export const yunnanDestination: RegionDestination = {
     },
     {
       day: 7,
-      title: "Keep a buffer, then fly",
-      body: "Fly from Lijiang or roll back to Kunming. Keep this day empty — highland weather slips.",
+      title: "Buffer, then fly",
+      body: "Fly from Lijiang or roll back to Kunming. Keep this day empty.",
       photo: {
         id: "route-d7",
         aspect: "2/3",
@@ -539,52 +784,52 @@ export const yunnanDestination: RegionDestination = {
   ],
   routeCtaTitle: "Want this Yunnan loop built around your dates?",
   routeCtaBody:
-    "Tell us your days and pace. We send a 1-on-1 PDF you follow independently — not a poster itinerary. Survival Kit prep is included.",
+    "Tell us your days and whether Shangri-La or Jinghong is actually in scope. A 7-day spine is $129 early bird (6–10 day tier) — not the $99 five-day price. Survival Kit prep is included.",
   faqs: [
     {
       question: "Do I need a special permit for Yunnan?",
       answer:
-        "Not for the usual Kunming–Dali–Lijiang–Jinghong loop, unlike Tibet. Bring your passport for hotels. Far-west border towns (Ruili, some Nujiang valleys) are a different paperwork story — stay on the usual loop and you will not need a Tibet-style permit. [Check whether you need a China visa](/do-i-need-a-visa-for-china) before you fly.",
+        "Not for the usual Kunming–Dali–Lijiang loop, unlike Tibet. Bring your passport for hotels. Far-west border towns are a different paperwork story. [Check whether you need a China visa](/do-i-need-a-visa-for-china) before you fly.",
     },
     {
       question: "How many days do you need in Yunnan?",
       answer:
-        "Seven to ten days covers Kunming as a landing plus Dali and Lijiang without rushing the trains. Shangri-La is just over an hour by train from Lijiang — add one or two nights. Xishuangbanna needs three to four extra days. Pick one extra region on a first trip, not both.",
+        "Seven days covers the Kunming–Dali–Lijiang spine without rushing the trains. Shangri-La is just over an hour by train from Lijiang — add one or two nights. Xishuangbanna needs three to four extra days plus a backtrack to Kunming. Pick one extra region, not both.",
+    },
+    {
+      question: "Why is the custom PDF $129, not $99?",
+      answer:
+        "A 7-day Yunnan loop sits in the 6–10 day planning tier: $129 early bird (regular $169). The $99 early-bird price is for trips up to 5 days. Nothing is charged until we confirm scope. Survival Kit is included with the paid PDF.",
     },
     {
       question: "When is the best time to visit Yunnan?",
       answer:
-        "There is no single Yunnan season. March–May is the easiest first-timer window (Luoping canola peaks in February–March). September–November is clearest for Jade Dragon. June–August is hot and wet in Xishuangbanna — still worth it if the rainforest is the point. Winter is quieter and cold in the north. Kunming itself stays mild most of the year — that is the 四季如春 slogan, not a forecast for Lijiang or Jinghong.",
+        "March–May is the easiest first-timer window. September–November is clearest for Jade Dragon. June–August brings afternoon storms. Winter is quieter and cold in Lijiang. Kunming itself stays mild — that is 四季如春, not a forecast for the mountain.",
     },
     {
       question: "Is Yunnan really spring all year (四季如春)?",
       answer:
-        "Kunming is — 春城, Spring City, at about 1,900 m near 25°N, so summers stay cool and winters rarely freeze in town. The usual independent loop is not one climate: Dali is still a mild basin, Lijiang mornings frost, Shangri-La is genuine highland winter, and Xishuangbanna is tropical. Pack layers for the mountain, not a poster T-shirt wardrobe.",
+        "Kunming is — 春城 at about 1,900 m. The 7-day loop is not one climate: Dali is still a mild basin, Lijiang mornings frost, Shangri-La is highland winter, and Jinghong is tropical.",
     },
     {
       question: "Shangri-La or Xishuangbanna on a first Yunnan trip?",
       answer:
-        "Pick one, not both. Shangri-La is just over an hour by train from Lijiang — add one or two nights if you want plateau and thinner air. Xishuangbanna is a separate Kunming fast train (about 3.5 hours) or a flight, and needs three to four extra days. The 7-day loop itself stops at Lijiang.",
+        "Pick one, not both. Shangri-La stays on the rail line from Lijiang. Xishuangbanna is off-line: a separate Kunming–Jinghong train or flight, three to four extra days, and a backtrack. The 7-day loop itself stops at Lijiang.",
     },
     {
       question: "Can I visit Yunnan without a tour?",
       answer:
-        "Yes. Independent travel is the usual way foreigners do Kunming–Dali–Lijiang: you buy the fast trains, book hotels that take a foreign passport, and skip the night-market old town if you want sleep. Prep payments and data before you land — then use [how to plan a China itinerary](/china-itinerary-planning) if Yunnan sits on a wider China route.",
+        "Yes. Independent travel is the usual way foreigners do Kunming–Dali–Lijiang: you buy the fast trains, book hotels that take a foreign passport, and skip the night-market old town if you want sleep.",
     },
     {
-      question: "How do you get around Yunnan without a tour?",
+      question: "Kunming Station or Kunming South?",
       answer:
-        "Fly into Kunming Changshui, then take fast trains to Dali and Lijiang. Jinghong (Xishuangbanna) is a separate Kunming fast train (about 3.5 hours) or a flight. Lijiang–Shangri-La is just over an hour by train since 2023. [Transport in China](/transport-in-china) covers tickets and station basics.",
+        "Read the ticket. 昆明站 is downtown; 昆明南站 is in Chenggong, 25–30 km away. Many Dali/Lijiang C-trains use 昆明站, but not all. Mixing them up is the classic missed-train story. [Transport in China](/transport-in-china) covers tickets.",
     },
     {
       question: "Is Lijiang worth visiting?",
       answer:
-        "Yes if you treat the old town as a morning walk and the mountain as the point. The night streets are skippable. Stay in Shuhe or a village if you want sleep.",
-    },
-    {
-      question: "What is the rainy season like?",
-      answer:
-        "June to August brings afternoon storms and muddy rainforest paths in the south. Highlands stay cooler. Pack a shell and keep one indoor plan each day — do not cancel the whole trip.",
+        "Yes if you treat Dayan as a morning walk and the mountain as the point. Stay in Shuhe or a village if you want sleep.",
     },
     {
       question: "Is Yunnan the same visa as the rest of China?",
@@ -609,11 +854,6 @@ export const yunnanDestination: RegionDestination = {
       excerpt: "What to book as a foreigner — and what still needs a passport scan.",
     },
     {
-      title: "Attraction tickets",
-      href: "/attraction-tickets-in-china",
-      excerpt: "Why some parks want a real-name ticket before you queue.",
-    },
-    {
       title: "How to plan a China itinerary",
       href: "/china-itinerary-planning",
       excerpt: "Days, pace, and how Yunnan sits on a wider China route.",
@@ -629,5 +869,5 @@ export const yunnanDestination: RegionDestination = {
       excerpt: "Whether China is realistic without a tour — and what to set up first.",
     },
   ],
-  dateModified: "2026-08-23",
+  dateModified: "2026-08-25",
 };

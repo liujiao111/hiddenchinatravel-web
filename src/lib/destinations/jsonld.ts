@@ -1,4 +1,4 @@
-import { SITE_NAME, SITE_URL } from "@/lib/constants";
+import { HOME_OG_IMAGE_URL, SITE_NAME, SITE_URL } from "@/lib/constants";
 import type { RegionDestination } from "@/lib/destinations/types";
 import { absoluteCanonicalUrl } from "@/lib/seo/canonical";
 
@@ -8,6 +8,12 @@ function plainAnswer(answer: string): string {
 
 export function regionDestinationJsonLd(destination: RegionDestination) {
   const url = absoluteCanonicalUrl(destination.canonical);
+  const imagePath = destination.ogImage ?? HOME_OG_IMAGE_URL;
+  const image = imagePath.startsWith("http")
+    ? imagePath
+    : `${SITE_URL}${imagePath}`;
+  const offerPrice = destination.offerPrice;
+
   const faq = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -76,5 +82,66 @@ export function regionDestinationJsonLd(destination: RegionDestination) {
     ],
   };
 
-  return [place, faq, crumbs, ...(howTo ? [howTo] : [])];
+  const article = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: destination.h1,
+    name: destination.seoTitle,
+    description: destination.metaDescription,
+    image,
+    dateModified: destination.dateModified,
+    author: {
+      "@type": "Organization",
+      name: SITE_NAME,
+      url: SITE_URL,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: SITE_NAME,
+      url: SITE_URL,
+    },
+    mainEntityOfPage: url,
+  };
+
+  const itemList = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: `${destination.name} 7-day loop`,
+    itemListElement: destination.routeDays.map((day) => ({
+      "@type": "ListItem",
+      position: day.day,
+      name: `Day ${day.day}: ${day.title}`,
+      description: day.body,
+    })),
+  };
+
+  const offer = offerPrice
+    ? {
+        "@context": "https://schema.org",
+        "@type": "Offer",
+        name: `${destination.name} custom itinerary PDF (6–10 days, early bird)`,
+        description: destination.ctaHint,
+        url: absoluteCanonicalUrl(
+          destination.plannerHref ?? "/china-itinerary-planner",
+        ),
+        price: String(offerPrice),
+        priceCurrency: "USD",
+        availability: "https://schema.org/InStock",
+        seller: {
+          "@type": "Organization",
+          name: SITE_NAME,
+          url: SITE_URL,
+        },
+      }
+    : null;
+
+  return [
+    place,
+    article,
+    itemList,
+    ...(offer ? [offer] : []),
+    faq,
+    crumbs,
+    ...(howTo ? [howTo] : []),
+  ];
 }

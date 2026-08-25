@@ -25,6 +25,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 
   const title = `${destination.seoTitle} | ${SITE_NAME}`;
+  const ogImage = destination.ogImage ?? HOME_OG_IMAGE_URL;
 
   return {
     title: { absolute: title },
@@ -35,15 +36,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     openGraph: {
       title,
       description: destination.metaDescription,
-      type: "website",
+      type: "article",
       url: destination.canonical,
-      images: [{ url: HOME_OG_IMAGE_URL, alt: destination.h1 }],
+      images: [{ url: ogImage, alt: destination.h1 }],
     },
     twitter: {
       card: "summary_large_image",
       title,
       description: destination.metaDescription,
-      images: [HOME_OG_IMAGE_URL],
+      images: [ogImage],
     },
   };
 }
