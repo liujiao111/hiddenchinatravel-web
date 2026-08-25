@@ -55,6 +55,7 @@ export function RegionDestinationPage({ destination }: Props) {
       <DestinationPlaces
         cities={destination.cities}
         heading={destination.headings.places}
+        extrasHeading={destination.headings.placesExtras}
       />
       <DestinationSeasons
         seasons={destination.seasons}
