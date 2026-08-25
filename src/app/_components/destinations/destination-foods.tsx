@@ -34,7 +34,7 @@ export function DestinationFoods({ foods, heading }: Props) {
                 <div className={cn("group", reverse && "md:order-2")}>
                   <DestinationPhotoSlot
                     photo={food.photo}
-                    sizes="(max-width: 768px) 100vw, 40vw"
+                    sizes="(max-width: 768px) 100vw, 50vw"
                   />
                 </div>
                 <div className={cn(reverse && "md:order-1")}>

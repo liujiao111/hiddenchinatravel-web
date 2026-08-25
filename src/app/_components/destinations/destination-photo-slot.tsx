@@ -67,7 +67,7 @@ export function DestinationPhotoSlot({
           priority={priority}
           quality={90}
           sizes={sizes}
-          className="object-cover transition-transform duration-300 motion-safe:group-hover:scale-105"
+          className="object-cover"
         />
         {overlay}
       </div>

@@ -168,8 +168,8 @@ const nextConfig: NextConfig = {
   trailingSlash: false,
   images: {
     formats: ["image/avif", "image/webp"],
-    // Next.js 16 defaults to [75] and silently coerces quality={90}
-    // on destination photos. Allow 90 so Yunnan shots stay sharp.
+    // Next.js 16 defaults to [75] and silently coerces any other quality
+    // (destination photos request 90). Without this, Yunnan/hero shots look soft.
     qualities: [75, 90],
   },
   async redirects() {
