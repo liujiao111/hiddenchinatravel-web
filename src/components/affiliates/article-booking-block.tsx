@@ -31,13 +31,55 @@ function isGoHref(href: string): boolean {
   return href.startsWith("/go/") || href.includes("/go/");
 }
 
+function LeadCtaButton({
+  href,
+  label,
+  articleSlug,
+  variant,
+}: {
+  href: string;
+  label: string;
+  articleSlug?: string;
+  variant: "solid" | "outline";
+}) {
+  const go = isGoHref(href);
+  const className =
+    variant === "solid"
+      ? "btn-brand inline-flex shrink-0 justify-center px-6 py-3 text-sm"
+      : "btn-brand-outline inline-flex shrink-0 justify-center px-6 py-3 text-sm";
+
+  if (go) {
+    return (
+      <a
+        href={href}
+        target="_blank"
+        rel="sponsored noopener noreferrer"
+        onClick={() => trackIfAffiliate(href, "article_lead_cta", articleSlug)}
+        className={className}
+      >
+        {label}
+        {variant === "solid" ? <span aria-hidden>→</span> : null}
+      </a>
+    );
+  }
+
+  return (
+    <Link href={href} className={className}>
+      {label}
+      {variant === "solid" ? <span aria-hidden>→</span> : null}
+    </Link>
+  );
+}
+
 /** Compact first-viewport CTA — solid button, not a body-text link. */
 export function ArticleLeadAffiliateCta({ block, articleSlug }: Props) {
   const lead = block.lead;
   if (!lead) return null;
 
-  const href = block.primary.href;
-  const go = isGoHref(href);
+  const hasAffiliatePrimary = isGoHref(block.primary.href);
+  const leadSecondary =
+    block.secondary && isGoHref(block.secondary.href) ? block.secondary : null;
+  const hasAffiliateSecondary = Boolean(leadSecondary);
 
   return (
     <aside
@@ -48,7 +90,7 @@ export function ArticleLeadAffiliateCta({ block, articleSlug }: Props) {
       <p className="mb-2 text-xs font-bold uppercase tracking-[0.18em] text-[var(--brand-mango)]">
         {lead.eyebrow}
       </p>
-      <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between sm:gap-6">
+      <div className="flex flex-col gap-3 lg:flex-row lg:items-center lg:justify-between lg:gap-6">
         <div className="min-w-0">
           <p className="text-base font-bold tracking-tight text-[var(--brand-ink)] md:text-lg">
             {lead.title}
@@ -59,32 +101,30 @@ export function ArticleLeadAffiliateCta({ block, articleSlug }: Props) {
             </p>
           ) : null}
         </div>
-        {go ? (
-          <a
-            href={href}
-            target="_blank"
-            rel="sponsored noopener noreferrer"
-            onClick={() =>
-              trackIfAffiliate(href, "article_lead_cta", articleSlug)
-            }
-            className="btn-brand inline-flex shrink-0 justify-center px-6 py-3 text-sm"
-          >
-            {block.primary.label}
-            <span aria-hidden>→</span>
-          </a>
-        ) : (
-          <Link
-            href={href}
-            className="btn-brand inline-flex shrink-0 justify-center px-6 py-3 text-sm"
-          >
-            {block.primary.label}
-            <span aria-hidden>→</span>
-          </Link>
-        )}
+        <div className="flex shrink-0 flex-col gap-2 sm:flex-row">
+          <LeadCtaButton
+            href={block.primary.href}
+            label={block.primary.label}
+            articleSlug={articleSlug}
+            variant="solid"
+          />
+          {leadSecondary ? (
+            <LeadCtaButton
+              href={leadSecondary.href}
+              label={leadSecondary.label}
+              articleSlug={articleSlug}
+              variant="outline"
+            />
+          ) : null}
+        </div>
       </div>
-      <p className="mt-3 text-xs font-normal text-[var(--brand-ink-muted)]">
-        Affiliate link — same price to you.
-      </p>
+      {hasAffiliatePrimary || hasAffiliateSecondary ? (
+        <p className="mt-3 text-xs font-normal text-[var(--brand-ink-muted)]">
+          {hasAffiliatePrimary && hasAffiliateSecondary
+            ? "Affiliate links — same price to you."
+            : "Affiliate link — same price to you."}
+        </p>
+      ) : null}
     </aside>
   );
 }
@@ -165,9 +205,13 @@ export function ArticleBookingBlockCard({ block, articleSlug }: Props) {
           )
         ) : null}
       </div>
-      <p className="mt-4 text-xs font-normal text-[var(--brand-ink-muted)]">
-        Affiliate links — same price to you.
-      </p>
+      {primaryIsGo || secondaryIsGo ? (
+        <p className="mt-4 text-xs font-normal text-[var(--brand-ink-muted)]">
+          {primaryIsGo && secondaryIsGo
+            ? "Affiliate links — same price to you."
+            : "Affiliate link — same price to you."}
+        </p>
+      ) : null}
     </aside>
   );
 }
