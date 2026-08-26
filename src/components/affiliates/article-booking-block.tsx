@@ -30,7 +30,7 @@ export function ArticleBookingBlockCard({ block, articleSlug }: Props) {
 
   return (
     <aside
-      className="surface-card my-10 border border-[color-mix(in_srgb,var(--brand-cta)_14%,transparent)] bg-white p-6 md:my-12 md:p-8"
+      className="surface-card my-10 h-auto border border-[color-mix(in_srgb,var(--brand-cta)_14%,transparent)] bg-white p-6 md:my-12 md:p-8"
       aria-label={block.title}
     >
       <div className="surface-card-bar" aria-hidden />

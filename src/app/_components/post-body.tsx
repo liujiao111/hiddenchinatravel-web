@@ -104,7 +104,7 @@ export function PostBody({
       )}
     >
       <ArticleToc items={toc} placement="desktop" />
-      <div className="min-w-0 xl:col-start-2 xl:row-start-1">
+      <div className="min-w-0 xl:col-start-2 xl:row-start-1 xl:self-start">
         <ArticleToc items={toc} placement="mobile" />
         {article}
       </div>
