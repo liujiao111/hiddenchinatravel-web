@@ -1,13 +1,15 @@
 import Container from "@/app/_components/container";
-import { MoreStories } from "@/app/_components/more-stories";
 import { PageHeading } from "@/app/_components/page-heading";
+import { GuideArticleGroups } from "@/app/survival-guides/_components/guide-article-groups";
+import { GuideHubGrid } from "@/app/survival-guides/_components/guide-hub-grid";
 import { getAllPosts } from "@/lib/api";
+import { getGuideDirectory } from "@/lib/content/survival-guides-directory";
 import { SITE_LAST_UPDATED } from "@/lib/constants";
 import type { Metadata } from "next";
 
 const pageTitle = "China Travel Guides for Independent Visitors";
 const pageDescription =
-  "Practical China prep for independent travelers — visas, payments, internet, and maps — plus how to plan an itinerary without a tour."
+  "China prep by topic — payments, internet, trains, hotels, tickets, visa — then the long-form guides under each hub.";
 
 export const metadata: Metadata = {
   title: pageTitle,
@@ -29,18 +31,19 @@ export const metadata: Metadata = {
 };
 
 export default function SurvivalGuidesPage() {
-  const posts = getAllPosts();
+  const { hubs, groups } = getGuideDirectory(getAllPosts());
 
   return (
     <main>
       <Container>
         <PageHeading
           title="China travel guides for independent visitors"
-          description="Long-form prep for visas, apps, trains, and daily systems — and a hub for planning an independent itinerary before you polish day-by-day sightseeing."
+          description="Start with a topic hub — the same map as the Survival Guides menu — then open the long-form guide. Payments, SIM, trains, hotels, tickets, visa."
           lastUpdated={SITE_LAST_UPDATED}
         />
-        {posts.length > 0 ? (
-          <MoreStories posts={posts} />
+        <GuideHubGrid hubs={hubs} />
+        {groups.length > 0 ? (
+          <GuideArticleGroups groups={groups} />
         ) : (
           <p className="mb-32 text-base font-light text-[var(--brand-ink-muted)] md:text-lg">
             New guides are on the way. Check back soon.

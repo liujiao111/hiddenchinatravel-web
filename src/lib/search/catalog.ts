@@ -39,9 +39,10 @@ export const staticSearchCatalog: SearchItem[] = [
     id: "page-survival-guides",
     title: "Survival Guides",
     href: "/survival-guides",
-    description: "Step-by-step guides for payments, transport, and daily life in China.",
+    description:
+      "All China travel guides by topic hub — payments, internet, trains, hotels, tickets, visa.",
     type: "page",
-    keywords: ["guides", "articles", "blog"],
+    keywords: ["guides", "articles", "blog", "topic hubs"],
   },
   {
     id: "page-china-destinations",
