@@ -85,10 +85,6 @@ export function ArticleBookingBlockCard({ block, articleSlug }: Props) {
           )
         ) : null}
       </div>
-      <p className="mt-4 text-xs font-normal text-[var(--brand-ink-muted)]">
-        Some links are affiliate — at no extra cost to you. Our primary advice
-        stays commission-neutral.
-      </p>
     </aside>
   );
 }

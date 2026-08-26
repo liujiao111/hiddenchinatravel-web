@@ -193,8 +193,24 @@ export default function PrivacyPage() {
                   /go/…
                 </code>
                 ). If you book or buy through them, we may earn a small
-                commission at no extra cost to you. Click tracking may record
-                that a link was used — not your payment details.
+                commission at no extra cost to you. Typical examples are eSIM,
+                VPN, and hotel-search tools in free guides.
+              </p>
+              <p>
+                This is separate from paid itinerary planning. Partner advice
+                does not take hotel, attraction, or OTA kickbacks. Optional
+                booking help is a stated service fee, with an invoice. See{" "}
+                <Link
+                  href="/about#transparency"
+                  className="font-bold underline underline-offset-4"
+                >
+                  About — Transparency
+                </Link>{" "}
+                for the same distinction in plain language.
+              </p>
+              <p>
+                Click tracking may record that a link was used — not your
+                payment details.
               </p>
             </Section>
 

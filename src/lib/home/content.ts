@@ -186,7 +186,7 @@ export const homeWhyUs = {
     {
       id: "commission",
       title: "Transparent fees, your side first",
-      body: "We don't take kickbacks from hotels or attractions — only a clear service fee, with invoices provided.",
+      body: "Itinerary advice stays on your side — we don't take hotel or attraction kickbacks. If we book for you, you pay a clear service fee, with an invoice.",
     },
   ],
 } as const;

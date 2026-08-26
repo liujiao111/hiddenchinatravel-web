@@ -496,21 +496,16 @@ Hero 主按钮下方 hint（不标价）：
 3. 如果写的是信息性内容，推荐要克制，不要全篇像销售页
 4. 推荐必须与文章主题高度相关
 5. 优先真实帮助用户，而不是为了插链接而插链接
-6. 如果页面含联盟推荐，文案中应考虑清晰 disclosure，语言要自然直接
+6. **联盟披露只放页脚**（并把行程规划不吃回扣 / 指南工具链接可能有联盟 这两件事说开）。Why Us / 服务页只讲规划中立。不要在页面、卡片、预订条或文章正文里再写 "some links are affiliate" / Disclosure / Partner link。
+7. `/go/xxx` 链接继续使用 `rel="sponsored"`；不要为了披露再加可见横幅。评测文用亲身使用经历说话即可，不必在文首加佣金说明。
 
 
 
 ### 推荐使用的 disclosure 文案
 
+#### 页脚 / 站点级（唯一可见披露）
 
-
-#### 长版
-
-This article contains affiliate links. If you book or buy through them, I may earn a small commission at no extra cost to you.
-
-#### 短版
-
-This post contains affiliate links at no extra cost to you.
+Itinerary advice does not take hotel or attraction kickbacks. Some tool links in our guides may be affiliate — at no extra cost to you.
 
 ---
 

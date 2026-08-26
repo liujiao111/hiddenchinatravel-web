@@ -285,10 +285,6 @@ export function HubPage({ hub }: Props) {
                 >
                   {hub.affiliateExit.ctaLabel}
                 </a>
-                <p className="mt-4 text-xs font-normal text-[var(--brand-ink-muted)]">
-                  Affiliate link — at no extra cost to you. Guides above stay
-                  commission-neutral.
-                </p>
               </div>
             </section>
           ) : null}

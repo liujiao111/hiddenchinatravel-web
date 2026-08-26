@@ -71,9 +71,6 @@ export function RelatedPaymentGuides() {
           ahead of the trip for clearer mid-market pricing versus airport cash
           desks. Compare fees for your corridor before you commit.
         </p>
-        <p className="text-xs font-normal text-[var(--brand-muted)]">
-          This post contains affiliate links at no extra cost to you.
-        </p>
       </div>
     </section>
   );

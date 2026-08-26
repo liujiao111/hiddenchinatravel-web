@@ -139,8 +139,8 @@ const en: Dictionary = {
     disclaimer:
       "Practical guidance for independent travelers — not official visa, immigration, or government advice. Always verify with official sources before you go.",
     affiliateDisclosure:
-      "Some links may be affiliate links—at no extra cost to you.",
-    affiliateLearnMore: "Learn more",
+      "Itinerary advice does not take hotel or attraction kickbacks. Some tool links in our guides may be affiliate — at no extra cost to you.",
+    affiliateLearnMore: "How this works",
   },
   home: {
     eyebrow: "For Independent visitors to China",
@@ -212,8 +212,9 @@ const zh: Dictionary = {
     partners: "规划师合作",
     disclaimer:
       "面向独立旅行者的实用参考，不构成官方签证、移民或政府建议。出行前请核对官方信息来源。",
-    affiliateDisclosure: "部分链接可能为联盟推广链接，对你不额外收费。",
-    affiliateLearnMore: "了解更多",
+    affiliateDisclosure:
+      "行程规划不拿酒店或景点回扣。指南里的部分工具链接可能是联盟推广，价格对你不变。",
+    affiliateLearnMore: "了解规则",
   },
   home: {
     eyebrow: "写给独立自由行的旅行者",

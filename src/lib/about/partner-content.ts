@@ -139,7 +139,7 @@ export const whyChooseUs: WhyUsBlock[] = [
     id: "vs-agency",
     title: "Why us when agencies offer free itineraries?",
     paragraphs: [
-      "We do not take commissions from attractions, hotels, or OTAs. There is no inventory to push — recommendations stay on your side.",
+      "For itinerary advice, we do not take commissions from attractions, hotels, or OTAs. There is no inventory to push — recommendations stay on your side.",
       "Planning is one-to-one, not a recycled template. Optional paid on-trip help (business hours, China time) can walk you through paths like finding a hospital after a sprain — information support, not 24/7 concierge.",
       "Agencies sell standardized days. We plan distinctive days — famous sights when they matter, plus local craft, neighborhoods, and everyday culture.",
       "If we book tickets or hotels for you, we issue an invoice and charge only a service fee.",
