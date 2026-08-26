@@ -22,10 +22,7 @@ Here’s the part that nobody explains upfront: **you didn’t do anything wrong
 
 That’s not a glitch. That’s the system working exactly as intended — just not for you. Welcome to China’s **real-name registration system (实名制, shí míng zhì)**.
 
-These two guides sit side by side — they do not replace each other:
-
-- **Filling 姓名 + 身份证号码 right now** → [Chinese ID number vs passport](/chinese-id-number-foreigners)
-- **Why the SIM / app / hotel chain still fails after the fields look right** → this page
+Stuck on a screen that only wants **姓名** and **身份证号码**? What to type is [Chinese ID number vs passport](/chinese-id-number-foreigners). This page is the rest of it: why a correct passport still fails at a SIM counter, a hotel computer, or an app backend.
 
 **Confused by China’s real-name verification rules?** This guide is part of our [Travel China Guide for Foreigners](/independent-travel-china), where we explain the practical systems foreign travelers need to understand before visiting China, including passport verification, hotel registration, ticket booking, payments, internet access, and common app restrictions.
 

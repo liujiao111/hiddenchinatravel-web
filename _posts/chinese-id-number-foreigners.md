@@ -4,7 +4,7 @@ seoTitle: "Chinese ID vs Passport: What Foreigners Enter (2026)"
 excerpt: "Apps asking for a Chinese ID number and name? Tourists cannot get a 身份证. Switch to 护照, copy your passport photo page, and never borrow someone else’s ID."
 coverImage: "/assets/blog/chinese-id-number-foreigners/cover.webp"
 date: "2026-08-26T08:00:00+00:00"
-dateModified: "2026-08-26T11:00:00+00:00"
+dateModified: "2026-08-26T12:00:00+00:00"
 author:
   name: "Joy Liu"
   picture: "/assets/blog/authors/joy-liu.jpg"
@@ -38,128 +38,124 @@ faqs:
   - question: "Is a foreigner permanent residence ID the same as a Chinese ID?"
     answer: "No. The Foreign Permanent Resident ID Card is only for people who already hold Chinese permanent residency. Tourists, visa-free visitors, and typical work or study visa holders do not have one. Use the passport you showed immigration."
 ---
-A ticket mini-program, a hotel Wi‑Fi portal, or Alipay opens two boxes: **姓名** (name) and **身份证号码** (ID number). You only have a passport. The 18-digit box will not take a passport number.
+The mini-program wants two things: **姓名** and **身份证号码**. You have a passport. The number box wants 18 digits. Yours has letters. The name box looks like it wants Chinese characters.
 
-People who search for a “real Chinese ID and name” usually have this screen in front of them. **Tourists cannot get a Chinese national ID.** Enter a passport — not someone else’s number.
+I get why people Google a “real Chinese ID and name” at that point. I *have* a 身份证 — I grew up with one. You do not get one as a tourist, and you should not go looking for somebody else’s. What you enter is your passport.
 
-This page is the **field guide**: what to type. The companion [real-name system article](/china-real-name-system-foreigners) is the **system guide**: why SIM counters and app backends still fail after the fields are right. Use both. Neither replaces the other.
+If the fields are already right and a SIM shop or hotel computer still rejects you, that is the other half of this: [why foreign passports get blocked](/china-real-name-system-foreigners).
 
 ![Open passport on a hotel desk next to a phone showing a Chinese identity form](/assets/blog/chinese-id-number-foreigners/passport-and-phone-desk.webp "Passport is the document foreigners use in China")
 
 ## Quick Answer: What to Enter Instead of a Chinese ID Number
 
-When a form asks for a Chinese ID number and name:
+1. Find **证件类型** and choose **护照 / passport**, not 身份证.
+2. Copy **姓名** from the passport photo page — middle names included, same spelling.
+3. Put your passport number in the ID field only if that field is for a passport. Do not add zeros until it looks 18 digits long.
+4. If there is no passport option, stop. That screen is for Chinese IDs. Use the hotel desk, [Trip.com tickets](/go/trip-tickets), or [Alipay’s foreigner setup](/alipay-for-foreigners-china).
 
-1. Find **证件类型** (document type) and choose **护照 / passport** — not 身份证.
-2. Copy **姓名** from the passport **photo page**, including middle names.
-3. Fill the number field only if it is for a passport. Do not pad zeros to 18 digits.
-4. No passport option means this channel is for Chinese citizens. Do not retry the same screen. Switch: hotel front desk, [Trip.com tickets](/go/trip-tickets), or [Alipay foreigner setup](/alipay-for-foreigners-china).
-
-Do not use a friend’s ID, a number from search results, or a generated string. The check hits a government database. Wrong numbers fail. Someone else’s numbers are illegal.
+Do not type a friend’s number, or anything you found in a search result. Those checks hit a government database. Fake numbers bounce. Someone else’s number can get the account frozen — and you cannot prove the booking is yours at the gate.
 
 ## Chinese ID Number vs Passport
 
-Locals carry a **Resident Identity Card** (居民身份证), usually called **身份证**. The number on it is the citizen identity number — the “Chinese ID number” in English searches.
+身份证 is the card in every Chinese wallet. The number on it is lifelong. Banks, trains, SIMs, Alipay — they were all built to look that number up.
 
-That card is not a visa, not a tourist permit, and not something you pick up for a two-week trip. A passport number is a different identifier. It will not checksum as an ID, and it is not in the citizen database.
+It is not a visa. It is not a tourist extra you buy at the police station. Your passport number is a different kind of ID. Padding it with zeros does not turn it into a 身份证.
 
-Chinese systems were built to look up 身份证 in real time. Your passport is a legal substitute that was bolted on later. That is why some screens never show 护照 — not because you filled the box wrong. The longer version of that mismatch (format, data, process, the SIM chain) stays on the [real-name article](/china-real-name-system-foreigners).
+Some apps never added a 护照 option. That is not you being bad at forms. It is the app still assuming everyone is local. The messy version of that — format, databases, the shop that has never registered a foreigner — is in the [real-name guide](/china-real-name-system-foreigners).
 
 ## What to Type: 姓名 + 证件号码
 
-Chinese forms usually want **two fields together**. The trap is assuming 身份证号码 is a generic “ID” box.
+The form wants a pair, not “any ID.”
 
 | You see | Chinese | A local enters | You enter |
 | --- | --- | --- | --- |
-| Name | 姓名 | Legal name in **Chinese characters** | Passport photo-page name, Latin letters, same order |
-| ID number | 身份证号码 / 证件号码 | 18-character citizen identity number | **Passport number**, after switching type to 护照 |
+| Name | 姓名 | Chinese characters | The name on your passport photo page, Latin letters, same order |
+| ID number | 身份证号码 / 证件号码 | 18-character citizen number | Passport number, *after* switching the type to 护照 |
 | Document type | 证件类型 | 身份证 | 护照 / Passport / Foreigner |
 
 ![Phone screenshot of a Chinese real-name form with 护照 selected and a specimen passport number](/assets/blog/chinese-id-number-foreigners/identity-form-passport-dropdown.webp "Choose 护照 before you type a number")
 
-The screenshot is a teaching mockup (specimen name and `P00000000`). Real apps differ, but the move is the same: **change 证件类型 first.** If you type a passport number into an 身份证 box, the format check fails before anyone reads your name.
+That screenshot is a teaching mockup (`JANE Q SAMPLE`, `P00000000`). Your app will look slightly different. The move is the same: **change 证件类型 before you type a number.** Drop a passport number into an 身份证 box and it fails on format — the name never even gets read.
 
-**姓名 rules that actually matter:**
+**姓名 is where I see people mess up:**
 
-- Match the **photo page**, not the boarding pass, not the short name on a bank card, not a WeChat nickname.
-- Keep middle names if they are on the passport.
-- Do not reverse the order to “look Chinese.” Follow the passport unless the form splits surname / given name.
-- Once Alipay or WeChat Pay stores a name, use that same string on hotels and trains. Mismatches are a common reason [verification fails](/alipay-wechat-pay-verification-failed).
+- Copy the photo page, not the boarding pass, not the short name on your bank card, not your WeChat nickname.
+- If the passport has a middle name, keep it.
+- Do not flip the order to “look Chinese.”
+- Once Alipay has a name on file, use that same string for hotels and trains. Mixed spellings are a common reason [verification fails](/alipay-wechat-pay-verification-failed).
 
 ## If There Is No Passport Option
 
-You did not miss a hidden checkbox. Some kiosks, older Wi‑Fi portals, compound gates, and cheap ticket sellers never added a foreigner path.
+You did not miss a menu. A lot of kiosks, old hotel Wi‑Fi portals, and cheap ticket sellers never built a foreigner path.
 
 ![Two phones: empty resident-ID form versus passport form for foreigners](/assets/blog/chinese-id-number-foreigners/id-form-wrong-vs-passport.webp "Left is the citizen path. Right is the one foreigners need.")
 
-**Has 护照 in the dropdown** → select it, copy the photo page, stop.
+**Dropdown has 护照** — pick it, copy the photo page, done.
 
-**Only 身份证** → do not invent a number. Ask staff to switch document type on their terminal, or move to a platform that already stores your passport (Alipay, Trip.com, a hotel booking you already finished).
+**Only 身份证** — do not invent a number. Ask staff to switch the type on *their* computer, or go somewhere that already has your passport: Alipay, Trip.com, the hotel you already booked.
 
-**You already saved the wrong document type** → stop retrying. In 12306 / Trip.com, open the passenger list and delete the Chinese-ID profile, then add a passport passenger. In Alipay, back out of 实名认证 and restart as Foreigner — do not keep submitting the 18-digit box. Repeated failures can trigger payment risk control.
+**You already saved the wrong type** — stop hitting submit. On 12306 or Trip.com, delete that passenger and add a passport one. In Alipay, leave 实名认证 and start again as Foreigner. Hammering the same 18-digit box can lock the payment side too.
 
-A “deal” that only accepts 身份证 is not a deal for you. Skip that vendor.
+If a “deal” only takes 身份证, skip it. It was not priced for you.
 
 ## If Alipay Asks for a Chinese ID Number
 
-You took the **resident** entrance. Foreigner setup is **Foreigner → Passport → photo page + selfie**, not 身份证号码.
+You walked into the local entrance. Foreigners are supposed to go **Foreigner → Passport → photo page + a short selfie**, not fill 身份证号码.
 
-1. If you see **居民身份证** or an 18-digit box, do not type anything. Tap back.
-2. Look for **外国 / Foreigner / Passport / 护照**. In current Alipay tourist flows this is the identity prompt after signup, not the citizen 实名认证 form.
-3. Choose **Passport**. Photograph the **photo page** in daylight, full MRZ visible. Then do the short selfie / blink check.
-4. Link a Visa or Mastercard after identity clears — that is a card step, not an ID step.
-5. If the app still says verification failed after a real passport scan, stop and use the [verification failed guide](/alipay-wechat-pay-verification-failed). Do not invent an ID to “just get through.”
+1. See **居民身份证** or an 18-digit box? Type nothing. Tap back.
+2. Look for **外国 / Foreigner / Passport / 护照**. On the tourist flow this usually shows up right after signup — it is not the same screen as citizen 实名认证.
+3. Choose Passport. Photograph the photo page in daylight, whole page, MRZ readable. Then the blink / turn-your-head clip.
+4. Linking a Visa or Mastercard comes after identity. That is a card check, not an ID check.
+5. Still “verification failed” after a real passport scan? Stop and use the [verification failed guide](/alipay-wechat-pay-verification-failed). Do not invent an ID to get through.
 
 ![Alipay passport identity verification screen for foreigners](/assets/blog/alipay-for-foreigners-china/alipay-passport-verification-screen.webp "Alipay foreigner path uses a passport scan, not 身份证")
 
-Full tap path, card linking, and what “Real Name Verification Failed” usually means: [Alipay for foreigners](/alipay-for-foreigners-china). WeChat Pay is the same idea (passport, not 身份证) with a clunkier foreigner flow — [WeChat Pay for foreigners](/wechat-pay-for-foreigners-china).
+The full setup — download, card, what usually breaks — is in [Alipay for foreigners](/alipay-for-foreigners-china). WeChat Pay is the same idea, just clumsier: [WeChat Pay for foreigners](/wechat-pay-for-foreigners-china).
 
 ## Hotels, Trains, and Tickets: Which Field to Use
 
-Same passport, different labels. Two or three sentences, then the guide that has the taps.
+**Hotels.** Front desk takes the physical passport. Online, use the same spelling and number as that page. Not every property will check you in — [hotels that accept foreigners](/hotels-in-china-for-foreigners).
 
-**Hotels.** The front desk registers you with the **physical passport**. Online booking should use the same spelling and number. Book places that accept foreign guests: [hotels in China for foreigners](/hotels-in-china-for-foreigners).
+**Trains.** 12306 and Trip.com both have a passport passenger type. Do not build yourself a Chinese-ID passenger. [How to book high-speed rail](/book-china-high-speed-rail-foreigners).
 
-**High-speed rail.** 12306 and Trip.com have a passport / foreigner passenger type. Do not create a Chinese-ID passenger for yourself. [Book high-speed rail as a foreigner](/book-china-high-speed-rail-foreigners).
+**Tickets.** Official mini-programs often default to 身份证. Hunt for 护照, or buy in English. [Attraction tickets for foreigners](/china-attraction-ticket-booking-foreigners-2026). Timed entry is a separate headache: [why sights require reservations](/why-china-attractions-require-reservations).
 
-**Attraction tickets.** Official mini-programs often default to 身份证. Look for 护照, or buy in English. [Attraction tickets for foreigners](/china-attraction-ticket-booking-foreigners-2026). Timed-entry sights are the same pattern: [why reservations exist](/why-china-attractions-require-reservations).
+**SIMs.** The carrier system wants 身份证. You register in person with a passport at a real store, not a mall kiosk. If someone offers to put the number under *their* ID, say no — it is their account, and they can kill it. [SIM guide](/china-sim-card-for-foreigners).
 
-**SIM cards.** Carriers were built for 身份证. Register in person with your passport at an official store. If a kiosk offers to put the number under *their* ID, refuse — you cannot recover it. [China SIM for foreigners](/china-sim-card-for-foreigners).
+**Meituan / delivery.** That fight is usually the phone number, not an ID. [Ordering food without a Chinese number](/order-food-china-without-chinese-number).
 
-**Meituan / food delivery.** These usually want a **phone number and a working payment app**, not a Chinese ID. Different problem: [order food without a Chinese number](/order-food-china-without-chinese-number).
-
-If you are stuck *tonight* — form will not take a passport, and you still need a ticket or a bed — use an English path that already stores passport details, then finish the rest of day-one setup with the [Survival Kit](/survival-kit).
+Stuck tonight — no passport field, still need a bed or a ticket — use an English checkout that already stores a passport, then the rest of day-one setup is in the [Survival Kit](/survival-kit).
 
 ## Can You Use Someone Else’s Chinese ID?
 
-No. The form is blunt, so people search for a name plus an 18-digit number. Those lists are leaked data or invented checksums.
+No.
 
-Pasting one into Alipay, WeChat, 12306, or a hotel form can fail verification, freeze the account, or fail at the gate when the name does not match your passport. Using another person’s identity is illegal.
+Those “name + number” lists are leaked data or made-up checksums. Paste one into Alipay or 12306 and you either fail the check, freeze the account, or get stopped at the gate when the name is not yours. It is also illegal.
 
-The working version is boring: **your passport, your name, one spelling**, on every booking.
+Use your passport. Same spelling, every booking.
 
 ## FAQ
 
-**Do foreigners need a Chinese ID number to travel in China in 2026?** No. You need a valid passport and platforms that accept it. Payments, hotels, and trains have foreigner paths if you pick them.
+**Do foreigners need a Chinese ID number to travel in China in 2026?** No. You need a passport, and you need the screens that accept it.
 
-**I searched for a real Chinese ID and name. What should I type?** Your passport. Switch 证件类型 to 护照. If that option does not exist, change channel — do not paste a number from the internet.
+**I searched for a real Chinese ID and name. What should I type?** Your passport. Switch 证件类型 to 护照. If that option is missing, change the app or the vendor. Do not paste a number from the internet.
 
-**Can I convert my passport number into Chinese ID format?** No. Different systems. Padding zeros does not create a citizen identity number.
+**Can I convert my passport number into Chinese ID format?** No. Extra zeros do not create a citizen number.
 
-**My name has no Chinese characters. Will 姓名 fail?** On citizen-only forms, yes. On foreigner forms, Latin letters from the passport are expected. Do not invent a Chinese name for a tourist booking.
+**My name has no Chinese characters. Will 姓名 fail?** On a citizen-only form, yes. On a foreigner form, Latin letters from the passport are what they want. Do not invent a Chinese name for a tourist booking.
 
-**Is the Foreign Permanent Resident ID Card the same thing?** No. That card is only for people who already hold Chinese permanent residency. It is not issued at the airport and not bundled with visa-free entry. Short trips use the passport from immigration.
+**Is the Foreign Permanent Resident ID the same thing?** No. That card is for people who already have Chinese permanent residency. It does not come with a tourist stay or visa-free entry. Use the passport you showed at the border.
 
-**Someone at a SIM kiosk offered to register the number under their ID.** Refuse. The number is tied to their identity and can be shut off. Official store, your passport — [SIM guide](/china-sim-card-for-foreigners).
+**A SIM kiosk wanted to register the number under their ID.** Refuse. [Do it with your passport at an official store](/china-sim-card-for-foreigners).
 
-**I already entered the wrong document type.** Stop. Remove the bad profile if you can, add a passport profile, then continue. If payments already loop on “verification failed,” switch to the [fix guide](/alipay-wechat-pay-verification-failed).
+**I already entered the wrong document type.** Stop submitting. Delete the bad passenger or profile if you can, add a passport one. If payments are already looping, go to the [verification failed guide](/alipay-wechat-pay-verification-failed).
 
 ## Related Guides
 
-  * [China Real-Name System for Foreigners](/china-real-name-system-foreigners) — why the chain still breaks after the fields are right
-  * [Alipay for Foreigners](/alipay-for-foreigners-china) — passport scan and foreign-card setup
-  * [Alipay or WeChat Pay Verification Failed?](/alipay-wechat-pay-verification-failed) — when the scan or SMS already failed
+  * [China Real-Name System for Foreigners](/china-real-name-system-foreigners) — the chain after the fields
+  * [Alipay for Foreigners](/alipay-for-foreigners-china)
+  * [Alipay or WeChat Pay Verification Failed?](/alipay-wechat-pay-verification-failed)
   * [Hotels in China for Foreigners](/hotels-in-china-for-foreigners)
   * [Travel China Essentials](/china-travel-essentials)
 
-_Last updated: August 2026. App screens change. Use your own passport, and confirm 证件类型 on the screen in front of you. Mockup images use specimen data, not real identity numbers._
+_Last updated: August 2026. Screens change. Use your own passport. Mockup images use specimen data, not real ID numbers._
