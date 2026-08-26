@@ -3,30 +3,42 @@ import { PageHeading } from "@/app/_components/page-heading";
 import { GuideArticleGroups } from "@/app/survival-guides/_components/guide-article-groups";
 import { GuideHubGrid } from "@/app/survival-guides/_components/guide-hub-grid";
 import { getAllPosts } from "@/lib/api";
-import { getGuideDirectory } from "@/lib/content/survival-guides-directory";
-import { SITE_LAST_UPDATED } from "@/lib/constants";
+import {
+  SURVIVAL_GUIDES_SEO,
+  getGuideDirectory,
+  survivalGuidesJsonLd,
+} from "@/lib/content/survival-guides-directory";
+import {
+  HOME_OG_IMAGE_URL,
+  SITE_LAST_UPDATED,
+  SITE_NAME,
+} from "@/lib/constants";
 import type { Metadata } from "next";
 
-const pageTitle = "China Travel Guides for Independent Visitors";
-const pageDescription =
-  "China prep by topic — payments, internet, trains, hotels, tickets, visa — then the long-form guides under each hub.";
+const { title, description, keywords, path, h1, intro } = SURVIVAL_GUIDES_SEO;
+const ogImage = { url: HOME_OG_IMAGE_URL, alt: title };
 
 export const metadata: Metadata = {
-  title: pageTitle,
-  description: pageDescription,
+  title: { absolute: title },
+  description,
+  keywords: [...keywords],
   alternates: {
-    canonical: "/survival-guides",
+    canonical: path,
   },
   openGraph: {
-    title: pageTitle,
-    description: pageDescription,
     type: "website",
-    url: "/survival-guides",
+    locale: "en_US",
+    siteName: SITE_NAME,
+    title,
+    description,
+    url: path,
+    images: [ogImage],
   },
   twitter: {
     card: "summary_large_image",
-    title: pageTitle,
-    description: pageDescription,
+    title,
+    description,
+    images: [HOME_OG_IMAGE_URL],
   },
 };
 
@@ -35,10 +47,16 @@ export default function SurvivalGuidesPage() {
 
   return (
     <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(survivalGuidesJsonLd(hubs, groups)),
+        }}
+      />
       <Container>
         <PageHeading
-          title="China travel guides for independent visitors"
-          description="Start with a topic hub — the same map as the Survival Guides menu — then open the long-form guide. Payments, SIM, trains, hotels, tickets, visa."
+          title={h1}
+          description={intro}
           lastUpdated={SITE_LAST_UPDATED}
         />
         <GuideHubGrid hubs={hubs} />

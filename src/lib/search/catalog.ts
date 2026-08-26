@@ -40,9 +40,15 @@ export const staticSearchCatalog: SearchItem[] = [
     title: "Survival Guides",
     href: "/survival-guides",
     description:
-      "All China travel guides by topic hub — payments, internet, trains, hotels, tickets, visa.",
+      "Topic hubs and long-form China travel guides for foreigners in 2026 — Alipay, eSIM and VPN, trains, hotels, tickets, and visa-free entry.",
     type: "page",
-    keywords: ["guides", "articles", "blog", "topic hubs"],
+    keywords: [
+      "guides",
+      "articles",
+      "blog",
+      "topic hubs",
+      "China travel guides",
+    ],
   },
   {
     id: "page-china-destinations",

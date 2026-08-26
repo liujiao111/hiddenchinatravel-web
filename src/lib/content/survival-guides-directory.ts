@@ -2,8 +2,32 @@ import type { Post } from "@/interfaces/post";
 import { resolveArticleHub } from "@/lib/content/article-related";
 import { getAllHubs } from "@/lib/hubs/api";
 import type { Hub } from "@/lib/hubs/types";
+import { SITE_NAME, SITE_URL } from "@/lib/constants";
 import { guidesNav } from "@/lib/navigation";
-import { pageCanonicalPath } from "@/lib/seo/canonical";
+import {
+  absoluteCanonicalUrl,
+  pageCanonicalPath,
+} from "@/lib/seo/canonical";
+
+/** Shared by <title>, H1, OG, and JSON-LD so SERP copy stays one intent. */
+export const SURVIVAL_GUIDES_SEO = {
+  path: "/survival-guides",
+  title: "China Travel Guides for Foreigners (2026)",
+  h1: "China travel guides for foreigners in 2026",
+  description:
+    "Topic hubs and long-form China travel guides for foreigners in 2026 — Alipay, eSIM and VPN, trains, hotels, attraction tickets, and visa-free entry.",
+  intro:
+    "Start with a topic hub — payments, internet, trains, hotels, tickets, visa — then open the long-form guide. Same map as the Survival Guides menu, written for independent visitors in 2026.",
+  keywords: [
+    "China travel guides",
+    "China travel guides for foreigners",
+    "China survival guides",
+    "Alipay for foreigners",
+    "China visa-free 2026",
+    "eSIM China",
+    "China high-speed rail",
+  ],
+} as const;
 
 export type GuideDirectoryHub = {
   href: string;
@@ -102,4 +126,78 @@ export function getGuideDirectory(posts: Post[]): {
   }
 
   return { hubs, groups };
+}
+
+export function survivalGuidesJsonLd(
+  hubs: GuideDirectoryHub[],
+  groups: GuideDirectoryGroup[],
+) {
+  const url = absoluteCanonicalUrl(SURVIVAL_GUIDES_SEO.path);
+  const articles = groups.flatMap((group) => group.posts);
+
+  return {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "CollectionPage",
+        "@id": `${url}#webpage`,
+        url,
+        name: SURVIVAL_GUIDES_SEO.title,
+        description: SURVIVAL_GUIDES_SEO.description,
+        isPartOf: { "@id": `${SITE_URL}/#website` },
+        about: {
+          "@type": "Thing",
+          name: "China travel guides for foreigners",
+        },
+        hasPart: hubs.map((hub) => ({
+          "@type": "WebPage",
+          name: hub.title,
+          url: absoluteCanonicalUrl(hub.href),
+          description: hub.description,
+        })),
+      },
+      {
+        "@type": "ItemList",
+        "@id": `${url}#hubs`,
+        name: "China travel topic hubs",
+        numberOfItems: hubs.length,
+        itemListElement: hubs.map((hub, index) => ({
+          "@type": "ListItem",
+          position: index + 1,
+          name: hub.title,
+          url: absoluteCanonicalUrl(hub.href),
+        })),
+      },
+      {
+        "@type": "ItemList",
+        "@id": `${url}#guides`,
+        name: "China travel guides",
+        numberOfItems: articles.length,
+        itemListElement: articles.map((post, index) => ({
+          "@type": "ListItem",
+          position: index + 1,
+          name: post.title,
+          url: absoluteCanonicalUrl(`/${post.slug}`),
+        })),
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": `${url}#breadcrumb`,
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: SITE_NAME,
+            item: SITE_URL,
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: SURVIVAL_GUIDES_SEO.title,
+            item: url,
+          },
+        ],
+      },
+    ],
+  };
 }
