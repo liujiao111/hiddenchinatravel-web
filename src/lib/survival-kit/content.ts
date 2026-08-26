@@ -404,11 +404,6 @@ export const kitInsuranceSection: KitPrepSectionData = {
             href: "/survival-kit#section-practical",
             trackingModule: "insurance-practical",
           },
-          secondaryCta: {
-            label: "Why travelers buy cover",
-            href: "/china-visa-free-countries-2026",
-            trackingModule: "insurance-guide",
-          },
         },
       ],
     },

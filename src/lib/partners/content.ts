@@ -23,7 +23,7 @@ export const partnersPageCopy = {
     items: [
       "If a traveler you refer completes a paid itinerary and agrees in writing, their note can appear on /reviews — not a quote from you",
       "A guest or co-reviewed practical guide in our itinerary-planning hub",
-      "A referral path: you send an independent traveler; we plan locally and stay commission-neutral",
+      "A referral path: you send an independent traveler; we plan locally on a service fee, with no hotel or OTA markup",
     ],
   },
   cta: {

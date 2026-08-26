@@ -25,10 +25,10 @@ export const prepOffers: PrepOffer[] = [
     id: "vpn",
     title: "VPN for China",
     description:
-      "Some apps and sites behave differently in China. Install and test your VPN before departure — not at the gate.",
+      "Hotel Wi-Fi and local SIMs usually need a VPN. Short trips on eSIM mobile data often do not. Install before you fly if hotel Wi-Fi is in the plan.",
     guideLabel: "Read VPN guide",
     guideHref: "/do-you-need-vpn-china",
-    affiliateLabel: "Compare VPN options",
+    affiliateLabel: "Get NordVPN",
     affiliateHref: "/go/nordvpn",
     icon: "vpn",
   },

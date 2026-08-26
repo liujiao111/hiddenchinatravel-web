@@ -41,7 +41,7 @@ subtopics:
     articles:
       - title: "Best VPN for China in 2026"
         href: /best-vpn-for-china
-        excerpt: "What still works after LetsVPN shut down — practical options tested for travel, hotel Wi-Fi, and backup access."
+        excerpt: "What still works after LetsVPN shut down — NordVPN is what the author uses (slow hotel connects); ExpressVPN is a simpler app not daily-tested in China."
         badge: "VPN Pick"
         status: published
       - title: "China SIM Card for Foreigners"

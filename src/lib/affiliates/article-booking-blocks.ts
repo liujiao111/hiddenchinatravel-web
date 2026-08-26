@@ -114,7 +114,7 @@ const blocksBySlug: Record<string, ArticleBookingBlock> = {
   "digital-survival-china-internet-guide": {
     eyebrow: "Set up before you fly",
     title: "Sort data + VPN before departure",
-    body: "eSIM for mobile data, VPN for hotel Wi-Fi and blocked apps — set both up at home when you can. I use NordVPN. ExpressVPN is a simpler backup I have not daily-tested in China.",
+    body: "eSIM for mobile data, VPN for hotel Wi-Fi and local SIMs — set those up at home when they apply. I use NordVPN. ExpressVPN is a simpler backup I have not daily-tested in China.",
     primary: { label: "Get Airalo eSIM", href: "/go/airalo" },
     secondary: { label: "Get NordVPN", href: "/go/nordvpn" },
   },
