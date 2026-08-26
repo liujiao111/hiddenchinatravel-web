@@ -2,6 +2,8 @@ import Avatar from "./avatar";
 import CoverImage from "./cover-image";
 import DateFormatter from "./date-formatter";
 import { PostTitle } from "@/app/_components/post-title";
+import { ArticleLeadAffiliateCta } from "@/components/affiliates/article-booking-block";
+import { getArticleBookingBlock } from "@/lib/affiliates/article-booking-blocks";
 import { type Author } from "@/interfaces/author";
 
 type Props = {
@@ -9,12 +11,31 @@ type Props = {
   coverImage: string;
   date: string;
   author: Author;
+  articleSlug?: string;
 };
 
-export function PostHeader({ title, coverImage, date, author }: Props) {
+export function PostHeader({
+  title,
+  coverImage,
+  date,
+  author,
+  articleSlug,
+}: Props) {
+  const bookingBlock = getArticleBookingBlock(articleSlug);
+
   return (
     <>
-      <PostTitle>{title}</PostTitle>
+      <PostTitle className={bookingBlock?.lead ? "mb-6 md:mb-8" : undefined}>
+        {title}
+      </PostTitle>
+      {bookingBlock?.lead ? (
+        <div className="mx-auto mb-8 max-w-3xl md:mb-10 md:text-left">
+          <ArticleLeadAffiliateCta
+            block={bookingBlock}
+            articleSlug={articleSlug}
+          />
+        </div>
+      ) : null}
       <div className="hidden md:block md:mb-12">
         <Avatar name={author.name} picture={author.picture} />
       </div>

@@ -21,6 +21,10 @@
   @apply underline underline-offset-4 transition-colors duration-500 hover:text-[var(--brand-cta)];
 }
 
+.markdown a[href^="/go/"] {
+  @apply font-bold text-[var(--brand-cta)];
+}
+
 .markdown strong {
   @apply font-bold text-[var(--brand-ink)];
 }

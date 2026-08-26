@@ -4,7 +4,7 @@ seoTitle: "China SIM for Foreigners 2026: Buy, Setup, Mistakes"
 excerpt: "Buying a China SIM as a foreigner in 2026: passport + face scan, Unicom vs eSIM, when you need a +86 number, and the store mistakes that get you rejected."
 coverImage: "/assets/blog/china-sim-card-for-foreigners/cover.webp"
 date: "2026-03-19T06:46:13+00:00"
-dateModified: "2026-08-10T14:00:00+00:00"
+dateModified: "2026-08-26T12:00:00+00:00"
 author:
   name: "Joy Liu"
   picture: "/assets/blog/authors/joy-liu.jpg"
@@ -71,9 +71,10 @@ The key tradeoff: international eSIMs bypass the Great Firewall without a VPN, w
 
 **In practice, here’s how most people decide:**
 
-  * **Under 2 weeks, mainly maps and browsing** → International eSIM. Buy one from [Airalo](/go/airalo) or [Nomad](https://www.getnomad.app/) before you leave. No queues, no face scan, works the moment you land.
-  * **2+ weeks, or you want WeChat Pay / local app access** → Physical SIM. Takes 30 minutes at a store but you’ll be glad you did it.
+  * **Under 2 weeks, mainly maps and browsing** → Buy a travel eSIM before you fly so data works at the airport. [Get an Airalo China eSIM](/go/airalo). No queues, no face scan.
+  * **2+ weeks, or you want WeChat Pay / local app SMS** → Physical SIM. Takes 30 minutes at a store but you’ll be glad you did it.
   * **Heading to western China (Tibet, Xinjiang, rural Sichuan)** → Physical SIM from China Telecom specifically, which has the strongest coverage out west.
+  * **Landing tonight with no eSIM** → Official carrier store or airport counter (below). Do not wait for a mall kiosk.
 
 C**an foreigners buy SIM cards in China?**
 
@@ -109,7 +110,7 @@ There’s also a second thing worth understanding: in China’s app ecosystem, y
 
 **Check your phone’s band compatibility.** Most iPhones from XR onwards and flagship Android phones are broadly compatible with Chinese networks. Midrange or older devices may miss key bands. You can check at [GSMArena](https://www.gsmarena.com/) or [frequencycheck.com](https://www.frequencycheck.com/) — search your exact model against China Unicom or China Mobile.
 
-**Install a VPN before you arrive.** This is non-negotiable if you want to use Google, WhatsApp, Instagram, or Gmail while in China. VPN apps are blocked on the Chinese App Store and Google Play, so you have to install one before you cross the border. Reliable options include [NordVPN](/go/nordvpn), and Others. Buy the subscription and install the app before you board.
+**Install a VPN before you arrive.** This is non-negotiable if you want to use Google, WhatsApp, Instagram, or Gmail on hotel Wi-Fi or a local SIM. VPN apps are blocked on the Chinese App Store and Google Play, so you have to install one before you cross the border. [Get NordVPN](/go/nordvpn), buy the subscription, and install the app before you board.
 
 **Decide where to buy your SIM:**
 

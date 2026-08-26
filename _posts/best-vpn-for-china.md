@@ -45,7 +45,7 @@ _I’ve been going back and forth between the Philippines and mainland China for
 
 ## Does LetsVPN still work in China in 2026?
 
-**No.** LetsVPN shut down mainland China operations in early 2026. Do not plan a trip around it. Install and test another travel VPN before you fly — details below.
+**No.** LetsVPN shut down mainland China operations in early 2026. Do not plan a trip around it. [Get NordVPN](/go/nordvpn), install it, and test once before you fly — details below.
 
 **What happened with LetsVPN**
 

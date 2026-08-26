@@ -1,7 +1,13 @@
 /**
- * High-intent article → optional booking / compare block (before End CTA → Planner).
- * Affiliates stay secondary; copy is calm and scenario-based.
+ * High-intent article → booking / setup block (before End CTA).
+ * `lead` renders a compact solid CTA under the title (first viewport).
  */
+
+export type ArticleLeadCta = {
+  eyebrow: string;
+  title: string;
+  hint?: string;
+};
 
 export type ArticleBookingBlock = {
   eyebrow: string;
@@ -9,25 +15,32 @@ export type ArticleBookingBlock = {
   body: string;
   primary: { label: string; href: string };
   secondary?: { label: string; href: string };
+  /** Compact first-viewport CTA. Omit to skip the lead bar. */
+  lead?: ArticleLeadCta;
 };
 
 const blocksBySlug: Record<string, ArticleBookingBlock> = {
   "hotels-in-china-for-foreigners": {
-    eyebrow: "Optional booking path",
-    title: "Ready to lock a hotel?",
-    body: "Trip.com works in English with many foreign cards — useful once you know the area and dates.",
-    primary: { label: "Browse Trip.com hotels", href: "/go/trip-hotels" },
+    eyebrow: "Book in English",
+    title: "Search hotels that accept foreign passports",
+    body: "Trip.com filters properties that can check you in. Booking.com often does not — confirm Guests Accepted before you pay.",
+    primary: { label: "Search Trip.com hotels", href: "/go/trip-hotels" },
     secondary: { label: "Get Free Survival Kit", href: "/survival-kit" },
+    lead: {
+      eyebrow: "Before you book",
+      title: "Use Trip.com, not Booking.com",
+      hint: "Filter for hotels that accept foreign passports.",
+    },
   },
   "book-china-high-speed-rail-foreigners": {
-    eyebrow: "Optional booking path",
+    eyebrow: "Book in English",
     title: "Book trains in English",
-    body: "When passport booking on official apps feels stuck, Trip.com trains is a practical fallback.",
+    body: "When passport booking on official apps feels stuck, Trip.com trains is the practical fallback — same 12306 inventory, foreign cards.",
     primary: { label: "Open Trip.com trains", href: "/go/trip-trains" },
     secondary: { label: "Transport hub", href: "/transport-in-china" },
   },
   "china-attraction-ticket-booking-foreigners-2026": {
-    eyebrow: "Optional booking path",
+    eyebrow: "Book in English",
     title: "Check English ticket inventory",
     body: "For popular sights, confirm availability on Trip.com before wrestling with official Chinese apps.",
     primary: { label: "Browse Trip.com tickets", href: "/go/trip-tickets" },
@@ -35,50 +48,75 @@ const blocksBySlug: Record<string, ArticleBookingBlock> = {
       label: "Tickets hub",
       href: "/attraction-tickets-in-china",
     },
+    lead: {
+      eyebrow: "Book in English",
+      title: "Check tickets on Trip.com first",
+      hint: "Foreign cards and passport checkout — before WeChat mini-programs.",
+    },
   },
   "why-china-attractions-require-reservations": {
-    eyebrow: "Optional booking path",
+    eyebrow: "Book in English",
     title: "Reserve timed entry early",
     body: "If the official channel is sold out or unclear, check English listings on Trip.com as a backup path.",
     primary: { label: "Browse Trip.com tickets", href: "/go/trip-tickets" },
   },
   "best-esim-for-china-travel": {
-    eyebrow: "Compare options",
-    title: "Pick data before you fly",
-    body: "Airalo is the simple data specialist; Trip.com eSIM fits if you already book hotels there.",
+    eyebrow: "Set up before you fly",
+    title: "Get a mainland China eSIM",
+    body: "Airalo is the default for a first China data eSIM. Confirm the plan says Mainland China — not Hong Kong or Macau only.",
     primary: { label: "Get Airalo eSIM", href: "/go/airalo" },
     secondary: { label: "Trip.com eSIM", href: "/go/trip-esim" },
+    lead: {
+      eyebrow: "Data before you land",
+      title: "Get an Airalo eSIM for mainland China",
+      hint: "Install at home. Confirm the plan says Mainland China, not Hong Kong only.",
+    },
   },
   "china-sim-card-for-foreigners": {
-    eyebrow: "Compare options",
-    title: "Need data without a local SIM first?",
-    body: "Many short-trip visitors start with a travel eSIM, then decide on a +86 SIM only if they need SMS codes.",
+    eyebrow: "Short trip?",
+    title: "Need data before the store queue?",
+    body: "Under two weeks and you only need maps and WhatsApp: start with a travel eSIM. Buy a +86 SIM later if you need SMS codes.",
     primary: { label: "Get Airalo eSIM", href: "/go/airalo" },
     secondary: { label: "Internet hub", href: "/internet-in-china" },
+    lead: {
+      eyebrow: "Landing in under two weeks?",
+      title: "Start with an Airalo eSIM",
+      hint: "Skip the airport queue unless you need a +86 number for SMS.",
+    },
   },
   "best-vpn-for-china": {
-    eyebrow: "Compare options",
-    title: "Install and test before you land",
-    body: "NordVPN is our usual travel pick; ExpressVPN if you already prefer that app.",
-    primary: { label: "Try NordVPN", href: "/go/nordvpn" },
+    eyebrow: "Install at home",
+    title: "Get NordVPN before you land",
+    body: "NordVPN is the travel pick we actually run in China. Install and test once at home — hotel Wi-Fi is a bad place to start.",
+    primary: { label: "Get NordVPN", href: "/go/nordvpn" },
     secondary: { label: "ExpressVPN", href: "/go/expressvpn" },
+    lead: {
+      eyebrow: "Install at home",
+      title: "Get NordVPN before you land",
+      hint: "Hotel Wi-Fi is a bad place to start. 30-day refund.",
+    },
   },
   "do-you-need-vpn-china": {
-    eyebrow: "Compare options",
-    title: "If you decide you need a VPN",
-    body: "Install at home and test once — hotel Wi-Fi is a bad place to start from zero.",
-    primary: { label: "Try NordVPN", href: "/go/nordvpn" },
+    eyebrow: "Hotel Wi-Fi",
+    title: "If you’ll use hotel Wi-Fi, install before you fly",
+    body: "Short trips on eSIM mobile data often skip a VPN. Hotel and public Wi-Fi usually cannot. NordVPN, tested at home, is the usual add-on.",
+    primary: { label: "Get NordVPN", href: "/go/nordvpn" },
     secondary: { label: "VPN comparison guide", href: "/best-vpn-for-china" },
+    lead: {
+      eyebrow: "If you’ll use hotel Wi-Fi",
+      title: "Install NordVPN before you fly",
+      hint: "eSIM data is often enough for a few days. Hotel networks usually are not.",
+    },
   },
   "digital-survival-china-internet-guide": {
-    eyebrow: "Optional setup path",
+    eyebrow: "Set up before you fly",
     title: "Sort data + VPN before departure",
     body: "eSIM for mobile data, VPN for hotel Wi-Fi and blocked apps — set both up at home when you can.",
     primary: { label: "Get Airalo eSIM", href: "/go/airalo" },
-    secondary: { label: "Try NordVPN", href: "/go/nordvpn" },
+    secondary: { label: "Get NordVPN", href: "/go/nordvpn" },
   },
   "digital-survival-china-transport-guide": {
-    eyebrow: "Optional booking path",
+    eyebrow: "Book in English",
     title: "Trains and tickets in English",
     body: "Use Trip.com when you want foreign-card checkout for intercity trains or attraction tickets.",
     primary: { label: "Trip.com trains", href: "/go/trip-trains" },

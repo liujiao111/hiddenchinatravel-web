@@ -3,7 +3,7 @@ title: "China Hotels for Foreigners (2026): No Rejection Guide"
 excerpt: "Not all hotels in China accept foreign passports — and some won't tell you until you're standing at the desk. Here's how to book the right ones and what to do if you still get turned away."
 coverImage: "/assets/blog/hotels-in-china-for-foreigners/cover.webp"
 date: "2026-04-07T08:44:39+00:00"
-dateModified: "2026-06-08T12:58:33+00:00"
+dateModified: "2026-08-26T12:00:00+00:00"
 author:
   name: "Joy Liu"
   picture: "/assets/blog/authors/joy-liu.jpg"
@@ -38,6 +38,8 @@ Yes — this still happens in 2026.
 If you’re traveling in China, knowing which hotels accept foreigners can make or break your trip.
 
 This guide will show you exactly how to book hotels in China that accept foreigners, avoid rejection, and handle police registration without stress.
+
+The reliable path: book on [Trip.com](/go/trip-hotels) and confirm **Guests Accepted** before you pay. Booking.com often cannot tell you until you are at the desk.
 
 ## Why Some Hotels Reject Foreigners
 
