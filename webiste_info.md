@@ -37,9 +37,15 @@ Hidden China Travel
 
 > Tell us your cities and days. We send a 1-on-1 PDF route — not a tour template. Survival Kit prep is included so payments and data work on day one.
 
-Hero 主按钮下方 hint（不标价）：
+Hero 主按钮下方分流（不标价；「guides」链到 `/survival-guides`）：
+
+> Already know the cities? Use the Kit and the guides — you don't need to pay. Hire us when the route itself still isn't clear.
+
+品牌质感第二行（不标价）：
 
 > Old lanes, quiet cafés, neighborhood food, and the corners only locals name — not a group-tour checklist.
+
+系统类指南 / Hub / Survival Guides 目录文末：说明 **何时该雇我们**（路线没排清才付费 PDF），不要把每篇 Alipay / 签证 / 身份证文章都硬推成「Plan my China trip」。行程规划类文章仍可主推规划器。
 
 ### 核心受众
 

@@ -2,6 +2,32 @@
 
 export const PRIMARY_CTA_LABEL = "Plan my China trip";
 export const SECONDARY_CTA_LABEL = "Get Free Survival Kit";
+export const PLANNER_HREF = "/china-itinerary-planner";
+export const SURVIVAL_GUIDES_HREF = "/survival-guides";
+export const SURVIVAL_KIT_HREF = "/survival-kit";
+
+/**
+ * DIY vs paid split — homepage, guide index/hubs, and systems article ends.
+ * Guides stay enough for forms and apps; pay only when the route is the problem.
+ */
+export const WHEN_TO_HIRE = {
+  eyebrow: "When to hire us",
+  bandLead:
+    "The guides are enough for payments, data, trains, hotels, tickets, and forms.",
+  bandBody:
+    "A custom itinerary PDF is for when the route itself — which cities, how many days, what to skip — still isn't clear.",
+  diyLabel: "Stay in the guides",
+  diyHref: SURVIVAL_GUIDES_HREF,
+  allGuidesLabel: "All survival guides",
+  kitLabel: SECONDARY_CTA_LABEL,
+  kitHref: SURVIVAL_KIT_HREF,
+  hireLabel: PRIMARY_CTA_LABEL,
+  hireHref: PLANNER_HREF,
+  systemsBridge: "You don't need a custom itinerary to finish this setup.",
+  systemsValue:
+    "Hire us when cities, days, and pace still aren't clear. If you only needed this system working, this page is the whole job.",
+  systemsTrust: "Guides stay free. Pay only when the route needs a local.",
+} as const;
 
 export const ON_TRIP_PRICE = 29.9;
 export const ON_TRIP_PRICE_LABEL = "$29.90";

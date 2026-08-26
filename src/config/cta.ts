@@ -3,6 +3,12 @@
  * Variants keyed by post `section` (frontmatter) with fuzzy matching.
  */
 
+import {
+  PLANNER_HREF,
+  PRIMARY_CTA_LABEL,
+  WHEN_TO_HIRE,
+} from "@/lib/trust/copy";
+
 export type InlineCtaCopy = {
   lead: string;
   linkLabel: string;
@@ -10,13 +16,19 @@ export type InlineCtaCopy = {
   trackingEvent: string;
 };
 
+export type EndCtaIntent = "planner" | "systems";
+
 export type EndCtaCopy = {
+  intent: EndCtaIntent;
   bridge: string;
   valueProp: string;
   buttonLabel: string;
   href: string;
   trust?: string;
   trackingEvent: string;
+  /** DIY path — systems articles should not only sell the PDF */
+  secondaryLabel?: string;
+  secondaryHref?: string;
 };
 
 export type ArticleCtaVariantId =
@@ -31,7 +43,21 @@ export type ArticleCtaVariantId =
   | "tickets"
   | "essentials";
 
-const PLANNER_HREF = "/china-itinerary-planner";
+const SYSTEMS_VARIANTS: ReadonlySet<ArticleCtaVariantId> = new Set([
+  "visa",
+  "payments",
+  "internet",
+  "maps",
+  "transport",
+  "food",
+  "hotels",
+  "tickets",
+  "essentials",
+]);
+
+export function isSystemsCtaVariant(variant: ArticleCtaVariantId): boolean {
+  return SYSTEMS_VARIANTS.has(variant);
+}
 
 export const inlineCtaDefault: InlineCtaCopy = {
   lead: "Want a local to sequence this?",
@@ -43,96 +69,63 @@ export const inlineCtaDefault: InlineCtaCopy = {
 /** Troubleshooting pages where a mid-article itinerary ask interrupts the form. */
 export const SKIP_INLINE_CTA_SLUGS = new Set(["chinese-id-number-foreigners"]);
 
+function systemsEnd(bridge: string): EndCtaCopy {
+  return {
+    intent: "systems",
+    bridge,
+    valueProp: WHEN_TO_HIRE.systemsValue,
+    buttonLabel: WHEN_TO_HIRE.hireLabel,
+    href: WHEN_TO_HIRE.hireHref,
+    secondaryLabel: WHEN_TO_HIRE.diyLabel,
+    secondaryHref: WHEN_TO_HIRE.diyHref,
+    trust: WHEN_TO_HIRE.systemsTrust,
+    trackingEvent: "article_end_cta_click",
+  };
+}
+
 export const endCtaByVariant: Record<ArticleCtaVariantId, EndCtaCopy> = {
   default: {
+    intent: "planner",
     bridge:
       "Guides cover the systems. A custom PDF covers city order, pace, and what to skip.",
     valueProp:
-      "One-to-one planning with local, independent-travel clarity — not a tour template.",
-    buttonLabel: "Plan my China trip",
+      "One-to-one planning with local, independent-travel clarity — not a tour template. If you only needed a form or an app working, stay in the guides.",
+    buttonLabel: PRIMARY_CTA_LABEL,
     href: PLANNER_HREF,
     trust: "Your local partner for independent China travel.",
     trackingEvent: "article_end_cta_click",
   },
-  visa: {
-    bridge: "Visa path checked? Turn it into a simple day-by-day plan.",
-    valueProp:
-      "Map cities and days around your entry rules — before you book the hard-to-change pieces.",
-    buttonLabel: "Plan my China trip",
-    href: PLANNER_HREF,
-    trust: "Practical entry guidance paired with a calm itinerary start.",
-    trackingEvent: "article_end_cta_click",
-  },
-  payments: {
-    bridge: "Payments sorted? Next is a route that won’t leave you guessing on day one.",
-    valueProp:
-      "Build a simple China itinerary once Alipay, cards, and backups are under control.",
-    buttonLabel: "Plan my China trip",
-    href: PLANNER_HREF,
-    trackingEvent: "article_end_cta_click",
-  },
-  internet: {
-    bridge: "Data and VPN ready? Sketch the cities you’ll actually visit.",
-    valueProp:
-      "Stay connected for maps and bookings — then lock in a clear route.",
-    buttonLabel: "Plan my China trip",
-    href: PLANNER_HREF,
-    trackingEvent: "article_end_cta_click",
-  },
-  maps: {
-    bridge: "Navigation figured out? Put the places on a day-by-day path.",
-    valueProp:
-      "Turn map apps into a practical China route — without overplanning.",
-    buttonLabel: "Plan my China trip",
-    href: PLANNER_HREF,
-    trackingEvent: "article_end_cta_click",
-  },
-  transport: {
-    bridge: "Got rides and trains sorted? Next is lining up the cities so day one connects.",
-    valueProp:
-      "Sketch a simple China route — then DiDi, metro, and high-speed rail actually fit together.",
-    buttonLabel: "Plan my China trip",
-    href: PLANNER_HREF,
-    trackingEvent: "article_end_cta_click",
-  },
-  food: {
-    bridge: "Eating well on the ground starts with knowing where you’ll be.",
-    valueProp:
-      "Build a simple city flow — then enjoy food apps without the scramble.",
-    buttonLabel: "Plan my China trip",
-    href: PLANNER_HREF,
-    trackingEvent: "article_end_cta_click",
-  },
-  hotels: {
-    bridge: "Hotels work best when the nights match the route.",
-    valueProp:
-      "Sketch cities and days first — then book foreigner-friendly stays with confidence.",
-    buttonLabel: "Plan my China trip",
-    href: PLANNER_HREF,
-    trackingEvent: "article_end_cta_click",
-  },
-  tickets: {
-    bridge: "Popular sights sell out — a clear route tells you what to book early.",
-    valueProp:
-      "Plan the days, then reserve tickets for the stops that need them.",
-    buttonLabel: "Plan my China trip",
-    href: PLANNER_HREF,
-    trackingEvent: "article_end_cta_click",
-  },
-  essentials: {
-    bridge: "Essentials covered? Turn prep into a calm first itinerary.",
-    valueProp:
-      "Practical China travel planning for foreigners — one clear next step.",
-    buttonLabel: "Plan my China trip",
-    href: PLANNER_HREF,
-    trust: "Written for first-time visitors, not tour-board marketing.",
-    trackingEvent: "article_end_cta_click",
-  },
+  visa: systemsEnd("You don't need a custom itinerary to finish a visa check."),
+  payments: systemsEnd(
+    "You don't need a custom itinerary to get payments working.",
+  ),
+  internet: systemsEnd(
+    "You don't need a custom itinerary to get data or a VPN working.",
+  ),
+  maps: systemsEnd(
+    "You don't need a custom itinerary to get maps working on the ground.",
+  ),
+  transport: systemsEnd(
+    "You don't need a custom itinerary to book a train or a DiDi.",
+  ),
+  food: systemsEnd(
+    "You don't need a custom itinerary to order food on the ground.",
+  ),
+  hotels: systemsEnd(
+    "You don't need a custom itinerary to check in as a foreign guest.",
+  ),
+  tickets: systemsEnd(
+    "You don't need a custom itinerary to book an attraction ticket.",
+  ),
+  essentials: systemsEnd(
+    "You don't need a custom itinerary to finish this prep step.",
+  ),
 };
 
 /** Map WordPress/frontmatter section strings → variant id */
 const SECTION_VARIANT_RULES: { match: RegExp; variant: ArticleCtaVariantId }[] =
   [
+    { match: /itinerary|planning/i, variant: "default" },
     { match: /visa|entry/i, variant: "visa" },
     { match: /payment|alipay|wechat pay/i, variant: "payments" },
     { match: /internet|vpn|sim|esim/i, variant: "internet" },
@@ -172,8 +165,25 @@ export function getInlineCtaCopy(): InlineCtaCopy {
   return inlineCtaDefault;
 }
 
-export function getEndCtaCopy(variant: ArticleCtaVariantId): EndCtaCopy {
-  return endCtaByVariant[variant] ?? endCtaByVariant.default;
+export function getEndCtaCopy(
+  variant: ArticleCtaVariantId,
+  options?: { diyHref?: string; diyLabel?: string },
+): EndCtaCopy {
+  const copy = endCtaByVariant[variant] ?? endCtaByVariant.default;
+  if (copy.intent !== "systems") return copy;
+  return {
+    ...copy,
+    secondaryHref: options?.diyHref ?? copy.secondaryHref,
+    secondaryLabel: options?.diyLabel ?? copy.secondaryLabel,
+  };
+}
+
+export function shouldSkipInlineCta(
+  variant: ArticleCtaVariantId,
+  articleSlug?: string,
+): boolean {
+  if (articleSlug && SKIP_INLINE_CTA_SLUGS.has(articleSlug)) return true;
+  return isSystemsCtaVariant(variant);
 }
 
 /** Minimum eligible paragraphs before showing mid-article CTA */

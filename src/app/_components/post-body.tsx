@@ -9,7 +9,7 @@ import {
   getEndCtaCopy,
   getInlineCtaCopy,
   resolveArticleCtaVariant,
-  SKIP_INLINE_CTA_SLUGS,
+  shouldSkipInlineCta,
 } from "@/config/cta";
 import { getArticleBookingBlock } from "@/lib/affiliates/article-booking-blocks";
 import { extractH2Toc, TOC_MIN_ITEMS } from "@/lib/article-toc";
@@ -41,11 +41,17 @@ export function PostBody({
 }: Props) {
   const variant = resolveArticleCtaVariant(section, keywords);
   const inlineCopy = getInlineCtaCopy();
-  const endCopy = getEndCtaCopy(variant);
-  const bookingBlock = getArticleBookingBlock(articleSlug);
-  const skipInlineCta = Boolean(
-    articleSlug && SKIP_INLINE_CTA_SLUGS.has(articleSlug),
+  const endCopy = getEndCtaCopy(
+    variant,
+    hub
+      ? {
+          diyHref: hub.href,
+          diyLabel: `More in ${hub.label}`,
+        }
+      : undefined,
   );
+  const bookingBlock = getArticleBookingBlock(articleSlug);
+  const skipInlineCta = shouldSkipInlineCta(variant, articleSlug);
   const { before, after, inserted } = skipInlineCta
     ? { before: content, after: "", inserted: false }
     : splitHtmlForInlineCta(content);

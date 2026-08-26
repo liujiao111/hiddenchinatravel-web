@@ -9,7 +9,7 @@ type Props = {
 
 export function GuideArticleGroups({ groups }: Props) {
   return (
-    <div id="all-guides" className="mb-24 space-y-14 md:mb-32 md:space-y-16">
+    <div id="all-guides" className="mb-12 space-y-14 md:mb-16 md:space-y-16">
       <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-[var(--brand-mango)]">
         All guides
       </p>
