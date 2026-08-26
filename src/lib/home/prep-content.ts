@@ -81,7 +81,7 @@ export const homePrepSteps: HomePrepStep[] = [
     step: 2,
     kind: "buy-menus",
     title: "Get online before you land",
-    body: "Data + a VPN backup so maps, messages, and payments still work on day one.",
+    body: "eSIM for mobile data on landing. Add a VPN only if you will use hotel Wi-Fi or a local SIM.",
     menus: [
       {
         buttonLabel: "Compare other eSIMs",
@@ -223,8 +223,8 @@ export const homePrepSteps: HomePrepStep[] = [
       href: "/survival-kit#section-practical",
     },
     guide: {
-      label: "Why travelers buy cover",
-      href: "/china-visa-free-countries-2026",
+      label: "Insurance in the Survival Kit",
+      href: "/survival-kit#section-insurance",
     },
   },
 ];

@@ -21,7 +21,7 @@ Configure in WhatsApp Business (phone) or WhatsApp Web → Settings → Business
 |---|---|
 | Display name | `Hidden China Travel` (Meta may review 1–3 days) |
 | Category | Travel company / Travel & tourism |
-| Description | Local partner for independent China travel — custom itineraries, booking help & on-trip support. Based in Kunming, China. Not a tour agency; commission-neutral advice. Mon–Fri 9AM–9PM China time. |
+| Description | Local partner for independent China travel — custom itineraries, booking help & on-trip support. Based in Kunming, China. Not a tour agency. Paid planning is fee-only; some guides include labeled affiliate links. Mon–Fri 9AM–9PM China time. |
 | Hours | Mon–Fri 09:00–21:00, Asia/Shanghai |
 | Website | https://hiddenchinatravel.com |
 | Email | joy.liu@hiddenchinatravel.com |

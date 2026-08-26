@@ -143,7 +143,7 @@ const en: Dictionary = {
     disclaimer:
       "Practical guidance for independent travelers — not official visa, immigration, or government advice. Always verify with official sources before you go.",
     affiliateDisclosure:
-      "Some links may be affiliate links—at no extra cost to you.",
+      "Some links are affiliate links — we may earn a commission; same price to you. Paid itinerary planning is fee-only.",
     affiliateLearnMore: "Learn more",
   },
   home: {
@@ -220,7 +220,8 @@ const zh: Dictionary = {
     partners: "规划师合作",
     disclaimer:
       "面向独立旅行者的实用参考，不构成官方签证、移民或政府建议。出行前请核对官方信息来源。",
-    affiliateDisclosure: "部分链接可能为联盟推广链接，对你不额外收费。",
+    affiliateDisclosure:
+      "部分链接为联盟推广，我们可能获得佣金，对你不额外收费。付费行程规划按服务费收取，不拿 OTA 佣金。",
     affiliateLearnMore: "了解更多",
   },
   home: {

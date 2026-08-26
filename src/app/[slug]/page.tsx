@@ -52,6 +52,7 @@ export default async function PostPage(props: Params) {
             title={post.title}
             coverImage={post.coverImage}
             date={post.date}
+            dateModified={post.dateModified}
             author={post.author}
             articleSlug={post.slug}
           />

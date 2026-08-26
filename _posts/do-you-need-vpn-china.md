@@ -149,7 +149,7 @@ Don’t want to tinker| eSIM first on mobile data. I use NordVPN if hotel Wi-Fi 
 
 If you’re adding a VPN: **install at home, test Google once.** A second app is a hotel-Wi-Fi backup, not the default. Details: [Best VPN for China](/best-vpn-for-china).
 
-**[Compare VPNs for China →](/best-vpn-for-china)** · **[Get NordVPN →](/go/nordvpn)**
+**[Compare VPNs for China →](/best-vpn-for-china)**
 
 ## Related guides
 

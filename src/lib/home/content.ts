@@ -1,5 +1,7 @@
 /** Homepage + destinations hub shared content (intent-layered IA). */
 
+import { FEES } from "@/lib/trust/copy";
+
 /** Hero search shortcuts — high-intent queries → articles/tools */
 export const homePopularSearches = [
   { label: "vpn", href: "/do-you-need-vpn-china" },
@@ -185,8 +187,8 @@ export const homeWhyUs = {
     },
     {
       id: "commission",
-      title: "Transparent fees, your side first",
-      body: "We don't take kickbacks from hotels or attractions — only a clear service fee, with invoices provided.",
+      title: FEES.homepagePointTitle,
+      body: FEES.homepagePointBody,
     },
   ],
 } as const;

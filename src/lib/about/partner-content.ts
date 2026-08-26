@@ -3,7 +3,7 @@
  * Source of truth for messaging: webiste_info.md §1 / §1.1
  */
 
-import { PRIMARY_CTA_LABEL, SECONDARY_CTA_LABEL } from "@/lib/trust/copy";
+import { FEES, PRIMARY_CTA_LABEL, SECONDARY_CTA_LABEL } from "@/lib/trust/copy";
 
 export const partnerHero = {
   eyebrow: "Local partner",
@@ -69,7 +69,7 @@ export const partnerServices: PartnerService[] = [
     phase: "During your trip",
     label: "Optional",
     title: "Ticket & hotel booking help",
-    body: "Need something booked locally? We can help. We stay commission-neutral with attractions and hotels — if we book for you, we charge a clear service fee and can provide an invoice.",
+    body: FEES.bookingHelp,
     accent: "palm",
   },
 ];
@@ -139,7 +139,8 @@ export const whyChooseUs: WhyUsBlock[] = [
     id: "vs-agency",
     title: "Why us when agencies offer free itineraries?",
     paragraphs: [
-      "We do not take commissions from attractions, hotels, or OTAs. There is no inventory to push — recommendations stay on your side.",
+      FEES.vsAgencyLead,
+      FEES.affiliatesHelp,
       "Planning is one-to-one, not a recycled template. Optional paid on-trip help (business hours, China time) can walk you through paths like finding a hospital after a sprain — information support, not 24/7 concierge.",
       "Agencies sell standardized days. We plan distinctive days — famous sights when they matter, plus local craft, neighborhoods, and everyday culture.",
       "If we book tickets or hotels for you, we issue an invoice and charge only a service fee.",
