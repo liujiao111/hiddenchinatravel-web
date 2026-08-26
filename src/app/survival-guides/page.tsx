@@ -2,6 +2,7 @@ import Container from "@/app/_components/container";
 import { PageHeading } from "@/app/_components/page-heading";
 import { GuideArticleGroups } from "@/app/survival-guides/_components/guide-article-groups";
 import { GuideHubGrid } from "@/app/survival-guides/_components/guide-hub-grid";
+import { WhenToHireBand } from "@/components/cta";
 import { getAllPosts } from "@/lib/api";
 import {
   SURVIVAL_GUIDES_SEO,
@@ -61,7 +62,10 @@ export default function SurvivalGuidesPage() {
         />
         <GuideHubGrid hubs={hubs} />
         {groups.length > 0 ? (
-          <GuideArticleGroups groups={groups} />
+          <>
+            <GuideArticleGroups groups={groups} />
+            <WhenToHireBand surface="index" className="mb-24 md:mb-32" />
+          </>
         ) : (
           <p className="mb-32 text-base font-light text-[var(--brand-ink-muted)] md:text-lg">
             New guides are on the way. Check back soon.

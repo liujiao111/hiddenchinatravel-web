@@ -1,4 +1,5 @@
 import { AffiliateClickTracker } from "@/components/affiliates/affiliate-click-tracker";
+import { WhenToHireBand } from "@/components/cta";
 import type { Hub } from "@/lib/hubs/types";
 import Link from "next/link";
 import { HubFaq } from "./hub-faq";
@@ -27,6 +28,7 @@ export function HubPage({ hub }: Props) {
     ...(hub.relatedHubs?.length
       ? [{ id: "related-hubs", label: "Related hubs" }]
       : []),
+    { id: "when-to-hire", label: "When to hire us" },
   ];
 
   const primaryCta = hub.toolCTA[0];
@@ -331,6 +333,10 @@ export function HubPage({ hub }: Props) {
               </ul>
             </section>
           ) : null}
+
+          <div id="when-to-hire" className="scroll-mt-28">
+            <WhenToHireBand />
+          </div>
 
           <footer className="flex flex-wrap items-center gap-x-6 gap-y-3 border-t border-[color-mix(in_srgb,var(--brand-cream-border)_40%,transparent)] pt-8 text-sm font-bold tracking-tight text-[var(--brand-ink-muted)]">
             <a

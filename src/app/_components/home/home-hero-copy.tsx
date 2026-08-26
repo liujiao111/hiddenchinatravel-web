@@ -35,7 +35,17 @@ export function HomeHeroCopy() {
             {copy.secondaryCta}
           </Link>
         </div>
-        <p className="mt-4 max-w-md text-xs font-normal leading-relaxed text-[var(--brand-ink)] [text-shadow:0_1px_0_rgba(250,246,239,0.9),0_0_20px_rgba(250,246,239,0.8)] md:text-sm">
+        <p className="mt-4 max-w-lg text-xs font-normal leading-relaxed text-[var(--brand-ink)] [text-shadow:0_1px_0_rgba(250,246,239,0.9),0_0_20px_rgba(250,246,239,0.8)] md:text-sm">
+          {copy.ctaSplitBefore}
+          <Link
+            href="/survival-guides"
+            className="font-bold underline decoration-[color-mix(in_srgb,var(--brand-ink)_35%,transparent)] underline-offset-2 transition-colors duration-300 hover:text-[var(--brand-cta)]"
+          >
+            {copy.ctaSplitLink}
+          </Link>
+          {copy.ctaSplitAfter}
+        </p>
+        <p className="mt-2 max-w-md text-xs font-normal leading-relaxed text-[var(--brand-ink)]/80 [text-shadow:0_1px_0_rgba(250,246,239,0.9),0_0_20px_rgba(250,246,239,0.8)]">
           {copy.ctaHint}
         </p>
       </div>

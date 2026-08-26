@@ -75,7 +75,11 @@ export type Dictionary = {
     subtitle: string;
     primaryCta: string;
     secondaryCta: string;
-    /** Line under hero CTAs — local-planning character, no price */
+    /** DIY vs paid split under hero CTAs — no price */
+    ctaSplitBefore: string;
+    ctaSplitLink: string;
+    ctaSplitAfter: string;
+    /** Line under the split — local-planning character, no price */
     ctaHint: string;
   };
 };
@@ -149,6 +153,10 @@ const en: Dictionary = {
       "Tell us your cities and days. We send a 1-on-1 PDF route — not a tour template. Survival Kit prep is included so payments and data work on day one.",
     primaryCta: PRIMARY_CTA_LABEL,
     secondaryCta: SECONDARY_CTA_LABEL,
+    ctaSplitBefore: "Already know the cities? Use the Kit and the ",
+    ctaSplitLink: "guides",
+    ctaSplitAfter:
+      " — you don't need to pay. Hire us when the route itself still isn't clear.",
     ctaHint:
       "Old lanes, quiet cafés, neighborhood food, and the corners only locals name — not a group-tour checklist.",
   },
@@ -222,6 +230,10 @@ const zh: Dictionary = {
       "告诉我们城市和天数，一对一做出可独立执行的 PDF 行程——不是跟团模板。Survival Kit 行前准备包含在内，落地当天支付和网络能用。",
     primaryCta: "规划行程",
     secondaryCta: "获取免费生存套件",
+    ctaSplitBefore: "城市已经定了？用 Survival Kit 和",
+    ctaSplitLink: "指南",
+    ctaSplitAfter:
+      "就够，不必付钱。路线本身还没排清，再找我们做一对一 PDF。",
     ctaHint:
       "古巷、秘境、巷子美食、幽静小馆——按本地人的走法排，不是跟团打卡清单。",
   },
