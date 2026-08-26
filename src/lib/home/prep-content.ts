@@ -109,7 +109,7 @@ export const homePrepSteps: HomePrepStep[] = [
       {
         buttonLabel: "Compare other VPNs",
         chooseHint:
-          "NordVPN is our usual pick for phones and laptops; ExpressVPN if you prefer that app. Some links are affiliate.",
+          "NordVPN is what I use in China (slow connects on some hotel Wi-Fi). ExpressVPN is simpler — I have not used it as my daily China VPN. Some links are affiliate.",
         guide: {
           label: "VPN guide",
           href: "/best-vpn-for-china",
@@ -118,14 +118,14 @@ export const homePrepSteps: HomePrepStep[] = [
           label: "Try NordVPN",
           href: "/go/nordvpn",
           external: true,
-          hint: "Usual pick",
+          hint: "What I use",
         },
         options: [
           {
             label: "ExpressVPN",
             href: "/go/expressvpn",
             external: true,
-            hint: "Strong alternative",
+            hint: "Simpler app, not my China daily driver",
           },
         ],
       },

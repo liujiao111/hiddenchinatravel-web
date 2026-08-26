@@ -1,10 +1,10 @@
 ---
 title: "Best VPN for China in 2026: ExpressVPN vs NordVPN"
 seoTitle: "Best VPN for China 2026: ExpressVPN vs NordVPN"
-excerpt: "No VPN is always on in China. Short trips: ExpressVPN is the simple pick. I still run NordVPN — it works, but connecting can take a long time. Install both before you fly."
+excerpt: "No VPN is always on in China. I use NordVPN — it connects, but hotel Wi-Fi can take a long time. ExpressVPN is simpler; I have not used it as my daily China VPN."
 coverImage: "/assets/blog/best-vpn-for-china/cover.webp"
 date: "2026-06-27T13:53:33+00:00"
-dateModified: "2026-08-26T14:00:00+00:00"
+dateModified: "2026-08-26T16:00:00+00:00"
 author:
   name: "Joy Liu"
   picture: "/assets/blog/authors/joy-liu.jpg"
@@ -25,7 +25,7 @@ section: "Internet & VPN & SIM in China"
 sourceUrl: "https://hiddenchinatravel.com/best-vpn-for-china"
 faqs:
   - question: "What is the best VPN for China in 2026?"
-    answer: "There is no always-on winner. For a short trip, ExpressVPN is the simplest app (Automatic / Lightway). I personally still use NordVPN, but it often takes a long time to connect and needs Obfuscated Servers plus OpenVPN TCP. Install two before you fly."
+    answer: "There is no always-on winner. What I actually use is NordVPN, with Obfuscated Servers plus OpenVPN TCP — it connects, but hotel Wi-Fi can take a long time. ExpressVPN is a simpler app; I have not used it as my daily China VPN. If hotel Wi-Fi matters, install a second app as backup."
   - question: "Does LetsVPN still work in China in 2026?"
     answer: "No. LetsVPN shut down mainland operations in early 2026. Do not plan a trip around it."
   - question: "Does NordVPN work in China?"
@@ -37,28 +37,27 @@ faqs:
   - question: "Do I need a VPN if I have a travel eSIM?"
     answer: "On mobile data, many short trips skip a VPN. Hotel and public Wi-Fi usually still need one. Full split: Do you need a VPN in China?"
 ---
-_Disclosure: This guide contains affiliate links for ExpressVPN and NordVPN. If you buy through them, I may earn a small commission at no extra cost to you. I still use NordVPN myself. I have not run ExpressVPN as my daily driver in China yet — I recommend it for short trips because the app is simpler, not because I have a three-month test log._
+_Disclosure: This guide contains affiliate links for NordVPN and ExpressVPN. If you buy through them, I may earn a small commission at no extra cost to you. I use NordVPN myself. ExpressVPN is listed as a simpler backup — I have not run it as my daily China VPN._
 
 ## Quick answer
 
 **There is no VPN that always connects in China.** The firewall changes. Apps that worked last month stall on hotel Wi-Fi this month.
 
-For a **first short trip**, start with [ExpressVPN](/go/expressvpn): open the app, leave protocol on Automatic / Lightway, connect. That is the least fiddly tourist setup.
-
 **What I actually run:** [NordVPN](/go/nordvpn). It does work for Gmail, WhatsApp, and the rest — after I turn on Obfuscated Servers and OpenVPN (TCP). It is also the one that sometimes sits there for a long time before it connects. When that happens I switch Japan / Singapore / Hong Kong, or I wait. I do not pretend it is instant.
 
-**The setup that survives a bad hotel network:** install **both** at home. You cannot run two VPNs at once on one phone. You *can* switch apps in thirty seconds when one is stuck. Once you are in China, downloading a second VPN is often impossible.
+**Simpler menus, not my China log:** [ExpressVPN](/go/expressvpn) is easier to tap (Automatic / Lightway). I am not going to write a fake Guangzhou test. I have not used it as my daily China VPN. If Nord keeps timing out on hotel Wi-Fi, that is when a second app earns its slot.
 
-Not sure you need a VPN at all? Short trips on eSIM mobile data often skip it. Hotel Wi-Fi usually cannot. That split is in [Do you need a VPN in China?](/do-you-need-vpn-china).
+**Do not buy two by default.** A few days on eSIM mobile data often skip a VPN entirely. Two apps are a hotel-Wi-Fi backup, not a starter kit. Need vs not need: [Do you need a VPN in China?](/do-you-need-vpn-china).
 
-**[Get ExpressVPN →](/go/expressvpn)** · **[Get NordVPN →](/go/nordvpn)**
+**[Get NordVPN →](/go/nordvpn)** · **[Get ExpressVPN →](/go/expressvpn)**
 
 ## How to choose (one table)
 
 Your situation | What to install
 ---|---
-First China trip, 1–3 weeks, do not want to hunt settings | [ExpressVPN](/go/expressvpn) as primary. Add Nord as backup if you already pay for it.
-Already on Nord, budget, okay switching servers | Keep [NordVPN](/go/nordvpn). Turn on Obfuscated Servers + OpenVPN (TCP). Add Express if hotel Wi-Fi keeps timing out.
+Follow what I actually use | [NordVPN](/go/nordvpn). Obfuscated Servers + OpenVPN (TCP). Expect slow connects on some hotel Wi-Fi.
+Want simpler menus, accept I have not daily-tested it in China | Add [ExpressVPN](/go/expressvpn) as backup — not as a claim that Lightway always beats the firewall.
+Already on Nord | Keep it. Add Express only if hotel Wi-Fi keeps timing out.
 Work / study, need it up most days | Astrill is what long-term residents name. It costs more. I do not sell it here.
 3–5 days, mostly mobile data, almost no hotel Wi-Fi | Start with an [eSIM](/best-esim-for-china-travel). Add a VPN only if you know you will sit on hotel Wi-Fi.
 
@@ -66,7 +65,7 @@ Free VPNs and random browser extensions fail in China and are a security mess. S
 
 ## Why there is no “#1”
 
-China’s firewall does not block “VPNs” as a brand. It looks at traffic patterns. Standard OpenVPN and WireGuard look like a VPN. The apps that still work **disguise** that traffic as ordinary HTTPS — ExpressVPN’s Lightway stack, Nord’s obfuscated servers, Astrill’s StealthVPN.
+China’s firewall does not block “VPNs” as a brand. It looks at traffic patterns. Standard OpenVPN and WireGuard look like a VPN. The apps that still work **disguise** that traffic as ordinary HTTPS — Nord’s obfuscated servers, ExpressVPN’s Lightway stack, Astrill’s StealthVPN.
 
 When the firewall updates, one provider’s nodes die for hours or a day. The other may still connect. That is why people who live here keep two apps, not one favorite forever.
 
@@ -78,35 +77,13 @@ LetsVPN was the same failure, at a scale that made the news. It marketed itself 
 
 **Install before you enter China.** App Store and Play listings are unreliable once you land. Do it at home. Test Google once. Then you are not debugging an empty App Store at 1 a.m. in a hotel.
 
-## ExpressVPN — simplest for a short trip
-
-I am not going to write a fake “three months in Guangzhou” review. I have not used ExpressVPN as my daily China VPN yet. I am adding it because the setup matches how tourists actually fail: they land, tap Connect, and Nord (or whoever) sits on “Connecting…” while they have no idea about obfuscated servers.
-
-What the app is built for:
-
-- Protocol on **Automatic** (Lightway). You should not have to find a hidden stealth menu.
-- When a connection drops, Lightway is meant to come back faster than a full OpenVPN handshake — the thing that makes Nord feel slow on hotel Wi-Fi.
-- Japan, Singapore, or Hong Kong first. US/EU nodes work but feel sluggish.
-
-**Before you fly**
-
-1. Buy and install on phone and laptop → [ExpressVPN](/go/expressvpn)
-2. Log in.
-3. Protocol: Automatic. If Automatic fails later, try Lightway TCP.
-4. Connect once at home. Load Gmail.
-5. Leave the app installed. You will not re-download it in China.
-
-30-day money-back if it never connects for your trip.
-
-**[Get ExpressVPN →](/go/expressvpn)**
-
 ## NordVPN — what I actually use (including the slow part)
 
 I go back and forth between the Philippines and mainland China. After LetsVPN died I bought Nord at $14.99/month. Three months in, it is still what I open first.
 
 **What works:** Google, Gmail, Instagram, WhatsApp, banking, news — once it is up. Hong Kong is usually the lowest latency from Guangzhou. Speeds dip in the evening. I have had to reconnect a handful of times.
 
-**What is annoying:** connecting is not instant. On hotel Wi-Fi especially, I have sat through a long “Connecting…” before anything happens. Sometimes I switch Japan or Singapore and it comes up. Sometimes I wait. This is not a settings miss — Obfuscated Servers + OpenVPN (TCP) are already on. The handshake is just heavier than tourist apps that use Lightway.
+**What is annoying:** connecting is not instant. On hotel Wi-Fi especially, I have sat through a long “Connecting…” before anything happens. Sometimes I switch Japan or Singapore and it comes up. Sometimes I wait. This is not a settings miss — Obfuscated Servers + OpenVPN (TCP) are already on.
 
 If you use Nord in China, do this or it often fails completely:
 
@@ -118,9 +95,33 @@ If you use Nord in China, do this or it often fails completely:
 
 Payment: card, PayPal, Apple Pay, Google Pay, or crypto. No Chinese number, no Chinese App Store.
 
-When it stalls in China: confirm obfuscation is on, confirm you are not on NordLynx, change server, switch hotel Wi-Fi ↔ mobile data, then open the other VPN if you installed one.
+When it stalls in China: confirm obfuscation is on, confirm you are not on NordLynx, change server, switch hotel Wi-Fi ↔ mobile data, then open a second app if you installed one.
 
 **[Get NordVPN →](/go/nordvpn)**
+
+## ExpressVPN — simpler menus, not my China log
+
+I am not going to write a fake “three months in Guangzhou” review. I have not used ExpressVPN as my daily China VPN.
+
+I list it because tourists fail on fiddly menus: they land, tap Connect, and sit on “Connecting…” with no idea what obfuscated servers are. Express’s default is Automatic / Lightway. That is easier than Nord’s China settings. Easier is not the same as “I have seen it hold a Guangzhou hotel network.”
+
+What the app is built for (vendor design, not my field log):
+
+- Protocol on **Automatic** (Lightway). You should not have to find a hidden stealth menu.
+- Lightway is meant to reconnect faster than a full OpenVPN handshake. I have not timed that on Chinese hotel Wi-Fi.
+- Japan, Singapore, or Hong Kong first. US/EU nodes usually feel sluggish from the mainland.
+
+**If you add it as backup**
+
+1. Buy and install on phone and laptop → [ExpressVPN](/go/expressvpn)
+2. Log in.
+3. Protocol: Automatic. If Automatic fails later, try Lightway TCP.
+4. Connect once at home. Load Gmail.
+5. Leave the app installed. You will not re-download it in China.
+
+30-day money-back if it never connects for your trip.
+
+**[Get ExpressVPN →](/go/expressvpn)**
 
 ## Astrill — for people who live here
 
@@ -132,17 +133,17 @@ LetsVPN’s whole pitch was “永远能连上的VPN.” In early 2026 it could 
 
 ## Pre-departure checklist
 
-- VPN app(s) installed and logged in on **phone and laptop**
-- Express: Automatic / Lightway. Nord: Obfuscated + OpenVPN TCP
+- VPN app installed and logged in on **phone and laptop**
+- Nord: Obfuscated + OpenVPN TCP. Express (if you added it): Automatic / Lightway
 - One successful connect at home (Google loads)
 - Japan / Singapore / Hong Kong as the first servers you will try
 - A [China eSIM](/best-esim-for-china-travel) or a plan for a [local SIM](/china-sim-card-for-foreigners) — a VPN on a dead connection looks like a broken VPN
-- Second VPN installed if hotel Wi-Fi matters (you switch apps; you do not run both at once)
+- Second VPN only if hotel Wi-Fi matters (you switch apps; you do not run both at once)
 
 ## FAQ
 
 **What is the best VPN for China in 2026?**  
-None of them is always on. Short trip, least settings: ExpressVPN. What I use: NordVPN, with slow connects on some hotel networks. Install two.
+None of them is always on. What I use: NordVPN, with slow connects on some hotel networks. Simpler app I have not daily-tested in China: ExpressVPN. Add a second app only if hotel Wi-Fi is in the plan.
 
 **Does LetsVPN still work?**  
 No.
@@ -157,7 +158,7 @@ Often no. Do it at home.
 Not always on eSIM mobile data. Usually yes on hotel Wi-Fi. [Do you need a VPN in China?](/do-you-need-vpn-china)
 
 **What if it will not connect?**  
-Switch server (Japan / Singapore / Hong Kong). Check the China settings above. Change Wi-Fi to mobile data. Open the second app. Wait out a crackdown window if every provider is failing at once.
+Switch server (Japan / Singapore / Hong Kong). Check the China settings above. Change Wi-Fi to mobile data. Open the second app if you installed one. Wait out a crackdown window if every provider is failing at once.
 
 ## Related reading
 

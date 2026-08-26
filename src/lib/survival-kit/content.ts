@@ -168,7 +168,7 @@ export const kitNetworkSection: KitPrepSectionData = {
       options: [
         {
           name: "NordVPN",
-          diff: "Our usual pick for travel — solid for phones and laptops.",
+          diff: "What I use in China — works, but hotel Wi-Fi can take a long time to connect.",
           logoSrc: "/assets/survival-kit/apps/nordvpn.svg",
           primaryCta: {
             label: "Get NordVPN",
@@ -184,7 +184,7 @@ export const kitNetworkSection: KitPrepSectionData = {
         },
         {
           name: "ExpressVPN",
-          diff: "Strong alternative if you prefer another brand’s app and pricing.",
+          diff: "Simpler app. I have not used it as my daily China VPN — backup if Nord stalls.",
           logoSrc: "/assets/survival-kit/apps/expressvpn.svg",
           primaryCta: {
             label: "Get ExpressVPN",

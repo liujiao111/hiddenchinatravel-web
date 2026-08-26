@@ -110,7 +110,7 @@ There’s also a second thing worth understanding: in China’s app ecosystem, y
 
 **Check your phone’s band compatibility.** Most iPhones from XR onwards and flagship Android phones are broadly compatible with Chinese networks. Midrange or older devices may miss key bands. You can check at [GSMArena](https://www.gsmarena.com/) or [frequencycheck.com](https://www.frequencycheck.com/) — search your exact model against China Unicom or China Mobile.
 
-**Install a VPN before you arrive.** This is non-negotiable if you want to use Google, WhatsApp, Instagram, or Gmail on hotel Wi-Fi or a local SIM. VPN apps are blocked on the Chinese App Store and Google Play, so you have to install one before you cross the border. Short trip: [ExpressVPN](/go/expressvpn). What I use: [NordVPN](/go/nordvpn). Pick in [Best VPN for China](/best-vpn-for-china), then install before you board.
+**Install a VPN before you arrive.** This is non-negotiable if you want to use Google, WhatsApp, Instagram, or Gmail on hotel Wi-Fi or a local SIM. VPN apps are blocked on the Chinese App Store and Google Play, so you have to install one before you cross the border. I use [NordVPN](/go/nordvpn). ExpressVPN is simpler; I have not used it as my daily China VPN. Pick in [Best VPN for China](/best-vpn-for-china), then install before you board.
 
 **Decide where to buy your SIM:**
 
