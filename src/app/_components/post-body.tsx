@@ -9,6 +9,7 @@ import {
   getEndCtaCopy,
   getInlineCtaCopy,
   resolveArticleCtaVariant,
+  SKIP_INLINE_CTA_SLUGS,
 } from "@/config/cta";
 import { getArticleBookingBlock } from "@/lib/affiliates/article-booking-blocks";
 import { extractH2Toc, TOC_MIN_ITEMS } from "@/lib/article-toc";
@@ -42,7 +43,12 @@ export function PostBody({
   const inlineCopy = getInlineCtaCopy();
   const endCopy = getEndCtaCopy(variant);
   const bookingBlock = getArticleBookingBlock(articleSlug);
-  const { before, after, inserted } = splitHtmlForInlineCta(content);
+  const skipInlineCta = Boolean(
+    articleSlug && SKIP_INLINE_CTA_SLUGS.has(articleSlug),
+  );
+  const { before, after, inserted } = skipInlineCta
+    ? { before: content, after: "", inserted: false }
+    : splitHtmlForInlineCta(content);
   const toc = extractH2Toc(content);
   const showToc = toc.length >= TOC_MIN_ITEMS;
 

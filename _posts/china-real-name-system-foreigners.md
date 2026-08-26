@@ -4,7 +4,7 @@ seoTitle: "China Real-Name System 2026: Why Passports Fail"
 excerpt: "Why foreign passports fail China’s real-name system for SIMs, hotels, and apps — and the sequence that avoids silent registration blocks in 2026."
 coverImage: "/assets/blog/china-real-name-system-foreigners/cover.webp"
 date: "2026-03-23T09:38:03+00:00"
-dateModified: "2026-08-26T08:00:00+00:00"
+dateModified: "2026-08-26T11:00:00+00:00"
 author:
   name: "Joy Liu"
   picture: "/assets/blog/authors/joy-liu.jpg"
@@ -22,7 +22,10 @@ Here’s the part that nobody explains upfront: **you didn’t do anything wrong
 
 That’s not a glitch. That’s the system working exactly as intended — just not for you. Welcome to China’s **real-name registration system (实名制, shí míng zhì)**.
 
-If the form is asking for a **Chinese ID number (身份证号码) and name**, and you only have a passport, start here instead: [Chinese ID number vs passport — what foreigners enter](/chinese-id-number-foreigners). This page is about *why* the registration chain breaks after that.
+These two guides sit side by side — they do not replace each other:
+
+- **Filling 姓名 + 身份证号码 right now** → [Chinese ID number vs passport](/chinese-id-number-foreigners)
+- **Why the SIM / app / hotel chain still fails after the fields look right** → this page
 
 **Confused by China’s real-name verification rules?** This guide is part of our [Travel China Guide for Foreigners](/independent-travel-china), where we explain the practical systems foreign travelers need to understand before visiting China, including passport verification, hotel registration, ticket booking, payments, internet access, and common app restrictions.
 

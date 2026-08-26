@@ -84,6 +84,13 @@ const blocksBySlug: Record<string, ArticleBookingBlock> = {
     primary: { label: "Trip.com trains", href: "/go/trip-trains" },
     secondary: { label: "Trip.com tickets", href: "/go/trip-tickets" },
   },
+  "chinese-id-number-foreigners": {
+    eyebrow: "If the official form only accepts 身份证",
+    title: "Switch to a passport booking path",
+    body: "English hotel and ticket checkout stores your passport instead of a citizen ID. If you still need payments and data for day one, grab the Survival Kit next.",
+    primary: { label: "Browse Trip.com tickets", href: "/go/trip-tickets" },
+    secondary: { label: "Get Free Survival Kit", href: "/survival-kit" },
+  },
 };
 
 export function getArticleBookingBlock(
