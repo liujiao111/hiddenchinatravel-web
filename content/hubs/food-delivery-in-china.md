@@ -8,10 +8,12 @@ canonical: /food-delivery-in-china
 eyebrow: "China Digital Survival Guide · Food Hub"
 heroAnswer: "If you want the simplest answer, start with in-person ordering, be ready for QR code menus, keep translation tools handy, and only move into delivery apps once your payment, internet, and address setup are working properly."
 description: "Eating in China is often easier than first-time visitors expect — once you understand how the system works. This food hub helps you handle restaurant ordering, QR code menus, food delivery apps, and the setup issues that make ordering feel harder than it should."
-dateModified: "2026-08-10"
+dateModified: "2026-08-26"
 keywords:
   - order food in China
   - Meituan for foreigners
+  - how to use Meituan without Chinese number
+  - food delivery in China without phone number
   - QR menu China
   - food delivery China
   - Ele.me foreigners

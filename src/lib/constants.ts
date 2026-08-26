@@ -17,7 +17,7 @@ export const SITE_LOGO_PATH = "/brand/logo.webp";
 export const SITE_HERO_PATH = "/brand/hero-lijiang.webp";
 
 /** ISO date — bump when shipping sitewide content / chrome updates */
-export const SITE_LAST_UPDATED = "2026-08-23";
+export const SITE_LAST_UPDATED = "2026-08-26";
 
 export const socialLinks = [
   {

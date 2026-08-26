@@ -69,8 +69,8 @@ const CLUSTER_RELATED_SLUGS: Record<string, readonly string[]> = {
   "alipay-wechat-pay-verification-failed": [
     "why-your-payment-fails-in-china",
     "alipay-for-foreigners-china",
+    "chinese-id-number-foreigners",
     "china-real-name-system-foreigners",
-    "china-sim-card-for-foreigners",
   ],
   "why-your-payment-fails-in-china": [
     "alipay-wechat-pay-verification-failed",
@@ -90,7 +90,13 @@ const CLUSTER_RELATED_SLUGS: Record<string, readonly string[]> = {
     "why-your-payment-fails-in-china",
   ],
   "china-real-name-system-foreigners": [
+    "chinese-id-number-foreigners",
     "china-sim-card-for-foreigners",
+    "alipay-wechat-pay-verification-failed",
+    "hotels-in-china-for-foreigners",
+  ],
+  "chinese-id-number-foreigners": [
+    "china-real-name-system-foreigners",
     "alipay-wechat-pay-verification-failed",
     "hotels-in-china-for-foreigners",
     "china-attraction-ticket-booking-foreigners-2026",

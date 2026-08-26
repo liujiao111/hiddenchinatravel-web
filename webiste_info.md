@@ -347,6 +347,7 @@ Hero 主按钮下方 hint（不标价）：
 #### 🧳 Travel Essentials
 
 - Real Name Explain：/china-real-name-system-foreigners/
+- Chinese ID number vs passport：/chinese-id-number-foreigners/
 - Is China safe for independent travel：/independent-travel-china/
 
 #### Itinerary Planning

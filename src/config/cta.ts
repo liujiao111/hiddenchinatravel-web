@@ -40,6 +40,9 @@ export const inlineCtaDefault: InlineCtaCopy = {
   trackingEvent: "article_inline_cta_click",
 };
 
+/** Troubleshooting pages where a mid-article itinerary ask interrupts the form. */
+export const SKIP_INLINE_CTA_SLUGS = new Set(["chinese-id-number-foreigners"]);
+
 export const endCtaByVariant: Record<ArticleCtaVariantId, EndCtaCopy> = {
   default: {
     bridge:

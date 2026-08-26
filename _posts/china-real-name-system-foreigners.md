@@ -4,7 +4,7 @@ seoTitle: "China Real-Name System 2026: Why Passports Fail"
 excerpt: "Why foreign passports fail China’s real-name system for SIMs, hotels, and apps — and the sequence that avoids silent registration blocks in 2026."
 coverImage: "/assets/blog/china-real-name-system-foreigners/cover.webp"
 date: "2026-03-23T09:38:03+00:00"
-dateModified: "2026-08-10T14:00:00+00:00"
+dateModified: "2026-08-26T11:00:00+00:00"
 author:
   name: "Joy Liu"
   picture: "/assets/blog/authors/joy-liu.jpg"
@@ -21,6 +21,8 @@ You try the store next door. Same passport. Same details. Same result. You pull 
 Here’s the part that nobody explains upfront: **you didn’t do anything wrong.** Your passport is valid. The details are correct. The staff member knows what they’re doing. And you’re still blocked.
 
 That’s not a glitch. That’s the system working exactly as intended — just not for you. Welcome to China’s **real-name registration system (实名制, shí míng zhì)**.
+
+Stuck on a screen that only wants **姓名** and **身份证号码**? What to type is [Chinese ID number vs passport](/chinese-id-number-foreigners). This page is the rest of it: why a correct passport still fails at a SIM counter, a hotel computer, or an app backend.
 
 **Confused by China’s real-name verification rules?** This guide is part of our [Travel China Guide for Foreigners](/independent-travel-china), where we explain the practical systems foreign travelers need to understand before visiting China, including passport verification, hotel registration, ticket booking, payments, internet access, and common app restrictions.
 
@@ -218,6 +220,7 @@ You now know more about how this works than most people who’ve lived in China 
 
 Planning your China trip? These practical guides may also help you deal with real-name verification, bookings, payments, and travel apps:
 
+  * [Chinese ID Number vs Passport](/chinese-id-number-foreigners) — what to type when a form wants 身份证
   * [China SIM Card for Foreigners](/china-sim-card-for-foreigners) — passport registration for a +86 number
   * [Alipay or WeChat Pay Verification Failed?](/alipay-wechat-pay-verification-failed) — when identity checks block payment setup
   * [Hotels in China for Foreigners](/hotels-in-china-for-foreigners) — passport check-in that matches real-name rules

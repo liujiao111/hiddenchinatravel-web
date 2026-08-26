@@ -8,7 +8,7 @@ canonical: /internet-in-china
 eyebrow: "China Digital Survival Guide · Internet Hub"
 heroAnswer: "For most short China trips, start with a travel eSIM or roaming so you have mobile data when you land. Prepare a VPN before departure for hotel Wi-Fi, public Wi-Fi, local SIM use, or laptop browsing. Only get a local Chinese SIM if you need a +86 phone number, SMS codes, or a longer-stay setup."
 description: "Heading to China soon? This hub helps you figure out the simplest internet setup for your trip — whether you should use an eSIM, prepare a VPN, rely on roaming, or get a local SIM card. Start here if you want Google, WhatsApp, maps, and mobile data sorted before you land."
-dateModified: "2026-08-10"
+dateModified: "2026-08-26"
 keywords:
   - internet in China for foreigners
   - VPN for China
