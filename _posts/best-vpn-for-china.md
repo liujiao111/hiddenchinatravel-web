@@ -4,7 +4,7 @@ seoTitle: "Best VPN for China in 2026: What Works After LetsVPN Stopped"
 excerpt: "Best VPN for China after LetsVPN shut down: what still works in 2026 for hotel Wi‑Fi and local SIMs, tested over months — install before you fly."
 coverImage: "/assets/blog/best-vpn-for-china/cover.webp"
 date: "2026-06-27T13:53:33+00:00"
-dateModified: "2026-08-10T14:00:00+00:00"
+dateModified: "2026-08-26T08:00:00+00:00"
 author:
   name: "Joy Liu"
   picture: "/assets/blog/authors/joy-liu.jpg"
@@ -15,9 +15,12 @@ keywords:
   - "China Internet"
   - "China travel VPN"
   - "digital survival China"
+  - "does LetsVPN still work in China"
   - "foreigners in china"
   - "Great Firewall"
   - "internet in china"
+  - "LetsVPN China"
+  - "LetsVPN China 2026"
   - "LetsVPN alternative"
   - "NordVPN China"
   - "VPN for China"
@@ -39,6 +42,10 @@ faqs:
 _Disclosure: This guide contains affiliate links (including NordVPN). If you buy through them, I may earn a small commission at no extra cost to you. I recommend NordVPN based on my own trips after LetsVPN exited China — this is lived experience, not a paid “#1 VPN” ranking of every brand._
 
 _I’ve been going back and forth between the Philippines and mainland China for the past few years. NordVPN is what I’m currently using — $14.99/month, three months in. Here’s what led me there._
+
+## Does LetsVPN still work in China in 2026?
+
+**No.** LetsVPN shut down mainland China operations in early 2026. Do not plan a trip around it. Install and test another travel VPN before you fly — details below.
 
 **What happened with LetsVPN**
 

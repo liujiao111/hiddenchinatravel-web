@@ -4,7 +4,7 @@ seoTitle: "Alipay for Foreigners 2026: Setup & Foreign Cards"
 excerpt: "Can foreigners use Alipay without a Chinese bank account? Link Visa/Mastercard, finish passport verification, and pay QR codes — 2026 setup that actually works."
 coverImage: "/assets/blog/alipay-for-foreigners-china/cover.webp"
 date: "2026-04-08T09:19:14+00:00"
-dateModified: "2026-08-10T14:00:00+00:00"
+dateModified: "2026-08-26T08:00:00+00:00"
 author:
   name: "Joy Liu"
   picture: "/assets/blog/authors/joy-liu.jpg"
@@ -97,7 +97,7 @@ I spent 45 minutes fumbling through Alipay’s verification flow before a staff 
 
 **Why it happens:** Blurry passport photo, mismatched name format, or the system had trouble with your passport’s optical characters. Non-Latin scripts in passport names (e.g., Arabic or Cyrillic) sometimes cause issues too.
 
-**How to fix it:** Retake your passport photo in strong, direct light. Make sure the MRZ strip is completely visible and unobstructed. If the app continues to reject it, try using the in-app customer service chat (English is available) — a human agent can manually review your documents within 24 hours.
+**How to fix it:** Retake your passport photo in strong, direct light. Make sure the MRZ strip is completely visible and unobstructed. If the app is asking for an 18-digit **身份证** instead of a passport scan, you are on the citizen path — [what foreigners enter instead](/chinese-id-number-foreigners). If the app continues to reject a real passport scan, try in-app customer service (English is available); a human agent can manually review documents within 24 hours.
 
 ### Problem 2: Card Keeps Getting Declined
 

@@ -356,7 +356,7 @@ export const staticSearchCatalog: SearchItem[] = [
     href: "/do-you-need-vpn-china",
     description: "When a VPN helps and how to prepare before you land.",
     type: "article",
-    keywords: ["vpn", "nordvpn", "expressvpn"],
+    keywords: ["vpn", "nordvpn", "expressvpn", "letsvpn"],
   },
   {
     id: "article-maps",
@@ -405,7 +405,23 @@ export const staticSearchCatalog: SearchItem[] = [
     href: "/order-food-china-without-chinese-number",
     description: "Food delivery when you lack a local phone number.",
     type: "article",
-    keywords: ["food", "delivery"],
+    keywords: ["food", "delivery", "no chinese number", "eleme"],
+  },
+  {
+    id: "article-meituan",
+    title: "How to Use Meituan for Foreigners",
+    href: "/how-to-use-meituan",
+    description: "Meituan without a Chinese number via WeChat, plus backups when signup blocks you.",
+    type: "article",
+    keywords: ["meituan", "dianping", "deals", "without chinese number"],
+  },
+  {
+    id: "article-best-vpn",
+    title: "Best VPN for China After LetsVPN",
+    href: "/best-vpn-for-china",
+    description: "What still works in 2026 after LetsVPN shut down mainland operations.",
+    type: "article",
+    keywords: ["letsvpn", "nordvpn", "vpn 2026", "letsvpn china"],
   },
   {
     id: "article-hotels",
@@ -437,7 +453,22 @@ export const staticSearchCatalog: SearchItem[] = [
     href: "/china-real-name-system-foreigners",
     description: "How real-name rules affect apps and travel.",
     type: "article",
-    keywords: ["real-name", "passport"],
+    keywords: ["real-name", "passport", "身份证"],
+  },
+  {
+    id: "article-chinese-id",
+    title: "Chinese ID Number vs Passport for Foreigners",
+    href: "/chinese-id-number-foreigners",
+    description:
+      "What to enter when apps ask for 身份证号码 and 姓名 — passport, not a borrowed Chinese ID.",
+    type: "article",
+    keywords: [
+      "chinese id",
+      "chinese identity number",
+      "身份证",
+      "身份证号码",
+      "passport vs chinese id",
+    ],
   },
   {
     id: "article-independent",

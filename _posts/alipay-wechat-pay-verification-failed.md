@@ -4,7 +4,7 @@ seoTitle: "Alipay/WeChat Verification Failed? Fixes (2026)"
 excerpt: "Alipay or WeChat Pay verification failed? Fix passport scans, SMS codes, foreign-card checks, and risk blocks before you retry — or land in China stuck."
 coverImage: "/assets/blog/alipay-wechat-pay-verification-failed/cover.webp"
 date: "2026-05-04T04:31:42+00:00"
-dateModified: "2026-08-10T14:00:00+00:00"
+dateModified: "2026-08-26T08:00:00+00:00"
 author:
   name: "Joy Liu"
   picture: "/assets/blog/authors/joy-liu.jpg"
@@ -41,6 +41,8 @@ faqs:
     answer: "It can add friction. Switching VPN locations during verification may trigger security checks. For payment-app setup, use a stable connection and avoid toggling the VPN."
   - question: "Foreign card not accepted on Alipay or WeChat Pay — what should I do?"
     answer: "Enable international online payments in your banking app and check for pending approvals. Avoid rapid retries. If one card fails, try a different Visa or Mastercard from another bank."
+  - question: "Alipay asks for a Chinese ID number (身份证) instead of a passport. What do I enter?"
+    answer: "Do not invent an 18-digit ID or use someone else’s. Switch to the foreigner / passport verification path. Tourists cannot get a 身份证 — see Chinese ID number vs passport for what to type, then come back to this page for scan, SMS, and card failures."
 ---
 ## The Setup Problem Nobody Warns You About
 
@@ -95,6 +97,8 @@ Each of these has a different solution, and trying random fixes without knowing 
 Passport verification is probably the single most common sticking point for foreign travelers on both Alipay and WeChat Pay.
 
 The app often doesn’t tell you exactly what went wrong. It might say “verification failed,” “identity check unsuccessful,” or just ask you to try again later — without pointing to the actual problem. In most cases, it’s not that your passport is invalid. It’s that the automated check couldn’t confidently match your information.
+
+If the screen is asking for **身份证号码** (Chinese ID number) rather than a passport scan, you are on the citizen flow. Foreigners do not fill that box — switch document type or restart tourist verification. What to enter instead: [Chinese ID number vs passport](/chinese-id-number-foreigners).
 
 **Name format is a frequent culprit.** Western names with middle names, hyphenated surnames, or unusual character combinations don’t always map cleanly to the name fields in these apps. Use the full name exactly as it appears on your passport — don’t shorten it, don’t use a nickname, and don’t leave out a middle name if it’s on the document. If your passport says “Jonathan Michael Smith,” entering “Jon Smith” will almost certainly fail.
 
@@ -207,6 +211,7 @@ And before you land in China, build a real backup into your setup: both Alipay a
   * **[Payments in China for Foreigners](/payments-in-china)** — full overview of Alipay, WeChat Pay, cards, and cash backup
   * **[Alipay for Foreigners](/alipay-for-foreigners-china)** — complete setup and verification walkthrough
   * **[Why Your Payment Fails in China](/why-your-payment-fails-in-china)** — card linked but checkout still declines
+  * **[Chinese ID Number vs Passport](/chinese-id-number-foreigners)** — what to type when the form wants 身份证, not a passport
   * **[China Real-Name System Explained](/china-real-name-system-foreigners)** — why passport and identity checks stall
   * **[China SIM Card for Foreigners](/china-sim-card-for-foreigners)** — local number for SMS codes that never arrive
   * **[Internet, VPN & SIM in China](/internet-in-china)** — how to stay connected and receive bank SMS codes abroad

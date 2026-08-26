@@ -4,7 +4,7 @@ seoTitle: "Meituan Without a Chinese Number (2026 Guide)"
 excerpt: "Meituan without a Chinese number: what works via WeChat or Alipay, where signup blocks foreigners, and backup paths that still get you deals and delivery."
 coverImage: "/assets/blog/how-to-use-meituan/cover.webp"
 date: "2026-07-16T02:54:46+00:00"
-dateModified: "2026-08-10T14:00:00+00:00"
+dateModified: "2026-08-26T08:00:00+00:00"
 author:
   name: "Joy Liu"
   picture: "/assets/blog/authors/joy-liu.jpg"
@@ -46,6 +46,12 @@ And yes, foreigners can use Meituan. And once you figure it out, you’ll wonder
 
 I’ve been going back and forth to China for years, and Meituan has been in my rotation the whole time… alongside its sister app Dianping, which does basically the same thing. On a recent trip to Shenzhen (we booked our hotel through [Trip.com](/go/trip-hotels), which has the best China hotel inventory by far), Fabio and I decided to do a little experiment: buy everything we could through Meituan for a day. We saved **40 euros in a single day**. From coffee to food to a gym session, all discounted. That’s not a typo.
 
+## Quick Answer: Can You Use Meituan Without a Chinese Number?
+
+**Often yes — through WeChat, not the standalone Meituan app.** Open WeChat, search **Meituan / 美团**, and use the mini-program. WeChat login can skip a separate Meituan signup. A local +86 number still makes OTP screens easier, but it is not the only path.
+
+If WeChat or Meituan still demands a Chinese number and blocks you, switch to **Alipay → Taobao Instant (饿了么 / 淘宝闪购)** for delivery, or order in person. Full fallbacks: [order food in China without a Chinese number](/order-food-china-without-chinese-number).
+
 **Before Meituan, there’s Trip.com.** Meituan handles the deals once you’re on the ground. Before that, [Trip.com](/go/trip-hotels) is where we book everything else… hotels, flights, and trains across China. It has the deepest local inventory of any platform and is built for the Chinese market, so you’ll find options that just don’t exist on Western booking sites.
 
 Getting set up takes a little legwork upfront, but once you’re in, you’re in. Here’s exactly how to do it.
@@ -71,15 +77,13 @@ If you’re spending more than a few days in any Chinese city, not using Meituan
 
 ## What You Need Before You Start (Prerequisites)
 
-You need 3 things to use Meituan as a foreigner: a Chinese SIM card, WeChat, and WeChat Pay linked to an international card. Don’t skip them, the app won’t work without them.
+You need a working **WeChat** (or Alipay) account and a **payment method**. A Chinese SIM makes standalone-app signup smoother. It is not required for every mini-program flow.
 
-### 1. A Chinese Phone Number
+### 1. A Phone Number That Can Receive Codes (Chinese Helps, Not Always Mandatory)
 
-This is the big one. Meituan requires a Chinese number to receive the OTP (one-time password) when you sign up, as this won’t work with a foreign number.
+The **standalone Meituan app** often wants a +86 number for OTP. The **WeChat mini-program** is the foreigner workaround: you are already logged into WeChat, so Meituan may never ask for a separate Chinese number — or it asks later, at purchase, and sometimes accepts the number already on WeChat.
 
-At major airports like Shenzhen Bao’an, Shanghai Pudong, or Beijing Capital Airport, you’ll often find China Mobile and China Telecom desks right in the arrivals hall. Pick up a SIM there if you can… it’s the easiest option. (Still hunting for flights to China? Trip.com is our first stop… they have great inventory on routes into the mainland.)
-
-If you miss that, [get an eSIM first](/go/airalo) just to have data… we have a full guide to the [cheapest eSIMs for travelers](/best-esim-for-china-travel) if you’re not sure which one to grab… then head to a larger branch of one of the major carriers in the city. Key word: **larger branch**. The tiny kiosks won’t be able to set up a SIM for a foreigner. Ask your hotel or hostel where the nearest main branch is.
+If you do want a local number, airport China Mobile / China Telecom desks at Shenzhen Bao’an, Shanghai Pudong, or Beijing Capital are the easy version. Miss that, [get an eSIM for data](/go/airalo) first — [eSIM guide](/best-esim-for-china-travel) — then go to a **large official carrier branch**, not a mall kiosk. Passport registration details: [China SIM for foreigners](/china-sim-card-for-foreigners).
 
 ### 2. WeChat
 
@@ -114,7 +118,7 @@ Meituan lives inside WeChat as a mini program… you don’t even need to downlo
 
 ![home page display in meituan mini program](/assets/blog/how-to-use-meituan/translate-meituan-chinese-to-english.webp)_Sometimes the translate button is right up top, sometimes you have to click the three dots to get it._
 
-  6. **Sign up** … you’ll be prompted for your phone number at some point (perhaps when you first open the app, perhaps when you go and search, perhaps when you go to make a purchase). Enter your Chinese number, receive the OTP, and you’re in. Once logged in, it generally keeps you logged in, so you won’t need to do this again.
+  6. **Sign up if asked.** Some accounts never see a separate Meituan OTP because WeChat already verified you. If a phone field appears, try the number on your WeChat account first. If it insists on +86 and you do not have one, stop fighting this screen and use [Alipay food delivery](/order-food-china-without-chinese-number) instead.
 
 ### How to Find Something on Meituan
 

@@ -8,7 +8,7 @@ canonical: /payments-in-china
 eyebrow: "China Digital Survival Guide · Payment Hub"
 heroAnswer: "For many tourists and short-term visitors, the easiest way to pay in China is to set up Alipay with an international card first, add WeChat Pay as a backup, carry a small amount of cash for edge cases, and understand what usually causes verification or payment failure before you arrive."
 description: "Heading to China soon? This payment hub helps you understand what actually works on the ground — from Alipay and WeChat Pay setup to card linking, cash backup, and common payment problems. Start here for the key guides, practical answers, and next steps before your trip."
-dateModified: "2026-08-10"
+dateModified: "2026-08-26"
 keywords:
   - payments in China for foreigners
   - Alipay for foreigners
@@ -70,6 +70,8 @@ faqs:
     answer: "First identify where the failure happened: passport verification, SMS code, foreign card verification, or app risk control. Do not keep retrying blindly. Start with the [verification failure guide](/alipay-wechat-pay-verification-failed)."
   - question: "Why does Alipay say passport verification failed or server busy?"
     answer: "Usually the passport scan, name match, or risk check stalled — not your card. Follow the exact failure path in [Alipay/WeChat verification failed](/alipay-wechat-pay-verification-failed), and read [China’s real-name system](/china-real-name-system-foreigners) if identity fields keep mismatching."
+  - question: "Alipay is asking for a Chinese ID number. What do foreigners enter?"
+    answer: "Nothing in that 身份证 box. Switch to passport / foreigner verification. [Chinese ID number vs passport](/chinese-id-number-foreigners) covers the fields; the [verification failed guide](/alipay-wechat-pay-verification-failed) covers scans, SMS, and cards."
   - question: "Why does payment fail even after linking a foreign card?"
     answer: "A linked card does not always mean the whole payment setup is complete. Identity verification, security checks, card compatibility, or transaction-specific controls can still cause payment failure. Start with the [payment failure troubleshooting guide](/why-your-payment-fails-in-china)."
   - question: "Do I need cash in China as a tourist?"
