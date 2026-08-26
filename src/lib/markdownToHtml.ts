@@ -6,7 +6,32 @@ import { join } from "path";
 import "server-only";
 import { ensureHeadingIds } from "@/lib/article-toc";
 
-/** Add sponsored rel to affiliate short links in rendered HTML. */
+function mergeRel(attrs: string): string {
+  if (/\brel=/i.test(attrs)) {
+    return attrs.replace(/\brel=(["'])(.*?)\1/i, (_m, q, rel) => {
+      const parts = new Set(
+        String(rel)
+          .split(/\s+/)
+          .map((p) => p.trim())
+          .filter(Boolean),
+      );
+      parts.add("sponsored");
+      parts.add("noopener");
+      parts.add("noreferrer");
+      return `rel=${q}${[...parts].join(" ")}${q}`;
+    });
+  }
+  return `${attrs} rel="sponsored noopener noreferrer"`;
+}
+
+function withTargetBlank(attrs: string): string {
+  if (/\btarget=/i.test(attrs)) {
+    return attrs.replace(/\btarget=(["']).*?\1/i, 'target="_blank"');
+  }
+  return `${attrs} target="_blank"`;
+}
+
+/** Affiliate short links: sponsored rel + new tab. */
 function decorateAffiliateAnchors(markup: string): string {
   return markup.replace(/<a\b([^>]*)>/gi, (full, attrs: string) => {
     const hrefMatch = attrs.match(/href=(["'])(.*?)\1/i);
@@ -18,22 +43,7 @@ function decorateAffiliateAnchors(markup: string): string {
       /^https?:\/\/[^/]+\/go\//i.test(href);
     if (!isGo) return full;
 
-    if (/\brel=/i.test(attrs)) {
-      return full.replace(/\brel=(["'])(.*?)\1/i, (_m, q, rel) => {
-        const parts = new Set(
-          String(rel)
-            .split(/\s+/)
-            .map((p) => p.trim())
-            .filter(Boolean),
-        );
-        parts.add("sponsored");
-        parts.add("noopener");
-        parts.add("noreferrer");
-        return `rel=${q}${[...parts].join(" ")}${q}`;
-      });
-    }
-
-    return `<a${attrs} rel="sponsored noopener noreferrer">`;
+    return `<a${withTargetBlank(mergeRel(attrs))}>`;
   });
 }
 

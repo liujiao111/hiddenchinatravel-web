@@ -53,6 +53,7 @@ export default async function PostPage(props: Params) {
             coverImage={post.coverImage}
             date={post.date}
             author={post.author}
+            articleSlug={post.slug}
           />
           <PostBody
             content={content}

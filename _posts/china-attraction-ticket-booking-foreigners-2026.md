@@ -3,7 +3,7 @@ title: "How to Book Attraction Tickets in China as a Foreigner (2026 Guide)"
 excerpt: "China's booking system wasn't built for foreign passports — but there are reliable workarounds. No app downloads required: here's what actually gets you inside."
 coverImage: "/assets/blog/china-attraction-ticket-booking-foreigners-2026/cover.webp"
 date: "2026-03-30T07:25:58+00:00"
-dateModified: "2026-06-23T05:50:30+00:00"
+dateModified: "2026-08-26T12:00:00+00:00"
 author:
   name: "Joy Liu"
   picture: "/assets/blog/authors/joy-liu.jpg"
@@ -63,7 +63,7 @@ Small local attraction, not on Trip.com| WeChat mini-program or official attract
 
 **Booking attraction tickets in China with a foreign passport?** This guide is part of our [Attraction Tickets in China hub](/attraction-tickets-in-china), where we explain real-name booking, passport verification, official platforms, third-party apps, booking windows, and common ticket problems foreign travelers may face.
 
-Before diving in — if you just need a quick answer: **Trip.com** is where most foreigners should start. English interface, international card support, foreign passport accepted. If your attraction isn’t listed there, keep reading.
+Before diving in — if you just need a quick answer: **start on [Trip.com](/go/trip-tickets).** English interface, international card support, foreign passport accepted. If your attraction isn’t listed there, keep reading.
 
 ## Why Ticket Booking in China Fails for Foreigners
 

@@ -71,7 +71,7 @@ Once you’re in China, VPN provider websites are blocked. The App Store in Chin
 
 Set it up at home. Download the app, create an account, connect to a test server. That 20-minute task saves a lot of frustration.
 
-Not all VPNs work reliably in China — the firewall has gotten significantly better at identifying and blocking common VPN protocols. The ones with obfuscation features (which disguise VPN traffic as regular HTTPS traffic) have better odds of staying stable. NordVPN ([/go/nordvpn](/go/nordvpn)) is the one I’ve seen consistently recommended in recent testing.
+Not all VPNs work reliably in China — the firewall has gotten significantly better at identifying and blocking common VPN protocols. The ones with obfuscation features (which disguise VPN traffic as regular HTTPS traffic) have better odds of staying stable. I still run [NordVPN](/go/nordvpn) — it works, but connecting can take a long time. [ExpressVPN](/go/expressvpn) is a simpler app; I have not used it as my daily China VPN.
 
 For a deeper look at which VPNs are working in 2026 and how to configure them: [Do You Need a VPN in China?](/do-you-need-vpn-china) and [Best VPN for China](/best-vpn-for-china).
 
@@ -125,7 +125,7 @@ More on why foreign payments fail in China and how to fix them: [Payments in Chi
 Most connection problems in China happen because people try to fix them after landing. Here’s what takes 30 minutes at home and saves hours on the ground:
 
   1. **Buy and install a travel eSIM.** [Airalo](/go/airalo) or [Trip.com eSIM](/go/trip-esim). Install before departure, only activate when you land.
-  2. **Download and test a VPN.** Even if you’re using an eSIM, it’s good backup for hotel Wi-Fi situations. Install, log in, and test from home. [NordVPN](/go/nordvpn) is a reliable option.
+  2. **Download and test a VPN.** Even if you’re using an eSIM, it’s good backup for hotel Wi-Fi situations. Install, log in, and test from home. I use [NordVPN](/go/nordvpn). [ExpressVPN](/go/expressvpn) is a simpler backup I have not daily-tested in China. Comparison: [Best VPN for China](/best-vpn-for-china).
   3. **Set up Alipay or WeChat Pay.** Link your foreign card at home while you have unrestricted internet access. Both apps are harder to configure from behind the firewall.
   4. **Download Apple Maps or Amap.** Apple Maps works without a VPN. Amap (the AutoNavi English app) is better for transit routes.
   5. **Grab key apps before departure.** Trip.com, Didi, and any other travel apps are easier to download from your home country’s App Store.
