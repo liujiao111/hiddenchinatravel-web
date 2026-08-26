@@ -139,7 +139,7 @@ export default function RootLayout({
             header={<SiteHeader />}
             footer={<Footer />}
           >
-            <div className="min-h-screen">{children}</div>
+            {children}
           </ConditionalSiteChrome>
         </LocaleProvider>
         <SiteAnalytics />

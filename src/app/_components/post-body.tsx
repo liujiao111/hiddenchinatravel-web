@@ -98,19 +98,16 @@ export function PostBody({
     <div
       className={cn(
         "mx-auto max-w-3xl",
-        // TOC + reading column: keep TOC slim, give prose most of the row.
+        // Exactly two grid children on xl+: sidebar + reading column.
         "xl:grid xl:w-full xl:max-w-6xl xl:grid-cols-[10rem_minmax(0,48rem)] xl:justify-center xl:gap-10",
         "2xl:grid-cols-[11rem_minmax(0,52rem)] 2xl:gap-12",
       )}
     >
-      {/*
-        ArticleToc renders mobile block + sidebar aside as siblings.
-        CSS grid places them into columns in DOM order on xl+.
-        Below xl, sidebar is hidden and mobile sits above the article —
-        so article must follow in a wrapper that spans correctly.
-      */}
-      <ArticleToc items={toc} />
-      <div className="min-w-0">{article}</div>
+      <ArticleToc items={toc} placement="desktop" />
+      <div className="min-w-0 xl:col-start-2 xl:row-start-1">
+        <ArticleToc items={toc} placement="mobile" />
+        {article}
+      </div>
     </div>
   );
 }

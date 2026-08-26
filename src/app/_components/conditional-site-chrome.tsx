@@ -9,11 +9,11 @@ type Props = {
 /** Server chrome shell — floating dock is the only client boundary here. */
 export function ConditionalSiteChrome({ children, header, footer }: Props) {
   return (
-    <>
+    <div className="flex min-h-screen flex-col">
       {header}
-      {children}
+      <div className="flex-1">{children}</div>
       {footer}
       <FloatingDock />
-    </>
+    </div>
   );
 }

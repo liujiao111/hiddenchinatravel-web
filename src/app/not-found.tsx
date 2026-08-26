@@ -12,7 +12,7 @@ const helpfulLinks = [
 
 export default function NotFound() {
   return (
-    <main className="relative overflow-hidden">
+    <main className="relative">
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top_right,_var(--brand-soft),_transparent_55%),radial-gradient(ellipse_at_bottom_left,_var(--brand-cream),_transparent_50%)]"

@@ -6,6 +6,7 @@ import type { TocItem } from "@/lib/article-toc";
 
 type Props = {
   items: TocItem[];
+  placement: "mobile" | "desktop";
 };
 
 function useActiveHeadingId(items: TocItem[]): string | null {
@@ -98,18 +99,15 @@ function TocList({
   );
 }
 
-/**
- * Article TOC UI: mobile accordion (< xl) + sticky sidebar column (xl+).
- * Parent must reserve a grid column for the sidebar — never absolute-overlap body.
- */
-export function ArticleToc({ items }: Props) {
+/** Sidebar (`desktop`) or accordion (`mobile`) — never both as grid siblings. */
+export function ArticleToc({ items, placement }: Props) {
   const activeId = useActiveHeadingId(items);
   const [open, setOpen] = useState(false);
 
   if (items.length === 0) return null;
 
-  return (
-    <>
+  if (placement === "mobile") {
+    return (
       <div className="xl:hidden">
         <details
           className="mb-8 rounded-2xl border border-[color-mix(in_srgb,var(--brand-cream-border)_45%,transparent)] bg-[var(--brand-soft)] px-4 py-3"
@@ -141,17 +139,19 @@ export function ArticleToc({ items }: Props) {
           </nav>
         </details>
       </div>
+    );
+  }
 
-      <aside className="hidden min-w-0 xl:sticky xl:top-28 xl:block xl:max-h-[calc(100vh-8rem)] xl:self-start xl:overflow-y-auto">
-        <div className="border-r border-[color-mix(in_srgb,var(--brand-cream-border)_40%,transparent)] pr-4">
-          <p className="mb-2.5 text-[11px] font-normal uppercase tracking-[0.16em] text-[var(--brand-warm)]">
-            On this page
-          </p>
-          <nav aria-label="On this page">
-            <TocList items={items} activeId={activeId} compact />
-          </nav>
-        </div>
-      </aside>
-    </>
+  return (
+    <aside className="hidden min-w-0 xl:sticky xl:top-28 xl:col-start-1 xl:row-start-1 xl:block xl:max-h-[calc(100vh-8rem)] xl:self-start xl:overflow-y-auto">
+      <div className="border-r border-[color-mix(in_srgb,var(--brand-cream-border)_40%,transparent)] pr-4">
+        <p className="mb-2.5 text-[11px] font-normal uppercase tracking-[0.16em] text-[var(--brand-warm)]">
+          On this page
+        </p>
+        <nav aria-label="On this page">
+          <TocList items={items} activeId={activeId} compact />
+        </nav>
+      </div>
+    </aside>
   );
 }

@@ -17,6 +17,10 @@ import { PostBody } from "@/app/_components/post-body";
 import { PostHeader } from "@/app/_components/post-header";
 import type { Post } from "@/interfaces/post";
 
+/** ISR so a brand-new slug is not frozen as a year-long cached 404. */
+export const revalidate = 3600;
+export const dynamicParams = true;
+
 export default async function PostPage(props: Params) {
   const params = await props.params;
   const post = getPostBySlug(params.slug);

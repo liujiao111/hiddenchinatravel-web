@@ -244,7 +244,7 @@
   /* General article photos / diagrams — natural aspect, centered. */
   .blog-media-frame {
     display: block;
-    width: fit-content;
+    width: 100%;
     max-width: 100%;
     margin: 2rem auto;
     overflow: hidden;
@@ -258,7 +258,7 @@
 
   .blog-media-frame img {
     display: block;
-    width: auto;
+    width: 100%;
     max-width: 100%;
     height: auto;
     object-fit: contain;
@@ -274,7 +274,7 @@
    */
   .blog-media-portrait {
     display: block;
-    width: fit-content;
+    width: min(100%, 16.5rem);
     max-width: min(100%, 16.5rem);
     margin: 2rem auto;
     overflow: hidden;
@@ -288,7 +288,7 @@
 
   .blog-media-portrait img {
     display: block;
-    width: auto;
+    width: 100%;
     max-width: 100%;
     height: auto;
     object-fit: contain;
@@ -300,6 +300,7 @@
 
   @media (min-width: 768px) {
     .blog-media-portrait {
+      width: min(100%, 18rem);
       max-width: min(100%, 18rem);
     }
   }
@@ -310,7 +311,7 @@
    */
   .blog-media-shot {
     display: block;
-    width: fit-content;
+    width: min(100%, 16.5rem);
     max-width: min(100%, 16.5rem);
     margin: 2rem auto;
     overflow: hidden;
@@ -324,7 +325,7 @@
 
   .blog-media-shot img {
     display: block;
-    width: auto;
+    width: 100%;
     max-width: 100%;
     height: auto;
     object-fit: contain;
@@ -336,6 +337,7 @@
 
   @media (min-width: 768px) {
     .blog-media-shot {
+      width: min(100%, 18rem);
       max-width: min(100%, 18rem);
     }
   }
