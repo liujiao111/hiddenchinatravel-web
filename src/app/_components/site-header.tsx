@@ -55,7 +55,7 @@ export function SiteHeader() {
         </div>
 
         <div className="relative z-20 ml-auto flex shrink-0 items-center justify-end gap-2 sm:gap-2.5 md:gap-3">
-          <div className="relative w-[8.5rem] shrink-0 sm:w-[11rem] md:w-[12rem] xl:w-[10.5rem] min-[1800px]:w-[12.5rem]">
+          <div className="relative w-[8.5rem] sm:w-[11rem] md:w-[12rem] xl:w-[10.5rem] min-[1800px]:w-[12.5rem]">
             <SiteSearch
               variant="header"
               loadIndexOnFocus
