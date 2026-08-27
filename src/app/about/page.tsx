@@ -11,6 +11,7 @@ import {
   aboutTools,
   aboutTopicHubs,
 } from "@/lib/about/content";
+import { FEES } from "@/lib/trust/copy";
 import {
   partnerConsultTagline,
   partnerHero,
@@ -318,16 +319,8 @@ export default function AboutUsPage() {
             </AboutSection>
 
             <AboutSection id="transparency" title="Transparency">
-              <p>
-                Some guides include affiliate links to tools that help with
-                travel logistics. They never raise your price. We only include
-                them when they directly help solve the problem in that guide.
-              </p>
-              <p>
-                Partner planning and booking help are separate: we do not take
-                attraction / hotel / OTA commissions for itinerary advice. Paid
-                booking help uses a clear service fee.
-              </p>
+              <p>{FEES.affiliatesHelp}</p>
+              <p>{FEES.paidPlanning}</p>
             </AboutSection>
 
             <AboutSection id="start-here" title="Ready when you are">

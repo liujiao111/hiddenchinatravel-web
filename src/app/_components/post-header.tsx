@@ -1,6 +1,7 @@
 import Avatar from "./avatar";
 import CoverImage from "./cover-image";
 import DateFormatter from "./date-formatter";
+import { LastUpdated } from "./last-updated";
 import { PostTitle } from "@/app/_components/post-title";
 import { ArticleLeadAffiliateCta } from "@/components/affiliates/article-booking-block";
 import { getArticleBookingBlock } from "@/lib/affiliates/article-booking-blocks";
@@ -10,6 +11,7 @@ type Props = {
   title: string;
   coverImage: string;
   date: string;
+  dateModified?: string;
   author: Author;
   articleSlug?: string;
 };
@@ -18,10 +20,15 @@ export function PostHeader({
   title,
   coverImage,
   date,
+  dateModified,
   author,
   articleSlug,
 }: Props) {
   const bookingBlock = getArticleBookingBlock(articleSlug);
+  const updated =
+    dateModified && dateModified.slice(0, 10) !== date.slice(0, 10)
+      ? dateModified
+      : null;
 
   return (
     <>
@@ -47,7 +54,11 @@ export function PostHeader({
           <Avatar name={author.name} picture={author.picture} />
         </div>
         <div className="mb-6 text-base font-normal text-[var(--brand-muted)]">
-          <DateFormatter dateString={date} />
+          {updated ? (
+            <LastUpdated date={updated} />
+          ) : (
+            <DateFormatter dateString={date} />
+          )}
         </div>
       </div>
     </>

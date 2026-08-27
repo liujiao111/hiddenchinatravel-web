@@ -223,4 +223,4 @@ Planning your China trip? These practical guides may also help before and after 
   * [Maps and Navigation in China](/maps-navigation-in-china)
   * [Transport in China](/transport-in-china)
 
-⚠️ Last updated: May 2026 (Verified for current hotel policies). Always double-check with your hotel or booking platform if something seems unclear.
+⚠️ Last updated: August 2026. Always double-check with your hotel or booking platform if something seems unclear.

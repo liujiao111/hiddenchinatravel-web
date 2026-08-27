@@ -6,6 +6,6 @@ expressvpn,vpn,ExpressVPN,ExpressVPN,https://go.expressvpn.com/c/7011822/1462856
 trip-hotels,hotels,Trip.com,Trip.com Hotels,"https://www.trip.com/hotels?Allianceid=7850389&SID=295364952&trip_sub1=&trip_sub3=D15737101",true,Main hotel booking entry
 trip-tickets,tickets,Trip.com,Trip.com Tickets,"https://www.trip.com/things-to-do/list?pagetype=city&citytype=dt&id=110000&name=China&pshowcode=Ticket2&ext-homelocate=1&ext-homesearch=2&Allianceid=7850389&SID=295364952&trip_sub1=&trip_sub3=D15737101",true,Attraction tickets China entry
 trip-trains,trains,Trip.com,Trip.com Trains,"https://www.trip.com/trains?Allianceid=7850389&SID=295364952&trip_sub1=&trip_sub3=D15737101",true,High-speed rail booking entry
-trip-flight,flights,Trip.com,Trip.com Flights,"https://www.trip.com/flights/New%20York-to-Beijing/tickets-NYC-BJS?flighttype=S&dcity=NYC&acity=BJS&Allianceid=7850389&SID=295364952&trip_sub1=&trip_sub3=D18886170",true,International flights entry (NYC-BJS example route)
+trip-flight,flights,Trip.com,Trip.com Flights,"https://www.trip.com/flights?Allianceid=7850389&SID=295364952&trip_sub1=&trip_sub3=D18886170",true,International flights search (no origin city assumed)
 wise,payments,Wise,Wise,https://wise.com/invite/ihpc/jiaol79,true,Money transfer / card invite
 trip-home,general,Trip.com,Trip.com Home,"https://www.trip.com/?Allianceid=7850389&SID=295364952&trip_sub1=&trip_sub3=D16978782",true,General Trip.com homepage entry

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { prepOffers } from "@/lib/visa-checker/prep-offers";
+import { FEES } from "@/lib/trust/copy";
 
 function PrepIcon({ icon }: { icon: (typeof prepOffers)[number]["icon"] }) {
   const className = "h-6 w-6";
@@ -195,8 +196,7 @@ export function FirstTripPrep() {
         ))}
       </div>
       <p className="mt-6 text-xs font-normal leading-relaxed text-[var(--brand-ink-muted)]">
-        Some product links are affiliate partners — at no extra cost to you. We
-        only list tools we use or recommend for independent travelers.
+        {FEES.affiliateWithPlanning}
       </p>
 
       <div className="surface-card mt-12 overflow-hidden bg-[var(--brand-soft)]">

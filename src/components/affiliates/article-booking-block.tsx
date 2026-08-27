@@ -6,6 +6,7 @@ import {
   AFFILIATE_CLICK_EVENT,
   affiliateSlugFromHref,
 } from "@/lib/affiliates/tracking";
+import { FEES } from "@/lib/trust/copy";
 import Link from "next/link";
 
 type Props = {
@@ -121,8 +122,8 @@ export function ArticleLeadAffiliateCta({ block, articleSlug }: Props) {
       {hasAffiliatePrimary || hasAffiliateSecondary ? (
         <p className="mt-3 text-xs font-normal text-[var(--brand-ink-muted)]">
           {hasAffiliatePrimary && hasAffiliateSecondary
-            ? "Affiliate links — same price to you."
-            : "Affiliate link — same price to you."}
+            ? FEES.affiliatePlural
+            : FEES.affiliateSingular}
         </p>
       ) : null}
     </aside>
@@ -208,8 +209,8 @@ export function ArticleBookingBlockCard({ block, articleSlug }: Props) {
       {primaryIsGo || secondaryIsGo ? (
         <p className="mt-4 text-xs font-normal text-[var(--brand-ink-muted)]">
           {primaryIsGo && secondaryIsGo
-            ? "Affiliate links — same price to you."
-            : "Affiliate link — same price to you."}
+            ? FEES.affiliatePlural
+            : FEES.affiliateSingular}
         </p>
       ) : null}
     </aside>

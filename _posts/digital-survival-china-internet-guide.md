@@ -3,7 +3,7 @@ title: "Internet in China for Foreigners: What Actually Works in 2026"
 excerpt: "Google, WhatsApp, and Instagram are blocked on many China connections. This guide explains what actually works for foreign travelers: eSIM, VPN, local SIM, and what to set up before you arrive."
 coverImage: "/assets/blog/digital-survival-china-internet-guide/cover.webp"
 date: "2026-02-20T07:44:57+00:00"
-dateModified: "2026-07-09T03:36:26+00:00"
+dateModified: "2026-08-26T16:00:00+00:00"
 author:
   name: "Joy Liu"
   picture: "/assets/blog/authors/joy-liu.jpg"
@@ -51,7 +51,7 @@ That’s the same principle behind travel eSIMs sold by providers like Airalo or
 **This is why a travel eSIM is usually the first recommendation for short trips:**
 
   * Install before departure, activates on landing
-  * No VPN needed for most day-to-day apps
+  * On **mobile data**, often no VPN for day-to-day apps. **Hotel Wi-Fi** is a different network — that’s when you still need one.
   * Works on both iPhone and most modern Android devices
   * Leaves your physical SIM slot free (useful if you want to keep a Chinese number for calls)
 
@@ -125,7 +125,7 @@ More on why foreign payments fail in China and how to fix them: [Payments in Chi
 Most connection problems in China happen because people try to fix them after landing. Here’s what takes 30 minutes at home and saves hours on the ground:
 
   1. **Buy and install a travel eSIM.** [Airalo](/go/airalo) or [Trip.com eSIM](/go/trip-esim). Install before departure, only activate when you land.
-  2. **Download and test a VPN.** Even if you’re using an eSIM, it’s good backup for hotel Wi-Fi situations. Install, log in, and test from home. I use [NordVPN](/go/nordvpn). [ExpressVPN](/go/expressvpn) is a simpler backup I have not daily-tested in China. Comparison: [Best VPN for China](/best-vpn-for-china).
+  2. **If you’ll use hotel Wi-Fi or a local SIM, download and test a VPN.** Skip this if you will stay on eSIM mobile data for a few days. Install, log in, and test from home. I use [NordVPN](/go/nordvpn). [ExpressVPN](/go/expressvpn) is a simpler backup I have not daily-tested in China. Comparison: [Best VPN for China](/best-vpn-for-china).
   3. **Set up Alipay or WeChat Pay.** Link your foreign card at home while you have unrestricted internet access. Both apps are harder to configure from behind the firewall.
   4. **Download Apple Maps or Amap.** Apple Maps works without a VPN. Amap (the AutoNavi English app) is better for transit routes.
   5. **Grab key apps before departure.** Trip.com, Didi, and any other travel apps are easier to download from your home country’s App Store.
@@ -148,6 +148,6 @@ Hiking / remote areas| Offline maps + local SIM| eSIM signal varies outside majo
   * [Best eSIM for China Travel](/best-esim-for-china-travel) — which providers work, data limits, how eSIMs bypass the firewall
   * [China SIM Card for Foreigners](/china-sim-card-for-foreigners) — where to buy, which carrier, what to expect
   * [Do You Need a VPN in China?](/do-you-need-vpn-china) — when a VPN matters and when an eSIM is enough
-  * [Best VPN for China (2026)](/best-vpn-for-china) — VPNs tested in mainland China
+  * [Best VPN for China (2026)](/best-vpn-for-china) — what I use (Nord), including slow hotel connects; Express listed as a simpler app I have not daily-tested in China
   * [Why Google Maps Doesn’t Work Well in China](/google-maps-china-not-working) — the coordinate problem explained, alternative apps
   * [Payments in China for Foreigners](/digital-survival-china-payment-guide) — Alipay, WeChat Pay, and why transactions fail

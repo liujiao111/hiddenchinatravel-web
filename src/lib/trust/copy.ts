@@ -10,6 +10,32 @@ export const SURVIVAL_KIT_HREF = "/survival-kit";
  * DIY vs paid split — homepage, guide index/hubs, and systems article ends.
  * Guides stay enough for forms and apps; pay only when the route is the problem.
  */
+/**
+ * Paid planning vs labeled affiliate tools. Do not say “no OTA commissions”
+ * without this split — guides include Trip.com / eSIM / VPN affiliate links.
+ */
+export const FEES = {
+  homepagePointTitle: "Fee-only planning",
+  homepagePointBody:
+    "Paid itineraries take no hotel or OTA commissions — a clear service fee, with invoices. Some free guides include labeled affiliate links (same price to you).",
+  paidPlanning:
+    "Paid itinerary advice does not take commissions from hotels, attractions, or OTAs. If we book for you, we charge a clear service fee and can invoice.",
+  bookingHelp:
+    "Need something booked locally? We can help. Booking help is a clear service fee with an invoice — not a hotel or OTA markup.",
+  vsAgencyLead:
+    "Paid itinerary advice does not take commissions from attractions, hotels, or OTAs. There is no inventory to push.",
+  affiliatesHelp:
+    "Some guides include affiliate links to tools that help with travel logistics. They never raise your price. We only include them when they directly help solve the problem in that guide.",
+  affiliateSingular:
+    "Affiliate link — we may earn a commission; same price to you.",
+  affiliatePlural:
+    "Affiliate links — we may earn a commission; same price to you.",
+  affiliateWithPlanning:
+    "Affiliate link — we may earn a commission; same price to you. Paid itinerary planning is separate and fee-only.",
+  partnersReferral:
+    "A referral path: you send an independent traveler; we plan locally on a service fee, with no hotel or OTA markup",
+} as const;
+
 export const WHEN_TO_HIRE = {
   eyebrow: "When to hire us",
   bandLead:

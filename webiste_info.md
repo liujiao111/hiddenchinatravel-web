@@ -67,7 +67,7 @@ Hero 主按钮下方分流（不标价；「guides」链到 `/survival-guides`�
 - ✅ 本地自由行伙伴（local partner）
 - ✅ 双文化翻译者：懂外国游客的恐惧，也懂中国本地怎么真正运转
 - ✅ 行前定制 + 行中支持 + 应急路径
-- ✅ 中立建议：不接受景点 / 酒店 / OTA 佣金；若代订，只收服务费并提供发票
+- ✅ 付费规划不接受景点 / 酒店 / OTA 佣金；若代订，只收服务费并提供发票。免费指南中的 Trip.com / eSIM / VPN 为标明的联盟链接，不改变用户价格。
 
 ---
 
@@ -133,7 +133,7 @@ Hero 主按钮下方分流（不标价；「guides」链到 `/survival-guides`�
 
 **2）旅行社能免费规划，为什么还需要我们？**
 
-- 我们**不接受景点 / 酒店 / OTA 佣金**，没有资源推销绑定，站在用户角度规划  
+- 我们**不接受景点 / 酒店 / OTA 佣金用于付费行程规划**，没有资源推销绑定；免费指南里的 Trip.com / eSIM / VPN 为标明联盟链接  
 - 一对一定制，不是标准化模板  
 - 我们是行前 / 行中 / 应急的保障伙伴：例如扭伤后如何找医院、外国人如何挂号、必要时协助挂号与购药路径  
 - 不只带你去著名景点，还带你体验本地手工艺、特色老街与真实生活  
@@ -454,7 +454,7 @@ Hero 主按钮下方分流（不标价；「guides」链到 `/survival-guides`�
 
 #### Trip.com flights
 
-- 原链接：[https://www.trip.com/flights/New%20York-to-Beijing/tickets-NYC-BJS?flighttype=S&dcity=NYC&acity=BJS&Allianceid=7850389&SID=295364952&trip_sub1=&trip_sub3=D18886170](https://www.trip.com/flights/New%20York-to-Beijing/tickets-NYC-BJS?flighttype=S&dcity=NYC&acity=BJS&Allianceid=7850389&SID=295364952&trip_sub1=&trip_sub3=D18886170)
+- 原链接：[https://www.trip.com/flights?Allianceid=7850389&SID=295364952&trip_sub1=&trip_sub3=D18886170](https://www.trip.com/flights?Allianceid=7850389&SID=295364952&trip_sub1=&trip_sub3=D18886170)
 - pretty 短链：/go/trip-flight
 
 
