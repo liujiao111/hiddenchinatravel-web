@@ -70,11 +70,11 @@ decisionGuide:
   title: "How should foreigners book hotels in China?"
   intro: "Keep the process boring and reliable."
   points:
-    - "Use major platforms when possible and read recent reviews carefully."
+    - "Book on Trip.com and confirm Guests Accepted (foreign passports) before you pay."
     - "Expect passport check-in — this is normal, not a surprise interrogation."
     - "Confirm unclear listings before you depend on them for a late arrival."
     - "Payments and internet still matter for deposits, maps, and contacting the front desk."
-  recommendation: "Book early on a reputable platform, prefer clearer mid/reliable properties for night one, and keep passport + booking screenshot offline."
+  recommendation: "Book night one on Trip.com with Guests Accepted confirmed, keep passport + booking screenshot offline, and prefer a clearer property over the cheapest listing."
 mistakes:
   title: "Common hotel mistakes first-time visitors make"
   items:
