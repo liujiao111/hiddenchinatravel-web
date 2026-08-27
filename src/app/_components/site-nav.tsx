@@ -6,7 +6,7 @@ import {
   navChromeClass,
   type NavLabels,
 } from "@/app/_components/nav-helpers";
-import { mainNav } from "@/lib/navigation";
+import { headerPrimaryNav, headerUtilityNav } from "@/lib/navigation";
 import Link from "next/link";
 
 type Props = {
@@ -19,22 +19,35 @@ export function SiteNav({ labels, tone = "default" }: Props) {
 
   return (
     <nav
-      className="flex flex-nowrap items-center justify-start gap-x-3 whitespace-nowrap xl:gap-x-4 2xl:gap-x-5"
+      className="flex min-w-0 flex-1 items-center"
       aria-label={labels.mainAria}
     >
-      {mainNav.map((item) => {
-        if (item.children?.length) {
-          return (
-            <NavDropdown
-              key={item.href}
-              item={item}
-              labels={labels}
-              tone={tone}
-            />
-          );
-        }
+      <div className="flex min-w-0 flex-nowrap items-center justify-start gap-x-3 whitespace-nowrap 2xl:gap-x-5">
+        {headerPrimaryNav.map((item) => {
+          if (item.children?.length) {
+            return (
+              <NavDropdown
+                key={item.href}
+                item={item}
+                labels={labels}
+                tone={tone}
+              />
+            );
+          }
 
-        return (
+          return (
+            <Link
+              key={item.href}
+              href={item.href}
+              className={navChromeClass({ overlay })}
+            >
+              {labelFor(item.id, labels)}
+            </Link>
+          );
+        })}
+      </div>
+      <div className="ml-auto flex shrink-0 items-center gap-x-3 pl-4 2xl:gap-x-4 2xl:pl-6">
+        {headerUtilityNav.map((item) => (
           <Link
             key={item.href}
             href={item.href}
@@ -42,8 +55,8 @@ export function SiteNav({ labels, tone = "default" }: Props) {
           >
             {labelFor(item.id, labels)}
           </Link>
-        );
-      })}
+        ))}
+      </div>
     </nav>
   );
 }
