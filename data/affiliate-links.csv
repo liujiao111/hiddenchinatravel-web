@@ -4,7 +4,7 @@ trip-esim,esim,Trip.com,Trip.com eSIM,"https://www.trip.com/sale/w/10229/esim.ht
 nordvpn,vpn,NordVPN,NordVPN,https://go.nordvpn.net/aff_c?offer_id=15&aff_id=146020&url_id=902,true,Primary VPN affiliate
 expressvpn,vpn,ExpressVPN,ExpressVPN,https://go.expressvpn.com/c/7011822/1462856/16063,true,Secondary VPN affiliate
 trip-hotels,hotels,Trip.com,Trip.com Hotels,"https://www.trip.com/hotels?Allianceid=7850389&SID=295364952&trip_sub1=&trip_sub3=D15737101",true,Main hotel booking entry
-trip-tickets,tickets,Trip.com,Trip.com Tickets,"https://www.trip.com/things-to-do/list?pagetype=city&citytype=dt&id=110000&name=China&pshowcode=Ticket2&ext-homelocate=1&ext-homesearch=2&Allianceid=7850389&SID=295364952&trip_sub1=&trip_sub3=D15737101",true,Attraction tickets China entry
+trip-tickets,tickets,Trip.com,Trip.com Tickets,"https://www.trip.com/things-to-do?Allianceid=7850389&SID=295364952&trip_sub1=&trip_sub3=D15737101",true,Attraction tickets search (no city assumed)
 trip-trains,trains,Trip.com,Trip.com Trains,"https://www.trip.com/trains?Allianceid=7850389&SID=295364952&trip_sub1=&trip_sub3=D15737101",true,High-speed rail booking entry
 trip-flight,flights,Trip.com,Trip.com Flights,"https://www.trip.com/flights?Allianceid=7850389&SID=295364952&trip_sub1=&trip_sub3=D18886170",true,International flights search (no origin city assumed)
 wise,payments,Wise,Wise,https://wise.com/invite/ihpc/jiaol79,true,Money transfer / card invite

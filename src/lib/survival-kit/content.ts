@@ -478,7 +478,7 @@ export const kitPracticalSection: KitPracticalSectionData = {
 export const kitChecklistItems: KitChecklistItem[] = [
   { id: "visa", label: "Visa / visa-free path confirmed" },
   { id: "data", label: "Mobile data / eSIM installed and ready to activate" },
-  { id: "vpn", label: "VPN installed and tested once before departure" },
+  { id: "vpn", label: "VPN if hotel Wi-Fi or a local SIM — installed and tested at home" },
   { id: "pay", label: "Alipay (and ideally WeChat Pay) linked and verified" },
   { id: "maps", label: "Amap installed and basic search tested" },
   { id: "hotel", label: "Flight + night-one hotel booked" },

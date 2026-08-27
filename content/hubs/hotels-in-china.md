@@ -6,9 +6,9 @@ slug: hotels-in-china
 metaDescription: "Find out how to book hotels in China as a foreigner, avoid common booking mistakes, and understand what to expect during passport-based hotel check-in."
 canonical: /hotels-in-china
 eyebrow: "China Digital Survival Guide · Hotels Hub"
-heroAnswer: "If you want the simplest answer, book through a major platform, choose a hotel with solid recent reviews, keep your passport ready, and confirm details in advance if anything about foreign guest check-in feels unclear."
+heroAnswer: "If you want the simplest answer, book on Trip.com and confirm Guests Accepted (foreign passports) before you pay. Booking.com often cannot tell you until you are at the desk. Keep your passport ready for check-in."
 description: "Booking hotels in China is usually easier than many first-time visitors expect — once you know what to watch for. This hotel hub helps you choose safer listings, understand what check-in usually looks like, and avoid the most common booking stress before your trip."
-dateModified: "2026-06-01"
+dateModified: "2026-08-27"
 keywords:
   - hotels in China for foreigners
   - China hotel check-in passport
@@ -70,11 +70,11 @@ decisionGuide:
   title: "How should foreigners book hotels in China?"
   intro: "Keep the process boring and reliable."
   points:
-    - "Use major platforms when possible and read recent reviews carefully."
+    - "Book on Trip.com and confirm Guests Accepted (foreign passports) before you pay."
     - "Expect passport check-in — this is normal, not a surprise interrogation."
     - "Confirm unclear listings before you depend on them for a late arrival."
     - "Payments and internet still matter for deposits, maps, and contacting the front desk."
-  recommendation: "Book early on a reputable platform, prefer clearer mid/reliable properties for night one, and keep passport + booking screenshot offline."
+  recommendation: "Book night one on Trip.com with Guests Accepted confirmed, keep passport + booking screenshot offline, and prefer a clearer property over the cheapest listing."
 mistakes:
   title: "Common hotel mistakes first-time visitors make"
   items:

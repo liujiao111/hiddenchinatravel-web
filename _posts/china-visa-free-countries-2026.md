@@ -3,7 +3,7 @@ title: "China Visa-Free Countries 2026: Full List + Rules You Need to Know"
 excerpt: "Check if your country qualifies for China visa-free entry in 2026. Official country list, stay limits, bilateral agreements, and what to prepare before you land."
 coverImage: "/assets/blog/china-visa-free-countries-2026/cover.webp"
 date: "2026-07-10T02:54:44+00:00"
-dateModified: "2026-08-24T07:00:00+00:00"
+dateModified: "2026-08-27T02:00:00+00:00"
 author:
   name: "Joy Liu"
   picture: "/assets/blog/authors/joy-liu.jpg"
@@ -235,8 +235,8 @@ Visa-free means nothing — no form, no fee, no sticker, you just walk through. 
 **Does the 30-day visa-free stay cover all of mainland China?**  
 Yes. Once you’re through immigration you can go anywhere on the mainland — Beijing, Yunnan, Xinjiang, wherever. Tibet is a partial exception: you still need a separate Tibet Travel Permit regardless of your visa or visa-free status, and it has to be arranged through a registered Tibet travel agency before you go. Hong Kong, Macau, and Taiwan are separate immigration systems entirely. Crossing into Hong Kong and back counts as a fresh mainland entry.
 
-**Do I need travel insurance for visa-free entry?**  
-China doesn’t require it at the border. But the practical argument for having it is straightforward: hospitals in China typically require payment upfront before treatment, and costs for anything serious add up fast for non-residents. A policy that includes medical evacuation is worth it for any trip longer than a few days. _[PLACEHOLDER: /china-travel-insurance-guide/]_
+**Do I need travel insurance for visa-free entry?**
+China doesn’t require it at the border. But the practical argument for having it is straightforward: hospitals in China typically require payment upfront before treatment, and costs for anything serious add up fast for non-residents. A policy that includes medical evacuation is worth it for any trip longer than a few days. We don’t sell insurance — see the [Survival Kit insurance step](/survival-kit#section-insurance) for what to look for before you fly.
 
 **My passport nationality qualifies, but I’m applying from a different country. Does that matter?**  
 Your eligibility is based on your passport nationality, not where you currently live. If you hold a German passport and you’re based in Vietnam, you still enter visa-free as a German national. Where this gets complicated is dual nationality — enter on whichever passport is cleaner for the purpose, and be consistent. Don’t enter on one passport and exit on another.
@@ -255,7 +255,7 @@ Getting the visa question sorted is step one. Here’s everything else that actu
 **Phone and internet — do this before you fly, not after**
 
   * ✅ China eSIM activated — [Best eSIM for China Travel](/best-esim-for-china-travel)
-  * ✅ VPN downloaded, installed, and tested with a successful connection — [Best VPN for China 2026](/best-vpn-for-china)
+  * ✅ VPN only if you’ll use hotel Wi-Fi, public Wi-Fi, or a local SIM — [Do you need a VPN in China?](/do-you-need-vpn-china). If yes, install at home: [Best VPN for China](/best-vpn-for-china)
   * ✅ Offline maps downloaded — Apple Maps offline or Maps.me. Google Maps needs a working VPN to function in China
 
 **Payments**
@@ -268,9 +268,9 @@ Getting the visa question sorted is step one. Here’s everything else that actu
   * ✅ Fill out the arrival card — distributed on most international flights, also available at the immigration counters if yours doesn’t
   * ✅ Hotel address and return flight accessible without internet — immigration may ask, and you won’t have data yet if you haven’t pre-activated an eSIM
 
-For the complete pre-arrival document checklist: _[PLACEHOLDER: /china-entry-requirements-checklist/]_
+For the complete pre-arrival checklist, use the [Survival Kit](/survival-kit).
 
-If you’re still figuring out what to actually do once you’re there — where to go first, how to get between cities, how long you need: _[PLACEHOLDER: /china-itinerary-first-time/]_
+If you’re still figuring out cities and days: [How to plan a China itinerary](/how-to-plan-china-itinerary). Hire a [1-on-1 PDF](/china-itinerary-planner) only when the route itself isn’t clear.
 
 ## Browse by nationality
 

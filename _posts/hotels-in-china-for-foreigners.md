@@ -3,7 +3,7 @@ title: "China Hotels for Foreigners (2026): No Rejection Guide"
 excerpt: "Not all hotels in China accept foreign passports — and some won't tell you until you're standing at the desk. Here's how to book the right ones and what to do if you still get turned away."
 coverImage: "/assets/blog/hotels-in-china-for-foreigners/cover.webp"
 date: "2026-04-07T08:44:39+00:00"
-dateModified: "2026-08-26T12:00:00+00:00"
+dateModified: "2026-08-27T02:00:00+00:00"
 author:
   name: "Joy Liu"
   picture: "/assets/blog/authors/joy-liu.jpg"
@@ -61,7 +61,7 @@ Booking a hotel in China is the most critical step. You don’t want to leave th
   1. **Use the Right Platform:[Trip.com](/go/trip-hotels) (Not Booking.com)**  
 Most travelers use Booking.com or Expedia for China — the problem is neither platform filters by foreigner acceptance. You can book, show up, and still get turned away. Trip.com is the better call. It’s built for the Chinese market, full English interface, and has a filter specifically for “Accepting foreigners” — so you’re only seeing hotels that can legally take your passport. → [Search foreigner-friendly hotels on Trip.com](/go/trip-hotels). After picking a hotel, scroll to Policies and check “Guests Accepted.” Seeing “Guests from all countries/regions are welcome” means you’re good.
   2. **The “Keyword Hunt” on Reviews**  
-Whether you use [Trip.com](/go/trip-hotels) or Booking, don’t just look at the star rating. Read the reviews. Use the search function in the reviews and type keywords like: “foreigner” | “passport” | “police”.
+On [Trip.com](/go/trip-hotels), don’t just look at the star rating. After you confirm Guests Accepted, read the reviews — search “foreigner”, “passport”, “police”. If you already booked on Booking.com, confirm in writing that the property accepts foreign passports, or move the reservation before you fly.
 
 If you see recent reviews from other foreigners saying “checked in without any issues,” you’re golden. If you see reviews saying “they said no at the front desk,” avoid it.
 

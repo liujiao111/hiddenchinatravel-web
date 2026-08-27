@@ -172,4 +172,4 @@ Planning your China trip? These practical guides may also help:
   * [Internet, VPN and SIM in China](/internet-in-china)
   * [Transport in China](/transport-in-china)
 
-_Last updated: May 2026. Alipay policies and features may change — always verify current requirements at[alipay.com](https://www.alipay.com/) before your trip._
+_Last updated: August 2026. Alipay policies and features may change — always verify current requirements at[alipay.com](https://www.alipay.com/) before your trip._

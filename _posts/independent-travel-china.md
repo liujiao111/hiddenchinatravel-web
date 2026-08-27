@@ -198,4 +198,4 @@ Planning your China trip? These practical guides may also help you travel more i
   * [Hotels in China for Foreigners](/hotels-in-china)
   * [Attraction Tickets in China](/attraction-tickets-in-china)
 
-_Last updated: April 2026. China is becoming easier to explore independently, but practical details can still change — especially payment apps, SIM or eSIM setup, hotel check-in rules, real-name ticket booking, transport platforms, and attraction entry policies. Before your trip, double-check the latest requirements in the apps you plan to use, on official booking platforms, or with your hotel._
+_Last updated: August 2026. China is becoming easier to explore independently, but practical details can still change — especially payment apps, SIM or eSIM setup, hotel check-in rules, real-name ticket booking, transport platforms, and attraction entry policies. Before your trip, double-check the latest requirements in the apps you plan to use, on official booking platforms, or with your hotel._

@@ -106,13 +106,14 @@ let cache: {
 } | null = null;
 
 function getCache() {
-  if (!cache) {
-    const all = loadAffiliateLinks();
-    cache = {
-      all,
-      bySlug: new Map(all.map((link) => [link.slug, link])),
-    };
+  if (cache && process.env.NODE_ENV === "production") {
+    return cache;
   }
+  const all = loadAffiliateLinks();
+  cache = {
+    all,
+    bySlug: new Map(all.map((link) => [link.slug, link])),
+  };
   return cache;
 }
 

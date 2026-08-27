@@ -4,7 +4,7 @@ seoTitle: "Meituan Without a Chinese Number (2026 Guide)"
 excerpt: "Meituan without a Chinese number: what works via WeChat or Alipay, where signup blocks foreigners, and backup paths that still get you deals and delivery."
 coverImage: "/assets/blog/how-to-use-meituan/cover.webp"
 date: "2026-07-16T02:54:46+00:00"
-dateModified: "2026-08-26T08:00:00+00:00"
+dateModified: "2026-08-27T02:00:00+00:00"
 author:
   name: "Joy Liu"
   picture: "/assets/blog/authors/joy-liu.jpg"
@@ -44,7 +44,7 @@ The app is essentially China’s super-app for local deals. Restaurants, cafés,
 
 And yes, foreigners can use Meituan. And once you figure it out, you’ll wonder how you ever visited China without it.
 
-I’ve been going back and forth to China for years, and Meituan has been in my rotation the whole time… alongside its sister app Dianping, which does basically the same thing. On a recent trip to Shenzhen (we booked our hotel through [Trip.com](/go/trip-hotels), which has the best China hotel inventory by far), Fabio and I decided to do a little experiment: buy everything we could through Meituan for a day. We saved **40 euros in a single day**. From coffee to food to a gym session, all discounted. That’s not a typo.
+I’ve been going back and forth to China for years, and Meituan has been in my rotation the whole time… alongside its sister app Dianping, which does basically the same thing. On a recent trip to Shenzhen we booked the hotel through [Trip.com](/go/trip-hotels) (filter for hotels that accept foreign passports). Fabio and I tried buying a day’s coffee, food, and a gym session through Meituan deals — that day came to about **40 euros** less than walk-in prices. One day in Shenzhen, not a rule for every city.
 
 ## Quick Answer: Can You Use Meituan Without a Chinese Number?
 
@@ -52,7 +52,7 @@ I’ve been going back and forth to China for years, and Meituan has been in my 
 
 If WeChat or Meituan still demands a Chinese number and blocks you, switch to **Alipay → Taobao Instant (饿了么 / 淘宝闪购)** for delivery, or order in person. Full fallbacks: [order food in China without a Chinese number](/order-food-china-without-chinese-number).
 
-**Before Meituan, there’s Trip.com.** Meituan handles the deals once you’re on the ground. Before that, [Trip.com](/go/trip-hotels) is where we book everything else… hotels, flights, and trains across China. It has the deepest local inventory of any platform and is built for the Chinese market, so you’ll find options that just don’t exist on Western booking sites.
+**Before Meituan, there’s Trip.com.** Meituan handles the deals once you’re on the ground. Before that, [Trip.com](/go/trip-hotels) is where I book hotels, trains, and tickets in English. Confirm Guests Accepted on hotels. You’ll find listings that often don’t show up on Western booking sites.
 
 Getting set up takes a little legwork upfront, but once you’re in, you’re in. Here’s exactly how to do it.
 

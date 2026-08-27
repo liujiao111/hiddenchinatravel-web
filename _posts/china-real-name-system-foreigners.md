@@ -228,4 +228,4 @@ Planning your China trip? These practical guides may also help you deal with rea
   * [Payments in China for Foreigners](/payments-in-china)
   * [Internet, VPN and SIM in China](/internet-in-china)
 
-_Last updated: March 2026. Real-name verification rules, passport support, and app requirements in China may change over time — always confirm details with the carrier, bank, or app during setup._
+_Last updated: August 2026. Real-name verification rules, passport support, and app requirements in China may change over time — always confirm details with the carrier, bank, or app during setup._

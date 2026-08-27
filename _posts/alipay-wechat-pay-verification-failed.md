@@ -216,4 +216,4 @@ And before you land in China, build a real backup into your setup: both Alipay a
   * **[China SIM Card for Foreigners](/china-sim-card-for-foreigners)** — local number for SMS codes that never arrive
   * **[Internet, VPN & SIM in China](/internet-in-china)** — how to stay connected and receive bank SMS codes abroad
 
-_Last updated: May 2026. Mobile payment rules, verification requirements, and app features in China can change. Check the latest setup steps directly in the app before your trip._
+_Last updated: August 2026. Mobile payment rules, verification requirements, and app features in China can change. Check the latest setup steps directly in the app before your trip._
