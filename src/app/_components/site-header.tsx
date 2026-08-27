@@ -41,7 +41,7 @@ export function SiteHeader() {
           : "border-b border-neutral-200 bg-white",
       )}
     >
-      <div className="mx-auto grid h-14 w-full max-w-[90rem] grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-3 px-4 md:h-16 md:gap-4 md:px-6 lg:px-8">
+      <div className="mx-auto flex h-14 w-full max-w-[90rem] items-center gap-3 px-4 md:h-16 md:gap-3 md:px-6 lg:px-8">
         <div className="relative z-10 shrink-0 pr-1 md:pr-2">
           <SiteLogo
             size="sm"
@@ -50,12 +50,12 @@ export function SiteHeader() {
           />
         </div>
 
-        <div className="hidden min-w-0 xl:block">
+        <div className="hidden min-w-0 flex-1 xl:flex">
           <SiteNav labels={dict.nav} tone={overlay ? "onTeal" : "default"} />
         </div>
 
-        <div className="relative z-10 flex min-w-0 items-center justify-end gap-2 sm:gap-2.5 md:gap-3">
-          <div className="relative z-20 w-[8.5rem] min-w-0 overflow-visible sm:w-[11rem] md:w-[12rem] xl:w-[12.5rem]">
+        <div className="relative z-20 ml-auto flex shrink-0 items-center justify-end gap-2 sm:gap-2.5 md:gap-3">
+          <div className="relative w-[8.5rem] sm:w-[11rem] md:w-[12rem] xl:w-[10.5rem] min-[1800px]:w-[12.5rem]">
             <SiteSearch
               variant="header"
               loadIndexOnFocus
@@ -64,7 +64,7 @@ export function SiteHeader() {
           </div>
           <Link
             href="/china-itinerary-planner#plan-trip"
-            className="btn-brand hidden h-10 items-center px-4 py-0 text-sm md:inline-flex"
+            className="btn-brand hidden h-10 items-center px-3 py-0 text-sm md:inline-flex xl:hidden min-[1800px]:inline-flex min-[1800px]:px-4"
           >
             {dict.header.plannerCta}
           </Link>

@@ -81,3 +81,14 @@ export const mainNav: NavItem[] = [
   { id: "contact", href: "/contact" },
   { id: "about", href: "/about" },
 ];
+
+const headerUtilityIds: NavId[] = ["contact", "about"];
+
+/** Topic links in the desktop bar — Contact/About sit in the trailing cluster so they cannot collide with search. */
+export const headerPrimaryNav: NavItem[] = mainNav.filter(
+  (item) => !headerUtilityIds.includes(item.id),
+);
+
+export const headerUtilityNav: NavItem[] = mainNav.filter((item) =>
+  headerUtilityIds.includes(item.id),
+);

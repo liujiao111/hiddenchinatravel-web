@@ -71,7 +71,7 @@ export function SiteLogo({
               : onWhite
                 ? "text-neutral-900"
                 : "text-[var(--brand-ink)]",
-            compactOnMobile ? "text-base sm:text-lg md:text-xl" : s.text,
+            compactOnMobile ? "hidden sm:inline text-base sm:text-lg md:text-xl" : s.text,
           )}
         >
           {SITE_NAME}
