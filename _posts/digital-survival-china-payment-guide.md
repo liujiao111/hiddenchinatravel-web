@@ -241,4 +241,4 @@ If the app fails or you’re unsure what to do, show these phrases to the staff.
   * ![Internet & VPN](/assets/blog/digital-survival-china-payment-guide/icons8-internet-100.webp) [Internet, VPN & SIM](/internet-in-china) — Stay connected anywhere: buy SIM/eSIM, set up VPN, and keep Google, WhatsApp, and maps working smoothly.
   * ![Transport in China](/assets/blog/digital-survival-china-payment-guide/icons_transport.webp) [Transport in China](/transport-in-china) — Navigate metros, taxis, and high-speed rail like a local, and avoid common tourist mistakes.
 
-Last updated: May 2026. Mobile payments, SIM cards, VPNs, and app rules in China can change quickly. Check the latest tools in the [Survival Kit](/survival-kit) before traveling.
+Last updated: August 2026. Mobile payments, SIM cards, VPNs, and app rules in China can change quickly. Check the latest tools in the [Survival Kit](/survival-kit) before traveling.

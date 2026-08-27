@@ -170,4 +170,4 @@ Just don’t stop there. Get Alipay running before you arrive, carry a small amo
   * [Internet, VPN and SIM in China](/internet-in-china)
   * [Transport in China](/transport-in-china)
 
-_Last updated: May 2026. WeChat Pay’s foreign card support and feature availability can change — always verify the latest details within the app or at wechat.com before your trip._
+_Last updated: August 2026. WeChat Pay’s foreign card support and feature availability can change — always verify the latest details within the app or at wechat.com before your trip._

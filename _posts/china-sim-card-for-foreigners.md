@@ -215,4 +215,4 @@ Planning your China trip? These practical guides may also help with internet acc
   * [Order Food Without a Chinese Number](/order-food-china-without-chinese-number)
   * [Payments in China for Foreigners](/payments-in-china)
 
-_Last updated: May 2026. Carrier plans and pricing change frequently — confirm details with the carrier at time of purchase._
+_Last updated: August 2026. Carrier plans and pricing change frequently — confirm details with the carrier at time of purchase._

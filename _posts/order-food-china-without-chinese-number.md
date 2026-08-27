@@ -222,4 +222,4 @@ Delicious!| 好吃！| Hào chī!
   * [China SIM Card & eSIM Guide](/china-sim-card-for-foreigners) — Getting the mobile data you need for all of the above
   * [Internet & VPN Guide for China](/internet-in-china) — Google is blocked in China; sort your VPN before you land if you plan to use Google Translate
 
-_Last updated: June 2026. App interfaces, platform names, and availability vary by city and app version — confirm current steps within the app if something looks different from what’s described here._
+_Last updated: August 2026. App interfaces, platform names, and availability vary by city and app version — confirm current steps within the app if something looks different from what’s described here._

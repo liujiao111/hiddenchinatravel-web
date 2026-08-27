@@ -432,7 +432,7 @@ Hero 主按钮下方分流（不标价；「guides」链到 `/survival-guides`�
 
 #### Trip.com tickets
 
-- 原链接：[https://www.trip.com/things-to-do/list?pagetype=city&citytype=dt&id=110000&name=China&pshowcode=Ticket2&ext-homelocate=1&ext-homesearch=2&Allianceid=7850389&SID=295364952&trip_sub1=&trip_sub3=D15737101](https://www.trip.com/things-to-do/list?pagetype=city&citytype=dt&id=110000&name=China&pshowcode=Ticket2&ext-homelocate=1&ext-homesearch=2&Allianceid=7850389&SID=295364952&trip_sub1=&trip_sub3=D15737101)
+- 原链接：[https://www.trip.com/things-to-do?Allianceid=7850389&SID=295364952&trip_sub1=&trip_sub3=D15737101](https://www.trip.com/things-to-do?Allianceid=7850389&SID=295364952&trip_sub1=&trip_sub3=D15737101)
 - pretty 短链：/go/trip-tickets
 
 

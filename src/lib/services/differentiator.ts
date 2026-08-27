@@ -34,7 +34,7 @@ export const differentiatorContent = {
       id: "wifi",
       icon: "wifi" as const,
       situation: "Hotel Wi‑Fi blocks WhatsApp and maps after midnight.",
-      resolution: "Example path: we help restore a working VPN connection.",
+      resolution: "Example path: we walk you through hotel Wi-Fi vs mobile data, or a second VPN app — no VPN is always on.",
     },
   ],
 } as const;

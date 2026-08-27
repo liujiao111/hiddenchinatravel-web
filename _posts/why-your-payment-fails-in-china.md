@@ -209,4 +209,4 @@ Payment failures in China are almost always diagnosable and usually fixable. Whe
 
 _Related guides:[China Payment Guide](/digital-survival-china-payment-guide) · [Alipay for Foreigners](/alipay-for-foreigners-china) · [WeChat Pay for Foreigners](/wechat-pay-for-foreigners-china) · [China Internet Guide](/digital-survival-china-internet-guide) · [SIM Card Guide for Foreigners](/china-sim-card-for-foreigners)_
 
-> Last updated: April 2026. Mobile payment rules, foreign card support, verification requirements, and payment failure triggers in China may change over time — always confirm details inside Alipay, WeChat Pay, or with official support if your payment still does not work.
+> Last updated: August 2026. Mobile payment rules, foreign card support, verification requirements, and payment failure triggers in China may change over time — always confirm details inside Alipay, WeChat Pay, or with official support if your payment still does not work.
