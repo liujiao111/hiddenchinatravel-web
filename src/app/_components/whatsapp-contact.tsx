@@ -98,7 +98,9 @@ export function WhatsAppContact({
           className={cn("shrink-0", isNav ? "h-5 w-5" : "h-4 w-4")}
         />
         {isNav ? (
-          <span className="hidden whitespace-nowrap 2xl:inline">{label}</span>
+          <span className="hidden whitespace-nowrap min-[1800px]:inline">
+            {label}
+          </span>
         ) : null}
       </a>
 

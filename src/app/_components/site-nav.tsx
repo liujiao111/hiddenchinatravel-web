@@ -22,7 +22,7 @@ export function SiteNav({ labels, tone = "default" }: Props) {
       className="flex min-w-0 flex-1 items-center"
       aria-label={labels.mainAria}
     >
-      <div className="flex min-w-0 flex-nowrap items-center justify-start gap-x-3 whitespace-nowrap 2xl:gap-x-5">
+      <div className="flex min-w-0 flex-nowrap items-center justify-start gap-x-3 whitespace-nowrap min-[1800px]:gap-x-5">
         {headerPrimaryNav.map((item) => {
           if (item.children?.length) {
             return (
@@ -46,7 +46,7 @@ export function SiteNav({ labels, tone = "default" }: Props) {
           );
         })}
       </div>
-      <div className="ml-auto flex shrink-0 items-center gap-x-3 pl-4 2xl:gap-x-4 2xl:pl-6">
+      <div className="ml-auto flex shrink-0 items-center gap-x-3 pl-4 min-[1800px]:gap-x-4 min-[1800px]:pl-6">
         {headerUtilityNav.map((item) => (
           <Link
             key={item.href}
