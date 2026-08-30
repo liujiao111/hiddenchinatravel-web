@@ -7,7 +7,7 @@ date: "2026-08-18T12:00:00+08:00"
 dateModified: "2026-08-23T12:00:00+08:00"
 author:
   name: "Joy Liu"
-  picture: "/assets/blog/authors/joy-liu.jpg"
+  picture: "/brand/founder/avatar-joy.webp"
 ogImage:
   url: "/assets/blog/independent-travel-china/cover.webp"
 canonical: "https://hiddenchinatravel.com/how-to-plan-china-itinerary"

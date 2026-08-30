@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Container from "@/app/_components/container";
 import { LastUpdated } from "@/app/_components/last-updated";
+import { FounderTrustChip } from "@/app/_components/trust/founder-trust-chip";
 import { ContactForm } from "@/app/contact/_components/contact-form";
 import { ClientEmailLink } from "@/components/contact/client-email-link";
 import {
@@ -12,6 +13,7 @@ import {
   SITE_URL,
 } from "@/lib/constants";
 import { SLA } from "@/lib/trust/copy";
+import { contactWhoReplies } from "@/lib/about/founder-content";
 import {
   getWhatsAppHref,
 } from "@/lib/whatsapp";
@@ -151,6 +153,17 @@ export default async function ContactPage({
           </section>
 
           <aside className="space-y-8">
+            <FounderTrustChip className="bg-white" />
+
+            <div>
+              <h2 className="mb-2 text-sm font-bold tracking-tight text-[var(--brand-ink)]">
+                {contactWhoReplies.title}
+              </h2>
+              <p className="text-sm font-normal leading-relaxed text-[var(--brand-ink-muted)]">
+                {contactWhoReplies.body}
+              </p>
+            </div>
+
             <div>
               <h2 className="mb-2 text-sm font-bold tracking-tight text-[var(--brand-ink)]">
                 Email

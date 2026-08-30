@@ -6,7 +6,7 @@ date: "2026-07-09T09:53:58+00:00"
 dateModified: "2026-08-24T07:00:00+00:00"
 author:
   name: "Joy Liu"
-  picture: "/assets/blog/authors/joy-liu.jpg"
+  picture: "/brand/founder/avatar-joy.webp"
 ogImage:
   url: "/assets/blog/do-i-need-a-visa-for-china/cover.webp"
 canonical: "https://hiddenchinatravel.com/do-i-need-a-visa-for-china"

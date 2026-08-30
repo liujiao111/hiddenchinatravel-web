@@ -7,7 +7,7 @@ date: "2026-02-14T05:25:19+00:00"
 dateModified: "2026-08-23T12:00:00+00:00"
 author:
   name: "Joy Liu"
-  picture: "/assets/blog/authors/joy-liu.jpg"
+  picture: "/brand/founder/avatar-joy.webp"
 ogImage:
   url: "/assets/blog/independent-travel-china/cover.webp"
 canonical: "https://hiddenchinatravel.com/independent-travel-china"

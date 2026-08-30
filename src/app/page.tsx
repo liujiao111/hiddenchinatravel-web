@@ -1,3 +1,4 @@
+import { HomeWhyExists } from "@/app/_components/home/home-why-exists";
 import { HomeDestinations } from "@/app/_components/home/home-destinations";
 import { HomeFaqSection } from "@/app/_components/home/home-faq-section";
 import { HomeFeaturedGuides } from "@/app/_components/home/home-featured-guides";
@@ -44,6 +45,7 @@ export default function Index() {
   return (
     <main>
       <HomeHero />
+      <HomeWhyExists />
       <HomeDestinations variant="home" />
       <HomeWhyUs />
       <HomeGettingStarted />

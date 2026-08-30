@@ -1,3 +1,4 @@
+import { founderKnowsAbout } from "@/lib/about/founder-content";
 import {
   SITE_EMAIL,
   SITE_FOUNDER_NAME,
@@ -29,6 +30,7 @@ export function founderPersonJsonLd() {
     email: SITE_EMAIL,
     sameAs: socialLinks.map((s) => s.href),
     worksFor: { "@id": orgId },
+    knowsAbout: [...founderKnowsAbout],
     address: {
       "@type": "PostalAddress",
       addressLocality: "Kunming",

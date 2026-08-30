@@ -7,7 +7,7 @@ date: "2026-07-16T02:54:46+00:00"
 dateModified: "2026-08-27T02:00:00+00:00"
 author:
   name: "Joy Liu"
-  picture: "/assets/blog/authors/joy-liu.jpg"
+  picture: "/brand/founder/avatar-joy.webp"
 ogImage:
   url: "/assets/blog/how-to-use-meituan/cover.webp"
 canonical: "https://hiddenchinatravel.com/how-to-use-meituan"

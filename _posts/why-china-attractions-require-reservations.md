@@ -6,7 +6,7 @@ date: "2026-08-05T12:00:00+00:00"
 dateModified: "2026-08-05T14:10:00+00:00"
 author:
   name: "Joy Liu"
-  picture: "/assets/blog/authors/joy-liu.jpg"
+  picture: "/brand/founder/avatar-joy.webp"
 ogImage:
   url: "/assets/blog/why-china-attractions-require-reservations/cover.webp"
 canonical: "https://hiddenchinatravel.com/why-china-attractions-require-reservations"

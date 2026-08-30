@@ -23,18 +23,24 @@ export function PublishedReviews({
           {reviewsPageCopy.emptyBody}
         </p>
         {showEmptyCtas ? (
-          <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+          <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
             <Link
               href="/services/custom-itinerary#sample-route"
               className="btn-brand inline-flex min-h-11 justify-center px-5 py-2.5 text-sm"
             >
-              See how planning works
+              See sample route
             </Link>
             <Link
-              href="/partners"
-              className="inline-flex min-h-11 items-center justify-center rounded-full border-2 border-[var(--brand-cta)]/30 px-5 py-2.5 text-sm font-bold text-[var(--brand-cta)]"
+              href="/about#why-i-started"
+              className="inline-flex min-h-11 items-center justify-center rounded-full border-2 border-[var(--brand-cta)]/30 px-5 py-2.5 text-sm font-bold text-[var(--brand-cta)] transition-all duration-300 hover:border-[var(--brand-cta)] hover:bg-[var(--brand-cta)]/8"
             >
-              Planner partnerships
+              Why I started this
+            </Link>
+            <Link
+              href="/china-itinerary-planner#plan-trip"
+              className="inline-flex min-h-11 items-center justify-center rounded-full border-2 border-[var(--brand-cta)]/30 px-5 py-2.5 text-sm font-bold text-[var(--brand-cta)] transition-all duration-300 hover:border-[var(--brand-cta)] hover:bg-[var(--brand-cta)]/8"
+            >
+              Plan my trip
             </Link>
           </div>
         ) : null}

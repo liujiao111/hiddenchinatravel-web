@@ -6,7 +6,7 @@ date: "2026-02-23T10:16:19+00:00"
 dateModified: "2026-06-05T13:37:27+00:00"
 author:
   name: "Joy Liu"
-  picture: "/assets/blog/authors/joy-liu.jpg"
+  picture: "/brand/founder/avatar-joy.webp"
 ogImage:
   url: "/assets/blog/digital-survival-china-transport-guide/cover.webp"
 canonical: "https://hiddenchinatravel.com/digital-survival-china-transport-guide"

@@ -7,7 +7,7 @@ date: "2026-04-08T09:19:14+00:00"
 dateModified: "2026-08-26T08:00:00+00:00"
 author:
   name: "Joy Liu"
-  picture: "/assets/blog/authors/joy-liu.jpg"
+  picture: "/brand/founder/avatar-joy.webp"
 ogImage:
   url: "/assets/blog/alipay-for-foreigners-china/cover.webp"
 canonical: "https://hiddenchinatravel.com/alipay-for-foreigners-china"

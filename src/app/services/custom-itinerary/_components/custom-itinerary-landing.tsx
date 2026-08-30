@@ -1,4 +1,5 @@
 import Container from "@/app/_components/container";
+import { FounderTrustChip } from "@/app/_components/trust/founder-trust-chip";
 import { PublishedReviews } from "@/app/_components/trust/published-reviews";
 import { SampleRouteCard } from "@/app/_components/trust/sample-route-card";
 import { coreService } from "@/lib/services/content";
@@ -111,6 +112,7 @@ export function CustomItineraryLanding() {
         className="border-t border-[color-mix(in_srgb,var(--brand-cta)_12%,transparent)] bg-[var(--brand-cream)] py-12 md:py-16"
       >
         <Container>
+          <FounderTrustChip className="mb-8 max-w-2xl bg-white" />
           <h2 className="mb-2 text-2xl font-bold tracking-tight text-[var(--brand-ink)]">
             A sample of how a route can feel
           </h2>

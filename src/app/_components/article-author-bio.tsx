@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { authorBioLine } from "@/lib/about/founder-content";
 import {
   SITE_FOUNDER_NAME,
   SITE_FOUNDER_PATH,
@@ -54,8 +55,7 @@ export function ArticleAuthorBio({
             </span>
           </p>
           <p className="mt-2 text-sm font-normal leading-relaxed text-[var(--brand-ink-muted)]">
-            First-hand China travel notes from Kunming — practical prep, not a
-            tour script.{" "}
+            {authorBioLine}{" "}
             <Link
               href={SITE_FOUNDER_PATH}
               className="font-bold text-[var(--brand-coral)] underline decoration-[color-mix(in_srgb,var(--brand-coral)_35%,transparent)] underline-offset-2"

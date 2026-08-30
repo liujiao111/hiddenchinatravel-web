@@ -7,7 +7,7 @@ date: "2026-06-11T09:35:04+00:00"
 dateModified: "2026-08-26T16:00:00+00:00"
 author:
   name: "Joy Liu"
-  picture: "/assets/blog/authors/joy-liu.jpg"
+  picture: "/brand/founder/avatar-joy.webp"
 ogImage:
   url: "/assets/blog/do-you-need-vpn-china/cover.webp"
 canonical: "https://hiddenchinatravel.com/do-you-need-vpn-china"

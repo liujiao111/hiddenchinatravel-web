@@ -7,7 +7,7 @@ date: "2026-06-27T13:53:33+00:00"
 dateModified: "2026-08-26T16:00:00+00:00"
 author:
   name: "Joy Liu"
-  picture: "/assets/blog/authors/joy-liu.jpg"
+  picture: "/brand/founder/avatar-joy.webp"
 ogImage:
   url: "/assets/blog/best-vpn-for-china/cover.webp"
 canonical: "https://hiddenchinatravel.com/best-vpn-for-china"

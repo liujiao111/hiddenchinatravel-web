@@ -17,7 +17,7 @@ export const partnerWhoWeAre = {
   title: "Who we are",
   paragraphs: [
     "We are a China travel partner for visitors who want to travel independently — not join a tour group.",
-    "We offer one-to-one pre-trip planning, optional on-trip help during business hours, and calm guidance when something goes wrong. Our role is a bridge of information and lived experience — not a traditional travel agency, and not a tour guide.",
+    "One-to-one pre-trip planning, optional on-trip help during business hours, and calm guidance when something goes wrong. For why this exists and who is behind it, read the founder story below.",
   ],
   oneLiner: "Your local partner for independent travel.",
 } as const;

@@ -19,7 +19,7 @@ export const reviewsPageCopy = {
     "Short quotes from people who used our custom itinerary planning. We only publish notes we have permission to share — this list stays empty until then.",
   emptyTitle: "No public notes yet",
   emptyBody:
-    "We are a small local partner, not a review mill. When a traveler finishes a paid itinerary and agrees in writing, their note will appear here. Until then, see how planning works — including a labeled sample route, not a client story.",
+    "We are a small local partner, not a review mill. When a traveler finishes a paid itinerary and agrees in writing, their note will appear here. Until then, use the sample route, read why I started Hidden China Travel, or request a plan — no fabricated quotes.",
   howWeCollect: [
     "Quote comes from a completed custom-itinerary or itinerary-review client — not a friend, not an affiliate, not a partner writing about themselves.",
     "We ask by email after delivery. We do not offer discounts in exchange for a 5-star line.",

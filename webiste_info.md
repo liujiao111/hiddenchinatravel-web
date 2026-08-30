@@ -609,7 +609,40 @@ This post contains affiliate links at no extra cost to you.
 
 ---
 
+## 10.5 Founder narrative baseline（信任叙事 · EN 对外）
 
+**核心命题：** 信息差（information gap）+ 双边视角（dual lens）→ 本地质感判断 → 独立行程规划服务。
+
+### Joy Liu — 背景口径（与页面同步）
+
+- 云南长大；国内多城生活/旅行（重庆、广州、北京、成都等）
+- 日本 2 年、菲律宾 2 年 — 以外国游客身份生活，理解 SIM/支付/攻略矛盾
+- 2025 年回昆明；2026 年初建本站
+- 海外旅游经历（普吉、亚庇、富士、澳洲、薄荷岛等）仅作共鸣一句，不抢中国主线
+
+### 语气规则
+
+1. About / 作者卡 / 第一人称段落用 **I（Joy）**；服务清单可用 **we**（一人公司惯例）
+2. 判断原则写「我会怎么看」，不写店名黑名单
+3. 禁止假评价；无客户案例时用 sample route + 起源故事 + 判断原则撑信任
+4. 头像：`/brand/founder/avatar.webp`（真人小图，非占位图）
+5. 禁止泛化「local partner」而不解释 **为什么信 Joy**
+
+### 全站信任触点
+
+| 触点 | 路径 / 组件 |
+|------|-------------|
+| 起源故事 | `/about#why-i-started` · `founder-content.ts` |
+| 判断原则 | `/about#how-i-judge` · `HowIJudgeCards` |
+| 创始人 | `/about#founder` |
+| 规划器信任 | `FounderTrustChip` · `plannerTrustLine` |
+| 首页 | `HomeWhyExists` |
+| 云南 | `DestinationWhyIKnow` |
+| 评价空状态 | `/reviews` → sample route · about · planner |
+
+文案单一数据源：`src/lib/about/founder-content.ts`
+
+---
 
 ## 11. 给 AI 的最终执行提醒
 

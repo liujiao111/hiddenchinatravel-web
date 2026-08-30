@@ -6,7 +6,7 @@ date: "2026-08-01T04:30:00+00:00"
 dateModified: "2026-08-01T04:45:00+00:00"
 author:
   name: "Joy Liu"
-  picture: "/assets/blog/authors/joy-liu.jpg"
+  picture: "/brand/founder/avatar-joy.webp"
 ogImage:
   url: "/assets/blog/book-china-high-speed-rail-foreigners/cover.webp"
 canonical: "https://hiddenchinatravel.com/book-china-high-speed-rail-foreigners"

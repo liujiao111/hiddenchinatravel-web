@@ -7,6 +7,8 @@ type Props = {
   title: string;
   children: ReactNode;
   className?: string;
+  /** Allow full-width content (galleries, grids) */
+  wide?: boolean;
 };
 
 export function AboutSection({
@@ -15,6 +17,7 @@ export function AboutSection({
   title,
   children,
   className,
+  wide = false,
 }: Props) {
   return (
     <section
@@ -33,7 +36,12 @@ export function AboutSection({
       >
         {title}
       </h2>
-      <div className="max-w-3xl space-y-5 text-base font-normal leading-relaxed text-[var(--brand-ink-muted)] md:text-lg">
+      <div
+        className={cn(
+          "space-y-5 text-base font-normal leading-relaxed text-[var(--brand-ink-muted)] md:text-lg",
+          wide ? "max-w-none" : "max-w-3xl",
+        )}
+      >
         {children}
       </div>
     </section>

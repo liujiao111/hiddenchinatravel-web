@@ -7,7 +7,7 @@ date: "2026-03-19T06:46:13+00:00"
 dateModified: "2026-08-26T12:00:00+00:00"
 author:
   name: "Joy Liu"
-  picture: "/assets/blog/authors/joy-liu.jpg"
+  picture: "/brand/founder/avatar-joy.webp"
 ogImage:
   url: "/assets/blog/china-sim-card-for-foreigners/cover.webp"
 canonical: "https://hiddenchinatravel.com/china-sim-card-for-foreigners"

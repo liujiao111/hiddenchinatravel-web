@@ -194,6 +194,14 @@ export type DestinationPlaceLink = {
   note?: string;
 };
 
+export type DestinationWhyIKnow = {
+  eyebrow: string;
+  title: string;
+  paragraphs: readonly string[];
+  image: { src: string; alt: string };
+  founderHref?: string;
+};
+
 export type RegionDestination = {
   slug: string;
   name: string;
@@ -231,6 +239,7 @@ export type RegionDestination = {
   budget?: DestinationBudget;
   trains?: DestinationTrains;
   addons?: DestinationAddons;
+  whyIKnow?: DestinationWhyIKnow;
   placeLinks?: DestinationPlaceLink[];
   prepare?: DestinationPrepare;
   /** Mosaic: first city is the large landscape; next two stack as portraits. */

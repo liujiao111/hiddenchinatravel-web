@@ -1,3 +1,4 @@
+import { DestinationWhyIKnow } from "@/app/_components/destinations/destination-why-i-know";
 import Container from "@/app/_components/container";
 import { DestinationAddonsSection } from "@/app/_components/destinations/destination-addons";
 import { DestinationBudgetSection } from "@/app/_components/destinations/destination-budget";
@@ -96,6 +97,9 @@ export function RegionDestinationPage({ destination }: Props) {
       ) : null}
       {destination.addons ? (
         <DestinationAddonsSection addons={destination.addons} />
+      ) : null}
+      {destination.whyIKnow ? (
+        <DestinationWhyIKnow block={destination.whyIKnow} />
       ) : null}
       {destination.placeLinks?.length ? (
         <DestinationPlaceButtons

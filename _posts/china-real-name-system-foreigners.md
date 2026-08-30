@@ -7,7 +7,7 @@ date: "2026-03-23T09:38:03+00:00"
 dateModified: "2026-08-26T11:00:00+00:00"
 author:
   name: "Joy Liu"
-  picture: "/assets/blog/authors/joy-liu.jpg"
+  picture: "/brand/founder/avatar-joy.webp"
 ogImage:
   url: "/assets/blog/china-real-name-system-foreigners/cover.webp"
 canonical: "https://hiddenchinatravel.com/china-real-name-system-foreigners"

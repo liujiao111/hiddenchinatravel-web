@@ -7,7 +7,7 @@ date: "2026-04-10T08:37:15+00:00"
 dateModified: "2026-08-10T14:00:00+00:00"
 author:
   name: "Joy Liu"
-  picture: "/assets/blog/authors/joy-liu.jpg"
+  picture: "/brand/founder/avatar-joy.webp"
 ogImage:
   url: "/assets/blog/wechat-pay-for-foreigners-china/cover.webp"
 canonical: "https://hiddenchinatravel.com/wechat-pay-for-foreigners-china"

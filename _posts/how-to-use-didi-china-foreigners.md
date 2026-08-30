@@ -6,7 +6,7 @@ date: "2026-08-03T10:00:00+00:00"
 dateModified: "2026-08-04T03:10:00+00:00"
 author:
   name: "Joy Liu"
-  picture: "/assets/blog/authors/joy-liu.jpg"
+  picture: "/brand/founder/avatar-joy.webp"
 ogImage:
   url: "/assets/blog/how-to-use-didi-china-foreigners/cover.webp"
 canonical: "https://hiddenchinatravel.com/how-to-use-didi-china-foreigners"

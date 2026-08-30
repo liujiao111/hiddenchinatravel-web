@@ -7,7 +7,7 @@ date: "2026-03-31T03:12:50+00:00"
 dateModified: "2026-08-26T08:00:00+00:00"
 author:
   name: "Joy Liu"
-  picture: "/assets/blog/authors/joy-liu.jpg"
+  picture: "/brand/founder/avatar-joy.webp"
 ogImage:
   url: "/assets/blog/order-food-china-without-chinese-number/cover.webp"
 canonical: "https://hiddenchinatravel.com/order-food-china-without-chinese-number"

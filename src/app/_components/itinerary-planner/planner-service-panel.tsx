@@ -1,8 +1,8 @@
+import { FounderTrustChip } from "@/app/_components/trust/founder-trust-chip";
 import {
   plannerAddonLinks,
   plannerAddonLinksFooter,
   plannerInfoCards,
-  plannerSectionCopy,
   type PlannerInfoTone,
 } from "@/lib/itinerary-planner/content";
 import cn from "classnames";
@@ -239,9 +239,9 @@ export function PlannerServicePanel({ showTrust = true }: Props) {
         </ul>
         <AddonLinksBlock />
         {showTrust ? (
-          <p className="mt-5 border-t border-[color-mix(in_srgb,var(--brand-cta)_10%,transparent)] pt-5 text-sm font-normal leading-relaxed text-[var(--brand-ink-muted)]">
-            {plannerSectionCopy.trustLine}
-          </p>
+          <div className="mt-5 border-t border-[color-mix(in_srgb,var(--brand-cta)_10%,transparent)] pt-5">
+            <FounderTrustChip compact className="border-0 bg-transparent p-0" />
+          </div>
         ) : null}
       </div>
     </div>

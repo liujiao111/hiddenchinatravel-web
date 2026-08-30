@@ -6,6 +6,7 @@ import { SecondaryServicesGrid } from "@/app/_components/services/secondary-serv
 import { ServicesFaq } from "@/app/_components/services/services-faq";
 import { ServicesTransitionHeading } from "@/app/_components/services/services-transition-heading";
 import Container from "@/app/_components/container";
+import { FounderTrustChip } from "@/app/_components/trust/founder-trust-chip";
 import { servicesHero } from "@/lib/services/content";
 
 export function ServicesSection() {
@@ -28,6 +29,7 @@ export function ServicesSection() {
       <section className="bg-[var(--brand-cream)] py-12 md:py-16 lg:py-20">
         <Container>
           <div className="space-y-10 md:space-y-12">
+            <FounderTrustChip className="max-w-2xl bg-white" />
             {/* CoreServiceSection */}
             <div className="space-y-5">
               <CoreServiceCard />

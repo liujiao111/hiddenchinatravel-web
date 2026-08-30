@@ -7,7 +7,7 @@ date: "2026-05-15T12:05:55+00:00"
 dateModified: "2026-08-26T12:00:00+00:00"
 author:
   name: "Joy Liu"
-  picture: "/assets/blog/authors/joy-liu.jpg"
+  picture: "/brand/founder/avatar-joy.webp"
 ogImage:
   url: "/assets/blog/best-esim-for-china-travel/cover.webp"
 canonical: "https://hiddenchinatravel.com/best-esim-for-china-travel"

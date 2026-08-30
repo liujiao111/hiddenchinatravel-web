@@ -6,7 +6,7 @@ date: "2026-04-07T08:44:39+00:00"
 dateModified: "2026-08-27T02:00:00+00:00"
 author:
   name: "Joy Liu"
-  picture: "/assets/blog/authors/joy-liu.jpg"
+  picture: "/brand/founder/avatar-joy.webp"
 ogImage:
   url: "/assets/blog/hotels-in-china-for-foreigners/cover.webp"
 canonical: "https://hiddenchinatravel.com/hotels-in-china-for-foreigners"

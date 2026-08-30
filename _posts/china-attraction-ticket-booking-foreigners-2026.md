@@ -6,7 +6,7 @@ date: "2026-03-30T07:25:58+00:00"
 dateModified: "2026-08-26T12:00:00+00:00"
 author:
   name: "Joy Liu"
-  picture: "/assets/blog/authors/joy-liu.jpg"
+  picture: "/brand/founder/avatar-joy.webp"
 ogImage:
   url: "/assets/blog/china-attraction-ticket-booking-foreigners-2026/cover.webp"
 canonical: "https://hiddenchinatravel.com/china-attraction-ticket-booking-foreigners-2026"

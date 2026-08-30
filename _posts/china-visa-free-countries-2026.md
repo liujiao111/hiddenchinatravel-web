@@ -6,7 +6,7 @@ date: "2026-07-10T02:54:44+00:00"
 dateModified: "2026-08-27T02:00:00+00:00"
 author:
   name: "Joy Liu"
-  picture: "/assets/blog/authors/joy-liu.jpg"
+  picture: "/brand/founder/avatar-joy.webp"
 ogImage:
   url: "/assets/blog/china-visa-free-countries-2026/cover.webp"
 canonical: "https://hiddenchinatravel.com/china-visa-free-countries-2026"

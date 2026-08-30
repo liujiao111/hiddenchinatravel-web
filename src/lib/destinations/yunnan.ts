@@ -1,4 +1,5 @@
 import type { RegionDestination } from "./types";
+import { yunnanWhyIKnow } from "@/lib/about/founder-content";
 
 const PLANNER = "/china-itinerary-planner?dest=yunnan&shape=loop-7#plan-trip";
 const PREP = "/survival-kit";
@@ -60,6 +61,7 @@ export const yunnanDestination: RegionDestination = {
     { href: "#budget", label: "Budget" },
     { href: "#trains", label: "Trains" },
     { href: "#addon", label: "10 days" },
+    { href: "#why-i-know", label: "Why I know" },
     { href: "#places", label: "Places" },
     { href: "#season", label: "Season" },
     { href: "#prepare", label: "Prepare" },
@@ -322,6 +324,7 @@ export const yunnanDestination: RegionDestination = {
       },
     ],
   },
+  whyIKnow: yunnanWhyIKnow,
   placeLinks: [
     { id: "erhai", label: "Erhai", href: "#erhai", note: "Lake day" },
     { id: "jade-dragon", label: "Jade Dragon", href: "#jade-dragon", note: "Mountain" },

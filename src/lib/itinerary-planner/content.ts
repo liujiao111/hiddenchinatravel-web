@@ -1,3 +1,4 @@
+import { plannerTrustLine } from "@/lib/about/founder-content";
 import { destinationCities } from "@/lib/home/content";
 
 /** Shared copy + options for the reusable itinerary planner form. */
@@ -9,8 +10,7 @@ export const plannerSectionCopy = {
     "Share cities, days, and pace. After we confirm scope, you get a ready-to-follow PDF in 48–72 hours — early bird from $99. The request is free, and this is not a tour.",
   pricingHint:
     "Early-bird planning from $99 by trip length — we confirm scope and fee before you pay. This request is free.",
-  trustLine:
-    "No spam, no pushy sales calls — just a real itinerary from someone who's been there.",
+  trustLine: plannerTrustLine,
 } as const;
 
 export const plannerStepMeta = [

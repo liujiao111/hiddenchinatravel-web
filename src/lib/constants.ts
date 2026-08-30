@@ -11,7 +11,7 @@ export const SITE_LOCATION = "Kunming, Yunnan, China";
 export const SITE_LOCATION_ZH = "中国云南昆明";
 export const SITE_FOUNDER_NAME = "Joy Liu";
 export const SITE_FOUNDER_PATH = "/about#founder";
-export const SITE_FOUNDER_PICTURE = "/assets/blog/authors/joy-liu.jpg";
+export const SITE_FOUNDER_PICTURE = "/brand/founder/avatar-joy.webp";
 
 export const SITE_LOGO_PATH = "/brand/logo.webp";
 export const SITE_HERO_PATH = "/brand/hero-lijiang.webp";

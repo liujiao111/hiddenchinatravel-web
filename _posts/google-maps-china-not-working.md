@@ -6,7 +6,7 @@ date: "2026-03-20T04:57:38+00:00"
 dateModified: "2026-06-08T10:12:18+00:00"
 author:
   name: "Joy Liu"
-  picture: "/assets/blog/authors/joy-liu.jpg"
+  picture: "/brand/founder/avatar-joy.webp"
 ogImage:
   url: "/assets/blog/google-maps-china-not-working/cover.webp"
 canonical: "https://hiddenchinatravel.com/google-maps-china-not-working"

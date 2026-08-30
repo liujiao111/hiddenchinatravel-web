@@ -2,9 +2,12 @@ import Link from "next/link";
 import Container from "@/app/_components/container";
 import { LastUpdated } from "@/app/_components/last-updated";
 import { SocialLinks } from "@/app/_components/social-links";
+import { HowIJudgeCards } from "@/app/_components/trust/how-i-judge-cards";
 import { TropicalCard, tropicalAccentAt } from "@/app/_components/tropical-card";
 import { AboutLinkList } from "./_components/about-link-list";
 import { AboutSection } from "./_components/about-section";
+import { FounderPhotoStrip } from "./_components/founder-photo-strip";
+import { FounderProfileBlock } from "./_components/founder-profile-block";
 import { TopicHubCards } from "./_components/topic-hub-cards";
 import {
   aboutStartHereGuides,
@@ -12,6 +15,13 @@ import {
   aboutTopicHubs,
 } from "@/lib/about/content";
 import { FEES } from "@/lib/trust/copy";
+import {
+  founderAboutHero,
+  founderOriginPhotos,
+  founderOriginStory,
+  founderProfile,
+  howIJudgeCards,
+} from "@/lib/about/founder-content";
 import {
   partnerConsultTagline,
   partnerHero,
@@ -28,7 +38,6 @@ import {
   SITE_LOCATION,
   SITE_LOCATION_ZH,
   SITE_NAME,
-  SITE_TAGLINE,
   SITE_URL,
 } from "@/lib/constants";
 import { founderPersonJsonLd } from "@/lib/seo/jsonld";
@@ -128,8 +137,7 @@ export default function AboutUsPage() {
             {partnerHero.lead}
           </p>
           <p className="mb-6 text-sm font-normal text-[var(--brand-ink-muted)] md:text-base">
-            {SITE_TAGLINE} Built by {SITE_FOUNDER_NAME}, based in {SITE_LOCATION}{" "}
-            ({SITE_LOCATION_ZH}).
+            {founderAboutHero.originHook}
           </p>
           <div className="flex flex-wrap gap-3">
             <Link
@@ -149,13 +157,48 @@ export default function AboutUsPage() {
 
         <div className="grid grid-cols-1 items-start gap-12 pb-28 lg:grid-cols-[minmax(0,1fr)_260px] lg:gap-14 lg:pr-16 xl:pr-20">
           <article>
+            <AboutSection
+              id="why-i-started"
+              title={founderOriginStory.title}
+              eyebrow="Origin"
+              wide
+            >
+              {founderOriginStory.paragraphs.slice(0, 2).map((p) => (
+                <p key={p.slice(0, 24)}>{p}</p>
+              ))}
+              <FounderPhotoStrip photos={founderOriginPhotos} columns={2} />
+              {founderOriginStory.paragraphs.slice(2).map((p) => (
+                <p key={p.slice(0, 24)}>{p}</p>
+              ))}
+            </AboutSection>
+
             <AboutSection id="who-we-are" title={partnerWhoWeAre.title}>
               {partnerWhoWeAre.paragraphs.map((p) => (
                 <p key={p.slice(0, 24)}>{p}</p>
               ))}
+              <p className="!mt-4">
+                <Link
+                  href="#why-i-started"
+                  className="font-bold text-[var(--brand-coral)] underline decoration-[color-mix(in_srgb,var(--brand-coral)_35%,transparent)] underline-offset-2"
+                >
+                  Read the full origin story ↑
+                </Link>
+              </p>
               <p className="!mt-6 text-lg font-bold tracking-tight text-[var(--brand-ink)]">
                 {partnerWhoWeAre.oneLiner}
               </p>
+            </AboutSection>
+
+            <AboutSection
+              id="how-i-judge"
+              title="How I judge a place"
+              eyebrow="Principles"
+            >
+              <p className="!mb-6">
+                I do not keep a blacklist database. These are the questions I
+                ask when I plan — for myself and for travelers.
+              </p>
+              <HowIJudgeCards cards={howIJudgeCards} />
             </AboutSection>
 
             <AboutSection
@@ -259,44 +302,11 @@ export default function AboutUsPage() {
 
             <AboutSection
               id="founder"
-              title={`I'm ${SITE_FOUNDER_NAME}`}
+              title={founderProfile.title}
               eyebrow="Founder"
+              wide
             >
-              <div className="flex flex-col gap-5 sm:flex-row sm:items-start">
-                <div className="relative h-28 w-28 shrink-0 overflow-hidden rounded-2xl border-2 border-[var(--brand-cta)]/15 sm:h-32 sm:w-32">
-                  <Image
-                    src={SITE_FOUNDER_PICTURE}
-                    alt={`${SITE_FOUNDER_NAME}, founder of ${SITE_NAME}`}
-                    fill
-                    className="object-cover"
-                    sizes="128px"
-                  />
-                </div>
-                <div className="space-y-5">
-                  <p>
-                    I&apos;m {SITE_FOUNDER_NAME}, currently based in Kunming,
-                    Yunnan.
-                  </p>
-                  <p>
-                    I grew up in China and later lived overseas for years —
-                    including three years in the Philippines, with travel across
-                    Southeast Asia and Hong Kong. I know the fear before a first
-                    landing: Will it feel safe? What if I don&apos;t speak the
-                    language? What if the card fails? What if I can&apos;t reach
-                    family?
-                  </p>
-                </div>
-              </div>
-              <p>
-                That two-way life is why {SITE_NAME} exists — to be a{" "}
-                <strong className="text-[var(--brand-cta)]">local partner</strong>{" "}
-                who has lived both in China and abroad, and can translate the
-                practical gaps most first-time visitors hit.
-              </p>
-              <p>
-                WhatsApp may show a Philippine number — that&apos;s from years
-                living there. I work from Kunming.
-              </p>
+              <FounderProfileBlock />
             </AboutSection>
 
             <AboutSection
@@ -425,7 +435,9 @@ export default function AboutUsPage() {
               </p>
               <ul className="space-y-2 text-sm font-normal text-[var(--brand-ink-muted)]">
                 {[
+                  { href: "#why-i-started", label: "Why I started" },
                   { href: "#who-we-are", label: "Who we are" },
+                  { href: "#how-i-judge", label: "How I judge" },
                   { href: "#services", label: "Services" },
                   { href: "#support-scenarios", label: "Support scenarios" },
                   { href: "#why-us", label: "Why choose us" },

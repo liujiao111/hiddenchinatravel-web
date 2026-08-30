@@ -7,7 +7,7 @@ date: "2026-04-20T09:30:36+00:00"
 dateModified: "2026-08-10T14:00:00+00:00"
 author:
   name: "Joy Liu"
-  picture: "/assets/blog/authors/joy-liu.jpg"
+  picture: "/brand/founder/avatar-joy.webp"
 ogImage:
   url: "/assets/blog/why-your-payment-fails-in-china/cover.webp"
 canonical: "https://hiddenchinatravel.com/why-your-payment-fails-in-china"
