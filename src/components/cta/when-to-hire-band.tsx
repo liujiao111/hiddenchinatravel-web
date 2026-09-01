@@ -2,13 +2,14 @@ import Link from "next/link";
 import cn from "classnames";
 import { WHEN_TO_HIRE } from "@/lib/trust/copy";
 
-type Surface = "index" | "hub";
+type Surface = "index" | "hub" | "planner";
 
 type Props = {
   className?: string;
   /**
    * index = already on /survival-guides (point DIY at the Kit).
    * hub = topic hub (point DIY back at the guides index).
+   * planner = itinerary / destination surfaces (planning is the solid CTA).
    */
   surface?: Surface;
 };
@@ -23,6 +24,7 @@ function diyForSurface(surface: Surface): { href: string; label: string } {
 /** Shared DIY vs paid closer for Survival Guides index and topic hubs. */
 export function WhenToHireBand({ className, surface = "hub" }: Props) {
   const diy = diyForSurface(surface);
+  const plannerFirst = surface === "planner";
 
   return (
     <aside
@@ -45,20 +47,41 @@ export function WhenToHireBand({ className, surface = "hub" }: Props) {
         {WHEN_TO_HIRE.bandBody}
       </p>
       <div className="flex w-full flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
-        <Link
-          href={diy.href}
-          className="btn-brand-outline inline-flex w-full justify-center px-6 py-3.5 text-sm sm:w-auto"
-        >
-          {diy.label}
-          <span aria-hidden>→</span>
-        </Link>
-        <Link
-          href={WHEN_TO_HIRE.hireHref}
-          className="inline-flex w-full items-center justify-center px-2 py-2 text-sm font-bold tracking-tight text-[var(--brand-cta)] underline decoration-[color-mix(in_srgb,var(--brand-cta)_35%,transparent)] underline-offset-4 transition-colors duration-300 hover:text-[var(--brand-cta-hover)] sm:w-auto sm:px-3"
-        >
-          {WHEN_TO_HIRE.hireLabel}
-          <span aria-hidden>→</span>
-        </Link>
+        {plannerFirst ? (
+          <>
+            <Link
+              href={WHEN_TO_HIRE.hireHref}
+              className="btn-brand inline-flex w-full justify-center px-6 py-3.5 text-sm sm:w-auto"
+            >
+              {WHEN_TO_HIRE.hireLabel}
+              <span aria-hidden>→</span>
+            </Link>
+            <Link
+              href={diy.href}
+              className="btn-brand-outline inline-flex w-full justify-center px-6 py-3.5 text-sm sm:w-auto"
+            >
+              {diy.label}
+              <span aria-hidden>→</span>
+            </Link>
+          </>
+        ) : (
+          <>
+            <Link
+              href={diy.href}
+              className="btn-brand-outline inline-flex w-full justify-center px-6 py-3.5 text-sm sm:w-auto"
+            >
+              {diy.label}
+              <span aria-hidden>→</span>
+            </Link>
+            <Link
+              href={WHEN_TO_HIRE.hireHref}
+              className="inline-flex w-full items-center justify-center px-2 py-2 text-sm font-bold tracking-tight text-[var(--brand-cta)] underline decoration-[color-mix(in_srgb,var(--brand-cta)_35%,transparent)] underline-offset-4 transition-colors duration-300 hover:text-[var(--brand-cta-hover)] sm:w-auto sm:px-3"
+            >
+              {WHEN_TO_HIRE.hireLabel}
+              <span aria-hidden>→</span>
+            </Link>
+          </>
+        )}
       </div>
     </aside>
   );

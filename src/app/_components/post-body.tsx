@@ -39,7 +39,7 @@ export function PostBody({
   hub = null,
   relatedPosts = [],
 }: Props) {
-  const variant = resolveArticleCtaVariant(section, keywords);
+  const variant = resolveArticleCtaVariant(section, keywords, articleSlug);
   const inlineCopy = getInlineCtaCopy();
   const endCopy = getEndCtaCopy(
     variant,

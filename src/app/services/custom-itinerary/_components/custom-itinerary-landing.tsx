@@ -35,6 +35,9 @@ export function CustomItineraryLanding() {
             Plan my China trip
             <span aria-hidden>→</span>
           </Link>
+          <p className="mt-3 text-sm font-bold text-white/90">
+            From $99 · Survival Kit included · confirm before you pay
+          </p>
         </Container>
       </section>
 

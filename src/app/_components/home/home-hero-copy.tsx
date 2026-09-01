@@ -23,7 +23,7 @@ export function HomeHeroCopy() {
 
         <div className="flex w-full flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:gap-4">
           <Link
-            href="/china-itinerary-planner"
+            href="#plan-trip"
             className="btn-hero inline-flex min-h-12 w-full items-center justify-center px-8 py-3.5 text-base sm:w-auto md:px-10"
           >
             {copy.primaryCta}
@@ -35,6 +35,9 @@ export function HomeHeroCopy() {
             {copy.secondaryCta}
           </Link>
         </div>
+        <p className="mt-3 text-sm font-bold tracking-tight text-[var(--brand-ink)] [text-shadow:0_1px_0_rgba(250,246,239,0.9),0_0_20px_rgba(250,246,239,0.8)]">
+          {copy.ctaPriceLine}
+        </p>
         <p className="mt-4 max-w-lg text-xs font-normal leading-relaxed text-[var(--brand-ink)] [text-shadow:0_1px_0_rgba(250,246,239,0.9),0_0_20px_rgba(250,246,239,0.8)] md:text-sm">
           {copy.ctaSplitBefore}
           <Link

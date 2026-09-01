@@ -335,7 +335,11 @@ export function HubPage({ hub }: Props) {
           ) : null}
 
           <div id="when-to-hire" className="scroll-mt-28">
-            <WhenToHireBand />
+            <WhenToHireBand
+              surface={
+                hub.slug === "china-itinerary-planning" ? "planner" : "hub"
+              }
+            />
           </div>
 
           <footer className="flex flex-wrap items-center gap-x-6 gap-y-3 border-t border-[color-mix(in_srgb,var(--brand-cream-border)_40%,transparent)] pt-8 text-sm font-bold tracking-tight text-[var(--brand-ink-muted)]">

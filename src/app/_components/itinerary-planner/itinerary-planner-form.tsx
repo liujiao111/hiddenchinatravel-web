@@ -9,6 +9,7 @@ import { ContinueOnWhatsApp } from "@/app/_components/forms/continue-on-whatsapp
 import { WhatsAppOptInFields } from "@/app/_components/forms/whatsapp-opt-in-fields";
 import { ChipSelect } from "@/app/_components/itinerary-planner/chip-select";
 import { StyleIcon } from "@/app/_components/itinerary-planner/planner-icons";
+import { PlannerWhatsAppCta } from "@/app/_components/itinerary-planner/planner-whatsapp-cta";
 import {
   plannerBudgets,
   plannerCtaCopy,
@@ -543,8 +544,8 @@ export function ItineraryPlannerForm({
             />
           </div>
 
-          <p className="rounded-2xl bg-[var(--brand-soft)] px-4 py-3 text-sm font-normal leading-relaxed text-[var(--brand-cta)]">
-            {plannerSectionCopy.pricingHint}
+          <p className="rounded-2xl bg-[var(--brand-soft)] px-4 py-3 text-sm font-bold leading-relaxed text-[var(--brand-cta)]">
+            {plannerSectionCopy.priceLine}
           </p>
           <p className="text-sm font-normal leading-relaxed text-[var(--brand-ink-muted)]">
             {plannerSectionCopy.trustLine}
@@ -570,6 +571,10 @@ export function ItineraryPlannerForm({
               {pending ? "Sending…" : plannerCtaCopy.submit}
             </button>
           </div>
+          <PlannerWhatsAppCta
+            destinations={values.destinations}
+            days={values.days}
+          />
         </form>
       ) : null}
 
@@ -593,6 +598,18 @@ export function ItineraryPlannerForm({
           >
             {step === 0 ? plannerCtaCopy.nextStyle : plannerCtaCopy.almostThere}
           </button>
+        </div>
+      ) : null}
+
+      {step < 2 ? (
+        <div className="mt-4 flex flex-col items-stretch gap-2 sm:items-end">
+          <p className="text-xs font-bold tracking-tight text-[var(--brand-ink-muted)] sm:text-right">
+            {plannerSectionCopy.priceLine}
+          </p>
+          <PlannerWhatsAppCta
+            destinations={values.destinations}
+            days={values.days}
+          />
         </div>
       ) : null}
     </div>
