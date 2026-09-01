@@ -94,8 +94,8 @@ subtopics:
         badge: "Destination"
         status: published
 toolCTA:
-  - label: "Open the itinerary planner"
-    href: /china-itinerary-planner
+  - label: "Plan my China trip"
+    href: /china-itinerary-planner#plan-trip
   - label: "See custom itinerary details"
     href: /services/custom-itinerary
 faqHeading: "Quick answers about planning a China itinerary"

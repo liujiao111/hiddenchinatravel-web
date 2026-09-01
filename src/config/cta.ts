@@ -66,6 +66,12 @@ export const inlineCtaDefault: InlineCtaCopy = {
   trackingEvent: "article_inline_cta_click",
 };
 
+/** Route / independent-travel articles that should sell the PDF, not DIY systems. */
+export const PLANNER_END_CTA_SLUGS = new Set([
+  "independent-travel-china",
+  "how-to-plan-china-itinerary",
+]);
+
 /** Troubleshooting pages where a mid-article itinerary ask interrupts the form. */
 export const SKIP_INLINE_CTA_SLUGS = new Set(["chinese-id-number-foreigners"]);
 
@@ -89,10 +95,10 @@ export const endCtaByVariant: Record<ArticleCtaVariantId, EndCtaCopy> = {
     bridge:
       "Guides cover the systems. A custom PDF covers city order, pace, and what to skip.",
     valueProp:
-      "One-to-one planning with local, independent-travel clarity — not a tour template. If you only needed a form or an app working, stay in the guides.",
+      "One-to-one planning with local, independent-travel clarity — not a tour template.",
     buttonLabel: PRIMARY_CTA_LABEL,
     href: PLANNER_HREF,
-    trust: "Your local partner for independent China travel.",
+    trust: "From $99 · Survival Kit included. Confirm the fee before you pay.",
     trackingEvent: "article_end_cta_click",
   },
   visa: systemsEnd("You don't need a custom itinerary to finish a visa check."),
@@ -153,7 +159,11 @@ function matchVariant(haystack: string): ArticleCtaVariantId | null {
 export function resolveArticleCtaVariant(
   section?: string,
   keywords?: string[],
+  articleSlug?: string,
 ): ArticleCtaVariantId {
+  if (articleSlug && PLANNER_END_CTA_SLUGS.has(articleSlug)) {
+    return "default";
+  }
   const fromSection = matchVariant(section ?? "");
   if (fromSection) return fromSection;
   const fromKeywords = matchVariant((keywords ?? []).join(" "));

@@ -7,9 +7,13 @@ export const plannerSectionCopy = {
   eyebrow: "Itinerary planning",
   title: "Request a custom independent itinerary",
   subtitle:
-    "Share cities, days, and pace. After we confirm scope, you get a ready-to-follow PDF in 48–72 hours — early bird from $99. The request is free, and this is not a tour.",
+    "Share cities, days, and pace. After we confirm scope, you get a ready-to-follow PDF in 48–72 hours. The request is free, and this is not a tour.",
   pricingHint:
-    "Early-bird planning from $99 by trip length — we confirm scope and fee before you pay. This request is free.",
+    "5 days $99 · 6–10 $129 · 10+ $199. We confirm the fee before you pay.",
+  priceLine: "5 days $99 · 6–10 $129 · 10+ $199 · confirm before you pay",
+  whatsappCta: "Prefer chat? WhatsApp first",
+  whatsappPrefill:
+    "Hi! I'd like a custom China itinerary PDF (from $99). Cities and days:",
   trustLine: plannerTrustLine,
 } as const;
 

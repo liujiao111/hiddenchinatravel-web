@@ -50,16 +50,16 @@ export default function ChinaDestinationsPage() {
           </p>
           <div className="flex flex-col gap-3 sm:flex-row">
             <Link
-              href="/china-destinations/yunnan"
+              href="/china-itinerary-planner#plan-trip"
               className="btn-brand shrink-0 px-6 py-3 text-sm"
             >
-              Yunnan guide
+              Plan my China trip
             </Link>
             <Link
-              href="/survival-guides"
+              href="/china-destinations/yunnan"
               className="btn-brand-outline shrink-0 px-6 py-3 text-sm"
             >
-              Browse survival guides
+              Yunnan guide
             </Link>
           </div>
         </div>

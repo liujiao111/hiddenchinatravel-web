@@ -34,13 +34,16 @@ export function DestinationCtaBand({
               {body}
             </p>
           </div>
-          <div className="flex w-full shrink-0 flex-col gap-3 sm:w-auto sm:flex-row">
+          <div className="flex w-full shrink-0 flex-col gap-3 sm:w-auto">
             <Link
               href={plannerHref}
               className="btn-brand inline-flex min-h-12 items-center justify-center px-8 py-3.5 text-sm"
             >
               {plannerLabel ?? PRIMARY_CTA_LABEL}
             </Link>
+            <p className="text-center text-xs font-bold tracking-tight text-[var(--brand-ink-muted)]">
+              From $99 · confirm before you pay
+            </p>
             <Link
               href={secondaryHref}
               className="inline-flex min-h-12 items-center justify-center rounded-full border-2 border-[color-mix(in_srgb,var(--brand-cta)_30%,transparent)] px-8 py-3.5 text-sm font-bold text-[var(--brand-cta)] transition-all duration-300 hover:bg-[color-mix(in_srgb,var(--brand-cta)_8%,transparent)]"
