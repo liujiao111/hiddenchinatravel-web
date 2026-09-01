@@ -5,6 +5,8 @@ import { parsePlannerDestQuery, parsePlannerShapeQuery } from "@/lib/itinerary-p
 import Link from "next/link";
 import type { Metadata } from "next";
 
+export const revalidate = 300;
+
 const pageTitle = "Request a Custom China Itinerary";
 const pageDescription =
   "Share cities, days, and travel style — request a 1-on-1 custom China itinerary PDF from a local partner. Early-bird planning from $99. The request is free."

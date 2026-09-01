@@ -11,6 +11,9 @@ import { getAllPosts } from "@/lib/api";
 import { HOME_OG_IMAGE_URL } from "@/lib/constants";
 import type { Metadata } from "next";
 
+/** Keep homepage from sitting on a multi-day CDN HIT after CTA deploys. */
+export const revalidate = 300;
+
 const pageTitle =
   "Custom China Itinerary Planning for Independent Travelers | Hidden China Travel";
 const pageDescription =
