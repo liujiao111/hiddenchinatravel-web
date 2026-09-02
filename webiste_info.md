@@ -533,6 +533,7 @@ This post contains affiliate links at no extra cost to you.
 - 说明应当链接到哪些已有文章 / hub
 - 如有必要，补充建议的联盟入口
 - URL 一律使用相对路径
+- **大理相关**：严格按 §10.6 的 URL、防蚕食表和写文顺序；不要另开调研稿里已否决的拆文
 
 
 
@@ -589,9 +590,9 @@ This post contains affiliate links at no extra cost to you.
 ### 后续旅游攻略方向
 
 - Destination-specific practical guides
-- City-by-city travel guides
+- City-by-city travel guides — **大理是第一个城市级 SEO 集群**，规格见 §10.6（未写文前不要假设这些 URL 已存在）
 - Best places to visit in China by interest
-- Sample itineraries
+- Sample itineraries（云南 region loop 已有：`/china-destinations/yunnan`；不要再做一篇同一意图的 Yunnan itinerary）
 - Seasonal travel guides
 - Region-based travel planning
 
@@ -644,6 +645,173 @@ This post contains affiliate links at no extra cost to you.
 
 ---
 
+## 10.6 大理 Destination Cluster（已审规格 · 尚未写文）
+
+来源：外部 GPT 关键词调研。已按本站定位、现有 IA、写作原则改过。**写大理文章前先读本节。**  
+当前这些 URL **都不存在**；内链时仍按 §7：可以规划，不要写成已上线。
+
+### 结论（先用这个，不要再拆薄文）
+
+方向对：
+
+- **1 个城市 Pillar + 8～12 个 Cluster**，不要 30～50 篇薄文
+- 2/3/4/5 天行程、每月天气、古城 walking/night/food **不要拆成独立 URL**
+- 内链是 **Hub → Cluster → Conversion**，不是每篇互链成网
+- 第一阶段 8 篇已经能把大理做成完整英文 topic cluster
+
+必须改（对 GPT 原稿的修正）：
+
+1. **父节点已经存在。** `/china-destinations/yunnan` 就是 Yunnan travel guide + Kunming–Dali–Lijiang itinerary。不要新建 `/yunnan-itinerary/`、`/yunnan-travel-guide/`、`/yunnan-10-day-itinerary/`。大理集群向上链这篇 + 规划器。
+2. **城市文走文章顶层 slug**（与 `/how-to-plan-china-itinerary` 同模式）。不要 `/china/yunnan/dali/...` 三四层目录；也不要把大理塞进 `/china-destinations/dali`——`/china-destinations/[slug]` 目前是 **region destination 页**（云南 loop），不是城市攻略。
+3. **喜洲 / 双廊 / 苍山** 第一阶段只做 Erhai / Things to Do / Hidden Gems 的 H2，不单独出 URL。GPT 结构图里的 Xizhou / Shuanglang 节点是章节，不是页面。
+4. **丽江 / 昆明城市 Pillar 本阶段不写。** Dali vs Lijiang、How to Get to Dali 链到云南页对应段落 + 现有交通/酒店 hub。
+5. **每篇必须有独立旅行系统层**（护照酒店、Alipay/现金、eSIM、DiDi、高德）。这是对 TripAdvisor / Lonely Planet 的真正差异，不是再写一遍景点清单。
+6. **标题不要旅游局腔。** 禁止 ultimate / amazing / everything you need to know / 15 best 这种空壳；Things to Do 可以覆盖该词，但正文要写 skip 什么、团客脚本是什么。
+7. **Hidden Gems 不要为凑 12 个编地点。** 有多少诚实的就写多少。
+
+### 在整站 IA 里的位置
+
+```
+/china-itinerary-planning                    ← 中国行程 hub（已有）
+  └── /how-to-plan-china-itinerary           ← 规划方法（已有）
+        └── /china-destinations/yunnan      ← 云南 region Pillar / 7 日 loop（已有）
+              └── /dali-travel-guide        ← 大理城市 Pillar（待写）
+                    ├── itinerary / stay / ancient town / erhai / transport …
+                    └── /dali-vs-lijiang    ← 桥接页 → 回到云南 loop + 规划器
+```
+
+转化路径（Conversion，不是再开一组 URL）：
+
+- 大理行程 / Dali vs Lijiang → `/china-destinations/yunnan` + `/china-itinerary-planner?dest=yunnan&shape=loop-7#plan-trip`
+- 交通 / 无车 → `/transport-in-china` + `/book-china-high-speed-rail-foreigners` + `/how-to-use-didi-china-foreigners`
+- 住宿 → `/hotels-in-china`
+- 行前系统 → `/survival-kit`、`/payments-in-china`、`/internet-in-china`、`/maps-navigation-in-china`
+- 雇我们 → `/china-itinerary-planner` + `/services/custom-itinerary`（路线没排清才付费；不要每段都硬推）
+
+### URL 与关键词地图（12 篇，分两期）
+
+| # | 阶段 | URL | Primary | 本页吃掉、不要另开的词 | 不吃（留给别的 URL） |
+|---|------|-----|---------|------------------------|----------------------|
+| 1 | P1 | `/dali-travel-guide` | dali travel guide | dali travel, dali china, dali china travel, dali tourism | 深度 itinerary / stay / erhai 路线 |
+| 2 | P1 | `/dali-itinerary` | dali itinerary | 2/3/4/5 days, how many days in dali, 3 days in dali china | 云南 7 日 loop（云南页） |
+| 3 | P1 | `/things-to-do-in-dali` | things to do in dali | dali attractions, dali sightseeing, best things to do | 古城步行细节、洱海骑行路线、hidden gems |
+| 4 | P1 | `/where-to-stay-in-dali` | where to stay in dali | best area/neighborhood, ancient town vs erhai, without a car（住宿角度） | 无车交通操作（给 #11） |
+| 5 | P1 | `/dali-ancient-town` | dali ancient town | walking route, at night, food in the old town, is it worth visiting, how long | 大理全域 things to do |
+| 6 | P1 | `/erhai-lake-guide` | erhai lake / erhai lake dali | cycling, day trip, west vs east shore, xizhou, shuanglang, itinerary（湖区） | 大理几天（给 itinerary） |
+| 7 | P1 | `/how-to-get-to-dali` | how to get to dali china | kunming/lijiang/shangri-la train, airport/station → ancient town, dali transportation | 无车玩湖区细节（给 #11）、全国交通 hub |
+| 8 | P1 | `/dali-vs-lijiang` | dali vs lijiang | dali or lijiang, for first time / 3 days / couples / solo | 丽江深度攻略（未来）、云南 loop 日程（云南页） |
+| 9 | P2 | `/dali-hidden-gems` | dali hidden gems | off the beaten path, local villages, slow travel, authentic | 热门景点清单（给 things to do） |
+| 10 | P2 | `/best-time-to-visit-dali` | best time to visit dali | dali weather, by month, rainy season, winter/summer | 云南全省季节（云南页可保留短段） |
+| 11 | P2 | `/dali-without-a-car` | dali without a car | independent / public transport / solo around dali | 大交通怎么到达（给 #7） |
+| 12 | P2 | `/dali-food-guide` | dali local food | bai cuisine, what to eat, local dishes | 古城内随便吃什么（古城文可短提） |
+
+**Erhai 主词说明：** 调研稿把 primary 写成 `erhai lake itinerary`。本站 primary 用 **erhai lake / erhai lake dali**（覆盖面更大）；用 H2 吃 cycling / day trip / itinerary，不必为 itinerary 再开 URL。
+
+**P2 里「无车」提前写的条件：** 若发现 `dali without a car` 比 `things to do in dali` 更好转化（独立旅行意图更纯），可把 #11 提前到 P1，Things to Do 仍写但可更短、更依赖 pillar 摘要。
+
+### 各页定位（防蚕食）
+
+不是平级。`/dali-travel-guide` 是中心节点：每个子题 **一段 + 链出去**，不要在 pillar 里写完 itinerary / 骑行路线。
+
+| 页面 | 写什么 | 明确不写 |
+|------|--------|----------|
+| Travel Guide | 大理是什么、为什么去、几天够不够（结论级）、各子题入口、和云南 loop 的关系 | 逐时日程、湖岸逐村、酒店区逐条对比 |
+| Itinerary | 2/3/4/5 天四条路线；**3 天标星**；每天基地+移动方式 | 把云南 7 日 loop 再写一遍 |
+| Things to Do | 全域清单 + 每项 1 短段 + 何时 skip 团客脚本 | 古城巷弄 walk、洱海东西岸骑行步骤 |
+| Where to Stay | 古城 / 海景 / 喜洲 / 双廊 / 下关 对照表；H2 **Ancient Town or Erhai** | 无车公交时刻；洱海玩法 |
+| Ancient Town | 只写古城墙内：走线、晚上、吃饭、值不值得、呆多久 | 喜洲双廊苍山洱海 |
+| Erhai | 怎么玩湖：骑行 / 打车 / 包车 / 公交；西岸 vs 东岸；喜洲双廊作为湖村 | 古城住宿推荐长文 |
+| Transport | 昆明/丽江/香格里拉 → 大理；机场/火车站 → 古城；Getting around 只到概览 | 无车玩湖逐步操作 |
+| vs Lijiang | 决策页：选大理 if / 选丽江 if；7 天两个都去 → 云南页 | 变成第二篇大理或丽江攻略 |
+| Hidden Gems | 小村、市场、茶、白族日常、小众走线；**不进热门清单** | 三塔、人民路、标准环海 |
+| Best Time | 一张月份表吃掉 by month | 每月一篇 |
+| Without a Car | 古城+洱海+喜洲+双廊+苍山的独立移动 | 到达大理的大交通（链 #7） |
+| Food | 本地菜 / 白族菜，可慢写 | 不要和古城 food 段重复成长文 |
+
+### 内链规则（Hub → Cluster → Conversion）
+
+**第一层（Pillar → 全部 cluster）**  
+`/dali-travel-guide` 链到 P1 全部 7 篇；P2 上线后再补。另链：`/china-destinations/yunnan`、`/independent-travel-china`、`/survival-kit`、规划器。
+
+**第二层（只链决策下一跳，不要全互链）**
+
+- Itinerary → Ancient Town, Erhai, Where to Stay, Transport, Yunnan destination
+- Erhai → Itinerary, Ancient Town, Where to Stay, Without a Car（上线后）
+- Where to Stay → Ancient Town, Erhai, Itinerary, Hotels hub, Without a Car（上线后）
+- vs Lijiang → Dali Travel Guide, Dali Itinerary, **Yunnan destination（必须）**, 规划器
+- Transport → Transport hub, 高铁购票文, Didi 文, Itinerary, Yunnan destination（昆明站/南站已有说明）
+- Things to Do → Ancient Town, Erhai, Hidden Gems（上线后）；每条热门景点只深链一篇
+- Ancient Town → Things to Do（全域）、Where to Stay、Itinerary
+
+**禁止：** 每篇 footer 堆 12 条大理互链。相关阅读优先「下一跳 + 已有系统 hub」。
+
+### 写作时必须挂上的已有 URL
+
+按主题选用，不要编造：
+
+- `/china-destinations/yunnan`
+- `/china-itinerary-planning` · `/how-to-plan-china-itinerary`
+- `/independent-travel-china`
+- `/china-itinerary-planner?dest=yunnan&shape=loop-7#plan-trip`
+- `/services/custom-itinerary`
+- `/survival-kit`
+- `/transport-in-china` · `/book-china-high-speed-rail-foreigners` · `/how-to-use-didi-china-foreigners`
+- `/hotels-in-china`
+- `/maps-navigation-in-china`
+- `/payments-in-china` · `/alipay-for-foreigners-china`
+- `/internet-in-china` · `/best-esim-for-china-travel`
+- `/china-visa-checker` · `/do-i-need-a-visa-for-china`
+
+联盟：交通/住宿相关页可克制使用 `/go/trip-trains`、`/go/trip-hotels`、`/go/trip-flight`；disclosure 见 §8。主 CTA 仍是规划器 + Survival Kit。
+
+### 标题口径（对外英文 · 可微调，勿改成 listicle）
+
+| 页面 | H1 / 标题方向 |
+|------|----------------|
+| Guide | Dali Travel Guide for Independent Visitors |
+| Itinerary | Dali Itinerary: How Many Days You Need (2–5 Day Routes) |
+| Things to Do | Things to Do in Dali — And What the Tour Bus Skips |
+| Where to Stay | Where to Stay in Dali: Ancient Town, Erhai, or a Village |
+| Ancient Town | Dali Ancient Town: Walking Route, Food, and How Long to Stay |
+| Erhai | Erhai Lake Guide: Routes, Cycling, and Day Trips from Dali |
+| Transport | How to Get to Dali, China: Train, Flight, and Station Transfers |
+| vs Lijiang | Dali vs Lijiang: Which One Should You Visit? |
+| Hidden Gems | Dali Hidden Gems: Villages, Markets, and Slow Days |
+| Best Time | Best Time to Visit Dali: Weather by Month |
+| Without a Car | Dali Without a Car: How to Get Around Independently |
+| Food | Dali Food Guide: Bai Dishes Worth Finding |
+
+### 云南页上线后要改的（写完 P1 再做，不要提前空链）
+
+`/china-destinations/yunnan` 里 Dali Old Town / Erhai 高亮段改为 **短 teaser + 链到城市文**，避免和 `/dali-travel-guide`、`/erhai-lake-guide` 抢同一组词。云南页继续吃：Yunnan itinerary、Kunming–Dali–Lijiang、7-day Yunnan、四季如春。`placeLinks` 里古城/洱海从 `#anchor` 改为城市文 URL。
+
+Itinerary Planning hub（`content/hubs/china-itinerary-planning.md`）在大理 pillar 上线后，于 destination 子题下增加一条 Dali Travel Guide（status: published）。
+
+### 明确不要做的独立文章
+
+- Dali itinerary 2/3/4/5 days 四篇
+- Dali weather January … December
+- Dali Ancient Town things to do / at night / walking / food 四篇
+- Xizhou guide、Shuanglang guide、Cangshan guide（P1）
+- Dali Ancient Town vs Erhai 独立篇（做 Where to Stay 的 H2）
+- Kunming to Dali、Lijiang to Dali、airport transfer 三篇（做 Transport 的 H2）
+- Yunnan itinerary / Yunnan travel guide（已有 destination 页）
+
+### 写文顺序（P1）
+
+1. `/dali-travel-guide`（先立 hub，子链可标 planned 或等 2–8 一起发）
+2. `/dali-itinerary`
+3. `/how-to-get-to-dali`
+4. `/where-to-stay-in-dali`
+5. `/erhai-lake-guide`
+6. `/dali-ancient-town`
+7. `/dali-vs-lijiang`
+8. `/things-to-do-in-dali`（最后写，才能深链 5–6 而不重复）
+
+建议 **P1 八篇一起发布**，避免 pillar 链到 404。若必须先发 pillar，子题段落先不放死链。
+
+---
+
 ## 11. 给 AI 的最终执行提醒
 
 后续只要我在问这个网站相关的问题，你都应该默认：
@@ -651,7 +819,7 @@ This post contains affiliate links at no extra cost to you.
 - 这是 Hidden China Travel 项目
 - 目标读者是外国游客
 - 这是一个中国旅行实用指南网站
-- 当前阶段重点是“来华实用指南”内容
+- 当前阶段重点是“来华实用指南”内容；城市攻略以 §10.6 大理集群为第一批 destination 扩展
 - 后续会扩展到“旅游攻略 + 旅游产品内容”
 - 当前已有 hub、文章、联盟链接以上述内容为准
 - 站内链接必须使用相对路径
@@ -659,4 +827,5 @@ This post contains affiliate links at no extra cost to you.
 - 不要编造未存在页面
 - 不要写成宣传文案或模板化 AI 文案
 - 以“实用、真实、清楚、可信”为优先目标
+- 写作、审稿或去模板化英文内容时，使用仓库 skill：`.cursor/skills/hidden-china-editorial/SKILL.md`
 
