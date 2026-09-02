@@ -827,4 +827,5 @@ Itinerary Planning hub（`content/hubs/china-itinerary-planning.md`）在大理 
 - 不要编造未存在页面
 - 不要写成宣传文案或模板化 AI 文案
 - 以“实用、真实、清楚、可信”为优先目标
+- 写作、审稿或去模板化英文内容时，使用仓库 skill：`.cursor/skills/hidden-china-editorial/SKILL.md`
 
