@@ -73,7 +73,25 @@ export const PLANNER_END_CTA_SLUGS = new Set([
 ]);
 
 /** Troubleshooting pages where a mid-article itinerary ask interrupts the form. */
-export const SKIP_INLINE_CTA_SLUGS = new Set(["chinese-id-number-foreigners"]);
+export const SKIP_INLINE_CTA_SLUGS = new Set([
+  "chinese-id-number-foreigners",
+  // The Dali pillar already has a route-decision CTA in context; do not stack
+  // the generic prompt on top of it.
+  "dali-travel-guide",
+]);
+
+const DALI_YUNNAN_END_CTA: EndCtaCopy = {
+  intent: "planner",
+  bridge:
+    "Use the guides when the logistics are clear. Ask for help when the route itself is not.",
+  valueProp:
+    "For a Dali–Lijiang trip, we turn your dates, pace, and overnight bases into an independent Yunnan route—not a tour-bus schedule.",
+  buttonLabel: "Plan this Yunnan route",
+  href: "/china-itinerary-planner?dest=yunnan&shape=loop-7#plan-trip",
+  trust:
+    "6–10 day routes are $129 early bird. Nothing is charged until we confirm the scope.",
+  trackingEvent: "article_end_cta_click",
+};
 
 function systemsEnd(bridge: string): EndCtaCopy {
   return {
@@ -177,8 +195,15 @@ export function getInlineCtaCopy(): InlineCtaCopy {
 
 export function getEndCtaCopy(
   variant: ArticleCtaVariantId,
-  options?: { diyHref?: string; diyLabel?: string },
+  options?: {
+    diyHref?: string;
+    diyLabel?: string;
+    articleSlug?: string;
+  },
 ): EndCtaCopy {
+  if (options?.articleSlug === "dali-travel-guide") {
+    return DALI_YUNNAN_END_CTA;
+  }
   const copy = endCtaByVariant[variant] ?? endCtaByVariant.default;
   if (copy.intent !== "systems") return copy;
   return {

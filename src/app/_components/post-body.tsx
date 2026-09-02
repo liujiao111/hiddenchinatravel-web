@@ -47,8 +47,9 @@ export function PostBody({
       ? {
           diyHref: hub.href,
           diyLabel: `More in ${hub.label}`,
+          articleSlug,
         }
-      : undefined,
+      : { articleSlug },
   );
   const bookingBlock = getArticleBookingBlock(articleSlug);
   const skipInlineCta = shouldSkipInlineCta(variant, articleSlug);

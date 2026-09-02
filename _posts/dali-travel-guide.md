@@ -42,7 +42,7 @@ Dali is worth visiting if you want to slow down—not if you want to collect eve
 
 The city sits between Cangshan and Erhai Lake. Its best days are not usually the loudest ones: a walk through the old town before the holiday crowds arrive, a stretch of the lakeside ecological corridor, a village meal away from the souvenir streets, or coffee under a very blue Yunnan sky.
 
-For a first independent visit, I recommend **three nights**. That gives you one old-town day, one Erhai day, and one day that can become Cangshan, Xizhou, or simply a slower morning. Trying to fit Dali, Erhai, Cangshan, Xizhou, Shuanglang, and Lijiang into one or two nights turns the place into a transport problem.
+For a first independent visit, I recommend **three nights**. That gives you one old-town day, one Erhai day, and a third day to leave open for Cangshan, Xizhou, or simply a slower morning. Trying to fit Dali, Erhai, Cangshan, Xizhou, Shuanglang, and Lijiang into one or two nights turns the place into a transport problem.
 
 If you are building a first Yunnan week, Dali usually fits between Kunming and Lijiang. See the practical [Kunming–Dali–Lijiang route](/china-destinations/yunnan) before treating it as a separate day trip.
 
@@ -85,7 +85,7 @@ Dali can be busy and commercial, especially around public holidays and the main 
 
 **Four nights or more:** worthwhile if you like cycling, photography, village stays, or a slower route with no pressure to cover the entire lake.
 
-For a wider route, do not rebuild the regional itinerary from scratch. The [Yunnan guide](/china-destinations/yunnan) explains how Dali fits on the Kunming–Dali–Lijiang rail spine. If your dates, overnight count, or onward city are still unclear, use the [itinerary planner](/china-itinerary-planner?dest=yunnan&shape=loop-7#plan-trip) rather than booking a string of non-refundable stays first.
+For a wider route, do not rebuild the regional itinerary from scratch. The [Yunnan guide](/china-destinations/yunnan) explains how Dali fits on the Kunming–Dali–Lijiang rail spine. If you are still deciding how many nights to give Dali or whether to continue to Lijiang, use the [Yunnan itinerary planner](/china-itinerary-planner?dest=yunnan&shape=loop-7#plan-trip) before booking a string of non-refundable stays.
 
 ## Where to stay in Dali
 
@@ -113,7 +113,7 @@ You have a few reasonable ways to see the lake:
 - **Use a taxi or DiDi for point-to-point journeys** outside restricted lakeside sections. Keep destination names saved in Chinese in your map app.
 - **Arrange a private driver for a flexible day** if you want villages and east-shore viewpoints without trying to solve every connection. In my experience, a day is often quoted around **RMB 300–500**, but treat that as a starting reference only: confirm the route, waiting time, vehicle, and current price directly with the driver or your guesthouse.
 
-A good guesthouse host can often suggest a local driver. If you want a local planning recommendation instead of a generic route, you can also [ask us to shape your Yunnan itinerary](/china-itinerary-planner?dest=yunnan&shape=loop-7#plan-trip).
+A good guesthouse host can often suggest a local driver. Before confirming, check exactly which villages are included, how long the driver will wait, and whether parking or corridor restrictions change the plan.
 
 Do not decide you have “done Erhai” just because you hired a car for a full loop. Pick a side, stop when the place feels good, and allow time to walk.
 
@@ -166,6 +166,6 @@ For the full pre-departure sequence—visa, data, payments, maps, transport, and
 
 ## Plan the Dali part before you book every night
 
-Dali gets worse when it is overpacked. Old Town, Erhai, villages, Cangshan, and a rushed jump to Lijiang can look like five separate “must-dos” until the route is on the calendar.
+Dali gets worse when it is overpacked. Old Town, Erhai, villages, Cangshan, and a rushed jump to Lijiang can look like five separate “must-dos” until you put the route on a calendar.
 
-If you already know your dates but cannot decide whether Dali needs two or three nights, where to base yourself, or whether to continue to Lijiang, [tell us your travel pace](/china-itinerary-planner?dest=yunnan&shape=loop-7#plan-trip). We build independent Yunnan routes you can follow yourself—not a bus-tour template.
+If the unresolved part is the route itself—how long to stay, where to base yourselves, or whether to continue to Lijiang—that is where one-to-one planning is useful. It should leave you with an independent route you can follow, not a bus-tour template.
