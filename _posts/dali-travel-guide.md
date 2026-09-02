@@ -13,16 +13,10 @@ ogImage:
 canonical: "https://hiddenchinatravel.com/dali-travel-guide"
 keywords:
   - dali travel guide
-  - dali china travel
-  - dali travel
-  - dali tourism
-  - things to do in dali
-  - dali ancient town
-  - erhai lake
-  - dali itinerary
+  - how many days in dali
   - where to stay in dali
-  - how to get to dali
-  - best time to visit dali
+  - things to do in dali
+  - dali itinerary
 section: "China Itinerary Planning"
 sourceUrl: "https://hiddenchinatravel.com/dali-travel-guide"
 faqs:
@@ -34,8 +28,8 @@ faqs:
     answer: "Dali Ancient Town is the simplest first base because food and everyday services are close by. Caicun on Erhai's west shore is quieter and scenic, but it is less convenient for taxis and onward travel."
   - question: "Can I visit Dali without speaking Chinese?"
     answer: "Yes, but set up data, mobile payments, Chinese map pins, and a ride-hailing backup before you arrive. Those systems matter more than fluent Chinese for a first independent trip."
-  - question: "Do I need a special permit to visit Dali?"
-    answer: "No special regional permit is required for Dali. You still need the right China entry permission for your passport and must use your passport for hotel check-in and many bookings."
+  - question: "Can I visit Dali and Lijiang in one week?"
+    answer: "Yes. Seven days is enough for a Kunming–Dali–Lijiang rail route if you keep it to those three bases. Give Dali two or three nights and do not add Shangri-La or Xishuangbanna just because they are also in Yunnan."
 ---
 
 Dali is worth visiting if you want to slow down—not if you want to collect every Yunnan landmark in 24 hours.
@@ -86,6 +80,8 @@ Dali can be busy and commercial, especially around public holidays and the main 
 **Four nights or more:** worthwhile if you like cycling, photography, village stays, or a slower route with no pressure to cover the entire lake.
 
 For a wider route, do not rebuild the regional itinerary from scratch. The [Yunnan guide](/china-destinations/yunnan) explains how Dali fits on the Kunming–Dali–Lijiang rail spine. If you are still deciding how many nights to give Dali or whether to continue to Lijiang, use the [Yunnan itinerary planner](/china-itinerary-planner?dest=yunnan&shape=loop-7#plan-trip) before booking a string of non-refundable stays.
+
+<!-- yunnan-route-check -->
 
 ## Where to stay in Dali
 

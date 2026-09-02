@@ -17,6 +17,7 @@ export type ContactFormState = {
 };
 
 const ALLOWED_SERVICE_TYPES = new Set([
+  "free-yunnan-route-check",
   "custom-plan",
   "itinerary-review",
   "on-trip-help",
@@ -151,6 +152,9 @@ export async function submitContactForm(
   return {
     ok: true,
     name,
-    message: SLA_INQUIRY_SUCCESS,
+    message:
+      serviceType === "free-yunnan-route-check"
+        ? "Thanks — Joy has your Yunnan route request and will send a practical check. There is no fee or booking obligation."
+        : SLA_INQUIRY_SUCCESS,
   };
 }

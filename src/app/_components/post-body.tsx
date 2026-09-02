@@ -3,6 +3,7 @@ import { ArticleAuthorBio } from "@/app/_components/article-author-bio";
 import { AffiliateClickTracker } from "@/components/affiliates/affiliate-click-tracker";
 import { ArticleBookingBlockCard } from "@/components/affiliates/article-booking-block";
 import { EndCTA, InlineCTA } from "@/components/cta";
+import { YunnanRouteCheck } from "@/components/cta/yunnan-route-check";
 import { ArticleHubLink, ContinueReading } from "@/components/content";
 import type { ContinueReadingItem } from "@/components/content/continue-reading";
 import {
@@ -53,6 +54,10 @@ export function PostBody({
   );
   const bookingBlock = getArticleBookingBlock(articleSlug);
   const skipInlineCta = shouldSkipInlineCta(variant, articleSlug);
+  const routeCheckMarker = "<!-- yunnan-route-check -->";
+  const [beforeRouteCheck, afterRouteCheck] = content.split(routeCheckMarker);
+  const hasYunnanRouteCheck =
+    articleSlug === "dali-travel-guide" && afterRouteCheck !== undefined;
   const { before, after, inserted } = skipInlineCta
     ? { before: content, after: "", inserted: false }
     : splitHtmlForInlineCta(content);
@@ -62,7 +67,19 @@ export function PostBody({
   const article = (
     <>
       <AffiliateClickTracker surface="article" articleSlug={articleSlug} />
-      {inserted ? (
+      {hasYunnanRouteCheck ? (
+        <>
+          <div
+            className={markdownStyles["markdown"]}
+            dangerouslySetInnerHTML={{ __html: beforeRouteCheck }}
+          />
+          <YunnanRouteCheck articleSlug={articleSlug} />
+          <div
+            className={markdownStyles["markdown"]}
+            dangerouslySetInnerHTML={{ __html: afterRouteCheck ?? "" }}
+          />
+        </>
+      ) : inserted ? (
         <>
           <div
             className={markdownStyles["markdown"]}
