@@ -77,6 +77,7 @@ export default async function ContactPage({
   searchParams: Promise<{ service?: string }>;
 }) {
   const { service } = await searchParams;
+  const isFreeYunnanRouteCheck = service === "free-yunnan-route-check";
 
   return (
     <main className="bg-[var(--brand-cream)]">
@@ -91,48 +92,63 @@ export default async function ContactPage({
             Contact
           </p>
           <h1 className="mb-4 text-3xl font-bold tracking-tight text-[var(--brand-ink)] md:text-4xl">
-            Let&apos;s talk about your China trip
+            {isFreeYunnanRouteCheck
+              ? "Get a free Yunnan route check"
+              : "Let&apos;s talk about your China trip"}
           </h1>
           <p className="text-sm font-normal leading-relaxed text-[var(--brand-ink-muted)] md:text-base">
-            Planning help, booking questions, partnerships, or guide feedback —
-            send a note. We usually reply within{" "}
-            <span className="font-bold text-[var(--brand-cta)]">
-              {SLA.inquiryReplyShort}
-            </span>{" "}
-            ({SLA.businessHours}). Planner requests take {SLA.plannerReply}.
+            {isFreeYunnanRouteCheck ? (
+              <>
+                Share your travel month, total Yunnan days, and cities you are
+                considering. Joy will check whether the route works before you
+                book every hotel. It is free, with no booking, tour package, or
+                payment involved.
+              </>
+            ) : (
+              <>
+                Planning help, booking questions, partnerships, or guide
+                feedback — send a note. We usually reply within{" "}
+                <span className="font-bold text-[var(--brand-cta)]">
+                  {SLA.inquiryReplyShort}
+                </span>{" "}
+                ({SLA.businessHours}). Planner requests take {SLA.plannerReply}.
+              </>
+            )}
           </p>
         </header>
 
-        <div className="mb-8 grid gap-3 sm:grid-cols-2 md:mb-10">
-          <Link
-            href="/china-itinerary-planner#plan-trip"
-            className="rounded-2xl border-2 border-[var(--brand-cta)]/15 bg-white px-5 py-4 shadow-[0_4px_20px_rgba(80,40,24,0.08)] transition-all duration-300 hover:border-[var(--brand-cta)] hover:shadow-[0_8px_28px_rgba(80,40,24,0.14)]"
-          >
-            <p className="text-xs font-bold uppercase tracking-wide text-[var(--brand-mango)]">
-              Fastest for planning
-            </p>
-            <p className="mt-1 text-base font-bold text-[var(--brand-cta)]">
-              Request a custom itinerary →
-            </p>
-            <p className="mt-1 text-sm text-[var(--brand-ink-muted)]">
-              Share cities, days, and style in the planner form.
-            </p>
-          </Link>
-          <Link
-            href="/services"
-            className="rounded-2xl border-2 border-[var(--brand-cta)]/15 bg-white px-5 py-4 shadow-[0_4px_20px_rgba(80,40,24,0.08)] transition-all duration-300 hover:border-[var(--brand-cta)] hover:shadow-[0_8px_28px_rgba(80,40,24,0.14)]"
-          >
-            <p className="text-xs font-bold uppercase tracking-wide text-[var(--brand-mango)]">
-              See pricing first
-            </p>
-            <p className="mt-1 text-base font-bold text-[var(--brand-cta)]">
-              Services &amp; pricing →
-            </p>
-            <p className="mt-1 text-sm text-[var(--brand-ink-muted)]">
-              Custom plans, reviews, on-trip help, and booking fees.
-            </p>
-          </Link>
-        </div>
+        {!isFreeYunnanRouteCheck ? (
+          <div className="mb-8 grid gap-3 sm:grid-cols-2 md:mb-10">
+            <Link
+              href="/china-itinerary-planner#plan-trip"
+              className="rounded-2xl border-2 border-[var(--brand-cta)]/15 bg-white px-5 py-4 shadow-[0_4px_20px_rgba(80,40,24,0.08)] transition-all duration-300 hover:border-[var(--brand-cta)] hover:shadow-[0_8px_28px_rgba(80,40,24,0.14)]"
+            >
+              <p className="text-xs font-bold uppercase tracking-wide text-[var(--brand-mango)]">
+                Fastest for planning
+              </p>
+              <p className="mt-1 text-base font-bold text-[var(--brand-cta)]">
+                Request a custom itinerary →
+              </p>
+              <p className="mt-1 text-sm text-[var(--brand-ink-muted)]">
+                Share cities, days, and style in the planner form.
+              </p>
+            </Link>
+            <Link
+              href="/services"
+              className="rounded-2xl border-2 border-[var(--brand-cta)]/15 bg-white px-5 py-4 shadow-[0_4px_20px_rgba(80,40,24,0.08)] transition-all duration-300 hover:border-[var(--brand-cta)] hover:shadow-[0_8px_28px_rgba(80,40,24,0.14)]"
+            >
+              <p className="text-xs font-bold uppercase tracking-wide text-[var(--brand-mango)]">
+                See pricing first
+              </p>
+              <p className="mt-1 text-base font-bold text-[var(--brand-cta)]">
+                Services &amp; pricing →
+              </p>
+              <p className="mt-1 text-sm text-[var(--brand-ink-muted)]">
+                Custom plans, reviews, on-trip help, and booking fees.
+              </p>
+            </Link>
+          </div>
+        ) : null}
 
         <div className="grid grid-cols-1 gap-10 pb-24 lg:grid-cols-[minmax(0,1fr)_280px] lg:gap-12">
           <section
@@ -146,8 +162,9 @@ export default async function ContactPage({
               Send a message
             </h2>
             <p className="mb-6 text-sm font-normal text-[var(--brand-ink-muted)]">
-              For general questions, partnerships, or anything that doesn&apos;t
-              fit the planner form.
+              {isFreeYunnanRouteCheck
+                ? "A short route check before you commit to hotels, trains, or another city."
+                : "For general questions, partnerships, or anything that doesn’t fit the planner form."}
             </p>
             <ContactForm defaultServiceType={service} />
           </section>

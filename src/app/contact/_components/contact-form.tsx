@@ -23,6 +23,7 @@ const labelClass =
 
 /** Aligned with live /services offerings */
 const SERVICE_TYPE_OPTIONS = [
+  { value: "free-yunnan-route-check", label: "Free Yunnan route check" },
   { value: "custom-plan", label: "Custom itinerary planning" },
   { value: "itinerary-review", label: "Existing itinerary review" },
   { value: "on-trip-help", label: "On-trip quick help" },
@@ -50,6 +51,7 @@ export function ContactForm({
   const [serviceType, setServiceType] = useState(() =>
     initialServiceType(defaultServiceType),
   );
+  const isFreeYunnanRouteCheck = serviceType === "free-yunnan-route-check";
 
   if (state.ok) {
     return (
@@ -127,23 +129,31 @@ export function ContactForm({
           placeholder="Select a topic…"
           onChange={setServiceType}
         />
-        <p className="mt-2 text-xs font-normal leading-relaxed text-[var(--brand-ink-muted)]">
-          For a full custom trip request, the{" "}
-          <Link
-            href="/china-itinerary-planner#plan-trip"
-            className="font-bold text-[var(--brand-coral)] underline decoration-[color-mix(in_srgb,var(--brand-coral)_35%,transparent)] underline-offset-2"
-          >
-            itinerary planner
-          </Link>{" "}
-          is usually faster. See{" "}
-          <Link
-            href="/services"
-            className="font-bold text-[var(--brand-coral)] underline decoration-[color-mix(in_srgb,var(--brand-coral)_35%,transparent)] underline-offset-2"
-          >
-            services &amp; pricing
-          </Link>{" "}
-          for fees.
-        </p>
+        {isFreeYunnanRouteCheck ? (
+          <p className="mt-2 text-xs font-normal leading-relaxed text-[var(--brand-ink-muted)]">
+            Tell Joy your travel month, total Yunnan days, and cities you are
+            considering. This short route check is free: no booking, tour
+            package, or payment is involved.
+          </p>
+        ) : (
+          <p className="mt-2 text-xs font-normal leading-relaxed text-[var(--brand-ink-muted)]">
+            For a full custom trip request, the{" "}
+            <Link
+              href="/china-itinerary-planner#plan-trip"
+              className="font-bold text-[var(--brand-coral)] underline decoration-[color-mix(in_srgb,var(--brand-coral)_35%,transparent)] underline-offset-2"
+            >
+              itinerary planner
+            </Link>{" "}
+            is usually faster. See{" "}
+            <Link
+              href="/services"
+              className="font-bold text-[var(--brand-coral)] underline decoration-[color-mix(in_srgb,var(--brand-coral)_35%,transparent)] underline-offset-2"
+            >
+              services &amp; pricing
+            </Link>{" "}
+            for fees.
+          </p>
+        )}
       </div>
 
       <div>
@@ -175,7 +185,11 @@ export function ContactForm({
           rows={6}
           maxLength={5000}
           className={textareaClass}
-          placeholder="Dates, cities, and what you need help with…"
+          placeholder={
+            isFreeYunnanRouteCheck
+              ? "Travel month, total days, cities you are considering, and your preferred pace…"
+              : "Dates, cities, and what you need help with…"
+          }
         />
       </div>
 
