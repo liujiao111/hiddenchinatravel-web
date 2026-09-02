@@ -105,7 +105,7 @@ For the booking side of the decision, use [Hotels in China](/hotels-in-china) to
 
 ## Erhai: do less, see more
 
-Erhai is not a ride you need to finish in a day. The west-side ecological corridor near Caicun is especially good for walking or cycling, but it is not a road for a private car to drive through. Choose a manageable section, bring water and sun protection, and leave enough battery and daylight for the return.
+Erhai is not a ride you need to finish in a day. The west-side ecological corridor near Caicun is especially good for walking or cycling, but it is not a road for a private car to drive through. Inside the corridor, use the operator's designated bicycle or assisted bike, or the sightseeing electric shuttle—do not assume a privately rented or ordinary shared e-bike may enter. Choose a manageable section, bring water and sun protection, and leave enough battery and daylight for the return.
 
 You have a few reasonable ways to see the lake:
 
@@ -141,7 +141,7 @@ With about a week, the better answer is often both—not as a race, but as the [
 
 Most independent visitors reach Dali by high-speed rail from Kunming or via a shorter connection from Lijiang. Flights and local buses also exist, but schedules, stops, and seasonal services change, so check the actual service for your arrival date rather than relying on an old blog timetable.
 
-From Dali Railway Station or Dali Fengyi Airport, look first for the current direct shuttle to your accommodation area. If the schedule does not line up, DiDi or a normal taxi is the straightforward fallback—especially with luggage or a late arrival.
+From Dali Railway Station or Dali Fengyi Airport, ask the service desk whether a current shuttle serves your destination; some routes require a change rather than going directly to the old town, Caicun, or another accommodation area. If the schedule does not line up, DiDi or a normal taxi is the straightforward fallback—especially with luggage or a late arrival.
 
 Before travel day:
 
