@@ -2,14 +2,14 @@
 title: "Trip.com eSIM for China Review (2026): Prices, ChatGPT & 5G"
 seoTitle: "Trip.com eSIM China Review 2026: Prices & ChatGPT"
 excerpt: "Trip.com's China eSIM reviewed: exact 7-day and 15-day plan prices, whether ChatGPT and ​Google work on mobile data, 5G labeling, and who should buy the Airalo plan instead."
-coverImage: "/assets/blog/best-esim-for-china-travel/cover.webp"
+coverImage: "/assets/blog/trip-com-esim-china-review/trip-com-esim-china-listing.png"
 date: "2026-09-03T06:30:00+00:00"
 dateModified: "2026-09-03T06:30:00+00:00"
 author:
   name: "Joy Liu"
   picture: "/brand/founder/avatar-joy.webp"
 ogImage:
-  url: "/assets/blog/best-esim-for-china-travel/cover.webp"
+  url: "/assets/blog/trip-com-esim-china-review/trip-com-esim-china-listing.png"
 canonical: "https://hiddenchinatravel.com/trip-com-esim-china-review"
 keywords:
   - "Trip.com eSIM China"
@@ -61,7 +61,7 @@ Both are field observations from specific trips on specific devices — not a cl
 
 ## Trip.com's exact China eSIM plans and prices
 
-![Trip.com mainland China 5G eSIM listing showing package options, pricing, and the 4.6/5 rating from 62,852 reviews](/assets/blog/trip-com-esim-china-review/trip-com-esim-china-listing.png)
+The cover image above is Trip.com's own listing — package options, pricing, and its 4.6/5 rating from roughly 62,000 reviews.
 
 Plan| Data| Price| Notes  
 ---|---|---|---  
