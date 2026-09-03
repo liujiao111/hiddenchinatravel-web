@@ -1,7 +1,7 @@
 ---
-title: "Best eSIM for China in 2026: 6 Plans Compared"
-seoTitle: "Best eSIM for China 2026: Compare Prices & Plans"
-excerpt: "Best eSIM for China in 2026: exact Trip.com and Airalo plans and prices, cheap vs value, 5G, data-only limits, and when you still need a VPN."
+title: "Best eSIM for China in 2026: Plans Compared"
+seoTitle: "Best eSIM for China in 2026: Plans Compared"
+excerpt: "Compare the best eSIMs for China in 2026: data, price, 5G, Google, WhatsApp, VPN requirements, and whether you need a Chinese phone number."
 coverImage: "/assets/blog/best-esim-for-china-travel/cover.webp"
 date: "2026-05-15T12:05:55+00:00"
 dateModified: "2026-09-03T05:00:00+00:00"
