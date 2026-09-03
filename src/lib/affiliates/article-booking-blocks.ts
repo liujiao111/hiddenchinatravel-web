@@ -61,15 +61,13 @@ const blocksBySlug: Record<string, ArticleBookingBlock> = {
     primary: { label: "Browse Trip.com tickets", href: "/go/trip-tickets" },
   },
   "best-esim-for-china-travel": {
-    eyebrow: "Set up before you fly",
-    title: "Get a mainland China eSIM",
-    body: "Airalo is the default for a first China data eSIM. Confirm the plan says Mainland China — not Hong Kong or Macau only.",
-    primary: { label: "Get Airalo eSIM", href: "/go/airalo" },
-    secondary: { label: "Trip.com eSIM", href: "/go/trip-esim" },
-    lead: {
-      eyebrow: "Data before you land",
-      title: "Get an Airalo eSIM for mainland China",
-      hint: "Install at home. Confirm the plan says Mainland China, not Hong Kong only.",
+    eyebrow: "Choose before you fly",
+    title: "Compare exact 7-day and 15-day plans",
+    body: "Use the plan picker above to compare Trip.com and Airalo by daily allowance, total data, speed limits, and current price.",
+    primary: { label: "Compare the six plans", href: "#esim-plan-picker" },
+    secondary: {
+      label: "Need a +86 number instead?",
+      href: "/china-sim-card-for-foreigners",
     },
   },
   "china-sim-card-for-foreigners": {

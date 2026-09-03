@@ -13,6 +13,7 @@ import {
 } from "@/lib/seo/canonical";
 import markdownToHtml from "@/lib/markdownToHtml";
 import Container from "@/app/_components/container";
+import { EsimPlanDecision } from "@/components/affiliates/esim-plan-decision";
 import { PostBody } from "@/app/_components/post-body";
 import { PostHeader } from "@/app/_components/post-header";
 import type { Post } from "@/interfaces/post";
@@ -56,6 +57,9 @@ export default async function PostPage(props: Params) {
             author={post.author}
             articleSlug={post.slug}
           />
+          {post.slug === "best-esim-for-china-travel" ? (
+            <EsimPlanDecision />
+          ) : null}
           <PostBody
             content={content}
             articleSlug={post.slug}
