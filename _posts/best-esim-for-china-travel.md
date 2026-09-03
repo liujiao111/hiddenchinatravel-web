@@ -136,6 +136,7 @@ Pick| Plan| Price| Why
 **Cheapest 2-week plan**| Trip.com 3 GB/day · 15 days| $16.59| Daily allowance is easier to budget on a longer trip  
 **If you already use Airalo's app**| Airalo 10 GB · 7 days| $24.50| Costs more than the matching Trip.com plan, but keeps everything inside one app  
 **Airalo unlimited**| Airalo Unlimited · 7 days| $27.00| 3 GB high-speed daily, then 1 Mbps under Airalo's current fair-use terms  
+**Best unlimited across more providers**| *Reserved — Nomad, Holafly, Saily comparison* | — | Not yet tested or price-compared here; see the note below before choosing one of these  
 
 [See the exact plan picker with live buy links →](#esim-plan-picker)
 
@@ -162,7 +163,7 @@ Airalo’s comparable plans cost more: 10 GB total for 7 days is $24.50, 7-day u
 
 Airalo may still fit if you already use its app and prefer managing eSIM installation and top-ups there. Its China plans use China Unicom, which supports 5G, though Airalo does not label every plan specifically as a 5G SKU the way Trip.com does. Airalo states that its international routing gives access to services such as Google and WhatsApp on mobile data; I have not presented that provider statement as my own field test.
 
-Nomad, Holafly, Saily, and Jetpac also sell China eSIMs, including unlimited-focused plans. They are not included in the six-SKU picker or given a "best" label here because I have no affiliate relationship with them, have not tested them, and do not want to send you through an unverified purchase path just to make the comparison look larger. If you already use one of them, check its current China plan and price directly before switching providers.
+Nomad, Holafly, Saily, and Jetpac also sell China eSIMs, including unlimited-focused plans. They are not included in the six-SKU picker or given a "best" label here yet — that row is reserved, not filled in, because I have no affiliate relationship with them and have not tested them. I do not want to send you through an unverified purchase path or invent a "best unlimited" verdict just to make the comparison look larger. If you already use one of them, check its current China plan and price directly before switching providers. This section will be updated with real prices and, where possible, a field test once that comparison exists.
 
 **Before buying any plan, confirm:** mainland China coverage, data amount, validity period, hotspot allowed, and whether your phone model is supported.
 
