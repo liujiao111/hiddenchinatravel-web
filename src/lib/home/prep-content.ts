@@ -84,25 +84,30 @@ export const homePrepSteps: HomePrepStep[] = [
     body: "eSIM for mobile data on landing. Add a VPN only if you will use hotel Wi-Fi or a local SIM.",
     menus: [
       {
-        buttonLabel: "Compare other eSIMs",
+        buttonLabel: "Compare exact plans & prices",
         chooseHint:
-          "Airalo if you only need data; Trip.com eSIM if you already book hotels there. Some links are affiliate.",
+          "Trip.com's SKUs are usually cheaper than Airalo's for the same days and data — see exact prices before picking. Some links are affiliate.",
         guide: {
           label: "eSIM guide",
           href: "/best-esim-for-china-travel",
         },
         featured: {
-          label: "Get Airalo eSIM",
-          href: "/go/airalo",
-          external: true,
-          hint: "Recommended",
+          label: "Compare eSIM plans",
+          href: "/best-esim-for-china-travel#esim-plan-picker",
+          hint: "7-day and 15-day SKUs, current prices",
         },
         options: [
           {
             label: "Trip.com eSIM",
             href: "/go/trip-esim",
             external: true,
-            hint: "Same Trip account",
+            hint: "Usually cheaper",
+          },
+          {
+            label: "Airalo eSIM",
+            href: "/go/airalo",
+            external: true,
+            hint: "Dedicated eSIM app",
           },
         ],
       },

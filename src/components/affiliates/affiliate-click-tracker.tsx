@@ -24,6 +24,10 @@ export function AffiliateClickTracker({ surface, articleSlug }: Props) {
       if (!(target instanceof Element)) return;
       const anchor = target.closest("a");
       if (!anchor) return;
+      // Components with their own onClick handler (booking blocks, Survival
+      // Kit links, home prep menu) mark themselves so this delegated
+      // listener does not double-count the same click in GA4.
+      if (anchor.hasAttribute("data-affiliate-tracked")) return;
       const href = anchor.getAttribute("href") || "";
       const slug = affiliateSlugFromHref(href);
       if (!slug) return;

@@ -55,6 +55,7 @@ function LeadCtaButton({
         href={href}
         target="_blank"
         rel="sponsored noopener noreferrer"
+        data-affiliate-tracked="true"
         onClick={() => trackIfAffiliate(href, "article_lead_cta", articleSlug)}
         className={className}
       >
@@ -158,6 +159,7 @@ export function ArticleBookingBlockCard({ block, articleSlug }: Props) {
             href={block.primary.href}
             target="_blank"
             rel="sponsored noopener noreferrer"
+            data-affiliate-tracked="true"
             onClick={() =>
               trackIfAffiliate(
                 block.primary.href,
@@ -185,6 +187,7 @@ export function ArticleBookingBlockCard({ block, articleSlug }: Props) {
               href={block.secondary.href}
               target="_blank"
               rel="sponsored noopener noreferrer"
+              data-affiliate-tracked="true"
               onClick={() =>
                 trackIfAffiliate(
                   block.secondary!.href,

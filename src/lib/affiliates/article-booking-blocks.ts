@@ -61,27 +61,46 @@ const blocksBySlug: Record<string, ArticleBookingBlock> = {
     primary: { label: "Browse Trip.com tickets", href: "/go/trip-tickets" },
   },
   "best-esim-for-china-travel": {
-    eyebrow: "Set up before you fly",
-    title: "Get a mainland China eSIM",
-    body: "Airalo is the default for a first China data eSIM. Confirm the plan says Mainland China — not Hong Kong or Macau only.",
-    primary: { label: "Get Airalo eSIM", href: "/go/airalo" },
-    secondary: { label: "Trip.com eSIM", href: "/go/trip-esim" },
+    eyebrow: "Choose before you fly",
+    title: "Compare exact 7-day and 15-day plans",
+    body: "Use the plan picker above to compare Trip.com and Airalo by daily allowance, total data, speed limits, and current price.",
+    primary: { label: "Compare the six plans", href: "#esim-plan-picker" },
+    secondary: {
+      label: "Need a +86 number instead?",
+      href: "/china-sim-card-for-foreigners",
+    },
+  },
+  "trip-com-esim-china-review": {
+    eyebrow: "Trip.com eSIM",
+    title: "See Trip.com's exact 7-day and 15-day prices",
+    body: "Three SKUs compared with current prices — the cheapest is $8.81 for a normal 7-day trip.",
+    primary: {
+      label: "See Trip.com's China plans",
+      href: "/go/trip-esim-7d-3gb",
+    },
+    secondary: {
+      label: "Compare with Airalo",
+      href: "/best-esim-for-china-travel#esim-plan-picker",
+    },
     lead: {
-      eyebrow: "Data before you land",
-      title: "Get an Airalo eSIM for mainland China",
-      hint: "Install at home. Confirm the plan says Mainland China, not Hong Kong only.",
+      eyebrow: "Trip.com eSIM",
+      title: "See Trip.com's exact China eSIM prices",
+      hint: "3 plans compared — 7-day and 15-day, current prices checked September 3, 2026.",
     },
   },
   "china-sim-card-for-foreigners": {
     eyebrow: "Short trip?",
-    title: "Need data before the store queue?",
-    body: "Under two weeks and you only need maps and WhatsApp: start with a travel eSIM. Buy a +86 SIM later if you need SMS codes.",
-    primary: { label: "Get Airalo eSIM", href: "/go/airalo" },
+    title: "Compare eSIM plans before you buy",
+    body: "Under two weeks and you only need maps and WhatsApp: a travel eSIM skips the store queue. See exact Trip.com and Airalo plans and prices before choosing. Buy a +86 SIM instead if you need SMS codes.",
+    primary: {
+      label: "Compare exact eSIM plans",
+      href: "/best-esim-for-china-travel#esim-plan-picker",
+    },
     secondary: { label: "Internet hub", href: "/internet-in-china" },
     lead: {
       eyebrow: "Landing in under two weeks?",
-      title: "Start with an Airalo eSIM",
-      hint: "Skip the airport queue unless you need a +86 number for SMS.",
+      title: "Compare eSIM plans first",
+      hint: "Skip the airport queue only if you don't need a +86 number for SMS.",
     },
   },
   "best-vpn-for-china": {
@@ -115,7 +134,10 @@ const blocksBySlug: Record<string, ArticleBookingBlock> = {
     eyebrow: "Set up before you fly",
     title: "Sort data + VPN before departure",
     body: "eSIM for mobile data, VPN for hotel Wi-Fi and local SIMs — set those up at home when they apply. I use NordVPN. ExpressVPN is a simpler backup I have not daily-tested in China.",
-    primary: { label: "Get Airalo eSIM", href: "/go/airalo" },
+    primary: {
+      label: "Compare exact eSIM plans",
+      href: "/best-esim-for-china-travel#esim-plan-picker",
+    },
     secondary: { label: "Get NordVPN", href: "/go/nordvpn" },
   },
   "digital-survival-china-transport-guide": {

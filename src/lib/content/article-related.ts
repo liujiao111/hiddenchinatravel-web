@@ -119,9 +119,14 @@ const CLUSTER_RELATED_SLUGS: Record<string, readonly string[]> = {
     "order-food-china-without-chinese-number",
   ],
   "best-esim-for-china-travel": [
+    "trip-com-esim-china-review",
     "china-sim-card-for-foreigners",
     "do-you-need-vpn-china",
-    "best-vpn-for-china",
+  ],
+  "trip-com-esim-china-review": [
+    "best-esim-for-china-travel",
+    "china-sim-card-for-foreigners",
+    "do-you-need-vpn-china",
   ],
   "digital-survival-china-payment-guide": [
     "alipay-wechat-pay-verification-failed",

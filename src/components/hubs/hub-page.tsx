@@ -280,17 +280,28 @@ export function HubPage({ hub }: Props) {
                 <p className="mb-6 max-w-xl text-sm font-normal leading-relaxed text-[var(--brand-ink-muted)] md:text-base">
                   {hub.affiliateExit.body}
                 </p>
-                <a
-                  href={hub.affiliateExit.href}
-                  target="_blank"
-                  rel="sponsored noopener noreferrer"
-                  className="btn-brand-outline inline-flex px-6 py-3 text-sm"
-                >
-                  {hub.affiliateExit.ctaLabel}
-                </a>
-                <p className="mt-4 text-xs font-normal text-[var(--brand-ink-muted)]">
-                  {FEES.affiliateWithPlanning}
-                </p>
+                {hub.affiliateExit.href.startsWith("/go/") ? (
+                  <>
+                    <a
+                      href={hub.affiliateExit.href}
+                      target="_blank"
+                      rel="sponsored noopener noreferrer"
+                      className="btn-brand-outline inline-flex px-6 py-3 text-sm"
+                    >
+                      {hub.affiliateExit.ctaLabel}
+                    </a>
+                    <p className="mt-4 text-xs font-normal text-[var(--brand-ink-muted)]">
+                      {FEES.affiliateWithPlanning}
+                    </p>
+                  </>
+                ) : (
+                  <Link
+                    href={hub.affiliateExit.href}
+                    className="btn-brand-outline inline-flex px-6 py-3 text-sm"
+                  >
+                    {hub.affiliateExit.ctaLabel}
+                  </Link>
+                )}
               </div>
             </section>
           ) : null}

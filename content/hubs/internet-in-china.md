@@ -49,6 +49,11 @@ subtopics:
         excerpt: "When a local SIM beats eSIM, passport registration realities, and what to expect buying a +86 number as a visitor."
         badge: "Local Number"
         status: published
+      - title: "Trip.com eSIM for China Review"
+        href: /trip-com-esim-china-review
+        excerpt: "Exact Trip.com China eSIM prices, a Yunnan field test, ChatGPT and 5G labeling, and when Airalo is the better pick instead."
+        badge: "Trip.com Review"
+        status: published
 toolCTA:
   - label: "Open the Internet Full Guide"
     href: /digital-survival-china-internet-guide
@@ -98,10 +103,10 @@ mistakes:
       body: "Internet unlocks maps, DiDi, Alipay flows, and ticket apps. Treat connection as the first layer of the trip stack."
 affiliateExit:
   eyebrow: "Optional setup path"
-  title: "Start with a travel eSIM"
-  body: "Airalo is the simple data-first option for short trips — install before you fly, then add a VPN if hotel Wi-Fi matters."
-  ctaLabel: "Get Airalo eSIM"
-  href: /go/airalo
+  title: "Compare exact eSIM plans before you buy"
+  body: "Trip.com and Airalo both sell China eSIMs — see the exact 7-day and 15-day SKUs, current prices, and speed limits side by side before choosing."
+  ctaLabel: "Compare eSIM plans"
+  href: /best-esim-for-china-travel#esim-plan-picker
 relatedHubs:
   - title: "Maps & Navigation"
     href: /maps-navigation-in-china
