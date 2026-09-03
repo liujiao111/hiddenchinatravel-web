@@ -124,6 +124,17 @@ export default function RootLayout({
       <body
         className="min-h-screen bg-[var(--brand-cream)] font-sans text-[var(--brand-ink)] font-normal antialiased"
       >
+        {/*
+          Initialize dataLayer immediately (not deferred with GA4 itself) so
+          affiliate_click events fired before GA4 finishes loading are queued
+          instead of silently dropped by the optional-chaining push in
+          src/lib/analytics/track.ts.
+        */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: "window.dataLayer = window.dataLayer || [];",
+          }}
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

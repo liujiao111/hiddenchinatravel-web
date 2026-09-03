@@ -53,6 +53,7 @@ export function KitTrackedLink({ cta, variant = "primary", className }: Props) {
             ? "sponsored noopener noreferrer"
             : "noopener noreferrer"
         }
+        data-affiliate-tracked={isAffiliateGo ? "true" : undefined}
         onClick={onClick}
         className={`${base} ${className ?? ""}`}
       >

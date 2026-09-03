@@ -1,3 +1,10 @@
+"use client";
+
+import { trackEvent } from "@/lib/analytics/track";
+import {
+  AFFILIATE_CLICK_EVENT,
+  affiliateSlugFromHref,
+} from "@/lib/affiliates/tracking";
 import { FEES } from "@/lib/trust/copy";
 
 type Plan = {
@@ -96,7 +103,19 @@ const planPairs: PlanPair[] = [
   },
 ];
 
-function PlanCard({ plan }: { plan: Plan }) {
+function trackPlanClick(plan: Plan, pairId: string) {
+  const slug = affiliateSlugFromHref(plan.href);
+  if (!slug) return;
+  trackEvent(AFFILIATE_CLICK_EVENT, {
+    affiliate_slug: slug,
+    surface: "esim_plan_picker",
+    article_slug: "best-esim-for-china-travel",
+    plan_pair: pairId,
+    provider: plan.provider,
+  });
+}
+
+function PlanCard({ plan, pairId }: { plan: Plan; pairId: string }) {
   return (
     <article
       className={`relative flex h-full flex-col rounded-2xl border bg-white p-5 ${
@@ -136,6 +155,8 @@ function PlanCard({ plan }: { plan: Plan }) {
         href={plan.href}
         target="_blank"
         rel="sponsored noopener noreferrer"
+        data-affiliate-tracked="true"
+        onClick={() => trackPlanClick(plan, pairId)}
         className={
           plan.recommended
             ? "btn-brand mt-5 inline-flex justify-center px-5 py-3 text-sm"
@@ -191,7 +212,7 @@ export function EsimPlanDecision() {
             </div>
             <div className="grid gap-4 md:grid-cols-2">
               {pair.plans.map((plan) => (
-                <PlanCard key={plan.href} plan={plan} />
+                <PlanCard key={plan.href} plan={plan} pairId={pair.id} />
               ))}
             </div>
           </div>
