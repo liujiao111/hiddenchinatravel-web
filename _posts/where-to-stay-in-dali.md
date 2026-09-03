@@ -66,17 +66,17 @@ Most people are not actually choosing between five areas. They are choosing betw
 | **Xizhou** | A slower, more local-feeling stay among working villages | Fewer restaurant and shop options right outside your door |
 | **Shuanglang / east shore** | Open lake views, a more resort-style stay | An hour or more from Dali by road, more in peak-season traffic — better as a deliberate stay than a quick stop |
 
-Nightly prices in Dali move a lot with season and holidays. As a rough starting point: budget guesthouses in the Ancient Town or Xiaguan often run somewhere in the **$20–45** range, and boutique lakeside or design-forward stays can run **$40–90+**. Treat any number here as a planning range, not a quote — confirm the current rate for your dates before booking.
+Nightly prices in Dali move a lot with season and holidays. As a rough starting point: budget guesthouses in the Ancient Town or Xiaguan often fall in the **$20–45** range, and boutique lakeside or design-forward stays can run **$40–90+**. Treat any number here as a planning range, not a quote — confirm the current rate for your dates before booking.
 
 ### Where I stayed in the Ancient Town
 
-I stayed at [Dali Blue Habitat Inn](/go/dali-blue-habitat-inn) (大理蓝栖客栈, south gate branch), about 600 metres from the south gate. Its Trip.com listing states guests from all countries and regions are welcome — worth checking directly for any guesthouse before you book, since not every property in the area can say the same. The property offers pickup within a few kilometres of the old town; mine was free, but the listing also shows it as a paid add-on, so confirm the current terms and cost with the property before you rely on it.
+I stayed at [Dali Blue Habitat Inn](/go/dali-blue-habitat-inn) (大理蓝栖客栈, south gate branch), about 600 metres from the south gate. Its Trip.com listing states guests from all countries and regions are welcome — worth confirming for any guesthouse, since not every property in the area can say the same. The property offers pickup within a few kilometres of the old town; mine was free, but the listing also shows it as a paid add-on, so confirm the current terms and cost with the property before you rely on it.
 
 _Disclosure: this article contains affiliate links to Trip.com for two properties I have stayed at myself. If you book through them, I may earn a small commission at no extra cost to you._
 
 ### Where I stayed by the lake
 
-By Erhai, I stayed at [Dali Panshan Tinghai Homestay](/go/dali-panshan-tinghai-homestay) (大理畔山听海民宿), a small guesthouse near Caicun and the ecological corridor. Its Trip.com listing also shows guests from all countries and regions are welcome — again, worth checking for any specific property rather than assuming. One detail to note: the listing states the guest checking in must be between 18 and 60 years old, so it is not the right fit for every traveler; confirm directly with the property if that could be an issue for your group.
+By Erhai, I stayed at [Dali Panshan Tinghai Homestay](/go/dali-panshan-tinghai-homestay) (大理畔山听海民宿), a small guesthouse near Caicun and the ecological corridor. Its Trip.com listing also shows guests from all countries and regions are welcome — again, worth checking for any specific property rather than assuming. The listing also states the guest checking in must be between 18 and 60 years old, so it is not the right fit for every traveler — confirm directly with the property if that could be an issue for your group.
 
 ### What to know about Erhai and the west shore
 
@@ -88,7 +88,7 @@ Every hotel in China needs a specific permit to register foreign guests with the
 
 - Filter for foreign-guest acceptance on [Trip.com](/go/trip-hotels) rather than assuming any listing works. Booking.com often cannot confirm this until you are standing at the desk.
 - Message the property before you pay if the listing is not explicit about foreign-passport check-in.
-- Bring your passport to check-in; registering it with the local police system is standard procedure, not something unusual happening to you specifically.
+- Bring your passport to check-in; registering it with the local police system is standard procedure, not something unusual, and not specific to you.
 
 The full explanation of how this works — and what to do if you are turned away — is in [Hotels in China for foreigners](/hotels-in-china-for-foreigners).
 
@@ -114,6 +114,6 @@ If rice noodles every morning is not for you, there is a Western-style breakfast
 
 For **2–3 nights** total, keep the whole stay in or near the Ancient Town. Splitting a short stay across two areas usually costs more time in transfers than it gives back in variety.
 
-For **4–5 nights**, splitting the stay — most nights in the Ancient Town, one or two by the lake — is a common and workable pattern. See the [Dali travel guide's day-count breakdown](/dali-travel-guide#how-many-days-do-you-need-in-dali) if you have not settled on a number yet.
+For **4–5 nights**, splitting the stay — most nights in the Ancient Town, one or two by the lake — is a workable pattern. See the [Dali travel guide's day-count breakdown](/dali-travel-guide#how-many-days-do-you-need-in-dali) if you have not settled on a number yet.
 
 With **a week or more** in Yunnan, adding a night in Xizhou or on the east shore near Shuanglang is worth considering. Keep the Ancient Town or Caicun as your base for the rest of the stop rather than moving accommodation every night.
