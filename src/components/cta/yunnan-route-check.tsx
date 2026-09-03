@@ -5,10 +5,20 @@ import { trackEvent } from "@/lib/analytics/track";
 
 type Props = {
   articleSlug?: string;
+  heading?: string;
+  body?: string;
 };
 
+const DEFAULT_HEADING = "Not sure whether Dali needs two or three nights?";
+const DEFAULT_BODY =
+  "Send Joy your travel month, total Yunnan days, and the cities you are considering. She'll tell you whether the route works before you book every hotel.";
+
 /** Low-commitment route review between free guides and paid planning. */
-export function YunnanRouteCheck({ articleSlug }: Props) {
+export function YunnanRouteCheck({
+  articleSlug,
+  heading = DEFAULT_HEADING,
+  body = DEFAULT_BODY,
+}: Props) {
   const href = "/contact?service=free-yunnan-route-check";
 
   return (
@@ -20,12 +30,10 @@ export function YunnanRouteCheck({ articleSlug }: Props) {
         Free route check
       </p>
       <h3 className="text-xl font-bold tracking-tight text-[var(--brand-ink)] md:text-2xl">
-        Not sure whether Dali needs two or three nights?
+        {heading}
       </h3>
       <p className="mt-3 max-w-2xl text-sm font-normal leading-relaxed text-[var(--brand-ink-muted)] md:text-base">
-        Send Joy your travel month, total Yunnan days, and the cities you are
-        considering. She&apos;ll tell you whether the route works before you
-        book every hotel.
+        {body}
       </p>
       <p className="mt-4 text-xs font-normal tracking-wide text-[var(--brand-muted)]">
         For independent travelers · No tour package · No obligation
@@ -35,7 +43,7 @@ export function YunnanRouteCheck({ articleSlug }: Props) {
         className="btn-brand mt-6 inline-flex px-6 py-3.5 text-sm"
         onClick={() =>
           trackEvent("yunnan_route_check_click", {
-            placement: "dali_travel_guide",
+            placement: articleSlug ?? "unknown",
             href,
             article_slug: articleSlug,
           })

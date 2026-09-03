@@ -75,9 +75,20 @@ export const PLANNER_END_CTA_SLUGS = new Set([
 /** Troubleshooting pages where a mid-article itinerary ask interrupts the form. */
 export const SKIP_INLINE_CTA_SLUGS = new Set([
   "chinese-id-number-foreigners",
-  // The Dali pillar already has a route-decision CTA in context; do not stack
-  // the generic prompt on top of it.
+  // Dali cluster pages already carry a route-decision CTA in context; do not
+  // stack the generic prompt on top of it.
   "dali-travel-guide",
+  "where-to-stay-in-dali",
+]);
+
+/**
+ * Dali/Yunnan cluster articles that should end on the Yunnan-specific planner
+ * CTA (correct destination + $129 6–10 day price) instead of the generic
+ * `$99` default or a systems "when to hire" band.
+ */
+export const DALI_YUNNAN_END_CTA_SLUGS = new Set([
+  "dali-travel-guide",
+  "where-to-stay-in-dali",
 ]);
 
 const DALI_YUNNAN_END_CTA: EndCtaCopy = {
@@ -201,7 +212,7 @@ export function getEndCtaCopy(
     articleSlug?: string;
   },
 ): EndCtaCopy {
-  if (options?.articleSlug === "dali-travel-guide") {
+  if (options?.articleSlug && DALI_YUNNAN_END_CTA_SLUGS.has(options.articleSlug)) {
     return DALI_YUNNAN_END_CTA;
   }
   const copy = endCtaByVariant[variant] ?? endCtaByVariant.default;
