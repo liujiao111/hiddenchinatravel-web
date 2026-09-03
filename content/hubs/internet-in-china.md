@@ -98,10 +98,10 @@ mistakes:
       body: "Internet unlocks maps, DiDi, Alipay flows, and ticket apps. Treat connection as the first layer of the trip stack."
 affiliateExit:
   eyebrow: "Optional setup path"
-  title: "Start with a travel eSIM"
-  body: "Airalo is the simple data-first option for short trips — install before you fly, then add a VPN if hotel Wi-Fi matters."
-  ctaLabel: "Get Airalo eSIM"
-  href: /go/airalo
+  title: "Compare exact eSIM plans before you buy"
+  body: "Trip.com and Airalo both sell China eSIMs — see the exact 7-day and 15-day SKUs, current prices, and speed limits side by side before choosing."
+  ctaLabel: "Compare eSIM plans"
+  href: /best-esim-for-china-travel#esim-plan-picker
 relatedHubs:
   - title: "Maps & Navigation"
     href: /maps-navigation-in-china

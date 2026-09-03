@@ -85,6 +85,7 @@ export function HomePrepBuyMenu({ menu, onOptionClick }: Props) {
                 ? "sponsored noopener noreferrer"
                 : "noopener noreferrer"
             }
+            data-affiliate-tracked={featuredIsGo ? "true" : undefined}
             onClick={() => handleOption(featured)}
             className="btn-brand inline-flex w-full justify-center px-4 py-2.5 text-sm"
           >
@@ -169,6 +170,7 @@ export function HomePrepBuyMenu({ menu, onOptionClick }: Props) {
                             ? "sponsored noopener noreferrer"
                             : "noopener noreferrer"
                         }
+                        data-affiliate-tracked={isAffiliateGo ? "true" : undefined}
                         onClick={() => handleOption(option)}
                         className={className}
                       >

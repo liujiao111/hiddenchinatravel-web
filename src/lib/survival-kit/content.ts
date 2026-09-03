@@ -122,24 +122,8 @@ export const kitNetworkSection: KitPrepSectionData = {
         "Roaming is expensive and often unreliable. Without local data, you cannot open maps, translate signs, or finish Alipay setup when you need them most.",
       options: [
         {
-          name: "Airalo",
-          diff: "eSIM specialist — quick app install if you only need data.",
-          logoSrc: "/assets/survival-kit/apps/airalo.svg",
-          primaryCta: {
-            label: "Get Airalo eSIM",
-            href: go.airalo,
-            external: true,
-            trackingModule: "network-esim-airalo",
-          },
-          secondaryCta: {
-            label: "eSIM guide",
-            href: "/best-esim-for-china-travel",
-            trackingModule: "network-esim-airalo",
-          },
-        },
-        {
           name: "Trip.com eSIM",
-          diff: "Same account as hotels and flights — handy if you already book on Trip.",
+          diff: "Usually cheaper than Airalo for the same days and data — same account as hotels and flights if you already book on Trip.",
           logoSrc: "/assets/survival-kit/apps/trip.svg",
           primaryCta: {
             label: "Get Trip.com eSIM",
@@ -148,15 +132,31 @@ export const kitNetworkSection: KitPrepSectionData = {
             trackingModule: "network-esim-trip",
           },
           secondaryCta: {
-            label: "eSIM guide",
-            href: "/best-esim-for-china-travel",
+            label: "Compare exact plans",
+            href: "/best-esim-for-china-travel#esim-plan-picker",
             trackingModule: "network-esim-trip",
+          },
+        },
+        {
+          name: "Airalo",
+          diff: "Dedicated eSIM app and top-ups — costs more, but a simpler fit if you already use it.",
+          logoSrc: "/assets/survival-kit/apps/airalo.svg",
+          primaryCta: {
+            label: "Get Airalo eSIM",
+            href: go.airalo,
+            external: true,
+            trackingModule: "network-esim-airalo",
+          },
+          secondaryCta: {
+            label: "Compare exact plans",
+            href: "/best-esim-for-china-travel#esim-plan-picker",
+            trackingModule: "network-esim-airalo",
           },
         },
       ],
       footerGuide: {
-        label: "Full internet setup guide",
-        href: "/digital-survival-china-internet-guide",
+        label: "Compare exact eSIM plans & prices",
+        href: "/best-esim-for-china-travel#esim-plan-picker",
         trackingModule: "network-esim",
       },
     },

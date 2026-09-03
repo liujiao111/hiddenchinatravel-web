@@ -55,7 +55,7 @@ That’s the same principle behind travel eSIMs sold by providers like Airalo or
   * Works on both iPhone and most modern Android devices
   * Leaves your physical SIM slot free (useful if you want to keep a Chinese number for calls)
 
-For a full breakdown of which providers actually work well in China right now — data caps, network reliability, 5G coverage — the [Best eSIM for China Travel guide](/best-esim-for-china-travel) goes deep on that. Two options worth starting with: [Airalo](/go/airalo) and [Trip.com eSIM](/go/trip-esim).
+For a full breakdown of which providers actually work well in China right now — data caps, network reliability, 5G coverage — the [Best eSIM for China Travel guide](/best-esim-for-china-travel) goes deep on that, including [exact Trip.com and Airalo plans and current prices](/best-esim-for-china-travel#esim-plan-picker).
 
 **One thing to keep in mind:** if you’re running a VPN on top of a travel eSIM, turn the VPN off. The two systems can conflict — and that conflict has a very specific consequence: it breaks Alipay payments. More on that below.
 
@@ -124,7 +124,7 @@ More on why foreign payments fail in China and how to fix them: [Payments in Chi
 
 Most connection problems in China happen because people try to fix them after landing. Here’s what takes 30 minutes at home and saves hours on the ground:
 
-  1. **Buy and install a travel eSIM.** [Airalo](/go/airalo) or [Trip.com eSIM](/go/trip-esim). Install before departure, only activate when you land.
+  1. **Buy and install a travel eSIM.** [Compare exact Trip.com and Airalo plans](/best-esim-for-china-travel#esim-plan-picker). Install before departure, only activate when you land.
   2. **If you’ll use hotel Wi-Fi or a local SIM, download and test a VPN.** Skip this if you will stay on eSIM mobile data for a few days. Install, log in, and test from home. I use [NordVPN](/go/nordvpn). [ExpressVPN](/go/expressvpn) is a simpler backup I have not daily-tested in China. Comparison: [Best VPN for China](/best-vpn-for-china).
   3. **Set up Alipay or WeChat Pay.** Link your foreign card at home while you have unrestricted internet access. Both apps are harder to configure from behind the firewall.
   4. **Download Apple Maps or Amap.** Apple Maps works without a VPN. Amap (the AutoNavi English app) is better for transit routes.

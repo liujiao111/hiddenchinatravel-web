@@ -17,8 +17,8 @@ export const prepOffers: PrepOffer[] = [
       "Stay connected without swapping SIM cards. Set up before you land so maps and translation work at the airport.",
     guideLabel: "Read setup guide",
     guideHref: "/best-esim-for-china-travel",
-    affiliateLabel: "Compare eSIM options",
-    affiliateHref: "/go/airalo",
+    affiliateLabel: "Compare exact eSIM plans",
+    affiliateHref: "/best-esim-for-china-travel#esim-plan-picker",
     icon: "esim",
   },
   {

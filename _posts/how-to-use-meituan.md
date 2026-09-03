@@ -83,7 +83,7 @@ You need a working **WeChat** (or Alipay) account and a **payment method**. A Ch
 
 The **standalone Meituan app** often wants a +86 number for OTP. The **WeChat mini-program** is the foreigner workaround: you are already logged into WeChat, so Meituan may never ask for a separate Chinese number — or it asks later, at purchase, and sometimes accepts the number already on WeChat.
 
-If you do want a local number, airport China Mobile / China Telecom desks at Shenzhen Bao’an, Shanghai Pudong, or Beijing Capital are the easy version. Miss that, [get an eSIM for data](/go/airalo) first — [eSIM guide](/best-esim-for-china-travel) — then go to a **large official carrier branch**, not a mall kiosk. Passport registration details: [China SIM for foreigners](/china-sim-card-for-foreigners).
+If you do want a local number, airport China Mobile / China Telecom desks at Shenzhen Bao’an, Shanghai Pudong, or Beijing Capital are the easy version. Miss that, [compare eSIM plans for data](/best-esim-for-china-travel#esim-plan-picker) first, then go to a **large official carrier branch**, not a mall kiosk. Passport registration details: [China SIM for foreigners](/china-sim-card-for-foreigners).
 
 ### 2. WeChat
 
