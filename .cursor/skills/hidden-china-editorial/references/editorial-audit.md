@@ -10,7 +10,8 @@ Flag:
 - an opinion written as universal fact (“Lijiang is less commercial than Dali”);
 - claims of personal experience not supplied by Joy;
 - invented shop, driver, hotel, route, or food recommendations;
-- an assertion that a foreign visitor can book, enter, or use a service without caveats around passports, local apps, payment, or current rules.
+- an assertion that a foreign visitor can book, enter, or use a service without caveats around passports, local apps, payment, or current rules;
+- a named, bookable business (hotel, tour, ticketed activity) that has not had its guest-eligibility, age, or check-in rules checked against its own listing page — a source-material draft praising a place says nothing about whether this site's foreign-passport readers can actually use it.
 
 Fix:
 
