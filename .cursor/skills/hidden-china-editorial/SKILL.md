@@ -18,6 +18,22 @@ It does **not** try to evade AI detection. It does **not** fabricate personality
 3. Read the target article and its related existing hub/article pages before planning new links.
 4. If the assignment depends on current operations—transport, tickets, opening hours, visa policy, prices, regulations, or availability—verify against a primary/official source before stating it as fact. If it cannot be verified, remove false precision or label it as a traveler/author observation.
 
+## Working from Xiaohongshu / social media / third-party drafts
+
+Use this before any other mode when the starting point is a Xiaohongshu-style draft, a GPT rewrite of scraped posts, or any "aggregated from 30 posts" source material. Treat that material as **leads, not facts** — none of it is publishable as written.
+
+1. **Strip fabricated first person.** Delete any "I stayed / I met travelers / I stumbled upon" language the author did not personally live. Either ask Joy whether she has real experience with that specific claim, or rewrite it as an unattributed observation ("some travelers mention…") — never invent a source to sound more credible.
+2. **Quarantine every named business, price, policy, and "fact."** Store name, phone/booking, source post, and claim separately from the draft. Nothing in this list enters the article until step 3 clears it.
+3. **Verify traveler-executability before publishing any named business or rule**, especially:
+   - Foreign-passport / foreign-guest acceptance — check the platform's own listing page (e.g. Trip.com "Guests Accepted" field), not the Xiaohongshu post. A property can look perfect and still be mainland-ID-only; recommending it to this site's audience causes a real check-in rejection, which is the exact failure this site exists to prevent.
+   - Age, group, or other check-in restrictions stated on the listing.
+   - Transport/vehicle restrictions (e.g. a lakeside ecological corridor closed to private cars).
+   - Ticketing, reservation, or opening-hour rules for any attraction.
+   - Prices and fees — treat as a rough, dated range, never a quote.
+   If verification is not possible, cut the claim rather than publish it as a hedge ("might be," "usually").
+4. **Only use a genuinely approved affiliate deep link.** Never hand-construct a booking URL from a business name. If Joy names a specific property she has stayed at, get the actual partner-network deep link (e.g. the Trip.com hotel detail link with its tracking `hoteluniquekey`) before adding it, and do not edit the URL.
+5. **Run the full editorial audit** (`references/editorial-audit.md`) before treating the result as a draft worth reviewing — this workflow produces exactly the fact-risk and fake-voice patterns that audit exists to catch.
+
 ## Operating modes
 
 Choose the least invasive mode that answers the request.
