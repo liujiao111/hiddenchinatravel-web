@@ -9,8 +9,6 @@ type Plan = {
   note: string;
   href: string;
   recommended?: boolean;
-  /** Provider requires the buyer to sign up or log in before checkout. */
-  requiresAccount?: boolean;
 };
 
 type PlanPair = {
@@ -43,7 +41,6 @@ const planPairs: PlanPair[] = [
         detail: "China Unicom · fixed-data plan",
         note: "A simpler fit if you already prefer Airalo's app.",
         href: "/go/airalo-esim-7d-10gb",
-        requiresAccount: true,
       },
     ],
   },
@@ -69,7 +66,6 @@ const planPairs: PlanPair[] = [
         detail: "3 GB high-speed daily, then 1 Mbps",
         note: "Clear fair-use terms inside the Airalo app.",
         href: "/go/airalo-esim-7d-unlimited",
-        requiresAccount: true,
       },
     ],
   },
@@ -95,7 +91,6 @@ const planPairs: PlanPair[] = [
         detail: "China Unicom · fixed-data plan",
         note: "One total allowance rather than a daily reset.",
         href: "/go/airalo-esim-15d-20gb",
-        requiresAccount: true,
       },
     ],
   },
@@ -150,13 +145,6 @@ function PlanCard({ plan }: { plan: Plan }) {
         Choose {plan.provider} plan
         <span aria-hidden>→</span>
       </a>
-      {plan.requiresAccount ? (
-        <p className="mt-2 text-xs font-normal text-[var(--brand-ink-muted)]">
-          Airalo requires a free account (email or Google/Apple) before
-          checkout — you'll land on its login/sign-up screen first, not a
-          broken link.
-        </p>
-      ) : null}
     </article>
   );
 }
@@ -179,11 +167,10 @@ export function EsimPlanDecision() {
       </h2>
       <p className="mt-3 max-w-3xl text-sm font-normal leading-relaxed text-[var(--brand-ink-muted)] md:text-base">
         Trip.com is the lower-price choice in all three like-for-like
-        scenarios below, and its checkout does not require an account. Its
-        eSIM also stayed fast in our Yunnan mountain-area testing, and
-        ChatGPT worked on mobile data without a separate VPN. Airalo costs
-        more and requires a free account before purchase, but its dedicated
-        eSIM app and plan management may suit travelers who already use it.
+        scenarios below. Its eSIM also stayed fast in our Yunnan mountain-area
+        testing, and ChatGPT worked on mobile data without a separate VPN.
+        Airalo costs more, but its dedicated eSIM app and plan management may
+        suit travelers who already use it.
       </p>
       <p className="mt-3 max-w-3xl text-xs font-normal leading-relaxed text-[var(--brand-ink-muted)]">
         Prices checked September 3, 2026. Trip.com sale prices and all package
