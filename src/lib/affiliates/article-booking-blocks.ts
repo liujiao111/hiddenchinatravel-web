@@ -72,14 +72,17 @@ const blocksBySlug: Record<string, ArticleBookingBlock> = {
   },
   "china-sim-card-for-foreigners": {
     eyebrow: "Short trip?",
-    title: "Need data before the store queue?",
-    body: "Under two weeks and you only need maps and WhatsApp: start with a travel eSIM. Buy a +86 SIM later if you need SMS codes.",
-    primary: { label: "Get Airalo eSIM", href: "/go/airalo" },
+    title: "Compare eSIM plans before you buy",
+    body: "Under two weeks and you only need maps and WhatsApp: a travel eSIM skips the store queue. See exact Trip.com and Airalo plans and prices before choosing. Buy a +86 SIM instead if you need SMS codes.",
+    primary: {
+      label: "Compare exact eSIM plans",
+      href: "/best-esim-for-china-travel#esim-plan-picker",
+    },
     secondary: { label: "Internet hub", href: "/internet-in-china" },
     lead: {
       eyebrow: "Landing in under two weeks?",
-      title: "Start with an Airalo eSIM",
-      hint: "Skip the airport queue unless you need a +86 number for SMS.",
+      title: "Compare eSIM plans first",
+      hint: "Skip the airport queue only if you don't need a +86 number for SMS.",
     },
   },
   "best-vpn-for-china": {
@@ -113,7 +116,10 @@ const blocksBySlug: Record<string, ArticleBookingBlock> = {
     eyebrow: "Set up before you fly",
     title: "Sort data + VPN before departure",
     body: "eSIM for mobile data, VPN for hotel Wi-Fi and local SIMs — set those up at home when they apply. I use NordVPN. ExpressVPN is a simpler backup I have not daily-tested in China.",
-    primary: { label: "Get Airalo eSIM", href: "/go/airalo" },
+    primary: {
+      label: "Compare exact eSIM plans",
+      href: "/best-esim-for-china-travel#esim-plan-picker",
+    },
     secondary: { label: "Get NordVPN", href: "/go/nordvpn" },
   },
   "digital-survival-china-transport-guide": {

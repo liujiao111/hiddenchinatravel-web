@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { prepOffers } from "@/lib/visa-checker/prep-offers";
 import { FEES } from "@/lib/trust/copy";
+import { AffiliateClickTracker } from "@/components/affiliates/affiliate-click-tracker";
 
 function PrepIcon({ icon }: { icon: (typeof prepOffers)[number]["icon"] }) {
   const className = "h-6 w-6";
@@ -125,19 +126,39 @@ function PrepButton({
     );
   }
 
+  const isAffiliateGo = href.startsWith("/go/") || href.includes("/go/");
+
   if (variant === "primary") {
-    return (
+    return isAffiliateGo ? (
+      <a
+        href={href}
+        target="_blank"
+        rel="sponsored noopener noreferrer"
+        className="btn-brand px-6 py-2.5 text-sm"
+      >
+        {label}
+      </a>
+    ) : (
       <Link href={href} className="btn-brand px-6 py-2.5 text-sm">
         {label}
       </Link>
     );
   }
 
-  return (
-    <Link
+  const secondaryClassName =
+    "inline-flex justify-center px-4 py-2.5 text-sm font-bold tracking-tight underline underline-offset-4 transition-colors duration-500 hover:text-[var(--brand-cta)]";
+
+  return isAffiliateGo ? (
+    <a
       href={href}
-      className="inline-flex justify-center px-4 py-2.5 text-sm font-bold tracking-tight underline underline-offset-4 transition-colors duration-500 hover:text-[var(--brand-cta)]"
+      target="_blank"
+      rel="sponsored noopener noreferrer"
+      className={secondaryClassName}
     >
+      {label}
+    </a>
+  ) : (
+    <Link href={href} className={secondaryClassName}>
       {label}
     </Link>
   );
@@ -149,6 +170,7 @@ export function FirstTripPrep() {
       aria-labelledby="prep-heading"
       className="mb-20 md:mb-28"
     >
+      <AffiliateClickTracker surface="visa_checker_prep" />
       <h2
         id="prep-heading"
         className="mb-3 text-xl font-bold leading-tight tracking-wide text-[var(--brand-ink)] md:text-3xl"
