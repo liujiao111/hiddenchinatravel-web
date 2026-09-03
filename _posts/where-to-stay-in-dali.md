@@ -72,7 +72,11 @@ Nightly prices in Dali move a lot with season and holidays. As a rough starting 
 
 I stayed at [Dali Blue Habitat Inn](/go/dali-blue-habitat-inn) (大理蓝栖客栈, south gate branch), about 600 metres from the south gate. Its Trip.com listing states guests from all countries and regions are welcome — worth checking directly for any guesthouse before you book, since not every property in the area can say the same. The property offers pickup within a few kilometres of the old town; mine was free, but the listing also shows it as a paid add-on, so confirm the current terms and cost with the property before you rely on it.
 
-_Disclosure: this section includes an affiliate link to Trip.com. If you book through it, I may earn a small commission at no extra cost to you._
+_Disclosure: this article contains affiliate links to Trip.com for two properties I have stayed at myself. If you book through them, I may earn a small commission at no extra cost to you._
+
+### Where I stayed by the lake
+
+By Erhai, I stayed at [Dali Panshan Tinghai Homestay](/go/dali-panshan-tinghai-homestay) (大理畔山听海民宿), a small guesthouse near Caicun and the ecological corridor. Its Trip.com listing also shows guests from all countries and regions are welcome — again, worth checking for any specific property rather than assuming. One detail to note: the listing states the guest checking in must be between 18 and 60 years old, so it is not the right fit for every traveler; confirm directly with the property if that could be an issue for your group.
 
 ### What to know about Erhai and the west shore
 
