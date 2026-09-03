@@ -68,9 +68,11 @@ Most people are not actually choosing between five areas. They are choosing betw
 
 Nightly prices in Dali move a lot with season and holidays. As a rough starting point: budget guesthouses in the Ancient Town or Xiaguan often run somewhere in the **$20–45** range, and boutique lakeside or design-forward stays can run **$40–90+**. Treat any number here as a planning range, not a quote — confirm the current rate for your dates before booking.
 
-### What some travelers mention about the Ancient Town
+### Where I stayed in the Ancient Town
 
-Several independent travelers have written about small guesthouses just outside the south gate — for example, listings on Trip.com under names such as 大理蓝栖客栈 and 南嘉·Luxsit — that show foreign-passport check-in and, in some cases, free pickup from Dali Railway Station. Both were listed on Trip.com at the time of writing. Treat this as something to look for and confirm directly with the property when you book, not a guarantee that applies to every guesthouse in the area — station pickup in particular is not something to assume without asking first.
+I stayed at [Dali Blue Habitat Inn](/go/dali-blue-habitat-inn) (大理蓝栖客栈, south gate branch), about 600 metres from the south gate. Its Trip.com listing states guests from all countries and regions are welcome — worth checking directly for any guesthouse before you book, since not every property in the area can say the same. The property offers pickup within a few kilometres of the old town; mine was free, but the listing also shows it as a paid add-on, so confirm the current terms and cost with the property before you rely on it.
+
+_Disclosure: this section includes an affiliate link to Trip.com. If you book through it, I may earn a small commission at no extra cost to you._
 
 ### What to know about Erhai and the west shore
 
