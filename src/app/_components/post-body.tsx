@@ -7,6 +7,7 @@ import { YunnanRouteCheck } from "@/components/cta/yunnan-route-check";
 import { ArticleHubLink, ContinueReading } from "@/components/content";
 import type { ContinueReadingItem } from "@/components/content/continue-reading";
 import {
+  DALI_YUNNAN_END_CTA_SLUGS,
   getEndCtaCopy,
   getInlineCtaCopy,
   resolveArticleCtaVariant,
@@ -26,6 +27,17 @@ type Props = {
   keywords?: string[];
   hub?: ArticleHubRef | null;
   relatedPosts?: ContinueReadingItem[];
+};
+
+/** Per-article override copy for the in-context Yunnan route-check block. */
+const ROUTE_CHECK_COPY: Record<
+  string,
+  { heading?: string; body?: string }
+> = {
+  "where-to-stay-in-dali": {
+    heading: "Still deciding between Ancient Town and Erhai?",
+    body: "Send Joy your travel month, total Yunnan days, and the cities you are considering. She'll tell you which base fits your route before you book every hotel.",
+  },
 };
 
 /**
@@ -57,7 +69,8 @@ export function PostBody({
   const routeCheckMarker = "<!-- yunnan-route-check -->";
   const [beforeRouteCheck, afterRouteCheck] = content.split(routeCheckMarker);
   const hasYunnanRouteCheck =
-    articleSlug === "dali-travel-guide" && afterRouteCheck !== undefined;
+    Boolean(articleSlug && DALI_YUNNAN_END_CTA_SLUGS.has(articleSlug)) &&
+    afterRouteCheck !== undefined;
   const { before, after, inserted } = skipInlineCta
     ? { before: content, after: "", inserted: false }
     : splitHtmlForInlineCta(content);
@@ -73,7 +86,10 @@ export function PostBody({
             className={markdownStyles["markdown"]}
             dangerouslySetInnerHTML={{ __html: beforeRouteCheck }}
           />
-          <YunnanRouteCheck articleSlug={articleSlug} />
+          <YunnanRouteCheck
+            articleSlug={articleSlug}
+            {...(articleSlug ? ROUTE_CHECK_COPY[articleSlug] : undefined)}
+          />
           <div
             className={markdownStyles["markdown"]}
             dangerouslySetInnerHTML={{ __html: afterRouteCheck ?? "" }}

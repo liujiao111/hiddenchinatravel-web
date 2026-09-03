@@ -97,7 +97,7 @@ There is no single “best area.” Choose a base based on how you want your day
 
 If you are torn, stay in **Dali Ancient Town**. It is easy for a first visit: meals and basic services are close, and you can arrange a car day when you want to reach Erhai villages or Cangshan. Avoid choosing a room directly on the loudest bar streets if sleep matters.
 
-For the booking side of the decision, use [Hotels in China](/hotels-in-china) to understand foreign-passport check-in before paying for a stay.
+For the full area-by-area breakdown, the Ancient Town vs Erhai decision, and what to confirm before booking, see [where to stay in Dali](/where-to-stay-in-dali).
 
 ## Erhai: do less, see more
 

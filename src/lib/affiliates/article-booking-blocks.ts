@@ -32,6 +32,13 @@ const blocksBySlug: Record<string, ArticleBookingBlock> = {
       hint: "Filter for hotels that accept foreign passports.",
     },
   },
+  "where-to-stay-in-dali": {
+    eyebrow: "Book in English",
+    title: "Search Dali hotels that accept foreign passports",
+    body: "Trip.com filters for properties with foreign-guest check-in. Booking.com often cannot confirm this until you are at the desk — always verify Guests Accepted before you pay.",
+    primary: { label: "Search Trip.com hotels", href: "/go/trip-hotels" },
+    secondary: { label: "Get Free Survival Kit", href: "/survival-kit" },
+  },
   "book-china-high-speed-rail-foreigners": {
     eyebrow: "Book in English",
     title: "Book trains in English",
