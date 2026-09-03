@@ -70,6 +70,24 @@ const blocksBySlug: Record<string, ArticleBookingBlock> = {
       href: "/china-sim-card-for-foreigners",
     },
   },
+  "trip-com-esim-china-review": {
+    eyebrow: "Trip.com eSIM",
+    title: "See Trip.com's exact 7-day and 15-day prices",
+    body: "Three SKUs compared with current prices — the cheapest is $8.81 for a normal 7-day trip.",
+    primary: {
+      label: "See Trip.com's China plans",
+      href: "/go/trip-esim-7d-3gb",
+    },
+    secondary: {
+      label: "Compare with Airalo",
+      href: "/best-esim-for-china-travel#esim-plan-picker",
+    },
+    lead: {
+      eyebrow: "Trip.com eSIM",
+      title: "See Trip.com's exact China eSIM prices",
+      hint: "3 plans compared — 7-day and 15-day, current prices checked September 3, 2026.",
+    },
+  },
   "china-sim-card-for-foreigners": {
     eyebrow: "Short trip?",
     title: "Compare eSIM plans before you buy",

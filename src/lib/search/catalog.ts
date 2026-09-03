@@ -358,6 +358,14 @@ export const staticSearchCatalog: SearchItem[] = [
     keywords: ["esim", "airalo"],
   },
   {
+    id: "article-trip-esim-review",
+    title: "Trip.com eSIM for China Review",
+    href: "/trip-com-esim-china-review",
+    description: "Exact Trip.com China eSIM prices, ChatGPT, and a Yunnan field test.",
+    type: "article",
+    keywords: ["esim", "trip.com", "trip esim"],
+  },
+  {
     id: "article-vpn",
     title: "Do You Need a VPN in China?",
     href: "/do-you-need-vpn-china",
