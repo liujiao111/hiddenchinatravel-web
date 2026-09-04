@@ -51,6 +51,14 @@ Before that, I used **NordVPN for a long time**. It could sometimes take a while
 
 So rather than giving you a generic "Top 10 VPNs" list, this guide focuses on the VPNs I would actually consider for a China trip — and when you may not need a VPN at all.
 
+> **My current pick for most travelers: ExpressVPN**
+>
+> If you're going to China for a short trip and want a relatively simple setup, this is the VPN I would try first.
+>
+> **[Try ExpressVPN](/go/expressvpn)**
+>
+> Install and test it **before you fly to China**, rather than waiting until you arrive.
+
 ## Quick Answer: Which VPN Is Best for China?
 
 If you want the shortest possible answer:
@@ -82,6 +90,16 @@ VPN performance can change over time, especially in a restrictive network enviro
 
 **If you're looking for the simplest option for a typical China trip, I'd start with ExpressVPN.**
 
+> **Not sure which VPN to choose?**
+>
+> **Most travelers → ExpressVPN**
+>
+> **Already use NordVPN → Keep using what you know**
+>
+> **Staying for months → Consider Astrill**
+>
+> **Want redundancy → Use a primary VPN + backup connection**
+
 ## VPN or eSIM: What Do You Actually Need?
 
 This is one of the most important questions — because **a VPN and an international eSIM solve different problems.**
@@ -105,6 +123,16 @@ A VPN changes how your internet traffic is routed. An international travel eSIM,
 For many travelers, **having both is the most convenient setup**.
 
 The eSIM gives you mobile connectivity, while the VPN gives you another way to access services that may not work normally on mainland networks.
+
+> **Simple China internet setup**
+>
+> **VPN:** helps with access to restricted services and gives you another option when using Wi-Fi.
+>
+> **International eSIM:** gives you mobile data and reduces your dependence on hotel Wi-Fi.
+>
+> **Both:** gives you more than one way to get online.
+>
+> If you're traveling to China for the first time, this is the setup I would consider rather than relying on a single connection.
 
 If you're unsure which option makes sense for your trip, see my guides to [whether you need a VPN in China](/do-you-need-vpn-china) and [the best eSIMs for China travel](/best-esim-for-china-travel/).
 
@@ -182,6 +210,25 @@ Then test the VPN while you're still outside China.
 
 You don't want your first VPN installation attempt to happen after landing.
 
+### My recommendation for most travelers
+
+If you're visiting China for a few days or a few weeks and simply want a relatively straightforward VPN setup, **ExpressVPN is the option I would start with.**
+
+You don't need to assume it will work perfectly on every network. The important thing is to install it, log in, and test it before your trip.
+
+> **My current VPN for China**
+>
+> **ExpressVPN**
+>
+> ✓ My current choice
+> ✓ Simple setup
+> ✓ Good overall experience in my use
+> ✓ Suitable for travelers who don't want complicated configuration
+>
+> **[Try ExpressVPN](/go/expressvpn)**
+>
+> *Install and test it before leaving for China.*
+
 ### Try ExpressVPN
 
 If you want to use the VPN I currently use:
@@ -226,6 +273,12 @@ One important 2026 update: NordVPN says its Obfuscated Servers are being upgrade
 
 **Not always the fastest to connect, but generally good speed once connected.**
 
+> **Already use NordVPN?**
+>
+> If you're comfortable with NordVPN and know how to troubleshoot it, there's no automatic reason to switch just because ExpressVPN is my current choice.
+>
+> **[Try NordVPN](/go/nordvpn)**
+
 ### Try NordVPN
 
 [Try NordVPN](/go/nordvpn)
@@ -249,6 +302,31 @@ If you're choosing between the two specifically for a China trip, my personal po
 **For someone who already uses NordVPN: I wouldn't necessarily switch just for the sake of switching.**
 
 That's a more useful recommendation than simply saying one provider is "the best."
+
+### Which one should you choose?
+
+**Choose ExpressVPN if:**
+
+* You're buying a VPN specifically for an upcoming China trip.
+* You want a relatively simple setup.
+* You don't want to spend much time troubleshooting.
+* You want to use the VPN I currently use.
+
+**Choose NordVPN if:**
+
+* You already use NordVPN.
+* You're familiar with its settings.
+* You have had good results with it.
+* You prefer not to change something that already works for you.
+
+> **Still not sure?**
+>
+> If you're starting from scratch, **I'd start with ExpressVPN.**
+>
+> If you already use NordVPN and are comfortable with it, **there's no automatic reason to switch.**
+>
+> **[Check ExpressVPN](/go/expressvpn)**
+> **[Check NordVPN](/go/nordvpn)**
 
 ## 3. Astrill — Worth Considering for Long-Term Stays
 
@@ -306,6 +384,12 @@ That doesn't necessarily mean you installed it incorrectly.
 VPN performance can depend on the network you're using and the provider's current infrastructure.
 
 This is also why I recommend **installing your VPN before traveling**.
+
+> **Don't wait until you land**
+>
+> If your VPN is important for your trip, install it, log in, and test it before you leave home.
+>
+> A backup connection such as an international eSIM can give you another way to get online if hotel Wi-Fi or your VPN causes problems.
 
 ## What About Hotel Wi-Fi?
 
@@ -379,6 +463,20 @@ You don't need to memorize technical details.
 
 Just know where the protocol settings are and how to switch servers.
 
+> **Before you fly**
+>
+> **1. Install your VPN**
+>
+> **2. Log in**
+>
+> **3. Test it**
+>
+> **4. Prepare an alternative connection**
+>
+> **5. Save important information offline**
+>
+> Don't make your first setup attempt after landing in China.
+
 ## What If My VPN Doesn't Connect?
 
 Don't immediately assume you need a new VPN.
@@ -417,18 +515,26 @@ If the VPN works on one but not the other, the network itself may be the problem
 
 This is exactly why I recommend not putting all your connectivity eggs in one basket.
 
+> **If ExpressVPN doesn't connect**
+>
+> Don't immediately assume the VPN is useless.
+>
+> First try another server, restart the app, change the protocol, or switch networks.
+>
+> If internet access is important, use your backup connection as well.
+
 ## VPN vs eSIM vs China SIM
 
 If you're still confused about what you actually need, here's the simple version.
 
-| What you need                 |         VPN | International eSIM                  |                            China SIM |
-| ----------------------------- | ----------: | ----------------------------------- | -----------------------------------: |
-| Mobile data                   |           ❌ | ✅                                   |                                    ✅ |
-| Hotel Wi-Fi access            |           ✅ | ❌                                   |                                    ❌ |
+| What you need                 |         VPN |                  International eSIM |                            China SIM |
+| ----------------------------- | ----------: | ----------------------------------: | -----------------------------------: |
+| Mobile data                   |           ❌ |                                   ✅ |                                    ✅ |
+| Hotel Wi-Fi access            |           ✅ |                                   ❌ |                                    ❌ |
 | Access to restricted services | Potentially | Depends on provider/network routing | Usually requires additional solution |
-| Easy for short trips          |      Medium | **Easy**                            |                               Medium |
-| Requires physical SIM         |          No | No                                  |                              Usually |
-| Useful as backup              |           ✅ | **✅**                               |                                    ✅ |
+| Easy for short trips          |      Medium |                            **Easy** |                               Medium |
+| Requires physical SIM         |          No |                                  No |                              Usually |
+| Useful as backup              |           ✅ |                               **✅** |                                    ✅ |
 
 For a typical short-term visitor, I would seriously consider **VPN + international eSIM** rather than relying on a single solution.
 
@@ -438,6 +544,14 @@ If you want to understand the differences in more detail:
 * [Best eSIM for China Travel](/best-esim-for-china-travel/)
 * [China SIM Card for Foreigners](/china-sim-card-for-foreigners/)
 * [Complete China Internet Guide](/digital-survival-china-internet-guide/)
+
+> **My recommended combination**
+>
+> **VPN + international eSIM**
+>
+> The VPN gives you an option for restricted services, while the eSIM gives you mobile connectivity without relying entirely on hotel Wi-Fi.
+>
+> For many short trips, having both is a much more practical setup than relying on either one alone.
 
 ## My Recommended China Internet Setup
 
@@ -471,6 +585,14 @@ Once everything works, connect to hotel Wi-Fi when convenient.
 
 This gives you more than one way to get online.
 
+> **The setup I'd use**
+>
+> **Before departure:** ExpressVPN + international eSIM + important apps installed
+>
+> **After arrival:** Test mobile data → test VPN → connect to hotel Wi-Fi
+>
+> This way, if one part of your setup doesn't work, you still have another option.
+
 ## So, What Is the Best VPN for China in 2026?
 
 If you made me choose just one for a typical traveler today:
@@ -482,6 +604,16 @@ It's the VPN I'm currently using, and I've had a good overall experience with it
 That doesn't mean it will work perfectly for every traveler or every network.
 
 It means **it's the option I feel most comfortable recommending right now.**
+
+> ## My recommendation
+>
+> **ExpressVPN**
+>
+> For a typical traveler visiting China, this is where I would start.
+>
+> Install it before departure, test it outside China, and keep an alternative connection such as an international eSIM available.
+>
+> **[Check ExpressVPN](/go/expressvpn)**
 
 ### My ranking by use case
 
@@ -504,6 +636,20 @@ LetsVPN
 And if you're wondering whether you even need a VPN, don't buy one automatically.
 
 First understand whether your trip requires a VPN, an eSIM, or both.
+
+> **Going to China soon?**
+>
+> If you're starting from scratch, my practical approach would be:
+>
+> **1. Install ExpressVPN before you leave**
+>
+> **2. Test it**
+>
+> **3. Have an international eSIM or another backup**
+>
+> **4. Don't wait until you arrive to figure everything out**
+>
+> **[Get started with ExpressVPN](/go/expressvpn)**
 
 ## FAQ
 
@@ -562,6 +708,17 @@ If you're preparing for your first trip to China, these guides will help:
 * [Best eSIM for China Travel](/best-esim-for-china-travel/)
 * [China SIM Card for Foreigners](/china-sim-card-for-foreigners/)
 * [Complete China Travel Survival Guide](/digital-survival-china-survival-kit/)
+
+**Bottom line:** Don't wait until you're in China to figure out your internet setup.
+
+Install your VPN before departure, test it, have an alternative connection method, and you'll have a much easier trip.
+
+> **Planning your China trip?**
+>
+> Don't wait until you land to solve your internet setup.
+>
+> **[Check ExpressVPN](/go/expressvpn)**
+> **[See the Best eSIM Options for China](/best-esim-for-china-travel/)**
 
 **Bottom line:** Don't wait until you're in China to figure out your internet setup.
 
