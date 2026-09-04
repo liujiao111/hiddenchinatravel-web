@@ -216,18 +216,18 @@ If you're visiting China for a few days or a few weeks and simply want a relativ
 
 You don't need to assume it will work perfectly on every network. The important thing is to install it, log in, and test it before your trip.
 
-> **My current VPN for China**
->
-> **ExpressVPN**
->
-> ✓ My current choice
-> ✓ Simple setup
-> ✓ Good overall experience in my use
-> ✓ Suitable for travelers who don't want complicated configuration
->
-> **[Try ExpressVPN](/go/expressvpn)**
->
-> *Install and test it before leaving for China.*
+**My current VPN for China**
+
+**ExpressVPN**
+
+ ✓ My current choice
+ ✓ Simple setup
+ ✓ Good overall experience in my use
+ ✓ Suitable for travelers who don't want complicated configuration
+
+**[Try ExpressVPN](/go/expressvpn)**
+
+ *Install and test it before leaving for China.*
 
 ### Try ExpressVPN
 
