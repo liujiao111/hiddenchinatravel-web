@@ -57,6 +57,12 @@ function isCoverImageSrc(src: string): boolean {
   return /\/cover\.(webp|png|jpe?g)$/i.test(src);
 }
 
+/** Labeled maps / diagrams need article width even when the asset is portrait. */
+function isFullWidthDiagram(src: string, alt: string): boolean {
+  if (isCompactIconSrc(src) || isCoverImageSrc(src)) return false;
+  return /\b(map|diagram|flowchart|infographic)\b/i.test(`${src} ${alt}`);
+}
+
 /** Phone / app UI screenshots → fixed phone frame (not full-bleed photos). */
 function isPhoneScreenshot(src: string, alt: string): boolean {
   if (isCompactIconSrc(src) || isCoverImageSrc(src)) return false;
@@ -107,7 +113,7 @@ async function isLandscapeAsset(src: string): Promise<boolean> {
  *
  * Portrait phone UI → blog-media-shot (narrow phone canvas).
  * Portrait trip photos → blog-media-portrait (full frame, capped width).
- * Landscape UI / photos → blog-media-frame (readable article width).
+ * Landscape UI / photos and labeled maps → blog-media-frame (article width).
  */
 async function wrapBlogImages(markup: string): Promise<string> {
   const tagRe = /<img\b([^>]*)\/?>/gi;
@@ -133,8 +139,8 @@ async function wrapBlogImages(markup: string): Promise<string> {
     if (isCompactIconSrc(src)) {
       return `<span class="blog-media-icon">${full}</span>`;
     }
-    // Wide UI crops must not be squeezed into the phone canvas.
-    if (landscape) {
+    // Wide UI crops and labeled maps must not be squeezed into the phone canvas.
+    if (landscape || isFullWidthDiagram(src, alt)) {
       return `<span class="blog-media-frame">${full}</span>`;
     }
     if (isPhoneScreenshot(src, alt)) {

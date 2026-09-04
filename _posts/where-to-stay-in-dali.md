@@ -4,7 +4,7 @@ seoTitle: "Where to Stay in Dali (2026): Best Areas for First-Time Visitors"
 excerpt: "Dali's best area depends on your pace: convenience in the Ancient Town, quiet mornings on Erhai's west shore, or a slower village stay. Here is how to choose, and what to confirm before you book."
 coverImage: "/brand/destinations/yunnan/route-d2.webp"
 date: "2026-09-03T08:00:00+08:00"
-dateModified: "2026-09-03T08:00:00+08:00"
+dateModified: "2026-09-03T20:00:00+08:00"
 author:
   name: "Joy Liu"
   picture: "/brand/founder/avatar-joy.webp"
@@ -57,6 +57,8 @@ Most people are not actually choosing between five areas. They are choosing betw
 <!-- yunnan-route-check -->
 
 ## Area by area
+
+![Map of stay areas around Erhai in Dali — Ancient Town, Caicun, Xizhou, and Shuanglang](/assets/blog/where-to-stay-in-dali/dali-erhai-stay-map.webp)
 
 | Area | Best for | Trade-off |
 | --- | --- | --- |
