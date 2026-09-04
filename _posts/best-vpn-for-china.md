@@ -653,6 +653,10 @@ First understand whether your trip requires a VPN, an eSIM, or both.
 
 ## FAQ
 
+### Does LetsVPN still work in China in 2026?
+
+I wouldn’t rely on LetsVPN as my primary VPN in China in 2026. It stopped mainland China operations in April 2026, and its later global service restart didn’t restore reliable China support.
+
 ### What is the best VPN for China in 2026?
 
 Right now, **ExpressVPN is my preferred option**. I currently use it and have had a good overall experience. NordVPN is another option I have extensive personal experience with.
