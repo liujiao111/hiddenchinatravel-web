@@ -186,7 +186,7 @@ You don't want your first VPN installation attempt to happen after landing.
 
 If you want to use the VPN I currently use:
 
-[Try ExpressVPN](https://www.expressvpn.com/?utm_source=chatgpt.com)
+[Try ExpressVPN](/go/expressvpn)
 
 ## 2. NordVPN — A VPN I've Used for a Long Time
 
@@ -228,7 +228,7 @@ One important 2026 update: NordVPN says its Obfuscated Servers are being upgrade
 
 ### Try NordVPN
 
-[Try NordVPN](https://nordvpn.com/?utm_source=chatgpt.com)
+[Try NordVPN](/go/nordvpn)
 
 ## ExpressVPN vs NordVPN: Which Would I Pick?
 
