@@ -29,9 +29,9 @@ export const sampleRoutes: SampleRoute[] = [
     intro:
       "A pace we often sketch for independent travelers who want documentary photography and villages — not a staged show circuit. Overnight bases: Chongqing, a rural Xiangxi stretch, Fenghuang, then Zhangjiajie. That fills about 10 days; it is not four tourist-hub cities stacked as a greatest-hits loop. Most days stay self-guided; one or two days can use a local fixer + car around a real market day.",
     imageSrc:
-      "/assets/blog/independent-travel-china/pexels-artemioz-31344746-scaled.webp",
+      "/assets/blog/independent-travel-china/china-high-speed-train-hexie-hao-station.webp",
     imageAlt:
-      "Street scene in China — illustration for a sample independent itinerary, not a client trip photo",
+      "China high-speed train at a station — illustration for a sample independent itinerary, not a client trip photo",
     stops: [
       {
         day: "Days 1–2",

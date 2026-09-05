@@ -4,7 +4,7 @@ seoTitle: "Order Food in China Without a Chinese Number (2026)"
 excerpt: "No Chinese number? Still order food in China: Alipay delivery, Meituan workarounds, QR menu tips, and what to do when apps demand a local phone."
 coverImage: "/assets/blog/order-food-china-without-chinese-number/cover.webp"
 date: "2026-03-31T03:12:50+00:00"
-dateModified: "2026-08-26T08:00:00+00:00"
+dateModified: "2026-09-05T16:00:00+00:00"
 author:
   name: "Joy Liu"
   picture: "/brand/founder/avatar-joy.webp"

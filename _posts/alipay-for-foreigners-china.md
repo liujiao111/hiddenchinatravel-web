@@ -4,7 +4,7 @@ seoTitle: "Alipay for Foreigners 2026: Setup & Foreign Cards"
 excerpt: "Can foreigners use Alipay without a Chinese bank account? Link Visa/Mastercard, finish passport verification, and pay QR codes — 2026 setup that actually works."
 coverImage: "/assets/blog/alipay-for-foreigners-china/cover.webp"
 date: "2026-04-08T09:19:14+00:00"
-dateModified: "2026-08-26T08:00:00+00:00"
+dateModified: "2026-09-05T16:00:00+00:00"
 author:
   name: "Joy Liu"
   picture: "/brand/founder/avatar-joy.webp"
@@ -71,7 +71,7 @@ I spent 45 minutes fumbling through Alipay’s verification flow before a staff 
 
 **Pro tip:** Take the passport photo in natural daylight. Lay your passport flat on a white surface and photograph from directly above. Don’t hold it.
 
-![Alipay passport identity verification screen for foreigners](/assets/blog/alipay-for-foreigners-china/alipay-passport-verification-screen.webp)
+![Foreign passport ready for Alipay identity check](/assets/blog/alipay-for-foreigners-china/foreign-passport-for-identity-check.webp)
 
 ### Step 4: Link Your International Credit or Debit Card
 
@@ -81,7 +81,7 @@ I spent 45 minutes fumbling through Alipay’s verification flow before a staff 
 
 **Pro tip:** Link two cards if you have them. Having a backup prevents you from being stranded if one card hits a daily limit or gets temporarily blocked mid-trip.
 
-![Alipay app screen showing how to add a foreign Visa or Mastercard](/assets/blog/alipay-for-foreigners-china/alipay-link-foreign-visa-mastercard.webp)
+![Visa and Mastercard ready to link for paying in China](/assets/blog/alipay-for-foreigners-china/foreign-visa-and-mastercard.webp)
 
 ### Step 5: Set Your Default Currency and Make Your First Payment
 
@@ -117,7 +117,7 @@ I spent 45 minutes fumbling through Alipay’s verification flow before a staff 
 
 **How to fix it:** For food delivery, use Eleme (limited English interface) or ask your hotel to order for you. For bike-sharing, check if the brand (Meituan Bike, Hello Bike) has its own standalone app. See our guide on [ordering food and managing daily life in China](/order-food-china-without-chinese-number) for more workarounds.
 
-![Map showing Alipay acceptance across major tourist cities in China](/assets/blog/alipay-for-foreigners-china/alipay-acceptance-china-tourist-cities.webp)
+![Nanjing Road in Shanghai, a tourist street where mobile payments are standard](/assets/blog/alipay-for-foreigners-china/shanghai-nanjing-road-tourist-city.webp)
 
 ## Pro Tips: Avoid These Mistakes
 

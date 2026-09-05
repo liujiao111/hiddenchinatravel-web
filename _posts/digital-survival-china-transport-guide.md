@@ -3,7 +3,7 @@ title: "China Transport Guide for Foreigners (2026): Trains, Metro, Taxis & More
 excerpt: "Learn how foreigners can travel around China by high-speed rail, Didi, metro, bus, and taxi in 2026. Train tickets, passport checks, apps, and payment tips explained."
 coverImage: "/assets/blog/digital-survival-china-transport-guide/cover.webp"
 date: "2026-02-23T10:16:19+00:00"
-dateModified: "2026-06-05T13:37:27+00:00"
+dateModified: "2026-09-05T16:00:00+00:00"
 author:
   name: "Joy Liu"
   picture: "/brand/founder/avatar-joy.webp"
