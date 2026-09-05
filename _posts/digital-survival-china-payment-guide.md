@@ -4,7 +4,7 @@ seoTitle: "How to Pay in China 2026: Alipay & WeChat Pay"
 excerpt: "No Chinese bank account? Pay in China with Alipay or WeChat Pay on a foreign Visa/Mastercard — 2026 setup steps, fees, cash backup, and checkout failures."
 coverImage: "/assets/blog/digital-survival-china-payment-guide/cover.webp"
 date: "2026-02-15T09:52:08+00:00"
-dateModified: "2026-08-10T14:00:00+00:00"
+dateModified: "2026-09-05T16:00:00+00:00"
 author:
   name: "Joy Liu"
   picture: "/brand/founder/avatar-joy.webp"
@@ -204,8 +204,6 @@ Save this section. You’ll likely need it at some point.
 
 **The fix:** The **“Pay/Collect” barcode works offline**. As long as your app is open, the merchant can scan you. The transaction will verify once you regain signal, but the merchant receives confirmation instantly.
 
-![emergency cash backup china travel](/assets/blog/digital-survival-china-payment-guide/emergency-cash-backup-china-travel-scaled.webp)
-
 👉 If you keep running into payment errors, this guide breaks down exactly why:
 
 Why Your Payment Fails in China (Alipay & WeChat Pay Fix Guide)
@@ -217,6 +215,8 @@ Technology fails. Batteries die. Here’s your Plan B.
 ### The “200 RMB Cash” Backup
 
 Always keep about **200 RMB in small bills** (10s and 20s) tucked in your phone case. Not sure how much that is in your home currency? Check the live [China currency converter (CNY / RMB)](/china-currency-converter).
+
+![ICBC bank on a Shanghai street, a common place to withdraw emergency RMB cash](/assets/blog/digital-survival-china-payment-guide/emergency-cash-backup-china-travel-scaled.webp)
 
   * **Why small bills?** If you hand a taxi driver a 100 RMB note for a 12 RMB ride, they likely won’t have change
   * **Where to get cash:** Look for ATMs from major banks like **ICBC** or **Bank of China**. They all have an “English” button and accept foreign cards — and expect a worse rate than the mid-market figure on our [yuan exchange converter](/china-currency-converter)

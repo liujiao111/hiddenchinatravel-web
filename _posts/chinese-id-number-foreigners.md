@@ -4,7 +4,7 @@ seoTitle: "Chinese ID vs Passport: What Foreigners Enter (2026)"
 excerpt: "Apps asking for a Chinese ID number and name? Tourists cannot get a 身份证. Switch to 护照, copy your passport photo page, and never borrow someone else’s ID."
 coverImage: "/assets/blog/chinese-id-number-foreigners/cover.webp"
 date: "2026-08-26T08:00:00+00:00"
-dateModified: "2026-08-26T12:00:00+00:00"
+dateModified: "2026-09-05T16:00:00+00:00"
 author:
   name: "Joy Liu"
   picture: "/assets/blog/authors/joy-liu.jpg"
@@ -108,7 +108,7 @@ You walked into the local entrance. Foreigners are supposed to go **Foreigner �
 4. Linking a Visa or Mastercard comes after identity. That is a card check, not an ID check.
 5. Still “verification failed” after a real passport scan? Stop and use the [verification failed guide](/alipay-wechat-pay-verification-failed). Do not invent an ID to get through.
 
-![Alipay passport identity verification screen for foreigners](/assets/blog/alipay-for-foreigners-china/alipay-passport-verification-screen.webp "Alipay foreigner path uses a passport scan, not 身份证")
+![Foreign passport ready for Alipay identity check](/assets/blog/alipay-for-foreigners-china/foreign-passport-for-identity-check.webp "Alipay foreigner path uses a passport scan, not 身份证")
 
 The full setup — download, card, what usually breaks — is in [Alipay for foreigners](/alipay-for-foreigners-china). WeChat Pay is the same idea, just clumsier: [WeChat Pay for foreigners](/wechat-pay-for-foreigners-china).
 

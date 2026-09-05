@@ -4,7 +4,7 @@ seoTitle: "Why Payment Fails in China (2026): 8 Fixes"
 excerpt: "Alipay or WeChat Pay failing in China? Eight usual causes for foreigners — card limits, verification, network, merchant QR — and how to fix them fast."
 coverImage: "/assets/blog/why-your-payment-fails-in-china/cover.webp"
 date: "2026-04-20T09:30:36+00:00"
-dateModified: "2026-08-10T14:00:00+00:00"
+dateModified: "2026-09-05T16:00:00+00:00"
 author:
   name: "Joy Liu"
   picture: "/brand/founder/avatar-joy.webp"

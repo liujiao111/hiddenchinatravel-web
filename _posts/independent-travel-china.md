@@ -4,7 +4,7 @@ seoTitle: "Independent Travel in China 2026: Apps & Payments"
 excerpt: "Can foreigners travel China independently in 2026? What changes: Alipay, local apps, hotels, transport — and the prep that prevents day-one chaos."
 coverImage: "/assets/blog/independent-travel-china/cover.webp"
 date: "2026-02-14T05:25:19+00:00"
-dateModified: "2026-08-23T12:00:00+00:00"
+dateModified: "2026-09-05T16:00:00+00:00"
 author:
   name: "Joy Liu"
   picture: "/brand/founder/avatar-joy.webp"
@@ -56,7 +56,7 @@ Take China’s high-speed rail network, for example. It connects nearly every ma
 
 You’ll also find several online platforms where international visitors can book hotels and transportation in advance—with support for foreign passports and international payment methods.
 
-![Modern Chinese high-speed train at busy station](/assets/blog/independent-travel-china/pexels-artemioz-31344746-scaled.webp)
+![China Railway CRH Harmony high-speed train at a station platform](/assets/blog/independent-travel-china/china-high-speed-train-hexie-hao-station.webp)
 
 ## Why China Feels Difficult From the Outside
 
@@ -68,7 +68,7 @@ China leapfrogged into mobile payments faster than almost anywhere else. Cash ha
 
 China moved very quickly into mobile payments, which can surprise first-time visitors. Most shops and restaurants accept mobile payments. Learn more about setting up [Alipay](https://www.alipay.com/) or [WeChat Pay](https://www.wechat.com/en/) to ensure smooth transactions during your trip.
 
-![pexels julio lopez 75309646 29502369](/assets/blog/independent-travel-china/pexels-julio-lopez-75309646-29502369-scaled.webp)
+![Shopper scanning a product label in a Chinese grocery](/assets/blog/independent-travel-china/china-grocery-scan-mobile-payments.webp)
 
 ### 2\. English Isn’t Always Widely Spoken
 

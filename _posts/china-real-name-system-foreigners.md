@@ -4,7 +4,7 @@ seoTitle: "China Real-Name System 2026: Why Passports Fail"
 excerpt: "Why foreign passports fail China’s real-name system for SIMs, hotels, and apps — and the sequence that avoids silent registration blocks in 2026."
 coverImage: "/assets/blog/china-real-name-system-foreigners/cover.webp"
 date: "2026-03-23T09:38:03+00:00"
-dateModified: "2026-08-26T11:00:00+00:00"
+dateModified: "2026-09-05T16:00:00+00:00"
 author:
   name: "Joy Liu"
   picture: "/brand/founder/avatar-joy.webp"
@@ -28,7 +28,7 @@ Stuck on a screen that only wants **姓名** and **身份证号码**? What to ty
 
 ## Quick Answer: Why Foreigners Get Blocked (Even When Everything Is Correct)
 
-![Foreigner facing verification failure on phone in China real-name system](/assets/blog/china-real-name-system-foreigners/image.webp)
+![Foreign passports prepared for China's real-name registration](/assets/blog/china-real-name-system-foreigners/foreign-passports-for-real-name-registration.webp)
 
 China’s real-name system was built from the ground up around one document: the Chinese national ID card (身份证). Every carrier system, every app backend, every payment platform was designed to verify _that_ specific format — 18 digits, all numeric, cross-checked against a national database in real time.
 
