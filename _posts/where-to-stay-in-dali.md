@@ -4,7 +4,7 @@ seoTitle: "Where to Stay in Dali (2026): Best Areas for First-Time Visitors"
 excerpt: "Dali's best area depends on your pace: convenience in the Ancient Town, quiet mornings on Erhai's west shore, or a slower village stay. Here is how to choose, and what to confirm before you book."
 coverImage: "/brand/destinations/yunnan/route-d2.webp"
 date: "2026-09-03T08:00:00+08:00"
-dateModified: "2026-09-04T21:30:00+08:00"
+dateModified: "2026-09-05T10:00:00+08:00"
 author:
   name: "Joy Liu"
   picture: "/brand/founder/avatar-joy.webp"
@@ -46,6 +46,8 @@ Most people are not actually choosing between five areas. They are choosing betw
 - This is your first trip to Dali and you do not want a transport puzzle
 - You are staying two or three nights total
 
+![Pedestrian street in Dali Ancient Town with shops, visitors, and Cangshan in cloud](/assets/blog/where-to-stay-in-dali/dali-ancient-town-street.webp "Dali Ancient Town")
+
 **Choose Erhai's west shore (Caicun and nearby villages) if:**
 
 - A quiet lake view in the morning matters more than convenience
@@ -66,6 +68,8 @@ Most people are not actually choosing between five areas. They are choosing betw
 | **Xizhou** | A slower, more local-feeling stay among working villages | Fewer restaurant and shop options right outside your door |
 | **Shuanglang / east shore** | Open lake views, a more resort-style stay | An hour or more from Dali by road, more in peak-season traffic — better as a deliberate stay than a quick stop |
 
+![Stone lane in Xizhou Old Town with Bai-style houses and visitors walking](/assets/blog/where-to-stay-in-dali/xizhou-old-town-street.webp "Xizhou Old Town")
+
 Nightly prices in Dali move a lot with season and holidays. As a rough starting point: budget guesthouses in the Ancient Town or Xiaguan often fall in the **$20–45** range, and boutique lakeside or design-forward stays can run **$40–90+**. Treat any number here as a planning range, not a quote — confirm the current rate for your dates before booking.
 
 ### Where I stayed in the Ancient Town
@@ -83,6 +87,8 @@ _Disclosure: this article contains affiliate links to Trip.com for two propertie
 By Erhai, I stayed at [Dali Panshan Tinghai Homestay](/go/dali-panshan-tinghai-homestay) (大理畔山听海民宿), a small guesthouse near Caicun and the ecological corridor. Its Trip.com listing also shows guests from all countries and regions are welcome — again, worth checking for any specific property rather than assuming. The listing also states the guest checking in must be between 18 and 60 years old, so it is not the right fit for every traveler — confirm directly with the property if that could be an issue for your group.
 
 ### What to know about Erhai and the west shore
+
+![Lakeside stretch of the Caicun ecological corridor on Erhai, with a performer on the shore](/assets/blog/where-to-stay-in-dali/caicun-ecological-corridor.webp "Caicun ecological corridor")
 
 The lakeside ecological corridor near Caicun is closed to private cars and to ordinary rented scooters and shared e-bikes. Inside the corridor, you use the operator's own bicycles, assisted bikes, or the sightseeing electric shuttle. A car or scooter still gets you to a village entrance near the corridor — it just cannot follow the lakeside path itself. Keep this in mind if a guesthouse's photos show the shoreline right outside the door; check how far the actual walk or ride is from where a car can drop you.
 
