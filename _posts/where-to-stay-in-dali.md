@@ -4,7 +4,7 @@ seoTitle: "Where to Stay in Dali (2026): Best Areas for First-Time Visitors"
 excerpt: "Dali's best area depends on your pace: convenience in the Ancient Town, quiet mornings on Erhai's west shore, or a slower village stay. Here is how to choose, and what to confirm before you book."
 coverImage: "/brand/destinations/yunnan/route-d2.webp"
 date: "2026-09-03T08:00:00+08:00"
-dateModified: "2026-09-03T08:00:00+08:00"
+dateModified: "2026-09-04T21:30:00+08:00"
 author:
   name: "Joy Liu"
   picture: "/brand/founder/avatar-joy.webp"
@@ -70,11 +70,15 @@ Nightly prices in Dali move a lot with season and holidays. As a rough starting 
 
 ### Where I stayed in the Ancient Town
 
+![Courtyard pool at Dali Blue Habitat Inn, with Bai-style white walls and tiled roofs around a blue swimming pool](/assets/blog/where-to-stay-in-dali/blue-habitat-inn-courtyard.webp "Courtyard at Dali Blue Habitat Inn")
+
 I stayed at [Dali Blue Habitat Inn](/go/dali-blue-habitat-inn) (大理蓝栖客栈, south gate branch), about 600 metres from the south gate. Its Trip.com listing states guests from all countries and regions are welcome — worth confirming for any guesthouse, since not every property in the area can say the same. The property offers pickup within a few kilometres of the old town; mine was free, but the listing also shows it as a paid add-on, so confirm the current terms and cost with the property before you rely on it.
 
 _Disclosure: this article contains affiliate links to Trip.com for two properties I have stayed at myself. If you book through them, I may earn a small commission at no extra cost to you._
 
 ### Where I stayed by the lake
+
+![Room balcony at Dali Panshan Tinghai Homestay looking over rooftops toward Erhai Lake and the mountains](/assets/blog/where-to-stay-in-dali/panshan-tinghai-erhai-balcony.webp "Erhai view from Dali Panshan Tinghai Homestay")
 
 By Erhai, I stayed at [Dali Panshan Tinghai Homestay](/go/dali-panshan-tinghai-homestay) (大理畔山听海民宿), a small guesthouse near Caicun and the ecological corridor. Its Trip.com listing also shows guests from all countries and regions are welcome — again, worth checking for any specific property rather than assuming. The listing also states the guest checking in must be between 18 and 60 years old, so it is not the right fit for every traveler — confirm directly with the property if that could be an issue for your group.
 
