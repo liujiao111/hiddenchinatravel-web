@@ -4,7 +4,6 @@ import { HomePrepBuyMenu } from "@/app/_components/home/home-prep-buy-menu";
 import type { PrepBuyMenu } from "@/lib/home/prep-content";
 import { trackEvent } from "@/lib/survival-kit/track";
 import type { KitPrepCardData } from "@/lib/survival-kit/types";
-import { KitIcon } from "./kit-icon";
 import { KitTrackedLink } from "./kit-tracked-link";
 
 type Props = {
@@ -21,11 +20,11 @@ function buyButtonLabel(title: string): string {
 }
 
 function toBuyMenu(card: KitPrepCardData): PrepBuyMenu | null {
-  if (card.options.length < 2) return null;
+  const options = card.options.filter((option) => option.primaryCta);
+  if (options.length < 2) return null;
 
   const guideCta =
-    card.footerGuide ??
-    card.options.find((o) => o.secondaryCta)?.secondaryCta;
+    card.footerGuide ?? options.find((o) => o.secondaryCta)?.secondaryCta;
   if (!guideCta) return null;
 
   return {
@@ -33,10 +32,10 @@ function toBuyMenu(card: KitPrepCardData): PrepBuyMenu | null {
     chooseHint:
       "Choose the option that fits your trip. Some product links are affiliate.",
     guide: { label: guideCta.label, href: guideCta.href },
-    options: card.options.map((option) => ({
+    options: options.map((option) => ({
       label: option.name,
-      href: option.primaryCta.href,
-      external: option.primaryCta.external,
+      href: option.primaryCta!.href,
+      external: option.primaryCta!.external,
       hint: option.badge,
     })),
   };
@@ -50,7 +49,7 @@ function OptionLogo({ src, name }: { src: string; name: string }) {
       alt=""
       width={28}
       height={28}
-      className="h-7 w-7 shrink-0 rounded-[0.55rem] object-cover shadow-sm ring-1 ring-[color-mix(in_srgb,var(--brand-cream-border)_55%,transparent)]"
+      className="h-7 w-7 shrink-0 rounded-[0.55rem] object-cover ring-1 ring-[var(--brand-border-subtle)]"
       aria-hidden
       data-app={name}
     />
@@ -73,7 +72,7 @@ function OptionHeading({
         {name}
       </p>
       {badge ? (
-        <span className="rounded-2xl border border-[color-mix(in_srgb,var(--brand-cream-border)_45%,transparent)] bg-[var(--brand-soft)] px-1.5 py-0.5 text-[10px] font-normal uppercase tracking-[0.14em] text-[var(--brand-muted)]">
+        <span className="rounded-full bg-[var(--brand-soft)] px-2 py-0.5 text-[10px] font-bold uppercase tracking-[0.14em] text-[var(--brand-muted)]">
           {badge}
         </span>
       ) : null}
@@ -85,24 +84,17 @@ export function KitPrepCard({ card }: Props) {
   const buyMenu = !card.comingSoon ? toBuyMenu(card) : null;
 
   return (
-    <article className="surface-card overflow-visible p-6 md:p-7">
-      <div className="surface-card-bar" aria-hidden />
-      <div className="mb-4 flex items-center gap-2.5">
-        <span className="flex h-8 w-8 items-center justify-center rounded-full bg-[var(--brand-soft)] text-[var(--brand-cta)]">
-          <KitIcon name={card.icon} className="h-3.5 w-3.5" />
-        </span>
-        <span className="surface-card-label">Prep</span>
-      </div>
-      <h3 className="mb-2 line-clamp-2 text-lg font-bold leading-snug tracking-tight text-[var(--brand-ink)] md:text-xl">
+    <article className="surface-card overflow-visible p-5 md:p-6">
+      <h3 className="mb-2 text-base font-bold leading-snug tracking-tight text-[var(--brand-ink)] md:text-lg">
         {card.title}
       </h3>
-      <p className="mb-5 line-clamp-2 text-sm font-normal leading-relaxed text-[var(--brand-ink-muted)]">
-        {card.anxiety}
+      <p className="mb-5 text-sm font-normal leading-relaxed text-[var(--brand-ink-muted)]">
+        {card.note}
       </p>
 
       {card.comingSoon ? (
-        <div className="mt-auto border-t border-[color-mix(in_srgb,var(--brand-cream-border)_35%,transparent)] pt-4">
-          <p className="text-[11px] font-normal uppercase tracking-[0.16em] text-[var(--brand-warm)]">
+        <div className="mt-auto border-t border-[var(--brand-border-subtle)] pt-4">
+          <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-[var(--brand-mango)]">
             Coming soon
           </p>
           {card.comingSoonNote ? (
@@ -113,7 +105,7 @@ export function KitPrepCard({ card }: Props) {
         </div>
       ) : buyMenu ? (
         <>
-          <ul className="mb-4 flex flex-1 flex-col divide-y divide-[color-mix(in_srgb,var(--brand-cream-border)_35%,transparent)] border-t border-[color-mix(in_srgb,var(--brand-cream-border)_35%,transparent)]">
+          <ul className="mb-4 flex flex-1 flex-col divide-y divide-[var(--brand-border-subtle)] border-t border-[var(--brand-border-subtle)]">
             {card.options.map((option) => (
               <li key={option.name} className="py-3 first:pt-4 last:pb-0">
                 <OptionHeading
@@ -121,19 +113,21 @@ export function KitPrepCard({ card }: Props) {
                   badge={option.badge}
                   logoSrc={option.logoSrc}
                 />
-                <p className="text-xs font-normal leading-relaxed text-[var(--brand-muted)] md:text-[13px]">
+                <p className="text-[13px] font-normal leading-relaxed text-[var(--brand-muted)]">
                   {option.diff}
                 </p>
               </li>
             ))}
           </ul>
 
-          <div className="mt-auto border-t border-[color-mix(in_srgb,var(--brand-cream-border)_35%,transparent)] pt-4">
+          <div className="mt-auto max-w-sm border-t border-[var(--brand-border-subtle)] pt-4">
             <HomePrepBuyMenu
               menu={buyMenu}
               onOptionClick={(option) => {
-                const matched = card.options.find((o) => o.name === option.label);
-                if (!matched) return;
+                const matched = card.options.find(
+                  (o) => o.name === option.label,
+                );
+                if (!matched?.primaryCta) return;
                 trackEvent("cta_click", {
                   module: matched.primaryCta.trackingModule,
                   label: matched.primaryCta.label,
@@ -146,7 +140,7 @@ export function KitPrepCard({ card }: Props) {
         </>
       ) : (
         <>
-          <ul className="mb-4 flex flex-1 flex-col divide-y divide-[color-mix(in_srgb,var(--brand-cream-border)_35%,transparent)] border-t border-[color-mix(in_srgb,var(--brand-cream-border)_35%,transparent)]">
+          <ul className="mb-4 flex flex-1 flex-col divide-y divide-[var(--brand-border-subtle)] border-t border-[var(--brand-border-subtle)]">
             {card.options.map((option) => (
               <li
                 key={option.name}
@@ -158,26 +152,30 @@ export function KitPrepCard({ card }: Props) {
                     badge={option.badge}
                     logoSrc={option.logoSrc}
                   />
-                  <p className="text-xs font-normal leading-relaxed text-[var(--brand-muted)] md:text-[13px]">
+                  <p className="text-[13px] font-normal leading-relaxed text-[var(--brand-muted)]">
                     {option.diff}
                   </p>
                 </div>
-                <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:gap-4">
-                  <KitTrackedLink
-                    cta={option.primaryCta}
-                    variant="primary"
-                    className="w-full px-4 py-2.5 text-sm sm:w-auto"
-                  />
-                  {option.secondaryCta ? (
-                    <KitTrackedLink cta={option.secondaryCta} variant="text" />
-                  ) : null}
-                </div>
+                {option.primaryCta || option.secondaryCta ? (
+                  <div className="flex flex-wrap items-center gap-x-5 gap-y-2.5">
+                    {option.primaryCta ? (
+                      <KitTrackedLink
+                        cta={option.primaryCta}
+                        variant="primary"
+                        className="px-4 py-2.5 text-sm"
+                      />
+                    ) : null}
+                    {option.secondaryCta ? (
+                      <KitTrackedLink cta={option.secondaryCta} variant="text" />
+                    ) : null}
+                  </div>
+                ) : null}
               </li>
             ))}
           </ul>
 
           {card.footerGuide ? (
-            <div className="mt-auto border-t border-[color-mix(in_srgb,var(--brand-cream-border)_35%,transparent)] pt-4">
+            <div className="mt-auto border-t border-[var(--brand-border-subtle)] pt-4">
               <KitTrackedLink cta={card.footerGuide} variant="text" />
             </div>
           ) : null}

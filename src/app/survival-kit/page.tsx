@@ -4,7 +4,6 @@ import { KitHero } from "@/components/survival-kit/kit-hero";
 import { KitPlannerCtaBand } from "@/components/survival-kit/kit-planner-cta-band";
 import { KitPracticalSection } from "@/components/survival-kit/kit-practical-section";
 import { KitPrepSection } from "@/components/survival-kit/kit-prep-section";
-import { KitSocialProof } from "@/components/survival-kit/kit-social-proof";
 import { KitStickyCta } from "@/components/survival-kit/kit-sticky-cta";
 import {
   kitBookingSection,
@@ -66,21 +65,18 @@ export default function SurvivalKitPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(kitJsonLd()) }}
       />
+      <KitHero />
       <Container>
-        <div className="pt-8 md:pt-12">
-          <KitHero />
-          <KitPrepSection section={kitVisaPrepSection} />
-          <KitPrepSection section={kitNetworkSection} />
-          <KitPrepSection section={kitPaymentSection} />
-          <KitPrepSection section={kitMapsSection} />
-          <KitPrepSection section={kitBookingSection} />
-          <KitPrepSection section={kitInsuranceSection} />
-          <KitPracticalSection />
-          <div className="border-b border-[color-mix(in_srgb,var(--brand-cream-border)_40%,transparent)] py-10 md:py-12">
-            <KitPlannerCtaBand />
-          </div>
-          <KitArrivalChecklist />
-          <KitSocialProof />
+        <KitPrepSection section={kitVisaPrepSection} />
+        <KitPrepSection section={kitNetworkSection} />
+        <KitPrepSection section={kitPaymentSection} />
+        <KitPrepSection section={kitMapsSection} />
+        <KitPrepSection section={kitBookingSection} />
+        <KitPrepSection section={kitInsuranceSection} />
+        <KitPracticalSection />
+        <KitArrivalChecklist />
+        <div className="pb-14 md:pb-20">
+          <KitPlannerCtaBand />
         </div>
       </Container>
       <KitStickyCta />

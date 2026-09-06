@@ -1,4 +1,5 @@
 import { KitPrepCard } from "./kit-prep-card";
+import { KitSectionRail } from "./kit-section-rail";
 import type { KitPrepSectionData } from "@/lib/survival-kit/types";
 
 type Props = {
@@ -10,25 +11,20 @@ export function KitPrepSection({ section }: Props) {
     <section
       id={section.id}
       aria-labelledby={`${section.id}-heading`}
-      className="scroll-mt-28 border-b border-[color-mix(in_srgb,var(--brand-cream-border)_40%,transparent)] pb-16 pt-10 md:pb-20 md:pt-12"
+      className="scroll-mt-24 border-b border-[var(--brand-border-subtle)] py-12 md:grid md:grid-cols-[minmax(0,15rem)_minmax(0,1fr)] md:gap-12 md:py-16 lg:gap-16"
     >
-      <p className="mb-3 text-[11px] font-normal uppercase tracking-[0.18em] text-[var(--brand-warm)]">
-        {section.eyebrow}
-      </p>
-      <h2
-        id={`${section.id}-heading`}
-        className="mb-3 max-w-2xl text-xl font-bold tracking-wide text-[var(--brand-ink)] md:text-3xl"
-      >
-        {section.title}
-      </h2>
-      <p className="mb-8 max-w-2xl text-sm font-normal leading-relaxed text-[var(--brand-ink-muted)] md:mb-10 md:text-base">
-        {section.intro}
-      </p>
+      <KitSectionRail
+        step={section.step}
+        eyebrow={section.eyebrow}
+        title={section.title}
+        intro={section.intro}
+        headingId={`${section.id}-heading`}
+      />
       <div
         className={
-          section.cards.length === 1
-            ? "grid max-w-xl gap-4"
-            : "grid gap-4 md:grid-cols-2 md:gap-5"
+          section.cards.length > 1
+            ? "grid gap-4 lg:grid-cols-2 lg:gap-5"
+            : "grid gap-4"
         }
       >
         {section.cards.map((card) => (
