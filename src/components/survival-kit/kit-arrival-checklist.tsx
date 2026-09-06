@@ -84,7 +84,7 @@ export function KitArrivalChecklist() {
                 : "\u2026"}
             </p>
             <div
-              className="h-1.5 w-full overflow-hidden rounded-full bg-[var(--brand-soft)] md:w-44"
+              className="h-1.5 w-full overflow-hidden rounded-full bg-[var(--brand-border-subtle)] md:w-44"
               aria-hidden
             >
               <div

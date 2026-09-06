@@ -21,6 +21,10 @@ export function KitHero() {
           aria-hidden
           className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[rgba(16,12,10,0.92)] via-[rgba(16,12,10,0.72)] to-[rgba(16,12,10,0.28)]"
         />
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[rgba(16,12,10,0.7)] via-[rgba(16,12,10,0.25)] to-transparent"
+        />
         <div className="relative w-full pb-10 pt-24 md:pb-14 md:pt-32">
           <Container>
             <p className="mb-3 text-xs font-bold uppercase tracking-[0.18em] text-[var(--brand-mango)]">
