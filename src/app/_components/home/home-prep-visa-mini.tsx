@@ -1,6 +1,10 @@
 "use client";
 
 import { FancySelect } from "@/app/china-visa-checker/_components/fancy-select";
+import {
+  trackEvent,
+  VISA_CHECKER_SUBMIT_EVENT,
+} from "@/lib/analytics/track";
 import { useQuickVisaLookup } from "@/lib/home/use-quick-visa-lookup";
 import {
   evaluateQuickVisa,
@@ -46,7 +50,22 @@ export function HomePrepVisaMini({ lookup: initialLookup }: Props) {
         value={country}
         options={lookup.countries}
         searchable
-        onChange={setCountry}
+        onChange={(next) => {
+          setCountry(next);
+          if (!next || next === country) return;
+          const quick = evaluateQuickVisa(next, lookup);
+          trackEvent(VISA_CHECKER_SUBMIT_EVENT, {
+            source: "home",
+            complete: true,
+            nationality: next,
+            outcome:
+              quick.status === "visa-free"
+                ? "visa_free"
+                : quick.status === "transit-only"
+                  ? "transit_240"
+                  : "visa_required",
+          });
+        }}
       />
 
       {result.status === "visa-free" ? (

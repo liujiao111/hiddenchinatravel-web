@@ -16,7 +16,11 @@ import {
   type ExchangeRatesPayload,
   type ExchangeRatesResult,
 } from "@/lib/currency-converter/get-rates";
-import { useMemo, useState, useTransition } from "react";
+import { useMemo, useRef, useState, useTransition } from "react";
+import {
+  CURRENCY_CONVERTER_USE_EVENT,
+  trackEvent,
+} from "@/lib/analytics/track";
 import { CurrencySelect } from "./currency-select";
 
 type Props = {
@@ -43,10 +47,25 @@ export function CurrencyConverterTool({ initialRates }: Props) {
   const [amountRaw, setAmountRaw] = useState("100");
   const [isPending, startTransition] = useTransition();
   const [refreshError, setRefreshError] = useState<string | null>(null);
+  const hasTrackedUse = useRef(false);
 
   const amount = parseAmount(amountRaw);
   const live = rates.ok ? rates : null;
   const foreign = pairForeign(from, to);
+
+  function markUsed(
+    action: "amount" | "currency" | "swap" | "refresh",
+    nextFrom = from,
+    nextTo = to,
+  ) {
+    if (hasTrackedUse.current) return;
+    hasTrackedUse.current = true;
+    trackEvent(CURRENCY_CONVERTER_USE_EVENT, {
+      action,
+      from_currency: nextFrom,
+      to_currency: nextTo,
+    });
+  }
 
   const converted = useMemo(() => {
     if (!live || !Number.isFinite(amount)) return NaN;
@@ -59,11 +78,13 @@ export function CurrencyConverterTool({ initialRates }: Props) {
       : NaN;
 
   function swap() {
+    markUsed("swap", to, from);
     setFrom(to);
     setTo(from);
   }
 
   function refresh() {
+    markUsed("refresh");
     setRefreshError(null);
     startTransition(async () => {
       try {
@@ -132,9 +153,15 @@ export function CurrencyConverterTool({ initialRates }: Props) {
           id="amount-from"
           label="Amount"
           amountRaw={amountRaw}
-          onAmountChange={setAmountRaw}
+          onAmountChange={(v) => {
+            setAmountRaw(v);
+            if (v !== "100") markUsed("amount");
+          }}
           currency={from}
-          onCurrencyChange={setFrom}
+          onCurrencyChange={(code) => {
+            markUsed("currency", code, to);
+            setFrom(code);
+          }}
         />
         <button
           type="button"
@@ -152,7 +179,10 @@ export function CurrencyConverterTool({ initialRates }: Props) {
           }
           onAmountChange={() => undefined}
           currency={to}
-          onCurrencyChange={setTo}
+          onCurrencyChange={(code) => {
+            markUsed("currency", from, code);
+            setTo(code);
+          }}
           readOnly
         />
       </div>

@@ -2,6 +2,10 @@
 
 import { useCallback, useMemo, useState } from "react";
 import cn from "classnames";
+import {
+  trackEvent,
+  VISA_CHECKER_SUBMIT_EVENT,
+} from "@/lib/analytics/track";
 import { checkVisaEligibility } from "../actions";
 import type { VisaEvaluationResult } from "@/lib/visa-checker/evaluate";
 import type { SelectOption } from "@/lib/visa-checker/load-rules";
@@ -60,6 +64,12 @@ export function VisaCheckerTool({ countryOptions, portOptions }: Props) {
 
     if (!isComplete) {
       setShowValidation(true);
+      trackEvent(VISA_CHECKER_SUBMIT_EVENT, {
+        source: "full",
+        complete: false,
+        nationality: values.nationality || "(empty)",
+        purpose: values.purpose || "(empty)",
+      });
       return;
     }
 
@@ -76,6 +86,15 @@ export function VisaCheckerTool({ countryOptions, portOptions }: Props) {
         portId: values.portId,
       });
       setResult(evaluation);
+      trackEvent(VISA_CHECKER_SUBMIT_EVENT, {
+        source: "full",
+        complete: true,
+        nationality: values.nationality,
+        purpose: values.purpose,
+        stay_days: Number(values.stayDays),
+        transit_route: values.transitRoute,
+        outcome: evaluation.outcome,
+      });
       window.requestAnimationFrame(() => {
         document
           .getElementById("visa-result")
