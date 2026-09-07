@@ -5,41 +5,6 @@ export type KitCta = {
   trackingModule: string;
 };
 
-export type KitIconName =
-  | "esim"
-  | "signal"
-  | "alipay"
-  | "wallet"
-  | "vpn"
-  | "shield"
-  | "guide"
-  | "hotel"
-  | "train"
-  | "ticket"
-  | "flight"
-  | "map"
-  | "visa"
-  | "insurance";
-
-export type KitToolCardData = {
-  kind: "tool" | "guide";
-  icon: KitIconName;
-  title: string;
-  description: string;
-  primaryCta: KitCta;
-  secondaryLink?: KitCta;
-  coverImage?: string;
-  coverAlt?: string;
-};
-
-export type KitSectionData = {
-  id: string;
-  eyebrow: string;
-  title: string;
-  intro: string;
-  cards: KitToolCardData[];
-};
-
 /** Prep checklist card — one topic, optional product options */
 export type KitProductOption = {
   name: string;
@@ -48,15 +13,15 @@ export type KitProductOption = {
   badge?: string;
   /** Official / brand app icon under /assets/survival-kit/apps/ */
   logoSrc?: string;
-  primaryCta: KitCta;
+  /** Omit for options that are advice rather than something to click through to. */
+  primaryCta?: KitCta;
   secondaryCta?: KitCta;
 };
 
 export type KitPrepCardData = {
-  icon: KitIconName;
   title: string;
-  /** Short “why set this up before you land” copy */
-  anxiety: string;
+  /** One concrete thing worth knowing before you set this up */
+  note: string;
   options: KitProductOption[];
   footerGuide?: KitCta;
   /** When true, hide buy CTAs and show a coming-soon note */
@@ -66,29 +31,17 @@ export type KitPrepCardData = {
 
 export type KitPrepSectionData = {
   id: string;
+  /** Step number shown in the section rail, e.g. "01" */
+  step: string;
   eyebrow: string;
   title: string;
   intro: string;
   cards: KitPrepCardData[];
 };
 
-export type KitBookingCardData = {
-  icon: KitIconName;
-  title: string;
-  description: string;
-  primaryCta: KitCta;
-  guideLink: KitCta;
-};
-
 export type KitChecklistItem = {
   id: string;
   label: string;
-};
-
-export type KitTestimonial = {
-  quote: string;
-  name: string;
-  meta: string;
 };
 
 export type KitQuickNavItem = {
@@ -112,6 +65,7 @@ export type KitFactRow = {
 
 export type KitPracticalSectionData = {
   id: string;
+  step: string;
   eyebrow: string;
   title: string;
   intro: string;

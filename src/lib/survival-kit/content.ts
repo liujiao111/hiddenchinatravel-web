@@ -3,7 +3,6 @@ import type {
   KitPracticalSectionData,
   KitPrepSectionData,
   KitQuickNavItem,
-  KitTestimonial,
 } from "./types";
 
 /** Pretty affiliate short links — keep in sync with /go/[slug] CSV. */
@@ -27,13 +26,33 @@ export const kitPageMeta = {
 
 export const kitHero = {
   eyebrow: "China trip prep checklist",
-  title: "One checklist to prepare your China trip",
+  title: "What to set up before you fly to China",
   subtitle:
-    "Seven calm steps — visa, network, payments, maps, bookings, insurance, and practical basics — so arrival day is ready, not chaotic.",
-  painPoints: [
-    "Google, Instagram & WhatsApp often fail on mainland connections",
-    "Most everyday payments expect Alipay or WeChat Pay — not cash",
-    "Uber and Google Maps are unreliable for real on-the-ground travel",
+    "Six things worth sorting out at home — visa path, mobile data, a QR wallet, Amap, bookings, insurance — plus the emergency numbers and everyday rules worth saving offline.",
+  image: {
+    src: "/assets/blog/independent-travel-china/cover.webp",
+    alt: "Travellers crossing the concourse at Chengdu East Railway Station at dusk",
+  },
+  primaryCta: { label: "Start with the visa step", href: "#section-visa" },
+  secondaryCta: { label: "Jump to the checklist", href: "#section-checklist" },
+};
+
+/** Three things that break on arrival if nothing was prepared. */
+export const kitDayOne = {
+  title: "Why this is worth doing before you board",
+  items: [
+    {
+      title: "Your usual apps stop loading",
+      body: "Google, Gmail, Instagram and WhatsApp do not work on a normal mainland connection. A VPN has to be installed and signed into before you get there.",
+    },
+    {
+      title: "Checkout assumes a QR wallet",
+      body: "Cash is still legal and small vendors will take it — you will just be the only person paying that way. Alipay or WeChat Pay is the default everywhere else.",
+    },
+    {
+      title: "Google Maps points at the wrong door",
+      body: "Mainland pins sit offset from the real entrance and listings go stale. Uber does not operate here either; Amap is what drivers and locals use.",
+    },
   ],
 };
 
@@ -50,16 +69,15 @@ export const kitQuickNav: KitQuickNavItem[] = [
 /** Step 1 · Visa */
 export const kitVisaPrepSection: KitPrepSectionData = {
   id: "section-visa",
-  eyebrow: "Step 1 · Visa",
+  step: "01",
+  eyebrow: "Visa",
   title: "Check whether you need a China visa",
   intro:
     "Confirm your entry path first. If you qualify for visa-free travel, you can skip the rest of this step. If not, check the rules before you book non-refundable tickets.",
   cards: [
     {
-      icon: "visa",
       title: "Likely visa-free?",
-      anxiety:
-        "Many passports now qualify for short visa-free stays — but assuming it without checking is a common day-one failure.",
+      note: "The visa-free list has been expanded several times since 2024, and it follows the passport you travel on rather than where you live.",
       options: [
         {
           name: "Confirm with the visa checker",
@@ -78,10 +96,8 @@ export const kitVisaPrepSection: KitPrepSectionData = {
       ],
     },
     {
-      icon: "guide",
       title: "Need a tourist visa?",
-      anxiety:
-        "Wrong assumptions about visas waste weeks. Check the tool and guides before you apply or book flights.",
+      note: "Apply before you buy non-refundable flights. Processing times are set by the visa centre handling your application, so they vary by country.",
       options: [
         {
           name: "See application rules",
@@ -110,16 +126,15 @@ export const kitVisaPrepSection: KitPrepSectionData = {
 /** Step 2 · Network */
 export const kitNetworkSection: KitPrepSectionData = {
   id: "section-network",
-  eyebrow: "Step 2 · Network",
+  step: "02",
+  eyebrow: "Network",
   title: "Get online before you land",
   intro:
-    "Without working data and a backup for blocked apps, maps, messages, and payments stall on day one. Set this up at home — not on airport Wi-Fi.",
+    "Airport and hotel Wi-Fi usually wants an SMS code sent to a Chinese number, which you will not have yet. Buy the data plan and install the VPN while you still have your home connection.",
   cards: [
     {
-      icon: "esim",
       title: "China travel eSIM",
-      anxiety:
-        "Roaming is expensive and often unreliable. Without local data, you cannot open maps, translate signs, or finish Alipay setup when you need them most.",
+      note: "A travel eSIM gives you data the minute you land, but not a Chinese phone number — so Wi-Fi logins, bike sharing and delivery apps that need a Chinese SMS code still will not work.",
       options: [
         {
           name: "Trip.com eSIM",
@@ -161,10 +176,8 @@ export const kitNetworkSection: KitPrepSectionData = {
       },
     },
     {
-      icon: "vpn",
       title: "Travel VPN",
-      anxiety:
-        "Hotel and cafe Wi-Fi often block Google, Instagram, WhatsApp, and banking apps. Install and test a VPN before departure — after you land is usually too late.",
+      note: "Install it, sign in, and run it once while you are still at home. Downloading a VPN after you are already on a mainland connection is the step that fails.",
       options: [
         {
           name: "NordVPN",
@@ -211,16 +224,15 @@ export const kitNetworkSection: KitPrepSectionData = {
 /** Step 3 · Payments */
 export const kitPaymentSection: KitPrepSectionData = {
   id: "section-payment",
-  eyebrow: "Step 3 · Payments",
+  step: "03",
+  eyebrow: "Payments",
   title: "Set up payments before you arrive",
   intro:
-    "Many shops, metros, and small vendors expect a QR code wallet. Finish linking and verification at home — not while holding a bottle of water at the airport.",
+    "Linking a card and clearing passport verification both take a few minutes, and sometimes a second attempt. Do it at home, where a failed step costs you nothing.",
   cards: [
     {
-      icon: "alipay",
       title: "Mobile wallets",
-      anxiety:
-        "Foreign cards alone often fail at everyday checkout. Without Alipay or WeChat Pay ready, simple purchases turn into awkward refusals.",
+      note: "Verification runs off your passport, so have it with you. A linked foreign card pays no fee under ¥200 per transaction and 3% above that — worth knowing before you split a dinner bill.",
       options: [
         {
           name: "Alipay",
@@ -262,20 +274,19 @@ export const kitPaymentSection: KitPrepSectionData = {
 /** Step 4 · Maps */
 export const kitMapsSection: KitPrepSectionData = {
   id: "section-maps",
-  eyebrow: "Step 4 · Maps",
+  step: "04",
+  eyebrow: "Maps",
   title: "Install maps that work in China",
   intro:
-    "Google Maps is unreliable for mainland streets. Install a local map app before you need an address in Chinese.",
+    "Amap covers metro exits, walking routes and taxi pickup points that Google Maps either misses or places on the wrong side of the street. It is the one app worth installing even for a short trip.",
   cards: [
     {
-      icon: "map",
       title: "Amap (Gaode Maps)",
-      anxiety:
-        "Wrong pins and missing local listings leave you stranded at exits and hotel doors. Download Amap and learn the basics before you land.",
+      note: "Amap has an English option, but it sits under Me → Settings → General → Language and only applies after you restart the app. Set it before you land.",
       options: [
         {
           name: "Amap setup",
-          diff: "Best everyday navigation for metros, walking, and taxis in China.",
+          diff: "Search in English for landmarks and stations; paste the Chinese address for anything smaller.",
           logoSrc: "/assets/survival-kit/apps/amap.svg",
           primaryCta: {
             label: "How to use Amap",
@@ -296,21 +307,19 @@ export const kitMapsSection: KitPrepSectionData = {
 /** Step 5 · Booking */
 export const kitBookingSection: KitPrepSectionData = {
   id: "section-booking",
-  eyebrow: "Step 5 · Booking",
+  step: "05",
+  eyebrow: "Booking",
   title: "Book flights, hotels, and tickets",
   intro:
-    "Trip.com handles English booking and foreign cards for the pieces that hurt most when left late — flights in, night-one hotels, trains between cities, and popular sights.",
+    "Book the pieces that are hard to fix once you are on the ground: the flight in, the first night's hotel, intercity trains, and any sight that caps daily visitors.",
   cards: [
     {
-      icon: "ticket",
       title: "Book on Trip.com",
-      anxiety:
-        "Last-minute hotel and ticket stress is common — especially when a listing rejects foreign passports or sells out.",
+      note: "One account takes a passport and a foreign card in English. Trains are where it matters most: 12306 sells the same seats, but foreign passport holders have to clear identity verification there first.",
       options: [
         {
           name: "Flights",
           diff: "Search international routes in English and pay with a foreign card.",
-          logoSrc: "/assets/survival-kit/apps/trip.svg",
           primaryCta: {
             label: "Search flights",
             href: go.tripFlight,
@@ -325,8 +334,7 @@ export const kitBookingSection: KitPrepSectionData = {
         },
         {
           name: "Hotels",
-          diff: "Book places that handle passport check-in without day-one drama.",
-          logoSrc: "/assets/survival-kit/apps/trip.svg",
+          diff: "Filter for places that accept foreign passports before you pay, not at check-in.",
           primaryCta: {
             label: "Search hotels",
             href: go.tripHotels,
@@ -341,8 +349,7 @@ export const kitBookingSection: KitPrepSectionData = {
         },
         {
           name: "High-speed rail",
-          diff: "Book intercity trains with your passport — English UI, no Chinese phone required.",
-          logoSrc: "/assets/survival-kit/apps/trip.svg",
+          diff: "Same inventory as 12306, with a small service fee and no identity verification step.",
           primaryCta: {
             label: "Book trains",
             href: go.tripTrains,
@@ -357,8 +364,7 @@ export const kitBookingSection: KitPrepSectionData = {
         },
         {
           name: "Attraction tickets",
-          diff: "Reserve popular sights early with the passport you will travel on.",
-          logoSrc: "/assets/survival-kit/apps/trip.svg",
+          diff: "Reserve capped sights early, using the passport you will travel on.",
           primaryCta: {
             label: "Book tickets",
             href: go.tripTickets,
@@ -385,27 +391,31 @@ export const kitBookingSection: KitPrepSectionData = {
 /** Step 6 · Insurance */
 export const kitInsuranceSection: KitPrepSectionData = {
   id: "section-insurance",
-  eyebrow: "Step 6 · Insurance",
+  step: "06",
+  eyebrow: "Insurance",
   title: "Cover medical and trip surprises",
   intro:
-    "Hospitals often expect payment first. Travel insurance is not required at the border, but it reduces the cost of a bad day.",
+    "Travel insurance is not required to enter China. It is worth having anyway, because a hospital here will usually take payment up front and leave you to claim it back later.",
   cards: [
     {
-      icon: "insurance",
       title: "Travel insurance",
-      anxiety:
-        "Without cover, an emergency can mean large upfront bills and messy claims from abroad.",
+      note: "Look for inpatient medical cover that includes evacuation, and check that it is valid for the full length of your stay.",
       options: [
         {
-          name: "What to buy before you fly",
-          diff: "Look for inpatient medical cover that includes evacuation. We don't sell policies — use a provider you already trust at home.",
-          primaryCta: {
-            label: "Emergency numbers & tips",
-            href: "/survival-kit#section-practical",
-            trackingModule: "insurance-practical",
+          name: "We do not sell policies",
+          diff: "There is no affiliate link in this step and no commission behind it. Use a provider you already trust at home, or whoever your bank or card already works with.",
+          secondaryCta: {
+            label: "Is China safe for independent travel?",
+            href: "/independent-travel-china",
+            trackingModule: "insurance-safety",
           },
         },
       ],
+      footerGuide: {
+        label: "Emergency numbers and embassy contacts",
+        href: "#section-practical",
+        trackingModule: "insurance-practical",
+      },
     },
   ],
 };
@@ -413,7 +423,8 @@ export const kitInsuranceSection: KitPrepSectionData = {
 /** Practical reference (not a prep “buy” step) */
 export const kitPracticalSection: KitPracticalSectionData = {
   id: "section-practical",
-  eyebrow: "Reference · Everyday China",
+  step: "07",
+  eyebrow: "Everyday China",
   title: "Useful practical information",
   intro:
     "Quick facts first-time visitors ask about — emergency numbers, embassies, cash, tipping, and a few cultural don’ts. Save this section offline if you can.",
@@ -486,9 +497,6 @@ export const kitChecklistItems: KitChecklistItem[] = [
   { id: "insurance", label: "Travel insurance arranged" },
 ];
 
-/** Real traveler quotes only — keep empty until we have permission to publish. */
-export const kitTestimonials: KitTestimonial[] = [];
-
 export const kitStickyCta = {
   label: "Plan my China trip",
   href: "/china-itinerary-planner",
@@ -496,8 +504,8 @@ export const kitStickyCta = {
 };
 
 export const kitPlannerBand = {
-  title: "Prep checked? Sketch your route",
-  body: "Turn cities and days into a simple itinerary once the essentials are ready.",
+  title: "Still deciding which cities, and how many days?",
+  body: "That is the part a checklist cannot answer. We build a one-to-one route as a PDF — fee-only, with no hotel, attraction, or OTA commission behind the recommendations.",
   ctaLabel: "Plan my China trip",
   href: "/china-itinerary-planner",
   trackingModule: "visa-planner-band",

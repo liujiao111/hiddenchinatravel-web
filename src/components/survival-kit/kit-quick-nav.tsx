@@ -9,13 +9,16 @@ type Props = {
 
 export function KitQuickNav({ items }: Props) {
   return (
-    <nav aria-label="Survival kit sections" className="w-full">
-      <p className="mb-4 text-center text-[11px] font-normal uppercase tracking-[0.18em] text-[var(--brand-warm)]">
-        Quick start
+    <nav
+      aria-label="Survival kit sections"
+      className="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-5"
+    >
+      <p className="shrink-0 text-[11px] font-bold uppercase tracking-[0.18em] text-[var(--brand-mango)]">
+        On this page
       </p>
-      <ul className="grid grid-cols-2 gap-2.5 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-7 sm:gap-3">
+      <ul className="flex flex-wrap gap-2">
         {items.map((item, index) => (
-          <li key={item.id} className="min-w-0">
+          <li key={item.id}>
             <a
               href={`#${item.id}`}
               onClick={() =>
@@ -24,12 +27,12 @@ export function KitQuickNav({ items }: Props) {
                   label: item.label,
                 })
               }
-              className="flex w-full items-center justify-center gap-2.5 rounded-2xl border border-[color-mix(in_srgb,var(--brand-cream-border)_70%,transparent)] bg-[var(--brand-soft)] px-4 py-3.5 text-sm font-bold tracking-tight text-[var(--brand-ink)] transition-colors duration-300 hover:border-[color-mix(in_srgb,var(--brand-cta)_40%,var(--brand-cream-border))] hover:bg-[color-mix(in_srgb,var(--brand-soft)_70%,white)] md:px-6 md:py-4"
+              className="inline-flex items-baseline gap-1.5 rounded-full border border-[var(--brand-border-subtle)] bg-white px-3.5 py-2 text-sm font-bold tracking-tight text-[var(--brand-ink)] transition-colors duration-300 hover:border-[var(--brand-cta)] hover:text-[var(--brand-cta)]"
             >
-              <span className="text-[11px] tracking-wide text-[var(--brand-muted)]">
+              <span className="text-[11px] font-normal tabular-nums text-[var(--brand-muted)]">
                 {String(index + 1).padStart(2, "0")}
               </span>
-              <span className="truncate">{item.label}</span>
+              {item.label}
             </a>
           </li>
         ))}
