@@ -1,9 +1,18 @@
 ---
 title: "Dali Hidden Gems Beyond the Old Town: Shaxi, Weishan, Zhoucheng, Xizhou & Shibaoshan (2026 Guide)"
-meta_description: "Skip the crowds in Dali Old Town. A fact-checked 2026 guide to Shaxi, Weishan, Zhoucheng, Xizhou and Shibaoshan — real distances, prices, and how to fit them into 1-3 days."
-slug: /dali-hidden-gems-off-the-beaten-path
-primary_keyword: dali hidden gems
-secondary_keywords:
+seoTitle: "Dali Hidden Gems (2026): 6 Places Beyond the Old Town"
+excerpt: "Skip the crowds in Dali Old Town. A practical 2026 guide to Shaxi, Weishan, Zhoucheng, Xizhou, Shibaoshan and Nuodeng — what each place is best for, how long to stay, and how to get there."
+coverImage: "/brand/destinations/yunnan/route-d2.webp"
+date: "2026-09-09T08:00:00+08:00"
+dateModified: "2026-09-09T08:00:00+08:00"
+author:
+  name: "Joy Liu"
+  picture: "/brand/founder/avatar-joy.webp"
+ogImage:
+  url: "/brand/destinations/yunnan/route-d2.webp"
+canonical: "https://hiddenchinatravel.com/dali-hidden-gems-off-the-beaten-path"
+keywords:
+  - dali hidden gems
   - shaxi ancient town
   - xizhou ancient town
   - shibaoshan
@@ -12,10 +21,23 @@ secondary_keywords:
   - nuodeng village
   - off the beaten path dali
   - dali yunnan things to do
-cluster: China Destinations - Yunnan - Dali
-cluster_role: sub-article
-pillar_page: /china-destinations/yunnan
-status: draft
+section: "China Itinerary Planning"
+sourceUrl: "https://hiddenchinatravel.com/dali-hidden-gems-off-the-beaten-path"
+faqs:
+  - question: "Is Shaxi worth a day trip from Dali?"
+    answer: "Not really — it is about 2 to 2.5 hours each way, which makes a same-day round trip exhausting. Most people who make the trip stay at least one night."
+  - question: "How far is Xizhou from Dali Old Town?"
+    answer: "About 20 km, roughly 30–50 minutes by minibus or taxi depending on traffic. It is an easy half-day or full-day trip without staying overnight."
+  - question: "Do you need to buy a ticket for Shibaoshan?"
+    answer: "Yes — entrance was ¥30 per person as of 2026. Confirm locally, since rural scenic-area pricing can change with little notice."
+  - question: "Is Zhoucheng free to visit?"
+    answer: "Walking the village and the Puzhen Tie-Dye Museum are both free. A hands-on dyeing session with a local artisan costs extra, usually ¥30–50."
+  - question: "Can I visit these places without speaking Chinese?"
+    answer: "Yes. A translation app and a Didi account cover most situations. Shaxi, Shibaoshan and Nuodeng have the least English signage, so save your accommodation name in Chinese characters to show a driver."
+  - question: "Is Weishan worth visiting instead of Shaxi?"
+    answer: "They are different trips. Weishan is closer, about an hour by bus from Dali, and needs no overnight stay. Shaxi has more infrastructure if you want to stay a night and catch the Friday market."
+  - question: "How do I get to Nuodeng, and is it worth the trip?"
+    answer: "It is about 2.5 hours by car from Dali Old Town. It is worth it if you want a genuinely undeveloped village experience and have extra time, but it is not a good fit for a first, short visit to Dali."
 ---
 
 # Dali Hidden Gems Beyond the Old Town: Shaxi, Weishan, Zhoucheng, Xizhou & Shibaoshan (2026 Guide)
@@ -156,45 +178,4 @@ It's about 2.5 hours by car from Dali Old Town, and there's very little in the w
 | Jianchuan (County) | 剑川(县) | Jiànchuān (Xiàn) |
 | Sifang Street | 四方街 | Sìfāng Jiē |
 | Weishan (Ancient Town) | 巍山(古城) | Wēishān (Gǔchéng) |
-| Xiaguan | 下关 | Xiàguān |
-| Gongchen Tower | 拱辰楼 | Gǒngchén Lóu |
-| Xinggong Tower | 星拱楼 | Xīnggōng Lóu |
-| Nuodeng (Ancient Village) | 诺邓(古村) | Nuòdèng (Gǔcūn) |
-| Yunlong (County) | 云龙(县) | Yúnlóng (Xiàn) |
-
-Still working out the basics of a Dali trip? Our [complete Dali travel guide](/dali-travel-guide) covers the Old Town, Erhai Lake, and Cangshan — a good place to start if you haven't nailed down where to stay yet.
-
-## Free Dali Hidden Gems Map
-
-Want to save this without scrolling back through the article later? We've mapped every place here — Zhoucheng, Weishan, Xizhou, Shibaoshan, Shaxi, and Nuodeng — with distances and travel times from Dali Old Town, in one map.
-
-[**Get the map on WhatsApp →**](https://wa.me/8618880441791?text=Hi%2C%20can%20you%20send%20me%20the%20Dali%20Hidden%20Gems%20map%3F)
-
-Message us and we'll send it straight over — no email, no spam, just the map.
-
----
-
-### Production Notes (not for publishing)
-
-**Images needed** (real photos only, from Unsplash/Pexels/Wikimedia Commons — see product-marketing.md image rules):
-- Shaxi Sifang Street market scene
-- Weishan old town street / Gongchen Tower or Xinggong Tower
-- Zhoucheng village / tie-dye process
-- Xizhou old town / Bai architecture / Linden Centre exterior
-- Shibaoshan grottoes / hiking trail
-- Nuodeng village (hillside houses / salt well) — lower priority, optional
-
-**Suggested backlinks from existing articles**:
-- `/dali-travel-guide` — add a line pointing readers here for an off-the-beaten-path angle (this article now links back to `/dali-travel-guide` near the bottom, so make it reciprocal)
-- `/where-to-stay-in-dali` — link here where Xizhou/Shaxi overnight stays are mentioned
-
-**Slug**: currently set to match filename (`/dali-hidden-gems-off-the-beaten-path`); can be shortened to `/dali-hidden-gems` if preferred before publishing.
-
-**"Free Dali Hidden Gems Map" lead magnet — delivery channel is WhatsApp, no ESP/email form needed.** Still needs: an actual map asset (e.g. a Google My Maps embed or a designed graphic) pinning all six locations with distances/times from Dali Old Town, ready to send when someone messages in.
-
-**CTA structure in this version (3 tiers, all routed to WhatsApp, each with different pre-filled text)**:
-1. After Shaxi section — driver referral: `https://wa.me/8618880441791?text=Hi%2C%20I%27m%20interested%20in%20a%20driver%20from%20Dali%20to%20Shaxi`
-2. In the itinerary section — route-planning offer: `https://wa.me/8618880441791?text=Hi%2C%20I%27d%20like%20help%20planning%20a%203-day%20route%20around%20Dali%27s%20hidden%20gems`
-3. Bottom of article — map request: `https://wa.me/8618880441791?text=Hi%2C%20can%20you%20send%20me%20the%20Dali%20Hidden%20Gems%20map%3F`
-
-Each link carries different pre-filled text so it's obvious in WhatsApp which part of the article a lead came from, without needing UTM tracking or a landing page. `/china-itinerary-planner` is no longer referenced in this article — worth deciding whether that page still gets built, or whether WhatsApp stays the default lead channel across the Dali series.
+| Nuodeng (Ancient Village) | 诺邓(村) | Nuòdèng (Cūn) |
