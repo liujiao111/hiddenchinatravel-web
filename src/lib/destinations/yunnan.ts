@@ -235,7 +235,7 @@ export const yunnanDestination: RegionDestination = {
         id: "shaxi",
         name: "Shaxi",
         localName: "沙溪",
-        body: "A Tea Horse Road town between Dali and Lijiang. Only if you have a spare night — it is a pause, not a seventh old-town checkbox.",
+        body: "A Tea Horse Road town between Dali and Lijiang. Only if you have a spare night — it is a pause, not a seventh old-town checkbox. The Dali hidden gems guide covers Shaxi plus Weishan, Xizhou, and the rest.",
       },
       {
         id: "bai-food",
@@ -841,6 +841,11 @@ export const yunnanDestination: RegionDestination = {
     },
   ],
   related: [
+    {
+      title: "Dali hidden gems",
+      href: "/dali-hidden-gems-off-the-beaten-path",
+      excerpt: "Shaxi, Weishan, Zhoucheng, Xizhou, and Shibaoshan — days outside Dali Old Town.",
+    },
     {
       title: "China visa checker",
       href: "/china-visa-checker",

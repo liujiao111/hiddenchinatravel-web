@@ -142,9 +142,16 @@ const CLUSTER_RELATED_SLUGS: Record<string, readonly string[]> = {
     "independent-travel-china",
     "digital-survival-china-payment-guide",
     "digital-survival-china-internet-guide",
+    "dali-hidden-gems-off-the-beaten-path",
   ],
   "independent-travel-china": [
     "how-to-plan-china-itinerary",
+    "dali-hidden-gems-off-the-beaten-path",
+  ],
+  "dali-hidden-gems-off-the-beaten-path": [
+    "how-to-plan-china-itinerary",
+    "how-to-use-didi-china-foreigners",
+    "best-esim-for-china-travel",
   ],
 };
 

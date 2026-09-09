@@ -144,6 +144,17 @@ async function wrapBlogImages(markup: string): Promise<string> {
   });
 }
 
+const PORTRAIT_PARA_RE =
+  /<p>\s*<span class="blog-media-portrait">[\s\S]*?<\/span>\s*<\/p>/;
+
+/** Two consecutive portrait trip photos → one row. */
+function pairAdjacentPortraits(markup: string): string {
+  return markup.replace(
+    new RegExp(`${PORTRAIT_PARA_RE.source}\\s*${PORTRAIT_PARA_RE.source}`, "g"),
+    (pair) => `<div class="blog-media-pair">${pair}</div>`,
+  );
+}
+
 /** Allow wide Markdown tables to scroll horizontally on small screens. */
 function wrapTables(markup: string): string {
   return markup.replace(/<table\b[\s\S]*?<\/table>/gi, (table) => {
@@ -242,5 +253,5 @@ export default async function markdownToHtml(markdown: string) {
   const result = await remark().use(remarkGfm).use(html).process(normalized);
   const withAffiliates = decorateAffiliateAnchors(result.toString());
   const withImages = await wrapBlogImages(withAffiliates);
-  return ensureHeadingIds(wrapTables(withImages));
+  return ensureHeadingIds(wrapTables(pairAdjacentPortraits(withImages)));
 }

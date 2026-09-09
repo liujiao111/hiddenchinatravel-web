@@ -1,0 +1,34 @@
+---
+description: Hidden China Travel product identity, brand tone, and baseline docs
+alwaysApply: true
+---
+
+# Hidden China Travel — Product & Brand
+
+This is **Hidden China Travel**: an inbound travel site for foreigners visiting China — not a generic blog.
+
+## Always read first
+- Business/content baseline: [`webiste_info.md`](webiste_info.md) (brand, audience, IA, SEO, affiliates).
+- Prefer that doc over leftover blog-starter names (`Inbound`, `CMS_NAME`, demo copy) when renaming or writing UI.
+
+## Goals
+- Position as a **local partner for independent China travel** (not a tour agency, not a pure blog)
+- Primary conversion: **Plan my China trip** → `/china-itinerary-planner` (consult packs TBD inside planner)
+- Secondary: **Get Free Survival Kit** → `/survival-kit`
+- Contact form reserves a disabled **Service type** slot for future service-package modules
+- SEO guides + tools build trust; affiliates stay contextual and secondary
+- Design: **Tropical Paradise** — [`tropical-paradise.md`](tropical-paradise.md) / `tropical-paradise-ui.mdc`
+
+## Tone
+trustworthy · editorial · practical · warm · international · local-partner  
+Not flashy. Not “AI SaaS”. Not tourist-board hype. Not travel-agency hard sell.
+
+## Product principles
+- Partner services (planning / on-trip consults / booking help) are the core offer
+- Guides + tools are the trust / self-serve layer — keep them separate from booking logic
+- One primary conversion goal per page; CTAs helpful, not aggressive
+- Emphasize commission-neutral advice; booking help = service fee + invoice
+- Affiliates secondary to trust; no scattered hardcoded affiliate URLs
+
+## Travel UX
+Reduce anxiety for first-time independent travelers. Prioritize local-partner clarity, scenario-based support, and paths to Plan / Prepare CTAs.

@@ -1,0 +1,100 @@
+---
+description: SOP to submit newly published URLs to Google Search Console and Bing Webmaster after go-live
+alwaysApply: false
+---
+
+# Post-publish indexing SOP (GSC + Bing)
+
+Run this **after** a content/page push to `main` when the user asks to submit indexing, or as the final step of “推上线 / publish”.
+
+## Site facts
+
+- Production: `https://hiddenchinatravel.com`
+- Sitemap: `https://hiddenchinatravel.com/sitemap.xml`
+- GSC property: prefer `https://hiddenchinatravel.com/` (URL-prefix). Domain property `sc-domain:hiddenchinatravel.com` also OK if logged in.
+- Bing site: `https://hiddenchinatravel.com/`
+- Do **not** rely on Google/Bing sitemap ping URLs (deprecated / often 410).
+
+## URLs to submit
+
+Always include:
+
+1. The new/updated canonical page URL(s)
+2. Any hub/parent pages whose content/links changed (e.g. `/transport-in-china`)
+
+Use **no trailing slash** unless the live canonical redirects to slash. Match sitemap `<loc>`.
+
+## Checklist
+
+### 1. Confirm live (block until ready)
+
+```bash
+URL="https://hiddenchinatravel.com/<slug>"
+# Expect HTTP 200 + expected title/H1 in HTML
+curl -sI -L "$URL"
+curl -s -L "$URL" | head # or rg title
+# Expect URL in sitemap
+curl -s -L "https://hiddenchinatravel.com/sitemap.xml" | rg "<slug>"
+```
+
+If deploy is still rolling, poll every ~8–10s (up to ~2 min).
+
+**Cloudflare cache (common):** Origin may already have the new HTML (`?nocache=1` shows new alts / wrappers) while the canonical URL is still an old `cf-cache-status: HIT`. HTML often has long `max-age` — purge before telling the user “not live”.
+
+Purge Custom URLs in Cloudflare Caching:
+- `https://hiddenchinatravel.com/<slug>`
+- `https://hiddenchinatravel.com/<slug>/` (if used)
+- updated hub URLs if any
+
+If Cloudflare serves a stale **404** while `?v=2` works, same purge.
+
+### 2. Bing Webmaster — URL Submission
+
+1. Open: https://www.bing.com/webmasters/submiturl?siteUrl=https://hiddenchinatravel.com/
+2. Ensure the correct Microsoft account / site is selected
+3. Click **Submit URLs**
+4. Paste one URL per line (new page + updated hubs)
+5. Submit and confirm success dialog
+6. Note remaining daily quota (“Quota left for today”)
+
+Browser automation via cursor-ide-browser is OK when already logged in.
+
+### 3. Google Search Console — URL Inspection
+
+1. Open GSC for `https://hiddenchinatravel.com/` (account that owns the property — not a random Google login)
+2. **网址检查 / URL Inspection** → paste the live URL → Enter
+3. Wait for inspection result
+4. Click **请求编入索引 / Request indexing**
+5. Confirm success; close dialog
+6. Repeat for each priority URL (article first, then hub if needed)
+
+Deep link pattern:
+
+`https://search.google.com/search-console/inspect?resource_id=https%3A%2F%2Fhiddenchinatravel.com%2F`
+
+Then paste the URL in the inspect box (query `id=` deep links are flaky).
+
+If the browser session is on an account **without** property access, stop and ask the user to switch account — do not fake success.
+
+If the IDE browser cannot load Google (`chrome-error://` / blank), do not retry endlessly. Hand the user this URL and the article URL to finish Request indexing:
+
+`https://search.google.com/search-console/inspect?resource_id=https%3A%2F%2Fhiddenchinatravel.com%2F`
+
+### Trigger phrases
+
+When the user says any of: 推上线 / 提交索引 / 提交 GSC / Bing / 编入索引 / submit to Search Console — run this SOP after the page is live.
+
+### 4. Report back
+
+Tell the user:
+
+- Live URL(s) + HTTP status
+- Sitemap: yes/no
+- Bing: submitted + timestamp/quota if visible
+- GSC: requested indexing yes/no (or blocked by wrong account)
+
+## Out of scope / later upgrades
+
+- IndexNow key + API (optional automation; only if a key is already published on the site)
+- Google Indexing API (needs service account; not set up by default)
+- Mass re-submit of old URLs — only new/changed pages unless asked

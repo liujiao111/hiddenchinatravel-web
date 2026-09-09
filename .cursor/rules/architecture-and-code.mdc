@@ -1,0 +1,42 @@
+---
+description: Architecture, coding, Next.js, SEO, and UI rules for Hidden China Travel
+alwaysApply: true
+---
+
+# Architecture & Code
+
+## Stack
+Next.js App Router · TypeScript · Tailwind · static-first · Vercel.  
+MDX for long-form when migrating; current Markdown/`_posts` is fine until content migration.  
+Future Supabase OK — do not overbuild early.
+
+## Structure (target; migrate gradually)
+- `app/(content)/`, `app/(tools)/` — thin route files
+- `components/{layout,content,ui,tools}/`
+- `lib/{content,seo,utils}/`
+- `content/{posts,hubs,cities}/`
+Keep: content layer · UI · tools · data helpers · SEO metadata separated.
+
+## Coding
+- TypeScript everywhere; Server Components by default; Client only for interaction
+- Small single-purpose components; explicit props; avoid files ≫250 lines
+- No god components; no business logic dumped in `page.tsx`
+- Reuse before inventing; extract repeated UI (CTA, FAQ, callouts, disclosures)
+
+## Next.js / SEO
+- `generateMetadata` on indexable pages; unique title + description
+- Prefer static generation; semantic HTML; heading hierarchy; internal links
+- Centralize SEO helpers in `lib/seo` when adding more pages — no duplicated metadata logic
+
+## UI
+**Tropical Paradise** (mandatory) — [`tropical-paradise.md`](tropical-paradise.md), tokens in `globals.css`.  
+Sunny cream surfaces, Ocean Teal CTAs, coral/mango accents, pill buttons, `TropicalCard` patterns.  
+Avoid: dark themes, Scandinavian sage/`rounded-sm`, Terracotta clay, purple/glow SaaS, crowded OTA dashboards, loud affiliate blocks.  
+Mobile-first; clear primary vs outline CTA hierarchy; lively but soft transitions (`hover:scale-105` with reduced-motion).
+
+## Forbidden
+Generic placeholder copy · mixing article render + app logic · random fonts/styles that ignore site system · overengineering unvalidated features.
+
+## Before / after changes
+Before: classify request (content / tool / SEO / UI); check existing components; respect IA.  
+After: types, imports, route placement, mobile layout, metadata impact, brand tone.

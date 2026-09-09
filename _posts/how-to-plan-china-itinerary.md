@@ -71,7 +71,7 @@ Write the trip as **nights**, then hang trains on those nights.
 
 Example shape (not a promise, not a client trip): fly into Chongqing, overnight there, then a slower corridor, then one landscape stop, then back to the same airport city. That is how a [sample southwest loop](/services/custom-itinerary) is sketched — labeled as a sample on purpose.
 
-A first independent week often looks simpler than that: fly into Kunming, then fast trains to Dali and Lijiang. [Independent Yunnan travel](/china-destinations/yunnan) is the worked example — days, trains, and when not to bolt on Xishuangbanna.
+A first independent week often looks simpler than that: fly into Kunming, then fast trains to Dali and Lijiang. [Independent Yunnan travel](/china-destinations/yunnan) is the worked example — days, trains, and when not to bolt on Xishuangbanna. If Dali is the base and you want days outside the Old Town, [Dali hidden gems](/dali-hidden-gems-off-the-beaten-path) covers Shaxi, Weishan, Xizhou, and the rest.
 
 For trains and stations, use the [transport hub](/transport-in-china). For night-one lodging that accepts a foreign passport, use [hotels in China](/hotels-in-china). Iconic sights that need passport reservations belong in [attraction tickets](/attraction-tickets-in-china) — not in a walk-up fantasy.
 

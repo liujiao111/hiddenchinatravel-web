@@ -93,6 +93,11 @@ subtopics:
         excerpt: "7-day Kunming–Dali–Lijiang without a tour — plus when to add Jinghong or Shangri-La."
         badge: "Destination"
         status: published
+      - title: "Dali hidden gems"
+        href: /dali-hidden-gems-off-the-beaten-path
+        excerpt: "Shaxi, Weishan, Zhoucheng, Xizhou, and Shibaoshan — 1–3 days outside Dali Old Town."
+        badge: "Dali"
+        status: published
 toolCTA:
   - label: "Plan my China trip"
     href: /china-itinerary-planner#plan-trip

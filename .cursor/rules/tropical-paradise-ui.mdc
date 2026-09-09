@@ -1,0 +1,29 @@
+---
+description: Tropical Paradise UI — mandatory for every page and component
+alwaysApply: true
+---
+
+# Tropical Paradise UI (mandatory)
+
+Full spec: [`tropical-paradise.md`](tropical-paradise.md). **Read it before designing or restyling any UI.**  
+Live reference: https://www.stylekit.top/styles/tropical-paradise/showcase#colors
+
+Tokens / helpers live in `src/app/globals.css`. Content cards use `TropicalCard` (`src/app/_components/tropical-card.tsx`).
+
+## Non-negotiables
+- Sunshine cream surfaces (`#fffde7`), Ocean Teal CTA (`#00897b`), Coral (`#ff6f61`), Mango (`#ffc107`), Palm (`#4caf50`)
+- Buttons: `rounded-full` + `font-bold` + teal soft shadow — `.btn-brand` / `.btn-hero` / outline pill / `.btn-brand-inverse` on teal chrome
+- Cards: white `rounded-2xl`, teal/15 border, thin `h-1` accent bar, dots + uppercase label, coral meta + accent pill CTA, `hover:scale-105`
+- Font: **Outfit** — never Inter / Roboto / Geist for UI
+- Prefer CSS vars from `globals.css`; do not invent a parallel palette
+- On conflict, **[FORBIDDEN] in `tropical-paradise.md` wins**
+- Ignore neo-brutalism TEMPLATES/CHECKLIST from stylekit pastes (`rounded-none`, hard black offsets, `font-black`)
+
+## Supersedes
+- Scandinavian Minimalism (`scandinavian-minimalism.md`, old sage/`rounded-sm`/`font-light`)
+- Terracotta (`terracotta.md`)
+
+## When editing UI
+1. Match existing Tropical chrome (teal header, cream pages, `TropicalCard`) before inventing variants
+2. Self-check against the delivery checklist in `tropical-paradise.md`
+3. Do not reintroduce Scandinavian sage pills or Terracotta clay CTAs

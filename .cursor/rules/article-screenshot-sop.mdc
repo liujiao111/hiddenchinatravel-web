@@ -1,0 +1,37 @@
+---
+description: SOP for article phone/app screenshots — portrait phone canvas vs landscape frames
+globs: _posts/**/*.md,public/assets/blog/**/*
+alwaysApply: false
+---
+
+# Article screenshot SOP (phone / app UI)
+
+Canonical portrait look: DiDi step shots on `/how-to-use-didi-china-foreigners` — centered phone canvas, same series sizing.
+
+## Display (do not reinvent)
+
+- Classification in `src/lib/markdownToHtml.ts` (reads asset dimensions via sharp):
+  - **Portrait** phone/app UI → `blog-media-shot`
+  - **Landscape** UI crops / maps / photos → `blog-media-frame` (article-readable width) — never squeeze into the phone canvas
+- CSS (`src/app/globals.css`): shot max-width ~`16.5rem` / `18rem` at `md+`; height follows image; no forced `9:16` crop
+- Icons → `blog-media-icon`
+
+## When authoring Markdown
+
+1. Put step UI files under `public/assets/blog/<slug>/`
+2. Portrait phone steps: `step-01-….webp`, … + alt with `screenshot` or `Step N`
+3. Keep a portrait series at the **same pixel size** when possible (DiDi: ~471×1006)
+4. Wide verification / card-link / map UI crops: export **landscape**; they auto-use `blog-media-frame`
+5. Cover / street photos: landscape; do not force `step-*` naming
+
+## Before publish check
+
+- Portrait steps → `blog-media-shot`; landscape UI → `blog-media-frame`
+- After deploy: purge Cloudflare if canonical HTML looks stale
+
+## Forbidden
+
+- Forcing landscape UI into the narrow phone canvas
+- Mixing shot/frame for the same portrait step series
+- Re-adding fixed `aspect-ratio: 9/16` on `.blog-media-shot`
+- Treating trip photos as phone screenshots without UI cues

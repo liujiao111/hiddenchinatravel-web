@@ -59,8 +59,13 @@
    .blog-media-icon) applied in markdownToHtml. */
 .markdown :global(.blog-media-frame),
 .markdown :global(.blog-media-shot),
-.markdown :global(.blog-media-icon) {
+.markdown :global(.blog-media-icon),
+.markdown :global(.blog-media-pair) {
   max-width: 100%;
+}
+
+.markdown :global(.blog-media-pair) p {
+  margin: 0;
 }
 
 /* Related-guide lists: icons stay inline with the link text */
