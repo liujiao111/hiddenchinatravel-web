@@ -27,7 +27,7 @@ const ALLOWED_SERVICE_TYPES = new Set([
 ]);
 
 const CSV_HEADER =
-  "timestamp,name,email,whatsapp,whatsappOptIn,subject,serviceType,message\n";
+  "timestamp,name,email,whatsapp,whatsappOptIn,travelTiming,serviceType,message\n";
 const DATA_DIR = path.join(process.cwd(), "data");
 const CSV_PATH = path.join(DATA_DIR, "contact-submissions.csv");
 
@@ -54,7 +54,7 @@ export async function submitContactForm(
 ): Promise<ContactFormState> {
   const name = String(formData.get("name") ?? "").trim();
   const email = String(formData.get("email") ?? "").trim();
-  const subject = String(formData.get("subject") ?? "").trim();
+  const travelTiming = String(formData.get("travelTiming") ?? "").trim();
   const serviceType = String(formData.get("serviceType") ?? "").trim();
   const message = String(formData.get("message") ?? "").trim();
   const honeypot = String(formData.get("company") ?? "").trim();
@@ -80,8 +80,8 @@ export async function submitContactForm(
     return { ok: false, message: "Please select what this is about." };
   }
 
-  if (subject.length > 200) {
-    return { ok: false, message: "Subject is too long." };
+  if (travelTiming.length > 120) {
+    return { ok: false, message: "Travel timing is too long." };
   }
 
   if (!message || message.length < 10) {
@@ -96,14 +96,13 @@ export async function submitContactForm(
   }
 
   const timestamp = new Date().toISOString();
-  const subjectLine = subject || "(no subject)";
   const row = [
     timestamp,
     escapeCsv(name),
     escapeCsv(email),
     escapeCsv(whatsappField.whatsapp),
     whatsappField.optIn ? "yes" : "no",
-    escapeCsv(subjectLine),
+    escapeCsv(travelTiming || "Not specified"),
     escapeCsv(serviceType),
     escapeCsv(message),
   ].join(",");
@@ -118,8 +117,8 @@ export async function submitContactForm(
       `Name: ${name}`,
       `Email: ${email}`,
       ...whatsappNotifyLines(whatsappField.whatsapp, whatsappField.optIn),
+      `Travel timing: ${travelTiming || "Not specified"}`,
       `Type: ${serviceType}`,
-      `Subject: ${subjectLine}`,
       "",
       message,
     ].join("\n"),
@@ -139,6 +138,7 @@ export async function submitContactForm(
       timestamp,
       name,
       email,
+      travelTiming,
       serviceType,
       emailed,
       savedCsv,
@@ -154,7 +154,7 @@ export async function submitContactForm(
     name,
     message:
       serviceType === "free-yunnan-route-check"
-        ? "Thanks — Joy has your Yunnan route request and will send a practical check. There is no fee or booking obligation."
-        : SLA_INQUIRY_SUCCESS,
+        ? "Thanks — Joy Liu has your Yunnan route request and will send a practical check. There is no fee or booking obligation."
+        : "Thanks — Joy Liu has your message. We'll reply within 24 hours and take it from there.",
   };
 }
