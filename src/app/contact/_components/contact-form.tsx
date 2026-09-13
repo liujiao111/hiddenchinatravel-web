@@ -1,14 +1,12 @@
 "use client";
 
-import { useActionState, useState } from "react";
+import { useActionState } from "react";
 import {
   submitContactForm,
   type ContactFormState,
 } from "@/app/contact/actions";
-import { FancySelect } from "@/app/china-visa-checker/_components/fancy-select";
 import { ContinueOnWhatsApp } from "@/app/_components/forms/continue-on-whatsapp";
 import { WhatsAppOptInFields } from "@/app/_components/forms/whatsapp-opt-in-fields";
-import Link from "next/link";
 
 const initialState: ContactFormState = { ok: false, message: "" };
 
@@ -16,27 +14,23 @@ const fieldClass =
   "min-h-11 w-full rounded-full border-2 border-[var(--brand-cta)]/20 bg-white px-4 py-3 text-sm font-normal tracking-wide text-[var(--brand-ink)] placeholder:text-[var(--brand-ink-muted)] transition-all duration-300 focus:border-[var(--brand-cta)] focus:outline-none focus:shadow-[0_0_0_3px_rgba(196,92,62,0.15)]";
 
 const textareaClass =
-  "min-h-[140px] w-full resize-y rounded-2xl border-2 border-[var(--brand-cta)]/20 bg-white px-4 py-3 text-sm font-normal leading-relaxed tracking-wide text-[var(--brand-ink)] placeholder:text-[color-mix(in_srgb,var(--brand-ink-muted)_75%,transparent)] transition-all duration-300 focus:border-[var(--brand-cta)] focus:outline-none focus:shadow-[0_0_0_3px_rgba(196,92,62,0.15)]";
+  "min-h-[160px] w-full resize-y rounded-2xl border-2 border-[var(--brand-cta)]/20 bg-white px-4 py-3 text-sm font-normal leading-relaxed tracking-wide text-[var(--brand-ink)] placeholder:text-[color-mix(in_srgb,var(--brand-ink-muted)_75%,transparent)] transition-all duration-300 focus:border-[var(--brand-cta)] focus:outline-none focus:shadow-[0_0_0_3px_rgba(196,92,62,0.15)]";
 
 const labelClass =
   "mb-2 block text-sm font-bold tracking-tight text-[var(--brand-ink)]";
 
-/** Aligned with live /services offerings */
-const SERVICE_TYPE_OPTIONS = [
-  { value: "free-yunnan-route-check", label: "Free Yunnan route check" },
-  { value: "custom-plan", label: "Custom itinerary planning" },
-  { value: "itinerary-review", label: "Existing itinerary review" },
-  { value: "on-trip-help", label: "On-trip quick help" },
-  { value: "booking-help", label: "Booking assistance" },
-  { value: "partnership", label: "Partnership / media" },
-  { value: "general", label: "General question / feedback" },
-] as const;
+const ALLOWED_SERVICE_TYPES = new Set([
+  "free-yunnan-route-check",
+  "custom-plan",
+  "itinerary-review",
+  "on-trip-help",
+  "booking-help",
+  "partnership",
+  "general",
+]);
 
-function initialServiceType(raw?: string): string {
-  if (!raw) return "";
-  return SERVICE_TYPE_OPTIONS.some((option) => option.value === raw)
-    ? raw
-    : "";
+function normalizedServiceType(raw?: string): string {
+  return raw && ALLOWED_SERVICE_TYPES.has(raw) ? raw : "general";
 }
 
 export function ContactForm({
@@ -48,32 +42,33 @@ export function ContactForm({
     submitContactForm,
     initialState,
   );
-  const [serviceType, setServiceType] = useState(() =>
-    initialServiceType(defaultServiceType),
-  );
-  const isFreeYunnanRouteCheck = serviceType === "free-yunnan-route-check";
 
   if (state.ok) {
     return (
-      <div className="space-y-4" role="status" aria-live="polite">
-        <p className="text-sm font-normal tracking-wide text-[var(--brand-olive)]">
+      <div className="space-y-5" role="status" aria-live="polite">
+        <p className="text-base font-bold leading-7 text-[var(--brand-ink)]">
           {state.message}
+        </p>
+        <p className="text-sm leading-6 text-[var(--brand-ink-muted)]">
+          Joy Liu personally reviews every inquiry. If WhatsApp is easier, you
+          can continue the conversation there too.
         </p>
         <ContinueOnWhatsApp
           name={state.name}
-          context="I'd like to continue about my contact message."
+          context="I'd like to continue talking about my Yunnan trip."
         />
-        <p className="text-xs font-normal text-[var(--brand-ink-muted)]">
-          Prefer email? We’ll still reply to the address you left — usually
-          within 30 minutes during business hours (Mon–Fri 9AM–9PM, China
-          time).
-        </p>
       </div>
     );
   }
 
   return (
     <form action={formAction} className="space-y-5" noValidate>
+      <input
+        type="hidden"
+        name="serviceType"
+        value={normalizedServiceType(defaultServiceType)}
+      />
+
       <div className="hidden" aria-hidden="true">
         <label htmlFor="company">Company</label>
         <input
@@ -119,78 +114,36 @@ export function ContactForm({
 
       <WhatsAppOptInFields idPrefix="contact" />
 
-      <div data-slot="service-type">
-        <input type="hidden" name="serviceType" value={serviceType} />
-        <FancySelect
-          id="serviceType"
-          label="What is this about?"
-          value={serviceType}
-          options={[...SERVICE_TYPE_OPTIONS]}
-          placeholder="Select a topic…"
-          onChange={setServiceType}
-        />
-        {isFreeYunnanRouteCheck ? (
-          <p className="mt-2 text-xs font-normal leading-relaxed text-[var(--brand-ink-muted)]">
-            Tell Joy your travel month, total Yunnan days, and cities you are
-            considering. This short route check is free: no booking, tour
-            package, or payment is involved.
-          </p>
-        ) : (
-          <p className="mt-2 text-xs font-normal leading-relaxed text-[var(--brand-ink-muted)]">
-            For a full custom trip request, the{" "}
-            <Link
-              href="/china-itinerary-planner#plan-trip"
-              className="font-bold text-[var(--brand-coral)] underline decoration-[color-mix(in_srgb,var(--brand-coral)_35%,transparent)] underline-offset-2"
-            >
-              itinerary planner
-            </Link>{" "}
-            is usually faster. See{" "}
-            <Link
-              href="/services"
-              className="font-bold text-[var(--brand-coral)] underline decoration-[color-mix(in_srgb,var(--brand-coral)_35%,transparent)] underline-offset-2"
-            >
-              services &amp; pricing
-            </Link>{" "}
-            for fees.
-          </p>
-        )}
-      </div>
-
       <div>
-        <label htmlFor="subject" className={labelClass}>
-          Subject
-          <span className="font-normal text-[var(--brand-ink-muted)]">
-            {" "}
-            (optional)
-          </span>
+        <label htmlFor="travelTiming" className={labelClass}>
+          When are you planning to travel?
         </label>
         <input
-          id="subject"
-          name="subject"
+          id="travelTiming"
+          name="travelTiming"
           type="text"
-          maxLength={200}
+          maxLength={120}
           className={fieldClass}
-          placeholder="Short summary"
+          placeholder="e.g. April 2027, or still deciding"
         />
       </div>
 
       <div>
         <label htmlFor="message" className={labelClass}>
-          Message
+          Tell us about your trip
         </label>
         <textarea
           id="message"
           name="message"
           required
-          rows={6}
+          rows={7}
           maxLength={5000}
           className={textareaClass}
-          placeholder={
-            isFreeYunnanRouteCheck
-              ? "Travel month, total days, cities you are considering, and your preferred pace…"
-              : "Dates, cities, and what you need help with…"
-          }
+          placeholder="Where would you like to go? How many days do you have? What kind of pace or experiences are you looking for?"
         />
+        <p className="mt-2 text-xs leading-5 text-[var(--brand-ink-muted)]">
+          A rough idea is enough. You don&apos;t need to have everything figured out.
+        </p>
       </div>
 
       {state.message ? (
@@ -207,8 +160,13 @@ export function ContactForm({
         disabled={pending}
         className="btn-brand min-h-11 px-8 py-3.5 text-sm disabled:cursor-not-allowed disabled:opacity-60"
       >
-        {pending ? "Sending…" : "Send message"}
+        {pending ? "Sending…" : "Start the Conversation"}
       </button>
+
+      <p className="text-xs leading-5 text-[var(--brand-ink-muted)]">
+        No obligation. No pressure. We&apos;ll simply start with your questions and
+        see whether we&apos;re a good fit.
+      </p>
     </form>
   );
 }
