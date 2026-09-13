@@ -41,7 +41,7 @@ export function SiteHeader() {
           : "border-b border-neutral-200 bg-white",
       )}
     >
-      <div className="mx-auto flex h-14 w-full max-w-[90rem] items-center gap-3 px-4 md:h-16 md:gap-3 md:px-6 lg:px-8">
+      <div className="mx-auto flex h-14 w-full max-w-[90rem] items-center gap-3 px-4 md:h-16 md:gap-3 md:px-6 lg:px-8 min-[1800px]:max-w-[108rem]">
         <div className="relative z-10 shrink-0 pr-1 md:pr-2">
           <SiteLogo
             size="sm"
