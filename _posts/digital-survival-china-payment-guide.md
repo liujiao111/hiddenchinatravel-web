@@ -1,10 +1,10 @@
 ---
-title: "How to Pay in China as a Foreigner (Alipay & WeChat Pay 2026 Guide)"
-seoTitle: "How to Pay in China 2026: Alipay & WeChat Pay"
-excerpt: "No Chinese bank account? Pay in China with Alipay or WeChat Pay on a foreign Visa/Mastercard — 2026 setup steps, fees, cash backup, and checkout failures."
+title: "How to Pay in China as a Foreigner (2026): Alipay, Cards & Cash"
+seoTitle: "How to Pay in China as a Foreigner (2026): Alipay, Cards & Cash"
+excerpt: "How should foreigners pay in China in 2026? Set up Alipay and WeChat Pay with an international card, understand fees, keep cash as backup, and know what to do when payments fail."
 coverImage: "/assets/blog/digital-survival-china-payment-guide/cover.webp"
 date: "2026-02-15T09:52:08+00:00"
-dateModified: "2026-09-05T16:00:00+00:00"
+dateModified: "2026-09-13T08:45:00+00:00"
 author:
   name: "Joy Liu"
   picture: "/brand/founder/avatar-joy.webp"
@@ -12,233 +12,230 @@ ogImage:
   url: "/assets/blog/digital-survival-china-payment-guide/cover.webp"
 canonical: "https://hiddenchinatravel.com/digital-survival-china-payment-guide"
 keywords:
+  - "how to pay in china as a foreigner"
+  - "china payment guide"
   - "Alipay for Foreigners"
   - "Cash in China"
-  - "China Travel Tips 2026"
-  - "e-CNY for Tourists"
   - "Mobile Payment China"
-  - "TourCard vs International Cards"
-  - "Travel Budget China"
   - "WeChat Pay Guide"
 section: "Payments in China for Foreigners"
 sourceUrl: "https://hiddenchinatravel.com/digital-survival-china-payment-guide"
 ---
-No Chinese bank account? You can still pay for almost everything — street food, taxis, hotel, train tickets — using Alipay or WeChat Pay linked to your foreign Visa or Mastercard. This guide covers exactly how to set it up, what fees to expect, and what to do when something goes wrong.
+If you're visiting China in 2026, you do **not** need a Chinese bank account for normal tourist spending. For most foreign travelers, the easiest setup is:
 
-> _“I accidentally left my wallet at the hotel in Chengdu. Spent the entire day paying for bubble tea, taxis, and museum tickets with just Alipay linked to my US Visa. Didn’t touch a single banknote.”_ — @GlobalJules on TikTok
+1. **Alipay linked to an international Visa or Mastercard** as your main payment method
+2. **WeChat Pay as a second mobile-payment option**
+3. **A physical international bank card** as backup
+4. **A small amount of RMB cash** for emergencies
 
-That’s the 2026 reality. The “you’ll be stranded without a Chinese bank account” panic you’ve been reading online is outdated. Here’s what actually works.
+That combination covers most restaurants, shops, taxis, attractions, hotels and everyday travel situations without forcing you to rely on a single app.
 
-**Trying to figure out how to pay in China as a foreign traveler?** This guide is part of our [Payments in China hub](/payments-in-china), where we explain Alipay, WeChat Pay, cash backup, international card issues, verification problems, payment failures, and what to prepare before arriving in China.
+This guide explains the overall payment system. If you need detailed setup steps, see our dedicated [Alipay for Foreigners](/alipay-for-foreigners-china/) and [WeChat Pay for Foreigners](/wechat-pay-for-foreigners-china/) guides.
 
-## The Truth About Paying in China as a Foreigner (2026)
+You can also start from our [Payments in China hub](/payments-in-china), which brings together setup, verification, payment-failure and backup-payment advice.
 
-Let’s compare what travelers expected based on outdated information versus what they actually experienced in 2026.
+## Can Foreigners Pay in China Without a Chinese Bank Account?
 
-> **Expectation (The Fear):**
-> 
-> _“I need to carry a suitcase of cash because foreign cards don’t work!”_
-> 
-> **Reality (TikTok @GlobalJules):**
-> 
-> _“I accidentally left my wallet at the hotel in Chengdu. I spent the entire day paying for bubble tea, taxis, and museum tickets with just my Alipay linked to my US Visa card. I didn’t touch a single banknote.”_
+Yes.
 
-> **Expectation (The Fear):**
-> 
-> _“The setup is impossible if I don’t read Chinese.”_
-> 
-> **Reality (Twitter @SoloZoe):**
-> 
-> _“Pro tip: The Alipay app is fully in English now. It took me 5 minutes at the airport. The hardest part was choosing which dumpling place to eat at first.”_
+International visitors can use Alipay and WeChat Pay with supported foreign cards, so a Chinese bank account is no longer a basic requirement for ordinary tourist payments.
 
-## How Mobile Payment Works in China: What Foreigners Need to Know
+China is often described as "cashless," but the better way to think about it is **mobile-payment first**. In major cities, QR-code payments are the norm at restaurants, supermarkets, convenience stores, taxis, tourist attractions and many smaller businesses.
 
-China is often described as “cashless,” but the reality is more nuanced.
+That does not mean every payment will work perfectly. Foreign-linked cards can still fail at certain merchants, banks may block transactions, and app verification can occasionally cause problems. That's why the best strategy is not to choose one payment method — it's to build a simple backup system before you arrive.
 
-In major cities, most restaurants, supermarkets, convenience stores, taxis, and tourist attractions accept mobile payments linked to international Visa and Mastercard cards.
+## The Best Payment Setup for Most Travelers
 
-However:
+For a short trip, I would prepare payments in this order:
 
-  * Very small street vendors may not always accept foreign-linked cards
-  * Rural or remote areas can be less consistent
-  * Some older merchants may still prefer domestic payment accounts
+| Payment method | Best use | Role |
+| --- | --- | --- |
+| **Alipay + foreign card** | Everyday shops, restaurants, transport and attractions | Primary |
+| **WeChat Pay + foreign card** | Everyday payments and WeChat-based services | Backup / secondary |
+| **Physical Visa or Mastercard** | Hotels, larger merchants, emergency fallback | Backup |
+| **RMB cash** | Phone failure, card decline, poor connectivity | Emergency backup |
 
-**Bottom line:** In urban areas, foreign travelers can comfortably rely on mobile payment—but carrying a small cash backup is still smart.
+The point is redundancy. If one app or card fails, you should be able to switch payment methods in seconds rather than troubleshoot at the checkout counter.
 
-### The Legal Landscape
+## Alipay vs WeChat Pay: Which Should You Set Up?
 
-While mobile payment dominates, cash remains your **legal right**. On February 1, 2026, China enforced strict penalties for merchants refusing physical RMB. If a vendor hesitates, a polite reminder usually solves the issue. That said, digital payment is simply faster—the difference between fumbling for change and a one-second scan.
+Set up both if you can.
 
-### What Changed in 2026
+For many first-time visitors, **Alipay is slightly easier as the main travel payment app** because its interface and travel-related services are straightforward for international users.
 
-Throughout 2025, the People’s Bank of China overhauled the system for international visitors. As of early 2026, the single transaction limit for verified foreign users has been raised to **$5,000 USD** (approximately 35,000 RMB), with a total annual limit of **$50,000 USD**. This means you can now pay for luxury hotels, medical procedures, or premium purchases directly through your phone without hitting the dreaded “Limit Exceeded” error.
+**WeChat Pay is still worth installing**, especially if you're already using WeChat to communicate with guides, drivers, hotels or local contacts.
 
-## How to Set Up Alipay as a Foreigner: Step-by-Step
+There is no need to turn this into an Alipay-vs-WeChat debate. The practical benefit comes from having two working mobile-payment options.
 
-Don’t wait until you’re at the airport. **Set this up at home.** You’ll need your home SIM card to receive SMS verification codes from your bank.
+For the full setup process, see:
 
-### Step 1: Download & Choose (Team Alipay)
+- [Alipay for Foreigners](/alipay-for-foreigners-china/)
+- [WeChat Pay for Foreigners](/wechat-pay-for-foreigners-china/)
 
-You have two main choices: Alipay and WeChat Pay.
+## How to Set Up Alipay Before Your Trip
 
-**My recommendation: Stick with Alipay.**
+Do this before you fly rather than waiting until you are standing in an airport or train station.
 
-While WeChat Pay has significantly improved in 2026—removing the “Chinese friend guarantee” (vouching) requirement and simplifying ID verification—Alipay still offers better usability for travelers. The “International Version” is built specifically for visitors, with clearer English translation and seamless integration of travel mini-apps like Didi and Trip.com. Alipay is purely a payment platform with a cleaner interface that works better with foreign credit cards.
+### Step 1: Download Alipay and register
 
-### Step 2: Verification (The “Anti-Reflection” Hack)
+Install the official Alipay app and create your account with a phone number you can access for verification.
+
+### Step 2: Complete passport verification
 
 ![A traveler holding a passport on a matte bedsheet while using a smartphone to complete identity verification for a Chinese payment app without screen glare.](/assets/blog/digital-survival-china-payment-guide/alipay-passport-verification-guide-no-glare.webp)
 
-This is where many people struggle. To activate the app, you must scan your passport. The AI system is sensitive to glare.
+Use a clear passport image with good lighting and minimal glare. If identity verification repeatedly fails, use our dedicated [Alipay & WeChat Pay verification troubleshooting guide](/alipay-wechat-pay-verification-failed/).
 
-**The solution:** Avoid overhead lights or flash. Place your passport on a dark, matte surface (like a bedsheet) near a window with natural, indirect light. White glare on your photo page will cause AI rejection, forcing a manual review that takes 24 hours. Get the lighting right, and you’ll be verified instantly.
+### Step 3: Link an international card
 
-### Step 3: Card Binding
+Add a supported Visa, Mastercard or other eligible international card. Enter your cardholder information exactly as requested.
 
-  1. Go to **Account** → **Bank Cards**
-  2. Add your Visa/Mastercard/AMEX
-  3. **Important:** Your bank will likely block the first transaction because it appears suspicious (a sudden charge from “Hangzhou, China”). **Call your bank before you fly** and inform them: _“I’m traveling to China and will be using Alipay.”_
+Your card issuer may still block a linking attempt or transaction because of fraud controls or overseas-payment settings. If that happens, check your bank settings or try another card rather than assuming Alipay itself is broken.
 
-## Alipay TourCard vs Direct Binding: Which Should You Use?
+## Can You Use Visa and Mastercard in China?
 
-**This is the most important section of this guide.**
+Yes — but there are two different ways foreign cards matter in China.
 
-If you read blogs from 2023, they recommend “Alipay TourPass” (now called TourCard).
+First, you can link supported international cards to mobile-payment apps such as Alipay and WeChat Pay. For tourists, this is often the most useful way to use a foreign card because QR-code payments are widely used.
 
-**In 2026, avoid TourCard unless absolutely necessary.**
+Second, some hotels, shopping malls and larger merchants accept physical international cards directly. But physical-card acceptance is not as universal as mobile payment, especially at smaller businesses.
 
-### Comparison: Why Direct Binding Wins
+So bring the card, but don't make the physical card your only plan.
 
-**Feature**| **Direct Binding (Recommended)**| **TourCard (The Old Way)**  
----|---|---  
-**How it works**|  Acts like Apple Pay (pay as you go)| A prepaid virtual card (load money first)  
-**Fees**| **0%** (under 200 RMB), 3% (over 200 RMB)| **5% service fee** on every top-up  
-**Refunds**|  Returns directly to your credit card| Remains in the virtual card until expiration  
-**Verification**|  Fast| Slow and sometimes unreliable  
-  
-**The verdict:** Direct binding uses your bank’s exchange rate and saves you the 5% top-up fee. Only use TourCard if your home bank refuses to authorize transactions in China.
+## How to Actually Pay: 3 Common Scenarios
 
-## How to Actually Pay: 3 Real Scenariosransaction (Real Scenario)
+### Scenario A: The cashier scans your payment code
 
-You’re set up. You’re hungry. You’re standing in line. Here’s how to avoid the red error screen.
+At supermarkets, chain stores and many restaurants, open Alipay or WeChat Pay and show your payment barcode or QR code. The cashier scans it and the transaction completes in the app.
 
-### Scenario A: The Supermarket (Passive Scan)
+### Scenario B: You scan the merchant's QR code
 
-  * **What happens:** The cashier has a scanner gun
-  * **Your action:** Open Alipay → Click **“Pay/Collect”** (top right)
-  * **Result:** A barcode appears. Show it to the cashier. They scan it. Done.
+At smaller restaurants, cafés or shops, you may see a QR-code sticker near the register. Open **Scan**, scan the code, enter the amount if required and confirm payment.
 
-### Scenario B: The Street Vendor (Active Scan)
+### Scenario C: In-app payments such as Didi
 
-  * **What happens:** There’s a QR code sticker on the wall or cart
-  * **Your action:** Open Alipay → Click **“Scan”** (top left)
-  * **Result:** Your camera opens. Scan the code. **Enter the amount in RMB.** Input your 6-digit PIN. Done.
+Services such as ride-hailing are often paid inside the app or mini-program rather than by scanning a separate code at the end of the ride.
 
-⚠️ If you’re using WeChat Pay instead of Alipay, the process is very similar — but success rates can vary depending on the merchant.
+Always check the app's payment status before paying a driver or merchant separately, otherwise you risk paying twice.
 
-👉 See full and more details guide about alipay and wechat pay here: 
+## Fees When Using a Foreign Card
 
-[WeChat Pay for Foreigners](/wechat-pay-for-foreigners-china)
+For international cards linked to major Chinese mobile-payment apps, smaller transactions can be exempt from service fees while larger transactions may incur a service charge.
 
-[Alipay for Foreigners](/alipay-for-foreigners-china)
+A commonly published threshold is **RMB 200 per transaction**: eligible payments at or below that amount are generally exempt from the 3% international-card service fee, while payments above that amount may incur a 3% fee.
 
-### Scenario C: The “Didi Taxi” Experience (Auto-Pay)
+Promotional waivers can also apply to newly linked international cards, and terms can change. Check the current fee rules shown inside the app before relying on a specific promotion.
 
-This is the most common culture shock moment for new arrivals.
+Your own bank may separately charge foreign-transaction or currency-conversion fees.
 
-In New York or London, you tap your card when the ride ends. In China, Didi (China’s equivalent of Uber) integrates with Alipay:
+For budgeting, use our [China currency converter](/china-currency-converter).
 
-  1. You call the car through Alipay
-  2. You reach your destination
-  3. **You simply walk away**
+## What About Spending Limits?
 
-Yes, it feels strange at first. But Didi uses auto-pay. About 2 minutes after you leave the car, your phone will notify you: _“Payment Successful.”_
+International-card payment limits are higher than they used to be, but you should not assume every account has exactly the same allowance.
 
-**Warning:** Don’t try to scan the driver’s personal QR code unless the app specifically indicates payment failed. You might end up paying twice.
+Chinese government guidance has previously listed mobile-payment limits of up to **US$5,000 per transaction and US$50,000 per year** for international cards. Actual limits can still depend on the payment product, account verification, service terms and card issuer.
 
-## Fees and Refunds: What to Expect With a Foreign Card
+If you are planning a large hotel payment, premium purchase or other high-value transaction, check the limit shown in your own payment app first.
 
-### The “200 RMB” Rule
+## Can You Still Use Cash in China?
 
-There’s a transaction fee for international cards, but you can avoid it.
+Yes.
 
-  * **Spend under 200 RMB (approximately $28 USD):** Fee is **0%**
-  * **Spend over 200 RMB:** Fee is **3%**
+RMB cash remains a legitimate payment method, and carrying some is a good backup even though most urban travelers will use mobile payment for the majority of day-to-day spending.
 
-Rates move — for a live CNY to USD check while you budget fees, use the [China currency converter](/china-currency-converter).
+Cash is most useful when:
 
-**The workaround:** If you’re buying something for 300 RMB, ask the shop owner: _“Can I scan twice? 150 and 150?”_ Most small shop owners are happy to help you avoid the fee.
+- Your phone battery dies
+- Your mobile data stops working
+- A linked card is declined
+- A merchant's QR code does not support your foreign-linked card
+- You are traveling in a smaller town or rural area
 
-### Refunds: Where Did My Money Go?
+### How Much Cash Should You Carry?
 
-Scenario: You bought a shirt, but it’s defective. The shopkeeper refunds you through Alipay.
-
-  * **Confusing moment:** You check your Alipay “Balance,” and it shows **0.00**
-  * **Explanation:** Refunds for international cards do **NOT** go to your Alipay wallet. They return **directly to your credit card statement**. This process takes **3-7 business days** depending on your bank (e.g., Chase, HSBC, Citibank).
-
-## Payment Not Working? How to Fix Common Errors
-
-Save this section. You’ll likely need it at some point.
-
-### 1\. The VPN Problem (Most Common Error)
-
-**Error message:** “System Busy” or “Transaction Failed”
-
-**Likely cause:** You left your VPN on
-
-**Why it matters:** Alipay’s security system detects that your IP address shows “Los Angeles” (via VPN) but your GPS location shows “Beijing.” The system interprets this as a potential security threat and blocks the payment.
-
-**The fix:** **Always disable your VPN before making a payment.** If your IP address says “San Francisco” while your GPS says “Shanghai,” the security system will freeze the transaction to protect against fraud. Turn off your VPN before you click “Pay.”
-
-### 2\. The Bank Block
-
-**Error message:** “Risk Control / Limit Exceeded”
-
-**Likely cause:** Your home bank blocked the transaction
-
-**The fix:** Call the number on the back of your card immediately
-
-### 3\. No Internet? No Problem.
-
-**Scenario:** You’re in a basement restaurant with no signal
-
-**The fix:** The **“Pay/Collect” barcode works offline**. As long as your app is open, the merchant can scan you. The transaction will verify once you regain signal, but the merchant receives confirmation instantly.
-
-👉 If you keep running into payment errors, this guide breaks down exactly why:
-
-Why Your Payment Fails in China (Alipay & WeChat Pay Fix Guide)
-
-## Cash Backup and Emergency Tips
-
-Technology fails. Batteries die. Here’s your Plan B.
-
-### The “200 RMB Cash” Backup
-
-Always keep about **200 RMB in small bills** (10s and 20s) tucked in your phone case. Not sure how much that is in your home currency? Check the live [China currency converter (CNY / RMB)](/china-currency-converter).
+You do not need a wallet full of banknotes. For many travelers, **RMB 200–500 in small denominations** is enough as an emergency reserve.
 
 ![ICBC bank on a Shanghai street, a common place to withdraw emergency RMB cash](/assets/blog/digital-survival-china-payment-guide/emergency-cash-backup-china-travel-scaled.webp)
 
-  * **Why small bills?** If you hand a taxi driver a 100 RMB note for a 12 RMB ride, they likely won’t have change
-  * **Where to get cash:** Look for ATMs from major banks like **ICBC** or **Bank of China**. They all have an “English” button and accept foreign cards — and expect a worse rate than the mid-market figure on our [yuan exchange converter](/china-currency-converter)
+If you need more, major-bank ATMs can be an option, although acceptance and fees depend on your card and bank.
 
-### The Survival Cheat Sheet
+## Payment Not Working? What to Try First
 
-If the app fails or you’re unsure what to do, show these phrases to the staff. They’ll understand immediately.
+Payment failures are frustrating because several different systems are involved: the payment app, your card issuer, the merchant's account and your internet connection.
 
-**Situation**|  English| **Pinyin**|  Chinese(**Hanzi**)  
----|---|---|---  
-**Pay**| **Can you scan me?**|  Nǐ sǎo wǒ ba.| **你扫我吧**  
-**Network issue**| **My internet is slow, please wait.**|  Wǒ wǎng bù hǎo, děng yī xià.| **我网不好，等一下**  
-**Cash Help**| **Do you take cash?**|  Shōu xiàn jīn ma?| **收现金吗**  
-  
-## Planning your China trip? These practical guides and tools can help you travel smarter:
+### 1. Try another payment method
 
-  * ![Survival Kit](/assets/blog/digital-survival-china-payment-guide/icon_china_survive_kit.webp) [Survival Kit: All-in-One Tools](/survival-kit) — Pre-trip essentials in one place: eSIMs, VPNs, transport tickets, hotel bookings — traveler-tested and ready to save you time and hassle!
-  * ![Payments in China](/assets/blog/digital-survival-china-payment-guide/icons_payments_in_china.webp) [Payments in China for Foreigners](/payments-in-china) — Step-by-step guidance on Alipay, WeChat Pay, and cash alternatives. Avoid payment headaches with insider tips.
-  * ![Survival Kit](/assets/blog/digital-survival-china-payment-guide/icon_china_survive_kit.webp) [China Currency Converter](/china-currency-converter) — Live mid-market CNY / RMB rates for budgeting cash and card spend before you arrive.
-  * ![Alipay](/assets/blog/digital-survival-china-payment-guide/icons8-alipay-100.webp) [Alipay for Foreigners](/alipay-for-foreigners-china) — Learn how to set up, verify, and use Alipay smoothly, even if your bank card is foreign.
-  * ![WeChat Pay](/assets/blog/digital-survival-china-payment-guide/icons8-wechat-100.webp) [WeChat Pay for Foreigners](/wechat-pay-for-foreigners-china) — Complete guide on limits, verification, and daily usage tips.
-  * ![Internet & VPN](/assets/blog/digital-survival-china-payment-guide/icons8-internet-100.webp) [Internet, VPN & SIM](/internet-in-china) — Stay connected anywhere: buy SIM/eSIM, set up VPN, and keep Google, WhatsApp, and maps working smoothly.
-  * ![Transport in China](/assets/blog/digital-survival-china-payment-guide/icons_transport.webp) [Transport in China](/transport-in-china) — Navigate metros, taxis, and high-speed rail like a local, and avoid common tourist mistakes.
+If WeChat Pay fails, try Alipay. If Alipay fails, try another card or cash. At the checkout counter, switching methods is usually faster than diagnosing the exact cause.
 
-Last updated: August 2026. Mobile payments, SIM cards, VPNs, and app rules in China can change quickly. Check the latest tools in the [Survival Kit](/survival-kit) before traveling.
+### 2. Check your card issuer
+
+Your bank may block an unfamiliar overseas transaction or require additional authorization. Check your banking app or contact the issuer if repeated attempts fail.
+
+### 3. Check connectivity
+
+Poor hotel Wi-Fi, underground restaurants and weak mobile data can interfere with payment flows. Switch networks and retry if the app is not loading correctly.
+
+### 4. Check whether the merchant's QR code supports your card
+
+Some merchant or personal QR codes may behave differently with international cards. A failure at one small merchant does not necessarily mean your Alipay or WeChat Pay setup is broken.
+
+If you keep seeing errors, read [Why Your Payment Fails in China](/why-your-payment-fails-in-china/) for a more detailed troubleshooting flow.
+
+## Cash, Mobile Payment and Card Backup: What I Would Carry
+
+For an ordinary China trip, I would leave the hotel with:
+
+- A phone with Alipay and WeChat installed
+- Mobile data that works in China
+- At least two linked cards if possible
+- One physical bank card
+- A small amount of RMB cash
+
+That is enough redundancy for the vast majority of tourist payment situations.
+
+## Useful Chinese Phrases for Payment Problems
+
+| Situation | English | Pinyin | Chinese |
+| --- | --- | --- | --- |
+| Pay | Can you scan me? | Nǐ sǎo wǒ ba. | 你扫我吧 |
+| Network issue | My internet is slow, please wait. | Wǒ wǎng bù hǎo, děng yī xià. | 我网不好，等一下 |
+| Cash | Do you take cash? | Shōu xiàn jīn ma? | 收现金吗 |
+
+## FAQ
+
+### What is the easiest way for a foreigner to pay in China?
+
+For most travelers, the easiest setup is Alipay linked to an international card, with WeChat Pay, a physical card and a small amount of RMB cash as backups.
+
+### Do I need a Chinese bank account to use Alipay or WeChat Pay?
+
+No. Eligible international visitors can link supported foreign cards without opening a Chinese bank account.
+
+### Can I use my Visa or Mastercard directly in China?
+
+At some hotels, shopping malls and larger merchants, yes. But direct physical-card acceptance is less consistent than mobile QR payments, so linking the card to Alipay or WeChat Pay is usually more useful.
+
+### Should I bring cash to China in 2026?
+
+Yes, but only as backup. Mobile payment will cover most day-to-day tourist spending in major cities, while a small amount of RMB protects you if your phone, network or linked card fails.
+
+### Is Alipay or WeChat Pay better for tourists?
+
+Both are useful. Alipay is often easier as the main travel payment app, while WeChat Pay is a valuable second option and integrates naturally with WeChat-based services.
+
+### What should I do if my payment fails?
+
+Try another payment app or card first. Then check your internet connection and card issuer. If failures continue, see our [payment failure troubleshooting guide](/why-your-payment-fails-in-china/).
+
+## Related Payment Guides
+
+- [Payments in China for Foreigners](/payments-in-china)
+- [Alipay for Foreigners](/alipay-for-foreigners-china/)
+- [WeChat Pay for Foreigners](/wechat-pay-for-foreigners-china/)
+- [Why Your Payment Fails in China](/why-your-payment-fails-in-china/)
+- [Alipay & WeChat Pay Verification Failed](/alipay-wechat-pay-verification-failed/)
+- [China Currency Converter](/china-currency-converter)
+- [Survival Kit](/survival-kit)
+
+_Last updated: September 2026. Mobile-payment rules, international-card fees and account limits can change. Check the current terms shown in Alipay or WeChat Pay before relying on a specific fee waiver or payment limit._
