@@ -1,4 +1,5 @@
 export type NavId =
+  | "home"
   | "guides"
   | "tools"
   | "survivalKit"
@@ -69,6 +70,7 @@ export const destinationsNav: NavItem[] = [
 ];
 
 export const mainNav: NavItem[] = [
+  { id: "home", href: "/" },
   { id: "services", href: "/services" },
   {
     id: "destinations",
