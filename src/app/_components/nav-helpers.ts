@@ -6,7 +6,9 @@ import cn from "classnames";
 export type NavLabels = Dictionary["nav"];
 
 export function labelFor(id: NavId, labels: NavLabels): string {
-  return labels[id];
+  if (id === "home") return "Home";
+  const key = id as keyof NavLabels;
+  return labels[key] ?? id;
 }
 
 export function menuAriaFor(item: NavItem, labels: NavLabels): string {
