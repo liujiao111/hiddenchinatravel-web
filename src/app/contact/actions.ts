@@ -1,7 +1,6 @@
 "use server";
 
 import { SITE_EMAIL } from "@/lib/constants";
-import { SLA_INQUIRY_SUCCESS } from "@/lib/trust/copy";
 import { sendFormNotify } from "@/lib/forms/notify";
 import {
   parseWhatsAppField,
@@ -27,7 +26,7 @@ const ALLOWED_SERVICE_TYPES = new Set([
 ]);
 
 const CSV_HEADER =
-  "timestamp,name,email,whatsapp,whatsappOptIn,travelTiming,serviceType,message\n";
+  "timestamp,name,email,whatsapp,whatsappOptIn,travelTiming,travelParty,serviceType,message\n";
 const DATA_DIR = path.join(process.cwd(), "data");
 const CSV_PATH = path.join(DATA_DIR, "contact-submissions.csv");
 
@@ -55,6 +54,7 @@ export async function submitContactForm(
   const name = String(formData.get("name") ?? "").trim();
   const email = String(formData.get("email") ?? "").trim();
   const travelTiming = String(formData.get("travelTiming") ?? "").trim();
+  const travelParty = String(formData.get("travelParty") ?? "").trim();
   const serviceType = String(formData.get("serviceType") ?? "").trim();
   const message = String(formData.get("message") ?? "").trim();
   const honeypot = String(formData.get("company") ?? "").trim();
@@ -84,6 +84,10 @@ export async function submitContactForm(
     return { ok: false, message: "Travel timing is too long." };
   }
 
+  if (travelParty.length > 120) {
+    return { ok: false, message: "Travel party is too long." };
+  }
+
   if (!message || message.length < 10) {
     return {
       ok: false,
@@ -103,6 +107,7 @@ export async function submitContactForm(
     escapeCsv(whatsappField.whatsapp),
     whatsappField.optIn ? "yes" : "no",
     escapeCsv(travelTiming || "Not specified"),
+    escapeCsv(travelParty || "Not specified"),
     escapeCsv(serviceType),
     escapeCsv(message),
   ].join(",");
@@ -118,6 +123,7 @@ export async function submitContactForm(
       `Email: ${email}`,
       ...whatsappNotifyLines(whatsappField.whatsapp, whatsappField.optIn),
       `Travel timing: ${travelTiming || "Not specified"}`,
+      `Travel party: ${travelParty || "Not specified"}`,
       `Type: ${serviceType}`,
       "",
       message,
@@ -139,6 +145,7 @@ export async function submitContactForm(
       name,
       email,
       travelTiming,
+      travelParty,
       serviceType,
       emailed,
       savedCsv,
