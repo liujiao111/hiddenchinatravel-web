@@ -28,7 +28,8 @@ export function Footer() {
   const { dict } = useLocaleDict();
 
   function navLabel(id: NavId) {
-    return dict.nav[id];
+    const key = id as keyof typeof dict.nav;
+    return dict.nav[key] ?? id;
   }
 
   const planLinks = [
