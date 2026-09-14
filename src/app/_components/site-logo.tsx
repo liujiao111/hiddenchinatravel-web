@@ -6,89 +6,67 @@ import { SITE_LOGO_PATH, SITE_NAME } from "@/lib/constants";
 type Props = {
   href?: string;
   className?: string;
-  /** Compact header mark vs larger footer/home mark */
+  /** Display size for the full horizontal brand wordmark. */
   size?: "sm" | "md" | "lg";
-  /** Show wordmark text beside the logo mark */
+  /** Kept for backwards compatibility; the new logo already includes the wordmark. */
   showWordmark?: boolean;
-  /** Slightly tighter wordmark in the header so the full brand still fits */
+  /** Use a narrower logo on small screens so the header keeps enough room for actions. */
   compactOnMobile?: boolean;
-  /** White wordmark for dark/photo chrome; black wordmark for the light header */
+  /** Adds a light backing when the dark wordmark sits over a photo hero. */
   tone?: "default" | "onTeal" | "onWhite";
-  /** Let the wordmark wrap so a long brand name cannot overflow a footer column */
+  /** Kept for backwards compatibility with existing call sites. */
   wrapWordmark?: boolean;
   priority?: boolean;
 };
 
 const sizes = {
-  sm: { box: "h-9 w-9", text: "text-lg md:text-xl" },
-  md: { box: "h-11 w-11", text: "text-xl md:text-2xl" },
-  lg: { box: "h-14 w-14", text: "text-2xl md:text-3xl" },
+  sm: "w-[11rem] md:w-[12rem]",
+  md: "w-[13rem] md:w-[14rem]",
+  lg: "w-[15rem] md:w-[17rem]",
 } as const;
 
 export function SiteLogo({
   href = "/",
   className,
   size = "md",
-  showWordmark = true,
   compactOnMobile = false,
   tone = "default",
-  wrapWordmark = false,
   priority = false,
 }: Props) {
-  const s = sizes[size];
-  const onTeal = tone === "onTeal";
-  const onWhite = tone === "onWhite";
+  const onPhoto = tone === "onTeal";
 
   const content = (
-    <>
-      <span
-        className={cn(
-          "relative shrink-0 overflow-hidden rounded-2xl border",
-          onTeal
-            ? "border-white/35 bg-white/10"
-            : onWhite
-              ? "border-neutral-200 bg-white"
-              : "border-[color-mix(in_srgb,var(--brand-cream-border)_40%,transparent)]",
-          s.box,
-        )}
-      >
-        <Image
-          src={SITE_LOGO_PATH}
-          alt={`${SITE_NAME} logo`}
-          fill
-          className="object-cover"
-          sizes="56px"
-          priority={priority}
-        />
-      </span>
-      {showWordmark ? (
-        <span
-          className={cn(
-            "font-extrabold tracking-wide leading-tight",
-            wrapWordmark ? "min-w-0" : "whitespace-nowrap",
-            onTeal
-              ? "text-white"
-              : onWhite
-                ? "text-neutral-900"
-                : "text-[var(--brand-ink)]",
-            compactOnMobile ? "hidden sm:inline text-base sm:text-lg md:text-xl" : s.text,
-          )}
-        >
-          {SITE_NAME}
-        </span>
-      ) : null}
-    </>
+    <span
+      className={cn(
+        "relative block aspect-[5/2] shrink-0",
+        sizes[size],
+        compactOnMobile && "max-md:w-[7.5rem]",
+        onPhoto &&
+          "rounded-xl bg-white/90 px-2 py-1 shadow-sm backdrop-blur-sm",
+      )}
+    >
+      <Image
+        src={SITE_LOGO_PATH}
+        alt={`${SITE_NAME} logo`}
+        fill
+        className="object-contain"
+        sizes={
+          compactOnMobile
+            ? "(max-width: 767px) 120px, 192px"
+            : size === "lg"
+              ? "272px"
+              : size === "md"
+                ? "224px"
+                : "192px"
+        }
+        priority={priority}
+      />
+    </span>
   );
 
   if (!href) {
     return (
-      <span
-        className={cn(
-          "inline-flex items-center gap-3",
-          wrapWordmark ? "min-w-0 max-w-full" : "shrink-0",
-          className,
-        )}
-      >
+      <span className={cn("inline-flex shrink-0 items-center", className)}>
         {content}
       </span>
     );
@@ -97,9 +75,9 @@ export function SiteLogo({
   return (
     <Link
       href={href}
+      aria-label={SITE_NAME}
       className={cn(
-        "inline-flex items-center gap-3 transition-opacity duration-200 hover:opacity-90",
-        wrapWordmark ? "min-w-0 max-w-full" : "shrink-0",
+        "inline-flex shrink-0 items-center transition-opacity duration-200 hover:opacity-90",
         className,
       )}
     >
