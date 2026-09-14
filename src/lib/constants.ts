@@ -13,7 +13,11 @@ export const SITE_FOUNDER_NAME = "Joy Liu";
 export const SITE_FOUNDER_PATH = "/about#founder";
 export const SITE_FOUNDER_PICTURE = "/brand/founder/avatar-joy.webp";
 
+/** Full horizontal Hidden China Travel wordmark used in site chrome and schema. */
 export const SITE_LOGO_PATH = "/brand/logo.webp";
+/** Compact square assets remain separate because a horizontal wordmark is not legible as a favicon. */
+export const SITE_FAVICON_PATH = "/favicon/favicon-32x32.png";
+export const SITE_APPLE_TOUCH_ICON_PATH = "/favicon/apple-touch-icon.png";
 export const SITE_HERO_PATH = "/brand/hero-lijiang.webp";
 
 /** ISO date — bump when shipping sitewide content / chrome updates */
