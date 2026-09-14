@@ -64,7 +64,7 @@ export function Footer() {
         <div className="py-10 md:py-12">
           <div className="grid grid-cols-1 items-start gap-10 md:grid-cols-2 md:gap-x-10 lg:grid-cols-[minmax(13.5rem,1.15fr)_0.9fr_minmax(0,1.45fr)_0.9fr] lg:gap-x-8">
             <div className="min-w-0">
-              <SiteLogo size="sm" wrapWordmark />
+              <SiteLogo size="md" />
               <p className="mt-2.5 text-sm font-normal leading-snug text-[var(--brand-ink-muted)]">
                 <span className="font-bold tracking-tight text-[var(--brand-ink)]">
                   {SITE_TAGLINE}
