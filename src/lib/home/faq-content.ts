@@ -1,4 +1,4 @@
-/** High-intent China travel FAQs for homepage SEO — link out to guides/hubs. */
+/** High-intent China travel FAQs for homepage SEO — link out to journeys and practical guides. */
 
 export type HomeFaqLink = {
   href: string;
@@ -17,49 +17,43 @@ export type HomeFaqItem = {
 
 export const homeFaqSection = {
   eyebrow: "Common questions",
-  title: "China itinerary and first-trip FAQs",
+  title: "Yunnan journeys and first-trip FAQs",
   intro:
-    "Custom itineraries, plus the visa, payments, and prep questions first-timers search before they land.",
+    "Private Yunnan journeys, plus the visa, payments, internet, maps and prep questions first-time China travelers ask before they land.",
 } as const;
 
 export const homeFaqs: HomeFaqItem[] = [
   {
-    question: "Is a custom China itinerary a tour?",
+    question: "Do you offer private tours in Yunnan?",
     answerPlain:
-      "No. A custom itinerary here is a PDF route you follow independently — city order, pace, and what to skip. It is not a guided package, bus tour, or group departure.",
+      "Yes. Hidden China Travel focuses on private Yunnan journeys for your own party, with flexible pacing, local experiences and support before and during the trip. Our current featured route connects Dali, Shaxi and Lijiang.",
     answerLead:
-      "No. You get a PDF route to follow independently — not a guided package or group tour.",
+      "Yes. Our current focus is private Yunnan journeys for your own party, starting with Dali, Shaxi and Lijiang.",
     link: {
-      href: "/services/custom-itinerary",
-      label: "What’s in a custom itinerary",
+      href: "/journeys/dali-shaxi-lijiang-tour",
+      label: "Explore our Yunnan journey",
     },
   },
   {
-    question: "Should I plan my China trip myself or pay for a local PDF?",
+    question: "Can your Yunnan journeys be customized?",
     answerPlain:
-      "DIY works if you already know city order, rail time, and how payments and data work. A local PDF is worth the fee when you have dates but the route still feels like a 12-city sprint, or you want someone on the ground to sequence pace and skips. Read the itinerary planning hub first, then the custom itinerary page for what a paid PDF includes.",
+      "Yes. The published journey is a starting point rather than a rigid package. We can discuss pace, hotel preferences, more time in a destination, and route adjustments before the final proposal is confirmed.",
     answerLead:
-      "DIY is fine if city order and systems already make sense. Pay for a local PDF when dates are real but the route still feels like too many cities — or you want pace and skips sequenced for you.",
-    links: [
-      {
-        href: "/china-itinerary-planning",
-        label: "Itinerary planning hub",
-      },
-      {
-        href: "/services/custom-itinerary",
-        label: "Custom itinerary details",
-      },
-    ],
+      "Yes. The published route is a starting point — pace, hotels and the balance between destinations can be adjusted before the final proposal.",
+    link: {
+      href: "/contact",
+      label: "Tell us about your plans",
+    },
   },
   {
-    question: "What does a custom itinerary cost, and how do I start?",
+    question: "Who operates your Yunnan trips?",
     answerPlain:
-      "Early-bird planning starts at $99 by trip length. The request form is free. We confirm scope and the matching fee before you pay; the PDF is delivered 48–72 hours after you confirm.",
+      "Hidden China Travel helps shape the journey, answers questions and coordinates the planning experience. On-the-ground services such as guides, drivers and other trip operations are provided through licensed local travel partners, with the exact arrangement confirmed in your proposal.",
     answerLead:
-      "Early bird from $99 by trip length. The request is free — we confirm scope and fee before you pay.",
+      "We shape the journey and support the planning process; licensed local travel partners provide the on-the-ground services confirmed in your proposal.",
     link: {
-      href: "/china-itinerary-planner#plan-trip",
-      label: "Request a custom itinerary",
+      href: "/about",
+      label: "How Hidden China Travel works",
     },
   },
   {
