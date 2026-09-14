@@ -20,11 +20,9 @@ const labelClass =
   "mb-2 block text-sm font-bold tracking-tight text-[var(--brand-ink)]";
 
 const ALLOWED_SERVICE_TYPES = new Set([
-  "free-yunnan-route-check",
-  "custom-plan",
-  "itinerary-review",
-  "on-trip-help",
-  "booking-help",
+  "yunnan-journey",
+  "custom-yunnan-journey",
+  "travel-question",
   "partnership",
   "general",
 ]);
