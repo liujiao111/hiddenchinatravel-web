@@ -6,19 +6,36 @@ import { founderAssets } from "@/lib/about/founder-content";
 import { SITE_NAME, SITE_URL } from "@/lib/constants";
 import { getWhatsAppPrefillHref } from "@/lib/whatsapp";
 
-const pageTitle = "Dali, Shaxi & Lijiang Private Journey | Hidden China Travel";
+const pageTitle = "6-Day Yunnan Private Tour: Dali, Shaxi & Lijiang";
 const pageDescription =
-  "A relaxed 6-day private Yunnan journey through Dali, Shaxi and Lijiang, designed around local culture, slower travel and flexible support.";
+  "Explore Dali, Shaxi and Lijiang on a relaxed 6-day private Yunnan tour with private transport, local experiences, flexible pacing and no shopping stops.";
+const pagePath = "/journeys/dali-shaxi-lijiang-tour";
+const pageUrl = `${SITE_URL}${pagePath}`;
+const heroImage = `${SITE_URL}/brand/destinations/yunnan/hero-erhai.webp`;
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: "/journeys/dali-shaxi-lijiang-tour" },
+  alternates: { canonical: pagePath },
   openGraph: {
     title: pageTitle,
     description: pageDescription,
     type: "website",
-    url: "/journeys/dali-shaxi-lijiang-tour",
+    url: pagePath,
+    images: [
+      {
+        url: heroImage,
+        width: 1200,
+        height: 900,
+        alt: "Erhai Lake and mountains near Dali, Yunnan",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: pageTitle,
+    description: pageDescription,
+    images: [heroImage],
   },
 };
 
@@ -132,6 +149,8 @@ const faqs = [
   ["Is this a private tour or a group tour?", "It is designed as a private journey for your own party rather than a large coach tour. The exact operating arrangement is confirmed in your personalized proposal."],
   ["Can the itinerary be customized?", "Yes. This page is a starting point, not a rigid package. We can discuss more time in Shaxi, a slower pace, hotel preferences, or extensions elsewhere in Yunnan."],
   ["Is it suitable for first-time visitors to China?", "Yes. The route combines recognizable Yunnan highlights with a slower structure and local support, which makes it a comfortable introduction for many first-time visitors."],
+  ["How many days do you need for Dali, Shaxi and Lijiang?", "Six days is a comfortable starting point for this route without turning it into a race. If you want more time around Erhai, an extra night in Shaxi, or a slower finish in Lijiang, the journey can be extended to seven or eight days."],
+  ["What is the best time to visit Dali, Shaxi and Lijiang?", "This part of Yunnan can be visited through much of the year, but the experience changes with the season. Weather, mountain visibility, rain and temperature can all affect the feel of the route, so we help adjust the plan around your travel dates."],
   ["Do I need to speak Chinese?", "No. We can help organize the trip around international visitors, and the final proposal will spell out what English-language support is included."],
   ["Are there shopping stops?", "The journey is not designed around mandatory shopping stops, tourist factories or commission-led detours."],
   ["How physically demanding is it?", "The route can work for most travelers with normal mobility. There is walking in old towns and scenic areas, but the pace can be adjusted. Tell us about any mobility or altitude concerns before booking."],
@@ -142,24 +161,66 @@ const faqs = [
 function journeyJsonLd() {
   return {
     "@context": "https://schema.org",
-    "@type": "TouristTrip",
-    name: "Dali, Shaxi & Lijiang Private Journey",
-    description: pageDescription,
-    url: `${SITE_URL}/journeys/dali-shaxi-lijiang-tour`,
-    touristType: ["Independent travelers", "Couples", "First-time China visitors"],
-    itinerary: {
-      "@type": "ItemList",
-      itemListElement: ["Dali", "Shaxi", "Lijiang"].map((name, index) => ({
-        "@type": "ListItem",
-        position: index + 1,
-        name,
-      })),
-    },
-    provider: {
-      "@type": "Organization",
-      name: SITE_NAME,
-      url: SITE_URL,
-    },
+    "@graph": [
+      {
+        "@type": "TouristTrip",
+        "@id": `${pageUrl}#trip`,
+        name: "6-Day Yunnan Private Tour: Dali, Shaxi & Lijiang",
+        description: pageDescription,
+        url: pageUrl,
+        image: heroImage,
+        touristType: ["Independent travelers", "Couples", "First-time China visitors"],
+        itinerary: {
+          "@type": "ItemList",
+          itemListElement: ["Dali", "Shaxi", "Lijiang"].map((name, index) => ({
+            "@type": "ListItem",
+            position: index + 1,
+            name,
+          })),
+        },
+        provider: {
+          "@type": "Organization",
+          name: SITE_NAME,
+          url: SITE_URL,
+        },
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": `${pageUrl}#breadcrumb`,
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "Home",
+            item: SITE_URL,
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "Journeys",
+            item: `${SITE_URL}/journeys`,
+          },
+          {
+            "@type": "ListItem",
+            position: 3,
+            name: "Dali, Shaxi & Lijiang",
+            item: pageUrl,
+          },
+        ],
+      },
+      {
+        "@type": "FAQPage",
+        "@id": `${pageUrl}#faq`,
+        mainEntity: faqs.map(([question, answer]) => ({
+          "@type": "Question",
+          name: question,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: answer,
+          },
+        })),
+      },
+    ],
   };
 }
 
@@ -179,8 +240,11 @@ export default function DaliShaxiLijiangJourneyPage() {
                 Your first journey through Yunnan
               </p>
               <h1 className="max-w-3xl text-4xl font-bold leading-[1.05] tracking-tight md:text-6xl">
-                China, at your pace.
+                A 6-Day Private Yunnan Journey Through Dali, Shaxi & Lijiang
               </h1>
+              <p className="mt-4 text-sm font-bold uppercase tracking-[0.14em] text-[var(--brand-coral)]">
+                China, at your pace.
+              </p>
               <div className="mt-6 flex flex-wrap gap-2">
                 {["Dali", "Shaxi", "Lijiang", "6 days", "Unhurried pace"].map((tag) => (
                   <span key={tag} className="rounded-full border border-[var(--brand-cta)]/15 bg-[var(--brand-soft)] px-3 py-1.5 text-sm text-[var(--brand-ink-muted)]">
@@ -189,7 +253,7 @@ export default function DaliShaxiLijiangJourneyPage() {
                 ))}
               </div>
               <p className="mt-6 max-w-2xl text-lg leading-8 text-[var(--brand-ink-muted)]">
-                Old towns, tie-dye workshops and lakeside mornings, arranged for people who would rather remember how a place felt than how many places they saw.
+                This private Yunnan tour connects Dali, Shaxi and Lijiang at an unhurried pace. Old towns, tie-dye workshops and lakeside mornings are arranged for people who would rather remember how a place felt than how many places they saw.
               </p>
               <p className="mt-6 text-sm text-[var(--brand-ink-muted)]">
                 Indicative price from <span className="text-2xl font-bold text-[var(--brand-ink)]">¥2,700</span> per person
@@ -384,7 +448,8 @@ export default function DaliShaxiLijiangJourneyPage() {
       <section id="itinerary" className="scroll-mt-28 bg-white py-14 md:py-20">
         <Container>
           <p className="mb-3 text-xs font-bold uppercase tracking-[0.18em] text-[var(--brand-mango)]">Your 6 days in Yunnan</p>
-          <h2 className="max-w-3xl text-3xl font-bold tracking-tight md:text-4xl">A rhythm of arrival, discovery and rest — not a race between sights.</h2>
+          <h2 className="max-w-3xl text-3xl font-bold tracking-tight md:text-4xl">Your 6-Day Dali, Shaxi & Lijiang Itinerary</h2>
+          <p className="mt-4 max-w-3xl text-lg leading-8 text-[var(--brand-ink-muted)]">A rhythm of arrival, discovery and rest — not a race between sights.</p>
           <div className="mt-9 divide-y divide-[var(--brand-cta)]/10 border-y border-[var(--brand-cta)]/10">
             {days.map((day) => (
               <details key={day.label} className="group py-6 open:pb-7">
