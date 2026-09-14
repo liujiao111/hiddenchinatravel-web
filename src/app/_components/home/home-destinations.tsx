@@ -28,7 +28,7 @@ export function HomeDestinations({ variant = "home" }: Props) {
                 Destinations
               </p>
               <h2 className="mb-3 text-2xl font-bold tracking-tight text-[var(--brand-ink)] md:text-3xl">
-                Where to begin in China
+                Explore China
               </h2>
               <p className="text-sm font-normal leading-relaxed text-[var(--brand-ink-muted)] md:text-base">
                 First-city bases plus one regional loop — then shape the route
