@@ -76,7 +76,7 @@ export function HomeFeaturedGuides({ posts }: Props) {
               Guides
             </p>
             <h2 className="mb-3 text-2xl font-bold tracking-tight text-[var(--brand-ink)] md:text-3xl">
-              Featured survival guides
+              Practical China Travel Guides
             </h2>
             <p className="text-sm font-normal leading-relaxed text-[var(--brand-ink-muted)] md:text-base">
               Six practical picks to start — or jump into a topic hub for the
