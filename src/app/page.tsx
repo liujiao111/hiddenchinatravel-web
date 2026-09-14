@@ -51,6 +51,8 @@ export const metadata: Metadata = {
   },
 };
 
+const founderEntityId = `${SITE_URL}/about#founder`;
+
 const homepageStructuredData = {
   "@context": "https://schema.org",
   "@graph": [
@@ -71,20 +73,20 @@ const homepageStructuredData = {
       url: SITE_URL,
       logo: `${SITE_URL}${SITE_LOGO_PATH}`,
       founder: {
-        "@id": `${SITE_URL}/#joy-liu`,
+        "@id": founderEntityId,
       },
       sameAs: socialLinks.map((link) => link.href),
     },
     {
       "@type": "Person",
-      "@id": `${SITE_URL}/#joy-liu`,
+      "@id": founderEntityId,
       name: SITE_FOUNDER_NAME,
       jobTitle: "Founder",
       image: `${SITE_URL}${SITE_FOUNDER_PICTURE}`,
       worksFor: {
         "@id": `${SITE_URL}/#organization`,
       },
-      url: `${SITE_URL}/about#founder`,
+      url: founderEntityId,
     },
   ],
 };
