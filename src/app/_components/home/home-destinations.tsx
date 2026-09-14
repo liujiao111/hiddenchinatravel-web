@@ -31,8 +31,8 @@ export function HomeDestinations({ variant = "home" }: Props) {
                 Explore China
               </h2>
               <p className="text-sm font-normal leading-relaxed text-[var(--brand-ink-muted)] md:text-base">
-                First-city bases plus one regional loop — then shape the route
-                in the itinerary planner.
+                Explore destinations, local stories and practical guides for
+                traveling deeper into China.
               </p>
             </div>
             <Link
@@ -45,11 +45,7 @@ export function HomeDestinations({ variant = "home" }: Props) {
         ) : null}
         <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 md:gap-6">
           {destinationCities.map((city) => {
-            const href =
-              city.guideHref ??
-              (isHub
-                ? `/china-itinerary-planner#plan-trip`
-                : `/china-destinations#${city.id}`);
+            const href = city.guideHref ?? `/china-destinations#${city.id}`;
 
             return (
               <li key={city.id} id={isHub ? city.id : undefined}>
