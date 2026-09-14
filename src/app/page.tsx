@@ -2,6 +2,7 @@ import { HomeWhyExists } from "@/app/_components/home/home-why-exists";
 import { HomeDestinations } from "@/app/_components/home/home-destinations";
 import { HomeFaqSection } from "@/app/_components/home/home-faq-section";
 import { HomeFeaturedGuides } from "@/app/_components/home/home-featured-guides";
+import { HomeFeaturedJourneys } from "@/app/_components/home/home-featured-journeys";
 import { HomeGettingStarted } from "@/app/_components/home/home-getting-started";
 import { HomeHero } from "@/app/_components/home/home-hero";
 import { HomeSurvivalKit } from "@/app/_components/home/home-survival-kit";
@@ -48,6 +49,7 @@ export default function Index() {
   return (
     <main>
       <HomeHero />
+      <HomeFeaturedJourneys />
       <HomeWhyExists />
       <HomeDestinations variant="home" />
       <HomeWhyUs />
