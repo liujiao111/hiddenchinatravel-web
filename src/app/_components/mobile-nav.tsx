@@ -10,7 +10,9 @@ import { useEffect, useId, useRef, useState } from "react";
 type NavLabels = Dictionary["nav"];
 
 function labelFor(id: NavId, labels: NavLabels): string {
-  return labels[id];
+  if (id === "home") return "Home";
+  const key = id as keyof NavLabels;
+  return labels[key] ?? id;
 }
 
 type Props = {
