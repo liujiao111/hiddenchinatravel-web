@@ -17,7 +17,7 @@ type FeaturedJourney = {
 const featuredJourneys: FeaturedJourney[] = [
   {
     title: "Start with Yunnan",
-    subtitle: "Our signature journey through Dali, Shaxi and Lijiang.",
+    subtitle: "Our signature private Yunnan journey through Dali, Shaxi and Lijiang.",
     href: "/journeys/dali-shaxi-lijiang-tour",
     image: "/brand/destinations/yunnan/hero-erhai.webp",
     imageAlt: "Erhai Lake and the mountains near Dali, Yunnan",
@@ -46,7 +46,8 @@ export function HomeFeaturedJourneys() {
               Start with Yunnan
             </h2>
             <p className="mt-4 text-base leading-8 text-[var(--brand-ink-muted)] md:text-lg">
-              Our signature journey through Dali, Shaxi and Lijiang.
+              Our signature private Yunnan journey through Dali, Shaxi and
+              Lijiang.
             </p>
           </div>
 
