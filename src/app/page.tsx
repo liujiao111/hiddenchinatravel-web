@@ -3,12 +3,11 @@ import { HomeDestinations } from "@/app/_components/home/home-destinations";
 import { HomeFaqSection } from "@/app/_components/home/home-faq-section";
 import { HomeFeaturedGuides } from "@/app/_components/home/home-featured-guides";
 import { HomeFeaturedJourneys } from "@/app/_components/home/home-featured-journeys";
-import { HomeGettingStarted } from "@/app/_components/home/home-getting-started";
+import { HomeFinalCta } from "@/app/_components/home/home-final-cta";
 import { HomeHero } from "@/app/_components/home/home-hero";
 import { HomeMeetJoy } from "@/app/_components/home/home-meet-joy";
 import { HomeSurvivalKit } from "@/app/_components/home/home-survival-kit";
 import { HomeWhyUs } from "@/app/_components/home/home-why-us";
-import { ItineraryPlannerSection } from "@/app/_components/itinerary-planner/itinerary-planner-section";
 import { getAllPosts } from "@/lib/api";
 import { HOME_OG_IMAGE_URL } from "@/lib/constants";
 import type { Metadata } from "next";
@@ -53,13 +52,12 @@ export default function Index() {
       <HomeFeaturedJourneys />
       <HomeWhyExists />
       <HomeMeetJoy />
-      <HomeDestinations variant="home" />
       <HomeWhyUs />
-      <HomeGettingStarted />
-      <ItineraryPlannerSection source="home" deferForm />
-      <HomeFeaturedGuides posts={allPosts} />
-      <HomeFaqSection />
       <HomeSurvivalKit />
+      <HomeFeaturedGuides posts={allPosts} />
+      <HomeDestinations variant="home" />
+      <HomeFaqSection />
+      <HomeFinalCta />
     </main>
   );
 }
