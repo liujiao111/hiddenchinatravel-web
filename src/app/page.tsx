@@ -5,6 +5,7 @@ import { HomeFeaturedGuides } from "@/app/_components/home/home-featured-guides"
 import { HomeFeaturedJourneys } from "@/app/_components/home/home-featured-journeys";
 import { HomeGettingStarted } from "@/app/_components/home/home-getting-started";
 import { HomeHero } from "@/app/_components/home/home-hero";
+import { HomeMeetJoy } from "@/app/_components/home/home-meet-joy";
 import { HomeSurvivalKit } from "@/app/_components/home/home-survival-kit";
 import { HomeWhyUs } from "@/app/_components/home/home-why-us";
 import { ItineraryPlannerSection } from "@/app/_components/itinerary-planner/itinerary-planner-section";
@@ -51,6 +52,7 @@ export default function Index() {
       <HomeHero />
       <HomeFeaturedJourneys />
       <HomeWhyExists />
+      <HomeMeetJoy />
       <HomeDestinations variant="home" />
       <HomeWhyUs />
       <HomeGettingStarted />
