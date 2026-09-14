@@ -243,7 +243,7 @@ export default function DaliShaxiLijiangJourneyPage() {
                 A 6-Day Private Yunnan Journey Through Dali, Shaxi & Lijiang
               </h1>
               <p className="mt-4 text-sm font-bold uppercase tracking-[0.14em] text-[var(--brand-coral)]">
-                China, at your pace.
+                China, at Your Pace.
               </p>
               <div className="mt-6 flex flex-wrap gap-2">
                 {["Dali", "Shaxi", "Lijiang", "6 days", "Unhurried pace"].map((tag) => (
