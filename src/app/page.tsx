@@ -9,16 +9,24 @@ import { HomeMeetJoy } from "@/app/_components/home/home-meet-joy";
 import { HomeSurvivalKit } from "@/app/_components/home/home-survival-kit";
 import { HomeWhyUs } from "@/app/_components/home/home-why-us";
 import { getAllPosts } from "@/lib/api";
-import { HOME_OG_IMAGE_URL } from "@/lib/constants";
+import {
+  HOME_OG_IMAGE_URL,
+  SITE_FOUNDER_NAME,
+  SITE_FOUNDER_PICTURE,
+  SITE_LOGO_PATH,
+  SITE_NAME,
+  SITE_URL,
+  socialLinks,
+} from "@/lib/constants";
 import type { Metadata } from "next";
 
 /** Keep homepage from sitting on a multi-day CDN HIT after CTA deploys. */
 export const revalidate = 300;
 
 const pageTitle =
-  "Custom China Itinerary Planning for Independent Travelers | Hidden China Travel";
+  "Yunnan Private Tours & China Travel Guides | Hidden China Travel";
 const pageDescription =
-  "1-on-1 custom China itinerary PDF from $99 — cities, days, and pace, not a tour template. Survival Kit prep for visas, payments, and data is included. Your local partner for independent China travel.";
+  "Discover private Yunnan journeys, practical China travel guides, local support, and personalized help for first-time visitors to China.";
 
 export const metadata: Metadata = {
   title: {
@@ -43,11 +51,55 @@ export const metadata: Metadata = {
   },
 };
 
+const homepageStructuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": `${SITE_URL}/#website`,
+      url: SITE_URL,
+      name: SITE_NAME,
+      description: pageDescription,
+      publisher: {
+        "@id": `${SITE_URL}/#organization`,
+      },
+    },
+    {
+      "@type": "Organization",
+      "@id": `${SITE_URL}/#organization`,
+      name: SITE_NAME,
+      url: SITE_URL,
+      logo: `${SITE_URL}${SITE_LOGO_PATH}`,
+      founder: {
+        "@id": `${SITE_URL}/#joy-liu`,
+      },
+      sameAs: socialLinks.map((link) => link.href),
+    },
+    {
+      "@type": "Person",
+      "@id": `${SITE_URL}/#joy-liu`,
+      name: SITE_FOUNDER_NAME,
+      jobTitle: "Founder",
+      image: `${SITE_URL}${SITE_FOUNDER_PICTURE}`,
+      worksFor: {
+        "@id": `${SITE_URL}/#organization`,
+      },
+      url: `${SITE_URL}/about#founder`,
+    },
+  ],
+};
+
 export default function Index() {
   const allPosts = getAllPosts();
 
   return (
     <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(homepageStructuredData).replace(/</g, "\\u003c"),
+        }}
+      />
       <HomeHero />
       <HomeFeaturedJourneys />
       <HomeWhyExists />
