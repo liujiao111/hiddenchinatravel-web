@@ -6,9 +6,10 @@ import { LocaleProvider } from "@/i18n/locale-provider";
 import { defaultLocale } from "@/i18n/config";
 import {
   HOME_OG_IMAGE_URL,
+  SITE_APPLE_TOUCH_ICON_PATH,
+  SITE_FAVICON_PATH,
   SITE_FOUNDER_NAME,
   SITE_FOUNDER_PATH,
-  SITE_LOGO_PATH,
   SITE_NAME,
   SITE_TAGLINE,
   SITE_URL,
@@ -99,8 +100,8 @@ export const metadata: Metadata = {
     images: [HOME_OG_IMAGE_URL],
   },
   icons: {
-    icon: [{ url: SITE_LOGO_PATH }],
-    apple: [{ url: SITE_LOGO_PATH }],
+    icon: [{ url: SITE_FAVICON_PATH }],
+    apple: [{ url: SITE_APPLE_TOUCH_ICON_PATH }],
   },
 };
 
@@ -116,8 +117,8 @@ export default function RootLayout({
       className={cn(openSauceOne.variable, newsreader.variable)}
     >
       <head>
-        <link rel="icon" href={SITE_LOGO_PATH} type="image/webp" />
-        <link rel="apple-touch-icon" href={SITE_LOGO_PATH} />
+        <link rel="icon" href={SITE_FAVICON_PATH} type="image/png" />
+        <link rel="apple-touch-icon" href={SITE_APPLE_TOUCH_ICON_PATH} />
         <link rel="manifest" href="/favicon/site.webmanifest" />
         <meta name="theme-color" content="#c45c3e" />
       </head>
